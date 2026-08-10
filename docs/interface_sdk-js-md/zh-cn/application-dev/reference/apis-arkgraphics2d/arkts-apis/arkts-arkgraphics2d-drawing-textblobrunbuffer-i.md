@@ -34,7 +34,7 @@ glyph: int
 positionX: double
 ```
 
-文本的起点x轴坐标，该参数为浮点数。
+文本的起点x轴坐标，该参数为浮点数。单位为物理像素px。
 
 **类型：** double
 
@@ -52,7 +52,7 @@ positionX: double
 positionY: double
 ```
 
-文本的起点y轴坐标，该参数为浮点数。
+文本的起点y轴坐标，该参数为浮点数。单位为物理像素px。
 
 **类型：** double
 

@@ -6,7 +6,7 @@
 function hasPrivateWindow(displayId: long): boolean
 ```
 
-Checks whether there is a visible privacy window on a display. The privacy window can be set by calling  
+Checks whether there is a visible privacy window on a display. The window privacy mode can be set by calling  
 [setWindowPrivacyMode()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. The content in the privacy window cannot be captured or recorded.
 
 **Since:** 9

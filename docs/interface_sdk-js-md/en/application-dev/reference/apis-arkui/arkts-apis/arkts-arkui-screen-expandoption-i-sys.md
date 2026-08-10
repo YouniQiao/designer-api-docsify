@@ -38,7 +38,7 @@ Screen ID. The value must be an integer.
 startX: long
 ```
 
-Start X coordinate of the screen. The value must be an integer.
+Start X coordinate of the screen. in px. The value must be an integer.
 
 **Type:** long
 
@@ -58,7 +58,7 @@ Start X coordinate of the screen. The value must be an integer.
 startY: long
 ```
 
-Start Y coordinate of the screen. The value must be an integer.
+Start Y coordinate of the screen. in px. The value must be an integer.
 
 **Type:** long
 

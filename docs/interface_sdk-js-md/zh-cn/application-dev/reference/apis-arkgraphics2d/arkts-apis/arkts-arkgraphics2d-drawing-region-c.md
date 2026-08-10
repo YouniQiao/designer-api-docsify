@@ -1,6 +1,6 @@
 # Region
 
-区域对象，用于描述所绘制图形的区域信息。
+区域对象，用于描述所绘制图形的区域信息。Region支持设置矩形区域和路径区域，提供区域间的合并运算、相交判断、平移、边界获取等操作。
     **说明：**  
     
     - 本Class首批接口从API version 12开始支持。  
@@ -81,10 +81,10 @@ constructor(left: int, top: int, right: int, bottom: int)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。 |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。 |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。 |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。 |
+| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 ## getBoundaryPath
 
@@ -114,7 +114,7 @@ getBoundaryPath(): Path
 getBoundaryPath(): Path | undefined
 ```
 
-Gets the boundary of the region, which represents by a path.Gets the bounds of the region.
+返回一个新路径，该路径取自当前区域的边界。
 
 **起始版本：** 24
 
@@ -128,7 +128,7 @@ Gets the boundary of the region, which represents by a path.Gets the bounds of t
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns Path object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前区域边界的路径。 |
 
 ## getBounds
 
@@ -150,7 +150,7 @@ getBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | Bounding rectangle of this region. |
+| common2D.Rect | 返回当前区域的边界矩形。 |
 
 ## getBounds
 
@@ -158,7 +158,7 @@ getBounds(): common2D.Rect
 getBounds(): common2D.Rect | undefined
 ```
 
-Gets the bounds of the region.
+获取区域的边界。
 
 **起始版本：** 24
 
@@ -172,7 +172,7 @@ Gets the bounds of the region.
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | Returns Rect object. |
+| common2D.Rect | 返回当前区域的边界矩形。 |
 
 ## isComplex
 
@@ -216,7 +216,7 @@ isEmpty(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回当前区域是否为空。true表示当前区域为空，false表示当前区域不为空。 |
+| boolean | 返回当前区域是否为空的结果。true表示当前区域为空，false表示当前区域不为空。 |
 
 ## isEqual
 
@@ -224,7 +224,7 @@ isEmpty(): boolean
 isEqual(other: Region): boolean
 ```
 
-用于判断其他区域是否与当前区域相等。
+判断指定区域是否与当前区域相等。
 
 **起始版本：** 20
 
@@ -238,7 +238,7 @@ isEqual(other: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 区域对象。 |
+| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于与当前区域进行比较的其他区域对象。 |
 
 **返回值：**
 
@@ -272,8 +272,8 @@ isPointContained(x: int, y:int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 测试点的x轴坐标。该参数必须为整数。如果输入的数字包含小数部分，小数部分将被舍去。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 测试点的y轴坐标。该参数必须为整数。如果输入的数字包含小数部分，小数部分将被舍去。 |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 测试点的x轴坐标。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 测试点的y轴坐标。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **返回值：**
 
@@ -331,7 +331,7 @@ isRegionContained(other: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 区域对象。 |
+| other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于判断是否在当前区域内的其他区域对象。 |
 
 **返回值：**
 
@@ -371,8 +371,8 @@ offset(dx: int, dy: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | x轴方向平移量，正数往x轴正方向平移，负数往x轴负方向平移，该参数为整数。 |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | y轴方向平移量，正数往y轴正方向平移，负数往y轴负方向平移，该参数为整数。 |
+| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | x轴方向平移量，正数往x轴正方向平移，负数往x轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | y轴方向平移量，正数往y轴正方向平移，负数往y轴负方向平移，该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 ## op
 
@@ -394,14 +394,14 @@ op(region: Region, regionOp: RegionOp): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 区域对象。 |
-| regionOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 区域合并操作类型。 |
+| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于与当前区域进行运算的指定区域对象。 |
+| regionOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 区域运算操作类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回区域运算结果是否成功替换当前区域。true表示区域运算结果替换当前区域成功，false表示区域运算结果替换当前区域失败。 |
+| boolean | 返回区域运算结果是否成功替换当前区域的结果。true表示区域运算结果替换当前区域成功，false表示区域运算结果替换当前区域失败。 |
 
 **错误码：**
 
@@ -437,16 +437,16 @@ quickContains(left: int, top: int, right: int, bottom: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的左侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的顶部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的右侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的底部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
+| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的左侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的顶部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的右侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的底部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回当前区域是否等同于单个矩形并且包含指定矩形的结果。true表示当前区域等同于单个矩形并且包含指定矩形，false表示当前区域不等同于单个矩形或不包含指定矩形。 |
+| boolean | 返回判断结果。true表示当前区域等同于单个矩形且包含指定矩形，false表示当前区域不等同于单个矩形或不包含指定矩形。 |
 
 ## quickReject
 
@@ -460,7 +460,7 @@ ArkTS-Sta:
 quickReject(left: int, top: int, right: int, bottom: int): boolean
 ```
 
-快速判断矩形和区域是否不相交，实际上比较的是矩形和区域的外接矩形是否不相交，因此会有误差。
+快速判断矩形和区域是否不相交。实际上比较的是矩形和区域的外接矩形是否不相交，因此当外接矩形相交但实际区域不相交时，会返回false（即误判为相交）。
 
 **起始版本：** 12
 
@@ -474,16 +474,16 @@ quickReject(left: int, top: int, right: int, bottom: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的左侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的顶部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的右侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的底部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
+| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回矩形是否与区域不相交的结果。true表示矩形与区域不相交，false表示矩形与区域相交。 |
+| boolean | 返回矩形是否与区域不相交的结果。true表示矩形与区域不相交，false表示矩形与区域相交。当矩形与区域仅点或边相交时，也返回true。 |
 
 **错误码：**
 
@@ -497,7 +497,7 @@ quickReject(left: int, top: int, right: int, bottom: int): boolean
 quickRejectRegion(region: Region): boolean
 ```
 
-判断当前区域是否与另一个区域不相交。实际上比较的是两个区域的外接矩形是否不相交，因此会有误差。
+判断当前区域是否与指定区域不相交。实际上比较的是两个区域的外接矩形是否不相交，因此当外接矩形相交但实际区域不相交时，会返回false（即误判为相交）。
 
 **起始版本：** 20
 
@@ -511,13 +511,13 @@ quickRejectRegion(region: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定的区域对象。 |
+| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于判断是否与当前区域不相交的指定区域对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回是否当前区域与另外的区域不相交的结果。true表示不相交，false表示相交。仅点和边相交返回true。 |
+| boolean | 返回当前区域与另一个区域是否不相交的结果。true表示不相交，false表示相交。当两个区域仅点或边相交时，也返回true。 |
 
 ## setEmpty
 
@@ -555,14 +555,14 @@ setPath(path: Path, clip: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路径对象。 |
-| clip | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 区域对象。 |
+| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于设置区域轮廓的路径对象。 |
+| clip | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 裁剪区域对象，用于限定路径轮廓的有效范围，仅路径在裁剪区域内的部分会被用于设置区域。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回设置一个与裁剪区域内路径轮廓相匹配的区域是否成功。true表示设置成功，false表示设置失败。 |
+| boolean | 返回设置区域是否成功的结果。true表示设置成功，false表示设置失败。 |
 
 **错误码：**
 
@@ -596,10 +596,10 @@ setRect(left: int, top: int, right: int, bottom: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的左侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
-| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的顶部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
-| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的右侧位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
-| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的底部位置。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。 |
+| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的左侧位置（矩形左上角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的顶部位置（矩形左上角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的右侧位置（矩形右下角横坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
+| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 矩形区域的底部位置（矩形右下角纵坐标）。该参数必须为整数。当输入的数字带小数时，小数部分会被舍去。单位为物理像素px。 |
 
 **返回值：**
 
@@ -619,7 +619,7 @@ setRect(left: int, top: int, right: int, bottom: int): boolean
 setRegion(region: Region): void
 ```
 
-设置当前区域为另一块区域。
+设置当前区域为指定区域。
 
 **起始版本：** 20
 
@@ -633,5 +633,5 @@ setRegion(region: Region): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于赋值的区域。 |
+| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于设置当前区域内容的源区域对象。 |
 

@@ -1,6 +1,6 @@
 # Path
 
-由直线、圆弧、二阶贝塞尔、三阶贝塞尔组成的复合几何路径。
+Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥曲线、二阶贝塞尔、三阶贝塞尔等基本图元组成，支持路径的构造、变换、布尔运算、SVG路径解析与转换、测量与片段截取等能力。未设置填充类型时，默认填充类型为WINDING，可通过[setFillType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_修改。
     **说明：**  
     
     - 本模块使用屏幕物理像素单位px。  
@@ -27,7 +27,7 @@ ArkTS-Sta:
 addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void
 ```
 
-向路径添加一段圆弧。当startAngle和sweepAngle同时满足以下两种情况时，添加整个椭圆而不是圆弧：1.startAngle对90取余接近于0；2.sweepAngle不在(-360, 360)区间内。其余情况sweepAngle会对360取余后添加圆弧。
+向路径添加一段圆弧。与[arcTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相比，addArc不会自动添加从路径最后点到弧线起点的连接线段，且通过common2D.Rect对象指定矩形边界。若需要自动连接弧线起点，请使用arcTo；若仅需添加独立弧线，可使用addArc。
 
 **起始版本：** 12
 
@@ -42,8 +42,8 @@ addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 包含弧的椭圆的矩形边界。 |
-| startAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 弧的起始角度，单位为度，0度为x轴正方向，该参数为浮点数。 |
-| sweepAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 扫描角度，单位为度。正数表示顺时针方向，负数表示逆时针方向，该参数为浮点数。 |
+| startAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 弧的起始角度，单位为度，0°为x轴正方向，该参数为浮点数。当对90取余接近于0且sweepAngle不在(-360, 360)区间内时，将添加整个椭圆而非圆弧。 |
+| sweepAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 扫描角度，单位为度。正数表示顺时针方向，负数表示逆时针方向。当参数不在(-360, 360)区间内且startAngle对90取余接近于0时，将添加整个椭圆而非圆 弧；其余情况下实际扫描角度为该入参对360取余的结果。该参数为浮点数。 |
 
 **错误码：**
 
@@ -77,10 +77,10 @@ addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示圆心的x轴坐标，该参数为浮点数。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示圆心的y轴坐标，该参数为浮点数。 |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示圆形的半径，该参数为浮点数，小于等于0时不会有任何效果。 |
-| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向，默认为顺时针方向。 |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示圆心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示圆心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示圆形的半径，取值范围>0，该参数为浮点数，小于等于0时不会有任何效果。单位为物理像素px。 |
+| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
 
@@ -115,8 +115,8 @@ addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 椭圆的矩形边界。 |
-| start | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示椭圆初始点的索引，0，1，2，3分别对应椭圆的上端点，右端点，下端点，左端点，该参数为不小于0的整数，大于等于4时会对4取余。 |
-| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向，默认为顺时针方向。 |
+| start | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示椭圆初始点的索引，取值范围为不小于0的整数，0、1、2、3分别对应椭圆的上端点、右端点、下端点、左端点，大于等于4时会对4取余。 |
+| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
 
@@ -144,8 +144,8 @@ addPath(path: Path, matrix?: Matrix | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示源路径对象。 |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 表示矩阵对象，默认为单位矩阵。 |
+| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 要添加到当前路径的源路径对象，经过矩阵变换后将被追加到当前路径中。 |
+| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 表示矩阵对象，用于对源路径进行变换（如旋转、缩放、平移等）。当需要对源路径进行 几何变换后再添加到当前路径时传入此参数；当仅需原样添加源路径时可不传入，不传入时默认为单位矩阵（即不进行任何变换）。 |
 
 **错误码：**
 
@@ -173,7 +173,7 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | 是 | 坐标点数组。 |
+| points | Array&lt;common2D.Point&gt; | 是 | 多边形各顶点的坐标点数组，按数组顺序依次连接各点形成连续线段。 |
 | close | boolean | 是 | 表示是否将路径闭合，即是否添加路径起始点到终点的连线。true表示将路径闭合，false表示不将路径闭合。 |
 
 **错误码：**
@@ -202,8 +202,8 @@ addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | 是 | 向路径中添加的矩形轮廓。 |
-| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向，默认为顺时针方向。 |
+| rect | common2D.Rect | 是 | 向路径中添加的矩形轮廓，rect参数需为有效的common2D.Rect对象，left需小于right、top需小于bottom。 |
+| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
 
@@ -231,8 +231,8 @@ addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 圆角矩形对象。 |
-| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向，默认为顺时针方向。 |
+| roundRect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 向路径中添加的圆角矩形对象，需为有效的RoundRect对象。 |
+| pathDirection | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
 
@@ -251,7 +251,7 @@ approximate(acceptableError: number): Array<number>
     
     - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。  
     
-    - 当acceptableError特别大时，路径会极度简化，保留少量关键点，可能会丢失原有形状。  
+    - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。  
     
     - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
 
@@ -267,7 +267,7 @@ approximate(acceptableError: number): Array<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| acceptableError | number | 是 | 表示路径上每条线段的可接受误差。该参数为浮点数，不应小于0，当参数小于0时报错。 |
+| acceptableError | number | 是 | 表示路径上每条线段的可接受误差，取值范围≥0，该参数为浮点数，小于0时报错。单位为物理像素px。 |
 
 **返回值：**
 
@@ -287,7 +287,14 @@ approximate(acceptableError: number): Array<number>
 approximate(acceptableError: double): Array<double> | undefined
 ```
 
-Approximates the path with a series of line segments.
+将当前路径转化为由连续直线段构成的近似路径。
+    **说明：**  
+    
+    - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。  
+    
+    - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。  
+    
+    - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
 
 **起始版本：** 24
 
@@ -301,13 +308,13 @@ Approximates the path with a series of line segments.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| acceptableError | double | 是 | Indicates the acceptable error for a line on the path. Should be no less than 0. |
+| acceptableError | double | 是 | 表示路径上每条线段的可接受误差，取值范围≥0，该参数为浮点数，小于0时报错。单位为物理像素px。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;double&gt; |  Returns with the array containing point components. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_There are three components for each point: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Fraction along the length of the path that the point resides [0.0, 1.0]. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. The x coordinate of the point. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. The y coordinate of the point. |
+| Array&lt;double&gt; |  返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成： \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. 该点所在的位置距离路径起点的长度比例值，范围为[0.0, 1.0]。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. 点的x坐标。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. 点的y坐标。 |
 
 **错误码：**
 
@@ -327,7 +334,7 @@ ArkTS-Sta:
 arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg: double): void
 ```
 
-给路径添加一段弧线，绘制弧线的方式为角度弧，该方式首先会指定一个矩形边框，取其内切椭圆，然后会指定一个起始角度和扫描度数，从起始角度扫描截取的椭圆周长一部分即为绘制的弧线。另外会默认添加一条从路径的最后点位置到弧线起始点位置的线段。
+给路径添加一段弧线。绘制弧线的方式为角度弧：首先指定一个矩形边界，取其内切椭圆；然后指定起始角度和扫描度数；最后从起始角度扫描截取椭圆周长的一部分，即为绘制的弧线。另外会默认添加一条从路径最后点位置（若路径没有内容则默认值为 (0, 0)）到弧线起始点位置的线段。若不需要自动添加连接线段，请使用[addArc]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
 
 **起始版本：** 11
 
@@ -343,12 +350,12 @@ arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形左上角的x坐标，该参数为浮点数。 |
-| y1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形左上角的y坐标，该参数为浮点数。 |
-| x2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形右下角的x坐标，该参数为浮点数。 |
-| y2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形右下角的y坐标，该参数为浮点数。 |
-| startDeg | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 起始的角度。角度的起始方向（0°）为x轴正方向。 |
-| sweepDeg | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 扫描的度数，为正数时顺时针扫描，为负数时逆时针扫描。实际扫描的度数为该入参对360取模的结果。 |
+| x1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形左上角的x坐标，该参数为浮点数。单位为物理像素px。 |
+| y1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形左上角的y坐标，该参数为浮点数。单位为物理像素px。 |
+| x2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形右下角的x坐标，该参数为浮点数。单位为物理像素px。 |
+| y2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 矩形右下角的y坐标，该参数为浮点数。单位为物理像素px。 |
+| startDeg | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 起始的角度。角度的起始方向（0°）为x轴正方向。单位为度。 |
+| sweepDeg | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 扫描的度数，为正数时顺时针扫描，为负数时逆时针扫描。实际扫描的度数为该入参对360取模的结果。 单位为度。 |
 
 **错误码：**
 
@@ -362,7 +369,7 @@ arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg
 buildFromSvgString(str: string): boolean
 ```
 
-解析SVG字符串表示的路径。
+解析SVG字符串表示的路径。支持标准SVG路径数据命令（如M、L、C、Q、A、Z及其相对坐标形式等），解析失败时返回false。
 
 **起始版本：** 12
 
@@ -376,7 +383,7 @@ buildFromSvgString(str: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| str | string | 是 | SVG格式的字符串，用于描述绘制路径。 |
+| str | string | 是 | SVG路径数据格式的字符串，用于描述绘制路径。支持M/m、L/l、H/h、V/v、C/c、S/s、Q/q、T/t、A/a、Z/z 等SVG路径命令，具体语法请参考SVG路径数据规范。传入不符合SVG路径格式的字符串时，解析失败，接口返回false。 |
 
 **返回值：**
 
@@ -396,7 +403,7 @@ buildFromSvgString(str: string): boolean
 close(): void
 ```
 
-闭合路径，会添加一条从路径起点位置到最后点位置的线段。
+闭合路径，会添加一条从路径最后点位置到起始点位置的线段。
 
 **起始版本：** 11
 
@@ -418,7 +425,7 @@ ArkTS-Sta:
 conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void
 ```
 
-在当前路径上添加一条路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线，其控制点为 (ctrlX, ctrlY)，结束点为 (endX, endY)。
+在当前路径上添加一条路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线，其控制点为 (ctrlX, ctrlY)，目标点为 (endX, endY)。与[quadTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_相比，conicTo通过权重参数可更灵活地控制曲线形状：权重为1时效果与quadTo相同，权重不为1时可精确表示圆弧、椭圆弧等圆锥曲线段。仅需标准二次贝塞尔曲线时推荐使用quadTo，需要精确表示圆弧或灵活控制曲线形状时推荐使用conicTo。
 
 **起始版本：** 12
 
@@ -434,11 +441,11 @@ conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的x坐标，该参数为浮点数。 |
-| ctrlY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的y坐标，该参数为浮点数。 |
-| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。 |
-| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。 |
-| weight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示曲线权重，决定了曲线的形状。值越大，曲线越接近控制点。小于等于0时，效果与[lineTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_相同；值为1时，效果与 [quadTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_相同。该参数为浮点数。 |
+| ctrlX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| weight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示曲线权重，决定了曲线的形状。值越大，曲线越接近控制点。 小于等于0时，效果与[lineTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_相同； 值为1时，效果与[quadTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_相同。该参数为浮点数。 |
 
 **错误码：**
 
@@ -500,7 +507,7 @@ ArkTS-Sta:
 contains(x: double, y: double): boolean
 ```
 
-判断指定坐标点是否被路径包含，判定是否被路径包含的规则参考[PathFillType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+判断指定坐标点是否被路径包含，判定规则参考[PathFillType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
 
 **起始版本：** 12
 
@@ -514,8 +521,8 @@ contains(x: double, y: double): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | x轴上坐标点，该参数必须为浮点数。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | y轴上坐标点，该参数必须为浮点数。 |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | x轴上坐标点，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | y轴上坐标点，该参数为浮点数。单位为物理像素px。 |
 
 **返回值：**
 
@@ -535,7 +542,7 @@ contains(x: double, y: double): boolean
 convertToSvgString(): string
 ```
 
-将路径转换为SVG字符串。
+将路径转换为SVG字符串。输出的字符串遵循SVG路径数据规范映射。
 
 **起始版本：** 26.0.0
 
@@ -551,7 +558,7 @@ convertToSvgString(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 转换后的SVG字符串结果。 |
+| string | 转换后的SVG字符串，以SVG路径格式描述当前路径的几何形状。 |
 
 ## cubicTo
 
@@ -565,7 +572,7 @@ ArkTS-Sta:
 cubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: double, endY: double): void
 ```
 
-添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔圆滑曲线。
+添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。
 
 **起始版本：** 11
 
@@ -581,12 +588,12 @@ cubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: do
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点的x坐标，该参数为浮点数。 |
-| ctrlY1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点的y坐标，该参数为浮点数。 |
-| ctrlX2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点的x坐标，该参数为浮点数。 |
-| ctrlY2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点的y坐标，该参数为浮点数。 |
-| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。 |
-| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。 |
+| ctrlX1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlY1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlX2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlY2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -614,7 +621,7 @@ getBounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | Minimum bounding rectangle. |
+| common2D.Rect | 包含路径的最小矩形区域。 |
 
 ## getBounds
 
@@ -622,7 +629,7 @@ getBounds(): common2D.Rect
 getBounds(): common2D.Rect | undefined
 ```
 
-Obtains the minimum bounding rectangle that encloses this path.
+获取包含路径的最小矩形边界。
 
 **起始版本：** 23
 
@@ -636,7 +643,7 @@ Obtains the minimum bounding rectangle that encloses this path.
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | Rect object. |
+| common2D.Rect | 包含路径的最小矩形区域。创建失败时返回undefined。 |
 
 ## getConicWeightData
 
@@ -650,7 +657,17 @@ ArkTS-Sta:
 getConicWeightData(): Array<double>
 ```
 
-获取路径的圆锥曲线权重数据。在路径（path）图元中，圆锥曲线数据采用有理贝塞尔曲线（Rational Bézier Curve）形式表示，其中每个控制点附带一个权重值（weight）。权重属于曲线定义的几何参数。主要作用如下：形状调控：权重值越大，曲线越靠近对应控制点；权重为1时退化为标准贝塞尔曲线；权重为0时该控制点不起作用。精确表示圆锥曲线：通过组合权重与二次贝塞尔曲线，可以精确表示圆弧、椭圆弧、抛物线等圆锥曲线段，无需使用分段逼近或专用椭圆弧指令。数据组织：权重通常以数组形式与点数据并列，按顺序对应每个控制点，与相应的指令verb（如[conicTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）配合使用。
+获取路径的圆锥曲线权重数据。
+
+在路径（path）图元中，圆锥曲线数据采用有理贝塞尔曲线（Rational Bézier Curve）形式表示，其中每个控制点附带一个权重值（weight）。权重属于曲线定义的几何参数。
+
+主要作用如下：
+
+形状调控：权重值越大，曲线越靠近对应控制点；权重为1时退化为标准贝塞尔曲线；权重为0时该控制点不起作用。
+
+精确表示圆锥曲线：通过组合权重与二次贝塞尔曲线，可以精确表示圆弧、椭圆弧、抛物线等圆锥曲线段，无需使用分段逼近或专用椭圆弧指令。
+
+数据组织：权重通常以数组形式与点数据并列，按顺序对应每个控制点，与相应的指令verb（如[conicTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）配合使用。
 
 **起始版本：** 26.0.0
 
@@ -666,7 +683,7 @@ getConicWeightData(): Array<double>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 类型为浮点数（取值范围为非负数）。取值为0.0时，该控制点完全无效，曲线不经过此点，曲线实际由其余控制点定义。取值为1.0时，该控制点对应的曲线变为标准贝塞尔曲线，此时权重 不产生额外形变效果。取值大于1时，权重值越大，曲线越靠近该控制点；小于1.0但大于0.0时，曲线则相对远离该控制点。 |
+| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 类型为浮点数，取值范围≥0。取值为0.0时，该控制点完全无效，曲线不经过此点，曲线实际由其余控制点定义。取值为1.0时，该控制点对应的曲线变为标准贝塞尔曲线，此时权重不产生 额外形变效果。取值大于1时，权重值越大，曲线越靠近该控制点；小于1.0但大于0.0时，曲线则相对远离该控制点。 |
 
 ## getFillType
 
@@ -688,7 +705,7 @@ getFillType(): PathFillType
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 路径填充类型。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 路径的填充类型，决定路径内部区域的定义方式。 |
 
 ## getFillType
 
@@ -696,7 +713,7 @@ getFillType(): PathFillType
 getFillType(): PathFillType | undefined
 ```
 
-Gets fill type, the rule used to fill path.
+获取路径的填充类型。
 
 **起始版本：** 24
 
@@ -710,7 +727,7 @@ Gets fill type, the rule used to fill path.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the pathFillType. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 路径的填充类型，决定路径内部区域的定义方式。 |
 
 ## getLastPoint
 
@@ -718,7 +735,7 @@ Gets fill type, the rule used to fill path.
 getLastPoint(): common2D.Point
 ```
 
-获取路径的最后一个点坐标。
+获取路径最后点位置的坐标。
 
 **起始版本：** 26.0.0
 
@@ -734,7 +751,7 @@ getLastPoint(): common2D.Point
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Point | Returns the last point of the path. |
+| common2D.Point | 路径最后点位置坐标。如果路径为空，则返回undefined。 |
 
 ## getLastPoint
 
@@ -742,7 +759,7 @@ getLastPoint(): common2D.Point
 getLastPoint(): common2D.Point | undefined
 ```
 
-获取路径的最后一个点坐标。
+获取路径最后点位置的坐标。
 
 **起始版本：** 26.0.0
 
@@ -758,7 +775,7 @@ getLastPoint(): common2D.Point | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Point | Returns the last point of the path, or undefined if the path is empty. |
+| common2D.Point | 路径最后点位置坐标。如果路径为空，则返回undefined。 |
 
 ## getLength
 
@@ -792,7 +809,7 @@ getLength(forceClosed: boolean): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 路径长度。 |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 路径长度。单位为物理像素px。 |
 
 ## getMatrix
 
@@ -806,7 +823,7 @@ ArkTS-Sta:
 getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMeasureMatrixFlags): boolean
 ```
 
-在路径上的某个位置，获取一个变换矩阵，用于表示该点的坐标和朝向。
+在路径上距离起始点distance处，获取一个变换矩阵，用于表示该点的坐标和朝向。
 
 **起始版本：** 12
 
@@ -821,9 +838,9 @@ getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMea
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| distance | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。 |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 矩阵对象，用于存储得到的矩阵。 |
-| flags | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 矩阵信息维度枚举。 |
+| distance | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。 单位为物理像素px。 |
+| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于存储获取到的变换矩阵的矩阵对象，该矩阵表示路径上指定距离处的坐标位置和朝向信息。 |
+| flags | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 矩阵信息维度枚举，用于指定获取的矩阵包含哪些维度信息。 |
 
 **返回值：**
 
@@ -857,7 +874,7 @@ getPathIterator(): PathIterator
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 该路径的迭代器对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 路径的迭代器对象，用于遍历路径中的绘图指令和点数据，可通过迭代器逐条获取路径的verb指令及对应的坐标点。 |
 
 ## getPathIterator
 
@@ -865,7 +882,7 @@ getPathIterator(): PathIterator
 getPathIterator(): PathIterator | undefined
 ```
 
-Obtains the operation iterator of this path.
+返回该路径的操作迭代器。
 
 **起始版本：** 23
 
@@ -879,7 +896,7 @@ Obtains the operation iterator of this path.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Indicates the pointer to an pathIterator object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 路径的迭代器对象，用于遍历路径中的绘图指令和点数据，可通过迭代器逐条获取路径的verb指令及对应的坐标点。创建失败时返回undefined。 |
 
 ## getPointData
 
@@ -887,7 +904,17 @@ Obtains the operation iterator of this path.
 getPointData(): Array<common2D.Point>
 ```
 
-获取路径的点数据。在路径（path）图元中，点数据以数值序列的形式存在，与动词verb指令一一对应，用来精确指定绘图操作的几何坐标位置。点数据的主要类型包括：终点坐标：与[moveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[lineTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_等指令配合，定义线段或移动的目标位置。控制点坐标：与曲线指令配合，用于定义贝塞尔曲线的形状（如三次曲线需要两个控制点和一个终点）。闭合点：通常不单独提供坐标，由[close]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_指令隐式使用路径起点。
+获取路径的点数据。
+
+在路径（path）图元中，点数据以数值序列的形式存在，与verb指令一一对应，用来精确指定绘图操作的几何坐标位置。
+
+点数据的主要类型包括：
+
+终点坐标：与[moveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[lineTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_等指令配合，定义线段或移动的目标位置。
+
+控制点坐标：与曲线指令配合，用于定义贝塞尔曲线的形状（如三次曲线需要两个控制点和一个终点）。
+
+闭合点：通常不单独提供坐标，由[close]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_指令隐式使用路径起点。
 
 **起始版本：** 26.0.0
 
@@ -903,7 +930,7 @@ getPointData(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | path points array. |
+| Array&lt;common2D.Point&gt; | 返回路径的点数据数组，每个元素为common2D.Point对象，其x、y坐标为浮点数。 理论取值范围为全体实数，但实际受限于渲染坐标系的有效范围（如-2^31到2^31-1或屏幕可见区域）；超出范围可能导致图形不可见或裁剪。 |
 
 ## getPositionAndTangent
 
@@ -932,7 +959,7 @@ getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| distance | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。 |
+| distance | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。 该参数为浮点数。单位为物理像素px。 |
 | position | common2D.Point | 是 | 存储获取到的距离路径起始点distance处的点的坐标。 |
 | tangent | common2D.Point | 是 | 存储获取到的距离路径起始点distance处的点的切线值，tangent.x表示该点切线的余弦值，tangent.y表示该点切线的正弦值。 |
 
@@ -940,7 +967,7 @@ getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 表示是否成功获取距离路径起始点distance处的点的坐标和正切值的结果。true表示获取成功，false表示获取失败，position和tangent不会被改变。 |
+| boolean | 表示是否成功获取距离路径起始点distance处的点的坐标和切线值的结果。 true表示获取成功，false表示获取失败，position和tangent不会被改变。 |
 
 **错误码：**
 
@@ -975,9 +1002,9 @@ getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: b
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| start | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，距离路径起始点start距离的位置即为截取路径片段的起始点，小于0时会被视作0，大于等于stop时会截取失败。该参数为浮点数。 |
-| stop | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，距离路径起始点stop距离的位置即为截取路径片段的终点，小于等于start时会截取失败，大于路径长度时会被视作路径长度。该参数为浮点数。 |
-| startWithMoveTo | boolean | 是 | 表示是否在目标路径执行[moveTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_移动到截取路径片段的起始点位置。true表示执行，false 表示不执行。 |
+| start | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，距离路径起始点start距离的位置即为截取路径片段的起始点， 小于0时会被视作0，大于等于stop时会截取失败。该参数为浮点数。单位为物理像素px。 |
+| stop | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示与路径起始点的距离，距离路径起始点stop距离的位置即为截取路径片段的终点， 小于等于start时会截取失败，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
+| startWithMoveTo | boolean | 是 | 表示是否在目标路径执行[moveTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 移动到截取路径片段的起始点位置。true表示执行moveTo；false表示不执行moveTo。 |
 | dst | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 目标路径，截取成功时会将得到的路径片段追加到目标路径上，截取失败时不做改变。 |
 
 **返回值：**
@@ -992,9 +1019,16 @@ getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: b
 getVerbData(): Array<PathIteratorVerb>
 ```
 
-获取路径的指令数据。在路径（path）图元中，指令数据verb用于描述路径构造过程中的基本绘图动作。指令数据以枚举的形式存在，每个取值对应一种几何操作类型，例如：  
-[moveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_：将当前绘图点移至指定坐标，不产生线段。  
-[lineTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_：从当前点向指定点绘制直线段。  
+获取路径的指令数据。
+
+在路径（path）图元中，指令数据verb用于描述路径构造过程中的基本绘图动作。
+
+指令数据以枚举的形式存在，每个取值对应一种几何操作类型，例如：
+
+[moveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_：将当前绘图点移至指定坐标，不产生线段。
+
+[lineTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_：从当前点向指定点绘制直线段。
+
 [close]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_：将当前点与路径起点相连，形成封闭区域。
 
 **起始版本：** 26.0.0
@@ -1011,7 +1045,7 @@ getVerbData(): Array<PathIteratorVerb>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;PathIteratorVerb&gt; | 类型为浮点数。理论上取值范围为全体实数，但实际受限于渲染坐标系的有效范围（如-2^31到2^31-1或屏幕可见区域）；超出范围可能导致图形不可见或裁剪。 |
+| Array&lt;PathIteratorVerb&gt; | 返回路径的指令数据数组，每个数组元素对应为路径中的基本绘图动作类型，与点数据一一对应。 |
 
 ## interpolate
 
@@ -1025,7 +1059,7 @@ ArkTS-Sta:
 interpolate(other: Path, weight: double, interpolatedPath: Path): boolean
 ```
 
-根据给定的权重，在当前路径和另一条路径之间进行插值，并将结果存储在目标路径对象中。两条路径点数相同即可插值成功，目标路径按照当前路径的结构进行创建。
+根据给定的权重，在当前路径和另一条路径之间进行插值，并将结果存储在目标路径对象中。两条路径点数相同即可插值成功，目标路径按照当前路径的指令结构进行创建。
 
 **起始版本：** 20
 
@@ -1040,7 +1074,7 @@ interpolate(other: Path, weight: double, interpolatedPath: Path): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | other | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示另一条路径对象。 |
-| weight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示插值权重，必须在[0.0, 1.0]范围内。该参数为浮点数。 |
+| weight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示插值权重，取值范围为[0.0, 1.0]。该参数为浮点数。 |
 | interpolatedPath | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示用于存储插值结果的目标路径对象。 |
 
 **返回值：**
@@ -1105,7 +1139,7 @@ isEmpty(): boolean
 isEqual(path: Path): boolean
 ```
 
-Checks if two paths are equal.
+判断当前路径与另一条路径是否相等。
 
 **起始版本：** 26.0.0
 
@@ -1121,13 +1155,13 @@ Checks if two paths are equal.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Another Path object to compare. |
+| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 另一条路径对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Returns true if the two paths are equal, otherwise returns false. |
+| boolean | 返回当前路径与另一条路径是否相等的结果。true表示路径相等，false表示路径不相等。 |
 
 ## isInterpolate
 
@@ -1163,7 +1197,7 @@ isInterpolate(other: Path): boolean
 isInverseFillType(): boolean
 ```
 
-检查当前路径填充类型是否是反向填充类型。例如填充类型Winding、EvenOdd不是反向类型，InverseWinding、InverseEvenOdd是反向类型。
+检查当前路径填充类型是否是反向填充类型。例如填充类型WINDING、EVEN\_ODD不是反向类型，INVERSE\_WINDING、INVERSE\_EVEN\_ODD是反向类型。
 
 **起始版本：** 23
 
@@ -1219,7 +1253,7 @@ ArkTS-Sta:
 lineTo(x: double, y: double): void
 ```
 
-添加一条从路径的最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。
+添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。
 
 **起始版本：** 11
 
@@ -1235,8 +1269,8 @@ lineTo(x: double, y: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x轴坐标，该参数为浮点数。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y轴坐标，该参数为浮点数。 |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -1256,7 +1290,7 @@ ArkTS-Sta:
 moveTo(x: double, y: double): void
 ```
 
-设置自定义路径的起始点位置。
+设置自定义路径的起始点位置。与[rMoveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用相对坐标不同，moveTo使用绝对坐标设置起始点。当路径起点固定时，推荐使用moveTo；当路径需要基于当前位置动态构建时，推荐使用[rMoveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_。
 
 **起始版本：** 11
 
@@ -1272,8 +1306,8 @@ moveTo(x: double, y: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 起始点的x轴坐标，该参数为浮点数。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 起始点的y轴坐标，该参数为浮点数。 |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 起始点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 起始点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -1287,7 +1321,7 @@ moveTo(x: double, y: double): void
 offset(dx: number, dy: number): Path
 ```
 
-将路径沿着x轴和y轴方向偏移一定距离并保存在返回的路径对象中。
+将路径沿x轴方向偏移dx距离、沿y轴方向偏移dy距离，并保存在返回的路径对象中。
 
 **起始版本：** 12
 
@@ -1301,8 +1335,8 @@ offset(dx: number, dy: number): Path
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | number | 是 | x轴方向偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 |
-| dy | number | 是 | y轴方向偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 |
+| dx | number | 是 | x轴方向偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dy | number | 是 | y轴方向偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 
 **返回值：**
 
@@ -1357,7 +1391,7 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 op(path: Path, pathOp: PathOp): boolean
 ```
 
-将当前路径置为和path按照指定的路径操作类型合并后的结果。
+将当前路径与path按照指定的路径操作类型进行合并，并将合并结果保存在当前路径中。
 
 **起始版本：** 12
 
@@ -1372,7 +1406,7 @@ op(path: Path, pathOp: PathOp): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路径对象，用于与当前路径合并。 |
-| pathOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路径操作类型枚举。 |
+| pathOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 路径操作类型枚举，用于指定两条路径的布尔运算方式。 |
 
 **返回值：**
 
@@ -1398,7 +1432,7 @@ ArkTS-Sta:
 quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void
 ```
 
-添加从路径最后点位置（若路径没有内容则为 (0, 0)）到目标点位置的二阶贝塞尔曲线。
+添加从路径最后点位置（若路径没有内容则默认值为 (0, 0)）到目标点位置的二阶贝塞尔曲线。
 
 **起始版本：** 11
 
@@ -1414,10 +1448,10 @@ quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的x坐标，该参数为浮点数。 |
-| ctrlY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的y坐标，该参数为浮点数。 |
-| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。 |
-| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。 |
+| ctrlX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
+| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -1437,7 +1471,7 @@ ArkTS-Sta:
 rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void
 ```
 
-使用相对位置在当前路径上添加一条路径终点（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线。与[conicTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用绝对坐标不同，rConicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加圆锥曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1453,11 +1487,11 @@ rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: doubl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径终点的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 |
-| ctrlY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径终点的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 |
-| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径终点的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 |
-| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径终点的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 |
-| weight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示曲线的权重，决定了曲线的形状，越大越接近控制点。若小于等于0则等同于使用[rLineTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_添加一条到结束点的线段 ，若为1则等同于[rQuadTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，该参数为浮点数。 |
+| ctrlX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| weight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示曲线权重，决定了曲线的形状，越大越接近控制点。 若小于等于0则等同于使用[rLineTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_添加一条到结束点的线段， 若为1则等同于[rQuadTo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，该参数为浮点数。 |
 
 **错误码：**
 
@@ -1477,7 +1511,7 @@ ArkTS-Sta:
 rCubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: double, endY: double): void
 ```
 
-使用相对位置在当前路径上添加一条当前路径终点（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。与[cubicTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用绝对坐标不同，rCubicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加三阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1493,12 +1527,12 @@ rCubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: d
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点相对于路径终点的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 |
-| ctrlY1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点相对于路径终点的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 |
-| ctrlX2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点相对于路径终点的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 |
-| ctrlY2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点相对于路径终点的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 |
-| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径终点的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 |
-| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径终点的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 |
+| ctrlX1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlY1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第一个控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlX2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlY2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 第二个控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -1518,7 +1552,7 @@ ArkTS-Sta:
 rLineTo(dx: double, dy: double): void
 ```
 
-使用相对位置在当前路径上添加一条当前路径终点（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。与[lineTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用绝对坐标不同，rLineTo使用相对于当前路径最后点位置的偏移量来指定目标点。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当目标点位置固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1534,8 +1568,8 @@ rLineTo(dx: double, dy: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于当前路径终点的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于当前路径终点的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 |
+| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于当前路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于当前路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -1555,7 +1589,7 @@ ArkTS-Sta:
 rMoveTo(dx: double, dy: double): void
 ```
 
-设置一个相对于当前路径终点（若路径没有内容则默认为 (0, 0)）的路径起始点位置。
+设置一个相对于当前路径最后点位置（若路径没有内容则默认为 (0, 0)）的路径起始点位置。与[moveTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用绝对坐标不同，rMoveTo使用相对于当前路径最后点位置的偏移量。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法（如rMoveTo、rLineTo等）；当路径起点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1571,8 +1605,8 @@ rMoveTo(dx: double, dy: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 路径新起始点相对于当前路径终点的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 路径新起始点相对于当前路径终点的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 |
+| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 路径新起始点相对于当前路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 路径新起始点相对于当前路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -1592,7 +1626,7 @@ ArkTS-Sta:
 rQuadTo(dx1: double, dy1: double, dx2: double, dy2: double): void
 ```
 
-使用相对位置在当前路径上添加一条当前路径终点（若路径没有内容则默认为 (0, 0)）到目标点位置的二阶贝塞尔曲线。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的二阶贝塞尔曲线。与[quadTo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_使用绝对坐标不同，rQuadTo使用相对于当前路径最后点位置的偏移量在当前路径上添加二阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1608,10 +1642,10 @@ rQuadTo(dx1: double, dy1: double, dx2: double, dy2: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径终点的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 |
-| dy1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径终点的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 |
-| dx2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径终点的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 |
-| dy2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径终点的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 |
+| dx1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
+| dy1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 控制点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
+| dx2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
+| dy2 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 目标点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
 
 **错误码：**
 
@@ -1657,7 +1691,7 @@ rewind(): void
 set(src: Path): void
 ```
 
-使用另一个路径对当前路径进行更新。
+使用指定路径替换当前路径的内容，使当前路径与指定路径完全一致。
 
 **起始版本：** 20
 
@@ -1673,7 +1707,7 @@ set(src: Path): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于更新的路径。 |
+| src | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 用于替换当前路径内容的源路径对象。 |
 
 ## setFillType
 
@@ -1681,7 +1715,7 @@ set(src: Path): void
 setFillType(pathFillType: PathFillType): void
 ```
 
-设置路径的填充类型，决定路径内部区域的定义方式。例如，使用Winding填充类型时，路径内部区域由路径环绕的次数决定，而使用EvenOdd填充类型时，路径内部区域由路径环绕的次数是否为奇数决定。
+设置路径的填充类型，决定路径内部区域的定义方式。
 
 **起始版本：** 12
 
@@ -1695,7 +1729,7 @@ setFillType(pathFillType: PathFillType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathFillType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示路径填充规则。 |
+| pathFillType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示路径填充类型，决定路径内部区域的定义方式。 |
 
 **错误码：**
 
@@ -1715,7 +1749,7 @@ ArkTS-Sta:
 setLastPoint(x: double, y: double): void
 ```
 
-修改路径的最后一个点。
+修改路径最后点位置。
 
 **起始版本：** 20
 
@@ -1729,8 +1763,8 @@ setLastPoint(x: double, y: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 指定点的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 指定点的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。 |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 指定点的x轴坐标，该参数为浮点数。 0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 指定点的y轴坐标，该参数为浮点数。 0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 ## toggleInverseFillType
 
@@ -1738,7 +1772,7 @@ setLastPoint(x: double, y: double): void
 toggleInverseFillType(): void
 ```
 
-切换路径的填充类型为反向类型。例如，使用Winding填充类型时，经过取反后填充类型为InverseWinding，而使用EvenOdd填充类型时，经过取反后填充类型为InverseEvenOdd，反之亦然。
+切换路径的填充类型为反向类型。例如，使用WINDING填充类型时，经过取反后填充类型为INVERSE\_WINDING，而使用EVEN\_ODD填充类型时，经过取反后填充类型为INVERSE\_EVEN\_ODD，反之亦然。
 
 **起始版本：** 23
 
@@ -1768,7 +1802,7 @@ transform(matrix: Matrix): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示矩阵对象。 |
+| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示对路径进行矩阵变换所使用的矩阵对象，该矩阵定义了变换的具体参数 （如缩放比例、旋转角度、平移距离等），路径中的所有点将按照该矩阵进行变换。 |
 
 **错误码：**
 

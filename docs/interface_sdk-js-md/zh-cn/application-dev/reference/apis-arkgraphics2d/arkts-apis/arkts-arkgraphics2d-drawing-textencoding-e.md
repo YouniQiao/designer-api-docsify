@@ -16,7 +16,7 @@
 TEXT_ENCODING_UTF8 = 0
 ```
 
-使用1个字节表示UTF-8或ASCII。
+UTF-8或ASCII编码，UTF-8使用1-4个字节表示字符，ASCII使用1个字节表示字符。
 
 **起始版本：** 11
 
@@ -34,7 +34,7 @@ TEXT_ENCODING_UTF8 = 0
 TEXT_ENCODING_UTF16 = 1
 ```
 
-使用2个字节表示大部分unicode。
+使用2个字节表示大部分Unicode。
 
 **起始版本：** 11
 
@@ -52,7 +52,7 @@ TEXT_ENCODING_UTF16 = 1
 TEXT_ENCODING_UTF32 = 2
 ```
 
-使用4个字节表示全部unicode。
+使用4个字节表示全部Unicode。
 
 **起始版本：** 11
 

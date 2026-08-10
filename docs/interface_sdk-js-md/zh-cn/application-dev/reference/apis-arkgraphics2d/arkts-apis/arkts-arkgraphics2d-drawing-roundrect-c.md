@@ -1,6 +1,6 @@
 # RoundRect
 
-圆角矩形对象。
+圆角矩形对象。支持设置和获取指定圆角位置的圆角半径，以及对圆角矩形进行平移操作。
     **说明：**  
     
     - 本Class首批接口从API version 12开始支持。  
@@ -66,8 +66,8 @@ constructor(rect: common2D.Rect, xRadii: double, yRadii: double)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 需要创建的圆角矩形区域。 |
-| xRadii | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | X轴上的圆角半径，该参数为浮点数，小于等于0时无效。 |
-| yRadii | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | Y轴上的圆角半径，该参数为浮点数，小于等于0时无效。 |
+| xRadii | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | x轴方向的圆角半径，该参数为浮点数，取值大于0时圆角生效，小于等于0时圆角不生效。 单位为物理像素px。 |
+| yRadii | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | y轴方向的圆角半径，该参数为浮点数，取值大于0时圆角生效，小于等于0时圆角不生效。 单位为物理像素px。 |
 
 **错误码：**
 
@@ -101,7 +101,7 @@ getCorner(pos: CornerPos): common2D.Point
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Point | Point. The horizontal coordinate indicates the radius of the rounded corner on the X axis, and the vertical coordinate indicates the radius on the Y axis. |
+| common2D.Point | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 |
 
 **错误码：**
 
@@ -115,7 +115,7 @@ getCorner(pos: CornerPos): common2D.Point
 getCorner(pos: CornerPos): common2D.Point | undefined
 ```
 
-Obtains the radii of the specified rounded corner in this rounded rectangle.
+获取圆角矩形中指定圆角位置的圆角半径。
 
 **起始版本：** 23
 
@@ -129,13 +129,13 @@ Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pos | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Position of the rounded corner. |
+| pos | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 圆角位置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Point | Point. The horizontal coordinate indicates the radius of the rounded corner on the X axis, and the vertical coordinate indicates the radius on the Y axis. |
+| common2D.Point | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 获取失败时返回undefined。 |
 
 **错误码：**
 
@@ -155,7 +155,7 @@ ArkTS-Sta:
 offset(dx: double, dy: double): void
 ```
 
-将圆角矩形分别沿x轴方向和y轴方向平移dx,dy。
+将圆角矩形沿x轴方向平移dx、沿y轴方向平移dy。
 
 **起始版本：** 12
 
@@ -169,8 +169,8 @@ offset(dx: double, dy: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示x轴方向上的偏移量。正数表示向x轴正方向平移，负数表示向x轴负方向平移，该参数为浮点数。 |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示y轴方向上的偏移量。正数表示向y轴正方向平移，负数表示向y轴负方向平移，该参数为浮点数。 |
+| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示x轴方向上的偏移量。正数表示向x轴正方向平移，负数表示向x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示y轴方向上的偏移量。正数表示向y轴正方向平移，负数表示向y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -205,8 +205,8 @@ setCorner(pos: CornerPos, x: double, y: double): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pos | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 圆角位置。 |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | x轴方向的圆角半径，该参数为浮点数，小于等于0时无效。 |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | y轴方向的圆角半径，该参数为浮点数，小于等于0时无效。 |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | x轴方向的圆角半径，该参数为浮点数，取值大于0时该圆角半径设置生效，小于等于0时该圆角半径设置不生效。 单位为物理像素px。 |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | y轴方向的圆角半径，该参数为浮点数，取值大于0时该圆角半径设置生效，小于等于0时该圆角半径设置不生效。 单位为物理像素px。 |
 
 **错误码：**
 

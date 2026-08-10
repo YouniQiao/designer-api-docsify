@@ -22,7 +22,7 @@ Destroys a virtual screen. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Screen ID. The value must be an integer. |
+| screenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the virtual screen. The value must be an integer. |
 | callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the virtual screen is destroyed, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -73,7 +73,7 @@ Destroys a virtual screen. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Screen ID. The value must be an integer. |
+| screenId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the virtual screen. The value must be an integer. |
 
 **Return value:**
 

@@ -38,7 +38,7 @@ Screen ID. The value must be a positive integer. Any non-positive integer values
 startX: long
 ```
 
-Start X coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used as the origin, with the positive direction being rightwards. The value must be a positive integer. Any non-positive integer values will be considered invalid and result in an error.
+Start X coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used as the origin, with the positive direction being rightwards. in px. The value must be a non-negative integer. Any other values will be considered invalid and result in an error.
 
 **Type:** long
 
@@ -58,7 +58,7 @@ Start X coordinate of the screen. The top-left vertex of the bounding rectangle 
 startY: long
 ```
 
-Start Y coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used as the origin, with the positive direction being downwards. The value must be a positive integer. Any non-positive integer values will be considered invalid and result in an error.
+Start Y coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used as the origin, with the positive direction being downwards. in px. The value must be a non-negative integer. Any other values will be considered invalid and result in an error.
 
 **Type:** long
 

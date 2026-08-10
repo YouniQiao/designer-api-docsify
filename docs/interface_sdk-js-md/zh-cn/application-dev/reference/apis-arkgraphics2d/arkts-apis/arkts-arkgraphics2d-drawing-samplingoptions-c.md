@@ -1,6 +1,6 @@
 # SamplingOptions
 
-采样选项对象。
+采样选项对象，用于配置图像采样时的过滤模式，控制图像缩放或变换过程中的像素采样方式。典型使用场景为在Canvas上绘制图像（如drawImage）时，以不同过滤模式决定图像的采样质量与渲染效果。
     **说明：**  
     
     - 本Class首批接口从API version 12开始支持。  
@@ -39,7 +39,7 @@ constructor()
 constructor(filterMode: FilterMode)
 ```
 
-构造一个新的采样选项对象。
+构造一个新的采样选项对象，可通过指定filterMode参数适配不同的图像采样场景。
 
 **起始版本：** 12
 
@@ -53,7 +53,7 @@ constructor(filterMode: FilterMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filterMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 过滤模式。 |
+| filterMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 过滤模式，用于指定图像采样时的过滤算法。 |
 
 **错误码：**
 

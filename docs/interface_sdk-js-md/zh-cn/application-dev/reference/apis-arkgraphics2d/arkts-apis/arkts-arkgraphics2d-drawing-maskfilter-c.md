@@ -1,6 +1,6 @@
 # MaskFilter
 
-蒙版滤镜对象。
+蒙版滤镜对象，用于对绘制内容施加模糊效果。
     **说明：**  
     
     - 本Class首批接口从API version 12开始支持。  
@@ -37,8 +37,8 @@ static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| blurType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 模糊类型。 |
-| sigma | number | 是 | 高斯模糊的标准偏差，必须为大于0的浮点数。 |
+| blurType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 模糊类型，用于指定蒙版滤镜的模糊操作方式。 |
+| sigma | number | 是 | 高斯模糊的标准偏差，必须为大于0的浮点数。单位为物理像素px。 |
 
 **返回值：**
 
@@ -58,7 +58,7 @@ static createBlurMaskFilter(blurType: BlurType, sigma: number): MaskFilter
 static createBlurMaskFilter(blurType: BlurType, sigma: double): MaskFilter | undefined
 ```
 
-Creates a mask filter with a blur effect.
+创建具有模糊效果的蒙版滤镜。
 
 **起始版本：** 23
 
@@ -72,14 +72,14 @@ Creates a mask filter with a blur effect.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| blurType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Blur type. |
-| sigma | double | 是 | Standard deviation of the Gaussian blur to apply. The value must be a floating point number greater than 0. |
+| blurType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 模糊类型，用于指定蒙版滤镜的模糊操作方式。 |
+| sigma | double | 是 | 高斯模糊的标准偏差，必须为大于0的浮点数。单位为物理像素px。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | MaskFilter object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的蒙版滤镜对象。创建失败时返回undefined。 |
 
 **错误码：**
 

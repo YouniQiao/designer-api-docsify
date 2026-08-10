@@ -38,7 +38,7 @@ List of window IDs that are not displayed during screen capture. By default, thi
 displayId?: long
 ```
 
-ID of the [display]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to capture. The default value is **0**. The value must be an integer greater than or equal to 0. If a non-integer is passed, a parameter error is reported.
+ID of the [display]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to capture. The default value is **0**. The value must be an integer greater than or equal to 0. If a non-integer is passed, error code 401 is reported.
 
 **Type:** long
 

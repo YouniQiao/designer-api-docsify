@@ -20,7 +20,7 @@
 - [Connectivity Kit (112)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-connectivity-kit/arkts-apis/arkts-nearlink-advertising.md)
 - [Contacts Kit (53)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-contacts-kit/arkts-apis/arkts-contact.md)
 - [Content Embed Kit (23)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-content-embed-kit/c-apis/capi-content-embed-proxy-h.md)
-- [Core File Kit (546)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-application-backupextensionability.md)
+- [Core File Kit (566)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-application-backupextensionability.md)
 - [Crypto Architecture Kit (141)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md)
 - [Data Protection Kit (65)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-data-protection-kit/arkts-apis/arkts-dlppermission.md)
 - [Default (25)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability.md)

@@ -871,7 +871,9 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 openEventEditPage(id: number): Promise<void>
 ```
 
-Opens the event edit page.
+Obtains the event instance that meets the viewing or editing condition in a calendar based on the event ID.This API uses a promise to return the result.
+
+This API can be used to view and edit calendar events in the system calendar.
 
 **Since:** 26.0.0
 
@@ -1106,7 +1108,7 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 updateEvent(event: Event): Promise<void>
 ```
 
-Updates an event. This API uses a promise to return the result.
+Updates an event, with the ID of the updated event specified in Event.This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1171,7 +1173,7 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 updateEvent(event: Event, callback: AsyncCallback<void>): void
 ```
 
-Updates an event. This API uses an asynchronous callback to return the result.
+Updates an event. The ID of the updated event must be specified in Event.If not, the event cannot be updated.This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 

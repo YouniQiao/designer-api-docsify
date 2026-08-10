@@ -26,7 +26,7 @@ Register the callback for brightness info changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function onBrightnessInfoChange can not work correctly due to limited device capabilities. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 | [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 

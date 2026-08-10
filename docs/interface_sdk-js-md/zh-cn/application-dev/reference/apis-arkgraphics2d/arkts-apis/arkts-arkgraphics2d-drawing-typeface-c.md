@@ -1,6 +1,6 @@
 # Typeface
 
-字体，如宋体、楷体等。
+Typeface类用于表示和管理字体对象。支持的字体操作包括：获取字体族名、从字体文件或rawfile资源构造字体、结合字体属性构造新字体，以及检查字体的加粗、斜体状态等。
     **说明：**  
     
     - 本模块使用屏幕物理像素单位px。  
@@ -35,7 +35,7 @@ getFamilyName(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回字体的族名。 |
+| string | 返回字体的族名，表示当前Typeface对象对应的字体设计名称。 |
 
 ## getFamilyName
 
@@ -43,7 +43,7 @@ getFamilyName(): string
 getFamilyName(): string | undefined
 ```
 
-Get the family name for this typeface.
+获取字体的族名，即一套字体设计的名称。
 
 **起始版本：** 23
 
@@ -57,7 +57,7 @@ Get the family name for this typeface.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Family name. |
+| string | 返回字体的族名，表示当前Typeface对象对应的字体设计名称。创建失败时返回undefined。 |
 
 ## isBold
 
@@ -87,7 +87,7 @@ isBold(): boolean
 isItalic(): boolean
 ```
 
-检查字体是否是斜体。
+检查字体是否为斜体。
 
 **起始版本：** 23
 
@@ -101,7 +101,7 @@ isItalic(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回当前字体是否是斜体。true表示字体是斜体，false表示字体不是斜体。 |
+| boolean | 返回当前字体是否为斜体。true表示字体为斜体，false表示字体非斜体。 |
 
 ## makeFromCurrent
 
@@ -123,13 +123,13 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | TypefaceArguments for typeface. |
+| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回字体对象（异常情况下会返回空指针）。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromCurrent
 
@@ -137,7 +137,7 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface
 makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface | undefined
 ```
 
-Generate typeface from current typeface and TypefaceArguments.
+基于当前字体结合字体属性构造新的字体对象。
 
 **起始版本：** 24
 
@@ -151,13 +151,13 @@ Generate typeface from current typeface and TypefaceArguments.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | TypefaceArguments for typeface. |
+| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Typeface. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromFile
 
@@ -187,7 +187,7 @@ static makeFromFile(filePath: string): Typeface
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Typeface对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从指定字体文件加载的字体对象。 |
 
 **错误码：**
 
@@ -201,7 +201,7 @@ static makeFromFile(filePath: string): Typeface
 static makeFromFile(filePath: string): Typeface | undefined
 ```
 
-Constructs a typeface from a file.
+从指定字体文件构造字体。
 
 **起始版本：** 23
 
@@ -215,13 +215,13 @@ Constructs a typeface from a file.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filePath | string | 是 | file path for typeface. |
+| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Typeface. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从指定字体文件加载的字体对象。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -252,13 +252,13 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示字体属性。 |
+| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回字体对象（异常情况下会返回空指针）。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromFileWithArguments
 
@@ -266,7 +266,7 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface | undefined
 ```
 
-Generate typeface from file and TypefaceArguments.
+根据字体文件路径和字体属性构造新的字体。
 
 **起始版本：** 24
 
@@ -280,14 +280,14 @@ Generate typeface from file and TypefaceArguments.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filePath | string | 是 | file path for typeface. |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | TypefaceArguments for typeface. |
+| filePath | string | 是 | 表示字体资源存放的路径。应用沙箱路径和真实物理路径的对应关系请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Typeface. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromRawFile
 
@@ -295,7 +295,7 @@ Generate typeface from file and TypefaceArguments.
 static makeFromRawFile(rawfile: Resource): Typeface
 ```
 
-使用指定的字体文件构造字体，其中要求指定的字体文件需保存在应用资源文件夹的rawfile路径下。
+使用指定的字体文件构造字体，该字体文件需保存在应用资源文件夹的rawfile路径下。
 
 **起始版本：** 18
 
@@ -317,7 +317,7 @@ static makeFromRawFile(rawfile: Resource): Typeface
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回Typeface对象（异常情况下会返回空指针）。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromRawFile
 
@@ -325,7 +325,7 @@ static makeFromRawFile(rawfile: Resource): Typeface
 static makeFromRawFile(rawfile: Resource): Typeface | undefined
 ```
 
-Constructs a typeface from a file, which must be stored in the resources/rawfile directory of the application project.
+使用指定的字体文件构造字体，该字体文件需保存在应用资源文件夹的rawfile路径下。
 
 **起始版本：** 23
 
@@ -339,13 +339,13 @@ Constructs a typeface from a file, which must be stored in the resources/rawfile
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rawfile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Resource object corresponding to the file. Currently, only resource objects referenced in rawfile format are supported. The corresponding format is rawfile('filePath'), where filePath is the relative path of the file to the resources/rawfile directory in the project. If the file is stored in resources/rawfile, the reference format is rawfile('HarmonyOS\_\_\_ESCAPED\_UNDERSCORE\_\_\_Sans\_\_\_ESCAPED\_UNDERSCORE\_\_\_Bold.ttf'). If the file is stored in a subdirectory, for example, in resources/rawfile/ttf, the reference format is rawfile('ttf/HarmonyOS\_\_\_ESCAPED\_UNDERSCORE\_\_\_Sans\_\_\_ESCAPED\_UNDERSCORE\_\_\_Bold.ttf'). |
+| rawfile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定字体文件对应的资源对象。当前只支持\_\_\_INLINE\_CODE\_USD\_0\_\_\_。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Typeface. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromRawFileWithArguments
 
@@ -353,7 +353,7 @@ Constructs a typeface from a file, which must be stored in the resources/rawfile
 static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface
 ```
 
-使用指定的字体文件和字体属性构造字体，其中要求指定的字体文件需保存在应用资源文件夹的rawfile路径下。
+使用指定的字体文件和字体属性构造新的字体，该字体文件需保存在应用资源文件夹的rawfile路径下。
 
 **起始版本：** 20
 
@@ -369,14 +369,14 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rawfile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定字体文件对应的资源对象。当前只支持\_\_\_INLINE\_CODE\_USD\_0\_\_\_，其中filePath为 指定字体文件相对于工程中resources/rawfile目录的相对路径。 |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示字体属性。 |
+| rawfile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定字体文件对应的资源对象。当前只支持\_\_\_INLINE\_CODE\_USD\_0\_\_\_，其中filePath为指定字体文件相对于工程中resources/rawfile目录的相对路径。 |
+| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回字体对象（异常情况下会返回空指针）。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromRawFileWithArguments
 
@@ -384,7 +384,7 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface | undefined
 ```
 
-Generate typeface from Rawfile and TypefaceArguments.
+使用指定的字体文件和字体属性构造新的字体，该字体文件需保存在应用资源文件夹的rawfile路径下。
 
 **起始版本：** 24
 
@@ -398,12 +398,12 @@ Generate typeface from Rawfile and TypefaceArguments.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rawfile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | RawFile for typeface. |
-| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | TypefaceArguments for typeface. |
+| rawfile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指定字体文件对应的资源对象。当前只支持\_\_\_INLINE\_CODE\_USD\_0\_\_\_，其中filePath为指定字体文件相对于工程中resources/rawfile目录的相对路径。 |
+| typefaceArguments | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字体属性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Typeface. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 

@@ -1,6 +1,6 @@
 # Pen
 
-画笔对象，描述所绘制图形形状的轮廓信息。
+画笔对象，用于描述所绘制图形形状的轮廓信息，支持设置颜色、线宽、抗锯齿、透明度、混合模式、转角样式、线帽样式，以及颜色滤波器、蒙版滤波器、路径效果、着色器、阴影层等绘制效果。
     **说明：**  
     
     - 本模块使用屏幕物理像素单位px。  
@@ -129,7 +129,7 @@ getColor(): common2D.Color
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Color | Color of the pen. |
+| common2D.Color | 返回画笔当前设置的颜色。 |
 
 ## getColor
 
@@ -137,7 +137,7 @@ getColor(): common2D.Color
 getColor(): common2D.Color | undefined
 ```
 
-Obtains the color of this pen.
+获取画笔的颜色。
 
 **起始版本：** 23
 
@@ -151,7 +151,7 @@ Obtains the color of this pen.
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Color | Returns a 32-bit (ARGB) variable that describes the color. |
+| common2D.Color | 返回画笔当前设置的颜色。获取失败时返回undefined。 |
 
 ## getColor4f
 
@@ -159,7 +159,8 @@ Obtains the color of this pen.
 getColor4f(): common2D.Color4f
 ```
 
-获取画笔的颜色，与[getColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的区别在于返回值类型为浮点数，适用于需要浮点数类型的场景。
+获取画笔的颜色，与[getColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的区别在于返回值类型为  
+[common2D.Color4f]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_，颜色通道值为浮点数，适用于需要浮点数类型的场景。
 
 **起始版本：** 20
 
@@ -173,7 +174,7 @@ getColor4f(): common2D.Color4f
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Color4f | Color of the pen. |
+| common2D.Color4f | 返回画笔当前设置的颜色，为ARGB格式的浮点数表示，每个颜色通道的取值范围为[0.0, 1.0]。 |
 
 ## getColor4f
 
@@ -181,7 +182,8 @@ getColor4f(): common2D.Color4f
 getColor4f(): common2D.Color4f | undefined
 ```
 
-Obtains the color of a pen. The color is used by the pen to outline a shape.
+获取画笔的颜色，与[getColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的区别在于返回值类型为  
+[common2D.Color4f]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_，颜色通道值为浮点数，适用于需要浮点数类型的场景。
 
 **起始版本：** 24
 
@@ -195,7 +197,7 @@ Obtains the color of a pen. The color is used by the pen to outline a shape.
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Color4f | Returns four floating point values that describes the color. |
+| common2D.Color4f | 返回画笔当前设置的颜色，为ARGB格式的浮点数表示，每个颜色通道的取值范围为[0.0, 1.0]。获取失败时返回undefined。 |
 
 ## getColorFilter
 
@@ -217,7 +219,7 @@ getColorFilter(): ColorFilter
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回颜色滤波器。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回画笔当前设置的颜色滤波器，可用于查询当前画笔的颜色过滤效果。 |
 
 ## getColorFilter
 
@@ -225,7 +227,7 @@ getColorFilter(): ColorFilter
 getColorFilter(): ColorFilter | undefined
 ```
 
-Obtains the color filter of this pen.
+获取画笔的颜色滤波器。
 
 **起始版本：** 23
 
@@ -239,7 +241,7 @@ Obtains the color filter of this pen.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ColorFilter. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回画笔当前设置的颜色滤波器，可用于查询当前画笔的颜色过滤效果。获取失败时返回undefined。 |
 
 ## getFillPath
 
@@ -261,8 +263,8 @@ getFillPath(src: Path, dst: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 源路径对象。 |
-| dst | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 目标路径对象。 |
+| src | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 待提取轮廓的源路径对象。 |
+| dst | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 目标路径对象，用于存储根据画笔属性从src路径计算得到的轮廓结果。 |
 
 **返回值：**
 
@@ -338,7 +340,7 @@ ArkTS-Sta:
 getMiterLimit(): double
 ```
 
-获取折线尖角的限制值。
+获取折线尖角长度与线宽的最大比值。
 
 **起始版本：** 12
 
@@ -446,7 +448,7 @@ setAlpha(alpha: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 用于表示透明度的[0, 255]区间内的整数值，传入浮点类型时向下取整。 |
+| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 表示透明度，取值范围为[0, 255]，传入浮点类型时向下取整。 |
 
 **错误码：**
 
@@ -460,7 +462,7 @@ setAlpha(alpha: int): void
 setAntiAlias(aa: boolean): void
 ```
 
-设置画笔是否开启抗锯齿。开启后，可以使得图形的边缘在显示时更平滑。未调用此接口设置时，系统默认关闭抗锯齿。
+设置画笔是否开启抗锯齿。开启后，使图形边缘在显示时更平滑。未调用此接口设置时，系统默认关闭抗锯齿。
 
 **起始版本：** 11
 
@@ -592,10 +594,10 @@ setColor(alpha: int, red: int, green: int, blue: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的透明度通道值，该参数是0到255之间的整数，传入范围内的浮点数会向下取整。 |
-| red | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的红色通道值，该参数是0到255之间的整数，传入范围内的浮点数会向下取整。 |
-| green | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的绿色通道值，该参数是0到255之间的整数，传入范围内的浮点数会向下取整。 |
-| blue | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的蓝色通道值，该参数是0到255之间的整数，传入范围内的浮点数会向下取整。 |
+| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的透明度通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
+| red | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的红色通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
+| green | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的绿色通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
+| blue | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | ARGB格式颜色的蓝色通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
 
 **错误码：**
 
@@ -629,7 +631,7 @@ setColor(color: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 16进制ARGB格式的颜色。 |
+| color | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 16进制ARGB格式的颜色，格式为0xAARRGGBB，其中AA表示透明度通道，RR表示红色通道，GG表示绿色通道，BB表示蓝色通道，各通道取值范围为00-FF，取值范围为 [0x00000000, 0xFFFFFFFF]。超出有效范围的值会被截断处理。 |
 
 ## setColor4f
 
@@ -637,7 +639,7 @@ setColor(color: int): void
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-设置画笔的颜色以及标准色域，与[setColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_区别在于可以单独设置色域，适用于需要单独设置色域的场景。
+设置画笔的颜色以及标准色域，与[setColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的区别在于可以单独设置色域。
 
 **起始版本：** 20
 
@@ -651,7 +653,7 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color4f | common2D.Color4f | 是 | ARGB格式的颜色，每个颜色通道的值是0.0-1.0之间的浮点数，大于1.0时，取1.0，小于0.0时，取0.0。 |
+| color4f | common2D.Color4f | 是 | ARGB格式的颜色，浮点数，每个颜色通道值的范围为[0.0, 1.0]，超出范围的值会被截断到0.0或1.0。 |
 | colorSpace | colorSpaceManager.ColorSpaceManager \| null | 是 | 标准色域对象，null表示使用SRGB色域。 |
 
 ## setColorFilter
@@ -688,7 +690,7 @@ setColorFilter(filter: ColorFilter | null): void
 setDither(dither: boolean): void
 ```
 
-开启画笔的抖动绘制效果。抖动绘制可以使得绘制出的颜色更加真实。
+设置画笔是否开启抖动绘制效果。抖动绘制使颜色更真实。
 
 **起始版本：** 11
 
@@ -806,7 +808,7 @@ ArkTS-Sta:
 setMiterLimit(miter: double): void
 ```
 
-设置折线尖角长度与线宽的最大比值，当画笔绘制一条折线，并且[JoinStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为MITER\_JOIN时，若尖角长度与线宽的比值大于限制值，则该折角使用BEVEL\_JOIN绘制。
+设置折线尖角长度与线宽的最大比值。当画笔绘制一条折线，并且[JoinStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为MITER\_JOIN时，若尖角长度与线宽的比值大于该最大比值，则该转角使用BEVEL\_JOIN绘制。
 
 **起始版本：** 12
 
@@ -820,7 +822,7 @@ setMiterLimit(miter: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| miter | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 折线尖角长度与线宽的最大比值，负数在绘制时会被视作4.0处理，非负数正常生效，该参数为浮点数。 |
+| miter | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 折线尖角长度与线宽的最大比值，负数在绘制时会被视作4.0处理，非负数按实际传入值生效，该参数为浮点数。 |
 
 **错误码：**
 
@@ -848,7 +850,7 @@ setPathEffect(effect: PathEffect | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effect | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 是 | 路径效果对象。null表示清空路径效果。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 20 |
+| effect | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 是 | 路径效果对象，用于设置虚线、转角等路径绘制样式。null表示清空路径效果。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 20 |
 
 **错误码：**
 
@@ -876,7 +878,7 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shaderEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 是 | 着色器对象。null表示清空着色器效果。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 20 |
+| shaderEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 是 | 着色器效果对象。null表示清空着色器效果。\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 20 |
 
 **错误码：**
 
@@ -938,7 +940,7 @@ setStrokeWidth(width: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示线宽，该参数为浮点数。 |
+| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 表示线宽，该参数为浮点数，单位为物理像素px。 |
 
 **错误码：**
 

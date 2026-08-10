@@ -6,7 +6,7 @@
 function offCaptureStatusChange(callback?: Callback<boolean>): void
 ```
 
-Unregister the callback for device capture, casting, or recording status changes.
+Unregister the callback for the status of the device's screen content is being captured.
 
 **Since:** 23
 

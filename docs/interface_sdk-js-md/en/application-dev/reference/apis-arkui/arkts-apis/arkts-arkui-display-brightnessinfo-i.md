@@ -16,7 +16,7 @@ Describes the screen brightness information. The information comes from the unde
 readonly brightnessPosition?: double
 ```
 
-Position of the brightness bar corresponding to the current screen brightness.Value range: [0.0,1.0]. Default value: 0.0.
+Position of the brightness bar corresponding to the current screen brightness. The value is a floating-point number ranging from 0.0 to 1.0. The default value is 0.0. The value 0.0 indicates the lowest screen brightness,and 1.0 indicates the highest screen brightness. The returned brightness bar position may have an error of 0.01compared with the actual brightness bar position.Value range: [0.0,1.0]. Default value: 0.0.
 
 **Type:** double
 
@@ -78,7 +78,7 @@ Maximum brightness headroom. The value is a floating-point number greater than 0
 readonly sdrNits: double
 ```
 
-Screen brightness. The value is a floating-point number greater than 0. The default value is **500.0**.
+Screen brightness, in nit. The value is a floating-point number greater than 0. The default value is **500.0**.
 
 **Type:** double
 

@@ -6,7 +6,7 @@
 function onCaptureStatusChange(callback: Callback<boolean>): void
 ```
 
-Register the callback for device capture, casting, or recording status changes.
+Register the callback for the status of the device's screen content is being captured.
 
 **Since:** 23
 

@@ -16,7 +16,7 @@ Describes the region of the screen to capture.
 height: long
 ```
 
-Height of the screen region to capture, in px. The value must be an integer.
+Height of the screen region to capture, in px. The value must be a positive integer.
 
 **Type:** long
 
@@ -36,7 +36,7 @@ Height of the screen region to capture, in px. The value must be an integer.
 left: long
 ```
 
-Left boundary of the screen region to capture, in px. The value must be an integer.
+Left boundary of the screen region to capture, in px. The value must be a non-negative integer.
 
 **Type:** long
 
@@ -56,7 +56,7 @@ Left boundary of the screen region to capture, in px. The value must be an integ
 top: long
 ```
 
-Top boundary of the screen region to capture, in px. The value must be an integer.
+Top boundary of the screen region to capture, in px. The value must be a non-negative integer.
 
 **Type:** long
 
@@ -76,7 +76,7 @@ Top boundary of the screen region to capture, in px. The value must be an intege
 width: long
 ```
 
-Width of the screen region to capture, in px. The value must be an integer.
+Width of the screen region to capture, in px. The value must be a positive integer.
 
 **Type:** long
 

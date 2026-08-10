@@ -16,7 +16,7 @@
 TRIANGLES_VERTEXMODE = 0
 ```
 
-每三个顶点来自不同的三角形。
+顶点按顺序每三个一组，分别构成独立的三角形。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ TRIANGLES_VERTEXMODE = 0
 TRIANGLESSTRIP_VERTEXMODE = 1
 ```
 
-连续的三角形共享一条边。对于连续表面效率高。
+连续的三角形共享一条边，对于连续表面效率高。
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ TRIANGLESSTRIP_VERTEXMODE = 1
 TRIANGLESFAN_VERTEXMODE = 2
 ```
 
-所有三角形共享一个顶点。非常适合圆形/扇形。
+所有三角形共享一个顶点。适用于绘制圆形/扇形的场景。
 
 **起始版本：** 23
 

@@ -2054,7 +2054,7 @@ Bring the current UIAbility instance to the foreground.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported, because starting self to foreground from background is not supported in current devive or current UIAbility is a non-native UIAbility. |
+| [801](../../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported, because starting self to foreground from background is not supported in current device or current UIAbility is a non-native UIAbility. |
 | [16000011](../../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../../errorcode-ability.md#16000050-internal-error) | Internal error. Connect to system service failed. |
 | 16000082 | The UIAbility is being started. The UIAbility has not completed onCreate or onWindowStageCreate. |

@@ -76,7 +76,7 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Screen&gt;&gt; | Yes | Callback used to return the result. If obtaining all screens is successful is successful, **err** is **undefined**, and the returned object is screen object set obtained. Otherwise, **err** is an error object. |
-| isNeedUnused | boolean | No | Indicates whether unused screen information is required. This parameter is optional. If not provided, the unused screen information will not be returned \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: false. |
+| isNeedUnused | boolean | No | Indicates whether unused screen information is required. **true** means they should be provided, **false** means they should not. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: false. |
 
 **Error codes:**
 

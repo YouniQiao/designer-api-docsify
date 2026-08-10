@@ -76,7 +76,7 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void
 ```
 
-根据日历账户信息，创建一个Calendar对象，使用callback异步回调。
+根据日历账户信息，创建一个Calendar对象，若创建的账户已存在（与CalendarAccount的name和type相同的账户已被创建），则返回之前的Calendar对象，使用callback异步回调。
 
 **起始版本：** 10
 
@@ -491,7 +491,7 @@ calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
 getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>): void
 ```
 
-获取指定Calendar对象，使用callback异步回调。
+获取默认Calendar对象，默认Calendar是日历存储首次运行时创建的，若创建Event时不关注其Calendar归属，则无须通过createCalendar()创建Calendar，直接使用默认Calendar，使用callback异步回调。
 
 **起始版本：** 10
 

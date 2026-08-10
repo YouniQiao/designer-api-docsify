@@ -611,6 +611,34 @@
   - [Stat](arkts-corefile-fileio-stat-depr-i.md)
   - [Stream](arkts-corefile-fileio-stream-depr-i.md)
   - [Watcher](arkts-corefile-fileio-watcher-depr-i.md)
+- [@ohos.fileshare](arkts-fileshare.md)
+  - [activatePermission](arkts-corefile-fileshare-activatepermission-f.md)
+  <!--Del-->
+  - [checkPathPermission(系统接口)](arkts-corefile-fileshare-checkpathpermission-f-sys.md)<!--DelEnd-->
+  - [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md)
+  - [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md)
+  <!--Del-->
+  - [getPersistentPolicy(系统接口)](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getSharedDirectoryInfo(系统接口)](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [grantSharedDirectoryPermission(系统接口)](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [grantUriPermission(系统接口)](arkts-corefile-fileshare-granturipermission-f-sys.md)<!--DelEnd-->
+  - [persistPermission](arkts-corefile-fileshare-persistpermission-f.md)
+  - [revokePermission](arkts-corefile-fileshare-revokepermission-f.md)
+  <!--Del-->
+  - [revokePermission(系统接口)](arkts-corefile-fileshare-revokepermission-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [revokeSharedDirectoryPermission(系统接口)](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md)<!--DelEnd-->
+  - [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md)
+  - [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md)
+  - [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)
+  <!--Del-->
+  - [SharedDirectoryInfo(系统接口)](arkts-corefile-fileshare-shareddirectoryinfo-i-sys.md)<!--DelEnd-->
+  - [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
+  - [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
+  - [PolicyType](arkts-corefile-fileshare-policytype-e.md)
 - [@ohos.statfs](arkts-statfs.md)
   - [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md)
   - [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md)

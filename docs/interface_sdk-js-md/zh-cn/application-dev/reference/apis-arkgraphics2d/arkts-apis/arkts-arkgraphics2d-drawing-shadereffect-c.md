@@ -1,6 +1,6 @@
 # ShaderEffect
 
-着色器。画刷和画笔设置着色器后，会使用着色器效果而不是颜色属性去绘制，但此时画笔和画刷的透明度属性仍然生效。
+着色器，用于在绘图中填充颜色和渐变效果。画刷和画笔设置着色器后，会使用着色器效果而不是颜色属性去绘制，但此时画刷和画笔的透明度属性仍然生效。着色器支持创建单色着色器、线性渐变、径向渐变、扇形渐变、锥形渐变、图片着色器及混合着色器等多种类型。
     **说明：**  
     
     - 本Class首批接口从API version 12开始支持。  
@@ -57,7 +57,7 @@ static createColorShader(color: number): ShaderEffect
 static createColorShader(color: int): ShaderEffect | undefined
 ```
 
-Creates a ShaderEffect object with a single color.
+创建具有单一颜色的着色器。
 
 **起始版本：** 23
 
@@ -71,13 +71,13 @@ Creates a ShaderEffect object with a single color.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | int | 是 | Color in the ARGB format. The value is a 32-bit unsigned integer. |
+| color | int | 是 | 表示着色器的ARGB格式颜色，该参数为32位无符号整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the shader with single color ShaderEffect object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回具有单一颜色的着色器对象。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -108,13 +108,13 @@ static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: Shade
 | --- | --- | --- | --- |
 | dstShaderEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 在混合模式中作为目标色的着色器。 |
 | srcShaderEffect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 在混合模式中作为源色的着色器。 |
-| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 混合模式。 |
+| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 混合模式，用于指定两个着色器叠加时的颜色混合算法。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的着色器对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回叠加后的着色器对象。 |
 
 **错误码：**
 
@@ -167,7 +167,7 @@ static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt
         pos?: Array<number> | null, matrix?: Matrix | null): ShaderEffect
 ```
 
-创建着色器，在给定两个圆之间生成径向渐变。
+创建着色器，在给定两个圆之间生成锥形渐变。锥形渐变是指颜色在起始圆和结束圆之间，按照一定比例进行插值过渡形成的渐变效果。
 
 **起始版本：** 12
 
@@ -182,19 +182,19 @@ static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | startPt | common2D.Point | 是 | 表示渐变的起始圆的圆心。 |
-| startRadius | number | 是 | 表示渐变的起始圆的半径，小于0时无效。该参数为浮点数。 |
+| startRadius | number | 是 | 表示渐变的起始圆的半径，小于0时无效。该参数为浮点数。单位为物理像素px。 |
 | endPt | common2D.Point | 是 | 表示渐变的结束圆的圆心。 |
-| endRadius | number | 是 | 表示渐变的结束圆的半径，小于0时无效。该参数为浮点数。 |
+| endRadius | number | 是 | 表示渐变的结束圆的半径，小于0时无效。该参数为浮点数。单位为物理像素px。 |
 | colors | Array&lt;number&gt; | 是 | 表示在起始圆和结束圆之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
 | mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 着色器效果平铺模式。 |
-| pos | Array&lt;number&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1 之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起始圆和结束圆之间。 |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
+| pos | Array&lt;number&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致， 数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。 当不传该参数，或者pos传入undefined时，默认为null，表示颜色均匀分布在起始角度和结束角度之间。 |
+| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。当不传该参数，或者matrix传入undefined时，默认为null，表示单位矩阵。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的着色器对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回锥形渐变着色器对象。 |
 
 **错误码：**
 
@@ -210,7 +210,7 @@ static createConicalGradient(startPt: common2D.Point, startRadius: double, endPt
         pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect | undefined
 ```
 
-Creates a ShaderEffect object that generates a conical gradient between two given circles.
+创建着色器，在给定两个圆之间生成锥形渐变。锥形渐变是指颜色在起始圆和结束圆之间，按照一定比例进行插值过渡形成的渐变效果。
 
 **起始版本：** 23
 
@@ -224,20 +224,20 @@ Creates a ShaderEffect object that generates a conical gradient between two give
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startPt | common2D.Point | 是 | Center of the start circle of the gradient. |
-| startRadius | double | 是 | Radius of the start circle of the gradient. A negative number is invalid. The value is a floating point number. |
-| endPt | common2D.Point | 是 | Center of the end circle of the gradient. |
-| endRadius | double | 是 | Radius of the end circle of the gradient. A negative value is invalid. The value is a floating point number. |
-| colors | Array&lt;int&gt; | 是 | Array of colors to distribute between the start circle and end circle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Tile mode of the shader effect. |
-| pos | Array&lt;double&gt; \| null | 否 | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two circles. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | Matrix object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| startPt | common2D.Point | 是 | 表示渐变的起始圆的圆心。 |
+| startRadius | double | 是 | 表示渐变的起始圆的半径，小于0时无效。该参数为浮点数。单位为物理像素px。 |
+| endPt | common2D.Point | 是 | 表示渐变的结束圆的圆心。 |
+| endRadius | double | 是 | 表示渐变的结束圆的半径，小于0时无效。该参数为浮点数。单位为物理像素px。 |
+| colors | Array&lt;int&gt; | 是 | 表示在起始圆和结束圆之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 着色器效果平铺模式。 |
+| pos | Array&lt;double&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致， 数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。 当不传该参数，或者pos传入undefined时，默认为null，表示颜色均匀分布在起始圆和结束圆之间。 |
+| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。当不传该参数，或者matrix传入undefined时，默认为null，表示单位矩阵。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a conical gradient ShaderEffect object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回锥形渐变着色器对象。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -252,7 +252,7 @@ static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileM
         samplingOptions: SamplingOptions, matrix?: Matrix | null): ShaderEffect
 ```
 
-基于图片创建一个着色器。此接口不建议用于录制类型的画布，会影响性能。
+基于图片创建一个着色器。此接口不建议用于录制类型的画布（即用于记录绘制指令而非直接渲染的Canvas对象），会影响性能。
 
 **起始版本：** 20
 
@@ -269,14 +269,14 @@ static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileM
 | pixelmap | image.PixelMap | 是 | 进行采样的图片对象。 |
 | tileX | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 水平方向的平铺模式。 |
 | tileY | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 竖直方向的平铺模式。 |
-| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 图片采样参数。 |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 可选参数，对图片施加的矩阵变换，如果为空，则不施加任何变换。 |
+| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 图片采样参数，用于指定图像采样时的过滤模式。 |
+| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的着色器对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回基于图片的着色器对象。 |
 
 **错误码：**
 
@@ -355,7 +355,7 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的着色器对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回线性渐变着色器对象。 |
 
 **错误码：**
 
@@ -370,7 +370,7 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
         mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect | undefined
 ```
 
-Creates a ShaderEffect object that generates a linear gradient between two points.
+创建着色器，在两个指定点之间生成线性渐变。
 
 **起始版本：** 23
 
@@ -384,18 +384,18 @@ Creates a ShaderEffect object that generates a linear gradient between two point
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startPt | common2D.Point | 是 | Start point. |
-| endPt | common2D.Point | 是 | End point. |
-| colors | Array&lt;int&gt; | 是 | Array of colors to distribute between the two points. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Tile mode of the shader effect. |
-| pos | Array&lt;double&gt; \| null | 否 | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two points. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | Matrix object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| startPt | common2D.Point | 是 | 表示渐变的起点。 |
+| endPt | common2D.Point | 是 | 表示渐变的终点。 |
+| colors | Array&lt;int&gt; | 是 | 表示在两个点之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 着色器效果平铺模式。 |
+| pos | Array&lt;double&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致， 数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。 当不传该参数，或者pos传入undefined时，默认为null，表示颜色均匀分布在起点和终点之间。 |
+| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。当不传该参数，或者matrix传入undefined时，默认为null，表示单位矩阵。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a linear gradient ShaderEffect object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回线性渐变着色器对象。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -425,7 +425,7 @@ static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Ar
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | centerPt | common2D.Point | 是 | 表示渐变的圆心。 |
-| radius | double | 是 | 表示渐变的半径，小于等于0时无效，该参数为浮点数。 |
+| radius | double | 是 | 表示渐变的半径，小于等于0时无效，该参数为浮点数。单位为物理像素px。 |
 | colors | Array&lt;int&gt; | 是 | 表示在圆心和圆边界之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
 | mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 着色器效果平铺模式。 |
 | pos | Array&lt;double&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1 之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在圆心和圆边界之间。 |
@@ -435,7 +435,7 @@ static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Ar
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的着色器对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回径向渐变着色器对象。 |
 
 **错误码：**
 
@@ -450,7 +450,7 @@ static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Ar
       mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect | undefined
 ```
 
-Creates a ShaderEffect object that generates a radial gradient based on the center and radius of a circle.A radial gradient refers to the color transition that spreads out gradually from the center of a circle.
+创建着色器，使用给定的圆心和半径生成径向渐变。径向渐变是指颜色从圆心逐渐向外扩散形成的渐变。
 
 **起始版本：** 23
 
@@ -464,18 +464,18 @@ Creates a ShaderEffect object that generates a radial gradient based on the cent
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| centerPt | common2D.Point | 是 | Center of the circle. |
-| radius | double | 是 | Radius of the gradient. A negative number is invalid. The value is a floating point number. |
-| colors | Array&lt;int&gt; | 是 | Array of colors to distribute between the center and ending shape of the circle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Tile mode of the shader effect. |
-| pos | Array&lt;double&gt; \| null | 否 | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the center and ending shape of the circle. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | Matrix object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| centerPt | common2D.Point | 是 | 表示渐变的圆心。 |
+| radius | double | 是 | 表示渐变的半径，小于等于0时无效，该参数为浮点数。单位为物理像素px。 |
+| colors | Array&lt;int&gt; | 是 | 表示在圆心和圆边界之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 着色器效果平铺模式。 |
+| pos | Array&lt;double&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致， 数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1之间并且逐下标递增，表示colors中每个对应颜色的相对位置。 当不传该参数，或者pos传入undefined时，默认为null，表示颜色均匀分布在圆心和圆边界之间。 |
+| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。当不传该参数，或者matrix传入undefined时，默认为null，表示单位矩阵。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a radial gradient ShaderEffect object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回径向渐变着色器对象。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -491,7 +491,7 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
         matrix?: Matrix | null): ShaderEffect
 ```
 
-创建着色器。该着色器以给定中心点为圆心，在顺时针或逆时针方向上生成颜色扫描渐变。
+创建着色器。该着色器以给定中心点为圆心，在起始角度和结束角度之间沿顺时针或逆时针方向生成颜色扇形渐变。
 
 **起始版本：** 12
 
@@ -517,7 +517,7 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回创建的着色器对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回扇形渐变着色器对象。 |
 
 **错误码：**
 
@@ -533,7 +533,7 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<int>,
       matrix?: Matrix | null): ShaderEffect | undefined
 ```
 
-Creates a ShaderEffect object that generates a color sweep gradient around a given center point,either in a clockwise or counterclockwise direction.
+创建着色器。该着色器以给定中心点为圆心，在起始角度和结束角度之间沿顺时针或逆时针方向生成颜色扇形渐变。
 
 **起始版本：** 23
 
@@ -547,19 +547,19 @@ Creates a ShaderEffect object that generates a color sweep gradient around a giv
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| centerPt | common2D.Point | 是 | Center of the circle. |
-| colors | Array&lt;int&gt; | 是 | Array of colors to distribute between the start angle and end angle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Tile mode of the shader effect. |
-| startAngle | double | 是 | Start angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. The value is a floating point number. |
-| endAngle | double | 是 | End angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. A value less than the start angle is invalid. The value is a floating point number. |
-| pos | Array&lt;double&gt; \| null | 否 | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that the colors are evenly distributed between the start angle and end angle. |
-| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | Matrix object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
+| centerPt | common2D.Point | 是 | 表示渐变的圆心。 |
+| colors | Array&lt;int&gt; | 是 | 表示在起始角度和结束角度之间分布的颜色数组，数组中的值为32位（ARGB）无符号整数。 |
+| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 着色器效果平铺模式。 |
+| startAngle | double | 是 | 表示扇形渐变的起始角度，单位为度。0度时为x轴正方向，正数往顺时针方向偏移，负数往逆时针方向偏移。该参数为浮点数。 |
+| endAngle | double | 是 | 表示扇形渐变的结束角度，单位为度。0度时为x轴正方向，正数往顺时针方向偏移，负数往逆时针方向偏移。小于起始角度时无效。该参数为浮点数。 |
+| pos | Array&lt;double&gt; \| null | 否 | 表示每种对应颜色在颜色数组中的相对位置。数组长度需和colors保持一致，数组的首个元素应当是0.0，末尾元素应当是1.0，中间的元素应当在0与1 之间并且逐下标递增，表示colors中每个对应颜色的相对位置。默认为null，表示颜色均匀分布在起始角度和结束角度之间。 |
+| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | 否 | 矩阵对象，用于对着色器做矩阵变换。默认为null，表示单位矩阵。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a sweep gradient ShaderEffect object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回扇形渐变着色器对象。创建失败时返回undefined。 |
 
 **错误码：**
 

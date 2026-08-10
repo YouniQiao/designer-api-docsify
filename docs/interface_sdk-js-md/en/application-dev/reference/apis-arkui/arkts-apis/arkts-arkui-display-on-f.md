@@ -238,7 +238,7 @@ display.on('foldAngleChange', callback);
 function on(type: 'captureStatusChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to events indicating whether the device's screen content is being captured.
+Subscribes to events indicating the status of the device's screen content is being captured.
 
 **Since:** 12
 
@@ -359,7 +359,7 @@ Subscribes to events related to screen brightness information changes. If the sc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function on('brightnessInfoChange') can not work correctly due to limited device capabilities. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 | [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 

@@ -1,0 +1,48 @@
+# PolicyInfo
+
+需要授予或激活URI访问权限的策略信息。
+
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
+<!--Device-fileShare-export interface PolicyInfo--><!--Device-fileShare-export interface PolicyInfo-End-->
+
+**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
+
+## operationMode
+
+```TypeScript
+operationMode: int
+```
+
+授予或激活权限的URI访问模式，例如 { OperationMode.READ\_MODE } 或{ OperationMode.READ\_MODE | OperationMode.WRITE\_MODE }。
+
+**类型：** int
+
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
+<!--Device-PolicyInfo-operationMode: int--><!--Device-PolicyInfo-operationMode: int-End-->
+
+**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
+
+## uri
+
+```TypeScript
+uri: string
+```
+
+需要授予或激活访问权限的URI，需符合URI格式规范。
+
+**类型：** string
+
+**起始版本：** 11
+
+**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+
+<!--Device-PolicyInfo-uri: string--><!--Device-PolicyInfo-uri: string-End-->
+
+**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
+

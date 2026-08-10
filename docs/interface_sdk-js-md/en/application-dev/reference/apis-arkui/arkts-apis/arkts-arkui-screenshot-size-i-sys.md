@@ -18,7 +18,7 @@ Describes the size of the screen region to capture.
 height: long
 ```
 
-Height of the screen region to capture, in px. The value must be an integer.
+Height of the screen region to capture, in px. The value must be a positive integer.
 
 **Type:** long
 
@@ -38,7 +38,7 @@ Height of the screen region to capture, in px. The value must be an integer.
 width: long
 ```
 
-Width of the screen region to capture, in px. The value must be an integer.
+Width of the screen region to capture, in px. The value must be a positive integer.
 
 **Type:** long
 

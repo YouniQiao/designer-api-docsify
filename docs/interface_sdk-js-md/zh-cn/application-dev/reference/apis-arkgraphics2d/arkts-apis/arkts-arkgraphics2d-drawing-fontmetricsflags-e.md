@@ -1,6 +1,6 @@
 # FontMetricsFlags
 
-字体度量标志枚举，指示字体度量中的各字段数据是否有效。
+字体度量标志枚举，指示字体度量中的各字段数据是否有效。常用于精确文本布局、自定义文本渲染等需要获取字体详细度量信息的场景。
 
 **起始版本：** 12
 
@@ -52,7 +52,7 @@ UNDERLINE_POSITION_VALID = 1 << 1
 STRIKETHROUGH_THICKNESS_VALID = 1 << 2
 ```
 
-表示[FontMetrics]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_结构中strikethroughThickness（删除线厚度）是有效的。
+表示[FontMetrics]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_结构中的strikethroughThickness（删除线厚度）字段有效。
 
 **起始版本：** 12
 
@@ -70,7 +70,7 @@ STRIKETHROUGH_THICKNESS_VALID = 1 << 2
 STRIKETHROUGH_POSITION_VALID = 1 << 3
 ```
 
-表示[FontMetrics]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_结构中strikethroughPosition（删除线位置）字段有效。
+表示[FontMetrics]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_结构中的strikethroughPosition（删除线位置）字段有效。
 
 **起始版本：** 12
 

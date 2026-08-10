@@ -6,7 +6,7 @@
 function off(type: 'privateModeChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from privacy mode changes of this display. When there is a privacy window in the foreground of the display, the display is in privacy mode, and the content in the privacy window cannot be captured or recorded.
+Unsubscribes from privacy mode changes of this display.
 
 **Since:** 10
 

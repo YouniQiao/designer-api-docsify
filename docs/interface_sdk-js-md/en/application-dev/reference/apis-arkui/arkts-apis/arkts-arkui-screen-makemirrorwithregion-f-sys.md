@@ -22,7 +22,7 @@ Sets a rectangle on the screen to mirror mode. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mainScreen | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the primary screen. The ID must be a positive integer. |
+| mainScreen | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the primary screen. The ID must be a non-negative integer. |
 | mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;long&gt; | Yes | Array of IDs of secondary screens. Each ID must be a positive integer. |
 | mainScreenRegion | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rectangle on the primary screen to be mirrored. |
 

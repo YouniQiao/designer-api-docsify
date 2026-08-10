@@ -233,7 +233,7 @@ display.off('foldAngleChange', callback);
 function off(type: 'captureStatusChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from events indicating whether the device's screen content is being captured.
+Unsubscribes from events indicating the status of the device's screen content is being captured.
 
 **Since:** 12
 
@@ -342,13 +342,13 @@ Unsubscribes from events related to screen brightness information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'brightnessInfoChange' | Yes | Event type. The value is fixed at **'brightnessInfoChange'**, indicating that the screen brightness information is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long, BrightnessInfo&gt; | No | Callback used to return the brightnessInfo status change. If this parameter is not specified, all subscriptions to the specified event are canceled. The first parameter indicates the display ID, and the second parameter indicates the screen brightness information. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long, BrightnessInfo&gt; | No | Callback used to return the display ID (parameter 1) and the corresponding screen brightness information (parameter 2). If this parameter is not specified, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function off('brightnessInfoChange') can not work correctly due to limited device capabilities. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 | [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 

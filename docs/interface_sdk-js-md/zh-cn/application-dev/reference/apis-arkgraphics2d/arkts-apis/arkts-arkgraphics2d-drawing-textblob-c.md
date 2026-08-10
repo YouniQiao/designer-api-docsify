@@ -1,6 +1,6 @@
 # TextBlob
 
-由一个或多个具有相同字体的字符组成的字块。
+TextBlob是由一个或多个具有相同字型的字符组成的字块。支持通过文本、字符串、RunBuffer等多种方式创建字形集合，适用于需要批量渲染文本或获取文字边界框的场景。
     **说明：**  
     
     - 本模块使用屏幕物理像素单位px。  
@@ -35,7 +35,7 @@ bounds(): common2D.Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | Rectangular bounding box. |
+| common2D.Rect | 文字边界框的矩形区域。 |
 
 ## bounds
 
@@ -43,7 +43,7 @@ bounds(): common2D.Rect
 bounds(): common2D.Rect | undefined
 ```
 
-Obtains the rectangular bounding box of the text blob.
+获取文字边界框的矩形区域。
 
 **起始版本：** 23
 
@@ -57,7 +57,7 @@ Obtains the rectangular bounding box of the text blob.
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | Rect object. |
+| common2D.Rect | 文字边界框的矩形区域。创建失败时返回undefined。 |
 
 ## makeFromPosText
 
@@ -65,7 +65,7 @@ Obtains the rectangular bounding box of the text blob.
 static makeFromPosText(text: string, len: number, points: common2D.Point[], font: Font): TextBlob
 ```
 
-使用文本创建TextBlob对象，TextBlob对象中每个字形的坐标由points中对应的坐标信息决定。
+使用文本创建TextBlob对象，其中每个字形的坐标由points中对应的坐标信息决定。
 
 **起始版本：** 12
 
@@ -88,7 +88,7 @@ static makeFromPosText(text: string, len: number, points: common2D.Point[], font
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 由文本和坐标信息创建的TextBlob对象，用于后续绘制字形。 |
 
 **错误码：**
 
@@ -102,7 +102,7 @@ static makeFromPosText(text: string, len: number, points: common2D.Point[], font
 static makeFromPosText(text: string, len: int, points: common2D.Point[], font: Font): TextBlob | undefined
 ```
 
-Creates a TextBlob object from the text.The coordinates of each font in the TextBlob object are determined by the coordinate information in the points array.
+使用文本创建TextBlob对象，其中每个字形的坐标由points中对应的坐标信息决定。
 
 **起始版本：** 23
 
@@ -116,16 +116,16 @@ Creates a TextBlob object from the text.The coordinates of each font in the Text
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | Content to be used for drawing the text blob. |
-| len | int | 是 | Number of fonts. The value is an integer and is obtained from countText. |
-| points | common2D.Point[] | 是 | Array of points, which are used to specify the coordinates of each font. The array length must be the same as the value of len. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Specify text size, font, text scale, etc. |
+| text | string | 是 | 绘制字形的文本内容。 |
+| len | int | 是 | 字形个数，由[countText]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获取，该参数为整数。 |
+| points | common2D.Point[] | 是 | 点数组，用于指定每个字形的坐标，长度必须为len。 |
+| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字型对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 由文本和坐标信息创建的TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -153,15 +153,15 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pos | Array&lt;TextBlobRunBuffer&gt; | 是 | TextBlobRunBuffer数组。 |
+| pos | Array&lt;TextBlobRunBuffer&gt; | 是 | TextBlobRunBuffer数组，每个元素包含字形ID及位置坐标信息。 |
 | font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字型对象。 |
-| bounds | common2D.Rect | 否 | 可选，如果不设置，则无边界框。 |
+| bounds | common2D.Rect | 否 | 文字边界框的矩形区域；如果不设置，则不预设边界框。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 基于RunBuffer创建的TextBlob对象，用于后续绘制字形。 |
 
 **错误码：**
 
@@ -175,7 +175,7 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: common2D.Rect): TextBlob | undefined
 ```
 
-Creates a Textblob object based on the RunBuffer information.
+基于RunBuffer信息创建TextBlob对象。
 
 **起始版本：** 23
 
@@ -189,15 +189,15 @@ Creates a Textblob object based on the RunBuffer information.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pos | Array&lt;TextBlobRunBuffer&gt; | 是 | The array of TextBlobRunBuffer. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Font used for this run. |
-| bounds | common2D.Rect | 否 | Optional run bounding box. The default value is null; |
+| pos | Array&lt;TextBlobRunBuffer&gt; | 是 | TTextBlobRunBuffer数组，每个元素包含字形ID及位置坐标信息。 |
+| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字型对象。 |
+| bounds | common2D.Rect | 否 | 文字边界框的矩形区域；如果不设置，则不预设边界框。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 基于RunBuffer创建的TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -211,7 +211,7 @@ Creates a Textblob object based on the RunBuffer information.
 static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBlob
 ```
 
-将string类型的值转化成TextBlob对象。
+根据指定的编码类型和字型，使用string类型的值创建TextBlob对象。
 
 **起始版本：** 11
 
@@ -233,7 +233,7 @@ static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBl
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob对象。 |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob对象，用于后续绘制字形。 |
 
 **错误码：**
 
@@ -247,7 +247,7 @@ static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBl
 static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBlob | undefined
 ```
 
-Converts a value of the string type into a TextBlob object.
+根据指定的编码类型和字型，使用string类型的值创建TextBlob对象
 
 **起始版本：** 23
 
@@ -261,15 +261,15 @@ Converts a value of the string type into a TextBlob object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | Content to be used for drawing the text blob. |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Specify text size, font, text scale, etc. |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Encoding type. The default value is TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8. Currently, only TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8 takes effect, and other encoding types are treated as TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8. |
+| text | string | 是 | 绘制字形的文本内容。 |
+| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 字型对象。 |
+| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 编码类型，默认值为TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8。当前只有TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8生效，其余编码类型也会被视为 TEXT\_\_\_ESCAPED\_UNDERSCORE\_\_\_ENCODING\_\_\_ESCAPED\_UNDERSCORE\_\_\_UTF8。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob object. |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -289,7 +289,7 @@ ArkTS-Sta:
 uniqueID(): long
 ```
 
-获取该TextBlob对象的唯一的非零标识符。
+获取该TextBlob对象的唯一非零标识符。
 
 **起始版本：** 12
 

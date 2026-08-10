@@ -266,7 +266,7 @@ Obtains the rounded corner information of the display. The rounded corner inform
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getRoundedCorner can not work correctly due to limited device capabilities. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
@@ -539,7 +539,7 @@ All color spaces supported by the display.
 densityDPI: double
 ```
 
-Physical pixel density of the display, that is, the number of pixels per inch. The value is a floating-point number, in px. Generally, the value is **160.0** or **480.0**. The actual value depends on the optional values provided by the device in use.
+Physical pixel density of the display, that is, the number of pixels per inch. The value is a floating-point number. Generally, the value is **160.0** or **480.0**. The actual value depends on the optional values provided by the device in use.
 
 **Type:** double
 
@@ -741,7 +741,7 @@ Scaling factor for fonts displayed on the display. The value must be a floating
 screenShape?: ScreenShape
 ```
 
-Screen shape of the display. The default value is **RECTANGLE**.
+Screen shape of the display. The default value is **ScreenShape.RECTANGLE**.
 
 **Type:** ScreenShape
 
@@ -801,7 +801,7 @@ State of the display.
 supportedRefreshRates?: Array<int>
 ```
 
-All refresh rates supported by the display, sorted in ascending order. The refresh rate is a positive integer,in Hz. The default value is empty.
+All refresh rates supported by the display, sorted in ascending order. The refresh rate is a positive integer,in Hz. The default value is empty array.
 
 **Type:** Array&lt;int&gt;
 
