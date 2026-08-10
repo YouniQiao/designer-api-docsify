@@ -1,7 +1,9 @@
 # SingleKVStore
 
-Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data changes or across-device data sync completion events.Before calling any method in **SingleKVStore**, you must use  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain a **SingleKVStore** instance.
+SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据端端同步完成的方法。
+
+在调用SingleKVStore的方法前，需要先通过  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个SingleKVStore实例。
 
 **Since:** 9
 
@@ -11,17 +13,22 @@ Provides APIs for data management in a single KV store, such as adding data, del
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
+
 ## backup
 
 ```TypeScript
 backup(file: string, callback: AsyncCallback<void>): void
 ```
 
-Backs up a distributed KV store. This API uses an asynchronous callback to return the result.
+以指定名称备份数据库到默认路径（context.databaseDir），使用callback异步回调。如需备份到自定义路径，请使用  
+[backupEx](arkts-arkdata-distributedkvstore-singlekvstore-i.md#backupex)接口。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,33 +40,32 @@ Backs up a distributed KV store. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the KV store. The value cannot be empty or exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| file | string | Yes | 备份数据库的指定名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当以指定名称备份数据库成功，err为undefined，否则为错误对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let backupFile = "BK001";
+let backupFile = 'BK001';
 try {
   kvStore.backup(backupFile, (err: BusinessError) => {
     if (err) {
-      console.error(`Failed to backup.code is ${err.code},message is ${err.message} `);
+      console.error(`Failed to backup. Code: ${err.code}, message: ${err.message} `);
     } else {
       console.info(`Succeeded in backupping data`);
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -69,11 +75,10 @@ try {
 backup(file: string): Promise<void>
 ```
 
-Backs up an RDB store. This API uses a promise to return the result.
+以指定名称备份数据库到默认路径（context.databaseDir），使用Promise异步回调。如需备份到自定义路径，请使用  
+[backupEx](arkts-arkdata-distributedkvstore-singlekvstore-i.md#backupex)接口。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,36 +90,35 @@ Backs up an RDB store. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the KV store. The value cannot be empty or exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| file | string | Yes | 备份数据库的指定名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let backupFile = "BK001";
+let backupFile = 'BK001';
 try {
   kvStore.backup(backupFile).then(() => {
     console.info(`Succeeded in backupping data`);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to backup.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -124,11 +128,9 @@ try {
 backupEx(backupConfig: BackupConfig): Promise<void>
 ```
 
-Backs up a database by specifying {@code BackupConfig}.
+以指定名称和路径备份数据库，使用Promise异步回调。
 
-**Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,20 +142,40 @@ Backs up a database by specifying {@code BackupConfig}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backupConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the {@code BackupConfig} object for backup database. |
+| backupConfig | [BackupConfig](arkts-arkdata-distributedkvstore-backupconfig-i.md) | Yes | 备份数据库的信息（名称和路径）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 15100000 | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. [ |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const backupConfig: distributedKVStore.BackupConfig = {
+  fileName: 'BK001',
+  filePath: '/data/storage/el2/database'
+};
+try {
+  kvStore.backupEx(backupConfig).then(() => {
+    console.info(`Succeeded in backupping data`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## closeResultSet
 
@@ -161,12 +183,9 @@ Backs up a database by specifying {@code BackupConfig}.
 closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-Closes the **KVStoreResultSet** object returned by  
-[SingleKvStore.getResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses an asynchronous callback to return the result.
+关闭由[SingleKVStore.getResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#getresultset)返回的KVStoreResultSet对象，使用callback异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,16 +197,16 @@ Closes the **KVStoreResultSet** object returned by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | KVStoreResultSet** object to close. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| resultSet | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | Yes | 表示要关闭的KVStoreResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。关闭KVStoreResultSet对象成功，err为undefined，否则为错误对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -195,25 +214,25 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let resultSet: distributedKVStore.KVStoreResultSet;
 try {
   kvStore.getResultSet('batch_test_string_key', async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
-    if (err != undefined) {
-      console.error(`Failed to get resultset.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in getting result set');
     resultSet = result;
     if (kvStore != null) {
       kvStore.closeResultSet(resultSet, (err: BusinessError) => {
-        if (err != undefined) {
-          console.error(`Failed to close resultset.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
           return;
         }
         console.info('Succeeded in closing result set');
       })
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -223,12 +242,9 @@ try {
 closeResultSet(resultSet: KVStoreResultSet): Promise<void>
 ```
 
-Closes the **KVStoreResultSet** object returned by  
-[SingleKvStore.getResultSet]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+关闭由[SingleKVStore.getResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#getresultset)返回的KVStoreResultSet对象，使用Promise异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -240,21 +256,21 @@ Closes the **KVStoreResultSet** object returned by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resultSet | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | KVStoreResultSet** object to close. |
+| resultSet | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | Yes | 表示要关闭的KVStoreResultSet对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -268,16 +284,16 @@ try {
       kvStore.closeResultSet(resultSet).then(() => {
         console.info('Succeeded in closing result set');
       }).catch((err: BusinessError) => {
-        console.error(`Failed to close resultset.code is ${err.code},message is ${err.message}`);
+        console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -287,7 +303,8 @@ try {
 commit(callback: AsyncCallback<void>): void
 ```
 
-Commits the transaction in this single KV store. This API uses an asynchronous callback to return the result.
+提交SingleKVStore数据库中的事务，使用callback异步回调。需先调用  
+[startTransaction](arkts-arkdata-distributedkvstore-singlekvstore-i.md#starttransaction)启动事务后再调用本接口提交事务。提交成功后，事务期间的所有数据变更将永久生效并写入数据库。
 
 **Since:** 9
 
@@ -303,30 +320,30 @@ Commits the transaction in this single KV store. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。提交SingleKVStore数据库中的事务成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 15100005 | Database or result set already closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   kvStore.commit((err: BusinessError) => {
-    if (err == undefined) {
-      console.info('Succeeded in committing');
+    if (err) {
+      console.error(`Failed to commit. Code: ${err.code}, message: ${err.message}`);
     } else {
-      console.error(`Failed to commit.code is ${err.code},message is ${err.message}`);
+      console.info('Succeeded in committing');
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -336,7 +353,8 @@ try {
 commit(): Promise<void>
 ```
 
-Commits the transaction in this single KV store. This API uses a promise to return the result.
+提交SingleKVStore数据库中的事务，使用Promise异步回调。需先调用  
+[startTransaction](arkts-arkdata-distributedkvstore-singlekvstore-i.md#starttransaction)启动事务后再调用本接口提交事务。提交成功后，事务期间的所有数据变更将永久生效并写入数据库。
 
 **Since:** 9
 
@@ -352,15 +370,15 @@ Commits the transaction in this single KV store. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 15100005 | Database or result set already closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -369,11 +387,11 @@ try {
   kvStore.commit().then(async () => {
     console.info('Succeeded in committing');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to commit.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to commit. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -383,11 +401,9 @@ try {
 delete(key: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a KV pair from this KV store. This API uses an asynchronous callback to return the result.
+从数据库中删除指定键值的数据，使用callback异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -399,19 +415,17 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| key | string | Yes | 要删除数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。删除指定的数据成功，err为undefined，否则为错误对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| 15100005 | Database or result set already closed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -420,24 +434,24 @@ const KEY_TEST_STRING_ELEMENT = 'key_test_string';
 const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
 try {
   kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError) => {
-    if (err != undefined) {
-      console.error(`Failed to put.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in putting');
     if (kvStore != null) {
       kvStore.delete(KEY_TEST_STRING_ELEMENT, (err: BusinessError) => {
-        if (err != undefined) {
-          console.error(`Failed to delete.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
           return;
         }
         console.info('Succeeded in deleting');
       });
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -447,11 +461,9 @@ try {
 delete(key: string): Promise<void>
 ```
 
-Deletes a KV pair from this KV store. This API uses a promise to return the result.
+从数据库中删除指定键值的数据，使用Promise异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -463,24 +475,22 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| key | string | Yes | 要删除数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| 15100005 | Database or result set already closed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -494,35 +504,29 @@ try {
       kvStore.delete(KEY_TEST_STRING_ELEMENT).then(() => {
         console.info('Succeeded in deleting');
       }).catch((err: BusinessError) => {
-        console.error(`Failed to delete.code is ${err.code},message is ${err.message}`);
+        console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
 ## deleteBackup
 
-ArkTS-Dyn:
-```TypeScript
-deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, number]>>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, int]>>): void
 ```
 
-Deletes a backup file. This API uses an asynchronous callback to return the result.
+根据指定名称从默认路径（context.databaseDir）删除备份文件，使用callback异步回调。删除备份文件后，将无法再通过  
+[restore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#restore)接口恢复该备份文件中的数据。如需从自定义路径删除备份，请使用  
+[deleteBackupEx](arkts-arkdata-distributedkvstore-singlekvstore-i.md#deletebackupex)接口。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -534,32 +538,32 @@ Deletes a backup file. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, number]&gt;&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;Array&lt;[string, int]&gt;&gt; | Yes | Callback used to return the name of the backup file deleted and the operation result. |
+| files | Array&lt;string&gt; | Yes | 删除备份文件所指定的名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | Yes | 回调函数，返回删除备份的文件名及其处理结果。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let files = ["BK001", "BK002"];
+let files = ['BK001', 'BK002'];
 try {
   kvStore.deleteBackup(files, (err: BusinessError, data: [string, number][]) => {
     if (err) {
-      console.error(`Failed to delete Backup.code is ${err.code},message is ${err.message}`);
+      console.error(`Failed to delete Backup. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info(`Succeed in deleting Backup.data=${data}`);
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -575,7 +579,8 @@ ArkTS-Sta:
 deleteBackup(files: Array<string>): Promise<Array<[string, int]>>
 ```
 
-Deletes a backup file. This API uses a promise to return the result.
+根据指定名称从默认路径（context.databaseDir）删除备份文件，使用Promise异步回调。删除备份文件后，将无法再通过  
+[restore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#restore)接口恢复该备份文件中的数据。如需从自定义路径删除备份，请使用[deleteBackupEx](arkts-arkdata-distributedkvstore-singlekvstore-i.md#deletebackupex)接口。
 
 **Since:** 9
 
@@ -591,35 +596,35 @@ Deletes a backup file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| files | Array&lt;string&gt; | Yes | Name of the backup file to delete. The value cannot be empty or exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| files | Array&lt;string&gt; | Yes | 删除备份文件所指定的名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;[string, number]&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;Array&lt;[string, int]&gt;&gt; | Promise used to return the name of the backup file deleted and the operation result. |
+| ArkTS-Dyn: Promise&lt;Array&lt;[string, number]&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;[string, int]&gt;&gt; | Promise对象，返回删除备份的文件名及其处理结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let files = ["BK001", "BK002"];
+let files = ['BK001', 'BK002'];
 try {
   kvStore.deleteBackup(files).then((data: [string, number][]) => {
     console.info(`Succeed in deleting Backup.data=${data}`);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to delete Backup.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to delete Backup. Code: ${err.code}, message: ${err.message}`);
   })
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -629,7 +634,7 @@ try {
 deleteBackupEx(backupConfig: BackupConfig): Promise<void>
 ```
 
-Delete database backup file by specifying {@code BackupConfig}.
+根据指定名称和路径删除备份文件，使用Promise异步回调。
 
 **Since:** 24
 
@@ -645,19 +650,40 @@ Delete database backup file by specifying {@code BackupConfig}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backupConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the {@code BackupConfig} object for delete backup file. |
+| backupConfig | [BackupConfig](arkts-arkdata-distributedkvstore-backupconfig-i.md) | Yes | 备份数据库的信息（名称和路径）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. |
+| 15100000 | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const backupConfig: distributedKVStore.BackupConfig = {
+  fileName: 'BK001',
+  filePath: '/data/storage/el2/database'
+};
+try {
+  kvStore.deleteBackupEx(backupConfig).then(() => {
+    console.info(`Succeed in deleting Backup.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to delete Backup. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## deleteBatch
 
@@ -665,11 +691,9 @@ Delete database backup file by specifying {@code BackupConfig}.
 deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 ```
 
-Batch deletes KV pairs from this single KV store. This API uses an asynchronous callback to return the result.
+批量删除SingleKVStore数据库中的键值对，使用callback异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -681,19 +705,17 @@ Batch deletes KV pairs from this single KV store. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | string[] | Yes | KV pairs to delete. This parameter cannot be empty. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| keys | string[] | Yes | 表示要批量删除的键名列表，不能为空，数组中每个元素的长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。批量删除指定的数据成功，err为undefined，否则为错误对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| 15100005 | Database or result set already closed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -715,24 +737,24 @@ try {
   }
   console.info(`entries: ${entries}`);
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err != undefined) {
-      console.error(`Failed to put Batch.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in putting Batch');
     if (kvStore != null) {
       kvStore.deleteBatch(keys, async (err: BusinessError) => {
-        if (err != undefined) {
-          console.error(`Failed to delete Batch.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to delete Batch. Code: ${err.code}, message: ${err.message}`);
           return;
         }
         console.info('Succeeded in deleting Batch');
       });
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -742,11 +764,9 @@ try {
 deleteBatch(keys: string[]): Promise<void>
 ```
 
-Batch deletes KV pairs from this single KV store. This API uses a promise to return the result.
+批量删除SingleKVStore数据库中的键值对，使用Promise异步回调。删除成功后，指定键值对将被永久删除，无法再通过get等方法查询；若已订阅数据变更通知，将触发变更通知回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -758,24 +778,22 @@ Batch deletes KV pairs from this single KV store. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | string[] | Yes | KV pairs to delete. This parameter cannot be empty. |
+| keys | string[] | Yes | 表示要批量删除的键名列表，不能为空，数组中每个元素的长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| 15100005 | Database or result set already closed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -802,15 +820,15 @@ try {
       kvStore.deleteBatch(keys).then(() => {
         console.info('Succeeded in deleting Batch');
       }).catch((err: BusinessError) => {
-        console.error(`Failed to delete Batch.code is ${err.code},message is ${err.message}`);
+        console.error(`Failed to delete Batch. Code: ${err.code}, message: ${err.message}`);
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put Batch.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -820,7 +838,8 @@ try {
 enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets cross-device data sync, which can be enabled or disabled. This API uses an asynchronous callback to return the result.
+设定是否开启端端同步，使用callback异步回调。开启端端同步后，数据库中的数据可在多设备间自动同步；关闭后则不会自动同步，需要手动调用  
+[sync](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)接口触发同步。
 
 **Since:** 9
 
@@ -836,31 +855,31 @@ Sets cross-device data sync, which can be enabled or disabled. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable data sync across devices. The value **true** means to enable data sync across devices, and the value **false** means the opposite. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| enabled | boolean | Yes | 设定是否开启端端同步，true表示开启端端同步，false表示不启用端端同步。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。设定成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   kvStore.enableSync(true, (err: BusinessError) => {
-    if (err == undefined) {
-      console.info('Succeeded in enabling sync');
+    if (err) {
+      console.error(`Failed to enable sync. Code: ${err.code}, message: ${err.message}`);
     } else {
-      console.error(`Failed to enable sync.code is ${err.code},message is ${err.message}`);
+      console.info('Succeeded in enabling sync');
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -870,7 +889,8 @@ try {
 enableSync(enabled: boolean): Promise<void>
 ```
 
-Sets cross-device data sync, which can be enabled or disabled. This API uses a promise to return the result.
+设定是否开启端端同步，使用Promise异步回调。开启端端同步后，数据库中的数据可在多设备间自动同步；关闭后则不会自动同步，需要手动调用  
+[sync](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)接口触发同步。
 
 **Since:** 9
 
@@ -886,21 +906,21 @@ Sets cross-device data sync, which can be enabled or disabled. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable data sync across devices. The value **true** means to enable data sync across devices, and the value **false** means the opposite. |
+| enabled | boolean | Yes | 设定是否开启端端同步，true表示开启端端同步，false表示不启用端端同步。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -909,31 +929,23 @@ try {
   kvStore.enableSync(true).then(() => {
     console.info('Succeeded in enabling sync');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to enable sync.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to enable sync. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
 ## get
 
-ArkTS-Dyn:
-```TypeScript
-get(key: string, callback: AsyncCallback<boolean | string | number | number | Uint8Array>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void
 ```
 
-Obtains the value of the specified key. This API uses an asynchronous callback to return the result.
+获取指定键的值，使用callback异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -945,35 +957,25 @@ Obtains the value of the specified key. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean \| string \| number \| number \| Uint8Array&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Yes | Callback used to return the value obtained. |
+| key | string | Yes | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Yes | 回调函数。返回获取查询的值，值的类型取决于存储时的数据类型。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| 15100004 | Not found. [ |
 
 ## get
 
-ArkTS-Dyn:
-```TypeScript
-get(key: string): Promise<boolean | string | number | number | Uint8Array>
-```
-
-ArkTS-Sta:
 ```TypeScript
 get(key: string): Promise<boolean | string | long | double | Uint8Array>
 ```
 
-Obtains the value of the specified key. This API uses a promise to return the result.
+获取指定键的值，使用Promise异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -985,22 +987,20 @@ Obtains the value of the specified key. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| key | string | Yes | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;boolean \| string \| number \| number \| Uint8Array&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Promise used to return the value obtained. |
+| Promise&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Promise对象。返回指定键对应的值，值的类型取决于存储时的数据类型。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| 15100004 | Not found. [ |
 
 ## getEntries
 
@@ -1008,11 +1008,9 @@ Obtains the value of the specified key. This API uses a promise to return the re
 getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains all KV pairs that match the specified key prefix. This API uses an asynchronous callback to return the result.
+获取匹配指定键前缀的所有键值对，使用callback异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1024,18 +1022,17 @@ Obtains all KV pairs that match the specified key prefix. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified prefix. |
+| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | 回调函数。返回匹配指定前缀的键值对列表。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100005 | Database or result set already closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1055,15 +1052,15 @@ try {
   }
   console.info(`entries: ${entries}`);
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err != undefined) {
-      console.error(`Failed to put Batch.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in putting Batch');
     if (kvStore != null) {
       kvStore.getEntries('batch_test_string_key', (err: BusinessError, entries: distributedKVStore.Entry[]) => {
-        if (err != undefined) {
-          console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
           return;
         }
         console.info('Succeeded in getting Entries');
@@ -1072,9 +1069,9 @@ try {
       });
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message} `);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1084,11 +1081,9 @@ try {
 getEntries(keyPrefix: string): Promise<Entry[]>
 ```
 
-Obtains all KV pairs that match the specified key prefix. This API uses a promise to return the result.
+获取匹配指定键前缀的所有键值对，使用Promise异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1100,23 +1095,22 @@ Obtains all KV pairs that match the specified key prefix. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
+| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified prefix. |
+| Promise&lt;Entry[]&gt; | Promise对象。返回匹配指定前缀的键值对列表。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100005 | Database or result set already closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1143,15 +1137,15 @@ try {
         console.info('Succeeded in getting Entries');
         console.info(`PutBatch ${entries}`);
       }).catch((err: BusinessError) => {
-        console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`);
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put Batch.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message} `);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1161,11 +1155,9 @@ try {
 getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains the KV pairs that match the specified **Query** object. This API uses an asynchronous callback to return the result.
+获取与指定Query对象匹配的键值对列表，使用callback异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1177,18 +1169,17 @@ Obtains the KV pairs that match the specified **Query** object. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Key prefix to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query** object. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示要查询的对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | 回调函数。返回与指定Query对象匹配的键值对列表。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100005 | Database or result set already closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1207,15 +1198,19 @@ try {
     }
     entries.push(entry);
   }
-  console.info(`entries: {entries}`);
+  console.info(`entries: ${entries}`);
   kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
     console.info('Succeeded in putting Batch');
     const query = new distributedKVStore.Query();
-    query.prefixKey("batch_test");
+    query.prefixKey('batch_test');
     if (kvStore != null) {
       kvStore.getEntries(query, (err: BusinessError, entries: distributedKVStore.Entry[]) => {
-        if (err != undefined) {
-          console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
           return;
         }
         console.info('Succeeded in getting Entries');
@@ -1224,9 +1219,9 @@ try {
       });
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get Entries.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1236,11 +1231,9 @@ try {
 getEntries(query: Query): Promise<Entry[]>
 ```
 
-Obtains the KV pairs that match the specified **Query** object. This API uses a promise to return the result.
+获取与指定Query对象匹配的键值对列表，使用Promise异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1252,23 +1245,22 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified **Query** object. |
+| Promise&lt;Entry[]&gt; | Promise对象。返回与指定Query对象匹配的键值对列表。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100005 | Database or result set already closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1287,25 +1279,25 @@ try {
     }
     entries.push(entry);
   }
-  console.info(`entries: {entries}`);
+  console.info(`entries: ${entries}`);
   kvStore.putBatch(entries).then(async () => {
     console.info('Succeeded in putting Batch');
     const query = new distributedKVStore.Query();
-    query.prefixKey("batch_test");
+    query.prefixKey('batch_test');
     if (kvStore != null) {
       kvStore.getEntries(query).then((entries: distributedKVStore.Entry[]) => {
         console.info('Succeeded in getting Entries');
       }).catch((err: BusinessError) => {
-        console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`);
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`)
+    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
   });
   console.info('Succeeded in getting Entries');
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get Entries.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1315,11 +1307,10 @@ try {
 getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-Obtains a result set with the specified prefix from this single KV store. This API uses an asynchronous callback to return the result.
+从SingleKVStore数据库中获取具有指定前缀的结果集，使用callback异步回调。获取结果集后，在使用完毕时需调用  
+[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1331,19 +1322,17 @@ Obtains a result set with the specified prefix from this single KV store. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KVStoreResultSet&gt; | Yes | Callback used to return the result set with the specified prefix. |
+| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | Yes | 回调函数。返回具有指定前缀的结果集。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100005 | Database or result set already closed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1363,23 +1352,23 @@ try {
     entries.push(entry);
   }
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err != undefined) {
-      console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in putting batch');
     if (kvStore != null) {
       kvStore.getResultSet('batch_test_string_key', async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
-        if (err != undefined) {
-          console.error(`Failed to get resultset.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
           return;
         }
         console.info('Succeeded in getting result set');
         resultSet = result;
         if (kvStore != null) {
           kvStore.closeResultSet(resultSet, (err :BusinessError) => {
-            if (err != undefined) {
-              console.error(`Failed to close resultset.code is ${err.code},message is ${err.message}`);
+            if (err) {
+              console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
               return;
             }
             console.info('Succeeded in closing result set');
@@ -1388,9 +1377,9 @@ try {
       });
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1400,11 +1389,10 @@ try {
 getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
-Obtains a result set with the specified prefix from this single KV store. This API uses a promise to return the result.
+从SingleKVStore数据库中获取具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用  
+[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1416,24 +1404,22 @@ Obtains a result set with the specified prefix from this single KV store. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
+| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | Promise used to return the result set with the specified prefix. |
+| Promise&lt;KVStoreResultSet&gt; | Promise对象。返回具有指定前缀的结果集。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100005 | Database or result set already closed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1452,27 +1438,27 @@ try {
     }
     entries.push(entry);
   }
-  kvStore.putBatch(entries).then(async () => {
+  kvStore!.putBatch(entries).then(() => {
     console.info('Succeeded in putting batch');
+    kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+      console.info('Succeeded in getting result set');
+      resultSet = result;
+      if (kvStore != null) {
+        kvStore.closeResultSet(resultSet).then(() => {
+          console.info('Succeeded in closing result set');
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+        });
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    });
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
   });
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('Succeeded in getting result set');
-    resultSet = result;
-    if (kvStore != null) {
-      kvStore.closeResultSet(resultSet).then(() => {
-        console.info('Succeeded in closing result set');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to close resultset.code is ${err.code},message is ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset.code is ${err.code},message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1482,11 +1468,10 @@ try {
 getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses an asynchronous callback to return the result.
+获取与指定Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用  
+[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1498,19 +1483,17 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KVStoreResultSet&gt; | Yes | Callback used to return the **KVStoreResultSet** object obtained. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | Yes | 回调函数，获取与指定Query对象匹配的KVStoreResultSet对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100005 | Database or result set already closed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1530,26 +1513,26 @@ try {
     entries.push(entry);
   }
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err != undefined) {
-      console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in putting batch');
     const query = new distributedKVStore.Query();
-    query.prefixKey("batch_test");
+    query.prefixKey('batch_test');
     if (kvStore != null) {
       kvStore.getResultSet(query, async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
-        if (err != undefined) {
-          console.error(`Failed to get resultset.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
           return;
         }
         console.info('Succeeded in getting result set');
       });
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1559,11 +1542,10 @@ try {
 getResultSet(query: Query): Promise<KVStoreResultSet>
 ```
 
-Obtains a **KVStoreResultSet** object that matches the specified **Query** object. This API uses a promise to return the result.
+获取与指定Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用  
+[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1575,30 +1557,27 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | Promise used to return the **KVStoreResultSet** object obtained. |
+| Promise&lt;KVStoreResultSet&gt; | Promise对象。获取与指定Query对象匹配的KVStoreResultSet对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100005 | Database or result set already closed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
   let entries: distributedKVStore.Entry[] = [];
   for (let i = 0; i < 10; i++) {
     let key = 'batch_test_string_key';
@@ -1611,42 +1590,33 @@ try {
     }
     entries.push(entry);
   }
-  kvStore.putBatch(entries).then(async () => {
+    kvStore!.putBatch(entries).then(() => {
     console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getResultSet(query).then((result: distributedKVStore.KVStoreResultSet) => {
+      console.info(`Succeeded in getting result set size=${result.getCount()}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    });
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
   });
-  const query = new distributedKVStore.Query();
-  query.prefixKey("batch_test");
-  kvStore.getResultSet(query).then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('Succeeded in getting result set');
-    resultSet = result;
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset.code is ${err.code},message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
 ## getResultSize
 
-ArkTS-Dyn:
-```TypeScript
-getResultSize(query: Query, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getResultSize(query: Query, callback: AsyncCallback<int>): void
 ```
 
-Obtains the number of results that match the specified **Query** object. This API uses an asynchronous callback to return the result.
+获取与指定Query对象匹配的结果数，使用callback异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1658,19 +1628,17 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback used to return the number of results obtained. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。返回与指定Query对象匹配的结果数。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100004 | Not found. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1689,42 +1657,38 @@ try {
     entries.push(entry);
   }
   kvStore.putBatch(entries, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
     console.info('Succeeded in putting batch');
     const query = new distributedKVStore.Query();
-    query.prefixKey("batch_test");
+    query.prefixKey('batch_test');
     if (kvStore != null) {
       kvStore.getResultSize(query, (err: BusinessError, resultSize: number) => {
-        if (err != undefined) {
-          console.error(`Failed to get result size.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
           return;
         }
         console.info('Succeeded in getting result set size');
       });
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
 ## getResultSize
 
-ArkTS-Dyn:
-```TypeScript
-getResultSize(query: Query): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getResultSize(query: Query): Promise<int>
 ```
 
-Obtains the number of results that match the specified **Query** object. This API uses a promise to return the result.
+获取与指定Query对象匹配的结果数，使用Promise异步回调。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1736,24 +1700,22 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of results obtained. |
+| Promise&lt;int&gt; | Promise对象。获取与指定Query对象匹配的结果数。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| 15100004 | Not found. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1774,18 +1736,18 @@ try {
   kvStore.putBatch(entries).then(async () => {
     console.info('Succeeded in putting batch');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
   });
   const query = new distributedKVStore.Query();
-  query.prefixKey("batch_test");
+  query.prefixKey('batch_test');
   kvStore.getResultSize(query).then((resultSize: number) => {
     console.info('Succeeded in getting result set size');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get result size.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1795,7 +1757,7 @@ try {
 getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void
 ```
 
-Obtains the security level of this KV store. This API uses an asynchronous callback to return the result.
+获取数据库的安全级别，使用callback异步回调。
 
 **Since:** 9
 
@@ -1811,30 +1773,30 @@ Obtains the security level of this KV store. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SecurityLevel&gt; | Yes | Callback used to return the security level of the KV store. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SecurityLevel&gt; | Yes | 回调函数。返回数据库的安全级别。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 15100005 | Database or result set already closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   kvStore.getSecurityLevel((err: BusinessError, data: distributedKVStore.SecurityLevel) => {
-    if (err != undefined) {
-      console.error(`Failed to get SecurityLevel.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to get SecurityLevel. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in getting securityLevel');
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1844,7 +1806,7 @@ try {
 getSecurityLevel(): Promise<SecurityLevel>
 ```
 
-Obtains the security level of this KV store. This API uses a promise to return the result.
+获取数据库的安全级别，使用Promise异步回调。
 
 **Since:** 9
 
@@ -1860,15 +1822,15 @@ Obtains the security level of this KV store. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SecurityLevel&gt; | Promise used to return the security level of the KV store. |
+| Promise&lt;SecurityLevel&gt; | Promise对象。返回数据库的安全级别。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 15100005 | Database or result set already closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1877,11 +1839,11 @@ try {
   kvStore.getSecurityLevel().then((data: distributedKVStore.SecurityLevel) => {
     console.info('Succeeded in getting securityLevel');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get SecurityLevel.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to get SecurityLevel. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1891,7 +1853,8 @@ try {
 off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 ```
 
-Unsubscribes from data changes.
+取消订阅数据变更通知。必须先调用  
+[on('dataChange')](distributedKVStore.SingleKVStore.on(event: 'dataChange', type: SubscribeType, listener: Callback&lt;ChangeNotification&gt;))订阅后，才能调用off取消订阅。
 
 **Since:** 9
 
@@ -1905,17 +1868,17 @@ Unsubscribes from data changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates a data change event. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
+| event | 'dataChange' | Yes | 取消订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | 取消订阅的函数。如不设置callback，则取消所有已订阅的函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1932,7 +1895,7 @@ class KvstoreModel {
       }
     } catch (err) {
       let error = err as BusinessError;
-      console.error(`Failed to subscribeDataChange.code is ${error.code},message is ${error.message}`);
+      console.error(`Failed to subscribeDataChange. Code: ${error.code}, message: ${error.message}`);
     }
   }
 
@@ -1943,7 +1906,7 @@ class KvstoreModel {
       }
     } catch (err) {
       let error = err as BusinessError;
-      console.error(`Failed to unsubscribeDataChange.code is ${error.code},message is ${error.message}`);
+      console.error(`Failed to unsubscribeDataChange. Code: ${error.code}, message: ${error.message}`);
     }
   }
 }
@@ -1955,7 +1918,8 @@ class KvstoreModel {
 off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void
 ```
 
-Unsubscribes from the cross-device data sync completion events.
+取消订阅端端同步完成事件回调通知。必须先调用  
+[on('syncComplete')](distributedKVStore.SingleKVStore.on(event: 'syncComplete', syncCallback: Callback&lt;Array<[string, number]>&gt;&lt;[string, number]&gt;>))订阅后，才能调用off取消订阅。
 
 **Since:** 9
 
@@ -1969,16 +1933,16 @@ Unsubscribes from the cross-device data sync completion events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not set, all callbacks used to listen for the data sync completion event are unregistered. When multiple ArkTS instances ( obtained through the [getKVStore]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API) of the same database all register the callback used to listen for the sync completion event, if all these callbacks are unregistered by one of the ArkTS instances, then the callbacks of the others are also unregistered. |
+| event | 'syncComplete' | Yes | 取消订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | 取消订阅的同步完成回调函数。如果该参数不填，则取消所有已订阅的同步完成回调函数。需要注意的是：如果同一个数 据库存在多个ArkTS实例（通过 [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) 接口获取），且这些实例分别注册了同步完成事件回调，那么当任意一个实例调用off('syncComplete')且不传入syncCallback参数（即取消该实例的所有回调）时，其他实例已订阅的同步完成回调函数也会被一并 取消。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1995,7 +1959,7 @@ class KvstoreModel {
       }
     } catch (err) {
       let error = err as BusinessError;
-      console.error(`Failed to subscribeDataChange.code is ${error.code},message is ${error.message}`);
+      console.error(`Failed to subscribeDataChange. Code: ${error.code}, message: ${error.message}`);
     }
   }
 
@@ -2006,7 +1970,7 @@ class KvstoreModel {
       }
     } catch (err) {
       let error = err as BusinessError;
-      console.error(`Failed to unsubscribeDataChange.code is ${error.code},message is ${error.message}`);
+      console.error(`Failed to unsubscribeDataChange. Code: ${error.code}, message: ${error.message}`);
     }
   } 
 }
@@ -2018,7 +1982,7 @@ class KvstoreModel {
 offDataChange(listener?: Callback<ChangeNotification>): void
 ```
 
-Unsubscribe from the SingleKVStore database based on the specified subscribeType and listener.
+取消订阅数据变更通知。必须先调用onDataChange订阅后，才能调用offDataChange取消订阅。
 
 **Since:** 23
 
@@ -2034,13 +1998,13 @@ Unsubscribe from the SingleKVStore database based on the specified subscribeType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | No | {ChangeNotification}: the {@code ChangeNotification} object indicates the data change events in the distributed database. |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 15100005 | Database or result set already closed. |
 
 ## offSyncComplete
 
@@ -2048,7 +2012,7 @@ Unsubscribe from the SingleKVStore database based on the specified subscribeType
 offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void
 ```
 
-Unregister the database synchronization callback.
+取消订阅端端同步完成事件回调通知。必须先调用onSyncComplete订阅后，才能调用offSyncComplete取消订阅。
 
 **Since:** 23
 
@@ -2064,7 +2028,7 @@ Unregister the database synchronization callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, int]&gt;&gt; | No | {Array&lt;[string, int]&gt;}: the deviceId and it's corresponding synchronization result which 0 means synchronization success and otherwise failed. |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | No |  |
 
 ## on
 
@@ -2072,7 +2036,8 @@ Unregister the database synchronization callback.
 on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void
 ```
 
-Subscribes to data changes of the specified type.
+订阅指定类型的数据变更通知。调用on订阅后，在不需要监听时必须调用  
+[off('dataChange')](distributedKVStore.SingleKVStore.off(event: 'dataChange', listener?: Callback&lt;ChangeNotification&gt;))取消订阅。
 
 **Since:** 9
 
@@ -2086,19 +2051,19 @@ Subscribes to data changes of the specified type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates a data change event. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of data change. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | Yes | Callback used to return the object to be notified when the data changes. |
+| event | 'dataChange' | Yes | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 表示订阅的类型。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | 回调函数。成功返回数据变更时通知的对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100001 | Over max limits. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2107,9 +2072,9 @@ try {
   kvStore.on('dataChange', distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_LOCAL, (data: distributedKVStore.ChangeNotification) => {
     console.info(`dataChange callback call data: ${data}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -2119,7 +2084,8 @@ try {
 on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 ```
 
-Subscribes to the cross-device data sync completion events.
+订阅端端同步完成事件回调通知。调用on订阅后，在不需要监听时必须调用  
+[off('syncComplete')](distributedKVStore.SingleKVStore.off(event: 'syncComplete', syncCallback?: Callback&lt;Array<[string, number]>&gt;&lt;[string, number]&gt;>))取消订阅。
 
 **Since:** 9
 
@@ -2133,16 +2099,16 @@ Subscribes to the cross-device data sync completion events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates the sync completion event. |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return the sync completion event. |
+| event | 'syncComplete' | Yes | 订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | 回调函数。用于向调用方发送同步结果的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2157,11 +2123,11 @@ try {
   kvStore.put(KEY_TEST_FLOAT_ELEMENT, VALUE_TEST_FLOAT_ELEMENT).then(() => {
     console.info('succeeded in putting');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to subscribe syncComplete.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to subscribe syncComplete. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -2171,7 +2137,7 @@ try {
 onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void
 ```
 
-Register a callback to the database and when data in the distributed database has changed,the callback will be invoked.
+订阅指定类型的数据变更通知。调用onDataChange订阅后，在不需要监听时必须调用offDataChange取消订阅。
 
 **Since:** 23
 
@@ -2187,15 +2153,15 @@ Register a callback to the database and when data in the distributed database ha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the subscription type, which is defined in {@code SubscribeType}. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ChangeNotification&gt; | Yes | {ChangeNotification}: the {@code ChangeNotification} object indicates the data change events in the distributed database. |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 表示订阅的类型。. |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | 回调函数。成功返回数据变更时通知的对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 15100005 | Database or result set already closed. |
+| 15100001 | Over max limits. |
 
 ## onSyncComplete
 
@@ -2203,7 +2169,7 @@ Register a callback to the database and when data in the distributed database ha
 onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void
 ```
 
-Register a databases synchronization callback to the database.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Sync result is returned through asynchronous callback.
+订阅端端同步完成事件回调通知。调用onSyncComplete订阅后，在不需要监听时必须调用offSyncComplete取消订阅。
 
 **Since:** 23
 
@@ -2219,7 +2185,7 @@ Register a databases synchronization callback to the database.\_\_\_HTML\_TAG\_D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| syncCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;[string, int]&gt;&gt; | Yes | {Array&lt;[string, int]&gt;}: the deviceId and it's corresponding synchronization result which 0 means synchronization success and otherwise failed. |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | Yes | 回调函数。用于向调用方发送同步结果的回调。 |
 
 ## put
 
@@ -2233,7 +2199,7 @@ ArkTS-Sta:
 put(key: string, value: Uint8Array | string | long | double | boolean, callback: AsyncCallback<void>): void
 ```
 
-Adds a KV pair of the specified type to this KV store. This API uses an asynchronous callback to return the result.
+添加指定类型键值对到数据库，使用callback异步回调。若Key已存在则更新对应Value；若已订阅数据变更通知，将触发变更通知回调。
 
 **Since:** 9
 
@@ -2249,18 +2215,18 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| value | ArkTS-Dyn: Uint8Array \| string \| number \| number \| boolean  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Uint8Array \| string \| long \| double \| boolean | Yes | Value of the KV pair to add. The value type can be Uint 8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_VALUE\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| key | string | Yes | 要添加数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| value | ArkTS-Dyn: Uint8Array \| string \| number \| number \| boolean  <br>ArkTS-Sta：Uint8Array \| string \| long \| double \| boolean | Yes | 要添加数据的value，支持Uint8Array、string、number、boolean， Uint8Array、string的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。数据添加成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 ## put
 
@@ -2274,7 +2240,7 @@ ArkTS-Sta:
 put(key: string, value: Uint8Array | string | long | double | boolean): Promise<void>
 ```
 
-Adds a KV pair of the specified type to this KV store. This API uses a promise to return the result.
+添加指定类型键值对到数据库，使用Promise异步回调。若Key已存在则更新对应Value；若已订阅数据变更通知，将触发变更通知回调。
 
 **Since:** 9
 
@@ -2290,23 +2256,23 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| value | ArkTS-Dyn: Uint8Array \| string \| number \| number \| boolean  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Uint8Array \| string \| long \| double \| boolean | Yes | Value of the KV pair to add. The value type can be Uint 8Array, long , double, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_VALUE\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| key | string | Yes | 要添加数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| value | ArkTS-Dyn: Uint8Array \| string \| number \| number \| boolean  <br>ArkTS-Sta：Uint8Array \| string \| long \| double \| boolean | Yes | 要添加数据的value，支持Uint8Array、string、number、boolean， Uint8Array、string的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
 ## putBatch
 
@@ -2314,7 +2280,7 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 ```
 
-Batch inserts KV pairs to this single KV store. This API uses an asynchronous callback to return the result.
+批量插入键值对到SingleKVStore数据库中，使用callback异步回调。若Key已存在则更新对应Value；若已订阅数据变更通知，将触发变更通知回调。
 
 **Since:** 9
 
@@ -2330,19 +2296,19 @@ Batch inserts KV pairs to this single KV store. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | KV pairs to insert, which cannot exceed 512 MB. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| entries | [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[] | Yes | 表示要批量插入的键值对。一个entries对象中允许的最大数据量为512MB。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。数据批量插入成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2362,15 +2328,16 @@ try {
   }
   console.info(`entries: ${entries}`);
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err != undefined) {
-      console.error(`Failed to put Batch.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in putting Batch');
     if (kvStore != null) {
       kvStore.getEntries('batch_test_string_key', (err: BusinessError, entries: distributedKVStore.Entry[]) => {
-        if (err != undefined) {
-          console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+          return;
         }
         console.info('Succeeded in getting Entries');
         console.info(`entries.length: ${entries.length}`);
@@ -2380,9 +2347,9 @@ try {
       console.error('KvStore is null'); // The subsequent sample code is the same as the code here.
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message} `);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -2392,7 +2359,7 @@ try {
 putBatch(entries: Entry[]): Promise<void>
 ```
 
-Batch inserts KV pairs to this single KV store. This API uses a promise to return the result.
+批量插入键值对到SingleKVStore数据库中，使用Promise异步回调。若Key已存在则更新对应Value；若已订阅数据变更通知，将触发变更通知回调。
 
 **Since:** 9
 
@@ -2408,24 +2375,24 @@ Batch inserts KV pairs to this single KV store. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Yes | KV pairs to insert, which cannot exceed 512 MB. |
+| entries | [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[] | Yes | 表示要批量插入的键值对。一个entries对象中允许的最大数据量为512MB。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2451,15 +2418,15 @@ try {
         console.info('Succeeded in getting Entries');
         console.info(`PutBatch ${entries}`);
       }).catch((err: BusinessError) => {
-        console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`);
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put Batch.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message} `);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -2469,7 +2436,11 @@ try {
 rekey(): Promise<void>
 ```
 
-Update the key used to encrypt the database.
+更新数据库的加密密钥，使用Promise异步回调。
+
+> **说明：**
+> 
+> rekey仅对创建时已启用加密的数据库有效，即Options中encrypt需设置为true，非加密数据库调用此接口将返回错误。
 
 **Since:** 26.0.0
 
@@ -2485,15 +2456,30 @@ Update the key used to encrypt the database.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [15100006](../errorcode-distributedKVStore.md#15100006-failed-to-update-the-kv-store-encryption-key) | Failed to update the key. |
+| 15100006 | Failed to update the key. |
+| 15100005 | Database or result set already closed. |
+| 15100003 | Database corrupted. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore.rekey().then(() => {
+    console.info('Success');
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to rekey. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## removeDeviceData
 
@@ -2501,19 +2487,19 @@ Update the key used to encrypt the database.
 removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes data of a device. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    **deviceId** is **networkId** in  
-    [DeviceBasicInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, which can be  
-    obtained by  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_  
-    .  
-        For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+删除指定设备的数据，使用callback异步回调。删除成功后，指定设备的所有数据将从本地数据库中永久移除，无法再通过get等方法查询该设备的数据。
 
-**Since:** 9
+> **说明：**
+> 
+> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId，通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2525,17 +2511,16 @@ Deletes data of a device. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Network ID of the target device. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| deviceId | string | Yes | 设备的networkId，标识要删除其数据的设备，不能为空。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。删除指定设备的数据成功，err为undefined，否则为错误对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2544,26 +2529,34 @@ const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
 const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
 try {
   kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put device data. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
     console.info('Succeeded in putting data');
-    const deviceid = 'no_exist_device_id';
-    if (kvStore != null) {
-      kvStore.removeDeviceData(deviceid, async (err: BusinessError) => {
-        if (err == undefined) {
-          console.info('succeeded in removing device data');
+    const deviceId = 'no_exist_device_id';
+    if (kvStore) {
+      kvStore.removeDeviceData(deviceId, async (err: BusinessError) => {
+        if (err) {
+          console.error(`Failed to remove device data. Code: ${err.code}, message: ${err.message}`);
         } else {
-          console.error(`Failed to remove device data.code is ${err.code},message is ${err.message} `);
-          if (kvStore != null) {
+          console.info('Succeeded in removing device data');
+          if (kvStore) {
             kvStore.get(KEY_TEST_STRING_ELEMENT, async (err: BusinessError, data: boolean | string | number | Uint8Array) => {
-              console.info('Succeeded in getting data');
-            });
+                if (err) {
+                  console.error(`Failed to get data. Code: ${err.code}, message: ${err.message}`);
+                  return;
+                }
+                console.info(`Succeeded in getting data.data=${data}`);
+              });
           }
         }
       });
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`)
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -2573,19 +2566,19 @@ try {
 removeDeviceData(deviceId: string): Promise<void>
 ```
 
-Deletes data of a device. This API uses a promise to return the result.
-    **NOTE**  
-    
-    **deviceId** is **networkId** in  
-    [DeviceBasicInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, which can be  
-    obtained by  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_  
-    .  
-        For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+删除指定设备的数据，使用Promise异步回调。删除成功后，指定设备的所有数据将从本地数据库中永久移除，无法再通过get等方法查询该设备的数据。
 
-**Since:** 9
+> **说明：**
+> 
+> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId，通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2597,22 +2590,21 @@ Deletes data of a device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Network ID of the target device. |
+| deviceId | string | Yes | 设备的networkId，标识要删除其数据的设备，不能为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2620,25 +2612,25 @@ import { BusinessError } from '@kit.BasicServicesKit';
 const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
 const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
 try {
-  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+  kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
     console.info('Succeeded in putting data');
+    const deviceId = 'no_exist_device_id';
+    kvStore!.removeDeviceData(deviceId).then(() => {
+      console.info('succeeded in removing device data');
+      kvStore!.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info(`Succeeded in getting data. Data=${data}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get data. Code: ${err.code}, message: ${err.message}`);
+      });
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to remove device data. Code: ${err.code}, message: ${err.message}`);
+    });
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put data.code is ${err.code},message is ${err.message} `);
+    console.error(`Failed to put data. Code: ${err.code}, message: ${err.message}`);
   });
-  const deviceid = 'no_exist_device_id';
-  kvStore.removeDeviceData(deviceid).then(() => {
-    console.info('succeeded in removing device data');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to remove device data.code is ${err.code},message is ${err.message} `);
-  });
-  kvStore.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
-    console.info('Succeeded in getting data');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get data.code is ${err.code},message is ${err.message} `);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`)
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -2648,11 +2640,9 @@ try {
 restore(file: string, callback: AsyncCallback<void>): void
 ```
 
-Restores a distributed KV store from a database file. This API uses an asynchronous callback to return the result.
+从数据库默认路径（context.databaseDir）下指定名称的备份文件恢复数据库，使用callback异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。如需从自定义路径恢复，请使用[restoreEx](arkts-arkdata-distributedkvstore-singlekvstore-i.md#restoreex)接口。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2664,33 +2654,32 @@ Restores a distributed KV store from a database file. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the database file. The value cannot be empty or exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| file | string | Yes | 指定的数据库文件名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当从指定的数据库文件恢复数据库成功，err为undefined，否则为错误对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let backupFile = "BK001";
+let backupFile = 'BK001';
 try {
   kvStore.restore(backupFile, (err: BusinessError) => {
     if (err) {
-      console.error(`Failed to restore.code is ${err.code},message is ${err.message}`);
+      console.error(`Failed to restore. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info(`Succeeded in restoring data`);
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -2700,11 +2689,9 @@ try {
 restore(file: string): Promise<void>
 ```
 
-Restores a distributed KV store from a database file. This API uses a promise to return the result.
+从数据库默认路径（context.databaseDir）下指定名称的备份文件恢复数据库，使用Promise异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。如需从自定义路径恢复，请使用[restoreEx](arkts-arkdata-distributedkvstore-singlekvstore-i.md#restoreex)接口。
 
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2716,36 +2703,35 @@ Restores a distributed KV store from a database file. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string | Yes | Name of the database file. The value cannot be empty or exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_KEY\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| file | string | Yes | 指定的数据库文件名称，不能为空，无长度限制，不能包含特殊字符'/'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let backupFile = "BK001";
+let backupFile = 'BK001';
 try {
   kvStore.restore(backupFile).then(() => {
     console.info(`Succeeded in restoring data`);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to restore.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to restore. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -2755,11 +2741,9 @@ try {
 restoreEx(backupConfig: BackupConfig): Promise<void>
 ```
 
-Restores a database by specifying {@code BackupConfig}.
+从指定路径和名称的备份文件恢复数据库，使用Promise异步回调。恢复成功后，当前数据库中的数据将被替换为备份文件中的数据，原有的未备份数据将丢失。
 
-**Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2771,20 +2755,40 @@ Restores a database by specifying {@code BackupConfig}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backupConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the {@code BackupConfig} object for restore database. |
+| backupConfig | [BackupConfig](arkts-arkdata-distributedkvstore-backupconfig-i.md) | Yes | 备份数据库的信息（名称和路径）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 [ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100000](../errorcode-distributedKVStore.md#15100000-invalid-parameter) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 15100000 | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. [ |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const backupConfig: distributedKVStore.BackupConfig = {
+  fileName: 'BK001',
+  filePath: '/data/storage/el2/database'
+};
+try {
+  kvStore.restoreEx(backupConfig).then(() => {
+    console.info(`Succeeded in restoring data`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to restore. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## rollback
 
@@ -2792,7 +2796,8 @@ Restores a database by specifying {@code BackupConfig}.
 rollback(callback: AsyncCallback<void>): void
 ```
 
-Rolls back the transaction in this single KV store. This API uses an asynchronous callback to return the result.
+在SingleKVStore数据库中回滚事务，使用callback异步回调。需先调用  
+[startTransaction](arkts-arkdata-distributedkvstore-singlekvstore-i.md#starttransaction)启动事务后再调用本接口回滚事务。回滚成功后，事务期间的所有数据变更将被丢弃，不会写入数据库。
 
 **Since:** 9
 
@@ -2808,30 +2813,30 @@ Rolls back the transaction in this single KV store. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。SingleKVStore数据库中回滚事务成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 15100005 | Database or result set already closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   kvStore.rollback((err: BusinessError) => {
-    if (err == undefined) {
-      console.info('Succeeded in rolling back');
+    if (err) {
+      console.error(`Failed to rollback. Code: ${err.code}, message: ${err.message}`);
     } else {
-      console.error(`Failed to rollback.code is ${err.code},message is ${err.message}`);
+      console.info('Succeeded in rolling back');
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -2841,7 +2846,8 @@ try {
 rollback(): Promise<void>
 ```
 
-Rolls back the transaction in this single KV store. This API uses a promise to return the result.
+在SingleKVStore数据库中回滚事务，使用Promise异步回调。需先调用  
+[startTransaction](arkts-arkdata-distributedkvstore-singlekvstore-i.md#starttransaction)启动事务后再调用本接口回滚事务。回滚成功后，事务期间的所有数据变更将被丢弃，不会写入数据库。
 
 **Since:** 9
 
@@ -2857,15 +2863,15 @@ Rolls back the transaction in this single KV store. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| 15100005 | Database or result set already closed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2874,11 +2880,11 @@ try {
   kvStore.rollback().then(async () => {
     console.info('Succeeded in rolling back');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to rollback.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to rollback. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -2894,11 +2900,13 @@ ArkTS-Sta:
 setSyncParam(defaultAllowedDelayMs: int, callback: AsyncCallback<void>): void
 ```
 
-Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    After the default delay is set, calling [sync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ will not trigger the cross-  
-    device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+设置数据库端端同步允许的默认延时，使用callback异步回调。
+
+> **说明：**
+> 
+> 设置默认延时后，调用
+> [sync](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)接口不会立即触发
+> 端端同步，而是等待指定的延时时间后再执行。
 
 **Since:** 9
 
@@ -2914,16 +2922,16 @@ Sets the default delay for cross-device data sync. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| defaultAllowedDelayMs | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Delay time to set, in ms. The value can be **0** or ranges from 100 to 86400000. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| defaultAllowedDelayMs | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示一个延时时间，单位为毫秒（ms），取值范围为0或[100, 86400000]。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。设置成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2931,15 +2939,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   const defaultAllowedDelayMs = 500;
   kvStore.setSyncParam(defaultAllowedDelayMs, (err: BusinessError) => {
-    if (err != undefined) {
-      console.error(`Failed to set syncParam.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to set syncParam. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in setting syncParam');
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -2955,11 +2963,13 @@ ArkTS-Sta:
 setSyncParam(defaultAllowedDelayMs: int): Promise<void>
 ```
 
-Sets the default delay for cross-device data sync. This API uses a promise to return the result.
-    **NOTE**  
-    
-    After the default delay is set, calling [sync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ will not trigger the cross-  
-    device data sync immediately. Instead, the data sync will be executed only after the specified delay duration.
+设置数据库端端同步允许的默认延时，使用Promise异步回调。
+
+> **说明：**
+> 
+> 设置默认延时后，调用
+> [sync](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)接口不会立即触发
+> 端端同步，而是等待指定的延时时间后再执行。
 
 **Since:** 9
 
@@ -2975,21 +2985,21 @@ Sets the default delay for cross-device data sync. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| defaultAllowedDelayMs | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Delay time to set, in ms. The value can be **0** or ranges from 100 to 86400000. |
+| defaultAllowedDelayMs | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示一个延时时间，单位为毫秒（ms），取值范围为0或[100, 86400000]。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2999,11 +3009,11 @@ try {
   kvStore.setSyncParam(defaultAllowedDelayMs).then(() => {
     console.info('Succeeded in setting syncParam');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to set syncParam.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to set syncParam. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -3013,7 +3023,7 @@ try {
 setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void
 ```
 
-Sets the data sync range. This API uses an asynchronous callback to return the result.
+设置同步范围标签，使用callback异步回调。通过设置本地设备和远程设备的同步标签，决定哪些设备间可以进行数据同步。只有当本地设备的标签与远程设备的标签存在交集时，两端才允许同步数据。
 
 **Since:** 9
 
@@ -3029,17 +3039,17 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localLabels | string[] | Yes | Sync labels set for the local device. |
-| remoteSupportLabels | string[] | Yes | Sync labels set for remote devices. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| localLabels | string[] | Yes | 表示本地设备的同步标签，用于标识本设备可参与同步的范围。 |
+| remoteSupportLabels | string[] | Yes | 表示期望同步数据的对端设备的同步标签，用于标识允许同步的对端设备范围。当本端的remoteSupportLabels与对端的 localLabels存在交集时，设备间才允许数据同步。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。设置成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3048,15 +3058,15 @@ try {
   const localLabels = ['A', 'B'];
   const remoteSupportLabels = ['C', 'D'];
   kvStore.setSyncRange(localLabels, remoteSupportLabels, (err: BusinessError) => {
-    if (err != undefined) {
-      console.error(`Failed to set syncRange.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to set syncRange. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in setting syncRange');
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -3066,7 +3076,7 @@ try {
 setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>
 ```
 
-Sets the data sync range. This API uses a promise to return the result.
+设置同步范围标签，使用Promise异步回调。通过设置本地设备和远程设备的同步标签，决定哪些设备间可以进行数据同步。只有当本地设备的标签与远程设备的标签存在交集时，两端才允许同步数据。
 
 **Since:** 9
 
@@ -3082,22 +3092,22 @@ Sets the data sync range. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localLabels | string[] | Yes | Sync labels set for the local device. |
-| remoteSupportLabels | string[] | Yes | Sync labels set for remote devices. |
+| localLabels | string[] | Yes | 表示本地设备的同步标签，用于标识本设备可参与同步的范围。 |
+| remoteSupportLabels | string[] | Yes | 表示期望同步数据的对端设备的同步标签，用于标识允许同步的对端设备范围。当本端的remoteSupportLabels与对端的 localLabels存在交集时，设备间才允许数据同步。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3108,11 +3118,11 @@ try {
   kvStore.setSyncRange(localLabels, remoteSupportLabels).then(() => {
     console.info('Succeeded in setting syncRange');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to set syncRange.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to set syncRange. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -3122,7 +3132,9 @@ try {
 startTransaction(callback: AsyncCallback<void>): void
 ```
 
-Starts the transaction in this single KV store. This API uses an asynchronous callback to return the result.
+启动SingleKVStore数据库中的事务，使用callback异步回调。启动事务后，后续的数据库操作将纳入此事务范围，直到调用  
+[commit](arkts-arkdata-distributedkvstore-singlekvstore-i.md#commit)提交或  
+[rollback](arkts-arkdata-distributedkvstore-singlekvstore-i.md#rollback)回滚才会结束事务。
 
 **Since:** 9
 
@@ -3138,16 +3150,16 @@ Starts the transaction in this single KV store. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。启动SingleKVStore数据库中的事务成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 15100005 | Database or result set already closed. |
+| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3174,8 +3186,8 @@ try {
     count++;
   });
   kvStore.startTransaction(async (err: BusinessError) => {
-    if (err != undefined) {
-      console.error(`Failed to start Transaction.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to start Transaction. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in starting Transaction');
@@ -3183,17 +3195,17 @@ try {
     console.info(`entries: ${entries}`);
     if (kvStore != null) {
       kvStore.putBatch(entries, async (err: BusinessError) => {
-        if (err != undefined) {
-          console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
           return;
         }
         console.info('Succeeded in putting Batch');
       });
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to start Transaction.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to start Transaction. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -3203,7 +3215,9 @@ try {
 startTransaction(): Promise<void>
 ```
 
-Starts the transaction in this single KV store. This API uses a promise to return the result.
+启动SingleKVStore数据库中的事务，使用Promise异步回调。启动事务后，后续的数据库操作将纳入此事务范围，直到调用  
+[commit](arkts-arkdata-distributedkvstore-singlekvstore-i.md#commit)提交或  
+[rollback](arkts-arkdata-distributedkvstore-singlekvstore-i.md#rollback)回滚才会结束事务。
 
 **Since:** 9
 
@@ -3219,34 +3233,32 @@ Starts the transaction in this single KV store. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 10 and later |
+| 15100005 | Database or result set already closed. |
+| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let count = 0;
   kvStore.on('dataChange', distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_ALL, (data: distributedKVStore.ChangeNotification) => {
     console.info(`startTransaction 0 ${data}`);
-    count++;
   });
   kvStore.startTransaction().then(async () => {
     console.info('Succeeded in starting Transaction');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to start Transaction.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to start Transaction. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to start Transaction.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to start Transaction. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -3262,15 +3274,15 @@ ArkTS-Sta:
 sync(deviceIds: string[], mode: SyncMode, delayMs?: int): void
 ```
 
-Starts cross-device data sync manually. For details about the sync modes of KV stores, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    **deviceIds** is **networkId** in  
-    [DeviceBasicInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, which can be  
-    obtained by  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    .
+在手动同步方式下，触发数据库端端同步。同步结果可通过订阅  
+[on('syncComplete')](distributedKVStore.SingleKVStore.on(event: 'syncComplete', syncCallback: Callback&lt;Array<[string, number]>&gt;&lt;[string, number]&gt;>))事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
+
+> **说明：**
+> 
+> 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId, 通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 
 **Since:** 9
 
@@ -3288,19 +3300,19 @@ Starts cross-device data sync manually. For details about the sync modes of KV s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to be synchronized. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Sync mode. |
-| delayMs | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will be executed **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in [setSyncParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is used. |
+| deviceIds | string[] | Yes | 同一组网环境下，需要同步的设备的networkId列表。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 同步模式。 |
+| delayMs | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。设置delayMs后，调用sync接口时延时时间为delayMs。未设置时以 [setSyncParam](arkts-arkdata-distributedkvstore-singlekvstore-i.md#setsyncparam) 设置的时长为准。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100004 | Not found. |
+| 15100003 | Database corrupted. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -3330,8 +3342,8 @@ export default class EntryAbility extends UIAbility {
           });
           if (kvStore != null) {
             kvStore.put(KEY_TEST_SYNC_ELEMENT + 'testSync101', VALUE_TEST_SYNC_ELEMENT, (err: BusinessError) => {
-              if (err != undefined) {
-                console.error(`Failed to sync.code is ${err.code},message is ${err.message}`);
+              if (err) {
+                console.error(`Failed to sync. Code: ${err.code}, message: ${err.message}`);
                 return;
               }
               console.info('Succeeded in putting data');
@@ -3342,14 +3354,14 @@ export default class EntryAbility extends UIAbility {
             });
           }
         }
-      } catch (e) {
-        let error = e as BusinessError;
-        console.error(`Failed to sync.code is ${error.code},message is ${error.message}`);
+      } catch (err) {
+        let error = err as BusinessError;
+        console.error(`Failed to sync. Code: ${error.code}, message: ${error.message}`);
       }
 
     } catch (err) {
       let error = err as BusinessError;
-      console.error("createDeviceManager errCode:" + error.code + ",errMessage:" + error.message);
+      console.error(`Failed to create device manager. Code: ${error.code}, message: ${error.message}`);
     }
   }
 }
@@ -3367,14 +3379,15 @@ ArkTS-Sta:
 sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void
 ```
 
-Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-    **NOTE**  
-    
-    **deviceIds** is **networkId** in  
-    [DeviceBasicInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, which can be  
-    obtained by  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    .
+在手动同步方式下，触发数据库端端同步，支持按查询条件过滤同步数据。同步结果可通过订阅  
+[on('syncComplete')](distributedKVStore.SingleKVStore.on(event: 'syncComplete', syncCallback: Callback&lt;Array<[string, number]>&gt;&lt;[string, number]&gt;>))事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
+
+> **说明：**
+> 
+> 其中deviceIds为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId, 通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
 
 **Since:** 9
 
@@ -3392,20 +3405,20 @@ Starts cross-device data sync manually. This API returns the result synchronousl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to be synchronized. |
-| query | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Query** object to match. |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Sync mode. |
-| delayMs | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will be executed **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in [setSyncParam]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is used. |
+| deviceIds | string[] | Yes | 同一组网环境下，需要同步的设备的networkId列表。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示数据库的查询谓词条件。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 同步模式。 |
+| delayMs | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。设置delayMs后，调用sync接口时延时时间为delayMs。未设置时以 [setSyncParam](arkts-arkdata-distributedkvstore-singlekvstore-i.md#setsyncparam) 设置的时长为准。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| 15100004 | Not found. |
+| 15100003 | Database corrupted. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -3434,14 +3447,14 @@ export default class EntryAbility extends UIAbility {
           });
           if (kvStore != null) {
             kvStore.put(KEY_TEST_SYNC_ELEMENT + 'testSync101', VALUE_TEST_SYNC_ELEMENT, (err: BusinessError) => {
-              if (err != undefined) {
-                console.error(`Failed to sync.code is ${err.code},message is ${err.message}`);
+              if (err) {
+                console.error(`Failed to sync. Code: ${err.code}, message: ${err.message}`);
                 return;
               }
               console.info('Succeeded in putting data');
               const mode = distributedKVStore.SyncMode.PULL_ONLY;
               const query = new distributedKVStore.Query();
-              query.prefixKey("batch_test");
+              query.prefixKey('batch_test');
               query.deviceId(devManager.getLocalDeviceNetworkId());
               if (kvStore != null) {
                 kvStore.sync(deviceIds, query, mode, 1000);
@@ -3449,14 +3462,14 @@ export default class EntryAbility extends UIAbility {
             });
           }
         }
-      } catch (e) {
-        let error = e as BusinessError;
-        console.error(`Failed to sync.code is ${error.code},message is ${error.message}`);
+      } catch (err) {
+        let error = err as BusinessError;
+        console.error(`Failed to sync. Code: ${error.code}, message: ${error.message}`);
       }
 
     } catch (err) {
       let error = err as BusinessError;
-      console.error("createDeviceManager errCode:" + error.code + ",errMessage:" + error.message);
+      console.error(`Failed to create device manager. Code: ${error.code}, message: ${error.message}`);
     }
   }
 }

@@ -1,11 +1,11 @@
 # LaunchMode
 
-    **NOTE**  
-    
-    This API has been supported since API version 7 and deprecated since API version 9. You are advised to use  
-    [bundleManager.LaunchType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md)替代。
 
-Enumerates the ability launch modes.
+Ability组件的启动模式。
 
 **Since:** 7
 
@@ -25,7 +25,7 @@ Enumerates the ability launch modes.
 SINGLETON = 0
 ```
 
-The ability has only one instance.
+Ability只有一个实例。
 
 **Since:** 7
 
@@ -45,7 +45,7 @@ The ability has only one instance.
 STANDARD = 1
 ```
 
-The ability can have multiple instances.
+Ability有多个实例。
 
 **Since:** 7
 

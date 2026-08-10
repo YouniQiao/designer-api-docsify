@@ -1,6 +1,6 @@
 # BatteryStatus
 
-Enumerates the battery status that triggers the deferred task callback.
+触发延迟任务回调的电池状态。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the battery status that triggers the deferred task callback.
 BATTERY_STATUS_LOW = 0
 ```
 
-A low battery alert is displayed.
+表示这个触发条件是低电告警。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ A low battery alert is displayed.
 BATTERY_STATUS_OKAY = 1
 ```
 
-The battery level is restored from low to normal.
+表示这个触发条件是从低电恢复到正常电量。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ The battery level is restored from low to normal.
 BATTERY_STATUS_LOW_OR_OKAY = 2
 ```
 
-The battery level is restored from low to normal, or a low battery alert is displayed.
+表示这个触发条件是从低电恢复到正常电量或者低电告警。
 
 **Since:** 9
 

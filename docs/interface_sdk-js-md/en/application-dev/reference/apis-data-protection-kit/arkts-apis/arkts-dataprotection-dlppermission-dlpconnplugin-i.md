@@ -1,11 +1,11 @@
 # DlpConnPlugin
 
-Registers the callback capability with the system ability (SA). This API is used in the **registerPlugin** API.
-    **NOTE**  
-    
-    [registerPlugin]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ requires identical parameters to this API.  
-    [connectServer]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is called by the SA and the parameters are  
-    returned through the callback.
+被用于registerPlugin接口中，将回调能力注册到SA（System Ability）中。
+
+> **说明：**
+> 
+> [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin)接口的参数需要继承该接口，
+> [connectServer](arkts-dataprotection-dlppermission-dlpconnplugin-i.md#connectserver)由SA（System Ability）侧调用，通过callback进行回传参数。
 
 **Since:** 21
 
@@ -15,18 +15,25 @@ Registers the callback capability with the system ability (SA). This API is used
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## connectServer
 
 ```TypeScript
 connectServer(requestId: string, requestData: string, callback: Callback<string>): void
 ```
 
-This API is called by the SA. After the request of connecting to the cloud server is processed, the result is returned the SA using a callback.
+该函数提供给SA（System Ability）侧调用，处理完连接云端服务的请求后，通过callback将结果返回给SA（System Ability）。
 
-This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server.
-    **NOTE**  
-    
-    **connectServer** indicates a call from the system capability side to the frontend.
+该接口可用于企业账号认证、云端权限验证等场景，实现SA与云服务器的通信能力，完成权限校验或账号验证流程。
+
+> **说明：**
+> 
+> connectServer接口代表系统能力侧向前端通信的一次调用。
 
 **Since:** 21
 
@@ -44,15 +51,35 @@ This API can be used in enterprise account authentication and cloud permission v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | string | Yes | ID of the request transferred by the SA. No value range restriction is specified. |
-| requestData | string | Yes | Data transferred by the SA. No value range restriction is specified. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | API transferred by the SA, which is used for callback. No value range restriction is specified. |
+| requestId | string | Yes | SA（System Ability）侧传递的本次请求的标识。无范围限制。 |
+| requestData | string | Yes | SA（System Ability）侧传递的数据。无范围限制。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | SA（System Ability）侧传递的接口，用于回调。无范围限制。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 19100011 | The system ability works abnormally. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { Callback } from '@kit.BasicServicesKit';
+
+export default class DataCapsulePlugin implements dlpPermission.DlpConnPlugin {
+  constructor() {
+  }
+
+  connectServer(requestId: string, requestData: string, callback: Callback<string>): void {
+    let callbackJson = JSON.stringify({
+      'requestId': requestId,
+    }); // Construct callback JSON data.
+    callback(callbackJson);  // Use a callback to return the result.
+  }
+}
+
+let plugin: dlpPermission.DlpConnPlugin = new DataCapsulePlugin();
+```
 

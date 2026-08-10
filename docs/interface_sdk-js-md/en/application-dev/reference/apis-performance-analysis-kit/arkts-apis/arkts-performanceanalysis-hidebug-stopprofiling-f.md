@@ -1,13 +1,18 @@
 # stopProfiling
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## stopProfiling
 
 ```TypeScript
 function stopProfiling(): void
 ```
 
-Stops the VM profiling method. **stopProfiling()** and **startProfiling(filename: string)** are called in pairs.  
-**startProfiling(filename: string)** always occurs before **stopProfiling()**. You are advised not to call either of these methods repeatedly. Otherwise, an exception may occur.
+ֹͣ�����Profiling�������٣�`stopProfiling()`�����ĵ�����Ҫ��`startProfiling(filename: string)`�����ĵ���һһ��Ӧ���ȿ�����رգ�������ظ��������ظ��رյĵ��÷�ʽ�������ӿڵ����쳣��
 
 **Since:** 8
 
@@ -21,7 +26,7 @@ Stops the VM profiling method. **stopProfiling()** and **startProfiling(filename
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

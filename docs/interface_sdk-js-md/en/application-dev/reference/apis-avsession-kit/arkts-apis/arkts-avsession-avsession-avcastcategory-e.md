@@ -1,6 +1,6 @@
 # AVCastCategory
 
-cast category indicating different playback scenes
+投播的类别枚举。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ cast category indicating different playback scenes
 CATEGORY_LOCAL = 0
 ```
 
-The default cast type "local", media can be routed on the same device,including internal speakers or audio jack on the device itself, A2DP devices.
+本地播放，默认播放设备，声音从本机或者连接的蓝牙耳机设备出声。
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ The default cast type "local", media can be routed on the same device,including 
 CATEGORY_REMOTE = 1
 ```
 
-The remote category indicating the media is presenting on a remote device,the application needs to get an AVCastController to control remote playback.
+远端播放，远端播放设备，声音从其他设备发出声音或者画面。
 
 **Since:** 10
 

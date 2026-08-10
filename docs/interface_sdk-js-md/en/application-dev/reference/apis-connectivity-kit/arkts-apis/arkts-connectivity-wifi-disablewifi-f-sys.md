@@ -1,5 +1,11 @@
 # disableWifi (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## disableWifi
 
 ```TypeScript
@@ -30,7 +36,7 @@ Disables Wi-Fi.
 | --- | --- |
 | boolean | Returns { |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wifi from '@ohos.wifi';

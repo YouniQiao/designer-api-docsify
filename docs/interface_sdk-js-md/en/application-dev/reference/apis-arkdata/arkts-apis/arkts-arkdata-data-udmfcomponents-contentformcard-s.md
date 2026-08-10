@@ -1,6 +1,6 @@
 # ContentFormCard
 
-Defines a content form card.
+内容卡片控件，用于在应用内展示标题、描述、内容图片、应用信息等。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Defines a content form card.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { ContentFormCard, FormType } from 'kits/@kit.ArkData';
+```
+
 ## build
 
 ```TypeScript
 build(): void
 ```
 
-The method to build component.
+构建组件的方法。
 
 **Since:** 23
 
@@ -38,7 +44,7 @@ The method to build component.
 contentFormData: uniformDataStruct.ContentForm
 ```
 
-Data of the form card.
+内容卡片数据。
 
 **Type:** uniformDataStruct.ContentForm
 
@@ -58,7 +64,7 @@ Data of the form card.
 formHeight?: double
 ```
 
-Height of the content form card. The unit of measurement is vp.
+卡片高度，当contentFormData中的title为空字符串时，卡片高度为传入的值，否则其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。
 
 **Type:** double
 
@@ -78,9 +84,9 @@ Height of the content form card. The unit of measurement is vp.
 formType: FormType
 ```
 
-Type of the form card.
+内容卡片类型，影响内容卡片的大小。
 
-**Type:** FormType
+**Type:** [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
 
 **Since:** 23
 
@@ -98,7 +104,7 @@ Type of the form card.
 formWidth?: double
 ```
 
-Width of the content form card. The unit of measurement is vp.
+卡片宽度，其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。
 
 **Type:** double
 
@@ -118,7 +124,7 @@ Width of the content form card. The unit of measurement is vp.
 handleOnClick?: Function
 ```
 
-Callback to be invoked when the form card is tapped.
+点击事件回调函数。
 
 **Type:** Function
 

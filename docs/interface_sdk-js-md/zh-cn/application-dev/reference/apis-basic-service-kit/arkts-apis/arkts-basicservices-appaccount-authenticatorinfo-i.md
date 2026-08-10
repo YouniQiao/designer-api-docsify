@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Account.AppAccount
 
+## 导入模块
+
+```TypeScript
+import { appAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## iconId
 
 ```TypeScript
@@ -18,7 +24,7 @@ iconId: long
 
 认证器的图标标识。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 8
 
@@ -36,7 +42,7 @@ labelId: long
 
 认证器的标签标识。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 8
 

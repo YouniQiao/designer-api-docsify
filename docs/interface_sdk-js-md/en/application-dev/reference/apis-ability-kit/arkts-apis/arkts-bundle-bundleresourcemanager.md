@@ -1,14 +1,13 @@
 # @ohos.bundle.bundleResourceManager
 
-The module provides APIs for obtaining resource information, including  
-[BundleResourceInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[LauncherAbilityResourceInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
-    **NOTE**  
-    
-    Starting from API version 12, this module supports query of icons and names of disabled applications and  
-    applications installed by all users.  
-    
-    The APIs provided by this module are system APIs.
+本模块提供应用资源数据查询能力，支持[BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md)和  
+[LauncherAbilityResourceInfo](arkts-ability-launcherabilityresourceinfo-i-sys.md)等信息的查询。
+
+> **说明：**
+> 
+> 本模块从API version 12 开始支持查询被禁用应用和设备上已安装应用(不区用户)的图标和名称资源。
+> 
+> 本模块为系统接口。
 
 **Since:** 11
 
@@ -20,6 +19,12 @@ The module provides APIs for obtaining resource information, including
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { bundleResourceManager } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 <!--Del-->
@@ -27,17 +32,17 @@ The module provides APIs for obtaining resource information, including
 
 | Name | Description |
 | --- | --- |
-| [getAllBundleResourceInfo](arkts-ability-bundleresourcemanager-getallbundleresourceinfo-f-sys.md#getallbundleresourceinfo) | Obtains the bundle resource information of all applications based on the given resource flags. This API uses an asynchronous callback to return the result. |
-| [getAllBundleResourceInfo](arkts-ability-bundleresourcemanager-getallbundleresourceinfo-f-sys.md#getallbundleresourceinfo-1) | Obtains the bundle resource information of all applications based on the given resource flags. This API uses a promise to return the result. |
-| [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getalllauncherabilityresourceinfo) | Obtains the resource information of the entry abilities of the current application based on the given resource flags. This API uses an asynchronous callback to return the result. |
-| [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getalllauncherabilityresourceinfo-1) | Obtains the resource information of the entry abilities of the current application based on the given resource flags. This API uses a promise to return the result. |
-| [getAllUninstalledBundleResourceInfo](arkts-ability-bundleresourcemanager-getalluninstalledbundleresourceinfo-f-sys.md#getalluninstalledbundleresourceinfo) | Obtains the bundle resource information of all uninstalled applications that have retained data based on the given resource flags. This API uses a promise to return the result. |
-| [getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo) | Obtains the resource information of an application based on the given bundle name and resource flags. This API returns the result synchronously. |
-| [getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo-1) | Obtains the resource information of an application based on the given bundle name, resource flags, and app index.This API returns the result synchronously. |
-| [getExtensionAbilityResourceInfo](arkts-ability-bundleresourcemanager-getextensionabilityresourceinfo-f-sys.md#getextensionabilityresourceinfo) | Obtains the ExtensionAbility resource information of an application based on the bundle name, ExtensionAbility type, resource flags, and clone ID. This API returns the result synchronously. |
-| [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo) | Obtains the bundle information of the entry ability of an application based on the given bundle name and resource flags. This API returns the result synchronously. |
-| [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo-1) | Obtains the launcher ability resource information of an application based on the given bundle name, resource flags,and app index. This API returns the result synchronously. |
-| [getLauncherAbilityResourceInfoList](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfolist-f-sys.md#getlauncherabilityresourceinfolist) | Obtains the launcher ability resource information of each application corresponding to the **BundleOptions**  element in **optionsList**. This API uses a promise to return the result. |
+| [getAllBundleResourceInfo](arkts-ability-bundleresourcemanager-getallbundleresourceinfo-f-sys.md#getallbundleresourceinfo) | 根据给定的resourceFlags获取所有应用的BundleResourceInfo。使用callback异步回调。 |
+| [getAllBundleResourceInfo](arkts-ability-bundleresourcemanager-getallbundleresourceinfo-f-sys.md#getallbundleresourceinfo-1) | 根据给定的resourceFlags获取所有应用的BundleResourceInfo。使用Promise异步回调。 |
+| [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getalllauncherabilityresourceinfo) | 根据给定的resourceFlags获取当前所有应用的LauncherAbilityResourceInfo。使用callback异步回调。 |
+| [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getalllauncherabilityresourceinfo-1) | 根据给定的resourceFlags获取当前所有应用的LauncherAbilityResourceInfo。使用Promise异步回调。 |
+| [getAllUninstalledBundleResourceInfo](arkts-ability-bundleresourcemanager-getalluninstalledbundleresourceinfo-f-sys.md#getalluninstalledbundleresourceinfo) | 根据给定的resourceFlags获取所有已卸载且保留数据的应用的BundleResourceInfo。使用Promise异步回调。 |
+| [getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo) | 以同步方法根据给定的bundleName和resourceFlags获取当前应用的BundleResourceInfo。 |
+| [getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo-1) | 以同步方法根据给定的bundleName、resourceFlags和appIndex获取当前应用或分身应用的BundleResourceInfo。 |
+| [getExtensionAbilityResourceInfo](arkts-ability-bundleresourcemanager-getextensionabilityresourceinfo-f-sys.md#getextensionabilityresourceinfo) | 根据应用包名、扩展组件类型、资源信息标志、应用分身ID获取应用的扩展组件资源。使用同步方式返回。 |
+| [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo) | 以同步方法根据给定的bundleName和resourceFlags获取当前应用的LauncherAbilityResourceInfo。 |
+| [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo-1) | 以同步方法根据给定的bundleName、resourceFlags和appIndex获取当前应用或分身应用的LauncherAbilityResourceInfo。 |
+| [getLauncherAbilityResourceInfoList](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfolist-f-sys.md#getlauncherabilityresourceinfolist) | 根据传入的optionsList获取列表中每个BundleOptions元素对应的应用的LauncherAbilityResourceInfo。使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -45,7 +50,7 @@ The module provides APIs for obtaining resource information, including
 
 | Name | Description |
 | --- | --- |
-| [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md) | Enumerates the resource information flags, which indicate the type of resource information to obtain. |
+| [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md) | 资源信息标志，指示需要获取的资源信息的内容。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -53,7 +58,7 @@ The module provides APIs for obtaining resource information, including
 
 | Name | Description |
 | --- | --- |
-| [BundleResourceInfo](arkts-ability-bundleresourcemanager-bundleresourceinfo-t-sys.md) | Defines the icon and name of an application. |
-| [LauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-launcherabilityresourceinfo-t-sys.md) | Defines the entry icon and name of an application.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| [BundleResourceInfo](arkts-ability-bundleresourcemanager-bundleresourceinfo-t-sys.md) | 应用配置的图标和名称信息。 |
+| [LauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-launcherabilityresourceinfo-t-sys.md) | 应用配置的入口图标和名称信息。 |
 <!--DelEnd-->
 

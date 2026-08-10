@@ -1,6 +1,6 @@
 # ChannelBlendMode
 
-Enumerates the audio channel blending modes.
+表示声道混合模式类型的枚举。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enumerates the audio channel blending modes.
 MODE_DEFAULT = 0
 ```
 
-No channel process.
+无声道混合。
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ No channel process.
 MODE_BLEND_LR = 1
 ```
 
-Blends the left and right channels together.
+混合左右声道。
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Blends the left and right channels together.
 MODE_ALL_LEFT = 2
 ```
 
-Copies the left channel and applies it to both the left and right channels.
+从左声道覆盖到右声道混合。
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ Copies the left channel and applies it to both the left and right channels.
 MODE_ALL_RIGHT = 3
 ```
 
-Copies the right channel and applies it to both the left and right channels.
+从右声道覆盖到左声道混合。
 
 **Since:** 11
 

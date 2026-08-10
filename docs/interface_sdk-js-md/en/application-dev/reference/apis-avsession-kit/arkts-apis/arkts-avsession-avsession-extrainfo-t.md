@@ -4,7 +4,7 @@
 type ExtraInfo = {[key: string]: Object; }
 ```
 
-The extra info object.
+媒体提供方设置的自定义媒体数据包对象。
 
 **Since:** 18
 

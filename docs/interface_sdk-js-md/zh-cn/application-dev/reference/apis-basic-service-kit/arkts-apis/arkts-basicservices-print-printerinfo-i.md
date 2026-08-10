@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## capability
 
 ```TypeScript
@@ -18,7 +24,7 @@ capability?: PrinterCapability
 
 表示打印机功能。
 
-**类型：** PrinterCapability
+**类型：** [PrinterCapability](arkts-basicservices-print-printercapability-i.md)
 
 **起始版本：** 24
 
@@ -72,7 +78,7 @@ printerIcon?: int
 
 表示打印机图标的资源ID。默认值为-1。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 24
 
@@ -126,7 +132,7 @@ printerState: PrinterState
 
 表示当前打印机状态。
 
-**类型：** PrinterState
+**类型：** [PrinterState](arkts-basicservices-print-printerstate-e.md)
 
 **起始版本：** 24
 

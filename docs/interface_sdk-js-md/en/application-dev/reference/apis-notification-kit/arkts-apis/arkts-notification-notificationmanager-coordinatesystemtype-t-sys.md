@@ -4,7 +4,7 @@
 export type CoordinateSystemType = _CoordinateSystemType
 ```
 
-Enumerates the coordinate systems of a geofence.
+表示地理围栏坐标系类型的枚举。
 
 **Since:** 23
 

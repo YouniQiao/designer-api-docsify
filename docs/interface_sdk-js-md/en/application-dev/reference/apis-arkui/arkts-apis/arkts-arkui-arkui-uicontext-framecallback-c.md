@@ -10,6 +10,12 @@ Class FrameCallback
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## onFrame
 
 ```TypeScript
@@ -40,7 +46,7 @@ Call when a new display frame is being rendered.
 onIdle(timeLeftInNano: long): void
 ```
 
-Called at the end of the next idle frame. If there is no next frame, will request one automatically.
+在下一帧空闲时回调。如果没有下一帧，会自动请求一帧。
 
 **Since:** 23
 

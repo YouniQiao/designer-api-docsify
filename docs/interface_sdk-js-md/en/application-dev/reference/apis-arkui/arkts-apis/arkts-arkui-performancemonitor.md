@@ -1,22 +1,25 @@
 # @ohos.arkui.performanceMonitor
 
-Provides interfaces to monitor a scene for performance measurement.
+性能监测
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_These interfaces are used to monitor the begin, end, and value changes of finger processes that last for at least3 ms.
-
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Example:import "@ohos.arkui.performanceMonitor.d.ts"To start scene monitoring that is expected to complete within 5 ms:\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_{@code performanceMonitor.begin(string, ActionType, string);//scene finished performanceMonitor.end(string);}\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_
-
-\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_Each {@code begin} matches one {@code end}, and they must have the same scene id.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace performanceMonitor--><!--Device-unnamed-declare namespace performanceMonitor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { performanceMonitor } from 'kits/@kit.ArkUI';
+```
 
 ## Summary
 
@@ -25,9 +28,9 @@ Provides interfaces to monitor a scene for performance measurement.
 
 | Name | Description |
 | --- | --- |
-| [begin](arkts-arkui-performancemonitor-begin-f-sys.md#begin) | Begin monitoring an application scene. |
-| [end](arkts-arkui-performancemonitor-end-f-sys.md#end) | End monitoring an application scene. |
-| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md#recordinputeventtime) | recordInputEventTime monitoring an application scene. |
+| [begin](arkts-arkui-performancemonitor-begin-f-sys.md#begin) | 用于标记用户场景开始，用户场景开始时调用此接口。 |
+| [end](arkts-arkui-performancemonitor-end-f-sys.md#end) | 用于标记用户场景结束，用户场景结束时调用此接口。 |
+| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md#recordinputeventtime) | 记录动效场景开始前，用户输入触发事件类型与时间。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -35,7 +38,7 @@ Provides interfaces to monitor a scene for performance measurement.
 
 | Name | Description |
 | --- | --- |
-| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | Enumerates the input event type. |
-| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | Enumerates the input source type. |
+| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | 用户场景（通常为具有动效的场景）触发模式枚举。 |
+| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | 用户场景触发源类型枚举。 |
 <!--DelEnd-->
 

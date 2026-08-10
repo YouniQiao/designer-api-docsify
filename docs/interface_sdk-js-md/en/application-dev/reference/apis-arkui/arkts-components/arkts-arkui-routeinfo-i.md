@@ -1,6 +1,6 @@
 # RouteInfo
 
-Route information.
+路由信息。
 
 **Since:** 10
 
@@ -20,7 +20,7 @@ Route information.
 name: string
 ```
 
-Name of the navigation destination page to be redirected to.
+点击NavRouter跳转到的NavDestination页面的名称。
 
 **Type:** string
 
@@ -46,7 +46,7 @@ Name of the navigation destination page to be redirected to.
 param?: unknown
 ```
 
-Parameter transferred during redirection.
+点击NavRouter跳转到NavDestination页面时，传递的参数。
 
 **Type:** unknown
 

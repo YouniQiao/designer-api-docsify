@@ -1,12 +1,22 @@
 # init
 
+## Modules to Import
+
+```TypeScript
+import { curves } from 'kits/@kit.ArkUI';
+```
+
 ## init
 
 ```TypeScript
 function init(curve?: Curve): string
 ```
 
-Implements initialization for the interpolation curve, which is used to create an interpolation curve based on the input parameter.
+插值曲线的初始化函数，可以根据入参创建一个插值曲线对象。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves.initCurve](arkts-arkui-curves-initcurve-f.md#initcurve)替代。
 
 **Since:** 7
 
@@ -14,7 +24,7 @@ Implements initialization for the interpolation curve, which is used to create a
 
 **Deprecated since:** 9
 
-**Substitutes:** [initCurve](arkts-arkui-curves-initcurve-f.md#initcurve)
+**Substitutes:** [curves.initCurve](arkts-arkui-curves-initcurve-f.md#initcurve)
 
 <!--Device-curves-function init(curve?: Curve): string--><!--Device-curves-function init(curve?: Curve): string-End-->
 
@@ -24,11 +34,11 @@ Implements initialization for the interpolation curve, which is used to create a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Curve type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **Curve.Linear |
+| curve | [Curve](arkts-arkui-curve-e.md) | No | 曲线类型。&lt;br/&gt;默认值：Curve.Linear |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Interpolation curve object. |
+| string | 返回插值曲线对象。 |
 

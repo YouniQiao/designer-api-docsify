@@ -6,7 +6,7 @@
 function deleteProperty(target: object, propertyKey: PropertyKey): boolean
 ```
 
-Removes a property from an object, equivalent to \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_,except it won't throw if \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_ is non-configurable.
+Removes a property from an object, equivalent to `delete target[propertyKey]`,except it won't throw if `target[propertyKey]` is non-configurable.
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -17,7 +17,7 @@ Removes a property from an object, equivalent to \_\_\_INLINE\_CODE\_DESC\_USD\_
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes |  |
-| propertyKey | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| propertyKey | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |  |
 
 **Return value:**
 

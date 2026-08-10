@@ -12,6 +12,12 @@ The basic data structure of the smart rotate sensor event.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## logicalOrientation
 
 ```TypeScript
@@ -20,7 +26,7 @@ logicalOrientation?: LogicalOrientation
 
 The logical orientation adjusted by smart algorithms.
 
-**Type:** LogicalOrientation
+**Type:** [LogicalOrientation](arkts-multimodalawareness-motion-logicalorientation-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -42,7 +48,7 @@ physicalOrientation: PhysicalOrientation
 
 The physical orientation reported by the gravity sensor.
 
-**Type:** PhysicalOrientation
+**Type:** [PhysicalOrientation](arkts-multimodalawareness-motion-physicalorientation-e-sys.md)
 
 **Since:** 26.0.0
 

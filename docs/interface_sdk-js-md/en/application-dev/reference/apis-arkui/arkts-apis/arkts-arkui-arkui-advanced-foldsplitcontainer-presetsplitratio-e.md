@@ -1,12 +1,12 @@
 # PresetSplitRatio
 
-Preset split ratio.
+区域比例。
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare enum PresetSplitRatio : double--><!--Device-unnamed-export declare enum PresetSplitRatio : double-End-->
+<!--Device-unnamed-export declare enum PresetSplitRatio--><!--Device-unnamed-export declare enum PresetSplitRatio-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,7 +16,7 @@ Preset split ratio.
 LAYOUT_1V1 = 1.0
 ```
 
-1:1
+1:1比例。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ LAYOUT_1V1 = 1.0
 LAYOUT_2V3 = 0.6666666666666666
 ```
 
-2:3
+2:3比例。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ LAYOUT_2V3 = 0.6666666666666666
 LAYOUT_3V2 = 1.5
 ```
 
-3:2
+3:2比例。
 
 **Since:** 23
 

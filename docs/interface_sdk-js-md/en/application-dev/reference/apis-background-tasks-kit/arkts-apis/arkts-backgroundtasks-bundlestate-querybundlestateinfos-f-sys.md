@@ -1,5 +1,11 @@
 # queryBundleStateInfos (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## queryBundleStateInfos
 
 ```TypeScript
@@ -8,7 +14,7 @@ function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallba
 
 Queries usage information about each bundle within a specified period.
 
-This method queries usage information at the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ interval by default.
+This method queries usage information at the {@link #BY_OPTIMIZED} interval by default.
 
 **Since:** 7
 
@@ -28,14 +34,15 @@ This method queries usage information at the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | number | Yes | Indicates the start time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
-| end | number | Yes | Indicates the end time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BundleActiveInfoResponse&gt; | Yes | the callback of queryBundleStateInfos. the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ objects containing the usage information about each bundle. |
+| begin | number | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| end | number | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleActiveInfoResponse&gt; | Yes | the callback of queryBundleStateInfos. the {@link BundleActiveInfoResponse} objects containing the usage information about each bundle. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 
 bundleState.queryBundleStateInfos(0, 20000000000000, (err: BusinessError ,
   res: bundleState.BundleActiveInfoResponse ) => {
@@ -57,7 +64,7 @@ function queryBundleStateInfos(begin: number, end: number): Promise<BundleActive
 
 Queries usage information about each bundle within a specified period.
 
-This method queries usage information at the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ interval by default.
+This method queries usage information at the {@link #BY_OPTIMIZED} interval by default.
 
 **Since:** 7
 
@@ -77,8 +84,8 @@ This method queries usage information at the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | number | Yes | Indicates the start time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
-| end | number | Yes | Indicates the end time of the query period, in milliseconds. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Unit:ms |
+| begin | number | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| end | number | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 
 **Return value:**
 
@@ -86,10 +93,11 @@ This method queries usage information at the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 | --- | --- |
 | Promise&lt;BundleActiveInfoResponse&gt; | the promise returned by queryBundleStatsInfos. the { |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 
 bundleState.queryBundleStateInfos(0, 20000000000000).then((res: bundleState.BundleActiveInfoResponse) => {
   console.info('BUNDLE_ACTIVE queryBundleStateInfos promise success.');

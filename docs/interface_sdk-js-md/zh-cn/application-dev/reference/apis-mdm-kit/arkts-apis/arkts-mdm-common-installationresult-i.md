@@ -3,7 +3,7 @@
 应用安装结果。
 
 该对象目前在  
-[EnterpriseAdminExtensionAbility.onMarketAppInstallResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_作为回调入参使用。
+[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult)作为回调入参使用。
 
 **起始版本：** 22
 
@@ -12,6 +12,12 @@
 <!--Device-common-export interface InstallationResult--><!--Device-common-export interface InstallationResult-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { common } from 'kits/@kit.MDMKit';
+```
 
 ## message
 
@@ -41,7 +47,7 @@ result: Result
 
 应用安装结果码。SUCCESS表示应用安装成功，应用可正常使用；FAIL表示应用安装失败，应用不可用。
 
-**类型：** Result
+**类型：** [Result](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-result-i.md)
 
 **起始版本：** 22
 

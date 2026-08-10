@@ -1,5 +1,11 @@
 # cancelPrintJob（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## cancelPrintJob
 
 ```TypeScript
@@ -25,30 +31,30 @@ function cancelPrintJob(jobId: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | 打印任务ID。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 异步取消已发送到打印机的打印任务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步取消已发送到打印机的打印任务之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let jobId : string = '121212';
-print.cancelPrintJob(jobId, (err: BusinessError) => {
-    if (err) {
-        console.error('cancelPrintJob failed, because : ' + JSON.stringify(err));
+print.cancelPrintJob(jobId, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to cancel print job. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('cancelPrintJob success');
     }
-})
+});
 ```
 
 
@@ -88,21 +94,21 @@ function cancelPrintJob(jobId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let jobId : string = '121212';
 print.cancelPrintJob(jobId).then(() => {
     console.info('cancelPrintJob success');
 }).catch((error: BusinessError) => {
-    console.error('cancelPrintJob failed, because : ' + JSON.stringify(error));
-})
+    console.error(`Failed to cancel print job. Code: ${error.code}, message: ${error.message}`);
+});
 ```
 

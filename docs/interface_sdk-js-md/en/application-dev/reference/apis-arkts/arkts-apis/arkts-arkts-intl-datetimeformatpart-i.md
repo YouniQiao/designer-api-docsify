@@ -18,7 +18,7 @@ type: DateTimeFormatPartTypes
 
 Part type.
 
-**Type:** DateTimeFormatPartTypes
+**Type:** [DateTimeFormatPartTypes](arkts-arkts-intl-datetimeformatparttypes-t.md)
 
 **Since:** 26.0.0
 

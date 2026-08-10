@@ -6,7 +6,7 @@
 function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 ```
 
-Obtains the ability running information. This API uses a promise to return the result.
+获取Ability运行相关信息。使用Promise异步回调。
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ Obtains the ability running information. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityRunningInfo&gt;&gt; | Promise used to return the ability running information. |
+| Promise&lt;Array&lt;[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)&gt;&gt; | Promise对象，返回Ability运行相关信息。 |
 
 
 ## getAbilityRunningInfos
@@ -37,7 +37,7 @@ Obtains the ability running information. This API uses a promise to return the r
 function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo>>): void
 ```
 
-Obtains the ability running information. This API uses an asynchronous callback to return the result.
+获取Ability运行相关信息。使用callback异步回调。
 
 **Since:** 8
 
@@ -59,5 +59,5 @@ Obtains the ability running information. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;AbilityRunningInfo&gt;&gt; | Yes | Callback used to return the ability running information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityRunningInfo](arkts-ability-abilityrunninginfo-i.md)&gt;&gt; | Yes | 回调函数，返回Ability运行相关信息。 |
 

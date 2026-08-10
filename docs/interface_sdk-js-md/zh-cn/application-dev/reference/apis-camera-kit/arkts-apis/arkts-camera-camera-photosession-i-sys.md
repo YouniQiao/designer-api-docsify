@@ -1,14 +1,14 @@
 # PhotoSession
 
-PhotoSession继承自[Session]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、[Flash]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_、  
-[AutoExposure]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_、[WhiteBalance]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_、[Focus]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_、  
-[Zoom]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_、[ColorManagement]\_\_\_JSDOC\_LINK\_DESC\_USD\_11\_\_\_、  
-[AutoDeviceSwitch]\_\_\_JSDOC\_LINK\_DESC\_USD\_12\_\_\_、[Macro]\_\_\_JSDOC\_LINK\_DESC\_USD\_13\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_3\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_4\_\_\_。
+PhotoSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkts-camera-camera-flash-i.md)、  
+[AutoExposure](arkts-camera-camera-autoexposure-i.md)、[WhiteBalance](arkts-camera-camera-whitebalance-i.md)、[Focus](arkts-camera-camera-focus-i.md)、  
+[Zoom](arkts-camera-camera-zoom-i.md)、[ColorManagement](arkts-camera-camera-colormanagement-i.md)、  
+[AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md)、[Macro](arkts-camera-camera-macro-i.md)、  
+[ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md)、  
+[ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md)、  
+[ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md)、  
+[OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md)、  
+[Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md)。
 
 普通拍照模式会话类，提供了对闪光灯、曝光、白平衡、对焦、变焦、色彩空间、微距、手动曝光、手动对焦、手动ISO、光学防抖及光圈的操作。
 
@@ -23,6 +23,12 @@ PhotoSession继承自[Session]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_、[Flash]\_\
 <!--Device-camera-interface PhotoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, ColorManagement,      AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS, Aperture--><!--Device-camera-interface PhotoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, ColorManagement,      AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS, Aperture-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getSessionConflictFunctions
 
@@ -52,7 +58,7 @@ Gets session conflict functions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 202 | Not System Application. |
 
 ## getSessionFunctions
 
@@ -76,7 +82,7 @@ Gets session functions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outputCapability | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | CameraOutputCapability to set. |
+| outputCapability | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i-sys.md) | 是 | CameraOutputCapability to set. |
 
 **返回值：**
 
@@ -88,8 +94,8 @@ Gets session functions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| 202 | Not System Application. |
 
 ## off('featureDetection')
 
@@ -114,16 +120,16 @@ Unsubscribe from camera feature detection status change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'featureDetection' | 是 | Event type. The value is fixed at **'featureDetection'**. The event can be listened for when a session is created. |
-| featureType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Scene feature type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SceneFeatureDetectionResult&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('featureDetection')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | 是 | Scene feature type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SceneFeatureDetectionResult&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('featureDetection')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 function unregisterFeatureDetectionStatus(photoSession: camera.PhotoSession, featureType: camera.SceneFeatureType): void {
@@ -154,7 +160,7 @@ Unsubscribes from effect suggestion event callback.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'effectSuggestionChange' | 是 | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EffectSuggestionType&gt; | 否 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EffectSuggestionType&gt; | 否 | Callback used to return the result. |
 
 ## off('lcdFlashStatus')
 
@@ -179,15 +185,15 @@ Unsubscribes from LCD flash status change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'lcdFlashStatus' | 是 | Event type. The value is fixed at **'lcdFlashStatus'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LcdFlashStatus&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lcdFlashStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;LcdFlashStatus&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lcdFlashStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 function unregisterLcdFlashStatus(photoSession: camera.PhotoSession): void {
@@ -217,7 +223,7 @@ Unsubscribes from effect suggestion event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EffectSuggestionType&gt; | 否 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EffectSuggestionType&gt; | 否 | Callback used to return the result. |
 
 ## offFeatureDetection
 
@@ -241,14 +247,14 @@ Unsubscribes from feature detection result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| featureType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Feature type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SceneFeatureDetectionResult&gt; | 否 | Callback used to get the detection result. |
+| featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | 是 | Feature type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SceneFeatureDetectionResult&gt; | 否 | Callback used to get the detection result. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 202 | Not System Application. |
 
 ## offLcdFlashStatus
 
@@ -272,13 +278,13 @@ Unsubscribes from lcd flash status.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LcdFlashStatus&gt; | 否 | Callback used to get the lcd flash status. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;LcdFlashStatus&gt; | 否 | Callback used to get the lcd flash status. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 202 | Not System Application. |
 
 ## on('featureDetection')
 
@@ -303,16 +309,16 @@ Subscribe to scene feature detection status change events. This API uses an asyn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'featureDetection' | 是 | Event type. The value is fixed at **'featureDetection'**. The event can be listened for when a photo session is created. |
-| featureType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Scene feature type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SceneFeatureDetectionResult&gt; | 是 | Callback used to return the status of the scene feature detection. |
+| featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | 是 | Scene feature type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SceneFeatureDetectionResult&gt; | 是 | Callback used to return the status of the scene feature detection. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -354,7 +360,7 @@ Subscribes to effect suggestion event callback.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'effectSuggestionChange' | 是 | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EffectSuggestionType&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EffectSuggestionType&gt; | 是 | Callback used to return the result. |
 
 ## on('lcdFlashStatus')
 
@@ -379,15 +385,15 @@ Subscribes to LCD flash status change events. This API uses an asynchronous call
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'lcdFlashStatus' | 是 | Event type. The value is fixed at **'lcdFlashStatus'**. The event can be listened for when a session is created. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LcdFlashStatus&gt; | 是 | Callback used to return the LCD flash status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;LcdFlashStatus&gt; | 是 | Callback used to return the LCD flash status change. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -428,7 +434,7 @@ Subscribes to effect suggestion event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;EffectSuggestionType&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EffectSuggestionType&gt; | 是 | Callback used to return the result. |
 
 ## onFeatureDetection
 
@@ -452,14 +458,14 @@ Subscribes to feature detection results.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| featureType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Feature type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SceneFeatureDetectionResult&gt; | 是 | Callback used to get the detection result. |
+| featureType | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | 是 | Feature type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SceneFeatureDetectionResult&gt; | 是 | Callback used to get the detection result. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 202 | Not System Application. |
 
 ## onLcdFlashStatus
 
@@ -483,11 +489,11 @@ Subscribes to lcd flash status.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LcdFlashStatus&gt; | 是 | Callback used to get the lcd flash status. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;LcdFlashStatus&gt; | 是 | Callback used to get the lcd flash status. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| 202 | Not System Application. |
 

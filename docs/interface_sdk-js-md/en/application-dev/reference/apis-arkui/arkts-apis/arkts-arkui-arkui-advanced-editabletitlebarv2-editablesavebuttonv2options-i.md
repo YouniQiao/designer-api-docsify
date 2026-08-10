@@ -1,6 +1,6 @@
 # EditableSaveButtonV2Options
 
-Indicates the options of the save button.
+保存按钮配置选项接口。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Indicates the options of the save button.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+```
+
 ## onAction
 
 ```TypeScript
 onAction?: OnActionCallback
 ```
 
-Callback function when click on the save button.
+点击保存按钮的回调函数。未设置时点击按钮无响应。
 
 **Since:** 26.0.0
 
@@ -34,7 +40,13 @@ Callback function when click on the save button.
 defaultFocus?: boolean
 ```
 
-Whether to get focus by default.
+是否默认获取焦点。
+
+true：获焦。
+
+false：不获焦。
+
+默认值：false。
 
 **Type:** boolean
 
@@ -56,7 +68,13 @@ Whether to get focus by default.
 isRequired?: boolean
 ```
 
-Whether to show the save button.
+是否显示保存按钮。
+
+true：显示保存按钮。
+
+false：不显示保存按钮。
+
+默认值：true。
 
 **Type:** boolean
 

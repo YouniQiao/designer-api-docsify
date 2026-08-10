@@ -1,12 +1,13 @@
 # sharedTransitionOptions
 
 共享元素转场动画参数。
-    **说明：**  
-    
-    type为SharedTransitionEffectType.Exchange时motionPath才会生效。  
-    
-    type为SharedTransitionEffectType.Exchange时，效果为对匹配的共享元素产生位置、大小的过渡（可通过配置组件的border观察），不支持内容的过渡效果。例如，Text组件在两个页面上使用不同的  
-    fontSize属性值，即绘制内容有大小差异，在sharedTransition动画结束后的最后一帧，Text的fontSize效果会突变为跳转目标页fontSize的效果。
+
+> **说明：**
+> 
+> type为SharedTransitionEffectType.Exchange时motionPath才会生效。
+> 
+> type为SharedTransitionEffectType.Exchange时，效果为对匹配的共享元素产生位置、大小的过渡（可通过配置组件的border观察），不支持内容的过渡效果。例如，Text组件在两个页面上使用不同的
+> fontSize属性值，即绘制内容有大小差异，在sharedTransition动画结束后的最后一帧，Text的fontSize效果会突变为跳转目标页fontSize的效果。
 
 **起始版本：** 7
 
@@ -27,11 +28,11 @@ curve?: Curve | string | ICurve
 推荐以Curve或ICurve形式指定。
 
 当类型为string时，为动画插值曲线，取值参考  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的curve参数。
+[AnimateParam](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#animateparam对象说明)的curve参数。
 
 默认值：Curve.Linear
 
-**类型：** Curve \| string \| ICurve
+**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
 
 **默认值：** Curve.Linear
 
@@ -55,7 +56,7 @@ delay?: number
 
 取值范围：[0, +∞)
 
-默认值：0
+默认值：0 
 
 单位：毫秒
 
@@ -81,7 +82,7 @@ duration?: number
 
 描述共享元素转场动效播放时长。
 
-默认值：1000
+默认值：1000 
 
 单位：毫秒
 
@@ -109,7 +110,7 @@ motionPath?: MotionPathOptions
 
 运动路径信息。
 
-**类型：** MotionPathOptions
+**类型：** [MotionPathOptions](../arkts-apis/arkts-arkui-common-motionpathoptions-i.md)
 
 **起始版本：** 7
 
@@ -131,7 +132,7 @@ type?: SharedTransitionEffectType
 
 默认值：SharedTransitionEffectType.Exchange
 
-**类型：** SharedTransitionEffectType
+**类型：** [SharedTransitionEffectType](../arkts-apis/arkts-arkui-sharedtransitioneffecttype-e.md)
 
 **默认值：** SharedTransitionEffectType.Exchange
 

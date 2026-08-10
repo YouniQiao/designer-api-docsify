@@ -38,7 +38,7 @@ info?: NativeEmbedInfo
 
 同层标签的详细信息。
 
-**类型：** NativeEmbedInfo
+**类型：** [NativeEmbedInfo](arkts-arkweb-nativeembedinfo-i.md)
 
 **起始版本：** 11
 
@@ -58,7 +58,7 @@ status?: NativeEmbedStatus
 
 同层标签生命周期状态。
 
-**类型：** NativeEmbedStatus
+**类型：** [NativeEmbedStatus](arkts-arkweb-nativeembedstatus-e.md)
 
 **起始版本：** 11
 

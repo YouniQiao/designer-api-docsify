@@ -1,6 +1,6 @@
 # CmsKeyAgreeRecipientDigestAlgorithm
 
-Enumerates the digest algorithms of the CMS KeyAgree type.
+CMS KeyAgree类型接收者摘要算法的枚举。
 
 **Since:** 22
 
@@ -16,7 +16,7 @@ Enumerates the digest algorithms of the CMS KeyAgree type.
 SHA256 = 0
 ```
 
-SHA-256.
+SHA256算法。
 
 **Since:** 22
 
@@ -34,7 +34,7 @@ SHA-256.
 SHA384 = 1
 ```
 
-SHA-384.
+SHA384算法。
 
 **Since:** 22
 
@@ -52,7 +52,7 @@ SHA-384.
 SHA512 = 2
 ```
 
-SHA-512.
+SHA512算法。
 
 **Since:** 22
 

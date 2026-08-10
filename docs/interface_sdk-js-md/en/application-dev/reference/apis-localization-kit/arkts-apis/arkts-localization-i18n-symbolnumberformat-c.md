@@ -1,8 +1,10 @@
 # SymbolNumberFormat
 
-Provide a Number formatting interface that supports custom symbols.This interface formats number values into strings with custom symbols,and can replace variable symbols in the formatted result with custom fixed symbols(e.g., replacing "null" to "NA").
+提供自定义数字符号的能力。继承自  
+[Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)，支持  
+[Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)的方法。
 
-**Inheritance/Implementation:** SymbolNumberFormat extends [Intl.NumberFormat](../../apis-arkts/arkts-apis/arkts-arkts-intl-numberformat-c.md)
+**Inheritance/Implementation:** SymbolNumberFormat extends [Intl.NumberFormat](../../apis-arkts/arkts-apis/arkts-arkts-intl-numberformat-c.md/arkts-arkts-intl-numberformat-c.md)
 
 **Since:** 26.0.0
 
@@ -12,13 +14,19 @@ Provide a Number formatting interface that supports custom symbols.This interfac
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
 public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)
 ```
 
-A constructor used to create a SymbolNumberFormat object.
+创建使用自定义符号的数字格式化对象。
 
 **Since:** 26.0.0
 
@@ -36,8 +44,8 @@ A constructor used to create a SymbolNumberFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the symbols used to replace. Such as zero, nan, positiveInfinity, etc. |
+| locale | Intl.Locale | No | 区域对象。默认值：系统区域对象。 |
+| options | [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | No | 自定义数字格式化符号的配置项。默认值：区域默认的符号。 |
 
 ## parse
 
@@ -45,7 +53,7 @@ A constructor used to create a SymbolNumberFormat object.
 public parse(text: string, lenientMode: boolean): double
 ```
 
-Parse a localized string to number object. For example, "123,456" will parse to 123456.
+解析本地化数字字符串，返回对应的数字。无法正确解析使用自定义符号的本地化数字字符串。
 
 **Since:** 26.0.0
 
@@ -63,20 +71,20 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Localized string to be parse. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Text to be parsed |
-| lenientMode | boolean | Yes | Indicates whether parsing allows any non-compliant localized strings. For example, "1,23,456" is a invalid thousand separator number string, it will parse failure when lenientMode is false, and will parse success with value 123456 when lenientMode is true.it's better set to false, ensure the data is not polluted. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Whether to use loose rules |
+| text | string | Yes | 待解析的本地化数字字符串。 |
+| lenientMode | boolean | Yes | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。 &lt;br&gt;宽松模式下，能够识别错误的千分符，如"1,23,456"可以正确解析为"123456"。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double | The result parse with localization rules. |
+| double | 本地化数字字符串解析后的数字。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## resolvedOptions
 
@@ -84,7 +92,7 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 public resolvedOptions(): ResolvedSymbolNumberFormatOptions
 ```
 
-Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.Define the resolved symbol element and value that need to get.
+解析自定义数字符号的配置项。
 
 **Since:** 26.0.0
 
@@ -102,5 +110,5 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.D
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Symbol options for SymbolNumberFormat. |
+| [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) | 自定义符号数字格式化对象配置项的解析结果。 |
 

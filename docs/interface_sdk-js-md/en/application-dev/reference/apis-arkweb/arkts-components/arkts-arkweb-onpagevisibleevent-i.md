@@ -1,6 +1,6 @@
 # OnPageVisibleEvent
 
-Represents the callback invoked when the old page is not displayed and the new page is about to be visible.
+Defines the triggered callback when previous page will no longer be drawn and next page begin to draw.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Represents the callback invoked when the old page is not displayed and the new p
 url: string
 ```
 
-URL for the download task.
+The URL of page.
 
 **Type:** string
 

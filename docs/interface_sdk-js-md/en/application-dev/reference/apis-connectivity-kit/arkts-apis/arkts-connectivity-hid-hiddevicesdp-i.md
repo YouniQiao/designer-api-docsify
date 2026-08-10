@@ -10,6 +10,12 @@ Describe the HID device capability fields of this endpoint being queried.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { hid } from 'kits/@kit.ConnectivityKit';
+```
+
 ## description
 
 ```TypeScript
@@ -98,7 +104,7 @@ subclass: Subclass
 
 Subclass of this Bluetooth HID device. Subclass represents the specific HID device type.
 
-**Type:** Subclass
+**Type:** [Subclass](arkts-connectivity-hid-subclass-e.md)
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # BackupParams (System API)
 
-Provides configuration parameters for backup and restore.
+为备份恢复提供可选配置参数。
 
 **Since:** 12
 
@@ -12,13 +12,19 @@ Provides configuration parameters for backup and restore.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## parameters
 
 ```TypeScript
 parameters?: string
 ```
 
-The optional parameters a json strings in the form of key value in backup or restore.
+备份或恢复时使用的可选配置参数，以JSON格式字符串表示。
 
 **Type:** string
 

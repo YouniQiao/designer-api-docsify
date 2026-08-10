@@ -4,7 +4,7 @@
 declare type ResponsiveFillType = PresetFillType
 ```
 
-Define a responsive item filling pattern that can be used in WaterFlow,Grid,List, and Swiper components.
+定义一个响应式item填充模式，可以在WaterFlow、Grid、List和Swiper组件中使用。
 
 **Since:** 22
 

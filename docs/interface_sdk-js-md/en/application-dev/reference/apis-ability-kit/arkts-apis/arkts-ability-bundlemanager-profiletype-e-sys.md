@@ -1,6 +1,6 @@
 # ProfileType (System API)
 
-Enumerates the types of profiles (also called application files).
+标识配置文件类型。
 
 **Since:** 11
 
@@ -18,7 +18,7 @@ Enumerates the types of profiles (also called application files).
 INTENT_PROFILE = 1
 ```
 
-Profile of the InsightIntent framework.
+意图框架配置文件。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ Profile of the InsightIntent framework.
 CLOUD_PROFILE = 8
 ```
 
-Device-Cloud Sync configuration file.
+[端云同步](../../apis-core-file-kit/arkts-apis/arkts-file-cloudsync.md/arkts-file-cloudsync.md)配置文件。26.0.0
 
 **Since:** 26.0.0
 

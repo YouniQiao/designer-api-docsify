@@ -4,7 +4,7 @@
 type ProgressListener = (progress: Progress) => void
 ```
 
-Listener used to observe the copy progress.
+拷贝进度监听。
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ Listener used to observe the copy progress.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the progress data of copyFile  |
+| progress | [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) | Yes | indicates the progress data of copyFile |
 

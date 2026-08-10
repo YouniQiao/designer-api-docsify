@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## deviceKey
 
 ```TypeScript
@@ -20,7 +26,7 @@ deviceKey: DeviceKey
 
 设备关键信息。包含设备ID类型、设备ID和设备用户ID，作为设备的唯一标识。
 
-**类型：** DeviceKey
+**类型：** [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md)
 
 **起始版本：** 23
 
@@ -130,7 +136,7 @@ supportedBusinessIds: int[]
 
 设备支持的业务ID列表。表示该设备支持的业务场景范围，如解锁锁屏、解锁应用锁等。不同设备因认证安全性差异，支持的业务范围不同。
 
-**类型：** int[]
+**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **起始版本：** 23
 

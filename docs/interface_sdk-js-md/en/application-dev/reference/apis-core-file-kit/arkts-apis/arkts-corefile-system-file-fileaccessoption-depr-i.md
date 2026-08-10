@@ -1,0 +1,95 @@
+# FileAccessOption
+
+可选项类型，支持access接口使用。
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 10
+
+<!--Device-unnamed-export interface FileAccessOption--><!--Device-unnamed-export interface FileAccessOption-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+## complete
+
+```TypeScript
+complete?: () => void
+```
+
+接口调用结束的回调函数。
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 10
+
+<!--Device-FileAccessOption-complete?: () => void--><!--Device-FileAccessOption-complete?: () => void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+## fail
+
+```TypeScript
+fail?: (data: string, code: number) => void
+```
+
+接口调用失败的回调函数。
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 10
+
+<!--Device-FileAccessOption-fail?: (data: string, code: number) => void--><!--Device-FileAccessOption-fail?: (data: string, code: number) => void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| data | string | Yes |  |
+| code | number | Yes |  |
+
+## success
+
+```TypeScript
+success?: () => void
+```
+
+接口调用成功的回调函数。
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 10
+
+<!--Device-FileAccessOption-success?: () => void--><!--Device-FileAccessOption-success?: () => void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+## uri
+
+```TypeScript
+uri: string
+```
+
+目录或文件URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：1. URI 中不得包含以下特殊字符：\"*+,:;&lt;=&gt;?[]|\x7F等。2. 最大允许字符长度为128个字符。
+
+**Type:** string
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 10
+
+<!--Device-FileAccessOption-uri: string--><!--Device-FileAccessOption-uri: string-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+

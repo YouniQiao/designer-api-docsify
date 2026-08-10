@@ -6,7 +6,7 @@ type LocalesArgument = UnicodeBCP47LocaleIdentifier | Locale | readonly (Unicode
 
 The locale(s) to use
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
 **ArkTS mode:** ArkTS-Dyn only
 

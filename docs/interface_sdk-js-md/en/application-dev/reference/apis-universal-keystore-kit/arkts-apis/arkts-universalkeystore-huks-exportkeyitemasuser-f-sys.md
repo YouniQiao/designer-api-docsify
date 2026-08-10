@@ -1,12 +1,18 @@
 # exportKeyItemAsUser (System API)
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## exportKeyItemAsUser
 
 ```TypeScript
 function exportKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Exports the public key for the specified user. This API uses a promise to return the result.
+指定用户身份导出密钥，使用Promise方式回调异步返回的结果。
 
 **Since:** 12
 
@@ -24,35 +30,35 @@ Exports the public key for the specified user. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | User ID. |
-| keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
-| huksOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Empty object (leave this parameter empty). |
+| userId | number | Yes | 用户ID。 |
+| keyAlias | string | Yes | 密钥别名，应与所用密钥生成时使用的别名相同。 |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 空对象（此处传空即可）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise used to return the result. If the operation is successful, **outData** in **HuksReturnResult** is the public key exported. |
+| Promise&lt;HuksReturnResult&gt; | Promise对象。 当调用成功时，HuksReturnResult的outData成员非空，为从密钥中导出的公钥，否则为失败。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application permission is not sufficient, which may be caused by lack of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | non-system applications are not allowed to use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | Feature is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The crypto extension key is not supported. |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
-| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| 801 | api is not supported |
+| 201 | the application permission is not sufficient, which may be caused by lack of &lt;br&gt;cross-account permission, or the system has not been unlocked by user, or the user does not exist. |
+| 202 | non-system applications are not allowed to use system APIs. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 12000006 | error occurred in crypto engine |
+| 12000005 | IPC communication failed |
+| 12000004 | operating file failed |
+| 12000003 | algorithm param is invalid |
+| 12000002 | algorithm param is missing |
+| 12000001 | Feature is not supported. Possible causes: 1. The algorithm mode is not supported. 2. The group key is not supported. 3. The crypto extension key is not supported. |
+| 12000014 | memory is insufficient |
+| 12000012 | Device environment or input parameter abnormal |
+| 12000011 | queried entity does not exist |
 
-**Example**
+## Examples
 
 Prerequisites: see Example of [generateKeyItemAsUser](#huksgeneratekeyitemasuser).
 

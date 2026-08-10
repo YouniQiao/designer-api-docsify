@@ -4,7 +4,7 @@
 export type OnScrollFrameBeginCallback = (offset: double, state: ScrollState) => OnScrollFrameBeginHandlerResult
 ```
 
-Represents the callback triggered before each frame scrolling starts.
+Scroll每帧滚动前触发的回调。
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ Represents the callback triggered before each frame scrolling starts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | double | Yes | Amount to scroll by, in vp.  |
-| state | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Current scroll state.  |
+| offset | double | Yes | 即将发生的滑动量，单位vp。 |
+| state | [ScrollState](../arkts-components/arkts-arkui-scrollstate-e.md) | Yes | 当前滑动状态。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | data - the scroll data return by handler  |
+| [OnScrollFrameBeginHandlerResult](../arkts-components/arkts-arkui-onscrollframebeginhandlerresult-i.md) | 返回实际滑动量。 |
 

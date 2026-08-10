@@ -1,6 +1,6 @@
 # Query
 
-Provides APIs to create a **Query** object, which defines different data query criteria.
+使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ Provides APIs to create a **Query** object, which defines different data query c
 and(): Query
 ```
 
-Creates a **Query** object with the AND condition.
+构造一个带有与条件的查询对象。
 
 **Since:** 8
 
@@ -38,9 +38,9 @@ Creates a **Query** object with the AND condition.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -61,7 +61,7 @@ try {
 beginGroup(): Query
 ```
 
-Creates a **Query** object for a query condition group with a left parenthesis.
+创建一个带有左括号的查询条件组。
 
 **Since:** 8
 
@@ -79,9 +79,9 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -102,7 +102,7 @@ try {
 constructor()
 ```
 
-Defines a constructor used to create a **Query** instance.
+用于创建Query实例的构造函数。
 
 **Since:** 8
 
@@ -122,14 +122,14 @@ Defines a constructor used to create a **Query** instance.
 deviceId(deviceId: string): Query
 ```
 
-Creates a **Query** object with the device ID as the key prefix.
-    **NOTE**  
-    
-    The value of **deviceId** can be obtained by \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-    \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_The APIs of the **deviceManager** module are system interfaces and available only to system  
-    applications.  
-    For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+添加设备ID作为key的前缀。
+
+> **说明：**
+> 
+> 其中deviceId通过调用&lt;!--RP1--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
 **Since:** 8
 
@@ -147,15 +147,15 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Device ID. |
+| deviceId | string | Yes | 指示查询的设备ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -173,7 +173,7 @@ try {
 endGroup(): Query
 ```
 
-Creates a **Query** object for a query condition group with a right parenthesis.
+创建一个带有右括号的查询条件组。
 
 **Since:** 8
 
@@ -191,9 +191,9 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -214,7 +214,7 @@ try {
 equalTo(field: string, value: number | string | boolean): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are equal to the given value.
+构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。
 
 **Since:** 8
 
@@ -232,16 +232,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string \| boolean | Yes | Value to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string \| boolean | Yes | 表示指定的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -260,7 +260,7 @@ try {
 getSqlLike(): string
 ```
 
-Obtains the query statement of the **Query** object.
+获取Query对象的查询语句。
 
 **Since:** 8
 
@@ -278,9 +278,9 @@ Obtains the query statement of the **Query** object.
 
 | Type | Description |
 | --- | --- |
-| string | Query statement obtained. |
+| string | 返回一个字段列中包含对应子串的结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -298,7 +298,7 @@ try {
 greaterThan(field: string, value: number | string | boolean): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are greater than the given value.
+构造一个Query对象以查询具有大于指定值的指定字段的条目。
 
 **Since:** 8
 
@@ -316,16 +316,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string \| boolean | Yes | Value to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string \| boolean | Yes | 表示指定的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -344,7 +344,7 @@ try {
 greaterThanOrEqualTo(field: string, value: number | string): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are greater than or equal to the given value.
+构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。
 
 **Since:** 8
 
@@ -362,16 +362,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string | Yes | Value to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string | Yes | 表示指定的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -390,7 +390,7 @@ try {
 inNumber(field: string, valueList: number[]): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are within the given number list.
+构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。
 
 **Since:** 8
 
@@ -408,16 +408,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| valueList | number[] | Yes | List of numbers to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| valueList | number[] | Yes | 表示指定的值列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -436,7 +436,7 @@ try {
 inString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are within the given string list.
+构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。
 
 **Since:** 8
 
@@ -454,16 +454,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| valueList | string[] | Yes | List of strings to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| valueList | string[] | Yes | 表示指定的字符串值列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -482,7 +482,7 @@ try {
 isNotNull(field: string): Query
 ```
 
-Creates a **Query** object to search for the records whose value is not **null**.
+构造一个Query对象以查询具有值不为null的指定字段的条目。
 
 **Since:** 8
 
@@ -500,15 +500,15 @@ Creates a **Query** object to search for the records whose value is not **null**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -527,7 +527,7 @@ try {
 isNull(field: string): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are **null**.
+构造一个Query对象以查询具有值为null的指定字段的条目。
 
 **Since:** 8
 
@@ -545,15 +545,15 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -572,7 +572,7 @@ try {
 lessThan(field: string, value: number | string): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are less than the given value.
+构造一个Query对象以查询具有小于指定值的指定字段的条目。
 
 **Since:** 8
 
@@ -590,16 +590,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string | Yes | Value to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string | Yes | 表示指定的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -618,7 +618,7 @@ try {
 lessThanOrEqualTo(field: string, value: number | string): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are less than or equal to the given value.
+构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。
 
 **Since:** 8
 
@@ -636,16 +636,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string | Yes | Value to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string | Yes | 表示指定的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -664,7 +664,7 @@ try {
 like(field: string, value: string): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are similar to the given string.
+构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。
 
 **Since:** 8
 
@@ -682,16 +682,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | string | Yes | String to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| value | string | Yes | 表示指定的字符串值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -710,7 +710,7 @@ try {
 limit(total: number, offset: number): Query
 ```
 
-Creates a **Query** object to specify the number of records in the query result and the start position.
+构造一个Query对象来指定结果的数量和开始位置。
 
 **Since:** 8
 
@@ -728,16 +728,16 @@ Creates a **Query** object to specify the number of records in the query result 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| total | number | Yes | Number of records in the query result. |
-| offset | number | Yes | Start position. |
+| total | number | Yes | 表示指定的结果数。 |
+| offset | number | Yes | 表示起始位置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let total = 10;
@@ -759,7 +759,7 @@ try {
 notEqualTo(field: string, value: number | string | boolean): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are not equal to the given value.
+构造一个Query对象以查询具有指定字段且值不等于指定值的条目。
 
 **Since:** 8
 
@@ -777,16 +777,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | number \| string \| boolean | Yes | Value to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| value | number \| string \| boolean | Yes | 表示指定的值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -805,7 +805,7 @@ try {
 notInNumber(field: string, valueList: number[]): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are not within the given number list.
+构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。
 
 **Since:** 8
 
@@ -823,16 +823,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| valueList | number[] | Yes | List of numbers to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| valueList | number[] | Yes | 表示指定的值列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -851,7 +851,7 @@ try {
 notInString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are not within the given string list.
+构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。
 
 **Since:** 8
 
@@ -869,16 +869,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| valueList | string[] | Yes | List of strings to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| valueList | string[] | Yes | 表示指定的字符串值列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -897,7 +897,7 @@ try {
 or(): Query
 ```
 
-Creates a **Query** object with the OR condition.
+构造一个带有或条件的Query对象。
 
 **Since:** 8
 
@@ -915,9 +915,9 @@ Creates a **Query** object with the OR condition.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -938,7 +938,7 @@ try {
 orderByAsc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in ascending order.
+构造一个Query对象，将查询结果按升序排序。
 
 **Since:** 8
 
@@ -956,15 +956,15 @@ Creates a **Query** object to sort the query results in ascending order.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -984,7 +984,7 @@ try {
 orderByDesc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in descending order.
+构造一个Query对象，将查询结果按降序排序。
 
 **Since:** 8
 
@@ -1002,15 +1002,15 @@ Creates a **Query** object to sort the query results in descending order.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -1030,7 +1030,7 @@ try {
 prefixKey(prefix: string): Query
 ```
 
-Creates a **Query** object with a specified key prefix.
+创建具有指定键前缀的查询条件。
 
 **Since:** 8
 
@@ -1048,15 +1048,15 @@ Creates a **Query** object with a specified key prefix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | Key prefix. |
+| prefix | string | Yes | 表示指定的键前缀。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -1076,7 +1076,7 @@ try {
 reset(): Query
 ```
 
-Resets the **Query** object.
+重置Query对象。
 
 **Since:** 8
 
@@ -1094,9 +1094,9 @@ Resets the **Query** object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object reset. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回重置的Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -1117,7 +1117,7 @@ try {
 setSuggestIndex(index: string): Query
 ```
 
-Creates a **Query** object with an index preferentially used for query.
+设置一个指定的索引，将优先用于查询。
 
 **Since:** 8
 
@@ -1135,15 +1135,15 @@ Creates a **Query** object with an index preferentially used for query.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | string | Yes | Index preferentially used for query. |
+| index | string | Yes | 指示要设置的索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -1163,7 +1163,7 @@ try {
 unlike(field: string, value: string): Query
 ```
 
-Creates a **Query** object to search for the records with the specified field that are not similar to the given string.
+构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。
 
 **Since:** 8
 
@@ -1181,16 +1181,16 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to query. It cannot contain '^'. |
-| value | string | Yes | String to match. |
+| field | string | Yes | 表示指定字段，不能包含' ^ '。 |
+| value | string | Yes | 表示指定的字符串值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

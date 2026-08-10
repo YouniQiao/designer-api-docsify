@@ -1,6 +1,6 @@
 # ScrollbarMode
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for indicating the web component scrollbar mode.
+Enum type supplied to {@link setScrollbarMode} for indicating the web component scrollbar mode.
 
 **起始版本：** 23
 

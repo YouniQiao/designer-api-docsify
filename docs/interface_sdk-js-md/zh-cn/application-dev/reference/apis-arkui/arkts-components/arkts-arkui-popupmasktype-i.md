@@ -18,7 +18,7 @@ color: ResourceColor
 
 设置遮罩层颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
 

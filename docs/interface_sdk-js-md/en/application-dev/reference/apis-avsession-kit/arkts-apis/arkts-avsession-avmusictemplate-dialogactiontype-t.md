@@ -4,7 +4,7 @@
 type DialogActionType = 'open' | 'close' | 'refresh'
 ```
 
-Dialog action type open & close, refresh.
+对话框操作类型。该类型可取的值为下表字符串。
 
 **Since:** 23
 

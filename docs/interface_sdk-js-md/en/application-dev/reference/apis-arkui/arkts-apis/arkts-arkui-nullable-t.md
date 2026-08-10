@@ -4,11 +4,11 @@
 declare type Nullable<T> = T | undefined
 ```
 
-This type allows for an object of a custom type or **undefined**.
+在使用该类型时，其值可以使泛型参数T所指定的类型，也可以是undefined。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -20,6 +20,6 @@ This type allows for an object of a custom type or **undefined**.
 
 | Type | Description |
 | --- | --- |
-| T | The object can be of any custom type. |
-| undefined | The object can be **undefined**. |
+| T |  |
+| undefined |  |
 

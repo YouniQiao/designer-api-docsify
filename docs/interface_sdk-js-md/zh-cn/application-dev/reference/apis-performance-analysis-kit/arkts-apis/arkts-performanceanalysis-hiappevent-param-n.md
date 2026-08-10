@@ -4,9 +4,9 @@
 
 |名称|类型|只读|描述|  
 | ------------------------------- | ------ | ------ | ------------------ |  
-| USER\_ID | string |是|自定义用户ID|  
-| DISTRIBUTED\_SERVICE\_NAME | string |是|分布式服务名称|  
-| DISTRIBUTED\_SERVICE\_INSTANCE\_ID | string |是|分布式服务实例ID|
+| USER_ID | string |是|自定义用户ID|  
+| DISTRIBUTED_SERVICE_NAME | string |是|分布式服务名称|  
+| DISTRIBUTED_SERVICE_INSTANCE_ID | string |是|分布式服务实例ID|
 
 **起始版本：** 9
 
@@ -15,6 +15,12 @@
 <!--Device-hiAppEvent-namespace param--><!--Device-hiAppEvent-namespace param-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
+
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
 
 ## 汇总
 

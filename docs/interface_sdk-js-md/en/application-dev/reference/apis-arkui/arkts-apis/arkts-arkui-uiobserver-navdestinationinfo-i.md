@@ -1,6 +1,6 @@
 # NavDestinationInfo
 
-NavDestination info.
+NavDestination组件信息。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ NavDestination info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## index
 
 ```TypeScript
 index: int
 ```
 
-NavDestination index.The value should be an integer.
+NavDestination在页面栈中的索引。取值限定为整数。
 
 **Type:** int
 
@@ -36,9 +42,9 @@ NavDestination index.The value should be an integer.
 mode?: NavDestinationMode
 ```
 
-NavDestination mode.
+NavDestination类型。
 
-**Type:** NavDestinationMode
+**Type:** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
 
 **Since:** 23
 
@@ -56,9 +62,9 @@ NavDestination mode.
 name: ResourceStr
 ```
 
-Changed NavDestination name.
+NavDestination组件的名称。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
@@ -76,7 +82,7 @@ Changed NavDestination name.
 navDestinationId: string
 ```
 
-Auto-generated navDestination id, which is different from common property id of Component.
+NavDestination组件的唯一标识ID。
 
 **Type:** string
 
@@ -96,9 +102,9 @@ Auto-generated navDestination id, which is different from common property id of 
 navigationId: ResourceStr
 ```
 
-Navigation id.
+包含NavDestination组件的Navigation组件的id。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
@@ -116,7 +122,7 @@ Navigation id.
 param?: Object
 ```
 
-The detailed parameter of NavDestination.
+NavDestination组件的参数。
 
 **Type:** Object
 
@@ -136,9 +142,9 @@ The detailed parameter of NavDestination.
 size?: Size
 ```
 
-NavDestination size.
+NavDestination的尺寸。
 
-**Type:** Size
+**Type:** [Size](arkts-arkui-size-i.md)
 
 **Since:** 23
 
@@ -156,9 +162,9 @@ NavDestination size.
 state: NavDestinationState
 ```
 
-Changed NavDestination state.
+NavDestination组件的状态。
 
-**Type:** NavDestinationState
+**Type:** [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md)
 
 **Since:** 23
 
@@ -176,7 +182,7 @@ Changed NavDestination state.
 uniqueId?: int
 ```
 
-NavDestination uniqueId.The value should be an integer.
+NavDestination组件的uniqueId。取值限定为整数。
 
 **Type:** int
 

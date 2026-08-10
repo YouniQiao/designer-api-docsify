@@ -1,12 +1,18 @@
 # readLinesSync
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## readLinesSync
 
 ```TypeScript
 function readLinesSync(filePath: string, options?: Options): ReaderIterator
 ```
 
-Reads a file text line by line synchronously. Only the files in UTF-8 format are supported.
+以同步方式逐行读取文件的文本内容，只支持读取utf-8格式文件。
 
 **Since:** 23
 
@@ -20,30 +26,30 @@ Reads a file text line by line synchronously. Only the files in UTF-8 format are
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | Application sandbox path of the file. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for reading the text. The options are as follows: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **encoding** (string): format of the data to be encoded. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_It is valid only when the data is of the string type. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The default value is **'utf-8'**, which is the only value supported. |
+| filePath | string | Yes | 文件的应用沙箱路径。 |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No | 可选项。支持以下选项：&lt;br/&gt;- encoding，string类型，当数据是 string 类型时有效，表示数据的编码方式， 默认 'utf-8'，仅支持 'utf-8'。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ReaderIterator** object. |
+| [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | 返回文件读取迭代器。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
-| 13900012 | Permission denied |
-| 13900015 | File exists |
-| 13900019 | Is a directory |
 | 13900020 | Invalid argument |
 | 13900022 | Too many open files |
+| 13900019 | Is a directory |
+| 13900030 | File name too long |
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
-| 13900030 | File name too long |
 | 13900033 | Too many symbolic links encountered |
+| 13900002 | No such file or directory |
+| 13900012 | Permission denied |
+| 13900044 | Network is unreachable |
+| 13900015 | File exists |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
-| 13900044 | Network is unreachable |
 

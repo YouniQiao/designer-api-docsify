@@ -1,5 +1,11 @@
 # queryAssociatedBundleNames (System API)
 
+## Modules to Import
+
+```TypeScript
+import { appDomainVerify } from 'kits/@kit.AbilityKit';
+```
+
 ## queryAssociatedBundleNames
 
 ```TypeScript
@@ -38,12 +44,12 @@ query bundleNames associated with domain.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API accessed by non-system app. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [29900001](../errorcode-appDomainVerify-sys.md#29900001-internal-system-service-error) | Internal error. |
+| 401 | Parameter error. |
+| 201 | Permission denied. |
+| 29900001 | Internal error. |
+| 202 | System API accessed by non-system app. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appDomainVerify } from '@kit.AbilityKit';

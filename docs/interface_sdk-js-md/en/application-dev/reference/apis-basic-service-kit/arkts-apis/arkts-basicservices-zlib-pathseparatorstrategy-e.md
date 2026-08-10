@@ -1,6 +1,6 @@
 # PathSeparatorStrategy
 
-Defines **PathSeparatorStrategy**, a property of [Options]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, used to specify the separator strategy for the file path in the compressed package specified for decompression.
+PathSeparatorStrategy作为[Options](arkts-basicservices-zlib-options-i.md)的一个属性，用于指定解压时目标压缩包内文件路径中分隔符的处理策略。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Defines **PathSeparatorStrategy**, a property of [Options]\_\_\_JSDOC\_LINK\_DES
 PATH_SEPARATOR_STRATEGY_DEFAULT = 0
 ```
 
-Default value, indicating that separators in the file path of the compressed package are not processed.
+默认值，压缩包内文件路径中的分隔符不做处理。
 
 **Since:** 21
 
@@ -34,7 +34,7 @@ Default value, indicating that separators in the file path of the compressed pac
 PATH_SEPARATOR_STRATEGY_REPLACE_BACKSLASH = 1
 ```
 
-Backslashes () in the file path of the package are replaced with slashes (/).
+压缩包内文件路径中的反斜杠'\'替换为斜杠'/'。
 
 **Since:** 21
 

@@ -1,17 +1,18 @@
 # TextResponseType
 
 选择菜单的响应类型。
-    **说明：**  
-    
-    菜单类型的匹配顺序如下。例如，用户长按文本时，根据以下规则查找：  
-    
-    1. 查找是否注册了TextSpanType.TEXT、TextResponseType.LONG\_PRESS菜单  
-    
-    2. 查找是否注册了TextSpanType.TEXT、TextResponseType.DEFAULT菜单  
-    
-    3. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.LONG\_PRESS菜单  
-    
-    4. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.DEFAULT菜单
+
+> **说明：**
+> 
+> 菜单类型的匹配顺序如下。例如，用户长按文本时，根据以下规则查找：
+> 
+> 1. 查找是否注册了TextSpanType.TEXT、TextResponseType.LONG_PRESS菜单
+> 
+> 2. 查找是否注册了TextSpanType.TEXT、TextResponseType.DEFAULT菜单
+> 
+> 3. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.LONG_PRESS菜单
+> 
+> 4. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.DEFAULT菜单
 
 **起始版本：** 11
 
@@ -87,7 +88,7 @@ SELECT = 2
 DEFAULT = 3
 ```
 
-注册此类型的菜单，但未注册RIGHT\_CLICK、LONG\_PRESS、SELECT时，右键、长按、鼠标、[selection]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_选中均会触发并显示此类型对应的菜单。
+注册此类型的菜单，但未注册RIGHT_CLICK、LONG_PRESS、SELECT时，右键、长按、鼠标、[selection](TextAttribute#selection)选中均会触发并显示此类型对应的菜单。
 
 **起始版本：** 15
 

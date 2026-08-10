@@ -10,6 +10,12 @@ This module provides settings data access abilities.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
+## Modules to Import
+
+```TypeScript
+import { settings } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 ### Namespaces
@@ -37,10 +43,10 @@ This module provides settings data access abilities.
 | [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue-1) | Obtains the value of a specified character string in the database. |
 | [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue-2) | Get value from settingsdata |
 | [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue-3) | Get value from settingsdata |
-| [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue-4) | Get value from settingsdata  [USER\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE] domain need ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SETTINGS permission. |
+| [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue-4) | Get value from settingsdata  [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
 | [setValue](arkts-basicservices-settings-setvalue-f.md#setvalue-2) | Set settingsdata value. |
 | [setValue](arkts-basicservices-settings-setvalue-f.md#setvalue-3) | Set settingsdata value. |
-| [setValue](arkts-basicservices-settings-setvalue-f.md#setvalue-4) | Set settingsdata value.  [DEVICE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SHARED, USER\_\_\_ESCAPED\_UNDERSCORE\_\_\_PROPERTY] domain need ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SETTINGS permission.  [USER\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE] domain need ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SETTINGS permission. |
+| [setValue](arkts-basicservices-settings-setvalue-f.md#setvalue-4) | Set settingsdata value.  [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission.  [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
 | [enableAirplaneMode](arkts-basicservices-settings-enableairplanemode-f.md#enableairplanemode) | Enables or disables airplane mode. |
 | [enableAirplaneMode](arkts-basicservices-settings-enableairplanemode-f.md#enableairplanemode-1) | Enables or disables airplane mode. |
 | [canShowFloating](arkts-basicservices-settings-canshowfloating-f.md#canshowfloating) | Checks whether a specified application can show as a floating window. |
@@ -48,12 +54,12 @@ This module provides settings data access abilities.
 | [getUriSync](arkts-basicservices-settings-geturisync-f.md#geturisync) | Get settingsdata uri (synchronous method) |
 | [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getvaluesync) | Get value from settingsdata(synchronous method) |
 | [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getvaluesync-1) | Get value from settingsdata(synchronous method) |
-| [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getvaluesync-2) | Get value from settingsdata(synchronous method).  [USER\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE] domain need ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SETTINGS permission. |
+| [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getvaluesync-2) | Get value from settingsdata(synchronous method).  [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
 | [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setvaluesync) | Set settingsdata value(synchronous method) |
 | [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setvaluesync-1) | Set settingsdata value(synchronous method) |
-| [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setvaluesync-2) | Set settingsdata value(synchronous method).  [DEVICE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SHARED, USER\_\_\_ESCAPED\_UNDERSCORE\_\_\_PROPERTY] domain need ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SETTINGS permission.  [USER\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE] domain need ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SETTINGS permission. |
-| [registerKeyObserver](arkts-basicservices-settings-registerkeyobserver-f.md#registerkeyobserver) | Monitor registration key(synchronous method)  [USER\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE] domain need ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SETTINGS permission. |
-| [unregisterKeyObserver](arkts-basicservices-settings-unregisterkeyobserver-f.md#unregisterkeyobserver) | Monitor unregister key(synchronous method)  [USER\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE] domain need ohos.permission.MANAGE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SECURE\_\_\_ESCAPED\_UNDERSCORE\_\_\_SETTINGS permission. |
+| [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setvaluesync-2) | Set settingsdata value(synchronous method).  [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission.  [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
+| [registerKeyObserver](arkts-basicservices-settings-registerkeyobserver-f.md#registerkeyobserver) | Monitor registration key(synchronous method)  [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
+| [unregisterKeyObserver](arkts-basicservices-settings-unregisterkeyobserver-f.md#unregisterkeyobserver) | Monitor unregister key(synchronous method)  [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
 | [openNetworkManagerSettings](arkts-basicservices-settings-opennetworkmanagersettings-f.md#opennetworkmanagersettings) | Open the network manager settings page. |
 | [openInputMethodSettings](arkts-basicservices-settings-openinputmethodsettings-f.md#openinputmethodsettings) | Open the input method settings page. |
 | [openInputMethodDetail](arkts-basicservices-settings-openinputmethoddetail-f.md#openinputmethoddetail) | Open the input method detail page. |

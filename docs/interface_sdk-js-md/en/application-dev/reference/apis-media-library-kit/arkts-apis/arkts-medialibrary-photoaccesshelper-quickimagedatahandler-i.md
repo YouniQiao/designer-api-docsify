@@ -1,6 +1,6 @@
 # QuickImageDataHandler
 
-QuickImageDataHandler is a media asset handler used to customize the media asset processing logic in  
+QuickImageDataHandler is a media asset handler used to customize the media asset processing logic in   
 **onDataPrepared**.
 
 **Since:** 13
@@ -10,6 +10,12 @@ QuickImageDataHandler is a media asset handler used to customize the media asset
 <!--Device-photoAccessHelper-interface QuickImageDataHandler<T>--><!--Device-photoAccessHelper-interface QuickImageDataHandler<T>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
 
 ## onDataPrepared
 
@@ -37,7 +43,7 @@ Information returned by **map**:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | T | Yes | Data of the image asset that is ready. It is of the generic type and supports the [Picture]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ type. |
+| data | T | Yes | Data of the image asset that is ready. It is of the generic type and supports the [Picture](../../apis-image-kit/arkts-apis/arkts-image-image-picture-i.md/arkts-image-image-picture-i.md) type. |
 | imageSource | image.ImageSource | Yes | Data of the image asset that is ready. |
 | map | Map&lt;string, string&gt; | Yes | Additional information about the image asset, such as the image quality. Currently, only **quality** is supported. |
 

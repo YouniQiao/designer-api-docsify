@@ -10,6 +10,12 @@ Wi-Fi IPv6 information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## gateway
 
 ```TypeScript

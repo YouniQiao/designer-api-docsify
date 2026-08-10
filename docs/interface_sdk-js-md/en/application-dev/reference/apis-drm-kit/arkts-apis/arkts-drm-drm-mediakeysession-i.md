@@ -10,6 +10,12 @@ Provide functions and keep a decrypt module. Before calling an MediaKeySession m
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
+## Modules to Import
+
+```TypeScript
+import { drm } from 'kits/@kit.DrmKit';
+```
+
 ## checkMediaKeyStatus
 
 ```TypeScript
@@ -32,14 +38,14 @@ Check the media key status
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | A list of media key status description pairs. |
+| [MediaKeyStatus](arkts-drm-drm-mediakeystatus-i.md)[] | A list of media key status description pairs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
 ## clearMediaKeys
 
@@ -63,8 +69,8 @@ Remove media key.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
 ## destroy
 
@@ -88,8 +94,8 @@ Release the resource before the session gonna be unused.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
 ## generateMediaKeyRequest
 
@@ -121,8 +127,8 @@ Generate the media key request.
 | --- | --- | --- | --- |
 | mimeType | string | Yes | Media type. |
 | initData | Uint8Array | Yes | PSSH info. |
-| mediaKeyType | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offline or online. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | No | Optional data the application set to drm framework. |
+| mediaKeyType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offline or online. |
+| options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | No | Optional data the application set to drm framework. |
 
 **Return value:**
 
@@ -134,9 +140,9 @@ Generate the media key request.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
 ## generateOfflineReleaseRequest
 
@@ -172,9 +178,9 @@ Generate offline media key request.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
 ## getContentProtectionLevel
 
@@ -198,14 +204,14 @@ Get content protection level.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | MediaKeySession content protection level. |
+| [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | MediaKeySession content protection level. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
 ## off('keyRequired')
 
@@ -236,8 +242,8 @@ Unregister keyRequired event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700101 | All unknown errors. |
 
 ## off('keyExpired')
 
@@ -268,8 +274,8 @@ Unregister keyExpired event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700101 | All unknown errors. |
 
 ## off('vendorDefined')
 
@@ -300,8 +306,8 @@ Unregister vendorDefined event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700101 | All unknown errors. |
 
 ## off('expirationUpdate')
 
@@ -332,8 +338,8 @@ Unregister expirationUpdate event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700101 | All unknown errors. |
 
 ## off('keysChange')
 
@@ -364,8 +370,8 @@ Unregister keysChange event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700101 | All unknown errors. |
 
 ## offExpirationUpdate
 
@@ -393,7 +399,7 @@ Unregister expirationUpdate event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 24700101 | All unknown errors. |
 
 ## offKeyExpired
 
@@ -421,7 +427,7 @@ Unregister keyExpired event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 24700101 | All unknown errors. |
 
 ## offKeyRequired
 
@@ -449,7 +455,7 @@ Unregister keyRequired event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 24700101 | All unknown errors. |
 
 ## offKeysChange
 
@@ -477,7 +483,7 @@ Unregister keysChange event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 24700101 | All unknown errors. |
 
 ## offVendorDefined
 
@@ -505,7 +511,7 @@ Unregister vendorDefined event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 24700101 | All unknown errors. |
 
 ## on('keyRequired')
 
@@ -536,8 +542,8 @@ Register keyRequired event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700101 | All unknown errors. |
 
 ## on('keyExpired')
 
@@ -568,8 +574,8 @@ Register keyExpired event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700101 | All unknown errors. |
 
 ## on('vendorDefined')
 
@@ -600,8 +606,8 @@ Register vendorDefined event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700101 | All unknown errors. |
 
 ## on('expirationUpdate')
 
@@ -632,8 +638,8 @@ Register expirationUpdate event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700101 | All unknown errors. |
 
 ## on('keysChange')
 
@@ -664,8 +670,8 @@ Register keysChange event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700101 | All unknown errors. |
 
 ## onExpirationUpdate
 
@@ -693,7 +699,7 @@ Register expirationUpdate event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 24700101 | All unknown errors. |
 
 ## onKeyExpired
 
@@ -721,7 +727,7 @@ Register keyExpired event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 24700101 | All unknown errors. |
 
 ## onKeyRequired
 
@@ -749,7 +755,7 @@ Register keyRequired event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 24700101 | All unknown errors. |
 
 ## onKeysChange
 
@@ -777,7 +783,7 @@ Register keysChange event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 24700101 | All unknown errors. |
 
 ## onVendorDefined
 
@@ -805,7 +811,7 @@ Register vendorDefined event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| 24700101 | All unknown errors. |
 
 ## processMediaKeyResponse
 
@@ -841,9 +847,9 @@ Process the response corresponding to the media key request obtained by the appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
 ## processOfflineReleaseResponse
 
@@ -880,9 +886,9 @@ Process offline media key response.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
 ## requireSecureDecoderModule
 
@@ -918,9 +924,9 @@ Whether the encrypted content require a secure decoder or not.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 
 ## restoreOfflineMediaKeys
 
@@ -956,7 +962,7 @@ Restore offline media key.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| 24700201 | Fatal service error, for example, service died. |
+| 24700101 | All unknown errors. |
 

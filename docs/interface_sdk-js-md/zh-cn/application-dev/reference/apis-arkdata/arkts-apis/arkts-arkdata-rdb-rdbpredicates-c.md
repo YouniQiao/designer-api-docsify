@@ -38,9 +38,9 @@ and(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回带有和条件的Rdb谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有和条件的Rdb谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -73,9 +73,9 @@ beginWrap(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回带有左括号的Rdb谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有左括号的Rdb谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -118,9 +118,9 @@ beginsWith(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了以指定字符串开头条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了以指定字符串开头条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -152,16 +152,16 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示与谓词匹配的最小值。 |
-| high | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的最大值。 |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的最大值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了在给定范围内条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了在给定范围内条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -194,7 +194,7 @@ constructor(name: string)
 | --- | --- | --- | --- |
 | name | string | 是 | 数据库表名，不能为空字符串。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -231,9 +231,9 @@ contains(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了包含指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了包含指定值条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -264,9 +264,9 @@ distinct(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回可用于过滤重复记录的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回可用于过滤重复记录的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -297,9 +297,9 @@ endWrap(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回带有右括号的Rdb谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有右括号的Rdb谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -342,9 +342,9 @@ endsWith(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了以指定字符串结尾条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了以指定字符串结尾条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -376,15 +376,15 @@ equalTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了等于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了等于指定值条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -416,15 +416,15 @@ glob(field: string, value: string): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_支持通配符，*表示0个、1个或多个数字或字符，?表示1个数字或字符。 |
+| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节 &lt;br&gt;支持通配符，*表示0个、1个或多个数字或字符，?表示1个数字或字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了匹配指定通配符模式条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了匹配指定通配符模式条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -456,15 +456,15 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了大于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了大于指定值条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -496,15 +496,15 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了大于或等于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了大于或等于指定值条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -541,9 +541,9 @@ groupBy(fields: Array<string>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回分组查询列的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回分组查询列的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -581,9 +581,9 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了值在给定范围内条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了值在给定范围内条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -614,9 +614,9 @@ inAllDevices(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了所有远程设备同步条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了所有远程设备同步条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -630,11 +630,12 @@ inDevices(devices: Array<string>): RdbPredicates
 ```
 
 同步分布式数据库时连接到组网内指定的远程设备。
-    **说明：**  
-    
-    其中devices通过调用\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_  
-    [deviceManager.getTrustedDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    方法得到。\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_deviceManager模块的接口均为系统接口，仅系统应用可用。
+
+> **说明：**
+> 
+> 其中devices通过调用&lt;!--RP2--&gt;
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> 方法得到。&lt;!--RP2End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
 
@@ -658,9 +659,9 @@ inDevices(devices: Array<string>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了指定远程设备同步条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了指定远程设备同步条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -715,9 +716,9 @@ indexedBy(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回具有指定索引列的RdbPredicates。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回具有指定索引列的RdbPredicates。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -754,15 +755,15 @@ isNotNull(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了值不为null条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了值不为null条件的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -799,9 +800,9 @@ isNull(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了值为null条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了值为null条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -833,15 +834,15 @@ lessThan(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了小于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了小于指定值条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -873,15 +874,15 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了小于或等于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了小于或等于指定值条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -919,9 +920,9 @@ like(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了类似指定字符串条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了类似指定字符串条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -958,9 +959,9 @@ limitAs(value: number): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回可用于设置最大数据记录数的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回可用于设置最大数据记录数的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -992,16 +993,16 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示与谓词匹配的最小值。 |
-| high | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的最大值。 |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的最大值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了超出给定范围条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了超出给定范围条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -1033,15 +1034,15 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 指示要与谓词匹配的值。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了不等于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了不等于指定值条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -1079,9 +1080,9 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了值超出给定范围内条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了值超出给定范围内条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -1118,9 +1119,9 @@ offsetAs(rowOffset: number): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回具有指定返回结果起始位置的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回具有指定返回结果起始位置的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -1151,9 +1152,9 @@ or(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回带有或条件的Rdb谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有或条件的Rdb谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -1192,9 +1193,9 @@ orderByAsc(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了按升序排序条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了按升序排序条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
@@ -1231,9 +1232,9 @@ orderByDesc(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回配置了按降序排序条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了按降序排序条件的谓词。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE")

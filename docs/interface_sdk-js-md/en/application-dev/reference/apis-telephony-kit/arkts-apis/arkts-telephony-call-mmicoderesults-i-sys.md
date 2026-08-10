@@ -12,6 +12,12 @@ Indicates the MMI code result.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## message
 
 ```TypeScript
@@ -40,7 +46,7 @@ result: MmiCodeResult
 
 Indicates the result of MMI code.
 
-**Type:** MmiCodeResult
+**Type:** [MmiCodeResult](arkts-telephony-call-mmicoderesult-e-sys.md)
 
 **Since:** 9
 

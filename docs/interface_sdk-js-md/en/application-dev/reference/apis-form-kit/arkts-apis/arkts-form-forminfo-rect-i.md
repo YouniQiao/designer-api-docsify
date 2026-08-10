@@ -10,6 +10,12 @@ Indicates rectangle, unit is vp.
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+import { formInfo } from 'kits/@kit.FormKit';
+```
+
 ## height
 
 ```TypeScript
@@ -18,7 +24,7 @@ height: double
 
 The height of Rect Unit: vp.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -38,7 +44,7 @@ left: double
 
 The left position of Rect Unit: vp.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -58,7 +64,7 @@ top: double
 
 The top position of Rect Unit: vp.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 
@@ -78,7 +84,7 @@ width: double
 
 The width of Rect Unit: vp.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 20
 

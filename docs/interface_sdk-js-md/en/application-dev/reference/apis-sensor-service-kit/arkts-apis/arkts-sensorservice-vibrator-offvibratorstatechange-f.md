@@ -1,5 +1,11 @@
 # offVibratorStateChange
 
+## Modules to Import
+
+```TypeScript
+import { vibrator } from 'kits/@kit.SensorServiceKit';
+```
+
 ## offVibratorStateChange
 
 ```TypeScript
@@ -20,11 +26,11 @@ Unregister a callback function for vibrator plugin or unplug events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VibratorStatusEvent&gt; | No | The callback function to be removed from the event listener. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VibratorStatusEvent&gt; | No | The callback function to be removed from the event listener. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
+| 14600101 | Device operation failed. |
 

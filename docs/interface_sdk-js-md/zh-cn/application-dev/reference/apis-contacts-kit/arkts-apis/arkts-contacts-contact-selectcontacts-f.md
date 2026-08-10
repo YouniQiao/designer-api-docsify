@@ -1,5 +1,11 @@
 # selectContacts
 
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## selectContacts
 
 ```TypeScript
@@ -22,15 +28,15 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,7 +77,7 @@ function selectContacts(): Promise<Array<Contact>>
 | --- | --- |
 | Promise&lt;Array&lt;Contact&gt;&gt; | Promise对象。返回选择的联系人数组对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';
@@ -90,7 +96,7 @@ promise.then((data) => {
 function selectContacts(options: ContactSelectionOptions, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入[筛选条件]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_）。使用callback异步回调。
+调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入[筛选条件](arkts-contacts-contact-contactselectionoptions-i.md)）。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -106,16 +112,16 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 选择联系人时的筛选条件，表示单选或多选。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
+| options | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | 是 | 选择联系人时的筛选条件，表示单选或多选。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -156,7 +162,7 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 选择联系人时的筛选条件，用于指定是单选还是多选。 |
+| options | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | 是 | 选择联系人时的筛选条件，用于指定是单选还是多选。 |
 
 **返回值：**
 
@@ -168,9 +174,9 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

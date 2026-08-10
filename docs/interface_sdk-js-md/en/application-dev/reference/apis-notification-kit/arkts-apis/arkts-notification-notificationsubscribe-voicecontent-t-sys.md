@@ -4,7 +4,7 @@
 export type VoiceContent = _VoiceContent
 ```
 
-Describes the properties of the voice content of the received notification.
+通知消息中语音播报内容定义。
 
 **Since:** 26.0.0
 

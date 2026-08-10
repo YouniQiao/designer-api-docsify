@@ -276,15 +276,15 @@
   - [ToneHapticsType](arkts-audio-systemsoundmanager-tonehapticstype-e.md)
   - [常量](arkts-audio-systemsoundmanager-con-sys.md)
 - multimedia<!--arkts-audiokit-multimedia-->
-  - [multimedia/SystemSoundPlayer](arkts-multimedia/systemsoundplayer.md)
-    - [SystemSoundPlayer](systemsoundplayer-systemsoundplayer-i.md)
-  - [multimedia/ringtonePlayer](arkts-multimedia/ringtoneplayer.md)
+  - [SystemSoundPlayer](arkts-systemsoundplayer.md)
+    - [SystemSoundPlayer](arkts-audio-systemsoundplayer-i.md)
+  - [ringtonePlayer](arkts-ringtoneplayer.md)
     <!--Del-->
-    - [RingtoneOptions(系统接口)](ringtoneplayer-ringtoneoptions-i-sys.md)<!--DelEnd-->
+    - [RingtoneOptions(系统接口)](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [RingtonePlayer(系统接口)](ringtoneplayer-ringtoneplayer-i-sys.md)<!--DelEnd-->
-  - [multimedia/systemTonePlayer](arkts-multimedia/systemtoneplayer.md)
+    - [RingtonePlayer(系统接口)](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md)<!--DelEnd-->
+  - [systemTonePlayer](arkts-systemtoneplayer.md)
     <!--Del-->
-    - [SystemToneOptions(系统接口)](systemtoneplayer-systemtoneoptions-i-sys.md)<!--DelEnd-->
+    - [SystemToneOptions(系统接口)](arkts-audio-systemtoneplayer-systemtoneoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [SystemTonePlayer(系统接口)](systemtoneplayer-systemtoneplayer-i-sys.md)<!--DelEnd-->
+    - [SystemTonePlayer(系统接口)](arkts-audio-systemtoneplayer-systemtoneplayer-i-sys.md)<!--DelEnd-->

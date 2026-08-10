@@ -18,7 +18,7 @@ id?: string
 
 子组件的唯一标识。
 
-当strategy为TouchTestStrategy.DEFAULT时，id是可选的；当strategy是TouchTestStrategy.FORWARD\_COMPETITION或TouchTestStrategy.FORWARD时，id是必需的（如果没有返回id，则当成TouchTestStrategy.DEFAULT处理）。
+当strategy为TouchTestStrategy.DEFAULT时，id是可选的；当strategy是TouchTestStrategy.FORWARD_COMPETITION或TouchTestStrategy.FORWARD时，id是必需的（如果没有返回id，则当成TouchTestStrategy.DEFAULT处理）。
 
 **类型：** string
 
@@ -42,7 +42,7 @@ strategy: TouchTestStrategy
 
 事件派发策略。
 
-**类型：** TouchTestStrategy
+**类型：** [TouchTestStrategy](../arkts-apis/arkts-arkui-common-touchteststrategy-e.md)
 
 **起始版本：** 11
 

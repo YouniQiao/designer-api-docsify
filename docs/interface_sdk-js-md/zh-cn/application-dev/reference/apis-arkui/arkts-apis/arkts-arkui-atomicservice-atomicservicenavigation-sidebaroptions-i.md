@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from 'kits/@kit.ArkUI';
+```
+
 ## onChange
 
 ```TypeScript
@@ -18,7 +24,7 @@ onChange?: Callback<boolean>
 
 侧边栏显示隐藏回调。
 
-**类型：** Callback&lt;boolean&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
 
 **起始版本：** 18
 
@@ -38,7 +44,7 @@ sideBarBackground?: ResourceColor
 
 设置侧边栏的背景颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
 
@@ -58,7 +64,7 @@ sideBarIcon?: Resource | SymbolGlyphModifier
 
 侧边栏的展开图标。
 
-**类型：** Resource \| SymbolGlyphModifier
+**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| SymbolGlyphModifier
 
 **默认值：** $r('sys.symbol.open_sidebar')
 

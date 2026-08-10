@@ -1,12 +1,18 @@
 # setUserOperation (System API)
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## setUserOperation
 
 ```TypeScript
 function setUserOperation(operation: Operation, mac: string, params: string): void
 ```
 
-Sets a user operation.
+设置用户操作
 
 **Since:** 20
 
@@ -24,7 +30,7 @@ Sets a user operation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Operation type. |
+| operation | [Operation](../../apis-mdm-kit/arkts-apis/arkts-mdm-devicecontrol-operation-e.md) | Yes | 操作类型 |
 | mac | string | Yes | MAC address. |
 | params | string | Yes | Operation parameters. |
 
@@ -32,11 +38,11 @@ Sets a user operation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 console.info('User operate');

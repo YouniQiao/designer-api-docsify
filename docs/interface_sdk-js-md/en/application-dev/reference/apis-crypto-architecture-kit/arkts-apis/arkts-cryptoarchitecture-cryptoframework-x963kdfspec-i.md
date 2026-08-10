@@ -1,9 +1,10 @@
 # X963KdfSpec
 
-Defines the child class of [KdfSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It is a parameter for X963KDF key derivation function (KDF).
-    **NOTE**  
-    
-    **key** is the original key material entered by the user.
+密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为X963KDF密钥派生函数进行密钥派生时的输入。
+
+> **说明：**
+> 
+> key指的是用户输入的最初的密钥材料。
 
 **Inheritance/Implementation:** X963KdfSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 
@@ -15,13 +16,19 @@ Defines the child class of [KdfSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It is
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## info
 
 ```TypeScript
 info: Uint8Array
 ```
 
-Shared information.
+共享信息。
 
 **Type:** Uint8Array
 
@@ -41,7 +48,7 @@ Shared information.
 key: string | Uint8Array
 ```
 
-Key material.
+密钥材料。
 
 **Type:** string \| Uint8Array
 
@@ -61,9 +68,9 @@ Key material.
 keySize: int
 ```
 
-Length of the derived key, in bytes.The value must be a positive integer.
+派生得到的密钥字节长度，需要为正整数，单位为bytes。取值应为正整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 22
 

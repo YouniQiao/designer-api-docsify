@@ -1,6 +1,6 @@
 # StreamUsage
 
-Enumerates the types of audio streams played.
+表示播放音频流类型的枚举。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the types of audio streams played.
 STREAM_USAGE_UNKNOWN = 0
 ```
 
-Unknown content.
+未知类型。
 
 **Since:** 7
 
@@ -34,7 +34,9 @@ Unknown content.
 STREAM_USAGE_MEDIA = 1
 ```
 
-Media.
+媒体。
+
+从API version 7开始支持，从API version 10开始废弃，建议使用该枚举中的STREAM_USAGE_MUSIC、STREAM_USAGE_MOVIE、STREAM_USAGE_GAME或STREAM_USAGE_AUDIOBOOK替代。
 
 **Since:** 7
 
@@ -54,7 +56,7 @@ Media.
 STREAM_USAGE_MUSIC = 1
 ```
 
-Music.
+音乐。
 
 **Since:** 10
 
@@ -72,7 +74,7 @@ Music.
 STREAM_USAGE_VOICE_COMMUNICATION = 2
 ```
 
-VoIP voice call. (The 3A algorithm is enabled when this stream starts.)
+VoIP语音通话（该流类型起播时，会触发开启3A算法）。
 
 **Since:** 7
 
@@ -90,7 +92,7 @@ VoIP voice call. (The 3A algorithm is enabled when this stream starts.)
 STREAM_USAGE_VOICE_ASSISTANT = 3
 ```
 
-Voice assistant.
+语音播报。
 
 **Since:** 9
 
@@ -108,7 +110,7 @@ Voice assistant.
 STREAM_USAGE_ALARM = 4
 ```
 
-Audio stream for alarming.
+闹钟。
 
 **Since:** 10
 
@@ -126,7 +128,7 @@ Audio stream for alarming.
 STREAM_USAGE_VOICE_MESSAGE = 5
 ```
 
-Voice message.
+语音消息。
 
 **Since:** 10
 
@@ -144,7 +146,9 @@ Voice message.
 STREAM_USAGE_NOTIFICATION_RINGTONE = 6
 ```
 
-Notification or ringtone usage.
+通知铃声。
+
+从API version 7开始支持，从API version 10开始废弃，建议使用该枚举中的STREAM_USAGE_RINGTONE替代。
 
 **Since:** 7
 
@@ -164,7 +168,7 @@ Notification or ringtone usage.
 STREAM_USAGE_RINGTONE = 6
 ```
 
-Ringtone.
+铃声。
 
 **Since:** 10
 
@@ -182,7 +186,7 @@ Ringtone.
 STREAM_USAGE_NOTIFICATION = 7
 ```
 
-Notification.
+通知音。
 
 **Since:** 10
 
@@ -200,7 +204,7 @@ Notification.
 STREAM_USAGE_ACCESSIBILITY = 8
 ```
 
-Accessibility.
+无障碍。
 
 **Since:** 10
 
@@ -218,7 +222,7 @@ Accessibility.
 STREAM_USAGE_MOVIE = 10
 ```
 
-Movie or video.
+电影或视频。
 
 **Since:** 10
 
@@ -236,7 +240,7 @@ Movie or video.
 STREAM_USAGE_GAME = 11
 ```
 
-Gaming.
+游戏。
 
 **Since:** 10
 
@@ -254,7 +258,7 @@ Gaming.
 STREAM_USAGE_AUDIOBOOK = 12
 ```
 
-Audiobooks (including crosstalks and storytelling), news radio, and podcasts.
+有声读物（包括听书、相声、评书）、听新闻、播客等。
 
 **Since:** 10
 
@@ -272,7 +276,7 @@ Audiobooks (including crosstalks and storytelling), news radio, and podcasts.
 STREAM_USAGE_NAVIGATION = 13
 ```
 
-Navigation.
+导航。
 
 **Since:** 10
 
@@ -290,7 +294,7 @@ Navigation.
 STREAM_USAGE_VIDEO_COMMUNICATION = 17
 ```
 
-VoIP video call. (The 3A algorithm is enabled when this stream starts.)
+VoIP视频通话（该流类型起播时，会触发开启3A算法）。
 
 **Since:** 12
 

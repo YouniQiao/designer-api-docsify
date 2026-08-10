@@ -1,5 +1,11 @@
 # closeGeneratorDialog (System API)
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## closeGeneratorDialog
 
 ```TypeScript
@@ -24,11 +30,11 @@ Close the AI image generation task popup.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the context of dialog for ui display. |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c-sys.md) | Yes | the context of dialog for ui display. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Returns the result of close operation. |
+| Promise&lt;void&gt; | Returns the result of close operation. |
 

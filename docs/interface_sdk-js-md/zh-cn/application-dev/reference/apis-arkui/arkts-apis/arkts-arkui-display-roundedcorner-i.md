@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## position
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly position: Position
 
 圆角圆心的坐标点。
 
-**类型：** Position
+**类型：** [Position](arkts-arkui-display-position-i.md)
 
 **起始版本：** 23
 
@@ -40,7 +46,7 @@ readonly radius: int
 
 圆角半径，单位为px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 
@@ -62,7 +68,7 @@ readonly type: CornerType
 
 圆角类型。
 
-**类型：** CornerType
+**类型：** [CornerType](arkts-arkui-display-cornertype-e.md)
 
 **起始版本：** 23
 

@@ -1,5 +1,11 @@
 # queryFunctions (System API)
 
+## Modules to Import
+
+```TypeScript
+import { functionManager } from 'kits/@kit.AbilityKit';
+```
+
 ## queryFunctions
 
 ```TypeScript
@@ -26,13 +32,13 @@ Query all available functions.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;FunctionInfo&gt;&gt; | The promise used to return available functions. |
+| Promise&lt;Array&lt;[FunctionInfo](arkts-ability-functioninfo-i-sys.md)&gt;&gt; | The promise used to return available functions. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
 | 35600050 | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
 

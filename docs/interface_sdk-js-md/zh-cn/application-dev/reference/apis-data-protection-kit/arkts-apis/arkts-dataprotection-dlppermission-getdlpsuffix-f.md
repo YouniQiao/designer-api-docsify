@@ -1,5 +1,11 @@
 # getDLPSuffix
 
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## getDLPSuffix
 
 ```TypeScript
@@ -28,9 +34,9 @@ function getDLPSuffix(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| 19100011 | The system ability works abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';

@@ -1,5 +1,11 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## off
 
 ```TypeScript
@@ -20,11 +26,11 @@ Unsubscribes from the device status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| activity | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device status type. |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ActivityResponse&gt; | No | Callback used to receive reported data. If no value or **undefined** is passed, all callbacks associated with the specified event in the process will be unregistered. |
+| activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | Yes | Device status type. |
+| event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | Yes | Event type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActivityResponse&gt; | No | Callback used to receive reported data. If no value or **undefined** is passed, all callbacks associated with the specified event in the process will be unregistered. |
 
-**Example**
+## Examples
 
 ```TypeScript
 stationary.off('still', stationary.ActivityEvent.ENTER);

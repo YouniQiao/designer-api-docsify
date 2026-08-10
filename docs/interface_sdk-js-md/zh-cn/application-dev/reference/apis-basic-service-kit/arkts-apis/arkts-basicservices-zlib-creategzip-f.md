@@ -1,5 +1,11 @@
 # createGZip
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createGZip
 
 ```TypeScript
@@ -24,7 +30,7 @@ function createGZip(): Promise<GZip>
 | --- | --- |
 | Promise&lt;GZip&gt; | Promise对象。返回GZip对象实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

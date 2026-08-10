@@ -12,6 +12,12 @@ Style types supported by AI image generation models, like Graffiti, Watercolor.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## icon
 
 ```TypeScript
@@ -42,7 +48,7 @@ name: ResourceStr
 
 The style name information which will display in style list.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 

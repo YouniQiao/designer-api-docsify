@@ -1,5 +1,11 @@
 # stopPassiveRanging
 
+## Modules to Import
+
+```TypeScript
+import { ranging } from 'kits/@kit.ConnectivityKit';
+```
+
 ## stopPassiveRanging
 
 ```TypeScript
@@ -26,16 +32,16 @@ Stops the passive ranging broadcast and cleans up associated resources based on 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the handle number of ranging monitoring. |
-| capabilityType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the capability type for ranging. |
+| handle | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the handle number of ranging monitoring. |
+| capabilityType | [RangingTypes](arkts-connectivity-ranging-rangingtypes-e.md) | Yes | Indicates the capability type for ranging. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 34900052 | The specified type of ranging service is not supported. |
+| 801 | Capability not supported. |
 | 34900054 | The parameter value does not meet specifications. |
-| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
+| 34900099 | Internal system error. For example, Internal object is invalid. |
+| 201 | Permission denied. |
 

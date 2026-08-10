@@ -1,5 +1,11 @@
 # init
 
+## Modules to Import
+
+```TypeScript
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
+```
+
 ## init
 
 ```TypeScript

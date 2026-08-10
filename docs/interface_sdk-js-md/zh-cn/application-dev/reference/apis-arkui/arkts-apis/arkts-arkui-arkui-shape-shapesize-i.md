@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height?: double | string
 ```
 
-形状的高度。
+形状的高度。 
 
-类型为number时取值范围是[0, +∞)，string时是[Length]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。 
 
 单位：vp
 
@@ -44,7 +50,7 @@ width?: double | string
 
 形状的宽度。
 
-类型为number时取值范围是[0, +∞)，string时是[Length]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。 
 
 单位：vp
 

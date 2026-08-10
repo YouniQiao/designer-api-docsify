@@ -1,12 +1,13 @@
 # AudioVolumeGroupManager
 
-This interface implements volume management for an audio group.
+管理音频组音量。
 
-Before calling any API in AudioVolumeGroupManager, you must use  
-[getVolumeGroupManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to obtain an AudioVolumeGroupManager instance.
-    **NOTE**  
-    
-    - The initial APIs of this interface are supported since API version 9.
+在使用AudioVolumeGroupManager的接口之前，需先通过  
+[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)获取AudioVolumeGroupManager实例。
+
+> **说明：**
+> 
+> - 本Interface首批接口从API version 9开始支持。
 
 **Since:** 9
 
@@ -15,6 +16,12 @@ Before calling any API in AudioVolumeGroupManager, you must use
 <!--Device-audio-interface AudioVolumeGroupManager--><!--Device-audio-interface AudioVolumeGroupManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
+
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## getMaxAmplitudeForInputDevice
 
@@ -28,7 +35,7 @@ ArkTS-Sta:
 getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<double>
 ```
 
-Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an input device. This API uses a promise to return the result.
+获取输入设备音频流的最大电平值，取值范围为[0, 1]。使用Promise异步回调。
 
 **Since:** 12
 
@@ -42,21 +49,21 @@ Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputDevice | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Descriptor of the target device. |
+| inputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | 获取最大电平值的设备信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;double&gt; | Promise used to return the maximum amplitude, which is in the range [0, 1]. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;double&gt; | Promise对象，返回对应设备的电平值，大小在[0, 1]之间。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by promise. |
+| 6800301 | System error. Return by promise. |
 
 ## getMaxAmplitudeForOutputDevice
 
@@ -70,7 +77,7 @@ ArkTS-Sta:
 getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<double>
 ```
 
-Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an output device. This API uses a promise to return the result.
+获取输出设备音频流的最大电平值，取值范围为[0, 1]。使用Promise异步回调。
 
 **Since:** 12
 
@@ -84,21 +91,21 @@ Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outputDevice | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Descriptor of the target device. |
+| outputDevice | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Yes | 获取最大电平值的设备信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;double&gt; | Promise used to return the maximum amplitude, which is in the range [0, 1]. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;double&gt; | Promise对象，返回对应设备的电平值，大小在[0, 1]之间。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by promise. |
+| 6800301 | System error. Return by promise. |
 
 ## getMaxVolume
 
@@ -112,7 +119,7 @@ ArkTS-Sta:
 getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void
 ```
 
-Obtains the maximum volume level of a stream. This API uses an asynchronous callback to return the result.
+获取指定流的最大音量等级。使用callback异步回调。
 
 **Since:** 9
 
@@ -130,8 +137,8 @@ Obtains the maximum volume level of a stream. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the maximum stream volume level obtained; otherwise, **err** is an error object. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。当获取指定流的最大音量成功，err为undefined，data为获取到的指定流的最大音量等级；否则为错误对象。 |
 
 ## getMaxVolume
 
@@ -145,7 +152,7 @@ ArkTS-Sta:
 getMaxVolume(volumeType: AudioVolumeType): Promise<int>
 ```
 
-Obtains the maximum volume level of a stream. This API uses a promise to return the result.
+获取指定流的最大音量等级。使用Promise异步回调。
 
 **Since:** 9
 
@@ -163,13 +170,13 @@ Obtains the maximum volume level of a stream. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the maximum volume level. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回最大音量等级。 |
 
 ## getMaxVolumeSync
 
@@ -183,7 +190,7 @@ ArkTS-Sta:
 getMaxVolumeSync(volumeType: AudioVolumeType): int
 ```
 
-Obtains the maximum volume level of a stream. This API returns the result synchronously.
+获取指定流的最大音量等级。同步返回结果。
 
 **Since:** 10
 
@@ -201,20 +208,20 @@ Obtains the maximum volume level of a stream. This API returns the result synchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Maximum volume level. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回最大音量等级。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## getMinVolume
 
@@ -228,7 +235,7 @@ ArkTS-Sta:
 getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void
 ```
 
-Obtains the minimum volume level of a stream. This API uses an asynchronous callback to return the result.
+获取指定流的最小音量等级。使用callback异步回调。
 
 **Since:** 9
 
@@ -246,8 +253,8 @@ Obtains the minimum volume level of a stream. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum stream volume level obtained; otherwise, **err** is an error object. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。当获取指定流的最小音量成功，err为undefined，data为获取到的指定流的最小音量等级；否则为错误对象。 |
 
 ## getMinVolume
 
@@ -261,7 +268,7 @@ ArkTS-Sta:
 getMinVolume(volumeType: AudioVolumeType): Promise<int>
 ```
 
-Obtains the minimum volume level of a stream. This API uses a promise to return the result.
+获取指定流的最小音量等级。使用Promise异步回调。
 
 **Since:** 9
 
@@ -279,13 +286,13 @@ Obtains the minimum volume level of a stream. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the minimum volume level. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回最小音量等级。 |
 
 ## getMinVolumeSync
 
@@ -299,7 +306,7 @@ ArkTS-Sta:
 getMinVolumeSync(volumeType: AudioVolumeType): int
 ```
 
-Obtains the minimum volume level of a stream. This API returns the result synchronously.
+获取指定流的最小音量等级。同步返回结果。
 
 **Since:** 10
 
@@ -317,20 +324,20 @@ Obtains the minimum volume level of a stream. This API returns the result synchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Minimum volume level. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回最小音量等级。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## getRingerMode
 
@@ -338,7 +345,7 @@ Obtains the minimum volume level of a stream. This API returns the result synchr
 getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 ```
 
-Obtains the ringer mode. This API uses an asynchronous callback to return the result.
+获取铃声模式。使用callback异步回调。
 
 **Since:** 9
 
@@ -352,7 +359,7 @@ Obtains the ringer mode. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRingMode&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the ringer mode obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRingMode&gt; | Yes | 回调函数。当获取铃声模式成功，err为undefined，data为获取到的铃声模式；否则为错误对象。 |
 
 ## getRingerMode
 
@@ -360,7 +367,7 @@ Obtains the ringer mode. This API uses an asynchronous callback to return the re
 getRingerMode(): Promise<AudioRingMode>
 ```
 
-Obtains the ringer mode. This API uses a promise to return the result.
+获取铃声模式。使用Promise异步回调。
 
 **Since:** 9
 
@@ -374,7 +381,7 @@ Obtains the ringer mode. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioRingMode&gt; | Promise used to return the ringer mode. |
+| Promise&lt;AudioRingMode&gt; | Promise对象，返回系统的铃声模式。 |
 
 ## getRingerModeSync
 
@@ -382,7 +389,7 @@ Obtains the ringer mode. This API uses a promise to return the result.
 getRingerModeSync(): AudioRingMode
 ```
 
-Obtains the ringer mode. This API returns the result synchronously.
+获取铃声模式。同步返回结果。
 
 **Since:** 10
 
@@ -396,7 +403,7 @@ Obtains the ringer mode. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Ringer mode. |
+| [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 返回系统的铃声模式。 |
 
 ## getSystemVolumeInDb
 
@@ -410,7 +417,7 @@ ArkTS-Sta:
 getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType, callback: AsyncCallback<double>): void
 ```
 
-Obtains the volume gain. This API uses an asynchronous callback to return the result.
+获取音量增益dB值。使用callback异步回调。
 
 **Since:** 10
 
@@ -428,18 +435,18 @@ Obtains the volume gain. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| volumeLevel | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume level. |
-| device | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device type. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;double&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the volume gain obtained; otherwise, **err** is an error object. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
+| volumeLevel | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音量等级。 |
+| device | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | Yes | 设备类型。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | 回调函数。当获取音量增益dB值成功，err为undefined，data为获取到的音量增益dB值；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by callback. |
+| 6800301 | System error. Return by callback. |
 
 ## getSystemVolumeInDb
 
@@ -453,7 +460,7 @@ ArkTS-Sta:
 getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): Promise<double>
 ```
 
-Obtains the volume gain. This API uses a promise to return the result.
+获取音量增益dB值。使用Promise异步回调。
 
 **Since:** 10
 
@@ -471,23 +478,23 @@ Obtains the volume gain. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| volumeLevel | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume level. |
-| device | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
+| volumeLevel | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音量等级。 |
+| device | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | Yes | 设备类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;double&gt; | Promise used to return the volume gain (in dB). |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;double&gt; | Promise对象，返回对应的音量增益dB值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. Return by promise. |
+| 6800301 | System error. Return by promise. |
 
 ## getSystemVolumeInDbSync
 
@@ -501,7 +508,7 @@ ArkTS-Sta:
 getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: int, device: DeviceType): double
 ```
 
-Obtains the volume gain. This API returns the result synchronously.
+获取音量增益dB值。同步返回结果。
 
 **Since:** 10
 
@@ -519,22 +526,22 @@ Obtains the volume gain. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| volumeLevel | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Volume level. |
-| device | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Device type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
+| volumeLevel | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音量等级。 |
+| device | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | Yes | 设备类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Volume gain (in dB). |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回对应的音量增益dB值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## getVolume
 
@@ -548,7 +555,7 @@ ArkTS-Sta:
 getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<int>): void
 ```
 
-Obtains the volume level of a stream. This API uses an asynchronous callback to return the result.
+获取指定流的音量等级。使用callback异步回调。
 
 **Since:** 9
 
@@ -566,8 +573,8 @@ Obtains the volume level of a stream. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream volume level obtained; otherwise, **err** is an error object. The volume range of a specified stream can be obtained by calling [getMinVolume]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and [getMaxVolume]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。当获取指定流的音量成功，err为undefined，data为获取到的指定流的音量等级；否则为错误对象。指定流的音量等级范围可通过 [getMinVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getminvolume) 和 [getMaxVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getmaxvolume) 获取。 |
 
 ## getVolume
 
@@ -581,7 +588,7 @@ ArkTS-Sta:
 getVolume(volumeType: AudioVolumeType): Promise<int>
 ```
 
-Obtains the volume level of a stream. This API uses a promise to return the result.
+获取指定流的音量等级。使用Promise异步回调。
 
 **Since:** 9
 
@@ -599,13 +606,13 @@ Obtains the volume level of a stream. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the stream volume level. The volume range of a specified stream can be obtained by calling [getMinVolume]{ |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回指定流的音量等级。指定流的音量等级范围可通过 [getMinVolume]{ |
 
 ## getVolumeSync
 
@@ -619,7 +626,7 @@ ArkTS-Sta:
 getVolumeSync(volumeType: AudioVolumeType): int
 ```
 
-Obtains the volume level of a stream. This API returns the result synchronously.
+获取指定流的音量等级。同步返回结果。
 
 **Since:** 10
 
@@ -637,20 +644,20 @@ Obtains the volume level of a stream. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Volume level of the stream. The volume range of a specified stream can be obtained by calling [getMinVolume]{ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定流的音量等级。指定流的音量等级范围可通过 [getMinVolume]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## isMicrophoneMute
 
@@ -658,7 +665,7 @@ Obtains the volume level of a stream. This API returns the result synchronously.
 isMicrophoneMute(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the microphone is muted. This API uses an asynchronous callback to return the result.
+获取麦克风静音状态。使用callback异步回调。
 
 **Since:** 9
 
@@ -672,7 +679,7 @@ Checks whether the microphone is muted. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the microphone is muted or **false** if not muted; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当获取麦克风静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
 
 ## isMicrophoneMute
 
@@ -680,7 +687,7 @@ Checks whether the microphone is muted. This API uses an asynchronous callback t
 isMicrophoneMute(): Promise<boolean>
 ```
 
-Checks whether the microphone is muted. This API uses a promise to return the result.
+获取麦克风静音状态。使用Promise异步回调。
 
 **Since:** 9
 
@@ -694,7 +701,7 @@ Checks whether the microphone is muted. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the microphone is muted. **true** if muted, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示麦克风被静音；返回false表示麦克风未被静音。 |
 
 ## isMicrophoneMuteSync
 
@@ -702,7 +709,7 @@ Checks whether the microphone is muted. This API uses a promise to return the re
 isMicrophoneMuteSync(): boolean
 ```
 
-Checks whether the microphone is muted. This API returns the result synchronously.
+获取麦克风静音状态。同步返回结果。
 
 **Since:** 10
 
@@ -716,7 +723,7 @@ Checks whether the microphone is muted. This API returns the result synchronousl
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the microphone is muted. **true** if muted, **false** otherwise. |
+| boolean | 系统麦克风静音状态。返回true表示静音，返回false表示非静音。 |
 
 ## isMute
 
@@ -724,7 +731,7 @@ Checks whether the microphone is muted. This API returns the result synchronousl
 isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a stream is muted. This API uses an asynchronous callback to return the result.
+获取指定音量流静音状态。使用callback异步回调。
 
 **Since:** 9
 
@@ -742,8 +749,8 @@ Checks whether a stream is muted. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is muted or **false** if not muted; otherwise , **err** is an error object. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当获取指定音量流静音状态成功，err为undefined，data为true表示静音，false表示非静音；否则为错误对象。 |
 
 ## isMute
 
@@ -751,7 +758,7 @@ Checks whether a stream is muted. This API uses an asynchronous callback to retu
 isMute(volumeType: AudioVolumeType): Promise<boolean>
 ```
 
-Checks whether a stream is muted. This API uses a promise to return the result.
+获取指定音量流是否被静音。使用Promise异步回调。
 
 **Since:** 9
 
@@ -769,13 +776,13 @@ Checks whether a stream is muted. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is muted. **true** if muted, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示静音；返回false表示非静音。 |
 
 ## isMuteSync
 
@@ -783,7 +790,7 @@ Checks whether a stream is muted. This API uses a promise to return the result.
 isMuteSync(volumeType: AudioVolumeType): boolean
 ```
 
-Checks whether a stream is muted. This API returns the result synchronously.
+获取指定音量流是否被静音。同步返回结果。
 
 **Since:** 10
 
@@ -801,20 +808,20 @@ Checks whether a stream is muted. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio volume type. |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频音量类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the stream is muted. **true** if muted, **false** otherwise. |
+| boolean | 流静音状态。返回true表示静音，返回false表示非静音。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## isVolumeUnadjustable
 
@@ -822,7 +829,7 @@ Checks whether a stream is muted. This API returns the result synchronously.
 isVolumeUnadjustable(): boolean
 ```
 
-Checks whether the fixed volume mode is enabled. When the fixed volume mode is enabled, the volume cannot be adjusted. This API returns the result synchronously.
+获取固定音量模式开关状态，打开时进入固定音量模式，此时音量固定无法被调节。同步返回结果。
 
 **Since:** 10
 
@@ -836,7 +843,7 @@ Checks whether the fixed volume mode is enabled. When the fixed volume mode is e
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the fixed volume mode is enabled. **true** if enabled, **false** otherwise. |
+| boolean | 固定音量模式开关状态。返回true表示固定音量模式，返回false表示非固定音量模式。 |
 
 ## off('ringerModeChange')
 
@@ -844,7 +851,7 @@ Checks whether the fixed volume mode is enabled. When the fixed volume mode is e
 off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 ```
 
-Unsubscribes from the ringer mode change event. This API uses an asynchronous callback to return the result.
+取消监听铃声模式变化事件。使用callback异步回调。
 
 **Since:** 18
 
@@ -858,14 +865,14 @@ Unsubscribes from the ringer mode change event. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'ringerModeChange' | Yes | Event type. The event **'ringerModeChange'** is triggered when the ringer mode is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRingMode&gt; | No | Callback used to return the changed ringer mode. |
+| type | 'ringerModeChange' | Yes | 事件回调类型，支持的事件为'ringerModeChange'，当取消监听铃声模式变化事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRingMode&gt; | No | 回调函数，返回变化后的铃音模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## off('micStateChange')
 
@@ -873,7 +880,7 @@ Unsubscribes from the ringer mode change event. This API uses an asynchronous ca
 off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 ```
 
-Unsubscribes from the microphone state change event. This API uses an asynchronous callback to return the result.
+取消监听系统麦克风状态更改事件。使用callback异步回调。
 
 **Since:** 12
 
@@ -887,15 +894,15 @@ Unsubscribes from the microphone state change event. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'micStateChange' | Yes | Event type. The event **'micStateChange'** is triggered when the microphone state is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MicStateChangeEvent&gt; | No | Callback used to return the changed microphone state. |
+| type | 'micStateChange' | Yes | 事件回调类型，支持的事件为'micStateChange'，当取消监听系统麦克风状态更改事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MicStateChangeEvent&gt; | No | 回调函数，返回变更后的麦克风状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters missing; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters missing; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## offMicStateChange
 
@@ -917,13 +924,13 @@ Unsubscribes to the microphone state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MicStateChangeEvent&gt; | No | Callback used to get the system microphone state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MicStateChangeEvent&gt; | No | Callback used to get the system microphone state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## offRingerModeChange
 
@@ -945,13 +952,13 @@ Unsubscribes to the ringer mode state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRingMode&gt; | No | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRingMode&gt; | No | Callback used to get the updated ringer mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## on('ringerModeChange')
 
@@ -959,8 +966,7 @@ Unsubscribes to the ringer mode state change events.
 on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 ```
 
-Subscribes to the ringer mode change event, which is triggered when the  
-[AudioRingMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ changes. This API uses an asynchronous callback to return the result.
+监听铃声模式变化事件（当[AudioRingMode](arkts-audio-audio-audioringmode-e.md)发生变化时触发）。使用callback异步回调。
 
 **Since:** 9
 
@@ -974,15 +980,15 @@ Subscribes to the ringer mode change event, which is triggered when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'ringerModeChange' | Yes | Event type. The event **'ringerModeChange'** is triggered when the ringer mode is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRingMode&gt; | Yes | Callback used to return the changed ringer mode. |
+| type | 'ringerModeChange' | Yes | 事件回调类型，支持的事件为'ringerModeChange'，当铃声模式发生变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRingMode&gt; | Yes | 回调函数，返回变化后的铃音模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## on('micStateChange')
 
@@ -990,9 +996,9 @@ Subscribes to the ringer mode change event, which is triggered when the
 on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 ```
 
-Subscribes to the microphone state change event, which is triggered when the microphone state is changed. This API uses an asynchronous callback to return the result.
+监听系统麦克风状态更改事件（当检测到系统麦克风状态发生改变时触发）。使用callback异步回调。
 
-Currently, when multiple AudioManager instances are used in a single process, only the subscription of the last instance takes effect, and the subscription of other instances is overwritten (even if the last instance does not initiate a subscription). Therefore, you are advised to use a single AudioManager instance.
+目前此订阅接口在单进程多AudioManager实例的使用场景下，仅最后一个实例的订阅生效，其他实例的订阅会被覆盖（即使最后一个实例没有进行订阅）。因此，推荐使用单一AudioManager实例进行开发。
 
 **Since:** 9
 
@@ -1006,15 +1012,15 @@ Currently, when multiple AudioManager instances are used in a single process, on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'micStateChange' | Yes | Event type. The event **'micStateChange'** is triggered when the microphone state is changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MicStateChangeEvent&gt; | Yes | Callback used to return the changed microphone state. |
+| type | 'micStateChange' | Yes | 事件回调类型，支持的事件为'micStateChange'，当检测到系统麦克风状态发生改变时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MicStateChangeEvent&gt; | Yes | 回调函数，返回变更后的麦克风状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 6800101 | Parameter verification failed. |
 
 ## onMicStateChange
 
@@ -1036,13 +1042,13 @@ Listens for system microphone state change events. This method uses a callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MicStateChangeEvent&gt; | Yes | Callback used to get the system microphone state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MicStateChangeEvent&gt; | Yes | Callback used to get the system microphone state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## onRingerModeChange
 
@@ -1064,13 +1070,13 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRingMode&gt; | Yes | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRingMode&gt; | Yes | Callback used to get the updated ringer mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
 
 ## setMicrophoneMute
 
@@ -1078,7 +1084,11 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 ```
 
-Mutes or unmutes the microphone. This method uses an asynchronous callback to return the result.
+设置麦克风静音状态。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 11开始废弃。
 
 **Since:** 9
 
@@ -1096,8 +1106,8 @@ Mutes or unmutes the microphone. This method uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mute | boolean | Yes | Mute status to set. The value true means to mute the microphone, and false means the opposite. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| mute | boolean | Yes | 是否设置麦克风为静音状态。true表示静音，false表示非静音。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置麦克风静音状态成功，err为undefined，否则为错误对象。 |
 
 ## setMicrophoneMute
 
@@ -1105,7 +1115,11 @@ Mutes or unmutes the microphone. This method uses an asynchronous callback to re
 setMicrophoneMute(mute: boolean): Promise<void>
 ```
 
-Mutes or unmutes the microphone. This method uses a promise to return the result.
+设置麦克风静音状态。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 11开始废弃。
 
 **Since:** 9
 
@@ -1123,11 +1137,11 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mute | boolean | Yes | Mute status to set. The value true means to mute the microphone, and false means the opposite. |
+| mute | boolean | Yes | 是否设置麦克风为静音状态。true表示静音，false表示非静音。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 

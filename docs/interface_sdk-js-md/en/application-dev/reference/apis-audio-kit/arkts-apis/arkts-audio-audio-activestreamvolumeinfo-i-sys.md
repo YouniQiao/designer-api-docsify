@@ -1,6 +1,6 @@
 # ActiveStreamVolumeInfo (System API)
 
-Volume information for active audio streams.
+用于激活音频流的音量信息。
 
 **Since:** 24
 
@@ -12,15 +12,21 @@ Volume information for active audio streams.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## appVolume
 
 ```TypeScript
 appVolume: int
 ```
 
-Volume of the application.
+应用的音量。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -40,9 +46,9 @@ Volume of the application.
 clientUid: int
 ```
 
-UID of the application.
+音频应用的Uid。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -62,9 +68,9 @@ UID of the application.
 volumeType: AudioVolumeType
 ```
 
-Volume type of the current stream.
+当前音频流的音量类型。
 
-**Type:** AudioVolumeType
+**Type:** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md)
 
 **Since:** 24
 

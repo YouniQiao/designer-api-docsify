@@ -6,7 +6,7 @@
 declare function rmdir(path: string): Promise<void>
 ```
 
-Removes a directory. This API uses a promise to return the result.
+删除目录，使用Promise异步回调。
 
 **Since:** 7
 
@@ -24,13 +24,13 @@ Removes a directory. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
+| path | string | Yes | 待删除目录的应用沙箱路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 
 ## rmdir
@@ -39,7 +39,7 @@ Removes a directory. This API uses a promise to return the result.
 declare function rmdir(path: string, callback: AsyncCallback<void>): void
 ```
 
-Removes a directory. This API uses an asynchronous callback to return the result.
+删除目录，使用callback异步回调。
 
 **Since:** 7
 
@@ -57,6 +57,6 @@ Removes a directory. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when a directory is removed asynchronously. |
+| path | string | Yes | 待删除目录的应用沙箱路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步删除目录之后的回调。 |
 

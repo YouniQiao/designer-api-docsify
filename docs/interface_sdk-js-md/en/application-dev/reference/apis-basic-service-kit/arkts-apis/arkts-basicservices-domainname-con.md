@@ -8,7 +8,7 @@ const DEVICE_SHARED: string
 
 Provide the domain name for device shared Key.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This constants is a domain name for device level shared key.
+&lt;p&gt;This constants is a domain name for device level shared key.
 
 **Since:** 11
 
@@ -26,7 +26,7 @@ const USER_PROPERTY: string
 
 Provide the domain name for user property.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_This constants is a domain name for user level key.
+&lt;p&gt;This constants is a domain name for user level key.
 
 **Since:** 11
 

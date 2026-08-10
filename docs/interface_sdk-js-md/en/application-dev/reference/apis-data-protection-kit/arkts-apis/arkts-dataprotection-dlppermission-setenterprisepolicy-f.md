@@ -1,17 +1,24 @@
 # setEnterprisePolicy
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## setEnterprisePolicy
 
 ```TypeScript
 function setEnterprisePolicy(policy: EnterprisePolicy): void
 ```
 
-Sets the protection policy for enterprise applications. After the API is successfully called, the DLP protection for enterprise applications is implemented based on the configured policy.
+设置企业应用防护策略。调用成功后，企业应用的DLP防护将按照设置的策略执行。
 
-This API is used by the enterprise administrator to configure DLP security policies for unified management of data security protection rules.
-    **NOTE**  
-    
-    This API can be called only by enterprise accounts.
+该接口可用于企业管理员配置DLP安全策略，以统一管理企业数据安全防护规则。
+
+> **说明：**
+> 
+> 该接口仅支持企业账号调用。
 
 **Since:** 21
 
@@ -27,19 +34,18 @@ This API is used by the enterprise administrator to configure DLP security polic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Enterprise application protection policy to be set. Access control and behavior restrictions of enterprise DLP files are implemented based on the policy. |
+| policy | [EnterprisePolicy](arkts-dataprotection-dlppermission-enterprisepolicy-i.md) | Yes | 待设置的企业应用防护策略，设置后将按策略对企业DLP文件进行访问控制和行为限制。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [19100021](../errorcode-dlp.md#19100021-failed-to-set-enterprise-application-policy) | Failed to set the enterprise policy. |
+| 19100001 | Invalid parameter value. |
+| 19100021 | Failed to set the enterprise policy. |
+| 19100011 | The system ability works abnormally. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
@@ -63,29 +69,29 @@ interface Policy {
 }
 
 try {
-  let attributeValues: Array<string> = [ '1' ];
-  let attribute: Attribute = {
-    attributeId: 'DeviceHealthyStatus',
-    attributeValues: attributeValues,
-    valueType: 0,
-    opt: 2
-  }; // Attribute information
-  let rule: Rule = {
-    ruleId: 'ruleId',
-    attributes: [ attribute ]
-  }; // Rules
-  let policy: Policy = {
-    rules: [ rule ],
-    policyId: 'policyId',
-    ruleConflictAlg: 0
-  }; // Policy
-  let enterprisePolicy: dlpPermission.EnterprisePolicy = {
-    policyString: JSON.stringify(policy)
-  };
-  dlpPermission.setEnterprisePolicy(enterprisePolicy);
-  console.info('set enterprise policy success');
-} catch (err) {
-  console.error('error:' + err.code + err.message); // Throw an error if the operation fails.
+    let attributeValues: Array<string> = [ '1' ];
+    let attribute: Attribute = {
+        attributeId: 'DeviceHealthyStatus',
+        attributeValues: attributeValues,
+        valueType: 0,
+        opt: 2
+    }; // Attribute information
+    let rule: Rule = {
+        ruleId: 'ruleId',
+        attributes: [ attribute ]
+    }; // Rules
+    let policy: Policy = {
+        rules: [ rule ],
+        policyId: 'policyId',
+        ruleConflictAlg: 0
+    }; // Policy
+    let enterprisePolicy: dlpPermission.EnterprisePolicy = {
+        policyString: JSON.stringify(policy)
+    };
+    dlpPermission.setEnterprisePolicy(enterprisePolicy);
+    console.info('set enterprise policy success'); 
+} catch (err) { 
+    console.error(`Failed to set enterprise policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

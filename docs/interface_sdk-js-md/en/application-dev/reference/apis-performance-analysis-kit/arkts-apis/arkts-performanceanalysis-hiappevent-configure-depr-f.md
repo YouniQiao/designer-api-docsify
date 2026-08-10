@@ -6,7 +6,7 @@
 function configure(config: ConfigOption): boolean
 ```
 
-Configures the application event logging function, such as setting the event logging switch and maximum size of the directory that stores the event logging files.
+应用事件打点配置方法，可用于配置打点开关、文件目录存储限额大小等功能。
 
 **Since:** 7
 
@@ -24,15 +24,15 @@ Configures the application event logging function, such as setting the event log
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration items for application event logging. |
+| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | Yes | 应用事件打点配置项对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the configuration is successful; returns **false** otherwise. |
+| boolean | 配置结果，true 表示配置成功，false 表示配置失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 // Set the application event logging switch.

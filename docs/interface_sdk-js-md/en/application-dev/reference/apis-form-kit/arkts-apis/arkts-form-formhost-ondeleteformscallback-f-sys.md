@@ -1,5 +1,11 @@
 # onDeleteFormsCallback (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formHost } from 'kits/@kit.FormKit';
+```
+
 ## onDeleteFormsCallback
 
 ```TypeScript
@@ -32,7 +38,27 @@ Register the callback for deleting forms.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
+
+## Examples
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const callback = (formIds: string[]): void => {
+    console.info(`onDeleteFormsCallback formIds length: ${formIds.length}`);
+    for (let formId of formIds) {
+      console.info(`deleted formId: ${formId}`);
+    }
+  };
+  formHost.onDeleteFormsCallback(callback);
+  console.info(`onDeleteFormsCallback success`);
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
 

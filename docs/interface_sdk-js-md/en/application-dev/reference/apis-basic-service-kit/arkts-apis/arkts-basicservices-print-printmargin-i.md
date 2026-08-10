@@ -1,6 +1,6 @@
 # PrintMargin
 
-Defines the page margins for printing.
+定义打印页边距的接口。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Defines the page margins for printing.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## bottom
 
 ```TypeScript
 bottom?: int
 ```
 
-Bottom margin of the page, in millimeters. The default value is **0**.
+表示页面下边距。默认值为0。单位：毫米。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -34,9 +40,9 @@ Bottom margin of the page, in millimeters. The default value is **0**.
 left?: int
 ```
 
-Left margin of the page, in millimeters. The default value is **0**.
+表示页面左边距。默认值为0。单位：毫米。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -52,9 +58,9 @@ Left margin of the page, in millimeters. The default value is **0**.
 right?: int
 ```
 
-Right margin of the page, in millimeters. The default value is **0**.
+表示页面右边距。默认值为0。单位：毫米。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -70,9 +76,9 @@ Right margin of the page, in millimeters. The default value is **0**.
 top?: int
 ```
 
-Top margin of the page, in millimeters. The default value is **0**.
+表示页面上边距。默认值为0。单位：毫米。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

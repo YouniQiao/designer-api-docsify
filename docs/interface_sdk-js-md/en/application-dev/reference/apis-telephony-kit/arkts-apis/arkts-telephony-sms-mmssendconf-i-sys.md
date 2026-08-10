@@ -12,6 +12,12 @@ Defines the MMS message sending configuration.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## messageId
 
 ```TypeScript
@@ -40,7 +46,7 @@ responseState: int
 
 Indicates the response status for the MMS message sending configuration.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -80,7 +86,7 @@ version: MmsVersionType
 
 Indicates the version for the MMS message sending configuration.
 
-**Type:** MmsVersionType
+**Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **Since:** 8
 

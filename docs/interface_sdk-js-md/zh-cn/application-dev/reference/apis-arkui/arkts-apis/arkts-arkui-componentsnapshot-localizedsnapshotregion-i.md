@@ -1,121 +1,98 @@
 # LocalizedSnapshotRegion
 
-定义组件截图的矩形区域，start和end的值在布局方向为LTR时指定为left和right，在布局方向为RTL时指定为right和left。
-    **说明：**  
-    
-    直接使用componentSnapshot可能导致\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的问题，建议使用getUIContext()获取  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_实例，并使用[getComponentSnapshot]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_  
-    获取绑定实例的componentSnapshot。
+Defines the extra options for snapshot taking, if this is used, the start and end will be assigned to left and right value according to the layout direction of node automatically.
 
-**起始版本：** 15
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-componentSnapshot-interface LocalizedSnapshotRegion--><!--Device-componentSnapshot-interface LocalizedSnapshotRegion-End-->
+<!--Device-componentSnapshot-export interface LocalizedSnapshotRegion--><!--Device-componentSnapshot-export interface LocalizedSnapshotRegion-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { componentSnapshot } from 'kits/@kit.ArkUI';
+```
 
 ## bottom
 
 ```TypeScript
-bottom: number
+bottom: double
 ```
 
-截图区域矩形右下角的y轴坐标。
+Bottom side position of Rectangle, in PX.
 
-单位：px
+**类型：** double
 
-取值范围：[0, 组件高度]
+**起始版本：** 23
 
-**类型：** number
-
-**起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedSnapshotRegion-bottom: number--><!--Device-LocalizedSnapshotRegion-bottom: number-End-->
+<!--Device-LocalizedSnapshotRegion-bottom: double--><!--Device-LocalizedSnapshotRegion-bottom: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## end
 
 ```TypeScript
-end: number
+end: double
 ```
 
-布局方向为LTR时表示截图区域矩形右下角的x轴坐标，布局方向为RTL时表示截图区域矩形左下角的x轴坐标。
+End side position of Rectangle, in PX.
 
-单位：px
+**类型：** double
 
-取值范围：[0, 组件宽度]
+**起始版本：** 23
 
-**类型：** number
-
-**起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedSnapshotRegion-end: number--><!--Device-LocalizedSnapshotRegion-end: number-End-->
+<!--Device-LocalizedSnapshotRegion-end: double--><!--Device-LocalizedSnapshotRegion-end: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
 
 ```TypeScript
-start: number
+start: double
 ```
 
-布局方向为LTR时表示截图区域矩形左上角的x轴坐标，布局方向为RTL时表示截图区域矩形右上角的x轴坐标。
+Start side position of rectangle, in PX
 
-单位：px
+**类型：** double
 
-取值范围：[0, 组件宽度]
+**起始版本：** 23
 
-**类型：** number
-
-**起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedSnapshotRegion-start: number--><!--Device-LocalizedSnapshotRegion-start: number-End-->
+<!--Device-LocalizedSnapshotRegion-start: double--><!--Device-LocalizedSnapshotRegion-start: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## top
 
 ```TypeScript
-top: number
+top: double
 ```
 
-布局方向为LTR时表示截图区域矩形左上角的y轴坐标，布局方向为RTL时表示截图区域矩形右上角的y轴坐标。
+Top side position of rectangle, in PX
 
-单位：px
+**类型：** double
 
-取值范围：[0, 组件高度]
+**起始版本：** 23
 
-**类型：** number
-
-**起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
-
-<!--Device-LocalizedSnapshotRegion-top: number--><!--Device-LocalizedSnapshotRegion-top: number-End-->
+<!--Device-LocalizedSnapshotRegion-top: double--><!--Device-LocalizedSnapshotRegion-top: double-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

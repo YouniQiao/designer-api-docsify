@@ -1,5 +1,11 @@
 # getApplicationContext
 
+## 导入模块
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## getApplicationContext
 
 ```TypeScript
@@ -24,15 +30,15 @@ export function getApplicationContext(): ApplicationContext
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 应用上下文。 |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | 应用上下文。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| 16000050 | Internal error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';

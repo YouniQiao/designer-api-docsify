@@ -1,9 +1,10 @@
 # ActionSheetButtonOptions
 
 弹窗中按钮的样式。
-    **说明：**  
-    
-    为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+
+> **说明：**
+> 
+> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 
@@ -93,7 +94,7 @@ style?: DialogButtonStyle
 
 默认值：DialogButtonStyle.DEFAULT
 
-**类型：** DialogButtonStyle
+**类型：** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
 
 **默认值：** DialogButtonStyle.DEFAULT
 

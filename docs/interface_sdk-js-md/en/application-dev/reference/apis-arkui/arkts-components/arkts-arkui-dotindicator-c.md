@@ -1,6 +1,6 @@
 # DotIndicator
 
-A constructor used to create a **DotIndicator** object. It inherits from [Indicator]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+构造圆点指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md)。
 
 **Inheritance/Implementation:** DotIndicator extends [Indicator<DotIndicator>](Indicator<DotIndicator>)
 
@@ -18,7 +18,7 @@ A constructor used to create a **DotIndicator** object. It inherits from [Indica
 color(value: ResourceColor): DotIndicator
 ```
 
-Sets the color of the dot-style navigation indicator.
+Swiper组件圆点导航指示器的颜色。
 
 **Since:** 10
 
@@ -38,13 +38,13 @@ Sets the color of the dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Color of the dot-style navigation indicator.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **'#1A182431'** ( light gray) |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 设置Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#1A182431'，浅灰色。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current dot-style navigation indicator. |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## constructor
 
@@ -52,16 +52,14 @@ Sets the color of the dot-style navigation indicator.
 constructor()
 ```
 
-A constructor used to create a **DotIndicator** object.
-    **NOTE**  
-    
-    - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain  
-    distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.  
-    The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and  
-    **selectedItemHeight**.  
-    
-    - If there are too many pages and dot-style indicators exceed the page, you are advised to use the  
-    **maxDisplayCount** parameter to set the number of dots to be displayed.
+DotIndicator的构造函数。
+
+> **说明：**
+
+> - 按压导航点时，导航点会放大至1.33倍显示，因此非按压态时导航点的可见范围边界至实际范围边界存在一定距离，该距离会随着itemWidth、itemHeight、selectedItemWidth、
+> selectedItemHeight等参数变大而变大。
+> 
+> - 若页面数量较多、圆点导航点超出页面时，建议使用maxDisplayCount设置导航点显示个数。
 
 **Since:** 10
 
@@ -83,7 +81,7 @@ A constructor used to create a **DotIndicator** object.
 indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator
 ```
 
-Set indicator icon.
+设置导航点图标。
 
 **Since:** 26.0.0
 
@@ -103,13 +101,13 @@ Set indicator icon.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iconList | Array&lt;IndicatorIconInfo&gt; | Yes | Indicator items whose icons need to be set. |
+| iconList | Array&lt;IndicatorIconInfo&gt; | Yes | 需要设置的导航点索引。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | return the DotIndicator. |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回DotIndicator。 |
 
 ## itemHeight
 
@@ -117,7 +115,7 @@ Set indicator icon.
 itemHeight(value: Length): DotIndicator
 ```
 
-Sets the height of a dot-style navigation indicator of the **Swiper** component.
+Swiper组件圆点导航指示器的高。
 
 **Since:** 10
 
@@ -137,13 +135,13 @@ Sets the height of a dot-style navigation indicator of the **Swiper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Height of the dot-style indicator. This parameter cannot be set in percentage.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **6**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: (0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 设置Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current dot-style navigation indicator. |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## itemWidth
 
@@ -151,7 +149,7 @@ Sets the height of a dot-style navigation indicator of the **Swiper** component.
 itemWidth(value: Length): DotIndicator
 ```
 
-Sets the width of a dot-style navigation indicator of the **Swiper** component.
+Swiper组件圆点导航指示器的宽。
 
 **Since:** 10
 
@@ -171,13 +169,13 @@ Sets the width of a dot-style navigation indicator of the **Swiper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Width of the dot-style indicator. This parameter cannot be set in percentage.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **6**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: (0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 设置Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current dot-style navigation indicator. |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## mask
 
@@ -185,7 +183,7 @@ Sets the width of a dot-style navigation indicator of the **Swiper** component.
 mask(value: boolean): DotIndicator
 ```
 
-Sets whether to enable the mask for the dot-style navigation indicator.
+是否显示Swiper组件圆点导航指示器的蒙版样式。
 
 **Since:** 10
 
@@ -205,13 +203,13 @@ Sets whether to enable the mask for the dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the mask for the dot-style navigation indicator. The value **true** means to enable the mask for the dot-style navigation indicator, and **false** means the opposite.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **false**. |
+| value | boolean | Yes | 设置是否显示Swiper组件圆点导航指示器的蒙版样式。为true时显示Swiper组件圆点导航指示器的蒙版样式，为false时不显示。&lt;br/&gt;默认值：false |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current dot-style navigation indicator. |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## maxDisplayCount
 
@@ -219,7 +217,7 @@ Sets whether to enable the mask for the dot-style navigation indicator.
 maxDisplayCount(maxDisplayCount: number): DotIndicator
 ```
 
-Sets the maximum number of navigation dots in the dot-style navigation indicator.
+圆点导航点指示器样式下，导航点显示个数最大值。
 
 **Since:** 12
 
@@ -237,13 +235,13 @@ Sets the maximum number of navigation dots in the dot-style navigation indicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxDisplayCount | number | Yes | Maximum number of navigation dots in the dot-style navigation point indicator. If the actual number of navigation dots exceeds this limit, the overflow effect is activated, as shown in \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This parameter has no default value. If an invalid value is set, no overflow effect is applied.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [6, 9].\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_In scenarios involving overflow display:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. Interactive features, such as gestures and mouse operations, are not supported.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. The position of the selected navigation dot corresponding to the middle page is not strictly fixed; it depends on the sequence of previous page-turning operations.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Currently, only scenarios with **displayCount** set to **1** are supported. |
+| maxDisplayCount | number | Yes | 设置圆点导航点指示器样式下，导航点显示个数最大值，当实际导航点个数大于最大导航点个数时，会生效超长效果样式，样式如 [示例5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#示例5设置圆点导航点超长显示)所示。&lt;br/&gt;默认值：这个属性没有默认值，如果设置异 常值那等同于没有超长显示效果。&lt;br/&gt;取值范围：[6, 9]&lt;br/&gt;**说明：** &lt;br/&gt;1、超长显示场景，目前暂时不支持交互功能（包括：手指点击拖拽、鼠标操作等）。&lt;br/&gt;2、在超长显示场景下，中间页面对应的选 中导航点的位置，并不是完全固定的，取决于之前的翻页操作序列。&lt;br/&gt;3、当前仅支持displayCount为1的场景。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current dot-style navigation indicator. |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## selectedColor
 
@@ -251,7 +249,7 @@ Sets the maximum number of navigation dots in the dot-style navigation indicator
 selectedColor(value: ResourceColor): DotIndicator
 ```
 
-Sets the color of the selected dot-style navigation indicator.
+选中Swiper组件圆点导航指示器的颜色。
 
 **Since:** 10
 
@@ -271,13 +269,13 @@ Sets the color of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Color of the selected dot-style navigation indicator.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **'#007DFF'** (blue) |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 设置选中Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#007DFF'，蓝色。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current dot-style navigation indicator. |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## selectedItemHeight
 
@@ -285,7 +283,7 @@ Sets the color of the selected dot-style navigation indicator.
 selectedItemHeight(value: Length): DotIndicator
 ```
 
-Sets the height of the selected dot-style navigation indicator.
+选中Swiper组件圆点导航指示器的高。
 
 **Since:** 10
 
@@ -305,13 +303,13 @@ Sets the height of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Height of the selected dot-style indicator. This parameter cannot be set in percentage.&lt; br&gt;Default value: **6**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: (0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 设置选中Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current dot-style navigation indicator. |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## selectedItemWidth
 
@@ -319,7 +317,7 @@ Sets the height of the selected dot-style navigation indicator.
 selectedItemWidth(value: Length): DotIndicator
 ```
 
-Sets the width of the selected dot-style navigation indicator.
+选中Swiper组件圆点导航指示器的宽。
 
 **Since:** 10
 
@@ -339,13 +337,13 @@ Sets the width of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Width of the selected dot-style navigation indicator. This parameter cannot be set in percentage.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **6**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: (0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 设置选中Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current dot-style navigation indicator. |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## space
 
@@ -353,7 +351,7 @@ Sets the width of the selected dot-style navigation indicator.
 space(space: LengthMetrics): DotIndicator
 ```
 
-Sets the spacing between dot-style navigation indicators of the **Swiper** component.
+设置Swiper圆点导航点间距。
 
 **Since:** 19
 
@@ -373,11 +371,11 @@ Sets the spacing between dot-style navigation indicators of the **Swiper** compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **10** for PCs and 2-in-1 devices and **8** for other devices\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp&lt; br&gt;Value range: [0, +∞) |
+| space | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | 设置圆点导航点间距，不支持设置百分比。&lt;br/&gt;默认值：PC/2in1设备上为10，其他设备为8。&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：[0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Current dot-style navigation indicator. |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 

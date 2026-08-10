@@ -1,6 +1,6 @@
 # SslError
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ when onSslErrorEventReceive being called.
+Enum type supplied to {@link error} when onSslErrorEventReceive being called.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ when onSslErrorEvent
 Invalid = 0
 ```
 
-General error.
+一般错误。
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ General error.
 HostMismatch = 1
 ```
 
-Hostname mismatch.
+主机名不匹配。
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Hostname mismatch.
 DateInvalid = 2
 ```
 
-The certificate date is invalid.
+证书日期无效。
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ The certificate date is invalid.
 Untrusted = 3
 ```
 
-The certificate authority is not trusted.
+证书颁发机构不受信任。
 
 **Since:** 9
 

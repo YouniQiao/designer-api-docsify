@@ -1,15 +1,20 @@
 # finishAsyncTrace
 
+## Modules to Import
+
+```TypeScript
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## finishAsyncTrace
 
 ```TypeScript
 function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void
 ```
 
-Stops an asynchronous trace with the trace output level specified.
+标记一个异步跟踪耗时任务的结束，分级控制跟踪输出。
 
-The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be the same as those of  
-[startAsyncTrace()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)对应参数值一致。
 
 **Since:** 19
 
@@ -25,11 +30,11 @@ The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Trace output level. |
-| name | string | Yes | Name of the trace to start. |
-| taskId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Task ID. |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | 跟踪输出级别，必须与流程开始的 [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)的level参数值一致。 |
+| name | string | Yes | 要跟踪的任务名称，必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)的name 参数值一致。 |
+| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务id，必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)的taskId参数值一致。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;

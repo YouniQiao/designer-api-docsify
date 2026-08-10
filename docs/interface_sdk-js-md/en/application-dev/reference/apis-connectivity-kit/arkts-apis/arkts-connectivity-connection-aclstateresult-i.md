@@ -10,6 +10,12 @@ Acl state change result.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -38,7 +44,7 @@ state: AclState
 
 Acl state of the device.
 
-**Type:** AclState
+**Type:** [AclState](arkts-connectivity-connection-aclstate-e.md)
 
 **Since:** 26.0.0
 

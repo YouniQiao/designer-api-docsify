@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## audioSourceType
 
 ```TypeScript
@@ -20,7 +26,7 @@ audioSourceType?: AudioSourceType
 
 音频源类型，详见AudioSourceType。
 
-**类型：** AudioSourceType
+**类型：** [AudioSourceType](arkts-media-multimedia-media-audiosourcetype-e.md)
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ location?: Location
 
 地理位置信息。
 
-**类型：** Location
+**类型：** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
 
 **起始版本：** 9
 
@@ -60,7 +66,7 @@ profile: VideoRecorderProfile
 
 视频录制配置参数，可通过getVideoRecorderProfile获取，详见VideoRecorderProfile。
 
-**类型：** VideoRecorderProfile
+**类型：** [VideoRecorderProfile](arkts-media-multimedia-media-videorecorderprofile-i-sys.md)
 
 **起始版本：** 9
 
@@ -80,7 +86,7 @@ rotation?: int
 
 设置视频输出文件中的旋转角度，用于文件播放。仅mp4格式支持。旋转角度取值为{0, 90, 180, 270}，默认值为0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -120,7 +126,7 @@ videoSourceType: VideoSourceType
 
 视频源类型，详见VideoSourceType。
 
-**类型：** VideoSourceType
+**类型：** [VideoSourceType](arkts-media-multimedia-media-videosourcetype-e.md)
 
 **起始版本：** 9
 

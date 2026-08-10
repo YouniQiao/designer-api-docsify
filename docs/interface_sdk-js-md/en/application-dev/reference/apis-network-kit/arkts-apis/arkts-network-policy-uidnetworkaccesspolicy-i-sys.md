@@ -12,13 +12,19 @@ Provides the container definition for network access policy key-value pairs.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { policy } from 'kits/@kit.NetworkKit';
+```
+
 ## [uid: string]
 
 ```TypeScript
 [uid: string]: NetworkAccessPolicy
 ```
 
-**Type:** NetworkAccessPolicy
+**Type:** [NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md)
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # CoordinatesOptions
 
-Describes the coordinate options.
+设置坐标选项对象，用于指定坐标系的变换方向。
 
 **Since:** 8
 
@@ -10,15 +10,21 @@ Describes the coordinate options.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## x
 
 ```TypeScript
 x: int
 ```
 
-X coordinate direction.
+x坐标方向，用于指定旋转矩阵变换在x轴的方向。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -34,9 +40,9 @@ X coordinate direction.
 y: int
 ```
 
-Y coordinate direction.
+y坐标方向，用于指定旋转矩阵变换在y轴的方向。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

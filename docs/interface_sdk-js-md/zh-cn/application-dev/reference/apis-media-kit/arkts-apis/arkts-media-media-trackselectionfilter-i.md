@@ -10,15 +10,21 @@ Describes the filter conditions for track selection.
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## maxAudioBitrate
 
 ```TypeScript
 maxAudioBitrate?: int
 ```
 
-Maximum allowed audio bitrate.The value should be an integer.Value constraint:The value must be a positive integer (greater than 0).\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:bit/s.Default value:If this parameter is not set, the maximum audio bitrate is not limited.
+Maximum allowed audio bitrate.The value should be an integer.Value constraint:The value must be a positive integer (greater than 0).&lt;br&gt;Unit:bit/s.Default value:If this parameter is not set, the maximum audio bitrate is not limited.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -36,9 +42,9 @@ Maximum allowed audio bitrate.The value should be an integer.Value constraint:Th
 maxAudioChannels?: int
 ```
 
-Maximum allowed audio channel count.The value should be an integer.Value constraint:The value must be a positive integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value:If this parameter is not specified, the number of audio channels is not limited.
+Maximum allowed audio channel count.The value should be an integer.Value constraint:The value must be a positive integer.&lt;br&gt;Default value:If this parameter is not specified, the number of audio channels is not limited.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -56,9 +62,9 @@ Maximum allowed audio channel count.The value should be an integer.Value constra
 maxVideoBitrate?: int
 ```
 
-Maximum allowed video bitrate.The value should be an integer.Value constraint:The value must be a positive integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Bits/sec.Default value:If this parameter is not specified, the maximum video bitrate is not limited.
+Maximum allowed video bitrate.The value should be an integer.Value constraint:The value must be a positive integer.&lt;br&gt;Unit:Bits/sec.Default value:If this parameter is not specified, the maximum video bitrate is not limited.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -76,9 +82,9 @@ Maximum allowed video bitrate.The value should be an integer.Value constraint:Th
 maxVideoFrameRate?: int
 ```
 
-Maximum allowed video frame rate.The value should be an integer.Value constraint:The value must be a positive integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:frame/sec.Default value:If not specified, the maximum video frame rate is not limited.
+Maximum allowed video frame rate.The value should be an integer.Value constraint:The value must be a positive integer.&lt;br&gt;Unit:frame/sec.Default value:If not specified, the maximum video frame rate is not limited.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -96,9 +102,9 @@ Maximum allowed video frame rate.The value should be an integer.Value constraint
 maxVideoResolution?: VideoSize
 ```
 
-Maximum allowed video resolution.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value:If not specified, the maximum video resolution is not limited.
+Maximum allowed video resolution.&lt;br&gt;Default value:If not specified, the maximum video resolution is not limited.
 
-**类型：** VideoSize
+**类型：** [VideoSize](arkts-media-media-videosize-i.md)
 
 **起始版本：** 26.0.0
 
@@ -116,9 +122,9 @@ Maximum allowed video resolution.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default valu
 minAudioBitrate?: int
 ```
 
-Minimum allowed audio bitrate.The value should be an integer.Value constraint:The value must be a positive integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Bits/sec.Default value:If this parameter is not set, the minimum audio bitrate is not limited.
+Minimum allowed audio bitrate.The value should be an integer.Value constraint:The value must be a positive integer.&lt;br&gt;Unit:Bits/sec.Default value:If this parameter is not set, the minimum audio bitrate is not limited.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -136,9 +142,9 @@ Minimum allowed audio bitrate.The value should be an integer.Value constraint:Th
 minVideoBitrate?: int
 ```
 
-Minimum allowed video bitrate.The value should be an integer.Value constraint:The value must be a positive integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:Bits/sec.Default value:If no value is assigned, the minimum video bitrate is not limited.
+Minimum allowed video bitrate.The value should be an integer.Value constraint:The value must be a positive integer.&lt;br&gt;Unit:Bits/sec.Default value:If no value is assigned, the minimum video bitrate is not limited.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -156,9 +162,9 @@ Minimum allowed video bitrate.The value should be an integer.Value constraint:Th
 minVideoFrameRate?: int
 ```
 
-Minimum allowed video frame rate.The value should be an integer.Value constraint:The value must be a positive integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:frame/sec.Default value:If not specified, the minimum frame rate is not specified.
+Minimum allowed video frame rate.The value should be an integer.Value constraint:The value must be a positive integer.&lt;br&gt;Unit:frame/sec.Default value:If not specified, the minimum frame rate is not specified.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 
@@ -176,9 +182,9 @@ Minimum allowed video frame rate.The value should be an integer.Value constraint
 minVideoResolution?: VideoSize
 ```
 
-Minimum allowed video resolution.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value:If not specified, the minimum video resolution is not limited.
+Minimum allowed video resolution.&lt;br&gt;Default value:If not specified, the minimum video resolution is not limited.
 
-**类型：** VideoSize
+**类型：** [VideoSize](arkts-media-media-videosize-i.md)
 
 **起始版本：** 26.0.0
 
@@ -196,7 +202,7 @@ Minimum allowed video resolution.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default valu
 preferredAudioLanguages?: Array<string>
 ```
 
-The preferred languages for audio tracks.Multiple languages are arranged in the order of the array, with priorities in descending order.Value constraint:Language strings comply with the IETF BCP 47 definition.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value:If this parameter is not specified or the array is empty, the audio language is not restricted.
+The preferred languages for audio tracks.Multiple languages are arranged in the order of the array, with priorities in descending order.Value constraint:Language strings comply with the IETF BCP 47 definition.&lt;br&gt;Default value:If this parameter is not specified or the array is empty, the audio language is not restricted.
 
 **类型：** Array&lt;string&gt;
 
@@ -216,7 +222,7 @@ The preferred languages for audio tracks.Multiple languages are arranged in the 
 preferredAudioMimeTypes?: Array<string>
 ```
 
-Indicates the preferred encoding MIME type of the audio track.Multiple MIMEs are arranged in the order of the array, with priorities in descending order.Value constraint:Format as a MIME string or a codec string in HLS or DASH.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value:If not specified or an empty array is set, the MIME type of the audio is not restricted.
+Indicates the preferred encoding MIME type of the audio track.Multiple MIMEs are arranged in the order of the array, with priorities in descending order.Value constraint:Format as a MIME string or a codec string in HLS or DASH.&lt;br&gt;Default value:If not specified or an empty array is set, the MIME type of the audio is not restricted.
 
 **类型：** Array&lt;string&gt;
 
@@ -236,7 +242,7 @@ Indicates the preferred encoding MIME type of the audio track.Multiple MIMEs are
 preferredSubtitleLanguages?: Array<string>
 ```
 
-Preferred language set for subtitles.Multiple languages are arranged in the order of the array, with priorities in descending order.Value constraint:The language string complies with the IETF BCP 47 definition.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value:If this parameter is not specified or the array is empty, the subtitle language is not restricted.
+Preferred language set for subtitles.Multiple languages are arranged in the order of the array, with priorities in descending order.Value constraint:The language string complies with the IETF BCP 47 definition.&lt;br&gt;Default value:If this parameter is not specified or the array is empty, the subtitle language is not restricted.
 
 **类型：** Array&lt;string&gt;
 
@@ -256,7 +262,7 @@ Preferred language set for subtitles.Multiple languages are arranged in the orde
 preferredVideoMimeTypes?: Array<string>
 ```
 
-The preferred sample MIME types for video tracks in order of preference,Multiple MIMEs are arranged in the order of the array, with priorities in descending order.Value constraint:Format as a MIME string or a codec string in HLS or DASH.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value:If not specified or an empty array is set, the Mime type is not limited.
+The preferred sample MIME types for video tracks in order of preference,Multiple MIMEs are arranged in the order of the array, with priorities in descending order.Value constraint:Format as a MIME string or a codec string in HLS or DASH.&lt;br&gt;Default value:If not specified or an empty array is set, the Mime type is not limited.
 
 **类型：** Array&lt;string&gt;
 

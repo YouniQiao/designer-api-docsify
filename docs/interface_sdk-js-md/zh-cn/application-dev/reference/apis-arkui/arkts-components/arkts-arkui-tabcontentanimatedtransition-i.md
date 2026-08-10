@@ -16,7 +16,7 @@ Tabs自定义切换动画相关信息。
 timeout?: number
 ```
 
-自定义切换动画超时时间。如果到达该时间后，开发者仍未调用[TabContentTransitionProxy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的finishTransition接口通知Tabs组件自定义动画结束，那么组件就会认为此次自定义动画已结束，直接执行后续操作。
+自定义切换动画超时时间。如果到达该时间后，开发者仍未调用[TabContentTransitionProxy](arkts-arkui-tabcontenttransitionproxy-i.md)的finishTransition接口通知Tabs组件自定义动画结束，那么组件就会认为此次自定义动画已结束，直接执行后续操作。
 
 默认值：1000
 
@@ -50,7 +50,7 @@ transition: Callback<TabContentTransitionProxy>
 
 自定义切换动画具体内容。
 
-**类型：** Callback&lt;TabContentTransitionProxy&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;TabContentTransitionProxy&gt;
 
 **起始版本：** 11
 

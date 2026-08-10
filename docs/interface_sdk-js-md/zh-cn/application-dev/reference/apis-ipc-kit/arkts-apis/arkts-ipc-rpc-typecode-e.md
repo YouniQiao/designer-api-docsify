@@ -1,7 +1,7 @@
 # TypeCode
 
-从API version 12起，IPC新增[writeArrayBuffer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_和  
-[readArrayBuffer]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法传递ArrayBuffer数据，传递数据时通过具体类型值来分辨业务是以哪一种TypedArray去进行数据的读写。类型码对应数值及含义如下。
+从API version 12起，IPC新增[writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writearraybuffer)和  
+[readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readarraybuffer)方法传递ArrayBuffer数据，传递数据时通过具体类型值来分辨业务是以哪一种TypedArray去进行数据的读写。类型码对应数值及含义如下。
 
 **起始版本：** 12
 
@@ -17,7 +17,7 @@
 INT8_ARRAY = 0
 ```
 
-TypedArray类型为INT8\_ARRAY，数据将以8位有符号整数格式进行读写，每个元素占用1字节。
+TypedArray类型为INT8_ARRAY，数据将以8位有符号整数格式进行读写，每个元素占用1字节。
 
 **起始版本：** 12
 
@@ -33,7 +33,7 @@ TypedArray类型为INT8\_ARRAY，数据将以8位有符号整数格式进行读�
 UINT8_ARRAY = 1
 ```
 
-TypedArray类型为UINT8\_ARRAY，数据将以8位无符号整数格式进行读写，每个元素占用1字节。
+TypedArray类型为UINT8_ARRAY，数据将以8位无符号整数格式进行读写，每个元素占用1字节。
 
 **起始版本：** 12
 
@@ -49,7 +49,7 @@ TypedArray类型为UINT8\_ARRAY，数据将以8位无符号整数格式进行读
 INT16_ARRAY = 2
 ```
 
-TypedArray类型为INT16\_ARRAY，数据将以16位有符号整数格式进行读写，每个元素占用2字节。
+TypedArray类型为INT16_ARRAY，数据将以16位有符号整数格式进行读写，每个元素占用2字节。
 
 **起始版本：** 12
 
@@ -65,7 +65,7 @@ TypedArray类型为INT16\_ARRAY，数据将以16位有符号整数格式进行�
 UINT16_ARRAY = 3
 ```
 
-TypedArray类型为UINT16\_ARRAY，数据将以16位无符号整数格式进行读写，每个元素占用2字节。
+TypedArray类型为UINT16_ARRAY，数据将以16位无符号整数格式进行读写，每个元素占用2字节。
 
 **起始版本：** 12
 
@@ -81,7 +81,7 @@ TypedArray类型为UINT16\_ARRAY，数据将以16位无符号整数格式进行�
 INT32_ARRAY = 4
 ```
 
-TypedArray类型为INT32\_ARRAY，数据将以32位有符号整数格式进行读写，每个元素占用4字节。
+TypedArray类型为INT32_ARRAY，数据将以32位有符号整数格式进行读写，每个元素占用4字节。
 
 **起始版本：** 12
 
@@ -97,7 +97,7 @@ TypedArray类型为INT32\_ARRAY，数据将以32位有符号整数格式进行�
 UINT32_ARRAY = 5
 ```
 
-TypedArray类型为UINT32\_ARRAY，数据将以32位无符号整数格式进行读写，每个元素占用4字节。
+TypedArray类型为UINT32_ARRAY，数据将以32位无符号整数格式进行读写，每个元素占用4字节。
 
 **起始版本：** 12
 
@@ -113,7 +113,7 @@ TypedArray类型为UINT32\_ARRAY，数据将以32位无符号整数格式进行�
 FLOAT32_ARRAY = 6
 ```
 
-TypedArray类型为FLOAT32\_ARRAY，数据将以32位单精度浮点数格式进行读写，每个元素占用4字节。
+TypedArray类型为FLOAT32_ARRAY，数据将以32位单精度浮点数格式进行读写，每个元素占用4字节。
 
 **起始版本：** 12
 
@@ -129,7 +129,7 @@ TypedArray类型为FLOAT32\_ARRAY，数据将以32位单精度浮点数格式进
 FLOAT64_ARRAY = 7
 ```
 
-TypedArray类型为FLOAT64\_ARRAY，数据将以64位双精度浮点数格式进行读写，每个元素占用8字节。
+TypedArray类型为FLOAT64_ARRAY，数据将以64位双精度浮点数格式进行读写，每个元素占用8字节。
 
 **起始版本：** 12
 
@@ -145,7 +145,7 @@ TypedArray类型为FLOAT64\_ARRAY，数据将以64位双精度浮点数格式进
 BIGINT64_ARRAY = 8
 ```
 
-TypedArray类型为BIGINT64\_ARRAY，数据将以64位大整数格式进行读写，每个元素占用8字节。
+TypedArray类型为BIGINT64_ARRAY，数据将以64位大整数格式进行读写，每个元素占用8字节。
 
 **起始版本：** 12
 
@@ -161,7 +161,7 @@ TypedArray类型为BIGINT64\_ARRAY，数据将以64位大整数格式进行读�
 BIGUINT64_ARRAY = 9
 ```
 
-TypedArray类型为BIGUINT64\_ARRAY，数据将以64位无符号大整数格式进行读写，每个元素占用8字节。
+TypedArray类型为BIGUINT64_ARRAY，数据将以64位无符号大整数格式进行读写，每个元素占用8字节。
 
 **起始版本：** 12
 

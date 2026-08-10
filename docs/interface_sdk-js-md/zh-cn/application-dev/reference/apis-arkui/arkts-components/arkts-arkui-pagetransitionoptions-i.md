@@ -21,11 +21,11 @@ curve?: Curve | string | ICurve
 推荐以Curve或ICurve形式指定。
 
 当类型为string时，为动画插值曲线，取值参考  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的curve参数。
+[AnimateParam](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#animateparam对象说明)的curve参数。
 
 默认值：Curve.Linear
 
-**类型：** Curve \| string \| ICurve
+**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
 
 **默认值：** Curve.Linear
 
@@ -105,7 +105,7 @@ type?: RouteType
 
 默认值：RouteType.None。
 
-**类型：** RouteType
+**类型：** [RouteType](arkts-arkui-routetype-e.md)
 
 **起始版本：** 7
 

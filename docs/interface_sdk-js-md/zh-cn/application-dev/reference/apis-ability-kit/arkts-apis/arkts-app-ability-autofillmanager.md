@@ -8,9 +8,17 @@ autoFillManager模块提供账号密码保存等功能。
 
 **ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace autoFillManager--><!--Device-unnamed-declare namespace autoFillManager-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## 导入模块
+
+```TypeScript
+import { autoFillManager } from 'kits/@kit.AbilityKit';
+```
 
 ## 汇总
 

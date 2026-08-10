@@ -1,6 +1,6 @@
 # RemoveReason (System API)
 
-Reason for removing the notification.
+通知删除原因。
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ Reason for removing the notification.
 CLICK_REASON_REMOVE = 1
 ```
 
-The notification is removed after a click on it.
+点击通知后删除通知。
 
 **Since:** 7
 
@@ -44,7 +44,7 @@ The notification is removed after a click on it.
 CANCEL_REASON_REMOVE = 2
 ```
 
-The notification is removed by the user.
+用户删除通知。
 
 **Since:** 7
 

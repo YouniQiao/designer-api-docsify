@@ -1,5 +1,11 @@
 # LazyDynamicLayout
 
+## Modules to Import
+
+```TypeScript
+import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from 'kits/@kit.ArkUI';
+```
+
 ## LazyDynamicLayout
 
 ```TypeScript
@@ -9,7 +15,7 @@ export declare function LazyDynamicLayout (
 ): LazyDynamicLayoutAttribute
 ```
 
-Defines LazyDynamicLayout Component.
+定义LazyDynamicLayout组件。
 
 **Since:** 26.0.0
 
@@ -25,14 +31,14 @@ Defines LazyDynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Lazy layout algorithm. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| algorithm | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | Yes | 懒布局算法。 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |  |
 
 
 ## LazyDynamicLayout
@@ -44,11 +50,11 @@ export declare function LazyDynamicLayout(
 ): LazyDynamicLayoutAttribute
 ```
 
-Defines LazyDynamicLayout Component.
+定义LazyDynamicLayout组件。
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
 **Decorator:** @Builder
 
@@ -62,12 +68,12 @@ Defines LazyDynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LazyDynamicLayoutAttribute&gt; | Yes | The style to create a LazyDynamicLayout. |
-| content\_ | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | content |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyDynamicLayoutAttribute&gt; | Yes | The style to create a LazyDynamicLayout. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The attribute of the LazyDynamicLayout. |
+| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) | LazyDynamicLayout的属性。 |
 

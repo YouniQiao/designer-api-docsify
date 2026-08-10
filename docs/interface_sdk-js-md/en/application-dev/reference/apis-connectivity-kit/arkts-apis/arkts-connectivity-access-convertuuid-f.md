@@ -1,5 +1,11 @@
 # convertUuid
 
+## Modules to Import
+
+```TypeScript
+import { access } from 'kits/@kit.ConnectivityKit';
+```
+
 ## convertUuid
 
 ```TypeScript
@@ -10,7 +16,7 @@ Convert 2-byte and 4-byte UUID strings to the 16-byte UUID string standard used 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 <!--Device-access-function convertUuid(uuid: string): string--><!--Device-access-function convertUuid(uuid: string): string-End-->
 
@@ -28,7 +34,7 @@ Convert 2-byte and 4-byte UUID strings to the 16-byte UUID string standard used 
 | --- | --- |
 | string | Return the converted 16-byte UUID string. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

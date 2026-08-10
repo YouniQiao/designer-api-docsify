@@ -1,6 +1,6 @@
 # Configuration
 
-Defines the parameters for creating a child window or system window.
+创建子窗口或系统窗口时的参数。
 
 **Since:** 9
 
@@ -10,21 +10,29 @@ Defines the parameters for creating a child window or system window.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## defaultDensityEnabled
 
 ```TypeScript
 defaultDensityEnabled?: boolean
 ```
 
-Whether the window should use the default density of the system. If the default density is used, the window does not re-layout when the system display size changes.
+是否使用系统默认Density，使用系统默认Density之后，窗口不会跟随系统显示大小变化重新布局。
 
-If this parameter is set to **true** for a system window, the window uses the default density and is not affected by  
-[setDefaultDensityEnabled()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setCustomDensity()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_settings for the main window or  
-[setDefaultDensityEnabled()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_settings for the current window.
+当创建的系统窗口设置此参数为true时，表示当前窗口使用系统默认Density，且不会受到  
+[setDefaultDensityEnabled()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12)和[setCustomDensity()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setcustomdensity15)设置的主窗口以及  
+[setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setdefaultdensityenabled)设置的本窗口的相关影响。
 
-If this parameter is set to **false**, the window does not use the default density and is affected by those settings.
+当创建的系统窗口设置此参数为false时，表示当前窗口不使用系统默认Density，且会受到  
+[setDefaultDensityEnabled()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12)和[setCustomDensity()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setcustomdensity15)设置的主窗口以及  
+[setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setdefaultdensityenabled)设置的本窗口的相关影响。
 
-The default value is **false**.
+默认为false。
 
 **Type:** boolean
 
@@ -44,10 +52,9 @@ The default value is **false**.
 zIndex?: int
 ```
 
-Z-level of the system window. This parameter is valid only when [WindowType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is set to  
-**TYPE\_DYNAMIC**.
+当前系统窗口的层级，仅在[WindowType](arkts-arkui-window-windowtype-e.md)为TYPE_DYNAMIC时生效。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

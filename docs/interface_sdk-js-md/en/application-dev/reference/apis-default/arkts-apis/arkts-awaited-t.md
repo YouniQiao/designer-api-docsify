@@ -10,7 +10,7 @@ type Awaited<T> =
         T
 ```
 
-Recursively unwraps the "awaited type" of a type. Non-promise "thenables" should resolve to \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_. This emulates the behavior of \_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_.
+Recursively unwraps the "awaited type" of a type. Non-promise "thenables" should resolve to `never`. This emulates the behavior of `await`.
 
 **ArkTS mode:** ArkTS-Dyn only
 

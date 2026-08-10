@@ -1,6 +1,6 @@
 # NavigationToolbarOptions
 
-Defines the toolbar options.
+工具栏选项。
 
 **Since:** 11
 
@@ -16,9 +16,9 @@ Defines the toolbar options.
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the title bar. If this parameter is not set, the background blur effect is disabled.
+工具栏背景模糊样式，设置后，工具栏将应用指定的模糊样式；不设置时关闭背景模糊效果。
 
-**Type:** BlurStyle
+**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
 **Since:** 11
 
@@ -38,15 +38,15 @@ Background blur style of the title bar. If this parameter is not set, the backgr
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Options for the title bar background blur style.
+工具栏背景模糊选项。
 
-**NOTE**
+**说明：**
 
-This parameter is only effective when **backgroundBlurStyle** is set.
+只在设置了backgroundBlurStyle时生效。
 
-Avoid using this API in conjunction with **backgroundEffect**.
+不建议与backgroundEffect同时使用。
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 19
 
@@ -66,9 +66,9 @@ Avoid using this API in conjunction with **backgroundEffect**.
 backgroundColor?: ResourceColor
 ```
 
-Background color of the title bar. If this parameter is not set, the default color is used.
+工具栏背景颜色，设置后，工具栏背景将显示为指定颜色；不设置时为系统默认颜色。
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
 
@@ -88,13 +88,13 @@ Background color of the title bar. If this parameter is not set, the default col
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Title bar background properties, including blur radius, brightness, saturation, and color.
+设置工具栏背景属性包括：模糊半径，亮度，饱和度，颜色等。
 
-**NOTE**
+**说明：**
 
-Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
+不建议与backgroundBlurStyleOptions同时使用。
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 19
 
@@ -114,11 +114,11 @@ Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 barStyle?: BarStyle
 ```
 
-Layout style of the toolbar.
+设置工具栏布局方式。
 
-Default value: **BarStyle.STANDARD
+默认值：BarStyle.STANDARD
 
-**Type:** BarStyle
+**Type:** [BarStyle](arkts-arkui-barstyle-e.md)
 
 **Default:** BarStyle.STANDARD
 
@@ -140,13 +140,11 @@ Default value: **BarStyle.STANDARD
 hideItemValue?: boolean
 ```
 
-Whether to hide the toolbar text.
+设置是否隐藏工具栏的文本，默认显示文本。
 
-Default value: **false**
+true：隐藏工具栏的文本；false：不隐藏工具栏的文本。
 
-**true**: yes; **false**: no
-
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -170,9 +168,9 @@ Default value: **false
 moreButtonOptions?: MoreButtonOptions
 ```
 
-Options for the toolbar's more button menu.
+工具栏更多图标的菜单选项。
 
-**Type:** MoreButtonOptions
+**Type:** [MoreButtonOptions](../arkts-apis/arkts-arkui-navigation-morebuttonoptions-i.md)
 
 **Since:** 19
 

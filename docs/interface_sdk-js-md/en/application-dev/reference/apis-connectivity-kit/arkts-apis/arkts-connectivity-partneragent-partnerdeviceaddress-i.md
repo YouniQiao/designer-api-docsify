@@ -10,6 +10,12 @@ Describes the partner device address.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
+## Modules to Import
+
+```TypeScript
+import { partnerAgent } from 'kits/@kit.ConnectivityKit';
+```
+
 ## bluetoothAddress
 
 ```TypeScript

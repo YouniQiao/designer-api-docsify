@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.Contacts
 
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## filter
 
 ```TypeScript
@@ -18,7 +24,7 @@ filter?: ContactSelectionFilter
 
 联系人查询过滤器。从API version 15 开始，该接口支持在原子化服务中使用。
 
-**类型：** ContactSelectionFilter
+**类型：** [ContactSelectionFilter](arkts-contacts-contact-contactselectionfilter-i.md)
 
 **起始版本：** 15
 
@@ -36,7 +42,7 @@ filter?: ContactSelectionFilter
 isAutoDismissOnNavigation?: boolean
 ```
 
-联系人picker发生页面路由时是否自动关闭，比如应用退后台场景默认值为false
+联系人picker发生页面路由时是否自动关闭，比如应用退后台场景 默认值为false
 
 **类型：** boolean
 

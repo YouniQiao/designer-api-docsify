@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## interval
 
 ```TypeScript
@@ -17,9 +23,9 @@ interval?: long | SensorFrequency
 ```
 
 用于设置传感器数据上报的时间间隔。默认值：200000000ns（即200ms）。单位：ns（纳秒）。取值范围需参考各传感器的minSamplePeriod和maxSamplePeriod，可通过  
-[getSingleSensor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_查询。建议根据实际业务需求设置合理的上报频率，取值越小上报越频繁。当设置频率大于最大值时以最大值上报数据，小于最小值时以最小值上报数据。
+[getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md#getsinglesensor)查询。建议根据实际业务需求设置合理的上报频率，取值越小上报越频繁。当设置频率大于最大值时以最大值上报数据，小于最小值时以最小值上报数据。
 
-**类型：** long \| SensorFrequency
+**类型：** ArkTS-Dyn: number \| SensorFrequency  <br>ArkTS-Sta：long \| SensorFrequency
 
 **起始版本：** 8
 
@@ -41,7 +47,7 @@ sensorInfoParam?: SensorInfoParam
 
 从API version 19开始，该接口支持在原子化服务中使用。
 
-**类型：** SensorInfoParam
+**类型：** [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md)
 
 **起始版本：** 19
 

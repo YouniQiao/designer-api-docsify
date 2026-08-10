@@ -1,12 +1,18 @@
 # setMagnificationState (System API)
 
+## Modules to Import
+
+```TypeScript
+import { config } from 'kits/@kit.AccessibilityKit';
+```
+
 ## setMagnificationState
 
 ```TypeScript
 function setMagnificationState(state: boolean): void
 ```
 
-Sets the magnification state. Ensure that magnification is enabled before calling this API.
+触发或者关闭放大手势功能的放大效果，使用前需要保证放大手势功能已开启。
 
 **Since:** 20
 
@@ -24,14 +30,28 @@ Sets the magnification state. Ensure that magnification is enabled before callin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | boolean | Yes | Whether to trigger or disable the magnification feature.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **true**: to trigger the magnification feature.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **false**: to disable the magnification feature. |
+| state | boolean | Yes | 表示放大手势功能的放大效果的启用状态。&lt;br&gt;-true：表示触发放大效果。&lt;br&gt;-false：表示关闭放大效果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [9300007](../errorcode-accessibility.md#9300007-magnification-trigger-failed) | Trigger magnification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 9300007 | Trigger magnification failed. |
+
+## Examples
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  config.setMagnificationState(true);
+} catch (err) {
+  let e = err as BusinessError;
+  console.error(`Failed to set magnification. Code: ${e.code}, message: ${e.message}`);
+}
+```
 

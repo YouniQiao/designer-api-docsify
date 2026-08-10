@@ -1,7 +1,6 @@
 # AppEventGroup
 
-Defines parameters of the event group returned by the subscription. This API can be used to obtain detail information about an event group, which is often used in the **onReceive** callback of  
-[Watcher]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+提供订阅返回的事件组的参数定义。可用于获取事件组的详细信息，事件组常在[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)的onReceive回调中使用。
 
 **Since:** 11
 
@@ -11,13 +10,19 @@ Defines parameters of the event group returned by the subscription. This API can
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## appEventInfos
 
 ```TypeScript
 appEventInfos: Array<AppEventInfo>
 ```
 
-Event object group.
+事件对象集合。
 
 **Type:** Array&lt;AppEventInfo&gt;
 
@@ -37,7 +42,7 @@ Event object group.
 name: string
 ```
 
-Event name.
+事件名称。
 
 **Type:** string
 

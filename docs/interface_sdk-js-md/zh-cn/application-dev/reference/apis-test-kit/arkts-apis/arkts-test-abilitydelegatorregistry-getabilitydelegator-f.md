@@ -1,12 +1,18 @@
 # getAbilityDelegator
 
+## 导入模块
+
+```TypeScript
+import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
+```
+
 ## getAbilityDelegator
 
 ```TypeScript
 function getAbilityDelegator(): AbilityDelegator
 ```
 
-获取应用程序的[AbilityDelegator]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_对象，该对象能够使用调度测试框架的相关功能。
+获取应用程序的[AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md)对象，该对象能够使用调度测试框架的相关功能。
 
 **起始版本：** 9
 
@@ -22,9 +28,9 @@ function getAbilityDelegator(): AbilityDelegator
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | [AbilityDelegator]{ |
+| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) | [AbilityDelegator]{ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';

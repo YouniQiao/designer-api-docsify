@@ -12,6 +12,12 @@ This interface is used to notify the listener of any device Spatialization or He
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## deviceDescriptor
 
 ```TypeScript
@@ -20,7 +26,7 @@ deviceDescriptor: AudioDeviceDescriptor
 
 Audio device description.
 
-**类型：** AudioDeviceDescriptor
+**类型：** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md)
 
 **起始版本：** 12
 

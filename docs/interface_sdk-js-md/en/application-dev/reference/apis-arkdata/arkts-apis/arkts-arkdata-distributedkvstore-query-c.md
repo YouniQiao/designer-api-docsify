@@ -1,6 +1,6 @@
 # Query
 
-Provides methods to create a **Query** object, which defines different data query criteria. A **Query** object supports a maximum of 256 predicates.
+使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。Query对象的谓词方法均返回自身，支持链式调用。一个Query对象中谓词数量上限为256个。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Provides methods to create a **Query** object, which defines different data quer
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
+
 ## and
 
 ```TypeScript
 and(): Query
 ```
 
-Creates a **Query** object with the AND condition.
+构造一个带有与条件的查询对象。需先通过equalTo、notEqualTo等谓词方法添加查询条件后，再调用and()连接多个条件，无前置谓词时调用and()无效。
 
 **Since:** 9
 
@@ -32,9 +38,9 @@ Creates a **Query** object with the AND condition.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -42,14 +48,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.notEqualTo("field", "value1");
+      query.notEqualTo('field', 'value1');
       query.and();
-      query.notEqualTo("field", "value2");
-      console.info("query is " + query.getSqlLike());
+      query.notEqualTo('field', 'value2');
+      console.info('query is ' + query.getSqlLike());
     }
     query = null;
-} catch (e) {
-    console.error("duplicated calls should be ok :" + e);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -59,7 +66,7 @@ try {
 beginGroup(): Query
 ```
 
-Creates a **Query** object for a query condition group with a left parenthesis.
+创建一个带有左括号的查询条件组。必须与[endGroup()](arkts-arkdata-distributedkvstore-query-c.md#endgroup)成对使用，以形成完整的查询条件分组。
 
 **Since:** 9
 
@@ -75,9 +82,9 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -86,13 +93,14 @@ try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
       query.beginGroup();
-      query.isNotNull("field");
+      query.isNotNull('field');
       query.endGroup();
-      console.info("query is " + query.getSqlLike());
+      console.info('query is ' + query.getSqlLike());
     }
     query = null;
-} catch (e) {
-    console.error("duplicated calls should be ok :" + e);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -102,7 +110,7 @@ try {
 constructor()
 ```
 
-Defines a constructor used to create a **Query** instance.
+用于创建Query实例的构造函数。
 
 **Since:** 9
 
@@ -120,13 +128,17 @@ Defines a constructor used to create a **Query** instance.
 deviceId(deviceId: string): Query
 ```
 
-Creates a **Query** object with the device ID as the key prefix.
-    **NOTE**  
-    
-    **deviceId** can be obtained by  
-    [deviceManager.getAvailableDeviceListSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    .  
-        For details about how to obtain **deviceId**, see [sync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+添加设备ID作为Key的前缀。
+
+> **说明：**
+> 
+> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> networkId，通过调用
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> 方法得到。
+> 
+> deviceId具体获取方式请参考
+> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **Since:** 9
 
@@ -142,21 +154,21 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | ID of the device to be queried. This parameter cannot be left empty. |
+| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -164,12 +176,12 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.deviceId("deviceId");
+      query.deviceId('deviceId');
       console.info(`query is ${query.getSqlLike()}`);
     }
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -179,7 +191,7 @@ try {
 endGroup(): Query
 ```
 
-Creates a **Query** object for a query condition group with a right parenthesis.
+创建一个带有右括号的查询条件组。必须与[beginGroup()](arkts-arkdata-distributedkvstore-query-c.md#begingroup)成对使用，以形成完整的查询条件分组。
 
 **Since:** 9
 
@@ -195,9 +207,9 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -206,13 +218,14 @@ try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
       query.beginGroup();
-      query.isNotNull("field");
+      query.isNotNull('field');
       query.endGroup();
-      console.info("query is " + query.getSqlLike());
+      console.info('query is ' + query.getSqlLike());
     }
     query = null;
-} catch (e) {
-    console.error("duplicated calls should be ok :" + e);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -228,14 +241,14 @@ ArkTS-Sta:
 equalTo(field: string, value: long | double | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is equal to the given value.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。
+
+> **说明：**
+> 
+> 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -251,20 +264,20 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | ArkTS-Dyn: number \| number \| string \| boolean  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long \| double \| string \| boolean | Yes | Value specified. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | Yes | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## getSqlLike
 
@@ -272,7 +285,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 getSqlLike(): string
 ```
 
-Obtains the query statement of the **Query** object.
+获取Query对象的查询语句。
 
 **Since:** 9
 
@@ -288,9 +301,9 @@ Obtains the query statement of the **Query** object.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the query statement obtained. |
+| string | 返回Query对象构建的查询语句字符串，可用于查看和调试当前的查询条件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -301,8 +314,9 @@ try {
       let sql1 = query.getSqlLike();
       console.info(`GetSqlLike sql= ${sql1}`);
     }
-} catch (e) {
-    console.error("duplicated calls should be ok : " + e);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -318,14 +332,14 @@ ArkTS-Sta:
 greaterThan(field: string, value: long | double | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is greater than the specified value.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有大于指定值的指定字段的条目。
+
+> **说明：**
+> 
+> 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -342,19 +356,19 @@ Creates a **Query** object to match the specified field whose value is greater t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Indicates the field, which cannot contain ^. |
-| value | ArkTS-Dyn: number \| number \| string \| boolean  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long \| double \| string \| boolean | Yes | Indicates the value to be compared. |
+| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | Yes | Indicates the value to be compared. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -368,14 +382,14 @@ ArkTS-Sta:
 greaterThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。
+
+> **说明：**
+> 
+> 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -391,20 +405,20 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | ArkTS-Dyn: number \| number \| string  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long \| double \| string | Yes | Value specified. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inNumber
 
@@ -418,14 +432,14 @@ ArkTS-Sta:
 inNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is within the specified list of numbers.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。
+
+> **说明：**
+> 
+> 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -441,20 +455,20 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| valueList | ArkTS-Dyn: number[] \| number[]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long[] \| double[] | Yes | List of numbers. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| valueList | ArkTS-Dyn: number[] \| number[]  <br>ArkTS-Sta：long[] \| double[] | Yes | 是 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inString
 
@@ -462,14 +476,14 @@ Creates a **Query** object to match the specified field whose value is within th
 inString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is within the specified list of strings.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。
+
+> **说明：**
+> 
+> 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -485,22 +499,22 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| valueList | string[] | Yes | List of strings. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| valueList | string[] | Yes | 表示指定的字符串值列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -508,13 +522,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.inString("field", ['test1', 'test2']);
+      query.inString('field', ['test1', 'test2']);
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -524,14 +538,14 @@ try {
 isNotNull(field: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not **null**.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有值不为null的指定字段的条目。
+
+> **说明：**
+> 
+> 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -547,21 +561,21 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -569,13 +583,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let query: distributedKVStore.Query | null = new distributedKVStore.Query();
   if (query != null) {
-    query.isNotNull("field");
+    query.isNotNull('field');
     console.info(`query is ${query.getSqlLike()}`);
   }
   query = null;
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -585,14 +599,14 @@ try {
 isNull(field: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is **null**.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有值为null的指定字段的条目。
+
+> **说明：**
+> 
+> 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -608,21 +622,21 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -630,13 +644,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.isNull("field");
+      query.isNull('field');
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -652,14 +666,14 @@ ArkTS-Sta:
 lessThan(field: string, value: long | double | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is less than the specified value.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有小于指定值的指定字段的条目。
+
+> **说明：**
+> 
+> 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -675,20 +689,20 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | ArkTS-Dyn: number \| number \| string  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long \| double \| string | Yes | Value specified. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -702,14 +716,14 @@ ArkTS-Sta:
 lessThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is less than or equal to the specified value.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。
+
+> **说明：**
+> 
+> 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -725,20 +739,20 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | ArkTS-Dyn: number \| number \| string  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long \| double \| string | Yes | Value specified. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## like
 
@@ -746,14 +760,14 @@ Creates a **Query** object to match the specified field whose value is less than
 like(field: string, value: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is similar to the specified string.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。
+
+> **说明：**
+> 
+> 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -769,22 +783,22 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | string | Yes | String specified. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| value | string | Yes | 表示指定字段要匹配的字符串值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -792,13 +806,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.like("field", "value");
+      query.like('field', 'value');
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -814,8 +828,7 @@ ArkTS-Sta:
 limit(total: int, offset: int): Query
 ```
 
-Creates a **Query** object to specify the number of records of the query result and where to start. This API must be called after the invocation of the **orderByAsc()**, **orderByDesc()**, and the query APIs of the **Query**  
-object.
+构造一个Query对象来指定结果的数量和开始位置。该接口必须要在Query对象查询和升降序等操作之后调用，调用limit接口后，不可再对Query对象进行查询和升降序等操作。
 
 **Since:** 9
 
@@ -831,22 +844,22 @@ object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| total | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Maximum number of results to query. The value must be a non-negative integer.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is a negative number, the entire result set is queried. |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Start position of the query result. The value must be a non-negative integer.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value is a negative number, the entire result set is queried.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If **offset** exceeds the end of the result set, the query result is empty. |
+| total | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示最大数据记录数。&lt;br/&gt;取值为非负整数时表示指定的最大记录数。&lt;br/&gt;取值为负数时，表示查询整个结果集。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定查询结果的起始位置。取值为非负整数时表示指定的起始位置；取值为负数时，表示查询整个结果集。当offset超出结果集最后位置时，查询结果为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -856,14 +869,14 @@ let offset = 1;
 try {
   let query: distributedKVStore.Query | null = new distributedKVStore.Query();
   if (query != null) {
-    query.notEqualTo("field", "value");
+    query.notEqualTo('field', 'value');
     query.limit(total, offset);
     console.info(`query is ${query.getSqlLike()}`);
   }
   query = null;
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -879,14 +892,14 @@ ArkTS-Sta:
 notEqualTo(field: string, value: long | double | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not equal to the specified value.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有指定字段且值不等于指定值的条目。
+
+> **说明：**
+> 
+> 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -902,20 +915,20 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | ArkTS-Dyn: number \| number \| string \| boolean  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long \| double \| string \| boolean | Yes | Value specified. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | Yes | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInNumber
 
@@ -929,14 +942,14 @@ ArkTS-Sta:
 notInNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not within the specified list of numbers.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。
+
+> **说明：**
+> 
+> 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -952,20 +965,20 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| valueList | ArkTS-Dyn: number[] \| number[]  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long[] \| double[] | Yes | List of numbers. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| valueList | ArkTS-Dyn: number[] \| number[]  <br>ArkTS-Sta：long[] \| double[] | Yes | 是 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInString
 
@@ -973,14 +986,14 @@ Creates a **Query** object to match the specified field whose value is not withi
 notInString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not within the specified list of strings.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。
+
+> **说明：**
+> 
+> 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -996,22 +1009,22 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| valueList | string[] | Yes | List of strings. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| valueList | string[] | Yes | 表示指定的字符串值列表。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1019,13 +1032,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.notInString("field", ['test1', 'test2']);
+      query.notInString('field', ['test1', 'test2']);
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1035,7 +1048,7 @@ try {
 or(): Query
 ```
 
-Creates a **Query** object with the OR condition.
+构造一个带有或条件的Query对象。需先通过equalTo、notEqualTo等谓词方法添加查询条件后，再调用or()连接多个条件，无前置谓词时调用or()无效。
 
 **Since:** 9
 
@@ -1051,9 +1064,9 @@ Creates a **Query** object with the OR condition.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1061,14 +1074,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.notEqualTo("field", "value1");
+      query.notEqualTo('field', 'value1');
       query.or();
-      query.notEqualTo("field", "value2");
-      console.info("query is " + query.getSqlLike());
+      query.notEqualTo('field', 'value2');
+      console.info('query is ' + query.getSqlLike());
     }
     query = null;
-} catch (e) {
-    console.error("duplicated calls should be ok :" + e);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1078,14 +1092,14 @@ try {
 orderByAsc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in ascending order.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象，将查询结果按升序排序。
+
+> **说明：**
+> 
+> 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -1101,21 +1115,21 @@ Creates a **Query** object to sort the query results in ascending order.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1123,14 +1137,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.notEqualTo("field", "value");
-      query.orderByAsc("field");
+      query.notEqualTo('field', 'value');
+      query.orderByAsc('field');
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1140,14 +1154,14 @@ try {
 orderByDesc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in descending order.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象，将查询结果按降序排序。
+
+> **说明：**
+> 
+> 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -1163,21 +1177,21 @@ Creates a **Query** object to sort the query results in descending order.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1185,14 +1199,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.notEqualTo("field", "value");
-      query.orderByDesc("field");
+      query.notEqualTo('field', 'value');
+      query.orderByDesc('field');
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1202,7 +1216,7 @@ try {
 prefixKey(prefix: string): Query
 ```
 
-Creates a **Query** object with a specified key prefix.
+创建具有指定键前缀的查询条件。
 
 **Since:** 9
 
@@ -1218,21 +1232,21 @@ Creates a **Query** object with a specified key prefix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | Key prefix, which cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| prefix | string | Yes | 表示指定的键前缀，长度范围为0-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，不能包含'^'。包含'^'将导致谓 词失效，查询结果会返回数据库中的所有数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1240,14 +1254,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.prefixKey("$.name");
-      query.prefixKey("0");
+      query.prefixKey('$.name');
+      query.prefixKey('0');
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1257,7 +1271,7 @@ try {
 reset(): Query
 ```
 
-Resets the **Query** object.
+重置Query对象。
 
 **Since:** 9
 
@@ -1273,9 +1287,9 @@ Resets the **Query** object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object reset. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回重置后的Query对象，所有已添加的谓词条件被清空，可用于重新构建查询条件。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1283,14 +1297,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let query: distributedKVStore.Query | null = new distributedKVStore.Query();
   if (query != null) {
-    query.equalTo("key", "value");
-    console.info("query is " + query.getSqlLike());
+    query.equalTo('key', 'value');
+    console.info('query is ' + query.getSqlLike());
     query.reset();
-    console.info("query is " + query.getSqlLike());
+    console.info('query is ' + query.getSqlLike());
   }
   query = null;
-} catch (e) {
-  console.error("simply calls should be ok :" + e);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1300,7 +1315,7 @@ try {
 setSuggestIndex(index: string): Query
 ```
 
-Creates a **Query** object with an index preferentially used for query.
+设置一个指定的索引，将优先用于查询。
 
 **Since:** 9
 
@@ -1316,21 +1331,21 @@ Creates a **Query** object with an index preferentially used for query.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | string | Yes | Index to set, which cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| index | string | Yes | 表示要设置的索引，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1338,14 +1353,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.setSuggestIndex("$.name");
-      query.setSuggestIndex("0");
+      query.setSuggestIndex('$.name');
+      query.setSuggestIndex('0');
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1355,14 +1370,14 @@ try {
 unlike(field: string, value: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not similar to the specified string.
-    **NOTE**  
-    
-    This API should be used together with [Schema]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.  
-    
-    For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
-    store using the **getKVStore()** method in  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。
+
+> **说明：**
+> 
+> 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 
+> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
+> 取键值数据库示例。
 
 **Since:** 9
 
@@ -1378,22 +1393,22 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | string | Yes | String specified. |
+| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| value | string | Yes | 表示指定字段要不匹配的字符串值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Query** object created. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1401,13 +1416,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.unlike("field", "value");
+      query.unlike('field', 'value');
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (e) {
-    let error = e as BusinessError;
-    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

@@ -1,6 +1,6 @@
 # UiDirection
 
-Describes the direction of a UI operation such as fling.
+进行抛滑等UI操作时的方向。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Describes the direction of a UI operation such as fling.
 LEFT = 0
 ```
 
-Leftward.
+向左。
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ Leftward.
 RIGHT = 1
 ```
 
-Rightward.
+向右。
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ Rightward.
 UP = 2
 ```
 
-Upward.
+向上。
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ Upward.
 DOWN = 3
 ```
 
-Downward.
+向下。
 
 **Since:** 10
 

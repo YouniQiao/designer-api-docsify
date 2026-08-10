@@ -1,6 +1,6 @@
 # AccessibilitySpanOptions
 
-Defines accessibility options for the span.
+Span的无障碍朗读功能属性。
 
 **Since:** 23
 
@@ -16,13 +16,13 @@ Defines accessibility options for the span.
 accessibilityDescription?: ResourceStr
 ```
 
-Accessibility description. This description provides users with a detailed explanation of the current component to help users understand the intended operation and its consequences, especially when these consequences cannot be directly obtained from the component's attributes and accessibility text alone.
+无障碍说明属性。此描述用于向用户详细解释当前组件，开发人员应提供详尽的文本说明，以协助用户理解即将执行的操作及其后果，尤其当这些后果无法仅从组件的属性和无障碍文本中直接获取时。
 
-Default value: **''**
+默认值：''
 
-If the value is **undefined**, the default value is used.
+值为undefined时，按默认值处理。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
@@ -42,27 +42,27 @@ If the value is **undefined**, the default value is used.
 accessibilityLevel?: string
 ```
 
-Accessibility level. It determines whether the component can be recognized by accessibility services.
+无障碍重要性。用于设置组件是否可被无障碍辅助服务识别。
 
-The options are as follows:
+支持取值如下：
 
-**"auto"**: The component's recognizability is determined jointly by accessibility services and ArkUI.
+"auto"：当前组件由无障碍辅助服务和ArkUI进行综合判断组件是否可被无障碍辅助服务所识别。
 
-**"yes"**: The component can be recognized by accessibility services.
+"yes"：当前组件可被无障碍辅助服务识别。
 
-**"no"**: The component cannot be recognized by accessibility services.
+"no"：当前组件不可被无障碍辅助服务识别。
 
-**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
+"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。
 
-The default value is **"auto"**.
+默认值："auto"
 
-If the value is **undefined**, the default value is used.
+值为undefined时，按默认值处理。
 
-**NOTE**
+**说明：**
 
-When accessibilityLevel is set to **"auto"**, the component's recognizability depends on the following factors:
+当accessibilityLevel设置成"auto"时，组件是否可被无障碍辅助服务所识别取决于以下多方面因素：
 
-1. The accessibility service internally determines whether the component can be recognized.2. If the parent component's **accessibilityGroup** property has **isGroup** set to **true**,the accessibility service will not focus on its child components, making them unrecognizable.3. If the parent component's **accessibilityLevel** is set to **"no-hide-descendants"**,the component will not be recognized by accessibility services.
+1. 组件是否可被识别由无障碍辅助服务内部判断，自行选择。2. 若组件的父组件accessibilityGroup属性中isGroup设置为true，无障碍服务将不再关注其子组件内容，组件不可被无障碍辅助服务所识别。3. 若组件的父组件accessibilityLevel属性设置为"no-hide-descendants"，组件不可被无障碍辅助服务所识别。
 
 **Type:** string
 
@@ -86,13 +86,13 @@ When accessibilityLevel is set to **"auto"**, the component's recognizability de
 accessibilityText?: ResourceStr
 ```
 
-Accessibility text, that is, accessible label name. If a component has no text property, it will not be announced when selected by a screen reader. Setting this property allows you to define accessibility text for such components, which will be announced by a screen reader to help users identify the selected component.
+无障碍文本属性。组件无文本属性时，屏幕朗读选中此组件不会播报。设置该属性后可为此类组件设置无障碍文本，屏幕朗读时将播报该文本，帮助使用者明确选中了什么组件。
 
-Default value: **''**
+默认值：''
 
-If the value is **undefined**, the default value is used.
+值为undefined时，按默认值处理。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 

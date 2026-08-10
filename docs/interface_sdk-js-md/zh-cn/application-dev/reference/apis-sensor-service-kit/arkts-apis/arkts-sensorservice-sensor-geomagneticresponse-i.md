@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## deflectionAngle
 
 ```TypeScript
@@ -18,7 +24,7 @@ deflectionAngle: double
 
 磁偏角，即地磁北方向与正北方向在水平面上的角度。单位：degree（度）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -36,7 +42,7 @@ geomagneticDip: double
 
 磁倾角，即地球磁场线与水平面的夹角。单位：degree（度）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -54,7 +60,7 @@ levelIntensity: double
 
 水平磁场强度，即地磁场在水平面上的总强度。单位：nT（纳特斯拉）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -72,7 +78,7 @@ totalIntensity: double
 
 总磁场强度，即地磁场三维空间的总强度。单位：nT（纳特斯拉）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -90,7 +96,7 @@ x: double
 
 地磁场X方向分量（北分量）。单位：nT（纳特斯拉）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -108,7 +114,7 @@ y: double
 
 地磁场Y方向分量（东分量）。单位：nT（纳特斯拉）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 
@@ -126,7 +132,7 @@ z: double
 
 地磁场Z方向分量（垂直分量）。单位：nT（纳特斯拉）。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 8
 

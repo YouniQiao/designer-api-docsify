@@ -12,6 +12,12 @@ Target information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## targetType
 
 ```TypeScript
@@ -20,7 +26,7 @@ targetType: TargetType
 
 Target type.
 
-**Type:** TargetType
+**Type:** [TargetType](arkts-mechanic-mechanicmanager-targettype-e-sys.md)
 
 **Since:** 21
 

@@ -6,7 +6,7 @@
 function registerMissionListener(listener: MissionListener): number
 ```
 
-Registers a listener to observe the mission status.
+注册系统任务状态监听器。
 
 **Since:** 8
 
@@ -28,15 +28,15 @@ Registers a listener to observe the mission status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Mission status listener to register. |
+| listener | [MissionListener](arkts-ability-missionlistener-i-sys.md) | Yes | 系统任务监听器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the mission status listener, which is created by the system and allocated when the listener is registered. |
+| number | 监听器的index值，由系统创建，在注册系统任务状态监听器时分配，和监听器一一对应 。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';

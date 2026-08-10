@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
+## 导入模块
+
+```TypeScript
+import { BundleVersion } from 'kits/@kit.CoreFileKit';
+```
+
 ## code
 
 ```TypeScript
@@ -18,7 +24,7 @@ code: long
 
 应用的版本号。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 

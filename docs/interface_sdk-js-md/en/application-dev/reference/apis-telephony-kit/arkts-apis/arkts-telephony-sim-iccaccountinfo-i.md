@@ -10,6 +10,12 @@ Defines the ICC account information.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
+## Modules to Import
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## iccId
 
 ```TypeScript
@@ -108,7 +114,7 @@ simId: int
 
 Indicates the sim Id for card.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -126,7 +132,7 @@ slotIndex: int
 
 Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

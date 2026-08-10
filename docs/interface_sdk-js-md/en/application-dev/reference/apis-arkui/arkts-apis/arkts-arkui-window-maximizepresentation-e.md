@@ -1,6 +1,6 @@
 # MaximizePresentation
 
-Enumerates the layout when the window is maximized.
+窗口最大化时的布局枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the layout when the window is maximized.
 FOLLOW_APP_IMMERSIVE_SETTING = 0
 ```
 
-The window, when maximized, follows the application's full-screen mode.
+最大化时，跟随应用app当前设置的全屏模式。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ The window, when maximized, follows the application's full-screen mode.
 EXIT_IMMERSIVE = 1
 ```
 
-The window, when maximized, exits full-screen mode if it is set to full-screen.
+最大化时，如果当前窗口设置了全屏模式会退出全屏模式。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ The window, when maximized, exits full-screen mode if it is set to full-screen.
 ENTER_IMMERSIVE = 2
 ```
 
-The window, when maximized, transitions into the full-screen mode, and the window title bar and dock bar are displayed when the cursor hovers over the hot zone.
+最大化时，进入全屏模式，鼠标Hover在热区上显示窗口标题栏和dock栏。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ The window, when maximized, transitions into the full-screen mode, and the windo
 ENTER_IMMERSIVE_DISABLE_TITLE_AND_DOCK_HOVER = 3
 ```
 
-The window, when maximized, transitions into the full-screen mode, and the window title bar and dock bar are not displayed when the cursor hovers over the hot zone.
+最大化时，进入全屏模式，鼠标Hover在热区上不显示窗口标题栏和dock栏。
 
 **Since:** 14
 

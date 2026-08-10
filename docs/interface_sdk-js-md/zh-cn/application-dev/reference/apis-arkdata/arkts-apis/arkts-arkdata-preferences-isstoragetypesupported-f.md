@@ -1,5 +1,11 @@
 # isStorageTypeSupported
 
+## 导入模块
+
+```TypeScript
+import { preferences } from 'kits/@kit.ArkData';
+```
+
 ## isStorageTypeSupported
 
 ```TypeScript
@@ -22,7 +28,7 @@ function isStorageTypeSupported(type: StorageType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要判断是否支持的存储模式。 |
+| type | [StorageType](arkts-arkdata-preferences-storagetype-e.md) | 是 | 需要判断是否支持的存储模式。 |
 
 **返回值：**
 
@@ -34,9 +40,9 @@ function isStorageTypeSupported(type: StorageType): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types |
+| 401 | Parameter error. Possible causes: Incorrect parameter types |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let xmlType = preferences.StorageType.XML;

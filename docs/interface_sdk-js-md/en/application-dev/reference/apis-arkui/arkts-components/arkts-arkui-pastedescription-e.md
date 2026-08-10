@@ -1,6 +1,6 @@
 # PasteDescription
 
-Enumerates the text that can be displayed on the paste button.
+粘贴控件的文本描述。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates the text that can be displayed on the paste button.
 PASTE = 0
 ```
 
-Paste
+粘贴控件的文字描述为“粘贴”。
 
 **Since:** 10
 

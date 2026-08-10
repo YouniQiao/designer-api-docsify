@@ -1,6 +1,6 @@
 # WebResourceRequest
 
-Encompassed message information as parameters to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Encompassed message information as parameters to {@link onConsole} method.
 
 **起始版本：** 8
 

@@ -1,11 +1,12 @@
 # USBEndpoint
 
-通过USB发送和接收数据的端口。通过[USBInterface]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_获取。
-    **说明：**  
-    
-    主机控制器按照Endpoint类型调度。  
-    
-    协议层打包时依赖type决定传输特性。
+通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)获取。
+
+> **说明：**
+> 
+> 主机控制器按照Endpoint类型调度。
+> 
+> 协议层打包时依赖type决定传输特性。
 
 **起始版本：** 9
 
@@ -15,6 +16,12 @@
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## address
 
 ```TypeScript
@@ -23,7 +30,7 @@ address: int
 
 端点地址。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -41,7 +48,7 @@ attributes: int
 
 端点属性。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -59,7 +66,7 @@ direction: USBRequestDirection
 
 端点的方向。
 
-**类型：** USBRequestDirection
+**类型：** [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
 
 **起始版本：** 9
 
@@ -95,7 +102,7 @@ interfaceId: int
 
 端点所属的接口的唯一标识。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -113,7 +120,7 @@ interval: int
 
 端点间隔。（单位：毫秒）
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -131,7 +138,7 @@ maxPacketSize: int
 
 端点最大数据包大小。（单位：字节）
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -165,9 +172,9 @@ number: number
 type: int
 ```
 
-端点类型。取值见[UsbEndpointTransferType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+端点类型。取值见[UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

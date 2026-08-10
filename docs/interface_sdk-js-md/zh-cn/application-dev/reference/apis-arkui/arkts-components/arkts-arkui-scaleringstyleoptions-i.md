@@ -2,9 +2,9 @@
 
 环形有刻度样式选项。
 
-继承自[CommonProgressStyleOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
 
-**继承/实现关系：** ScaleRingStyleOptions extends [CommonProgressStyleOptions](../arkts-apis/arkts-arkui-component/progress-commonprogressstyleoptions-i.md)
+**继承/实现关系：** ScaleRingStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **起始版本：** 10
 
@@ -22,7 +22,7 @@ scaleCount?: number
 
 设置环形进度条总刻度数。
 
-默认值：120
+默认值：120 
 
 取值范围：[2, min(width, height)*π/scaleWidth]，超出取值范围时，样式显示为环形无刻度进度条。
 
@@ -58,7 +58,7 @@ scaleWidth?: Length
 
 在scaleCount和scaleWidth都与默认值相等的情况下，设置组件宽度或高度小于77vp会显示为环形无刻度进度条。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 10
 
@@ -86,7 +86,7 @@ strokeWidth?: Length
 
 超出取值范围或设置非法值时按默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 10
 

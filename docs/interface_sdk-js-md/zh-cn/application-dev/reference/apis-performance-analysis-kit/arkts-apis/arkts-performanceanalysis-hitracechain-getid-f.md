@@ -1,5 +1,11 @@
 # getId
 
+## 导入模块
+
+```TypeScript
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getId
 
 ```TypeScript
@@ -22,9 +28,9 @@ function getId(): HiTraceId
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 当前线程TLS中的HiTraceId实例。 |
+| [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 当前线程TLS中的HiTraceId实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 开始跟踪，跟踪标志是DEFAULT。

@@ -2,7 +2,7 @@
 
 HierarchicalSymbolEffect继承自父类SymbolEffect。
 
-**继承/实现关系：** HierarchicalSymbolEffect extends [SymbolEffect](../arkts-apis/arkts-arkui-component/symbolglyph-symboleffect-c.md)
+**继承/实现关系：** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ HierarchicalSymbolEffect的构造函数，层级动效。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fillStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 动效模式。具体枚举值及说明请参考EffectFillStyle枚举说明。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_默认值：EffectFillStyle.CUMULATIVE |
+| fillStyle | [EffectFillStyle](../arkts-apis/arkts-arkui-symbolglyph-effectfillstyle-e.md) | 否 | 动效模式。具体枚举值及说明请参考EffectFillStyle枚举说明。 &lt;br&gt;默认值：EffectFillStyle.CUMULATIVE |
 
 ## fillStyle
 
@@ -50,7 +50,7 @@ fillStyle?: EffectFillStyle
 
 默认值：EffectFillStyle.CUMULATIVE
 
-**类型：** EffectFillStyle
+**类型：** [EffectFillStyle](../arkts-apis/arkts-arkui-symbolglyph-effectfillstyle-e.md)
 
 **起始版本：** 12
 

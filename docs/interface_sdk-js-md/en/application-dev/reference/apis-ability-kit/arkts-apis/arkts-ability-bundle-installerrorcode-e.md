@@ -1,9 +1,9 @@
 # InstallErrorCode
 
-    **NOTE**  
-    
-    This API has been supported since API version 7 and deprecated since API version 9. You are advised to use  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ instead.
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[包管理子系统通用错误码](../../../reference/apis-ability-kit/errorcode-bundle.md)
+> 替代。
 
 **Since:** 7
 
@@ -21,7 +21,7 @@
 SUCCESS = 0
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -39,7 +39,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_INSTALL_FAILURE = 1
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -57,7 +57,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_INSTALL_FAILURE_ABORTED = 2
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -75,7 +75,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_INSTALL_FAILURE_INVALID = 3
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -93,7 +93,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_INSTALL_FAILURE_CONFLICT = 4
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -111,7 +111,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_INSTALL_FAILURE_STORAGE = 5
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -129,7 +129,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_INSTALL_FAILURE_INCOMPATIBLE = 6
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -147,7 +147,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_UNINSTALL_FAILURE = 7
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -165,7 +165,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_UNINSTALL_FAILURE_BLOCKED = 8
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -183,7 +183,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_UNINSTALL_FAILURE_ABORTED = 9
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -201,7 +201,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_UNINSTALL_FAILURE_CONFLICT = 10
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -219,7 +219,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT = 0x0B
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -237,7 +237,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED = 0x0C
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -255,7 +255,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_RECOVER_FAILURE_INVALID = 0x0D
 ```
 
-No uninstallation permission.
+缺少卸载权限。
 
 **Since:** 8
 
@@ -273,7 +273,7 @@ No uninstallation permission.
 STATUS_ABILITY_NOT_FOUND = 0x40
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -291,7 +291,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_BMS_SERVICE_ERROR = 0x41
 ```
 
-Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **Since:** 7
 
@@ -309,7 +309,7 @@ Installation conflict. (The basic information of the application to update is in
 STATUS_FAILED_NO_SPACE_LEFT = 0x42
 ```
 
-No uninstallation permission.
+缺少卸载权限。
 
 **Since:** 8
 
@@ -327,7 +327,7 @@ No uninstallation permission.
 STATUS_GRANT_REQUEST_PERMISSIONS_FAILED = 0x43
 ```
 
-No uninstallation permission.
+缺少卸载权限。
 
 **Since:** 8
 
@@ -345,7 +345,7 @@ No uninstallation permission.
 STATUS_INSTALL_PERMISSION_DENIED = 0x44
 ```
 
-No uninstallation permission.
+缺少卸载权限。
 
 **Since:** 8
 
@@ -363,7 +363,7 @@ No uninstallation permission.
 STATUS_UNINSTALL_PERMISSION_DENIED = 0x45
 ```
 
-No uninstallation permission.
+缺少卸载权限。
 
 **Since:** 8
 

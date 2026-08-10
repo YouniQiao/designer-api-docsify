@@ -1,12 +1,18 @@
 # setTimezone
 
+## Modules to Import
+
+```TypeScript
+import { systemTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setTimezone
 
 ```TypeScript
 function setTimezone(timezone: string, callback: AsyncCallback<void>): void
 ```
 
-Sets the system time zone. This API uses an asynchronous callback to return the result.
+设置系统时区，使用callback异步回调。
 
 **Since:** 7
 
@@ -26,8 +32,8 @@ Sets the system time zone. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timezone | string | Yes | System time zone to set. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| timezone | string | Yes | 系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
@@ -35,7 +41,7 @@ Sets the system time zone. This API uses an asynchronous callback to return the 
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -43,7 +49,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   systemTime.setTimezone('Asia/Shanghai', (error: BusinessError) => {
     if (error) {
-      console.info(`Failed to setting timezone. message: ${error.message}, code: ${error.code}`);
+      console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
       return;
     }
     console.info(`Succeeded in setting timezone.`);
@@ -61,7 +67,7 @@ try {
 function setTimezone(timezone: string): Promise<void>
 ```
 
-Sets the system time zone. This API uses a promise to return the result.
+使用Promise异步回调设置系统时区。
 
 **Since:** 7
 
@@ -81,13 +87,13 @@ Sets the system time zone. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timezone | string | Yes | System time zone to set. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| timezone | string | Yes | 系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
@@ -95,7 +101,7 @@ Sets the system time zone. This API uses a promise to return the result.
 | --- | --- |
 | -1 | Parameter check failed, permission denied, or system error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -104,7 +110,7 @@ try {
   systemTime.setTimezone('Asia/Shanghai').then(() => {
     console.info(`Succeeded in setting timezone.`);
   }).catch((error: BusinessError) => {
-    console.info(`Failed to setting timezone. message: ${error.message}, code: ${error.code}`);
+    console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;

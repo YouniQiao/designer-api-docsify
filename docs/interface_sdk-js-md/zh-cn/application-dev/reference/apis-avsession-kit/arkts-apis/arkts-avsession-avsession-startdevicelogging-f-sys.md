@@ -1,5 +1,11 @@
 # startDeviceLogging（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## startDeviceLogging
 
 ```TypeScript
@@ -23,7 +29,7 @@ function startDeviceLogging(url: string, maxSize?: int): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 目标文件描述符（打开文件的唯一标识）。 |
-| maxSize | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 写入最大日志大小（以kB为单位）。 |
+| maxSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 写入最大日志大小（以kB为单位）。 |
 
 **返回值：**
 
@@ -35,12 +41,12 @@ function startDeviceLogging(url: string, maxSize?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 202 | Not System App. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fileIo } from '@kit.CoreFileKit';

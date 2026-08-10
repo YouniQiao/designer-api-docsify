@@ -1,5 +1,11 @@
 # subscribe（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## subscribe
 
 ```TypeScript
@@ -22,15 +28,15 @@ function subscribe(events: MechEventType[], callback: Callback<MechEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| events | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | 是 | 订阅的事件列表。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MechEvent&gt; | 是 | 事件回调函数。 |
+| events | [MechEventType](arkts-mechanic-mechanicmanager-mecheventtype-e-sys.md)[] | 是 | 订阅的事件列表。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MechEvent&gt; | 是 | 事件回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
-| [33300003](../errorcode-mechanic.md#33300003-功能不支持) | Feature not supported. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
+| 33300003 | Feature not supported. |
 

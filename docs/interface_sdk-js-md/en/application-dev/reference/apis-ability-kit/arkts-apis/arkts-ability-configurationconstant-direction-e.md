@@ -1,7 +1,6 @@
 # Direction
 
-Enumerates the screen directions, which are used in the  
-[Configuration.direction]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ field. You can use these predefined enumerated values to set or obtain the screen direction of the system or application.
+表示屏幕方向的枚举，用于[Configuration.direction](arkts-ability-app-ability-configuration-configuration-i.md)字段。开发者可以使用这些预置枚举设置或获取系统/应用的显示方向。
 
 **Since:** 9
 
@@ -17,7 +16,7 @@ Enumerates the screen directions, which are used in the
 DIRECTION_NOT_SET = -1
 ```
 
-Unspecified direction.
+表示未设置方向。
 
 **Since:** 9
 
@@ -35,7 +34,7 @@ Unspecified direction.
 DIRECTION_VERTICAL = 0
 ```
 
-Vertical direction.
+表示垂直方向。
 
 **Since:** 9
 
@@ -53,7 +52,7 @@ Vertical direction.
 DIRECTION_HORIZONTAL = 1
 ```
 
-Horizontal direction.
+表示水平方向。
 
 **Since:** 9
 

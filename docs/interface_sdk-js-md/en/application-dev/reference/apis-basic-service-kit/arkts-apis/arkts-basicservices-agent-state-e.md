@@ -1,6 +1,6 @@
 # State
 
-Defines the current task status.
+定义任务当前的状态。
 
 **Since:** 10
 
@@ -16,8 +16,7 @@ Defines the current task status.
 INITIALIZED = 0x00
 ```
 
-The task is initialized based on the configuration specified in  
-[Config]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示通过配置信息（[Config](arkts-basicservices-agent-config-i.md)）创建的任务已初始化。
 
 **Since:** 10
 
@@ -35,7 +34,7 @@ The task is initialized based on the configuration specified in
 WAITING = 0x10
 ```
 
-The task lacks resources for running or the resources for retries, or does not match the network status.
+表示任务缺少运行或重试的资源，又或是网络状态不匹配。
 
 **Since:** 10
 
@@ -53,7 +52,7 @@ The task lacks resources for running or the resources for retries, or does not m
 RUNNING = 0x20
 ```
 
-The task is being executed.
+表示任务正在运行中。
 
 **Since:** 10
 
@@ -71,7 +70,7 @@ The task is being executed.
 RETRYING = 0x21
 ```
 
-The task has failed at least once and is being executed again.
+表示任务至少失败一次，现在正在再次处理中。
 
 **Since:** 10
 
@@ -89,7 +88,7 @@ The task has failed at least once and is being executed again.
 PAUSED = 0x30
 ```
 
-The task is suspended and will be resumed later.
+表示任务暂停，通常后续会恢复任务。
 
 **Since:** 10
 
@@ -107,7 +106,7 @@ The task is suspended and will be resumed later.
 STOPPED = 0x31
 ```
 
-The task is stopped.
+表示任务停止。
 
 **Since:** 10
 
@@ -125,7 +124,7 @@ The task is stopped.
 COMPLETED = 0x40
 ```
 
-The task is complete.
+表示任务完成。
 
 **Since:** 10
 
@@ -143,7 +142,7 @@ The task is complete.
 FAILED = 0x41
 ```
 
-The task fails.
+表示任务失败。
 
 **Since:** 10
 
@@ -161,7 +160,7 @@ The task fails.
 REMOVED = 0x50
 ```
 
-The task is removed.
+表示任务移除。
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # RelativeTimeFormat
 
-Provides the relative time formatting capability.
+提供相对时间格式化的能力。
 
 **Since:** 8
 
@@ -14,13 +14,19 @@ Provides the relative time formatting capability.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { intl } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Creates a **RelativeTimeFormat** object.
+创建相对时间格式化对象。
 
 **Since:** 8
 
@@ -36,7 +42,7 @@ Creates a **RelativeTimeFormat** object.
 
 **System capability:** SystemCapability.Global.I18n
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -51,7 +57,7 @@ let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
 constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOptions)
 ```
 
-Creates a **RelativeTimeFormat** object.
+创建相对时间格式化对象。
 
 **Since:** 8
 
@@ -71,15 +77,15 @@ Creates a **RelativeTimeFormat** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for creating a **RelativeTimeFormat** object. |
+| locale | string \| Array&lt;string&gt; | Yes | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
+| options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | No | 创建相对时间格式化对象时的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
 
-// Create a RelativeTimeFormat object with the locale ID being zh-CN, localeMatcher being lookup, and style being long.
+// Use locale ID zh-CN to create a RelativeTimeFormat object with the localeMatcher set to lookup, numeric set to always, and style set to long.
 let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
   localeMatcher: 'lookup',
   numeric: 'always',
@@ -93,7 +99,7 @@ let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
 format(value: double, unit: string): string
 ```
 
-Formats a relative time.
+对相对时间进行格式化，返回相对时间字符串。
 
 **Since:** 8
 
@@ -113,16 +119,16 @@ Formats a relative time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | Value to format. |
-| unit | string | Yes | Unit of the relative time. The value can be any of the following: **year**, **quarter**, **month**, **week**, **day**, **hour**, **minute**, or **second**. |
+| value | double | Yes | 相对时间格式化的数值。 |
+| unit | string | Yes | 相对时间格式化的单位， &lt;br&gt;取值包括："year", "quarter", "month", "week", "day", "hour", "minute", "second"。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Relative time after formatting. |
+| string | 格式化后的相对时间。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -139,7 +145,7 @@ let formatResult: string = formatter.format(3, 'quarter'); // formatResult = '3 
 formatToParts(value: double, unit: string): Array<object>
 ```
 
-Formats the relative time
+对相对时间进行格式化，获取格式化结果中各个部分的对象数组。
 
 **Since:** 8
 
@@ -159,16 +165,16 @@ Formats the relative time
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | Value to format. |
-| unit | string | Yes | Unit of the relative time. The value can be any of the following: **year**, **quarter**, **month**, **week**, **day**, **hour**, **minute**, or **second**. |
+| value | double | Yes | 相对时间格式化的数值。 |
+| unit | string | Yes | 相对时间格式化的单位， &lt;br&gt;取值包括："year", "quarter", "month", "week", "day", "hour", "minute", "second"。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;object&gt; | Components of the formatted result. |
+| Array&lt;object&gt; | 格式化结果中各个部分的对象数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
@@ -184,7 +190,7 @@ let parts: Array<object> = formatter.formatToParts(10, 'seconds'); // parts = [ 
 resolvedOptions(): RelativeTimeFormatResolvedOptions
 ```
 
-Defines the formatting options for a **RelativeTimeFormat** object.
+获取相对时间格式化对象的格式化配置项。
 
 **Since:** 8
 
@@ -204,9 +210,9 @@ Defines the formatting options for a **RelativeTimeFormat** object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Options for the **RelativeTimeFormat** object. |
+| [RelativeTimeFormatResolvedOptions](arkts-localization-intl-relativetimeformatresolvedoptions-i.md) | 相对时间格式化对象的格式化配置项。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

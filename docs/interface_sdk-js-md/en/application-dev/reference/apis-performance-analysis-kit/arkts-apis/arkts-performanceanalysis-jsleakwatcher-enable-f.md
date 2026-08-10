@@ -1,12 +1,18 @@
 # enable
 
+## Modules to Import
+
+```TypeScript
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## enable
 
 ```TypeScript
 function enable(isEnable: boolean): void
 ```
 
-Enables the detection for JS object leaks. This function is disabled by default.
+ʹ��ArkTS����й©��⣬Ĭ�Ϲرա���������ռ�й©��Ϣ�������������ܿ�����
 
 **Since:** 12
 
@@ -20,9 +26,9 @@ Enables the detection for JS object leaks. This function is disabled by default.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnable | boolean | Yes | Whether to enable **jsLeakWatcher**. **true**: yes; **false**: no. |
+| isEnable | boolean | Yes | �Ƿ�ʹ��jsLeakWatcher��true��ʹ��jsLeakWatcher��false����ʹ��jsLeakWatcher�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 jsLeakWatcher.enable(true);

@@ -10,6 +10,12 @@ Density info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { uiObserver } from 'kits/@kit.ArkUI';
+```
+
 ## context
 
 ```TypeScript
@@ -18,7 +24,7 @@ context: UIContext
 
 The context of the changed screen density.
 
-**Type:** UIContext
+**Type:** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **Since:** 23
 

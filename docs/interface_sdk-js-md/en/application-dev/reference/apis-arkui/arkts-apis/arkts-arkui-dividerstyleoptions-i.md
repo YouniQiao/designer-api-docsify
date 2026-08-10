@@ -18,7 +18,7 @@ color?: ResourceColor
 
 The color of Divider.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ endMargin?: LengthMetrics
 
 The endMargin of Divider.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 
@@ -62,7 +62,7 @@ mode?: DividerMode
 
 The mode of Divider.
 
-**Type:** DividerMode
+**Type:** [DividerMode](arkts-arkui-dividermode-e.md)
 
 **Since:** 19
 
@@ -84,7 +84,7 @@ startMargin?: LengthMetrics
 
 The startMargin of Divider.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ strokeWidth?: LengthMetrics
 
 The strokeWidth of Divider.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **Since:** 12
 

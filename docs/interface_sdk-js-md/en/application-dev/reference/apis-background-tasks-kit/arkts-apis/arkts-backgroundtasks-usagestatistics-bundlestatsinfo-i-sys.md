@@ -1,5 +1,7 @@
 # BundleStatsInfo (System API)
 
+FA模型的使用信息属性集合。
+
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -10,15 +12,21 @@
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## abilityInFgTotalTime
 
 ```TypeScript
 abilityInFgTotalTime?: long
 ```
 
-The total duration, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+应用在前台可见的总时间，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -36,9 +44,9 @@ The total duration, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
 abilityPrevAccessTime?: long
 ```
 
-The last time when the application was accessed, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+应用最后一次使用的时间，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -56,9 +64,9 @@ The last time when the application was accessed, in milliseconds.\_\_\_HTML\_TAG
 abilityPrevSeenTime?: long
 ```
 
-The last time when the application was visible in the foreground, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+应用最后一次在前台可见的时间，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -76,9 +84,9 @@ The last time when the application was visible in the foreground, in millisecond
 abilitySeenTotalTime?: long
 ```
 
-The total duration, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+应用在前台可见的总时间，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -96,9 +104,9 @@ The total duration, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
 appIndex?: int
 ```
 
-The app index of the application.
+应用程序的索引。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 
@@ -116,7 +124,7 @@ The app index of the application.
 bundleName?: string
 ```
 
-The bundle name of the application.
+应用包名。
 
 **Type:** string
 
@@ -136,9 +144,9 @@ The bundle name of the application.
 fgAbilityAccessTotalTime?: long
 ```
 
-The total duration, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+应用在前台可见的总时间，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -156,9 +164,9 @@ The total duration, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
 fgAbilityPrevAccessTime?: long
 ```
 
-The last time when the foreground application was accessed, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+应用最后一次访问前台的时间，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -176,9 +184,9 @@ The last time when the foreground application was accessed, in milliseconds.\_\_
 id: int
 ```
 
-The identifier of BundleStatsInfo.
+用户id。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -196,9 +204,9 @@ The identifier of BundleStatsInfo.
 infosBeginTime?: long
 ```
 
-The time of the first bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+BundleActiveInfo对象中第一条应用使用统计的记录时间，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -216,9 +224,9 @@ The time of the first bundle usage record in this {@code BundleActiveInfo} objec
 infosEndTime?: long
 ```
 
-The time of the last bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+BundleActiveInfo对象中最后一条应用使用统计的记录时间，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 

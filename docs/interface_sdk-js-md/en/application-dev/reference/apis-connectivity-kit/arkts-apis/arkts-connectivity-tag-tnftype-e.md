@@ -1,6 +1,6 @@
 # TnfType
 
-TNF types definitions, see NFCForum-TS-NDEF\_1.0.
+TNF types definitions, see NFCForum-TS-NDEF_1.0.
 
 **Since:** 12
 

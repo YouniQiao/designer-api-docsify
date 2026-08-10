@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## 汇总
 
 <!--Del-->

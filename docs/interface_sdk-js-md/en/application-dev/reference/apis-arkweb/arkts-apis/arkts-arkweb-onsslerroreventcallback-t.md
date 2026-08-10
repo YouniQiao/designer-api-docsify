@@ -18,5 +18,5 @@ The callback of ssl error event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sslErrorEvent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | callback information of onSslErrorEvent.  |
+| sslErrorEvent | [SslErrorEvent](arkts-arkweb-web-sslerrorevent-i.md) | Yes | callback information of onSslErrorEvent. |
 

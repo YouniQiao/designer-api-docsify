@@ -1,18 +1,24 @@
 # ShowToastOptions
 
-Defines the options of ShowToast.
+文本提示框的选项。
 
-**Since:** 3
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Deprecated since:** 8
+**Deprecated since:** 9
 
 **Substitutes:** ohos.promptAction/promptAction.ShowToastOptions
 
-<!--Device-unnamed-export interface ShowToastOptions--><!--Device-unnamed-export interface ShowToastOptions-End-->
+<!--Device-prompt-interface ShowToastOptions--><!--Device-prompt-interface ShowToastOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { prompt } from 'kits/@kit.ArkUI';
+```
 
 ## bottom
 
@@ -20,15 +26,15 @@ Defines the options of ShowToast.
 bottom?: string | number
 ```
 
-The distance between toast dialog box and the bottom of screen.
+设置弹窗边框距离屏幕底部的位置，无上限值，默认单位vp。
 
 **Type:** string \| number
 
-**Since:** 5
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 5.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Deprecated since:** 8
+**Deprecated since:** 9
 
 **Substitutes:** ohos.promptAction/promptAction.ShowToastOptions#bottom
 
@@ -42,15 +48,15 @@ The distance between toast dialog box and the bottom of screen.
 duration?: number
 ```
 
-Duration of toast dialog box. The default value is 1500.The recommended value ranges from 1500 ms to 10000ms.NOTE: A value less than 1500 is automatically changed to 1500. The maximum value is 10000 ms.
+默认值1500ms，取值区间：1500ms-10000ms。若小于1500ms则取默认值，若大于10000ms则取上限值10000ms。
 
 **Type:** number
 
-**Since:** 3
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Deprecated since:** 8
+**Deprecated since:** 9
 
 **Substitutes:** ohos.promptAction/promptAction.ShowToastOptions#duration
 
@@ -64,15 +70,15 @@ Duration of toast dialog box. The default value is 1500.The recommended value ra
 message: string
 ```
 
-Text to display.
+显示的文本信息。
 
 **Type:** string
 
-**Since:** 3
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Deprecated since:** 8
+**Deprecated since:** 9
 
 **Substitutes:** ohos.promptAction/promptAction.ShowToastOptions#message
 

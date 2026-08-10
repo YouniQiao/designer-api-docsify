@@ -1,12 +1,10 @@
 # ZoomQuery
 
-ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range.
-    **NOTE**  
-    
-    - This interface was first introduced in API version 12. In this version, a compatibility change was made that  
-    preserved the initial version information of inner elements. As a result, you might see outer element's @since  
-    version number being higher than that of the inner elements. However, this discrepancy does not affect the  
-    functionality of the interface.
+提供了与设备的缩放相关的查询功能，包括获取支持的缩放比例范围。
+
+> **说明：**
+> 
+> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
 
 **Since:** 12
 
@@ -15,6 +13,12 @@ ZoomQuery provides APIs to query the zoom feature of a device camera, including 
 <!--Device-camera-interface ZoomQuery--><!--Device-camera-interface ZoomQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getRAWCaptureZoomRatioRange
 
@@ -28,7 +32,7 @@ ArkTS-Sta:
 getRAWCaptureZoomRatioRange(): Array<double>
 ```
 
-Obtains the supported zoom ratio range during shooting in RAW format.
+获取RAW拍摄期间支持的变焦比例范围。
 
 **Since:** 24
 
@@ -46,14 +50,14 @@ Obtains the supported zoom ratio range during shooting in RAW format.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Zoom ratio range. |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 变焦比例范围。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
+| 7400103 | Session not config. |
 
 ## getZoomPointInfos
 
@@ -61,7 +65,7 @@ Obtains the supported zoom ratio range during shooting in RAW format.
 getZoomPointInfos(): Array<ZoomPointInfo>
 ```
 
-Obtains the equivalent focal length information list in the current mode.
+获取当前模式的等效焦距信息列表。
 
 **Since:** 26.0.0
 
@@ -77,32 +81,14 @@ Obtains the equivalent focal length information list in the current mode.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ZoomPointInfo&gt; | Equivalent focal length information list in the current mode. |
+| Array&lt;ZoomPointInfo&gt; | 获取当前模式的等效焦距信息列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-
-**Example**
-
-```TypeScript
-import { camera } from '@kit.CameraKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getZoomPointInfos(photoSessionForSys: camera.PhotoSessionForSys): Array<camera.ZoomPointInfo> {
-  let zoomPointInfos: Array<camera.ZoomPointInfo> = [];
-  try {
-    zoomPointInfos = photoSessionForSys.getZoomPointInfos();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getZoomPointInfos call failed. error code: ${err.code}`);
-  }
-  return zoomPointInfos;
-}
-```
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application.<br>**Applicable version:** 12 - 24 |
 
 ## getZoomRatioRange
 
@@ -116,7 +102,7 @@ ArkTS-Sta:
 getZoomRatioRange(): Array<double>
 ```
 
-Obtains the supported zoom ratio range.
+获取支持的变焦范围。
 
 **Since:** 11
 
@@ -132,11 +118,11 @@ Obtains the supported zoom ratio range.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 用于获取可变焦距比范围，返回的数组包括其最小值和最大值。接口调用失败会抛出相应错误码并返回undefined，错误码类型 [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
 

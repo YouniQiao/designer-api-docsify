@@ -1,7 +1,6 @@
 # LaunchReason
 
-Enumerates the ability launch reasons. You can use it together with the value of **launchParam.launchReason** in  
-[onCreate(want, launchParam)]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of the UIAbility to complete different operations.
+Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据launchParam.launchReason的不同类型执行相应操作。
 
 **Since:** 9
 
@@ -17,7 +16,7 @@ Enumerates the ability launch reasons. You can use it together with the value of
 UNKNOWN = 0
 ```
 
-Unknown reason.
+未知原因。
 
 **Since:** 9
 
@@ -37,8 +36,8 @@ Unknown reason.
 START_ABILITY = 1
 ```
 
-The ability is started by calling  
-[startAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+通过  
+[startAbility](arkts-ability-uiabilitycontext-c.md#startability)接口启动Ability。
 
 **Since:** 9
 
@@ -58,8 +57,7 @@ The ability is started by calling
 CALL = 2
 ```
 
-The ability is started by calling  
-[startAbilityByCall]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+通过[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall)接口启动Ability。
 
 **Since:** 9
 
@@ -79,7 +77,7 @@ The ability is started by calling
 CONTINUATION = 3
 ```
 
-The ability is started by means of cross-device migration.
+跨端迁移启动Ability。
 
 **Since:** 9
 
@@ -99,7 +97,7 @@ The ability is started by means of cross-device migration.
 APP_RECOVERY = 4
 ```
 
-The ability is automatically started when the application is restored from a fault.
+设置应用恢复后，应用故障时自动恢复启动Ability。
 
 **Since:** 9
 
@@ -119,7 +117,7 @@ The ability is automatically started when the application is restored from a fau
 SHARE = 5
 ```
 
-The ability is started by means of atomic service sharing.
+通过原子化服务分享启动Ability。
 
 **Since:** 10
 
@@ -139,7 +137,7 @@ The ability is started by means of atomic service sharing.
 AUTO_STARTUP = 8
 ```
 
-The ability is automatically started upon system boot.
+通过设置开机自启动来启动Ability。
 
 **Since:** 11
 
@@ -157,7 +155,7 @@ The ability is automatically started upon system boot.
 INSIGHT_INTENT = 9
 ```
 
-The ability is started by the InsightIntent framework..
+通过洞察意图来启动Ability。
 
 **Since:** 11
 
@@ -177,7 +175,7 @@ The ability is started by the InsightIntent framework..
 PREPARE_CONTINUATION = 10
 ```
 
-The ability is started in advance during cross-device migration.
+跨端迁移提前启动Ability。
 
 **Since:** 12
 
@@ -197,7 +195,7 @@ The ability is started in advance during cross-device migration.
 PRELOAD = 11
 ```
 
-The ability is started through preloading.
+表明该UIAbility是通过预加载机制启动的。
 
 **Since:** 20
 

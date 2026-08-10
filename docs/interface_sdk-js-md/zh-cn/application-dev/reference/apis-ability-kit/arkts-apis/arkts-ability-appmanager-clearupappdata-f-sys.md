@@ -1,5 +1,11 @@
 # clearUpAppData（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { appManager } from 'kits/@kit.AbilityKit';
+```
+
 ## clearUpAppData
 
 ```TypeScript
@@ -25,7 +31,7 @@ function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示Bundle名称。 |
-| appCloneIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 表示应用分身索引。 |
+| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 表示应用分身索引。 |
 
 **返回值：**
 
@@ -37,27 +43,26 @@ function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 16000050 | Internal error. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 16000073 | The app clone index is invalid. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundleName: string = 'com.ohos.demo';
-let appCloneIndex = 0;
+let appCloneIndex: number = 0;
 
 try {
   appManager.clearUpAppData(bundleName, appCloneIndex).then(() => {
     console.info(`clearUpAppData success.`);
-  }).catch((e: Error) => {
-    let err = e as BusinessError;
-    console.error(`clearUpAppData fail, err: ${err.code}, ${err.message}`);
+  }).catch((err: BusinessError) => {
+    console.error(`clearUpAppData fail, err: ${JSON.stringify(err)}`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;

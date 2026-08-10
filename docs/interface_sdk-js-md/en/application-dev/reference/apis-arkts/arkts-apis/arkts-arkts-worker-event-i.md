@@ -1,6 +1,6 @@
 # Event
 
-Defines the event.
+事件类。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines the event.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## timeStamp
 
 ```TypeScript
 readonly timeStamp: number
 ```
 
-Timestamp (accurate to millisecond) when the event is created. This parameter is not supported yet.
+事件创建时的时间戳（精度为毫秒），目前不支持。
 
 **Type:** number
 
@@ -36,7 +42,7 @@ Timestamp (accurate to millisecond) when the event is created. This parameter is
 readonly type: string
 ```
 
-Type of the Event.
+指定事件的类型。
 
 **Type:** string
 

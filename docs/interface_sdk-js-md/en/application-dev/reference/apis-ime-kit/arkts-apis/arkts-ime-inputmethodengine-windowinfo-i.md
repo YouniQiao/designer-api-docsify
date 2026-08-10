@@ -1,6 +1,6 @@
 # WindowInfo
 
-Represents window information.
+窗口信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents window information.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## rect
 
 ```TypeScript
 rect: window.Rect
 ```
 
-Rectangular area of the window.
+窗口矩形区域。
 
 **Type:** window.Rect
 
@@ -34,7 +40,7 @@ Rectangular area of the window.
 status: window.WindowStatusType
 ```
 
-Window status type.
+窗口模式类型。
 
 **Type:** window.WindowStatusType
 

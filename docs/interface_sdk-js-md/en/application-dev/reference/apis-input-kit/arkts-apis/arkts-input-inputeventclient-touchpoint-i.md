@@ -1,6 +1,6 @@
 # TouchPoint
 
-Represents information about a single touch point on the display.
+表示屏幕上的单个触点信息。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Represents information about a single touch point on the display.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
+## Modules to Import
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## displayId
 
 ```TypeScript
 displayId: int
 ```
 
-Unique ID of the display where the touch point is located. The value must be an integer.
+触点所在屏幕的唯一标识，必须为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Unique ID of the display where the touch point is located. The value must be an 
 displayX: int
 ```
 
-X coordinate of the touch point relative to the left edge of the display, in pixels. The value must be an integer.
+触点相对于屏幕左边缘的X坐标，单位为像素（px），必须为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -56,9 +62,9 @@ X coordinate of the touch point relative to the left edge of the display, in pix
 displayY: int
 ```
 
-Y coordinate of the touch point relative to the top edge of the display, in pixels. The value must be an integer.
+触点相对于屏幕上边缘的Y坐标，单位为像素（px），必须为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -76,9 +82,9 @@ Y coordinate of the touch point relative to the top edge of the display, in pixe
 id: int
 ```
 
-Unique ID of a touch point. The value must be an integer in the range of [0, 9].
+触点唯一标识。取值范围为[0, 9]，且必须为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

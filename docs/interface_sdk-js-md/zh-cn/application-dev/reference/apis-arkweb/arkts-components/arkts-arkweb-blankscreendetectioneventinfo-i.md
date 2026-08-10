@@ -20,7 +20,7 @@ blankScreenDetails?: BlankScreenDetails
 
 如当发现近似白屏的现象产生，这个细节就包含具体命中了多少点。否则没有该属性。
 
-**类型：** BlankScreenDetails
+**类型：** [BlankScreenDetails](arkts-arkweb-blankscreendetails-i.md)
 
 **起始版本：** 22
 
@@ -38,7 +38,7 @@ blankScreenReason: DetectedBlankScreenReason
 
 本次检测到白屏时，具体原因与检测的方法相关。
 
-**类型：** DetectedBlankScreenReason
+**类型：** [DetectedBlankScreenReason](arkts-arkweb-detectedblankscreenreason-e.md)
 
 **起始版本：** 22
 

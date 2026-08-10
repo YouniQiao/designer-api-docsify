@@ -1,6 +1,6 @@
 # OnLoadInterceptEvent
 
-Represents the event triggered when resource loading is intercepted.
+定义Web组件加载url之前触发的加载拦截事件。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Represents the event triggered when resource loading is intercepted.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from 'kits/@kit.ArkUI';
+```
+
 ## data
 
 ```TypeScript
 data: WebResourceRequest
 ```
 
-Web resource request of event.
+网页请求的封装信息。
 
-**Type:** WebResourceRequest
+**Type:** [WebResourceRequest](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webresourcerequest-c.md)
 
 **Since:** 12
 

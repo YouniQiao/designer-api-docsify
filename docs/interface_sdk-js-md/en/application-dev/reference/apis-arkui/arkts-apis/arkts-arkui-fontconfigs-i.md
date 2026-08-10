@@ -1,6 +1,6 @@
 # FontConfigs
 
-Defines font configurations.
+字体配置项。
 
 **Since:** 24
 
@@ -16,9 +16,9 @@ Defines font configurations.
 fontWeightConfigs?: FontWeightConfigs
 ```
 
-Font weight configuration. The default value is inherited from \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+字体粗细配置。默认值继承[FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)。
 
-**Type:** FontWeightConfigs
+**Type:** [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)
 
 **Since:** 24
 

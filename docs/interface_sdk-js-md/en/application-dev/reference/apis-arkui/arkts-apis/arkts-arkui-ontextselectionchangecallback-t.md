@@ -4,7 +4,7 @@
 export type OnTextSelectionChangeCallback = (selectionStart: int, selectionEnd: int) => void
 ```
 
-Defines a TextInput callback when onTextSelectionChange.Anonymous Object Rectification.
+文本选择变化回调或光标位置变化回调。
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ Defines a TextInput callback when onTextSelectionChange.Anonymous Object Rectifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | int | Yes | The starting position of the selected text, the starting position of the text is 0. \_\_\_HTML\_TAG\_USD\_0\_\_\_The value should be an integer.  |
-| selectionEnd | int | Yes | The end location of the selected text. \_\_\_HTML\_TAG\_USD\_0\_\_\_The value should be an integer.  |
+| selectionStart | int | Yes | 所选文本的起始位置，文字的起始位置为0。 |
+| selectionEnd | int | Yes | 所选文本的结束位置。 |
 

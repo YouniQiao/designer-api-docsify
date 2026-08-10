@@ -4,7 +4,7 @@
 type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult | void
 ```
 
-Defines the callback function used to write data to the audio renderer. Once the callback function finishes its execution, the audio service queues the data pointed to by **data** for playback. Therefore, do not change the data outside the callback. It is crucial to fill **data** with the exact length of data designated for playback;otherwise, noises may occur during playback.
+回调函数类型，用于音频渲染器的数据写入，回调函数结束后，音频服务会把data指向的数据放入队列里等待播放，因此请勿在回调外再次更改data指向的数据, 且务必保证往data填满待播放数据, 否则会导致音频服务播放杂音。
 
 **Since:** 12
 
@@ -18,11 +18,11 @@ Defines the callback function used to write data to the audio renderer. Once the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Data to be written to the buffer.  |
+| data | ArrayBuffer | Yes | 待写入缓冲区的数据。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ \| void | If **void** or **AudioDataCallbackResult.VALID** is returned, the data is valid and the audio data is played. If **AudioDataCallbackResult.INVALID** is returned, the data is invalid and the audio data is not played.  |
+| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) \| void | 如果返回 void 或 AudioDataCallbackResult.VALID：表示数据有效，将播放音频数据；如果返回 AudioDataCallbackResult.INVALID：表示数据无效，且音频数据不播放。 |
 

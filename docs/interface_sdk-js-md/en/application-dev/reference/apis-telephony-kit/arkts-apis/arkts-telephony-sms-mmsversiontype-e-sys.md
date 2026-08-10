@@ -18,7 +18,7 @@ Enumerates MMS versions.
 MMS_VERSION_1_0 = 0x10
 ```
 
-Indicates MMS version 1\_0.
+Indicates MMS version 1_0.
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Indicates MMS version 1\_0.
 MMS_VERSION_1_1
 ```
 
-Indicates MMS version 1\_1.
+Indicates MMS version 1_1.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Indicates MMS version 1\_1.
 MMS_VERSION_1_2
 ```
 
-Indicates MMS version 1\_2.
+Indicates MMS version 1_2.
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ Indicates MMS version 1\_2.
 MMS_VERSION_1_3
 ```
 
-Indicates MMS version 1\_3.
+Indicates MMS version 1_3.
 
 **Since:** 8
 

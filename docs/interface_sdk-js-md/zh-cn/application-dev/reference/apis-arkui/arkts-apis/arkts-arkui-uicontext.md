@@ -1,5 +1,11 @@
 # @ohos.arkui.UIContext
 
+## 导入模块
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 类
@@ -33,7 +39,7 @@
 | [ScrollActionProposal](arkts-arkui-arkui-uicontext-scrollactionproposal-c.md) | 类ScrollActionProposal。默认滚动方向为向前。 |
 | [SelectActionProposal](arkts-arkui-arkui-uicontext-selectactionproposal-c.md) | 类SelectActionProposal。 |
 | [SmartGestureController](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md) | 类SmartGestureController。 |
-| [SwiperDynamicSyncScene](arkts-arkui-arkui-uicontext-swiperdynamicsyncscene-c.md) | 提供Swiper组件动态帧率场景的相关配置，适用于为动画过渡和手势跟手等不同交互场景设置差异化帧率范围，以兼顾流畅度和功耗，继承自[DynamicSyncScene]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| [SwiperDynamicSyncScene](arkts-arkui-arkui-uicontext-swiperdynamicsyncscene-c.md) | 提供Swiper组件动态帧率场景的相关配置，适用于为动画过渡和手势跟手等不同交互场景设置差异化帧率范围，以兼顾流畅度和功耗，继承自[DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)。 |
 | [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md) | 类TargetedGestureProposal。 |
 | [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | class TextMenuController |
 | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | UIContext类 |
@@ -58,7 +64,7 @@
 | [GestureObserverConfigs](arkts-arkui-arkui-uicontext-gestureobserverconfigs-i.md) | 该参数用于指定需要监听的手势回调阶段（传入空数组将无效），仅当手势触发指定阶段时才会发送通知。 |
 | [GestureTriggerInfo](arkts-arkui-arkui-uicontext-gesturetriggerinfo-i.md) | 特定手势回调函数触发时的信息。 |
 | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | 使用顺序打开浮层的选项。 |
-| [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | 初始化[OverlayManager]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_时所用参数。 |
+| [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | 初始化[OverlayManager](arkts-arkui-uicontext.md)时所用参数。 |
 | [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) | Router和NavDestination等页面信息，若无对应的Router或NavDestination页面信息，则对应属性为undefined。 |
 | [SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md) | Swiper组件的内容区信息。 |
 | [SwiperItemInfo](arkts-arkui-arkui-uicontext-swiperiteminfo-i.md) | Swiper子组件的信息。 |
@@ -69,7 +75,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 自定义键盘接续特性的枚举。 |
-| [GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md) | 表示触发的手势回调阶段的枚举类型，对应the action callbacks defined in gesture.d.ts. Therefore, not all gesture types have all the following phase definitions. For example, SwipeGesture only has one callback named onAction, so it also only has one enumeration type, which is WILL\_\_\_ESCAPED\_UNDERSCORE\_\_\_START. |
+| [GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md) | 表示触发的手势回调阶段的枚举类型，对应the action callbacks defined in gesture.d.ts. Therefore, not all gesture types have all the following phase definitions. For example, SwipeGesture only has one callback named onAction, so it also only has one enumeration type, which is WILL_START. |
 | [GestureListenerType](arkts-arkui-arkui-uicontext-gesturelistenertype-e.md) | 表示需要监听的手势类型的枚举。 |
 | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Enum of KeyBoardAvoidMethodType |
 | [MarqueeDynamicSyncSceneType](arkts-arkui-arkui-uicontext-marqueedynamicsyncscenetype-e.md) | Enum of scene type for Marquee |

@@ -1,12 +1,12 @@
 # SignSpecItem
 
-Enumerates the signing and signature verification parameters, which can be set by using  
-[setSignSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and  
-[setVerifySpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, and obtained by using [getSignSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ and  
-[getVerifySpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.
+表示签名验签参数的枚举。这些参数支持通过  
+[setSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#setsignspec)、  
+[setVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#setverifyspec)接口设置，通过  
+[getSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#getsignspec)、[getVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#getverifyspec)接口获取。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_Currently, only RSA and SM2 are supported. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+&lt;br&gt;当前只支持RSA算法和SM2算法。详细规格请参考  
+[签名验签规格](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md)。
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ Enumerates the signing and signature verification parameters, which can be set b
 PSS_MD_NAME_STR = 100
 ```
 
-Message digest algorithm used with the PSS padding mode in RSA.
+表示RSA算法中，使用PSS模式时，消息摘要功能的算法名。
 
 **Since:** 10
 
@@ -44,7 +44,7 @@ Message digest algorithm used with the PSS padding mode in RSA.
 PSS_MGF_NAME_STR = 101
 ```
 
-Mask generation algorithm used with the PSS padding mode in RSA. Currently, only MGF1 is supported.
+表示RSA算法中，使用PSS模式时，掩码生成算法（目前仅支持MGF1）。
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ Mask generation algorithm used with the PSS padding mode in RSA. Currently, only
 PSS_MGF1_MD_STR = 102
 ```
 
-Message digest algorithm for the MGF1 mask generation used with the PSS padding mode in RSA.
+表示RSA算法中，使用PSS模式时，MGF1掩码生成功能的消息摘要算法。
 
 **Since:** 10
 
@@ -84,19 +84,18 @@ Message digest algorithm for the MGF1 mask generation used with the PSS padding 
 PSS_SALT_LEN_NUM = 103
 ```
 
-Length of the salt in bytes used with the PSS padding mode in RSA.
+表示RSA算法中，使用PSS模式时，盐值的长度，长度以字节为单位。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_According to the FIPS 186-4 standard, sLen should be greater than or equal to 0 and less than or equal to the hash length.
+&lt;br&gt;根据 FIPS 186-4 标准，sLen 应大于等于 0 且小于等于哈希长度。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Default values:  
-- For sign, automatically calculate the maximum salt length.  
-- For verify, automatically calculate the salt length.
+&lt;br&gt;默认值：  
+- 对于签名操作，自动计算最大盐值长度。  
+- 对于验证操作，自动计算盐值长度。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_Special values:  
-- For sign, you can also set the value to -1 to use the digest length as the salt length, and -2 or -3 to  
-automatically calculate the maximum salt length. The recommended value is -1.  
-- For verify, you can also set the value to -1 to use the digest length as the salt length, -2 to automatically  
-calculate the salt length, or -3 to use the maximum salt length. The recommended value is -2.
+&lt;br&gt;特殊值：  
+- 对于签名操作，您也可以将值设置为 -1，以使用摘要长度作为盐值长度；或设置为 -2 或 -3，以自动计算最大盐值长度。推荐使用 -1。  
+- 对于验证操作，您也可以将值设置为 -1，以使用摘要长度作为盐值长度；设置为 -2，以自动计算盐值长度；或设置为 -3，以使用最大盐值长度。  
+推荐使用 -2。
 
 **Since:** 10
 
@@ -116,7 +115,7 @@ calculate the salt length, or -3 to use the maximum salt length. The recommended
 PSS_TRAILER_FIELD_NUM = 104
 ```
 
-Trailer field used in the encoding operation when PSS padding mode is used in RSA.
+表示RSA算法中，使用PSS模式时，用于编码操作的整数。
 
 **Since:** 10
 
@@ -136,7 +135,7 @@ Trailer field used in the encoding operation when PSS padding mode is used in RS
 SM2_USER_ID_UINT8ARR = 105
 ```
 
-User ID field in SM2.
+表示SM2算法中，用户身份标识字段。
 
 **Since:** 11
 
@@ -156,7 +155,7 @@ User ID field in SM2.
 ML_DSA_DETERMINISTIC_BOOL = 106
 ```
 
-Indicates whether deterministic signing is used for the ML-DSA signing and verifying process.
+指示ML-DSA签名和验证过程中是否使用确定性签名。
 
 **Since:** 26.0.0
 
@@ -176,7 +175,7 @@ Indicates whether deterministic signing is used for the ML-DSA signing and verif
 ML_DSA_MU_BOOL = 107
 ```
 
-Indicates the mu parameter value for the ML-DSA signing and verifying process.
+指示ML-DSA签名和验证过程中的mu参数值。
 
 **Since:** 26.0.0
 
@@ -196,7 +195,7 @@ Indicates the mu parameter value for the ML-DSA signing and verifying process.
 ML_DSA_CONTEXT_UINT8ARR = 108
 ```
 
-Indicates the context data for the ML-DSA signing and verifying process.
+指示ML-DSA签名和验证过程中的上下文数据。
 
 **Since:** 26.0.0
 

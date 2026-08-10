@@ -1,12 +1,18 @@
 # setRestartWant
 
+## Modules to Import
+
+```TypeScript
+import { appRecovery } from 'kits/@kit.AbilityKit';
+```
+
 ## setRestartWant
 
 ```TypeScript
 function setRestartWant(want: Want): void
 ```
 
-Sets an ability that will be recovered. The ability must be a UIAbility in the current bundle.
+设置下次恢复主动拉起场景下的Ability。该Ability必须为当前包下的UIAbility。
 
 **Since:** 10
 
@@ -24,9 +30,9 @@ Sets an ability that will be recovered. The ability must be a UIAbility in the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Want of the target ability. You can set the **bundleName** and **abilityName** fields in **Want** to specify the ability. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 通过设置Want中"bundleName"和"abilityName"字段来指定恢复重启的Ability。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { appRecovery, Want } from '@kit.AbilityKit';

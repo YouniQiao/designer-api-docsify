@@ -1,6 +1,6 @@
 # ContainerReaderInterface
 
-Defines the ContainerReader Component.Used for reading and analyzing container layout information based on size breakpoints in dynamic scenarios.Provides container dimension analysis and breakpoint detection capabilities.
+定义ContainerReader组件。用于在动态场景下基于尺寸断点读取和分析容器布局信息。提供容器尺寸分析和断点检测能力。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Defines the ContainerReader Component.Used for reading and analyzing container l
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## [[Call]]
 
 ```TypeScript
 (value: ContainerReaderInfo): ContainerReaderAttribute
 ```
 
-Sets the container reading configuration for ContainerReader component.Configures the size parameters and breakpoint rules for container layout analysis.
+创建容器断点组件并配置容器读取参数。
 
 **Since:** 26.0.0
 
@@ -36,11 +42,11 @@ Sets the container reading configuration for ContainerReader component.Configure
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The configuration options for container reading |
+| value | [ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | Yes | 容器读取配置选项，包含尺寸数据和断点配置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-i.md) |  |
 

@@ -10,6 +10,12 @@ Provides an instance that bear data network capabilities.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## bearerPrivateIdentifier
 
 ```TypeScript
@@ -38,7 +44,7 @@ netCapabilities: NetCapabilities
 
 The transmission capacity and support of the network's global proxy storage data network.
 
-**Type:** NetCapabilities
+**Type:** [NetCapabilities](arkts-network-connection-netcapabilities-i.md)
 
 **Since:** 11
 

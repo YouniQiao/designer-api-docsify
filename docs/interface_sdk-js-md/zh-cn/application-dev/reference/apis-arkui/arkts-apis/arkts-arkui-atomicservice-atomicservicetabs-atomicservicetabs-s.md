@@ -1,9 +1,10 @@
 # AtomicServiceTabs
 
 AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行自定义的属性进行简化，限制最多显示5个页签，固定页签的样式、位置和大小。
-    **说明：**  
-    
-    该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+
+> **说明：**
+> 
+> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 12
 
@@ -14,6 +15,12 @@ AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行�
 <!--Device-unnamed-export declare struct AtomicServiceTabs--><!--Device-unnamed-export declare struct AtomicServiceTabs-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from 'kits/@kit.ArkUI';
+```
 
 ## onContentWillChange
 
@@ -41,7 +48,7 @@ barBackgroundColor?: ResourceColor
 
 设置TabBar的背景颜色，默认值为透明。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -85,7 +92,7 @@ controller?: TabsController
 
 Tabs组件的控制器，用于控制页签切换。默认值为new TabsController()。
 
-**类型：** TabsController
+**类型：** [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md)
 
 **起始版本：** 12
 
@@ -127,7 +134,7 @@ layoutMode?: LayoutMode
 
 设置底部页签的图片、文字排布的方式，默认值为LayoutMode.VERTICAL。
 
-**类型：** LayoutMode
+**类型：** [LayoutMode](arkts-arkui-tabcontent-layoutmode-e.md)
 
 **起始版本：** 18
 
@@ -149,7 +156,7 @@ onChange?: Callback<number>
 
 Tabs页签切换后触发的事件，回调参数为切换后的页签索引，索引值从0开始。当onContentWillChange回调返回false拦截页面切换时，该事件不会被触发。默认值为空。
 
-**类型：** Callback&lt;number&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
 
 **起始版本：** 12
 
@@ -169,7 +176,7 @@ onTabBarClick?: Callback<number>
 
 Tabs页签点击后触发的事件，回调参数为被点击页签的索引值，索引值从0开始。默认值为空。
 
-**类型：** Callback&lt;number&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
 
 **起始版本：** 12
 
@@ -195,7 +202,7 @@ tabBarOptionsArray: [
 
 页签选项数组，最多支持5个页签。
 
-**类型：** [     TabBarOptions,     TabBarOptions,     TabBarOptions?,     TabBarOptions?,     TabBarOptions?   ]
+**类型：** [     TabBarOptions,     TabBarOptions,     TabBarOptions?,     TabBarOptions?,     TabBarOptions?   ]
 
 **起始版本：** 12
 
@@ -217,7 +224,7 @@ tabBarPosition?: TabBarPosition
 
 设置页签栏位置，默认值为TabBarPosition.BOTTOM。
 
-**类型：** TabBarPosition
+**类型：** [TabBarPosition](arkts-arkui-atomicservice-atomicservicetabs-tabbarposition-e.md)
 
 **起始版本：** 12
 
@@ -245,7 +252,7 @@ tabContents?: [
 
 内容视图容器数组，最多支持5个页签，默认值为空。
 
-**类型：** [      TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?   ]
+**类型：** [      TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?   ]
 
 **起始版本：** 12
 

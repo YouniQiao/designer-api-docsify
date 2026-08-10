@@ -1,13 +1,18 @@
 # offPreloadedUIExtensionAbilityDestroyed (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## offPreloadedUIExtensionAbilityDestroyed
 
 ```TypeScript
 function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtensionAbilityDestroyedFn): void
 ```
 
-Unsubscribes from loaded events of a preloaded  
-[UIExtensionAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance in the current process.
+注销当前进程中预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的销毁监听。
 
 **Since:** 23
 
@@ -27,17 +32,17 @@ Unsubscribes from loaded events of a preloaded
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used for unsubscription. If this parameter is not specified, all callbacks associated with the specified event in the process will be unregistered. |
+| callback | [PreloadedUIExtensionAbilityDestroyedFn](arkts-ability-abilitymanager-preloadeduiextensionabilitydestroyedfn-t-sys.md) | No | 需要注销监听的回调函数。如果不传入任何回调函数，则会注销当前进程中所有该事件类型的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Memory operation error. |
+| 16000050 | Internal error. Possible causes: Memory operation error. |
+| 201 | The application does not have permission to call the interface. |
+| 202 | The application is not system-app, can not use system-api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityManager } from '@kit.AbilityKit';

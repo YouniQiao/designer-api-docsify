@@ -1,6 +1,6 @@
 # RestrictedWorker（系统接口）
 
-RestrictedWorker类继承[ThreadWorker]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，具有ThreadWorker中所有的方法。RestrictedWorker主要用于提供受限的Worker线程运行环境，该线程运行环境中只允许导入Worker模块，不允许导入其他API。
+RestrictedWorker类继承[ThreadWorker](arkts-arkts-worker-threadworker-c.md)，具有ThreadWorker中所有的方法。RestrictedWorker主要用于提供受限的Worker线程运行环境，该线程运行环境中只允许导入Worker模块，不允许导入其他API。
 
 **继承/实现关系：** RestrictedWorker extends [ThreadWorker](arkts-arkts-worker-threadworker-c.md)
 
@@ -13,6 +13,12 @@ RestrictedWorker类继承[ThreadWorker]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，�
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
 
 ## constructor
 
@@ -37,12 +43,12 @@ RestrictedWorker构造函数。使用其他方法前，均需先构造Restricted
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scriptURL | string | 是 | Worker线程文件的路径，路径规则详细参考文件路径注意事项。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 构造RestrictedWorker时的选项。 |
+| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | 否 | 构造RestrictedWorker时的选项。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failure. |
-| [10200007](../errorcode-utils.md#10200007-worker文件路径异常) | The worker file path is invalid. |
+| 10200003 | Worker initialization failure. |
+| 10200007 | The worker file path is invalid. |
 

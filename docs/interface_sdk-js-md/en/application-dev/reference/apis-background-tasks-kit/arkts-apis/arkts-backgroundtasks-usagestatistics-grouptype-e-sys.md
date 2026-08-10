@@ -1,6 +1,6 @@
 # GroupType (System API)
 
-Declares group type.
+应用分组的设置类型。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Declares group type.
 ALIVE_GROUP = 10
 ```
 
-Indicates the alive group.
+活跃分组。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Indicates the alive group.
 DAILY_GROUP = 20
 ```
 
-Indicates the daily group.
+经常使用，但当前并未在活跃态。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Indicates the daily group.
 FIXED_GROUP = 30
 ```
 
-Indicates the fixed group.
+常用分组，定期使用，但不是每天使用。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Indicates the fixed group.
 RARE_GROUP = 40
 ```
 
-Indicates the rare group.
+极少使用分组，不经常使用。
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ Indicates the rare group.
 LIMITED_GROUP = 50
 ```
 
-Indicates the limit group.
+受限使用分组。
 
 **Since:** 9
 
@@ -108,7 +108,7 @@ Indicates the limit group.
 NEVER_GROUP = 60
 ```
 
-Indicates the never group.
+从未使用分组，安装但是从未运行过。
 
 **Since:** 9
 

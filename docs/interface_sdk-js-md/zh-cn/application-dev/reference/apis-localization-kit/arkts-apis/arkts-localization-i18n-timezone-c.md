@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getAppDefaultTimeZone
 
 ```TypeScript
 static getAppDefaultTimeZone(): TimeZone
 ```
 
-获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置了默认时区，则返回设置的默认时区对象；否则，返回系统时区对象。
+获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](arkts-localization-i18n-timezone-c.md#setappdefaulttimezonebyid)设置了默认时区，则返回设置的默认时区对象；否则，返回系统时区对象。
 
 **起始版本：** 26.0.0
 
@@ -34,7 +40,7 @@ static getAppDefaultTimeZone(): TimeZone
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 应用使用的默认时区对象。 |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | 应用使用的默认时区对象。 |
 
 ## getAvailableIDs
 
@@ -107,7 +113,7 @@ static getCityDisplayName(cityID: string, locale: string): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | cityID | string | 是 | 时区城市ID。 |
-| locale | string | 是 | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，由语言、脚本、国家地区组 成。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
 
 **返回值：**
 
@@ -137,7 +143,7 @@ getDisplayName(locale?: string, isDST?: boolean): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string | 否 | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_，由语言、脚本、国家地区 组成。默认值：系统当前区域ID。 |
+| locale | string | 否 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区 组成。默认值：系统当前区域ID。 |
 | isDST | boolean | 否 | true表示显示夏令时信息，false表示不显示夏令时信息。默认值：false。 |
 
 **返回值：**
@@ -252,7 +258,7 @@ static getTimezoneFromCity(cityID: string): TimeZone
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 时区城市对应的时区对象。 |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | 时区城市对应的时区对象。 |
 
 ## getTimezonesByLocation
 
@@ -283,14 +289,14 @@ static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZo
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | 时区对象数组，数组中对象对应的时区为该地理位置推荐的时区。 |
+| Array&lt;[TimeZone](arkts-localization-i18n-timezone-c.md)&gt; | 时区对象数组，数组中对象对应的时区为该地理位置推荐的时区。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getZoneRules
 
@@ -298,7 +304,7 @@ static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZo
 public getZoneRules(): ZoneRules
 ```
 
-获取时区跳变规则，时区的跳变逻辑参考\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+获取时区跳变规则，时区的跳变逻辑参考[夏令时跳变](../../../internationalization/i18n-dst-transition.md)。
 
 **起始版本：** 23
 
@@ -314,7 +320,7 @@ public getZoneRules(): ZoneRules
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 时区跳变规则，包含跳变的时间点、跳变前后的偏移量信息。 |
+| [ZoneRules](arkts-localization-i18n-zonerules-c.md) | 时区跳变规则，包含跳变的时间点、跳变前后的偏移量信息。 |
 
 ## isDaylightSavingTime
 
@@ -340,7 +346,7 @@ public isDaylightSavingTime(date: Date): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date | 是 | 时间日期。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_月份从0开始计数，0表示一月。 |
+| date | Date | 是 | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
 
 **返回值：**
 
@@ -355,9 +361,10 @@ static setAppDefaultTimeZoneById(zoneID: string): void
 ```
 
 设置当前应用的默认时区，在应用运行时生命周期内有效。
-    **说明：**  
-    
-    进行日期时间格式化时，若未指定时区，会优先使用应用设置的默认时区。
+
+> **说明：**
+> 
+> 进行日期时间格式化时，若未指定时区，会优先使用应用设置的默认时区。
 
 **起始版本：** 26.0.0
 
@@ -381,5 +388,5 @@ static setAppDefaultTimeZoneById(zoneID: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
 

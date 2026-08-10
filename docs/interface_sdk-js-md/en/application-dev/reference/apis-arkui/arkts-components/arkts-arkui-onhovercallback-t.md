@@ -4,7 +4,7 @@
 declare type OnHoverCallback = (status: boolean, event: HoverEvent) => void
 ```
 
-Represents the callback invoked on mouse hover.
+鼠标悬浮触发回调。
 
 **Since:** 14
 
@@ -22,6 +22,6 @@ Represents the callback invoked on mouse hover.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | boolean | Yes | Whether the mouse pointer is hovering over the component. The value **true** means that the mouse pointer enters the component, and **false** means that the mouse pointer leaves the component.  |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Hover event.  |
+| status | boolean | Yes | 表示鼠标是否悬浮在组件上。true表示鼠标悬浮在组件上，false表示鼠标离开组件。 |
+| event | [HoverEvent](../arkts-apis/arkts-arkui-common-hoverevent-i.md) | Yes | 鼠标悬浮事件对象，包含悬浮事件的详细信息（如鼠标位置等）。 |
 

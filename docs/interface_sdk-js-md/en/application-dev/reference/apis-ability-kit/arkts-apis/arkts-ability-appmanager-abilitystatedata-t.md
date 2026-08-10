@@ -4,7 +4,7 @@
 export type AbilityStateData = _AbilityStateData.default
 ```
 
-Defines the ability state data.
+Ability状态信息。
 
 **Since:** 14
 

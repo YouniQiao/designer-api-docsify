@@ -1,6 +1,6 @@
 # ShowDialogSuccessResponse
 
-Success response.
+对话框的响应结果。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Success response.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## index
 
 ```TypeScript
 index: int
 ```
 
-Index of the selected button, starting from 0.
+选中按钮在buttons数组中的索引，从0开始。
 
 **Type:** int
 

@@ -26,10 +26,10 @@ function cancel(agent: WantAgent, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | WantAgent对象。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 取消WantAgent实例的回调方法 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | 是 | WantAgent对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 取消WantAgent实例的回调方法 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -110,7 +110,7 @@ function cancel(agent: WantAgent): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | WantAgent对象。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | 是 | WantAgent对象。 |
 
 **返回值：**
 
@@ -118,7 +118,7 @@ function cancel(agent: WantAgent): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 以Promise形式获取异步返回结果。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

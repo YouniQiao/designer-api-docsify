@@ -1,12 +1,18 @@
 # isBatteryConfigSupported (System API)
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isBatteryConfigSupported
 
 ```TypeScript
 function isBatteryConfigSupported(sceneName: string): boolean
 ```
 
-Checks whether the battery configuration is enabled based on the specified scenario.
+检查是否按场景名称启用电池配置。
 
 **Since:** 23
 
@@ -22,22 +28,22 @@ Checks whether the battery configuration is enabled based on the specified scena
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sceneName | string | Yes | Scenario name. The value must be a string. |
+| sceneName | string | Yes | 设置场景名称；该参数必须为字符串类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Operation result. The value **true** indicates that the charging scenario is supported, and the value **false** indicates the opposite. |
+| boolean | 如果设备支持充电场景，则返回true，否则返回false。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [5100101](../../apis-basic-services-kit/errorcode-battery-info.md#5100101-service-connection-failure) | Failed to connect to the service. |
+| 5100101 | Failed to connect to the service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import {batteryInfo} from '@kit.BasicServicesKit';

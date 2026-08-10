@@ -1,22 +1,35 @@
-# @system.brightness
+# @ohos.brightness
+
+该模块提供屏幕亮度的设置接口。
+
+> **说明：**
+> 
+> - 本模块接口为系统接口。
+
+**起始版本：** 7
+
+**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+
+<!--Device-unnamed-declare namespace brightness--><!--Device-unnamed-declare namespace brightness-End-->
+
+**系统能力：** SystemCapability.PowerManager.DisplayPowerManager
+
+**系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { brightness } from 'kits/@kit.BasicServicesKit';
+```
 
 ## 汇总
 
-### 类
+<!--Del-->
+### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [Brightness](arkts-basicservices-brightness-brightness-c.md) | 该模块提供屏幕亮度和模式的查询、调节接口。 |
-
-### 接口
-
-| 名称 | 说明 |
-| --- | --- |
-| [BrightnessModeResponse](arkts-basicservices-brightness-brightnessmoderesponse-i.md) | 包含屏幕亮度模式的对象。 |
-| [BrightnessResponse](arkts-basicservices-brightness-brightnessresponse-i.md) | 包含屏幕亮度的对象。 |
-| [GetBrightnessModeOptions](arkts-basicservices-brightness-getbrightnessmodeoptions-i.md) | 获取屏幕亮度模式的参数对象。 |
-| [GetBrightnessOptions](arkts-basicservices-brightness-getbrightnessoptions-i.md) | 获取屏幕亮度的参数对象。 |
-| [SetBrightnessModeOptions](arkts-basicservices-brightness-setbrightnessmodeoptions-i.md) | 设置屏幕亮度模式的参数对象。 |
-| [SetBrightnessOptions](arkts-basicservices-brightness-setbrightnessoptions-i.md) | 设置屏幕亮度的参数对象。 |
-| [SetKeepScreenOnOptions](arkts-basicservices-brightness-setkeepscreenonoptions-i.md) | 设置屏幕常亮的参数对象。 |
+| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setvalue) | 设置系统的屏幕亮度。 |
+| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setvalue-1) | 设置系统的屏幕亮度。用于连续调节亮度的场景，在连续调节亮度过程中，设置continuous为true，结束时设置continuous为false，会有更好的性能。 |
+<!--DelEnd-->
 

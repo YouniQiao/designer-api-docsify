@@ -43,13 +43,13 @@ action: string
 Action type.
 
 - **"router"**: redirection to the specified UIAbility of the widget provider.  
-- **"message"**: custom message. If this type of action is triggered, the  
-[onFormEvent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_lifecycle callback of the provider FormExtensionAbility is called.  
-- **"call"**: launch of the widget provider in the background. If this type of action is triggered, the specified  
-UIAbility (whose launch type must be \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_of the widget provider is started in the background, but not displayed in the foreground. This action type requires that the widget provider should have the  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_permission.
+- **"message"**: custom message. If this type of action is triggered, the   
+[onFormEvent()](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md/arkts-form-app-form-formextensionability-formextensionability-c.md#onformevent)lifecycle callback of the provider FormExtensionAbility is called.  
+- **"call"**: launch of the widget provider in the background. If this type of action is triggered, the specified   
+UIAbility (whose launch type must be [singleton](../../../application-models/uiability-launch-type.md#singleton)of the widget provider is started in the background, but not displayed in the foreground. This action type requires  that the widget provider should have the   
+[ohos.permission.KEEP_BACKGROUND_RUNNING](../../../security/AccessToken/permissions-for-all.md#ohospermissionkeep_background_running) permission.
 
-**NOTE**
+**NOTE：**
 
 Whenever possible, avoid using the router event to refresh the widget UI.
 
@@ -126,7 +126,7 @@ params?: Object
 Additional parameters carried in the current action. The value is a key-value pair in JSON format. For the **"call"  
 ** action type, the **method** parameter must be set and its value type must be string.
 
-**NOTE**
+**NOTE：**
 
 Whenever possible, avoid using **params** to transfer internal state variables of widgets.
 
@@ -152,7 +152,7 @@ This API can be used in ArkTS widgets since API version 10.
 uri?: string
 ```
 
-URI of the target UIAbility when action is **"router"**. If both **uri** and **abilityName** are set,  
+URI of the target UIAbility when action is **"router"**. If both **uri** and **abilityName** are set,   
 **abilityName** takes precedence.
 
 This API can be used in ArkTS widgets since API version 11.

@@ -1,8 +1,8 @@
 # SlotType
 
-Enumerates the notification slot types.
+通知渠道类型。
 
-Different types correspond to different [SlotLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ values,determining the reminder behavior of the notification.
+不同类型对应不同的SlotLevel，决定通知的提醒行为。
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Different types correspond to different [SlotLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\
 EMERGENCY_INFORMATION = 10
 ```
 
-Emergency event.
+紧急事件。
 
 **Since:** 12
 

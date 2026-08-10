@@ -1,6 +1,8 @@
 # MediaQueryListener
 
-Defines the Listener of mediaquery.
+媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width <= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。
+
+继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)。
 
 **Inheritance/Implementation:** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)
 
@@ -12,13 +14,19 @@ Defines the Listener of mediaquery.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { mediaquery } from 'kits/@kit.ArkUI';
+```
+
 ## offChange
 
 ```TypeScript
 offChange(callback?: Callback<MediaQueryResult>): void
 ```
 
-Deregisters a callback with the corresponding query condition by using the handle.This callback is not triggered when the media attributes chang.
+通过句柄向对应的查询条件取消注册回调，当媒体属性发生变更时不再触发指定的回调。
 
 **Since:** 23
 
@@ -34,7 +42,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MediaQueryResult&gt; | No |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaQueryResult&gt; | No |  |
 
 ## onChange
 
@@ -42,7 +50,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 onChange(callback: Callback<MediaQueryResult>): void
 ```
 
-Registers a callback with the corresponding query condition by using the handle.This callback is triggered when the media attributes change.
+通过句柄向对应的查询条件注册回调，当媒体属性发生变更时会触发该回调。
 
 **Since:** 23
 
@@ -58,5 +66,5 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MediaQueryResult&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaQueryResult&gt; | Yes |  |
 

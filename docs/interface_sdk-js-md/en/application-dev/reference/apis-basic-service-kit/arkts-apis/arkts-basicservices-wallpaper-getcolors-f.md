@@ -1,12 +1,18 @@
 # getColors
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getColors
 
 ```TypeScript
 function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<RgbaColor>>): void
 ```
 
-Obtains the wallpaper colors for the wallpaper of the specified type. Returns rgbaColor type of array callback function.
+获取指定类型壁纸的主要颜色信息。
 
 **Since:** 7
 
@@ -22,10 +28,10 @@ Obtains the wallpaper colors for the wallpaper of the specified type. Returns rg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the wallpaper type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;RgbaColor&gt;&gt; | Yes | the callback of getColors. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RgbaColor&gt;&gt; | Yes | 回调函数，返回壁纸的主要颜色信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -46,7 +52,7 @@ wallpaper.getColors(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessEr
 function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 ```
 
-Obtains the wallpaper colors for the wallpaper of the specified type. Returns rgbaColor type of array callback function.
+获取指定类型壁纸的主要颜色信息。
 
 **Since:** 7
 
@@ -62,15 +68,15 @@ Obtains the wallpaper colors for the wallpaper of the specified type. Returns rg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the wallpaper type. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;RgbaColor&gt;&gt; | the promise returned by the function. |
+| Promise&lt;Array&lt;RgbaColor&gt;&gt; | 返回壁纸的主要颜色信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

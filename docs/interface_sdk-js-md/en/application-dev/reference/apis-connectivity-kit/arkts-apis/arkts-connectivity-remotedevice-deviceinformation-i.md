@@ -1,6 +1,6 @@
 # DeviceInformation
 
-Describes the remote device information.
+描述远端设备信息。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,19 @@ Describes the remote device information.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
+## Modules to Import
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## manufacturerData
 
 ```TypeScript
 manufacturerData: string
 ```
 
-The manufacturer data of the remote device.The maximum length is 255.
+远端设备的制造商数据最大长度为255。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ The manufacturer data of the remote device.The maximum length is 255.
 modelData: string
 ```
 
-The model data of the remote device.The maximum length is 255.
+远程设备的模型数据。最大长度为255。
 
 **Type:** string
 

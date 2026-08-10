@@ -2,7 +2,7 @@
 
 录音设备选择组件，可用于切换音频输入设备。
 
-该组件为自定义组件，开发者在使用前需要先了解\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+该组件为自定义组件，开发者在使用前需要先了解[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)。
 
 **起始版本：** 23
 
@@ -13,6 +13,12 @@
 <!--Device-unnamed-export declare struct AVInputCastPicker--><!--Device-unnamed-export declare struct AVInputCastPicker-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast
+
+## 导入模块
+
+```TypeScript
+import { AVInputCastPicker } from 'kits/@kit.AVSessionKit';
+```
 
 ## build
 
@@ -42,7 +48,7 @@ customPicker?: CustomBuilder
 
 If not set, system will show the default appearance for different device type.
 
-**类型：** CustomBuilder
+**类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 
@@ -62,7 +68,7 @@ onStateChange?: OnPickerStateCallback
 
 设备列表状态变更回调。
 
-**类型：** OnPickerStateCallback
+**类型：** [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md)
 
 **起始版本：** 23
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Mechanic.Core
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## mechDeviceType
 
 ```TypeScript
@@ -18,7 +24,7 @@ mechDeviceType: MechDeviceType
 
 机械设备类型
 
-**类型：** MechDeviceType
+**类型：** [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md)
 
 **起始版本：** 20
 
@@ -36,7 +42,7 @@ mechId: int
 
 机械设备ID
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 

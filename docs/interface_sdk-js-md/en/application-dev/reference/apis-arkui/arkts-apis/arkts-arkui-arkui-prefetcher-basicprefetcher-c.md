@@ -1,6 +1,6 @@
 # BasicPrefetcher
 
-Basic implementation of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.It provides an intelligent data prefetching algorithm to make decisions about which data items should be prefetched in response to the real-time changes of visible on-screen area and changes in the duration of the prefetching. It also determines which prefetch requests should be canceled based on user scrolling actions.
+一种IPrefetcher的基础实现。此prefetcher提供了一种智能预加载算法，可以根据显示区域的实时变化以及预加载耗时的变化来确定预加载范围并加载数据项，并且可以根据用户的滚动操作来取消相应数据项的预加载请求。
 
 **Inheritance/Implementation:** BasicPrefetcher implements [IPrefetcher<T>](IPrefetcher<T>)
 
@@ -12,13 +12,19 @@ Basic implementation of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.It provides an int
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(dataSource?: IDataSourcePrefetching<T>)
 ```
 
-Constructs a basic prefetcher instance and optionally sets the data source.
+构建一个基础的prefetcher，并在构建时可以按需设置数据源。
 
 **Since:** 23
 
@@ -34,7 +40,7 @@ Constructs a basic prefetcher instance and optionally sets the data source.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | No | Data source that supports prefetching. |
+| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | No | 支持预加载的数据源。 |
 
 ## setDataSource
 
@@ -42,7 +48,7 @@ Constructs a basic prefetcher instance and optionally sets the data source.
 setDataSource(dataSource: IDataSourcePrefetching<T>): void
 ```
 
-Sets the data source to bind to this prefetcher.
+设置prefetcher对象的数据源。
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ Sets the data source to bind to this prefetcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Data source that supports prefetching. |
+| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | Yes | 支持预加载的数据源。 |
 
 ## visibleAreaChanged
 
@@ -66,7 +72,7 @@ Sets the data source to bind to this prefetcher.
 visibleAreaChanged(minVisible: int, maxVisible: int): void
 ```
 
-Call this method when the visible area changed.
+通知prefetcher屏幕显示范围发生变化。
 
 **Since:** 23
 
@@ -82,6 +88,6 @@ Call this method when the visible area changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minVisible | int | Yes | Index of the first visible data item. |
-| maxVisible | int | Yes | Index of the last visible data item. |
+| minVisible | int | Yes | 显示范围内第一个元素的序号。 |
+| maxVisible | int | Yes | 显示范围内最后一个元素的序号。 |
 

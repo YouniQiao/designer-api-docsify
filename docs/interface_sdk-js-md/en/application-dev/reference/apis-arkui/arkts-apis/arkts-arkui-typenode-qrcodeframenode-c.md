@@ -1,6 +1,6 @@
 # QRCodeFrameNode
 
-Define the QRCode type of FrameNode.
+定义QRCode类型的FrameNode。
 
 **Inheritance/Implementation:** QRCodeFrameNode extends [TypedFrameNode<QRCodeAttribute>](TypedFrameNode<QRCodeAttribute>)
 
@@ -18,7 +18,7 @@ Define the QRCode type of FrameNode.
 abstract initialize(value: string): QRCodeAttribute
 ```
 
-Initialize QRCode FrameNode.
+初始化QRCode类型的FrameNode。
 
 **Since:** 23
 
@@ -40,5 +40,5 @@ Initialize QRCode FrameNode.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [QRCodeAttribute](../arkts-components/arkts-arkui-qrcode-attribute.md) |  |
 

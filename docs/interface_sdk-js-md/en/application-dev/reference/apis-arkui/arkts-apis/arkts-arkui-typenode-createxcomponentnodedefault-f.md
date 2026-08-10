@@ -6,7 +6,7 @@
 export function createXComponentNodeDefault(context: UIContext, options?: FrameNodeOptions): XComponent
 ```
 
-Create a FrameNode of XComponent type.On API 26.0.0 and above, It can also create a FrameNode of XComponent type with options.
+创建 XComponent 类型的 FrameNode
 
 **Since:** 23
 
@@ -22,12 +22,12 @@ Create a FrameNode of XComponent type.On API 26.0.0 and above, It can also creat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | uiContext used to create the FrameNode. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for configuring FrameNode creation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 26.0.0 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 用于创建 FrameNode 的 UI 上下文 |
+| options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 24 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return XComponent type FrameNode. |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | 返回XComponent类型的FrameNode。 |
 

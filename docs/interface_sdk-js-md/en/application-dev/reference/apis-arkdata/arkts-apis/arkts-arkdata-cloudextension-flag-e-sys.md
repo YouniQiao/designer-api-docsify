@@ -1,6 +1,6 @@
 # Flag (System API)
 
-Enumerates the operations that can be performed on a database. Use the enum name rather than the enum value.
+描述数据库上执行操作的枚举。请使用枚举名而非枚举值。
 
 **Since:** 11
 
@@ -18,7 +18,7 @@ Enumerates the operations that can be performed on a database. Use the enum name
 INSERT = 0
 ```
 
-Insert data.
+插入操作。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ Insert data.
 UPDATE = 1
 ```
 
-Update data.
+更新操作。
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ Update data.
 DELETE = 2
 ```
 
-Delete data.
+删除操作。
 
 **Since:** 11
 

@@ -14,6 +14,12 @@ Wi-Fi IP information.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## gateway
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # TextCase
 
-The style of the text case.
+Letter type in text
 
 **Since:** 7
 
@@ -13,10 +13,10 @@ The style of the text case.
 ## Normal
 
 ```TypeScript
-Normal
+Normal = 0
 ```
 
-The original case of the text is retained.
+The default is normal.
 
 **Since:** 7
 
@@ -26,17 +26,17 @@ The original case of the text is retained.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextCase-Normal--><!--Device-TextCase-Normal-End-->
+<!--Device-TextCase-Normal = 0--><!--Device-TextCase-Normal = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LowerCase
 
 ```TypeScript
-LowerCase
+LowerCase = 1
 ```
 
-All letters in the text are in lowercase.
+The text is all lowercase.
 
 **Since:** 7
 
@@ -46,17 +46,17 @@ All letters in the text are in lowercase.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextCase-LowerCase--><!--Device-TextCase-LowerCase-End-->
+<!--Device-TextCase-LowerCase = 1--><!--Device-TextCase-LowerCase = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## UpperCase
 
 ```TypeScript
-UpperCase
+UpperCase = 2
 ```
 
-All letters in the text are in uppercase.
+The text is all uppercase.
 
 **Since:** 7
 
@@ -66,7 +66,7 @@ All letters in the text are in uppercase.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextCase-UpperCase--><!--Device-TextCase-UpperCase-End-->
+<!--Device-TextCase-UpperCase = 2--><!--Device-TextCase-UpperCase = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

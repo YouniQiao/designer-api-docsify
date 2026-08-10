@@ -1,6 +1,6 @@
 # BundlePackFlag (System API)
 
-Flag of the bundle package.
+要查询的应用包标志
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Flag of the bundle package.
 GET_PACK_INFO_ALL = 0x00000000
 ```
 
-All information in the **pack.info** file.
+获取应用包pack.info的所有信息。
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ All information in the **pack.info** file.
 GET_PACKAGES = 0x00000001
 ```
 
-Package information in the **pack.info** file.
+获取应用包pack.info的package信息。
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ Package information in the **pack.info** file.
 GET_BUNDLE_SUMMARY = 0x00000002
 ```
 
-Bundle summary information in the **pack.info** file.
+获取应用包pack.info的bundle摘要信息。
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Bundle summary information in the **pack.info** file.
 GET_MODULE_SUMMARY = 0x00000004
 ```
 
-Module summary information in the **pack.info** file.
+获取应用包pack.info的module摘要信息。
 
 **Since:** 9
 

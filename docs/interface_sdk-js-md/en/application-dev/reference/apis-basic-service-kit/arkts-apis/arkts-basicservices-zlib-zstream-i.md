@@ -1,6 +1,6 @@
 # ZStream
 
-Process all the information required for compression and decompression.
+处理所有用于压缩和解压缩所需的信息。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Process all the information required for compression and decompression.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## adler
 
 ```TypeScript
 adler?: long
 ```
 
-Adler-32 or CRC-32 value of uncompressed data.
+未压缩数据的Adler-32或CRC-32值。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Adler-32 or CRC-32 value of uncompressed data.
 availableIn?: int
 ```
 
-Number of bytes available for **nextIn**.
+nextIn可用的字节数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -56,9 +62,9 @@ Number of bytes available for **nextIn**.
 availableOut?: int
 ```
 
-Number of remaining bytes available for **nextOut**.
+nextOut的剩余可用字节数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -76,9 +82,9 @@ Number of remaining bytes available for **nextOut**.
 dataType?: int
 ```
 
-Binary or text of **deflate**, or decoding state of **inflate**.
+关于数据类型的最佳猜测：deflate的二进制或文本，或inflate的解码状态。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -96,7 +102,7 @@ Binary or text of **deflate**, or decoding state of **inflate**.
 nextIn?: ArrayBuffer
 ```
 
-Input bytes to be compressed.
+需要压缩的输入字节。
 
 **Type:** ArrayBuffer
 
@@ -116,7 +122,7 @@ Input bytes to be compressed.
 nextOut?: ArrayBuffer
 ```
 
-Output bytes after compression.
+压缩后的输出字节。
 
 **Type:** ArrayBuffer
 
@@ -136,9 +142,9 @@ Output bytes after compression.
 totalIn?: long
 ```
 
-Total number of input bytes read so far.
+到目前为止读取的输入字节总数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 
@@ -156,9 +162,9 @@ Total number of input bytes read so far.
 totalOut?: long
 ```
 
-Total number of output bytes.
+到目前为止输出字节总数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 12
 

@@ -1,12 +1,18 @@
 # setAppHttpProxy
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.NetworkKit';
+```
+
 ## setAppHttpProxy
 
 ```TypeScript
 function setAppHttpProxy(httpProxy: HttpProxy): void
 ```
 
-Set application level http proxy \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Set application level http proxy {@link HttpProxy}.
 
 **Since:** 11
 
@@ -20,16 +26,16 @@ Set application level http proxy \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the application level proxy settings. For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| httpProxy | [HttpProxy](arkts-network-ethernet-httpproxy-t.md) | Yes | Indicates the application level proxy settings. For details, see {@link HttpProxy}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid http proxy. |
+| 401 | Parameter error. |
+| 2100001 | Invalid http proxy. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -48,7 +54,7 @@ let options: http.HttpRequestOptions = {
   usingProxy: true, // This field specifies whether to use the network proxy. It is supported since API version 10.
 };
 // Initiate an HTTP request.
-httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
+httpRequest.request("EXAMPLE_URL", options, (err: BusinessError, data: http.HttpResponse) => {
   if (!err) {
    console.info(`Result: ${data.result}`);
    console.info(`code: ${data.responseCode}`);

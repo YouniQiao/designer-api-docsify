@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
+## 导入模块
+
+```TypeScript
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## [key: string]
 
 ```TypeScript
@@ -18,7 +24,7 @@
 
 the struct of BundleActiveInfoResponse.
 
-**类型：** BundleStateInfo
+**类型：** [BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)
 
 **起始版本：** 7
 

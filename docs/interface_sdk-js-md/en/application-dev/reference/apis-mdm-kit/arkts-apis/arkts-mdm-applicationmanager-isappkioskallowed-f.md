@@ -1,12 +1,18 @@
 # isAppKioskAllowed
 
+## Modules to Import
+
+```TypeScript
+import { applicationManager } from 'kits/@kit.MDMKit';
+```
+
 ## isAppKioskAllowed
 
 ```TypeScript
 function isAppKioskAllowed(appIdentifier: string): boolean
 ```
 
-Checks whether an application is allowed to run in kiosk mode.
+查询某应用是否允许在Kiosk模式下运行。
 
 **Since:** 20
 
@@ -22,15 +28,15 @@ Checks whether an application is allowed to run in kiosk mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appIdentifier | string | Yes | [Unique identifiers]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of an application. You can call the [bundleManager.getBundleInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ API to obtain the **bundleInfo.signatureInfo.appIdentifier**. |
+| appIdentifier | string | Yes | 应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md/arkts-ability-bundleinfo-signatureinfo-i.md)，可以通过接口 [bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md/arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo)获取 bundleInfo.signatureInfo.appIdentifier。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** means the application can run in kiosk mode; the value **false** means the opposite. |
+| boolean | true表示允许在Kiosk模式下运行。false表示不允许在Kiosk模式下运行。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { applicationManager } from '@kit.MDMKit';

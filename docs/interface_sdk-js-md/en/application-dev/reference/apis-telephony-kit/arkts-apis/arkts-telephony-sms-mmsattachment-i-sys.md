@@ -12,6 +12,12 @@ Defines the attachment of an MMS message.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## charset
 
 ```TypeScript
@@ -20,7 +26,7 @@ charset?: MmsCharSets
 
 Indicates the character set for the attachment.
 
-**Type:** MmsCharSets
+**Type:** [MmsCharSets](arkts-telephony-sms-mmscharsets-e-sys.md)
 
 **Since:** 8
 
@@ -40,7 +46,7 @@ contentDisposition: DispositionType
 
 Indicates the content disposition for the attachment.
 
-**Type:** DispositionType
+**Type:** [DispositionType](arkts-telephony-sms-dispositiontype-e-sys.md)
 
 **Since:** 8
 
@@ -160,7 +166,7 @@ inBuff?: Array<int>
 
 Indicates whether the message is in the buffer.
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 8
 

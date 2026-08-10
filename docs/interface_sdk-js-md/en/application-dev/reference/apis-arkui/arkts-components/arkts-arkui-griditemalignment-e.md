@@ -1,15 +1,16 @@
 # GridItemAlignment
 
-Enumerates the alignment modes of grid items.
-    **NOTE**  
-    
-    1. The **STRETCH** option only takes effect in scrollable grids.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_  
-    2. The **STRETCH** option takes effect only if each grid item in a row is of a regular size (occupying only one  
-    row and one column). It is not effective in scenarios where there are grid items spanning across rows or columns.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_  
-    3. When **STRETCH** is used, only grid items without a set height will adopt the height of the tallest grid item  
-    in the current row; the height of grid items with a set height will remain unchanged.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_  
-    4. When **STRETCH** is used, the grid undergoes an additional layout process, which may incur additional  
-    performance overhead.
+GridItem的对齐方式枚举。
+
+> **说明：**
+> 
+> 1、只有可滚动的Grid中，设置STRETCH参数会生效，其他场景不生效。
+
+> 2、在Grid的一行中，如果每个GridItem都是大小规律的（只占一行一列），设置STRETCH参数会生效，存在跨行或跨列的GridItem的场景不生效。
+
+> 3、设置STRETCH后，只有不设置高度的GridItem才会以当前行中最高的GridItem作为自己的高度，设置过高度的GridItem高度不会变化。
+
+> 4、设置STRETCH后，Grid布局时会有额外的布局流程，可能会带来额外的性能开销。
 
 **Since:** 12
 
@@ -25,7 +26,7 @@ Enumerates the alignment modes of grid items.
 DEFAULT = 0
 ```
 
-Use the default alignment mode of the grid.
+使用Grid的默认对齐方式。
 
 **Since:** 12
 
@@ -45,7 +46,7 @@ Use the default alignment mode of the grid.
 STRETCH = 1
 ```
 
-Use the height of the tallest grid item in a row as the height for all other grid items in that row.
+以一行中的最高的GridItem作为其他GridItem的高度。
 
 **Since:** 12
 

@@ -12,6 +12,12 @@ Describes device of cloud pair.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## bluetoothClass
 
 ```TypeScript
@@ -20,7 +26,7 @@ bluetoothClass: int
 
 Indicates the bluetoothClass of the peripheral.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 
@@ -64,7 +70,7 @@ deviceNameTime: long
 
 Indicates the deviceNameTime of the peripheral.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 15
 
@@ -196,7 +202,7 @@ pairState: int
 
 Indicates the pairState of the peripheral.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 15
 

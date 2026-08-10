@@ -1,6 +1,6 @@
 # Compilation
 
-The definition of compilation.
+合集的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
 
 **Inheritance/Implementation:** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -12,13 +12,19 @@ The definition of compilation.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## Modules to Import
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## hasMoreData
 
 ```TypeScript
 hasMoreData: boolean
 ```
 
-Having more compilation data
+是否有更多的合集数据。true表示有，false表示没有。无默认值。
 
 **Type:** boolean
 
@@ -38,7 +44,7 @@ Having more compilation data
 id: string
 ```
 
-Unique ID of the compilation
+合集的唯一标识。
 
 **Type:** string
 
@@ -58,9 +64,9 @@ Unique ID of the compilation
 memberMediaType: EntityType
 ```
 
-Media type of the compilation
+合集的媒体资源类型。
 
-**Type:** EntityType
+**Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **Since:** 23
 
@@ -78,7 +84,7 @@ Media type of the compilation
 title: string
 ```
 
-Title of the compilation
+合集的标题。
 
 **Type:** string
 
@@ -98,9 +104,9 @@ Title of the compilation
 topElements: MediaEntity[]
 ```
 
-Content of the compilation
+合集的内容。
 
-**Type:** MediaEntity[]
+**Type:** [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]
 
 **Since:** 23
 
@@ -118,9 +124,9 @@ Content of the compilation
 totalSize: int
 ```
 
-Total size of the compilation
+合集的总个数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 

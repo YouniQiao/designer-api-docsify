@@ -1,4 +1,10 @@
-# @ohos.hiviewdfx.FaultLogExtensionAbility(Delayed Fault Notification)
+# @ohos.hiviewdfx.FaultLogExtensionAbility(故障延迟通知)
+
+## Modules to Import
+
+```TypeScript
+import { FaultLogExtensionAbility } from 'kits/@kit.PerformanceAnalysisKit';
+```
 
 ## Summary
 
@@ -6,5 +12,5 @@
 
 | Name | Description |
 | --- | --- |
-| [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md) | This module implements the delayed fault notification feature.  When the crash and freeze events are subscribed by [HiAppEvent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, the previous event can be received only after the application restarts. If the application fails to start or remains unresponsive for a long time, the fault may not be reported in time. |
+| [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md) | 本模块实现故障的延迟通知功能。  [HiAppEvent](arkts-performanceanalysis-hiappevent-n.md)订阅崩溃、应用冻屏事件时，只有当应用下次启动后才能接收上一次的事件。如果应用无法启动或长时间未打开，则存在故障无法及时上报的局限性。  本模块作为该场景的补充。在应用实现FaultLogExtensionAbility后，当应用发生崩溃或冻屏时，系统服务预计会在30分钟后拉起FaultLogExtensionAbility。  开发者可在[onFaultReportReady](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#onfaultreportready)中订阅并处理故障事件。 |
 

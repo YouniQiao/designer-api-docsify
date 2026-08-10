@@ -1,5 +1,11 @@
 # constructMulticastSocketInstance
 
+## Modules to Import
+
+```TypeScript
+import { socket } from 'kits/@kit.NetworkKit';
+```
+
 ## constructMulticastSocketInstance
 
 ```TypeScript
@@ -20,9 +26,9 @@ Creates a MulticastSocket object.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the MulticastSocket of the constructMulticastSocketInstance. |
+| [MulticastSocket](arkts-network-socket-multicastsocket-i.md) | the MulticastSocket of the constructMulticastSocketInstance. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

@@ -12,6 +12,12 @@ Net quota policies, including matching network rule usage periods, restrictions,
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { policy } from 'kits/@kit.NetworkKit';
+```
+
 ## networkMatchRule
 
 ```TypeScript
@@ -20,7 +26,7 @@ networkMatchRule: NetworkMatchRule
 
 The matching rules of network quota policies.
 
-**Type:** NetworkMatchRule
+**Type:** [NetworkMatchRule](arkts-network-policy-networkmatchrule-i-sys.md)
 
 **Since:** 10
 
@@ -40,7 +46,7 @@ quotaPolicy: QuotaPolicy
 
 Policies that limit network quota.
 
-**Type:** QuotaPolicy
+**Type:** [QuotaPolicy](arkts-network-policy-quotapolicy-i-sys.md)
 
 **Since:** 10
 

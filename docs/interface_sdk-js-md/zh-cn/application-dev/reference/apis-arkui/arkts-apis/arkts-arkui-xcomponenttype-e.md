@@ -44,7 +44,7 @@ Component type.
 
 **废弃版本：** 12
 
-**替代接口：** [Column](arkts-arkui-component/column-column-f.md#column)
+**替代接口：** [Column](arkts-arkui-column-column-f.md#column)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,7 +60,7 @@ Component type.
 TEXTURE
 ```
 
-Texture type.Supports EGL/OpenGLES and media data rendering.Custom drawing content is composited with XComponent’s native content before display.Key features:1. Maintains frame synchronization between GPU textures and ArkUI drawing commands.2. Supports unified animation with built-in components.3. Utilizes GPU composition, which may have higher power consumption than the SURFACE type using the display subsystem (DSS).
+Texture type.Supports EGL/OpenGLES and media data rendering.Custom drawing content is composited with XComponent’s native content before display.Key features:1. Maintains frame synchronization between GPU textures and ArkUI drawing commands.2. Supports unified animation with built-in components.3. Utilizes GPU composition, which may have higher power consumption than the SURFACE type  using the display subsystem (DSS).
 
 **起始版本：** 23
 
@@ -88,7 +88,7 @@ Node type.
 
 **废弃版本：** 20
 
-**替代接口：** [ContentSlot](arkts-arkui-component/contentslot-contentslot-f.md#contentslot)
+**替代接口：** [ContentSlot](arkts-arkui-contentslot-contentslot-f.md#contentslot)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

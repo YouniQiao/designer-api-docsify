@@ -6,8 +6,6 @@
 declare function animateToImmediately(value: AnimateParam, event: () => void): void
 ```
 
-Delivers an explicit animation immediately.
-
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
@@ -24,6 +22,6 @@ Delivers an explicit animation immediately.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Animation settings. |
+| value | [AnimateParam](arkts-arkui-animateparam-i.md) | Yes | Animation settings. |
 | event | () =&gt; void | Yes | Closure function that displays the animation. The system automatically inserts a transition animation for state changes caused by the closure function. |
 

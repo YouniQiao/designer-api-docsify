@@ -12,6 +12,12 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## key
 
 ```TypeScript
@@ -66,7 +72,7 @@ Current frame interpolation state.
 
 Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
-**Type:** BlanklessFrameInterpolationState
+**Type:** [BlanklessFrameInterpolationState](arkts-arkweb-webview-blanklessframeinterpolationstate-e.md)
 
 **Since:** 23
 
@@ -86,7 +92,7 @@ timestamp: int
 
 Time when a frame is interpolated or removed.
 
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.The value must be an integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: ms.
+Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.The value must be an integer.&lt;br&gt;Unit: ms.
 
 **Type:** int
 

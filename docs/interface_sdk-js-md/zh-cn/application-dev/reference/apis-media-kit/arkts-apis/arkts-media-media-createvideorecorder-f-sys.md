@@ -1,5 +1,11 @@
 # createVideoRecorder（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## createVideoRecorder
 
 ```TypeScript
@@ -22,16 +28,16 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VideoRecorder&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;VideoRecorder&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400101 | No memory. Return by callback. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,14 +76,14 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;VideoRecorder \| undefined&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;VideoRecorder \| undefined&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+| 5400101 | No memory. Return by callback. |
+| 202 | Not System App. |
 
 
 ## createVideoRecorder
@@ -108,10 +114,10 @@ function createVideoRecorder(): Promise<VideoRecorder>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
+| 5400101 | No memory. Return by promise. |
+| 202 | Not System App.<br>**适用版本：** 12+ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -158,6 +164,6 @@ function createVideoRecorder(): Promise<VideoRecorder | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
+| 202 | Not System App. |
 

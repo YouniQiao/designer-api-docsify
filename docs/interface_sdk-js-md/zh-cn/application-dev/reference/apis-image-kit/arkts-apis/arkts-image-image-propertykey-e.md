@@ -2,11 +2,11 @@
 
 表示Exif（Exchangeable image file format）图像信息的枚举。
 
-- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW\_SUBFILE\_TYPE） 。  
+- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。  
 - 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：  
-[modifyImageProperty]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_（修改单个Exif字段）、  
-[modifyImageProperties]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_（修改多个Exif字段）、  
-[getImageProperty]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_（读取单个Exif字段）、[getImageProperties]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_（读取多个Exif字段）。
+[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)（修改单个Exif字段）、  
+[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)（修改多个Exif字段）、  
+[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)（读取单个Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties)（读取多个Exif字段）。
 
 **起始版本：** 7
 
@@ -60,7 +60,7 @@ ORIENTATION = 'Orientation'
 
 如果读到未定义值x会返回"Unknown Value x"。获取该属性时会以字符串的形式返回。修改该属性时既可以以数字形式指定，也可以以字符串形式指定。
 
-更多关于图片旋转角度的说明可参考：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+更多关于图片旋转角度的说明可参考：[如何获取图片的旋转角度信息](../../../media/image/image-faqs/image-rotate-faq.md)。
 
 **读写能力：** 可读写。
 
@@ -1406,7 +1406,7 @@ EXPOSURE_PROGRAM = 'ExposureProgram'
 
 0："Not defined"。
 
-1："Manual"。
+1："Manual"。 
 
 2："Normal program"。
 
@@ -3064,7 +3064,7 @@ GPS_H_POSITIONING_ERROR = 'GPSHPositioningError'
 PHOTOGRAPHIC_SENSITIVITY = 'PhotographicSensitivity'
 ```
 
-用于表示图像拍摄时所用的感光度值（ISO 值），也叫ISO Speed。该字段是Exif 2.3后的推荐字段，ISOSpeedRatings（Tag 0x8827）是早期使用的字段，类型和含义相同，若两个字段都存在，以\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ 为主。
+用于表示图像拍摄时所用的感光度值（ISO 值），也叫ISO Speed。该字段是Exif 2.3后的推荐字段，ISOSpeedRatings（Tag 0x8827）是早期使用的字段，类型和含义相同，若两个字段都存在，以`PhotographicSensitivity` 为主。
 
 **读写能力：** 可读写。
 

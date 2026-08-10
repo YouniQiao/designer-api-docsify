@@ -1,6 +1,6 @@
 # LaunchType
 
-标识组件的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+标识组件的[启动模式](../../../application-models/uiability-launch-type.md)。
 
 **起始版本：** 9
 

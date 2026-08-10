@@ -1,6 +1,6 @@
 # DataProxyErrorCode
 
-Enumerates the status code returned by the batch operations of shared configuration.
+配置共享批量操作返回值的状态码枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the status code returned by the batch operations of shared configurat
 SUCCESS = 0
 ```
 
-The operation is successful.
+表示操作成功。
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ The operation is successful.
 URI_NOT_EXIST = 1
 ```
 
-The URI does not exist or the URI is not subscribed to.
+URI不存在或取消订阅一个未订阅过的URI。
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ The URI does not exist or the URI is not subscribed to.
 NO_PERMISSION = 2
 ```
 
-No permission to perform this operation on the URI.
+没有权限在该URI上执行此操作。
 
 **Since:** 20
 
@@ -70,7 +70,8 @@ No permission to perform this operation on the URI.
 OVER_LIMIT = 3
 ```
 
-The number of configurations published by the current application exceeds the upper limit of 32.
+API版本26.0.0之前，表示当前应用发布的配置超过32个配置的上限；从API版本26.0.0开始，表示当前应用发布的配置超过64个配置的上限或获取的共享配置项的值超出  
+[DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中maxValueLength字段配置的最大长度限制。
 
 **Since:** 20
 

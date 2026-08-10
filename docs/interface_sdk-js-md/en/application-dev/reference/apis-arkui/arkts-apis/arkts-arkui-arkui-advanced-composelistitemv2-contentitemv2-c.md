@@ -1,6 +1,6 @@
 # ContentItemV2
 
-Declare ContentItemV2
+列表左侧显示的图标、图标大小以及中间元素文字内容。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Declare ContentItemV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(options?: ContentItemV2Options)
 ```
 
-The constructor of ContentItemV2.
+ContentItemV2的构造函数。
 
 **Since:** 26.0.0
 
@@ -34,7 +40,7 @@ The constructor of ContentItemV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options of ContentItemV2 |
+| options | [ContentItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | No | ContentItemV2的可选项 |
 
 ## description
 
@@ -42,9 +48,9 @@ The constructor of ContentItemV2.
 public description?: ResourceStr
 ```
 
-Sets the description.
+设置描述内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -62,9 +68,9 @@ Sets the description.
 public icon?: ResourceStr
 ```
 
-Sets the icon.
+设置图标
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -82,9 +88,9 @@ Sets the icon.
 public iconStyle?: IconTypeV2
 ```
 
-The type of icon.
+图标样式。
 
-**Type:** IconTypeV2
+**Type:** [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **Since:** 26.0.0
 
@@ -102,9 +108,9 @@ The type of icon.
 public primaryText?: ResourceStr
 ```
 
-Sets the primaryText.
+设置标题内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -122,9 +128,9 @@ Sets the primaryText.
 public secondaryText?: ResourceStr
 ```
 
-Sets the secondaryText.
+设置副标题内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -142,9 +148,9 @@ Sets the secondaryText.
 public symbolStyle?: SymbolGlyphModifier
 ```
 
-Sets the symbol.
+设置Symbol图标。
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 

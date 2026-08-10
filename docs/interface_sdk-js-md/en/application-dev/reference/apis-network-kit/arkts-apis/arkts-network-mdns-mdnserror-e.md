@@ -52,7 +52,7 @@ Indicates that the operation failed because it is already active.
 MAX_LIMIT = 2
 ```
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Indicates that the operation failed because the maximum outstanding requests from the applications have reached.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+&lt;p&gt;Indicates that the operation failed because the maximum outstanding requests from the applications have reached.&lt;/p&gt;
 
 **Since:** 11
 

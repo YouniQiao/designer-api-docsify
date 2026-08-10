@@ -1,16 +1,22 @@
 # startAbility
 
+## Modules to Import
+
+```TypeScript
+import { particleAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## startAbility
 
 ```TypeScript
 function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<void>): void
 ```
 
-Starts a ParticleAbility. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    For details about the startup rules for the components in the FA model, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+启动指定的particleAbility。使用callback异步回调。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **Since:** 7
 
@@ -26,10 +32,10 @@ Starts a ParticleAbility. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ability to start. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the ParticleAbility is started, **err** is **undefined**; otherwise, **err** is an error object. |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | 表示启动的ability。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当启动指定的particleAbility成功，err为undefined，否则为错误对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { particleAbility, wantConstant } from '@kit.AbilityKit';
@@ -65,11 +71,11 @@ particleAbility.startAbility(
 function startAbility(parameter: StartAbilityParameter): Promise<void>
 ```
 
-Starts a ParticleAbility. This API uses a promise to return the result.
-    **NOTE**  
-    
-    For details about the startup rules for the components in the FA model, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+启动指定的particleAbility。使用Promise异步回调。
+
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **Since:** 7
 
@@ -85,15 +91,15 @@ Starts a ParticleAbility. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Ability to start. |
+| parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | 表示启动的ability。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { particleAbility, wantConstant } from '@kit.AbilityKit';

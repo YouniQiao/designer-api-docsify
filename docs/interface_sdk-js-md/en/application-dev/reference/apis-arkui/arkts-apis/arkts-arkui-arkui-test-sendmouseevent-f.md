@@ -6,7 +6,9 @@
 export declare function sendMouseEvent(event: MouseEvent): boolean
 ```
 
-Send a mock mouse event to the current application. This interface is only suitable for simple interaction testing within your own application and should not be used in real environment.
+发送鼠标事件。
+
+此接口仅用于对应用的测试。由于耗时长，不建议使用。
 
 **Since:** 23
 
@@ -22,11 +24,11 @@ Send a mock mouse event to the current application. This interface is only suita
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MouseEvent to be sent. |
+| event | [MouseEvent](../arkts-components/arkts-arkui-mouseevent-i.md) | Yes | 鼠标事件，event参数见[MouseEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-mouseevent-i.md/arkts-input-multimodalinput-mouseevent-mouseevent-i.md)介绍。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
+| boolean | 事件发送失败时返回false，其余情况返回true。 |
 

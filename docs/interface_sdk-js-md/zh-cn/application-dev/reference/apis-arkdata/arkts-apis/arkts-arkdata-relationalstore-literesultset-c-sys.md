@@ -4,11 +4,12 @@
 
 LiteResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
 
-下列API示例中，都需先使用[queryWithoutRowCount]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[querySqlWithoutRowCount]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_等query类方法中任一方法获取到LiteResultSet实例，再通过此实例调用对应方法。
-    **说明：**  
-    
-    - 本class首批接口从API version 23开始支持。
+下列API示例中，都需先使用[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount)、  
+[querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount)等query类方法中任一方法获取到LiteResultSet实例，再通过此实例调用对应方法。
+
+> **说明：**
+> 
+> - 本class首批接口从API version 23开始支持。
 
 **起始版本：** 23
 
@@ -17,6 +18,12 @@ LiteResultSet实例不会实时刷新。使用结果集后，如果数据库中�
 <!--Device-relationalStore-class LiteResultSet--><!--Device-relationalStore-class LiteResultSet-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
 
 ## getFloat32Array
 
@@ -30,7 +37,7 @@ ArkTS-Sta:
 getFloat32Array(columnIndex: int): Float32Array
 ```
 
-以浮点数组的形式获取当前行中指定列的值，仅在向量数据库（在[StoreConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中配置vector为true）下可用。
+以浮点数组的形式获取当前行中指定列的值，仅在向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）下可用。
 
 **起始版本：** 23
 
@@ -48,7 +55,7 @@ getFloat32Array(columnIndex: int): Float32Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
@@ -60,8 +67,8 @@ getFloat32Array(columnIndex: int): Float32Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
-| [14800013](../errorcode-data-rdb.md#14800013-列值为空或列类型与当前调用接口不兼容) | Column index is out of bounds. |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| 14800041 | Type conversion failed. |
+| 14800013 | Column index is out of bounds. |
+| 14800012 | ResultSet is empty or pointer index is out of bounds. |
+| 14800014 | The target instance is already closed. |
 

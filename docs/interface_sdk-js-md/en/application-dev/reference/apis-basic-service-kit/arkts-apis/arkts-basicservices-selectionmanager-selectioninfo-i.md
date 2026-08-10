@@ -1,6 +1,6 @@
 # SelectionInfo
 
-Defines the information of a word selection event.
+划词事件信息。
 
 **Since:** 24
 
@@ -10,13 +10,19 @@ Defines the information of a word selection event.
 
 **System capability:** SystemCapability.SelectionInput.Selection
 
+## Modules to Import
+
+```TypeScript
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Bundle name of the application where words are selected.
+被划词应用的bundleName。
 
 **Type:** string
 
@@ -36,9 +42,9 @@ Bundle name of the application where words are selected.
 displayID: int
 ```
 
-ID of the screen where the window with selected words is located.
+被划词应用窗口的屏幕ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -56,9 +62,9 @@ ID of the screen where the window with selected words is located.
 endDisplayX: int
 ```
 
-X-coordinate of the screen where the word selection ends, in px.
+划词结束位置的屏幕x轴坐标，单位为px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -76,9 +82,9 @@ X-coordinate of the screen where the word selection ends, in px.
 endDisplayY: int
 ```
 
-Y-coordinate of the screen where the word selection ends, in px.
+划词结束位置的屏幕y轴坐标，单位为px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -96,9 +102,9 @@ Y-coordinate of the screen where the word selection ends, in px.
 endWindowX: int
 ```
 
-X-coordinate of the window where the word selection ends, in px.
+划词结束位置的窗口x轴坐标，单位为px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -116,9 +122,9 @@ X-coordinate of the window where the word selection ends, in px.
 endWindowY: int
 ```
 
-Y-coordinate of the window where the word selection ends, in px.
+划词结束位置的窗口y轴坐标，单位为px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -136,9 +142,9 @@ Y-coordinate of the window where the word selection ends, in px.
 selectionType: SelectionType
 ```
 
-Word selection types.
+划词方式枚举值。
 
-**Type:** SelectionType
+**Type:** [SelectionType](arkts-basicservices-selectionmanager-selectiontype-e.md)
 
 **Default:** MOUSE_MOVE
 
@@ -158,9 +164,9 @@ Word selection types.
 startDisplayX: int
 ```
 
-X-coordinate of the screen where the word selection starts, in px.
+划词起始位置的屏幕x轴坐标，单位为px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -178,9 +184,9 @@ X-coordinate of the screen where the word selection starts, in px.
 startDisplayY: int
 ```
 
-Y-coordinate of the screen where the word selection starts, in px.
+划词起始位置的屏幕y轴坐标，单位为px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -198,9 +204,9 @@ Y-coordinate of the screen where the word selection starts, in px.
 startWindowX: int
 ```
 
-X-coordinate of the window where the word selection starts, in px.
+划词起始位置的窗口x轴坐标，单位为px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -218,9 +224,9 @@ X-coordinate of the window where the word selection starts, in px.
 startWindowY: int
 ```
 
-Y-coordinate of the window where the word selection starts, in px.
+划词起始位置的窗口y轴坐标，单位为px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -238,9 +244,9 @@ Y-coordinate of the window where the word selection starts, in px.
 windowID: int
 ```
 
-ID of the window where words are selected.
+被划词应用的窗口ID。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

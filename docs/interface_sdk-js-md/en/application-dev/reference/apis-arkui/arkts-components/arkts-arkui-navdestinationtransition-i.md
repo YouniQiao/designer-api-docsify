@@ -1,6 +1,6 @@
 # NavDestinationTransition
 
-Defines a custom transition animation for the **NavDestination** component.
+NavDestination自定义动画接口。
 
 **Since:** 15
 
@@ -16,11 +16,9 @@ Defines a custom transition animation for the **NavDestination** component.
 curve?: Curve
 ```
 
-Curve type of the animation.
+动画的曲线类型，默认值为[Curve.EaseInOut](../arkts-apis/arkts-arkui-curve-t.md/arkts-arkui-curve-t.md)。
 
-Default value: Curve.EaseInOut](ts-appendix-enums.md#curve)
-
-**Type:** Curve
+**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md)
 
 **Since:** 15
 
@@ -40,9 +38,13 @@ Default value: Curve.EaseInOut](ts-appendix-enums.md#curve)
 delay?: number
 ```
 
-Delay of the transition animation.
+转场动画的延迟。
 
-Default value: **0** (in milliseconds)
+取值范围：[0, +∞)
+
+默认值：0（毫秒）
+
+单位：ms
 
 **Type:** number
 
@@ -64,9 +66,13 @@ Default value: **0** (in milliseconds)
 duration?: number
 ```
 
-Duration of the transition animation.
+转场动画的持续时间。
 
-Default value: **1000** (in milliseconds)
+取值范围：[0, +∞)
+
+默认值：1000（毫秒）
+
+单位：ms
 
 **Type:** number
 
@@ -88,10 +94,9 @@ Default value: **1000** (in milliseconds)
 event: Callback<void>
 ```
 
-Closure function specifying the transition animation. The system generates the corresponding transition animation based on the modifications to the component's UI state within the closure. For details, see **event** in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+指定转场动效的闭包函数，系统会根据闭包中对组件UI状态的修改，生成对应的过渡动画。参见[animateTo](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#animatetoimmediately)中的event。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 15
 
@@ -111,9 +116,9 @@ Closure function specifying the transition animation. The system generates the c
 onTransitionEnd?: Callback<void>
 ```
 
-Callback triggered when the transition animation ends.
+转场动画结束时的回调函数。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 15
 

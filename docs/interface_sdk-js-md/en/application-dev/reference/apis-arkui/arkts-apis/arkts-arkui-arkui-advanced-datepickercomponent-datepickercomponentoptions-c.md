@@ -1,6 +1,6 @@
 # DatePickerComponentOptions
 
-DatePickerComponentOptions defines options for the date time picker component.
+DatePickerComponentOptions定义日期时间选择器组件的选项。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ DatePickerComponentOptions defines options for the date time picker component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+```
+
 ## dateOptions
 
 ```TypeScript
 dateOptions?: DateOptions
 ```
 
-Date options.
+日期选项。
 
-**Type:** DateOptions
+**Type:** [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)
 
 **Since:** 26.0.0
 
@@ -36,11 +42,11 @@ Date options.
 displayMode?: DisplayMode
 ```
 
-Display mode of the picker.
+选择器的显示模式。
 
-Default value: DisplayMode.DATE
+默认值：DisplayMode.DATE
 
-**Type:** DisplayMode
+**Type:** [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
 
 **Default:** DisplayMode.DATE
 
@@ -60,9 +66,9 @@ Default value: DisplayMode.DATE
 timeOptions?: TimeOptions
 ```
 
-Time options.
+时间选项。
 
-**Type:** TimeOptions
+**Type:** [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)
 
 **Since:** 26.0.0
 

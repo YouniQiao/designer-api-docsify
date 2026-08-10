@@ -12,6 +12,12 @@ Indicates the results of manual network scan
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## isFinish
 
 ```TypeScript

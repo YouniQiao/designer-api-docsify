@@ -1,6 +1,6 @@
 # ExtensionWindowConfig (System API)
 
-Describes the parameters for creating a window for a UI ServiceExtensionAbility.
+创建扩展窗口时需要配置的参数。
 
 **Since:** 14
 
@@ -12,16 +12,21 @@ Describes the parameters for creating a window for a UI ServiceExtensionAbility.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## subWindowOptions
 
 ```TypeScript
 subWindowOptions?: SubWindowOptions
 ```
 
-Parameters used for creating a child window. There is no default value. This parameter is mandatory when  
-**windowAttribute** is set to **SUB\_WINDOW**. Otherwise, the window fails to be created.
+创建子窗口的参数。无默认参数，当windowAttribute配置为SUB_WINDOW时必选，否则会导致窗口创建失败。
 
-**Type:** SubWindowOptions
+**Type:** [SubWindowOptions](arkts-arkui-window-subwindowoptions-i-sys.md)
 
 **Since:** 14
 
@@ -41,10 +46,9 @@ Parameters used for creating a child window. There is no default value. This par
 systemWindowOptions?: SystemWindowOptions
 ```
 
-Parameters for creating a system window. There is no default value. This parameter is mandatory when  
-**windowAttribute** is set to **SYSTEM\_WINDOW**. Otherwise, the window fails to be created.
+创建系统窗口的参数。无默认参数，当windowAttribute配置为SYSTEM_WINDOW时必选，否则会导致窗口创建失败。
 
-**Type:** SystemWindowOptions
+**Type:** [SystemWindowOptions](arkts-arkui-window-systemwindowoptions-i-sys.md)
 
 **Since:** 14
 
@@ -64,10 +68,9 @@ Parameters for creating a system window. There is no default value. This paramet
 windowAttribute: ExtensionWindowAttribute
 ```
 
-Window attribute. It specifies whether the created window is a child window or a system window. When  
-**windowAttribute** is set to **SUB\_WINDOW**, **subWindowOptions** is mandatory. When **windowAttribute** is set to **SYSTEM\_WINDOW**, **systemWindowOptions** is mandatory. Otherwise, the window fails to be created.
+窗口的属性。用于配置创建的窗口是子窗口还是系统窗口。当windowAttribute配置为SUB_WINDOW时须配置subWindowOptions，当windowAttribute配置为SYSTEM_WINDOW时须配置systemWindowOptions，否则创建窗口失败。
 
-**Type:** ExtensionWindowAttribute
+**Type:** [ExtensionWindowAttribute](arkts-arkui-window-extensionwindowattribute-e-sys.md)
 
 **Since:** 14
 
@@ -87,7 +90,7 @@ Window attribute. It specifies whether the created window is a child window or a
 windowName: string
 ```
 
-Window name.
+窗口名。
 
 **Type:** string
 
@@ -109,9 +112,9 @@ Window name.
 windowRect: Rect
 ```
 
-Rectangular area of the window.
+窗口矩形区域。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 14
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## onResponse
 
 ArkTS-Dyn:
@@ -40,6 +46,6 @@ onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| notificationId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 |  |
-| buttonOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| notificationId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 |  |
+| buttonOptions | [ButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-button-buttonoptions-i.md) | 是 |  |
 

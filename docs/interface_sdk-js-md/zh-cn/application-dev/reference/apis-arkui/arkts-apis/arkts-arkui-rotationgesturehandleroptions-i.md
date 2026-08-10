@@ -1,8 +1,8 @@
 # RotationGestureHandlerOptions
 
-旋转手势处理器配置参数。继承自[BaseHandlerOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+旋转手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
 
-**继承/实现关系：** RotationGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-component/gesture-basehandleroptions-i.md)
+**继承/实现关系：** RotationGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ angle?: number
 
 触发旋转手势的最小改变度数，单位为deg。
 
-默认值：1
+默认值：1 
 
 **说明：**
 
@@ -48,7 +48,7 @@ fingers?: number
 
 触发旋转的最少手指数，最小为2指，最大为5指。
 
-默认值：2
+默认值：2 
 
 取值范围：[2, 5]
 

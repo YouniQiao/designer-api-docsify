@@ -14,6 +14,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## filterOptions
 
 ```TypeScript
@@ -22,7 +28,7 @@ filterOptions: CaptureFilterOptions
 
 需要录制的播放音频流的筛选信息。
 
-**类型：** CaptureFilterOptions
+**类型：** [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md)
 
 **起始版本：** 10
 

@@ -1,6 +1,6 @@
 # TextUndefinedGlyphDisplay
 
-Enumerates the modes for displaying undefined text glyphs.
+文本未定义字形时的显示方式枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the modes for displaying undefined text glyphs.
 USE_DEFAULT = 0
 ```
 
-Follows the internal .notdef glyph design of the font, which can be an empty box, space, or custom symbol.
+使用字体的内部.notdef字形。遵循字体的内部.notdef字形设计，可以是空框、空格或自定义符号。
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ Follows the internal .notdef glyph design of the font, which can be an empty box
 USE_TOFU = 1
 ```
 
-Always uses explicit tofu blocks to replace undefined glyphs, overriding the default behavior of fonts. It is suitable for debugging missing characters or forcing a uniform display of missing symbols.
+总是用显式的豆腐块替换未定义的字形，覆盖字体的默认行为。用于调试缺失字符或强制一致的缺失符号显示。
 
 **Since:** 20
 

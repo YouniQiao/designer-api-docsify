@@ -10,6 +10,12 @@ P2P group information.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## clientDevices
 
 ```TypeScript
@@ -18,7 +24,7 @@ clientDevices: WifiP2pDevice[]
 
 Client list
 
-**Type:** WifiP2pDevice[]
+**Type:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)[]
 
 **Since:** 9
 
@@ -36,7 +42,7 @@ frequency: int
 
 Frequency
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -144,7 +150,7 @@ networkId: int
 
 Network ID
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -162,7 +168,7 @@ ownerInfo: WifiP2pDevice
 
 Group owner information
 
-**Type:** WifiP2pDevice
+**Type:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)
 
 **Since:** 9
 

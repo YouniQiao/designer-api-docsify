@@ -1,0 +1,42 @@
+# OnDownloadCompleteResponse
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.request.agent.Task.on
+
+<!--Device-unnamed-export interface OnDownloadCompleteResponse--><!--Device-unnamed-export interface OnDownloadCompleteResponse-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+## Modules to Import
+
+```TypeScript
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
+```
+
+## uri
+
+```TypeScript
+uri: string
+```
+
+表示下载文件的uri。
+
+**Type:** string
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.request.agent.Task.config.saveas
+
+<!--Device-OnDownloadCompleteResponse-uri: string--><!--Device-OnDownloadCompleteResponse-uri: string-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+

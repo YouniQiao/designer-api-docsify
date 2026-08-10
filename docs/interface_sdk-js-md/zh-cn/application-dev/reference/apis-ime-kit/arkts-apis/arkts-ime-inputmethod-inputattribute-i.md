@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## abilityName
 
 ```TypeScript
@@ -21,7 +27,7 @@ abilityName?: string
 - 编辑框设置ability名称时，长度不超过127个字符（如果超出将会自动截断为127个字符）。  
 - 编辑框未设置ability名称时，默认为空字符串。  
 - 该字段在调用绑定  
-[attach]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_时提供给输入法应用。
+[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)时提供给输入法应用。
 
 **类型：** string
 
@@ -44,7 +50,7 @@ consumeKeyEvents?: boolean
 - 值为true，表示具备此能力。  
 - 值为false，表示不具备此能力。  
 - 该字段在调用  
-[attach]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_/ [InputAttribute]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_时提供给输入法应用。
+[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)/ [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md)时提供给输入法应用。
 
 **类型：** boolean
 
@@ -68,7 +74,7 @@ enterKeyType: EnterKeyType
 
 Enter键功能类型。
 
-**类型：** EnterKeyType
+**类型：** [EnterKeyType](../../apis-arkui/arkts-apis/arkts-arkui-textinput-enterkeytype-e.md)
 
 **起始版本：** 10
 
@@ -84,12 +90,12 @@ Enter键功能类型。
 placeholder?: string
 ```
 
-编辑框设置的占位符信息。
+编辑框设置的占位符信息。 
 
 - 编辑框设置占位符信息时，长度不超过255个字符（如果超出将会自动截断为255个字符），用于提示或引导用户输入临时性文本或符号。（例如：提示输入项为"必填"或"非必填"的输入结果反馈。）  
 - 编辑框没有设置占位符信息时，默认为空字符串。  
 - 该字段在调用  
-[attach]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_时提供给输入法应用。
+[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)时提供给输入法应用。
 
 **类型：** string
 
@@ -109,7 +115,7 @@ textInputType: TextInputType
 
 文本输入类型。
 
-**类型：** TextInputType
+**类型：** [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)
 
 **起始版本：** 10
 

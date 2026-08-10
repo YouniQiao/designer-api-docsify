@@ -1,12 +1,18 @@
 # isHdHapticSupported
 
+## Modules to Import
+
+```TypeScript
+import { vibrator } from 'kits/@kit.SensorServiceKit';
+```
+
 ## isHdHapticSupported
 
 ```TypeScript
 function isHdHapticSupported(): boolean
 ```
 
-Checks whether HD vibration is supported.
+查询当前设备是否支持高清振动。适用于在触发高清振动前确认设备是否支持，避免在不支持的设备上调用VibrateFromFile或VibrateFromPattern类型振动导致振动效果不佳或返回错误码801。返回true表示设备支持高清振动，可使用VibrateFromFile和VibrateFromPattern类型触发振动；返回false表示不支持，使用自定义振动类型将返回错误码801或效果不佳。
 
 **Since:** 12
 
@@ -20,15 +26,15 @@ Checks whether HD vibration is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Boolean value indicating whether HD vibration is supported. The value **true** indicates that HD vibration is supported, and the value **false** indicates the opposite. |
+| boolean | 是否支持高清振动。true表示支持高清振动，可使用VibrateFromFile和VibrateFromPattern类型；false表示不支持，使用自定义振动类型可能返回错误码801或效果不佳。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
+| 14600101 | Device operation failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { vibrator } from '@kit.SensorServiceKit';

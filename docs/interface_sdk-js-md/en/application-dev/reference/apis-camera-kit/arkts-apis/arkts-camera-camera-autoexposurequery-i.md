@@ -1,10 +1,8 @@
 # AutoExposureQuery
 
-AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.  
-    
-    - In this version, a compatibility change was made that preserved the initial version information of inner  
-    elements. As a result, you might see outer element's @since version number being higher than that of the inner  
-    elements. However, this discrepancy does not affect the functionality of the interface.
+针对设备的自动曝光特性提供了一系列查询功能。  
+> 
+> - 本模块接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
 
 **Since:** 12
 
@@ -13,6 +11,12 @@ AutoExposureQuery provides APIs to query the automatic exposure feature of a cam
 <!--Device-camera-interface AutoExposureQuery--><!--Device-camera-interface AutoExposureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getExposureBiasRange
 
@@ -26,7 +30,7 @@ ArkTS-Sta:
 getExposureBiasRange(): Array<double>
 ```
 
-Obtains the exposure compensation values of the camera device.
+查询曝光补偿范围。
 
 **Since:** 11
 
@@ -42,13 +46,13 @@ Obtains the exposure compensation values of the camera device.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 获取补偿范围的数组。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
 
 ## isExposureMeteringModeSupported
 
@@ -56,7 +60,7 @@ Obtains the exposure compensation values of the camera device.
 isExposureMeteringModeSupported(aeMeteringMode: ExposureMeteringMode): boolean
 ```
 
-Checks whether the specified exposure metering mode is supported.
+检测是否支持指定的曝光测光模式。
 
 **Since:** 24
 
@@ -72,37 +76,21 @@ Checks whether the specified exposure metering mode is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aeMeteringMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Exposure metering mode. |
+| aeMeteringMode | [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e.md) | Yes | 曝光测光模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the exposure metering mode is supported. **true** if supported, **false** otherwise. |
+| boolean | 是否支持曝光测光模式。true表示支持，false表示不支持 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-
-**Example**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isExposureMeteringModeSupported(professionalPhotoSession: camera.ProfessionalPhotoSession): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = professionalPhotoSession.isExposureMeteringModeSupported(camera.ExposureMeteringMode.CENTER);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The isExposureMeteringModeSupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```
+| 7400101 | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 23 |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application.<br>**Applicable version:** 12 - 23 |
 
 ## isExposureModeSupported
 
@@ -110,7 +98,7 @@ function isExposureMeteringModeSupported(professionalPhotoSession: camera.Profes
 isExposureModeSupported(aeMode: ExposureMode): boolean
 ```
 
-Checks whether an exposure mode is supported.
+检测曝光模式是否支持。
 
 **Since:** 11
 
@@ -126,17 +114,17 @@ Checks whether an exposure mode is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aeMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Exposure mode. If the input parameter is null or undefined, it is treated as 0 and exposure is locked. |
+| aeMode | [ExposureMode](arkts-camera-camera-exposuremode-e.md) | Yes | 曝光模式。传参为null或者undefined，作为0处理，曝光锁定。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the exposure mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| boolean | 获取是否支持曝光模式，true为支持，false为不支持。接口调用失败会抛出相应错误码并返回undefined，错误码类型 [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400103 | Session not config, only throw in session usage. |
 

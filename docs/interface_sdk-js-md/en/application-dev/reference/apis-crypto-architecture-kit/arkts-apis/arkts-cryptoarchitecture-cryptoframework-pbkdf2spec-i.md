@@ -1,11 +1,11 @@
 # PBKDF2Spec
 
-Defines the child class of [KdfSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It is used as a parameter for PBKDF2 key derivation.
-    **NOTE**  
-    
-    **password** is the original password. If **password** of the string type is used, pass in the actual data for  
-    key derivation, rather than a HexString or Base64-encoded value. In addition, the string must be encoded in  
-    UTF-8, as other encodings may alter the derivation outcome.
+密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为PBKDF2密钥派生函数进行密钥派生时的输入。
+
+> **说明：**
+> 
+> password 是原始密码。如果使用 string 类型，需直接传入用于密钥派生的数据，而不是 HexString 或 base64 等字符串类型，并确保该字符串
+> 为 UTF-8 编码，否则派生结果会有差异。
 
 **Inheritance/Implementation:** PBKDF2Spec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 
@@ -19,15 +19,21 @@ Defines the child class of [KdfSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It is
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Kdf
 - API version 11: SystemCapability.Security.CryptoFramework
 
+## Modules to Import
+
+```TypeScript
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+```
+
 ## iterations
 
 ```TypeScript
 iterations: int
 ```
 
-Number of iterations. The value must be a positive integer.
+迭代次数，需要为正整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -47,9 +53,9 @@ Number of iterations. The value must be a positive integer.
 keySize: int
 ```
 
-Length of the derived key, in bytes.
+派生得到的密钥字节长度，单位为bytes。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -69,7 +75,7 @@ Length of the derived key, in bytes.
 password: string | Uint8Array
 ```
 
-Original password entered by the user.
+用户输入的原始密码。
 
 **Type:** string \| Uint8Array
 
@@ -91,7 +97,7 @@ Original password entered by the user.
 salt: Uint8Array
 ```
 
-Salt value.
+盐值。
 
 **Type:** Uint8Array
 

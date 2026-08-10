@@ -12,6 +12,12 @@ Implements audio effect management.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## getAudioEffectProperty
 
 ```TypeScript
@@ -42,11 +48,11 @@ Gets current audio effect properties.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 6800301 | System error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -90,11 +96,11 @@ Gets supported audio effect properties based on current devices.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 6800301 | System error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -114,7 +120,7 @@ try {
 isAudioSeparationEffectSupported(): boolean
 ```
 
-Checks whether the current device supports audio separation effect in system.
+检查当前设备是否支持系统中的音频分离效果。
 
 **Since:** 26.0.0
 
@@ -132,13 +138,13 @@ Checks whether the current device supports audio separation effect in system.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the current device supports audio separation effect. |
+| boolean | 当前设备是否支持音频分离效果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
 ## offAudioSeparationEffectEnabledChange
 
@@ -146,7 +152,7 @@ Checks whether the current device supports audio separation effect in system.
 offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the system audio separation effect enabled state change event.
+去订阅系统音频分离效果使能状态变更事件。
 
 **Since:** 26.0.0
 
@@ -164,14 +170,14 @@ Unsubscribes from the system audio separation effect enabled state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | The callback used in subscription function for unsubscribing. If not using this parameter, all callbacks subscribed in current process before will be unsubscribed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 订阅函数中用于取消订阅的回调。 如果不使用此参数，则之前在当前进程中订阅的所有回调都将被取消订阅 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| 6800101 | Parameter verification failed. |
+| 202 | Caller is not a system application. |
 
 ## onAudioSeparationEffectEnabledChange
 
@@ -179,7 +185,7 @@ Unsubscribes from the system audio separation effect enabled state change event.
 onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 ```
 
-Subscribes to system audio separation effect enabled state change event.The audio separation effect state in system can be set by system playback controller application,other applications can use this function to listen the change event.
+订阅系统音频分离效果使能状态变更事件。系统中的音频分离效果状态可由系统播放控制器应用设定，其他应用程序可以使用此函数来监听change事件。
 
 **Since:** 26.0.0
 
@@ -197,13 +203,13 @@ Subscribes to system audio separation effect enabled state change event.The audi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to listen the system audio separation effect enabled state change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 监听系统音频分离效果的回调 启用状态更改事件 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| 202 | Caller is not a system application. |
 
 ## setAudioEffectProperty
 
@@ -235,12 +241,12 @@ Sets current audio effect properties.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Possible causes: 1. More than one effect property name of the same effect property category are in the input array. 2. The input audioEffectProperties are not supported by the current device. 3. The name or category of the input audioEffectProperties is incorrect. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
+| 6800101 | Parameter verification failed. Possible causes: 1. More than one effect property name of the same effect property category are in the input array. 2. The input audioEffectProperties are not supported by the current device. 3. The name or catergory of the input audioEffectProperties is incorrect. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 6800301 | System error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -267,7 +273,7 @@ ArkTS-Sta:
 setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>
 ```
 
-Sets audio separation effect enable or disable for specific application process,or for specific audio playback stream.This API uses a promise to return the result.
+设置特定应用进程的音频分离效果开关。或用于特定的音频播放流。该接口使用promise返回结果。
 
 **Since:** 26.0.0
 
@@ -287,25 +293,25 @@ Sets audio separation effect enable or disable for specific application process,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | The required effect state, true for enabled, false for disabled. |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The uid of target application process to add effect. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value should be an integer. |
-| streamId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | No | The id of target audio playback stream to add effect, the playback application can use \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain it. |
+| enabled | boolean | Yes | 所需的效果状态，true表示启用，false表示禁用 |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要添加效果的目标应用程序进程的uid。 &lt;br&gt;取值限定为整数。 |
+| streamId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | 要添加效果的目标音频播放流的ID，播放应用程序 可以使用{@link AudioRenderer#getAudioStreamId}来获取 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 不会返回任何值的Promise。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Effect is not supported in this device. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 6800301 | Audio service error occurs like service died. |
+| 6800104 | Effect is not supported in this device. |
 
 ## setAudioSeparationEffectVolume
 
@@ -319,7 +325,7 @@ ArkTS-Sta:
 setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>
 ```
 
-Sets audio separation effect volume for specific volume type.This API uses a promise to return the result.
+设置特定音量类型的音频分离效果音量。
 
 **Since:** 26.0.0
 
@@ -339,8 +345,8 @@ Sets audio separation effect volume for specific volume type.This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The type to set volume. |
-| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The target volume value. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0,1]. |
+| type | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | Yes | 要设置音量的类型 |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标卷值。 &lt;br&gt;取值范围：[0,1]。 &lt;br&gt;Value range: [0,1]. |
 
 **Return value:**
 
@@ -352,9 +358,9 @@ Sets audio separation effect volume for specific volume type.This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Effect is not supported in this device. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
+| 6800101 | Parameter verification failed. |
+| 201 | Permission denied. |
+| 202 | Caller is not a system application. |
+| 6800301 | Audio service error occurs like service died. |
+| 6800104 | Effect is not supported in this device. |
 

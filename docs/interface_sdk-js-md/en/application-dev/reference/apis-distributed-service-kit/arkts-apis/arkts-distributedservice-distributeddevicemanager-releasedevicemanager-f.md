@@ -1,12 +1,18 @@
 # releaseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## releaseDeviceManager
 
 ```TypeScript
 function releaseDeviceManager(deviceManager: DeviceManager): void
 ```
 
-Releases a **DeviceManager** instance that is no longer used.
+设备管理实例不再使用后，通过该方法释放DeviceManager实例。
 
 **Since:** 10
 
@@ -20,16 +26,16 @@ Releases a **DeviceManager** instance that is no longer used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceManager | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | DeviceManager** instance to release. |
+| deviceManager | [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | Yes | 设备管理器对象实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 11600101 | Failed to execute the function. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';

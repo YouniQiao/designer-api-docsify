@@ -26,7 +26,8 @@ Called when the RootScene is used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the session of RootScene.  |
+| session | [RootSceneSession](../arkts-apis/arkts-arkui-rootscene-rootscenesession-i.md) | Yes | indicates the session of RootScene. |
 
 ## Summary
 
+- [RootSceneSession](arkts-arkui-rootscene-rootscenesession-i-sys.md)

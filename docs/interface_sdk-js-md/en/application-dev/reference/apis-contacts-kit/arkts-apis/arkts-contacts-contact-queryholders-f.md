@@ -1,12 +1,18 @@
 # queryHolders
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## queryHolders
 
 ```TypeScript
 function queryHolders(callback: AsyncCallback<Array<Holder>>): void
 ```
 
-Queries all applications that have created contacts. This API uses an asynchronous callback to return the result.
+查询所有创建联系人的应用信息类。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,12 +32,13 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Holder&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of the queried applications is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Holder&gt;&gt; | Yes | 回调函数。成功返回查询到的创建联系人应用信息的对象数组；失败返回具体的错误码信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
 contact.queryHolders((err: BusinessError, data) => {
   if (err) {
@@ -49,7 +56,7 @@ contact.queryHolders((err: BusinessError, data) => {
 function queryHolders(context: Context, callback: AsyncCallback<Array<Holder>>): void
 ```
 
-Queries all applications that have created contacts. This API uses an asynchronous callback to return the result.
+查询所有创建联系人的应用信息类。使用callback异步回调。
 
 **Since:** 10
 
@@ -65,25 +72,26 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Holder&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of the queried applications is returned. If the operation fails, an error code is returned. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Holder&gt;&gt; | Yes | 回调函数。成功返回查询到的创建联系人应用信息的对象数组；失败返回具体的错误码信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 import { common } from '@kit.AbilityKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 contact.queryHolders(context, (err: BusinessError, data) => {
   if (err) {
@@ -101,7 +109,7 @@ contact.queryHolders(context, (err: BusinessError, data) => {
 function queryHolders(): Promise<Array<Holder>>
 ```
 
-Queries all applications that have created contacts. This API uses a promise to return the result.
+查询所有创建联系人的应用信息类。使用Promise异步回调。
 
 **Since:** 7
 
@@ -121,18 +129,16 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Holder&gt;&gt; | Promise used to return the result, which is an array of queried applications. |
+| Promise&lt;Array&lt;Holder&gt;&gt; | Promise对象。返回查询到的创建联系人应用信息的对象数组。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
 
 let promise = contact.queryHolders();
 promise.then((data) => {
   console.info(`Succeeded in querying Holders. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query Holders. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -143,7 +149,7 @@ promise.then((data) => {
 function queryHolders(context: Context): Promise<Array<Holder>>
 ```
 
-Queries all applications that have created contacts. This API uses a promise to return the result.
+查询所有创建联系人的应用信息类。使用Promise异步回调。
 
 **Since:** 10
 
@@ -159,36 +165,34 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Holder&gt;&gt; | Promise used to return the result, which is an array of queried applications. |
+| Promise&lt;Array&lt;Holder&gt;&gt; | Promise对象。返回查询到的创建联系人应用信息的对象数组。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
+import { contact } from '@kit.ContactsKit';
 
-// Obtain the context within the component.
+// Obtain the context in the component.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let promise = contact.queryHolders(context);
 promise.then((data) => {
   console.info(`Succeeded in querying Holders. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query Holders. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

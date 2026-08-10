@@ -1,9 +1,10 @@
 # @ohos.bundle.appControl
 
 本模块提供应用拦截能力。对应用设置处置状态后，应用会被禁止运行；用户点击桌面图标时，会根据应用的处置状态，跳转到对应的页面。本模块支持对应用的处置状态进行设置、获取、删除。
-    **说明：**  
-    
-    本模块为系统接口。
+
+> **说明：**
+> 
+> 本模块为系统接口。
 
 **起始版本：** 9
 
@@ -14,6 +15,12 @@
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { appControl } from 'kits/@kit.AbilityKit';
+```
 
 ## 汇总
 

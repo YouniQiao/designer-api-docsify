@@ -1,5 +1,11 @@
 # @ohos.atomicservice.AtomicServiceSearch(This section describes the interfaces used by AtomicServiceSearch)
 
+## 导入模块
+
+```TypeScript
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 结构体

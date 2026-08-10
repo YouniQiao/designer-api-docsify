@@ -1,6 +1,6 @@
 # CertInfo
 
-Represents detailed information about a certificate.
+表示证书详细信息。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Represents detailed information about a certificate.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## cert
 
 ```TypeScript
 cert: Uint8Array
 ```
 
-Binary data of a certificate. The value contains up to 8196 bytes.
+表示证书二进制数据，最大长度为8196字节。
 
 **Type:** Uint8Array
 
@@ -34,7 +40,7 @@ Binary data of a certificate. The value contains up to 8196 bytes.
 certAlias: string
 ```
 
-Alias of a certificate. The value contains up to 128 bytes.
+表示证书的别名，最大长度为128字节。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Alias of a certificate. The value contains up to 128 bytes.
 fingerprintSha256: string
 ```
 
-Fingerprint of a certificate. The value contains up to 128 bytes.
+表示证书的指纹值，最大长度为128字节。
 
 **Type:** string
 
@@ -70,7 +76,7 @@ Fingerprint of a certificate. The value contains up to 128 bytes.
 issuerName: string
 ```
 
-Name of the certificate issuer. The value contains up to 256 bytes.
+表示证书的颁发者名称，最大长度为256字节。
 
 **Type:** string
 
@@ -88,7 +94,7 @@ Name of the certificate issuer. The value contains up to 256 bytes.
 notAfter: string
 ```
 
-Expiry date of a certificate. The value contains up to 32 bytes.
+表示证书有效期截止日期，最大长度为32字节。
 
 **Type:** string
 
@@ -106,7 +112,7 @@ Expiry date of a certificate. The value contains up to 32 bytes.
 notBefore: string
 ```
 
-Start date of a certificate. The value contains up to 32 bytes.
+表示证书有效期起始日期，最大长度为32字节。
 
 **Type:** string
 
@@ -124,7 +130,7 @@ Start date of a certificate. The value contains up to 32 bytes.
 serial: string
 ```
 
-Serial number of a certificate. The value contains up to 64 bytes. The value is a hexadecimal string, for example, **62C2CB4DE8405E96**.
+表示证书的序列号，最大长度为64字节。格式为16进制字符串，例如：62C2CB4DE8405E96。
 
 **Type:** string
 
@@ -142,7 +148,7 @@ Serial number of a certificate. The value contains up to 64 bytes. The value is 
 state: boolean
 ```
 
-Certificate state. The value **true** indicates that the certificate is enabled, and **false** means the opposite.
+表示证书的状态，true为启用状态、false为禁用状态。
 
 **Type:** boolean
 
@@ -160,7 +166,7 @@ Certificate state. The value **true** indicates that the certificate is enabled,
 subjectName: string
 ```
 
-Name of the certificate subject. The value contains up to 1024 bytes.
+表示证书的使用者名称，最大长度为1024字节。
 
 **Type:** string
 
@@ -178,7 +184,7 @@ Name of the certificate subject. The value contains up to 1024 bytes.
 uri: string
 ```
 
-Unique identifier of a certificate. The value contains up to 256 bytes.
+表示证书的唯一标识符，最大长度为256字节。
 
 **Type:** string
 

@@ -12,6 +12,12 @@ GesturePoint表示手势触摸点。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
+## 导入模块
+
+```TypeScript
+import { GesturePoint } from 'kits/@kit.AccessibilityKit';
+```
+
 ## constructor
 
 ```TypeScript
@@ -37,7 +43,7 @@ constructor(positionX: double, positionY: double)
 | positionX | double | 是 | 触摸点X坐标，单位为像素（px）。 |
 | positionY | double | 是 | 触摸点Y坐标，单位为像素（px）。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { GesturePoint } from '@kit.AccessibilityKit';

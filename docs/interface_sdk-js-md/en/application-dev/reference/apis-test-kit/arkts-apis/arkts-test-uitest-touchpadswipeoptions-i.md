@@ -1,6 +1,6 @@
 # TouchPadSwipeOptions
 
-Describes information about the touchpad swipe gesture option.
+触摸板多指滑动手势选项相关信息。
 
 **Since:** 18
 
@@ -10,15 +10,21 @@ Describes information about the touchpad swipe gesture option.
 
 **System capability:** SystemCapability.Test.UiTest
 
+## Modules to Import
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## speed
 
 ```TypeScript
 speed?: int
 ```
 
-Swipe speed.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range:[200, 40000]\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Unit: px/s.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_Throws error code 17000007 if negative.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_Default value: 2000
+滑动速率，取值范围为200-40000的整数，默认值为2000，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值2000。为负数时抛出参数错误的错误码。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -36,7 +42,7 @@ Swipe speed.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range:[200, 40000]\_\_\_HTM
 stay?: boolean
 ```
 
-Whether the swipe gesture stays on the touchpad for 1s before it is lifted.The value **true** indicates that the swipe gesture stays on the touchpad for 1s, and **false** indicates the opposite.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Default value: false
+触摸板多指滑动结束是否停留1s后再抬起，true：停留，false：不停留，默认为false（不停留1s）。
 
 **Type:** boolean
 

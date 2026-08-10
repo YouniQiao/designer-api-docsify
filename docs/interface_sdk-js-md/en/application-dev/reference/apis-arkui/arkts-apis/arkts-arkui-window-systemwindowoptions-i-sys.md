@@ -1,6 +1,6 @@
 # SystemWindowOptions (System API)
 
-Describes the parameters for creating a system window.
+系统窗口的创建参数。
 
 **Since:** 14
 
@@ -12,15 +12,21 @@ Describes the parameters for creating a system window.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## windowType
 
 ```TypeScript
 windowType: WindowType
 ```
 
-Window type. There is no default value. If null is passed in, the window fails to be created. **TYPE\_DIALOG** is not supported.
+窗口类型。无默认类型，不配置会导致窗口创建失败。不支持TYPE_DIALOG类型。
 
-**Type:** WindowType
+**Type:** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
 
 **Since:** 14
 

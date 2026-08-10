@@ -1,6 +1,6 @@
 # USBConfig
 
-USB配置，一个[USBDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中可以含有多个配置。
+USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md)中可以含有多个配置。
 
 **起始版本：** 8
 
@@ -13,6 +13,12 @@ USB配置，一个[USBDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中可以含�
 <!--Device-usb-interface USBConfig--><!--Device-usb-interface USBConfig-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
+
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
 
 ## attributes
 

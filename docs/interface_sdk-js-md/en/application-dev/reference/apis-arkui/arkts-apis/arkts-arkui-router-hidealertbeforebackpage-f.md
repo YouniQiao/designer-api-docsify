@@ -1,18 +1,30 @@
 # hideAlertBeforeBackPage
 
+## Modules to Import
+
+```TypeScript
+import { router } from 'kits/@kit.ArkUI';
+```
+
 ## hideAlertBeforeBackPage
 
 ```TypeScript
 function hideAlertBeforeBackPage(): void
 ```
 
-Disables the display of a confirm dialog box before returning to the previous page.
-    **NOTE**  
-    
-    - Since API version 10, you can use the  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ API in  
-    [UIContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the [Router]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ object associated  
-    with the current UI context.
+禁用页面返回询问对话框。调用此方法后，将关闭由[showAlertBeforeBackPage](#routershowalertbeforebackpagedeprecated)开启的返回询问对话框，[back](#routerbackdeprecated)操作将不再弹出确认对话框，直接执行页面返回。
+
+> **说明：**
+> 
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用
+> [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage)替代。hideAlertBeforeBackPage需先
+> 通过[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
+> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> [Router](arkts-arkui-uicontext.md)对象。
 
 **Since:** 9
 
@@ -28,7 +40,7 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Example**
+## Examples
 
 ```TypeScript
 this.getUIContext().getRouter().hideAlertBeforeBackPage();

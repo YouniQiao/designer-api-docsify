@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
+## 导入模块
+
+```TypeScript
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI';
+```
+
 ## arrayValue
 
 ```TypeScript
@@ -38,7 +44,7 @@ selected: int | Bindable<int>
 
 初始选中项索引值，若超出索引值范围，则取默认值0。
 
-该参数支持\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_双向绑定变量。
+该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
 
 **类型：** int \| Bindable&lt;int&gt;
 

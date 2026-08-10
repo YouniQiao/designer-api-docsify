@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## currentHeadroom
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly currentHeadroom: double
 
 当前亮度动态余量，该参数为大于0的浮点数。默认值为1.0。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 22
 
@@ -38,7 +44,7 @@ readonly maxHeadroom: double
 
 当前最大亮度余量，该参数为大于0的浮点数。默认值为1.0。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 22
 
@@ -58,7 +64,7 @@ readonly sdrNits: double
 
 屏幕的亮度，该参数为大于0的浮点数。默认值为500.0。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 22
 

@@ -1,6 +1,6 @@
 # AnimatorResult
 
-Defines the Animator result interface.
+定义Animator结果接口。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines the Animator result interface.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@kit.ArkUI';
+```
+
 ## cancel
 
 ```TypeScript
 cancel(): void
 ```
 
-Cancels the animation.
+取消动画，会触发onCancel回调。
 
 **Since:** 23
 
@@ -34,7 +40,7 @@ Cancels the animation.
 finish(): void
 ```
 
-Ends the animation.
+结束动画，会触发onFinish回调。
 
 **Since:** 23
 
@@ -52,7 +58,7 @@ Ends the animation.
 onCancel: () => void
 ```
 
-The animation is canceled.
+动画被取消时回调。
 
 **Since:** 23
 
@@ -70,7 +76,7 @@ The animation is canceled.
 onFinish: () => void
 ```
 
-The animation is finished.
+动画完成时回调。
 
 **Since:** 23
 
@@ -88,7 +94,7 @@ The animation is finished.
 onFrame: (progress: double) => void
 ```
 
-Trigger when vSync callback.
+接收到帧时回调。
 
 **Since:** 23
 
@@ -112,7 +118,7 @@ Trigger when vSync callback.
 onRepeat: () => void
 ```
 
-The animation is repeated.
+动画重复时回调。
 
 **Since:** 23
 
@@ -130,7 +136,7 @@ The animation is repeated.
 pause(): void
 ```
 
-Pauses the animation.
+暂停动画。
 
 **Since:** 23
 
@@ -148,7 +154,7 @@ Pauses the animation.
 play(): void
 ```
 
-Starts the animation.
+启动动画。动画会保留上一次的播放状态，比如播放状态设置reverse后，再次播放会保留reverse的播放状态。
 
 **Since:** 23
 
@@ -166,7 +172,7 @@ Starts the animation.
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-Reset the options for current animator.
+重置当前animator动画参数。
 
 **Since:** 23
 
@@ -182,14 +188,14 @@ Reset the options for current animator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| SimpleAnimatorOptions | Yes | Options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| SimpleAnimatorOptions | Yes | 定义动画选项。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100001](../errorcode-internal.md#100001-internal-error) | The specified page is not found or the object property list is not obtained. |
+| 100001 | The specified page is not found or the object property list is not obtained. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## reverse
 
@@ -197,7 +203,7 @@ Reset the options for current animator.
 reverse(): void
 ```
 
-Plays the animation in reverse direction.Invalid when using interpolating-spring curve.
+以相反的顺序播放动画。使用interpolating-spring曲线时此接口无效。
 
 **Since:** 23
 
@@ -215,7 +221,7 @@ Plays the animation in reverse direction.Invalid when using interpolating-spring
 setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 ```
 
-The expected frame rate of dynamical of rate range.
+设置期望的帧率范围。
 
 **Since:** 23
 
@@ -231,5 +237,5 @@ The expected frame rate of dynamical of rate range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rateRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates ExpectedFrameRateRange. |
+| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes | 设置期望的帧率范围。 |
 

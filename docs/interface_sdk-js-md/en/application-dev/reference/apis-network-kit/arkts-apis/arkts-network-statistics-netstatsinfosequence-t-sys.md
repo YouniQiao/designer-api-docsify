@@ -4,7 +4,7 @@
 export type NetStatsInfoSequence = Array<NetStatsInfoSequenceItem>
 ```
 
-Array of \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Array of {@link NetStatsInfoSequenceItem}.
 
 **Since:** 23
 

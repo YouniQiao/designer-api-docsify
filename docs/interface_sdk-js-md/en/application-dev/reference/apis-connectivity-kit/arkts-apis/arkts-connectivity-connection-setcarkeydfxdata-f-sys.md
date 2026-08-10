@@ -1,5 +1,11 @@
 # setCarKeyDfxData (System API)
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## setCarKeyDfxData
 
 ```TypeScript
@@ -25,14 +31,14 @@ Set the dfx data of car key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| action | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the action to set the data. |
+| action | [CarKeyActionType](arkts-connectivity-connection-carkeyactiontype-e-sys.md) | Yes | Indicates the action to set the data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| 801 | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| 202 | Non-system applications are not allowed to use system APIs. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 

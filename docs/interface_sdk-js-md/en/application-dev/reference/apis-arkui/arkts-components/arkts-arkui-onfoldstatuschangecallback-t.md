@@ -4,7 +4,7 @@
 declare type OnFoldStatusChangeCallback = (event: OnFoldStatusChangeInfo) => void
 ```
 
-Current fold state of the device.
+当折叠状态改变时触发的回调&lt;!--RP4--&gt;，仅在横屏状态下生效&lt;!--RP4End--&gt;。
 
 **Since:** 18
 
@@ -22,5 +22,5 @@ Current fold state of the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Current fold state of the device.  |
+| event | [OnFoldStatusChangeInfo](../arkts-apis/arkts-arkui-folderstack-onfoldstatuschangeinfo-i.md) | Yes | 折叠状态改变时的信息，仅在横屏状态下生效。 |
 

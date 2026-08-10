@@ -32,7 +32,7 @@ Deletes the ID from the end of the path component of the given uri.
 | --- | --- |
 | string | Returns the uri object with the ID deleted. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import dataUriUtils from '@ohos.ability.dataUriUtils';

@@ -1,5 +1,11 @@
 # offGetFormRect (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formHost } from 'kits/@kit.FormKit';
+```
+
 ## offGetFormRect
 
 ```TypeScript
@@ -30,5 +36,5 @@ You can use this method to cancel listening to the event of get form rect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| 202 | The application is not a system application. |
 

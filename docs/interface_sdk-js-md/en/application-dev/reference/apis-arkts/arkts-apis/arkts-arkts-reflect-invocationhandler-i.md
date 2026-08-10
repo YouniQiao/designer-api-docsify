@@ -32,8 +32,8 @@ Intercepts the getter operation for the each property on the proxy object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| proxy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The proxy object being accessed. |
-| method | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Intercepted method. |
+| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | Yes | The proxy object being accessed. |
+| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | Yes | Intercepted method. |
 
 **Return value:**
 
@@ -63,8 +63,8 @@ Intercepts invocation of a method on the proxy object with the provided argument
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| proxy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The proxy object on which the method is invoked. |
-| method | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Intercepted method. |
+| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | Yes | The proxy object on which the method is invoked. |
+| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | Yes | Intercepted method. |
 | args | FixedArray&lt;Any&gt; | Yes | An array of arguments that has been passed to the method. |
 
 **Return value:**
@@ -95,7 +95,7 @@ Intercepts the setter operation of a method on the proxy object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| proxy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The proxy object being modified. |
-| method | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Intercepted method. |
+| proxy | [Proxy](arkts-arkts-reflect-proxy-c.md) | Yes | The proxy object being modified. |
+| method | [InstanceMethod](arkts-arkts-reflect-instancemethod-c.md) | Yes | Intercepted method. |
 | value | Any | Yes | The value that has been passed to assign through the setter. |
 

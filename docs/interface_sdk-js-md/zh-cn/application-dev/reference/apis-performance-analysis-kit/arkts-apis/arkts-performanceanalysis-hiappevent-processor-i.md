@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## appId
 
 ```TypeScript
@@ -42,7 +48,7 @@ batchReport?: int
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -64,7 +70,7 @@ configId?: int
 
 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -112,7 +118,7 @@ customConfigs?: Record<string, string>
 
 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **起始版本：** 12
 
@@ -156,7 +162,7 @@ eventConfigs?: AppEventReportConfig[]
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**类型：** AppEventReportConfig[]
+**类型：** [AppEventReportConfig](arkts-performanceanalysis-hiappevent-appeventreportconfig-i.md)[]
 
 **起始版本：** 11
 
@@ -244,7 +250,7 @@ periodReport?: int
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -284,7 +290,7 @@ routeInfo?: string
 userIds?: string[]
 ```
 
-数据处理者可以上报的用户ID的name数组。name对应[setUserId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口的name参数。默认为空数组。
+数据处理者可以上报的用户ID的name数组。name对应[setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setuserid)接口的name参数。默认为空数组。
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
@@ -306,7 +312,7 @@ userIds?: string[]
 userProperties?: string[]
 ```
 
-数据处理者可以上报的用户属性的name数组。name对应[setUserProperty]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口的name参数。默认为空数组。
+数据处理者可以上报的用户属性的name数组。name对应[setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setuserproperty)接口的name参数。默认为空数组。
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 

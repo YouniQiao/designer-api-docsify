@@ -1,5 +1,11 @@
 # listFileExt
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## listFileExt
 
 ```TypeScript
@@ -9,7 +15,7 @@ declare function listFileExt(
 ): Promise<string[]>
 ```
 
-Lists all file names in a directory. This API uses a promise to return the result.This API supports recursive listing of all file names and custom file name filtering.The returned result starts with a slash (/) and contains the subdirectory.
+列出目录下所有文件名，使用Promise异步回调。该接口支持通过自定义过滤函数对文件名进行过滤。可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
 
 **Since:** 26.0.0
 
@@ -25,8 +31,8 @@ Lists all file names in a directory. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the directory. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for filtering files. The files are not filtered by default. |
+| path | string | Yes | 目录的应用沙箱路径。 |
+| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | No | 文件过滤选项。默认不进行过滤。 |
 
 **Return value:**
 
@@ -38,8 +44,8 @@ Lists all file names in a directory. This API uses a promise to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
-| 13900011 | Out of memory |
-| 13900018 | Not a directory |
 | 13900020 | Invalid argument |
+| 13900002 | No such file or directory |
+| 13900018 | Not a directory |
+| 13900011 | Out of memory |
 

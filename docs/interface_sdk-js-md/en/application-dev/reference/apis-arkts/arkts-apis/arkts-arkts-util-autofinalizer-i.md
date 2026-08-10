@@ -1,6 +1,6 @@
 # AutoFinalizer
 
-Provides an interface that can be implemented for releasing a resource which is managed by developers through a developer-defined callback.
+提供一个可通过开发者自定义回调释放由开发者管理的资源的接口。
 
 **Since:** 22
 
@@ -10,13 +10,19 @@ Provides an interface that can be implemented for releasing a resource which is 
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## onFinalization
 
 ```TypeScript
 onFinalization(heldValue: T): void
 ```
 
-The developer-defined callback used to release resources.
+开发者自定义的用于释放资源的回调。
 
 **Since:** 22
 
@@ -32,5 +38,5 @@ The developer-defined callback used to release resources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| heldValue | T | Yes | The value to pass to the finalizer. |
+| heldValue | T | Yes | 传递给 finalizer 的值。 |
 

@@ -1,5 +1,11 @@
 # addProfile
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## addProfile
 
 ```TypeScript
@@ -22,7 +28,7 @@ Starts a page through an ability, on which users can touch the button to downloa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Bound profile package data returned by the SM-DP+ server. |
+| profile | [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | Yes | Bound profile package data returned by the SM-DP+ server. |
 
 **Return value:**
 
@@ -34,13 +40,13 @@ Starts a page through an ability, on which users can touch the button to downloa
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
-| [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 3120002 | System internal error. |
+| 3120001 | Service connection failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

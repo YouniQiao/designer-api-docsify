@@ -20,12 +20,12 @@ type KeyGeneratorFunc<T> = (item: T, index: int) => string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| item | T | 是 | \_\_\_INLINE\_CODE\_USD\_0\_\_\_数组中的数据项。  |
-| index | int | 是 | \_\_\_INLINE\_CODE\_USD\_0\_\_\_数组中的数据项索引。  |
+| item | T | 是 | `arr`数组中的数据项。 |
+| index | int | 是 | `arr`数组中的数据项索引。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | key value.  |
+| string | key value. |
 

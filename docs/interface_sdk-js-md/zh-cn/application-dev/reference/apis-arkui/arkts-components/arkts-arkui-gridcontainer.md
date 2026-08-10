@@ -19,9 +19,10 @@ GridContainer(value?: GridContainerOptions)
 ```
 
 创建纵向排布栅格布局容器。
-    **说明：**  
-    
-    从API version 7开始支持，从API version 9开始废弃。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -39,7 +40,9 @@ GridContainer(value?: GridContainerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | GridContainer配置参数，用于设置栅格布局的列数、设备宽度类型、列间距和两侧间距。不传入时使用默认配置。  |
+| value | [GridContainerOptions](arkts-arkui-gridcontaineroptions-i.md) | 否 | GridContainer配置参数，用于设置栅格布局的列数、设备宽度类型、列间距和两侧间距。不传入时使用默认配置。 |
 
 ## 汇总
 
+- [GridContainerOptions](arkts-arkui-gridcontainer-gridcontaineroptions-i.md)
+- [SizeType](arkts-arkui-gridcontainer-sizetype-e.md)

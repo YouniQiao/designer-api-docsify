@@ -1,12 +1,10 @@
 # HeightBreakpoint
 
-Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Type of window height breakpoint.
 
-The following table lists default aspect ratio breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window aspect ratios. Device manufacturers may customize these thresholds through product-specific configurations when needed.
+**Since:** 22
 
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
 <!--Device-unnamed-declare enum HeightBreakpoint--><!--Device-unnamed-declare enum HeightBreakpoint-End-->
 
@@ -18,15 +16,15 @@ The following table lists default aspect ratio breakpoint thresholds for typical
 HEIGHT_SM = 0
 ```
 
-The window aspect ratio is less than 0.8.
+Window aspectRatio < 0.8 type.
 
-**Since:** 13
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HeightBreakpoint-HEIGHT_SM = 0--><!--Device-HeightBreakpoint-HEIGHT_SM = 0-End-->
 
@@ -38,15 +36,15 @@ The window aspect ratio is less than 0.8.
 HEIGHT_MD = 1
 ```
 
-The window aspect ratio is greater than or equal to 0.8 and less than 1.2.
+Window aspectRatio >= 0.8 and < 1.2 type.
 
-**Since:** 13
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HeightBreakpoint-HEIGHT_MD = 1--><!--Device-HeightBreakpoint-HEIGHT_MD = 1-End-->
 
@@ -58,15 +56,15 @@ The window aspect ratio is greater than or equal to 0.8 and less than 1.2.
 HEIGHT_LG = 2
 ```
 
-The window aspect ratio is greater than or equal to 1.2.
+Window aspectRatio >= 1.2 type.
 
-**Since:** 13
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn only, since version 13.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HeightBreakpoint-HEIGHT_LG = 2--><!--Device-HeightBreakpoint-HEIGHT_LG = 2-End-->
 

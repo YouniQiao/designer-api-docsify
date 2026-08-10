@@ -1,6 +1,6 @@
 # ProgressFrameNode
 
-Define the Progress type of FrameNode.
+定义Progress类型的FrameNode。
 
 **Inheritance/Implementation:** ProgressFrameNode extends [TypedFrameNode<ProgressAttribute>](TypedFrameNode<ProgressAttribute>)
 
@@ -18,7 +18,7 @@ Define the Progress type of FrameNode.
 abstract initialize(value: ProgressOptions): ProgressAttribute
 ```
 
-Initialize Progress FrameNode.
+初始化Progress类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Progress FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [ProgressOptions](../arkts-components/arkts-arkui-progressoptions-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) |  |
 

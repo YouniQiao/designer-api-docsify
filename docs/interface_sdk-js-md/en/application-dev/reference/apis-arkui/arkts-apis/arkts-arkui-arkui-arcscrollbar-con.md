@@ -6,30 +6,22 @@
 export declare const ArcScrollBar: ArcScrollBarInterface
 ```
 
-The **ArcScrollBar** component is designed to be used together with scrollable components such as  
-[ArcList]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, [List]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,  
-[Grid]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, [Scroll]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_, and  
-[WaterFlow]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.
-    **NOTE**  
-    
-    - This component is supported since API version 18. Updates will be marked with a superscript to indicate their  
-    earliest API version.  
-    
-    - When the width and height of the **ArcScrollBar** component are not set, the **maxSize** value specified in its  
-    parent component [LayoutConstraint]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ is used as the width and height. If  
-    the parent component of the **ArcScrollBar** component contains scrollable components, such as  
-    [ArcList]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_, [List]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_,  
-    [Grid]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_, [Scroll]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_, or  
-    [WaterFlow]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_, you are advised to set the width and height of the  
-    **ArcScrollBar** component. Otherwise, the width and height of the component may be infinite.  
-    
-    - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. In API version 22 and  
-    earlier versions, a compilation warning will be reported when this component is used on phones, PCs, 2-in-1 devices  
-    , tablets, and TVs, but the component can still run properly.
+弧形滚动条组件ArcScrollBar，适用于圆形屏幕等需要弧形滚动条的场景，用于配合可滚动组件使用，如[ArcList](arkts-arkui-arclist.md)、  
+[List](../../apis-arkui/arkts-components/arkts-arkui-list-i)、[Grid](../../apis-arkui/arkts-components/arkts-arkui-grid-i)、  
+[Scroll](../../apis-arkui/arkts-components/arkts-arkui-scroll-i)、[WaterFlow](../../apis-arkui/arkts-components/arkts-arkui-water_flow-i)。
 
-### Child Components
+> **说明：**
+> 
+> - 未设置宽高时，ArcScrollBar采用父组件[LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md)中的maxSize作为尺寸。若父组件存在可滚动组件，如
+> [ArcList](arkts-arkui-arclist.md)、[List](../../apis-arkui/arkts-components/arkts-arkui-list-i)、
+> [Grid](../../apis-arkui/arkts-components/arkts-arkui-grid-i)、[Scroll](../../apis-arkui/arkts-components/arkts-arkui-scroll-i)、
+> [WaterFlow](../../apis-arkui/arkts-components/arkts-arkui-water_flow-i)，建议设置ArcScrollBar宽高，否则尺寸可能为无穷大。
+> 
+> - 该组件支持在Phone、PC/2in1、Tablet、TV、Wearable设备上使用。API version 22及以前版本，在Phone、PC/2in1、Tablet、TV上使用会编译告警，但可以正常运行。
 
-Not supported
+### 子组件
+
+不包含子组件。
 
 **Since:** 18
 
@@ -47,7 +39,7 @@ Not supported
 export declare const ArcScrollBarInstance: ArcScrollBarAttribute
 ```
 
-Defines ArcScrollBar Component instance.
+定义ArcScrollBar组件实例。
 
 **Since:** 18
 

@@ -16,7 +16,7 @@
 max?: number
 ```
 
- max大于0时，表示数据的最大值。
+- max大于0时，表示数据的最大值。
 
 - max小于等于0时，max等于values数据值列表各项的和，按比例显示。
 
@@ -48,7 +48,7 @@ type?: DataPanelType
 
 不传入时默认值为DataPanelType.Circle。
 
-**类型：** DataPanelType
+**类型：** [DataPanelType](arkts-arkui-datapaneltype-e.md)
 
 **起始版本：** 8
 

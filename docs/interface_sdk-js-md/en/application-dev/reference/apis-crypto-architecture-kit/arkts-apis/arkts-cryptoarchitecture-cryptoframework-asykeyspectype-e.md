@@ -1,6 +1,6 @@
 # AsyKeySpecType
 
-Enumerates the key parameter types.
+表示密钥参数类型的枚举。
 
 **Since:** 10
 
@@ -18,8 +18,8 @@ Enumerates the key parameter types.
 COMMON_PARAMS_SPEC = 0
 ```
 
-Common parameters of the public and private keys. You can use  
-[generateKeyPair]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to randomly generate a key pair based on the parameters of this type.
+表示公私钥中包含的公共参数。使用此类型的参数可以调用  
+[generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair)随机生成密钥对。
 
 **Since:** 10
 
@@ -39,8 +39,8 @@ Common parameters of the public and private keys. You can use
 PRIVATE_KEY_SPEC = 1
 ```
 
-Parameter of the private key. You can use  
-[generatePriKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to generate a private key based on the parameters of this type.
+表示私钥中包含的参数。使用此类型的参数可以调用  
+[generatePriKey](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generateprikey)生成指定的私钥。
 
 **Since:** 10
 
@@ -60,8 +60,8 @@ Parameter of the private key. You can use
 PUBLIC_KEY_SPEC = 2
 ```
 
-Parameter of the public key. You can use  
-[generatePubKey]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to generate a public key based on the parameters of this type.
+表示公钥中包含的参数。使用此类型的参数可以调用  
+[generatePubKey](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatepubkey)生成指定的公钥。
 
 **Since:** 10
 
@@ -81,8 +81,8 @@ Parameter of the public key. You can use
 KEY_PAIR_SPEC = 3
 ```
 
-Full parameters of the public and private keys. You can use  
-[generateKeyPair]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_to generate a key pair based on the parameters of this type.
+表示公私钥中包含的全量参数。使用此类型的参数可以调用  
+[generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair)生成指定的密钥对。
 
 **Since:** 10
 

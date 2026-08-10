@@ -1,12 +1,18 @@
 # injectMouseEvent
 
+## Modules to Import
+
+```TypeScript
+import { inputEventClient } from 'kits/@kit.InputKit';
+```
+
 ## injectMouseEvent
 
 ```TypeScript
 function injectMouseEvent(mouseEvent: MouseEventData): void
 ```
 
-Injects a mouse/touchpad event.
+鼠标/触控板事件注入。
 
 **Since:** 11
 
@@ -23,17 +29,17 @@ Injects a mouse/touchpad event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mouseEvent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Mouse/touchpad event to inject. [Action]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in this parameter cannot be set to **CANCEL**. |
+| mouseEvent | [MouseEventData](arkts-input-inputeventclient-mouseeventdata-i.md) | Yes | 鼠标/触控板事件注入描述信息。此参数中[Action](arkts-input-multimodalinput-keyevent-action-e.md)属性 不支持设置为CANCEL。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission denied.<br>**Applicable version:** 12 and later |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';
@@ -77,6 +83,7 @@ struct Index {
             let mouseButtonUp: inputEventClient.MouseEventData = {
               mouseEvent: mouseButtonUpData
             }
+            // Inject Mouse Event
             inputEventClient.injectMouseEvent(mouseButtonUp);
 
             let mouseButtonDownData: MouseEvent = {
@@ -109,11 +116,12 @@ struct Index {
             let mouseButtonDown: inputEventClient.MouseEventData = {
               mouseEvent: mouseButtonDownData
             };
+            // Inject Mouse Event
             inputEventClient.injectMouseEvent(mouseButtonDown);
           }
 
           catch (error) {
-            console.error(`Failed to inject MouseEvent, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to inject MouseEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

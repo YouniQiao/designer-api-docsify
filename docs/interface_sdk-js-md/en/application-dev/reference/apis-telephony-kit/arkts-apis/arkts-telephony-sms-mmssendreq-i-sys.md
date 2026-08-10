@@ -12,6 +12,12 @@ Defines an MMS message sending request.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## bcc
 
 ```TypeScript
@@ -80,7 +86,7 @@ date?: long
 
 Indicates the date for the MMS message sending request.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 8
 
@@ -100,7 +106,7 @@ deliveryReport?: int
 
 Indicates the delivery report for the MMS message sending request.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -120,7 +126,7 @@ expiry?: int
 
 Indicates the expiration for the MMS message sending request.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -140,7 +146,7 @@ from: MmsAddress
 
 Indicates the source address for the MMS message sending request.
 
-**Type:** MmsAddress
+**Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
 **Since:** 8
 
@@ -160,7 +166,7 @@ messageClass?: int
 
 Indicates the message class for the MMS message sending request.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -180,7 +186,7 @@ priority?: MmsPriorityType
 
 Indicates the priority for the MMS message sending request.
 
-**Type:** MmsPriorityType
+**Type:** [MmsPriorityType](arkts-telephony-sms-mmsprioritytype-e-sys.md)
 
 **Since:** 8
 
@@ -200,7 +206,7 @@ readReport?: int
 
 Indicates the read report for the MMS message sending request.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -220,7 +226,7 @@ senderVisibility?: int
 
 Indicates the sender visibility for the MMS message sending request.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -300,7 +306,7 @@ version: MmsVersionType
 
 Indicates the version for the MMS message sending request.
 
-**Type:** MmsVersionType
+**Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **Since:** 8
 

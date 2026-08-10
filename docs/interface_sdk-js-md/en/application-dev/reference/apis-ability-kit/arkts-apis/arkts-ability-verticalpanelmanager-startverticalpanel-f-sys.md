@@ -1,5 +1,11 @@
 # startVerticalPanel (System API)
 
+## Modules to Import
+
+```TypeScript
+import { verticalPanelManager } from 'kits/@kit.AbilityKit';
+```
+
 ## startVerticalPanel
 
 ```TypeScript
@@ -11,7 +17,7 @@ function startVerticalPanel(
   ): Promise<void>
 ```
 
-Starts the vertical domain picker with panel config.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START\_INVISIBLE\_ABILITY to start target invisible ability.If the caller application is in the background, it is not allowed to call this interface.
+Starts the vertical domain picker with panel config.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the caller application is in the background, it is not allowed to call this interface.
 
 **Since:** 20
 
@@ -30,9 +36,9 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.UIAbilityContext | Yes | Indicates the ui ability context of the application. |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | Yes | Indicates the want parameter. |
-| panelConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the panel config. |
-| panelStartCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the panelStartCallback. |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Indicates the want parameter. |
+| panelConfig | [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) | Yes | Indicates the panel config. |
+| panelStartCallback | [PanelStartCallback](arkts-ability-verticalpanelmanager-panelstartcallback-i-sys.md) | Yes | indicates the panelStartCallback. |
 
 **Return value:**
 
@@ -44,11 +50,11 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service or system server handle failed. |
-| [16000135](../errorcode-ability.md#16000135-uiability-main-window-does-not-exist) | The main window of this ability of this context does not exits. |
+| 16000135 | The main window of this ability of this context does not exits. |
+| 16000050 | Failed to connect to the system service or system server handle failed. |
+| 202 | The application is not a system application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common, verticalPanelManager } from '@kit.AbilityKit';
@@ -139,7 +145,7 @@ function startVerticalPanel(
   ): Promise<void>
 ```
 
-Starts the vertical domain picker with panel config.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START\_INVISIBLE\_ABILITY to start target invisible ability.If the caller application is in the background, it is not allowed to call this interface.
+Starts the vertical domain picker with panel config.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the caller application is in the background, it is not allowed to call this interface.
 
 **Since:** 23
 
@@ -158,9 +164,9 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.UIAbilityContext | Yes | Indicates the ui ability context of the application. |
-| wantParam | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, RecordData&gt; | Yes | Indicates the want parameter. |
-| panelConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the panel config. |
-| panelStartCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | indicates the panelStartCallback. |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Indicates the want parameter. |
+| panelConfig | [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) | Yes | Indicates the panel config. |
+| panelStartCallback | [PanelStartCallback](arkts-ability-verticalpanelmanager-panelstartcallback-i-sys.md) | Yes | indicates the panelStartCallback. |
 
 **Return value:**
 
@@ -172,7 +178,7 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service or system server handle failed. |
-| [16000135](../errorcode-ability.md#16000135-uiability-main-window-does-not-exist) | The main window of this ability of this context does not exits. |
+| 16000135 | The main window of this ability of this context does not exits. |
+| 16000050 | Failed to connect to the system service or system server handle failed. |
+| 202 | The application is not a system application. |
 

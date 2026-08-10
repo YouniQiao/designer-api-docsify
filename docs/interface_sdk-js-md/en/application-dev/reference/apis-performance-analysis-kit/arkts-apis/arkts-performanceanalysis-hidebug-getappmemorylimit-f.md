@@ -1,12 +1,18 @@
 # getAppMemoryLimit
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getAppMemoryLimit
 
 ```TypeScript
 function getAppMemoryLimit(): MemoryLimit
 ```
 
-Obtains the memory limit of an application process.
+��ȡӦ�ó�����̵��ڴ����ơ�
 
 **Since:** 12
 
@@ -20,13 +26,15 @@ Obtains the memory limit of an application process.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Memory limit of the application process. |
+| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) | Ӧ�ó�������ڴ����ơ� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let appMemoryLimit:hidebug.MemoryLimit = hidebug.getAppMemoryLimit();
+console.info(`rssLimit: ${appMemoryLimit.rssLimit}, vssLimit: ${appMemoryLimit.vssLimit},` +
+  `vmHeapLimit: ${appMemoryLimit.vmHeapLimit}, vmTotalHeapSize: ${appMemoryLimit.vmTotalHeapSize}`);
 ```
 

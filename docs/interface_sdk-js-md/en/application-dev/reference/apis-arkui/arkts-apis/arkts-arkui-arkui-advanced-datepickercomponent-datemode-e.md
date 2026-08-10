@@ -1,6 +1,6 @@
 # DateMode
 
-DateMode enum defines the mode of the date picker.
+DateMode枚举用于定义日期选择器的模式。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ DateMode enum defines the mode of the date picker.
 DATE = 0
 ```
 
-Date displays three columns: year, month, and day.
+日期显示三列：年、月、日。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Date displays three columns: year, month, and day.
 YEAR_AND_MONTH = 1
 ```
 
-Date displays two columns: year and month.
+日期显示两列：年、月。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Date displays two columns: year and month.
 MONTH_AND_DAY = 2
 ```
 
-Defines a mode that displays the date as month and day. In this mode, when the month changes from December to January, the year does not increment; when the month changes from January to December, the year does not decrement.The year remains unchanged at its current setting.
+定义以月和日显示日期的模式。在此模式下，当月份从12月变为1月时，年份不会增加；当月份从1月变为12月时，年份不会减少。年份保持当前设置的值不变。
 
 **Since:** 26.0.0
 

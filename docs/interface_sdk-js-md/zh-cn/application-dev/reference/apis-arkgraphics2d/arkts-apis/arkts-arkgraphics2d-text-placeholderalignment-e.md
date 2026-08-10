@@ -2,12 +2,13 @@
 
 占位符相对于周围文本的纵向对齐方式。
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
-    **说明：**  
-    
-    示意图展示了后三种对齐方式，前三种对齐方式在文本基线对齐方式上类似，比较位置是文本基线，即绿色线条部分。  
-    
-    !\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_
+![PlaceholderAlignment.png](../../../reference/apis-arkgraphics2d/figures/PlaceholderAlignment.png)
+
+> **说明：**
+> 
+> 示意图展示了后三种对齐方式，前三种对齐方式在文本基线对齐方式上类似，比较位置是文本基线，即绿色线条部分。
+> 
+> ![Baseline.png](../../../reference/apis-arkgraphics2d/figures/Baseline.png)
 
 **起始版本：** 12
 

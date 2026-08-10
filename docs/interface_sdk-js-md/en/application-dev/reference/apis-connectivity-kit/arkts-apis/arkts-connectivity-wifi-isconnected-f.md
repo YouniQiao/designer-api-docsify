@@ -1,5 +1,11 @@
 # isConnected
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## isConnected
 
 ```TypeScript

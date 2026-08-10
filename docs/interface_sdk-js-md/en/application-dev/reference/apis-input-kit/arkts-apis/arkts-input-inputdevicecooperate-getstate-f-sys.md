@@ -1,12 +1,24 @@
 # getState (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inputDeviceCooperate } from 'kits/@kit.InputKit';
+```
+
 ## getState
 
 ```TypeScript
 function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void
 ```
 
-Obtains the state of the screen hopping switch. This API uses an asynchronous callback to return the result.
+获取键鼠穿越开关的状态，使用callback异步回调。
+
+> **说明：**
+> 
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用
+> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate)
+> 替代。
 
 **Since:** 9
 
@@ -26,17 +38,17 @@ Obtains the state of the screen hopping switch. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;{ state: boolean }&gt; | Yes |  |
+| deviceDescriptor | string | Yes | 键鼠穿越目标设备描述符。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ state: boolean }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDeviceCooperate } from '@kit.InputKit';
@@ -53,13 +65,13 @@ struct Index {
           try {
             inputDeviceCooperate.getState(deviceDescriptor, (error: BusinessError, data: object) => {
               if (error) {
-                console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+                console.error(`Failed to get status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
                 return;
               }
-              console.info(`Get the status success, data: ${JSON.stringify(data)}`);
+              console.info(`Succeeded in getting status, data: ${JSON.stringify(data)}.`);
             });
           } catch (error) {
-            console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -74,7 +86,13 @@ struct Index {
 function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 ```
 
-Checks whether screen hopping is enabled. This API uses a promise to return the result.
+获取键鼠穿越开关的状态，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从 API version 9开始支持，从API version 23开始废弃。建议使用
+> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate)替
+> 代。
 
 **Since:** 9
 
@@ -94,22 +112,22 @@ Checks whether screen hopping is enabled. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
+| deviceDescriptor | string | Yes | 键鼠穿越目标设备描述符。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{ state: boolean }&gt; |     } Promise used to return the state of the screen hopping switch. **true** if enabled and **false** if disabled. |
+| Promise&lt;{ state: boolean }&gt; | > } Promise used to return the state of the screen hopping switch. **true** if enabled and **false** if disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDeviceCooperate } from '@kit.InputKit';
@@ -123,15 +141,11 @@ struct Index {
       Text()
         .onClick(() => {
           let deviceDescriptor = "descriptor";
-          try {
-            inputDeviceCooperate.getState(deviceDescriptor).then((data: object) => {
-              console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-            }, (error: BusinessError) => {
-              console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            });
-          } catch (error) {
-            console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
+          inputDeviceCooperate.getState(deviceDescriptor).then((data: object) => {
+            console.info(`Succeeded in getting the status, data: ${JSON.stringify(data)}.`);
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to get the status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          });
         })
     }
   }

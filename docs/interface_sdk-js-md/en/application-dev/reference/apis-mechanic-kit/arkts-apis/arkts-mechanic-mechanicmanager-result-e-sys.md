@@ -90,7 +90,7 @@ Rotation time out.
 TERMINATE_OBSTACLE  = 4
 ```
 
-Termination caused by an obstacle.
+障碍物导致终止
 
 **Since:** 26.0.0
 
@@ -108,7 +108,7 @@ Termination caused by an obstacle.
 TERMINATE_CLIFF = 5
 ```
 
-Termination caused by a cliff.
+悬崖导致终止
 
 **Since:** 26.0.0
 

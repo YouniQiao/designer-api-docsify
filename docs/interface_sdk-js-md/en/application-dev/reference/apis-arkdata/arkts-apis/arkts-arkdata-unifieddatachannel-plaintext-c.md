@@ -1,6 +1,6 @@
 # PlainText
 
-Represents the plain text data. It is a child class of [Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述纯文本类数据。
 
 **Inheritance/Implementation:** PlainText extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
 
@@ -12,13 +12,19 @@ Represents the plain text data. It is a child class of [Text]\_\_\_JSDOC\_LINK\_
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## abstract
 
 ```TypeScript
 abstract?: string
 ```
 
-Indicates the abstract of text
+纯文本摘要，非必填字段，默认值为空字符串。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Indicates the abstract of text
 set textAbstract(value: string | undefined)
 ```
 
-Indicates the abstract of text
+表示文本摘要。
 
 **Type:** string
 
@@ -60,7 +66,7 @@ Indicates the abstract of text
 set textContent(value: string)
 ```
 
-Indicates the content of text
+纯文本内容。
 
 **Type:** string
 

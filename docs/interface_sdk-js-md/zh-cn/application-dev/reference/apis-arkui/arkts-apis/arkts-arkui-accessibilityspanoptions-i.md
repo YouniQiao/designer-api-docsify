@@ -22,7 +22,7 @@ accessibilityDescription?: ResourceStr
 
 值为undefined时，按默认值处理。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 
@@ -92,7 +92,7 @@ accessibilityText?: ResourceStr
 
 值为undefined时，按默认值处理。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 

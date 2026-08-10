@@ -1,6 +1,6 @@
 # VMMemoryInfo
 
-Describes the VM memory information.
+VM�ڴ���Ϣ��
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Describes the VM memory information.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## allArraySize
 
 ```TypeScript
 allArraySize: bigint
 ```
 
-Size of all array objects of the current VM, in KB.
+��ʾ��ǰ�������������������С����KBΪ��λ��
 
 **Type:** bigint
 
@@ -34,7 +40,7 @@ Size of all array objects of the current VM, in KB.
 heapUsed: bigint
 ```
 
-Heap size used by the current VM, in KB.
+��ʾ��ǰ�����ʹ�õĶѴ�С����KBΪ��λ��
 
 **Type:** bigint
 
@@ -52,7 +58,7 @@ Heap size used by the current VM, in KB.
 totalHeap: bigint
 ```
 
-Total heap size of the current VM, in KB.
+��ʾ��ǰ������Ķ��ܴ�С����KBΪ��λ��
 
 **Type:** bigint
 

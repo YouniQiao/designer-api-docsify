@@ -24,9 +24,9 @@ function getAbilityDelegator(): AbilityDelegator
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | [AbilityDelegator]{ |
+| [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md) | [AbilityDelegator]{ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import AbilityDelegatorRegistry from '@ohos.application.abilityDelegatorRegistry';

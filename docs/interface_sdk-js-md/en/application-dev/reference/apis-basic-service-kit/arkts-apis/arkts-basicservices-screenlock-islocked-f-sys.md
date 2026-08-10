@@ -1,5 +1,11 @@
 # isLocked (System API)
 
+## Modules to Import
+
+```TypeScript
+import { screenLock } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isLocked
 
 ```TypeScript
@@ -28,9 +34,9 @@ Checks whether the screen is currently locked.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
+| 202 | permission verification failed, application which is not a system application uses system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let isLocked = screenLock.isLocked();

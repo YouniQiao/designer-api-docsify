@@ -1,6 +1,6 @@
 # StyledStringChangedListener
 
-Defines the listener for changes of the styled string text content.
+属性字符串的文本内容变化监听器。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the listener for changes of the styled string text content.
 onDidChange?: OnDidChangeCallback
 ```
 
-Callback invoked when text is changed.
+文本内容完成变化回调函数。
 
 **Since:** 12
 
@@ -36,9 +36,9 @@ Callback invoked when text is changed.
 onWillChange?: Callback<StyledStringChangeValue, boolean>
 ```
 
-Callback invoked when text is about to change.
+文本内容将要变化回调函数。
 
-**Type:** Callback&lt;StyledStringChangeValue, boolean&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StyledStringChangeValue, boolean&gt;
 
 **Since:** 12
 

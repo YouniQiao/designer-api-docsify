@@ -20,6 +20,6 @@ export type UnhandledRejectionObserver = (reason: Error | any, promise: Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reason | Error \| any | 是 | 通常是\_\_\_INLINE\_CODE\_USD\_0\_\_\_类型，表示被拒绝的理由。  |
-| promise | Promise&lt;any&gt; | 是 | 被拒绝的promise。  |
+| reason | Error \| any | 是 | 通常是`Error`类型，表示被拒绝的理由。 |
+| promise | Promise&lt;any&gt; | 是 | 被拒绝的promise。 |
 

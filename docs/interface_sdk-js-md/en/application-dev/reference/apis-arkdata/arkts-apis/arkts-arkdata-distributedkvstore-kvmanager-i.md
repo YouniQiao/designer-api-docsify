@@ -1,6 +1,6 @@
 # KVManager
 
-Provides an instance to obtain information about a distributed KV store. Before calling any API in **KVManager**,you must use [createKVManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a **KVManager** instance.
+分布式键值数据库管理实例，用于获取分布式键值数据库的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createkvmanager)构建一个KVManager实例。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Provides an instance to obtain information about a distributed KV store. Before 
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
+
 ## closeKVStore
 
 ```TypeScript
 closeKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): void
 ```
 
-Closes a distributed KV store. This API uses an asynchronous callback to return the result.
+通过storeId的值关闭指定的分布式键值数据库，使用callback异步回调。此方法与getKVStore()方法配对使用，使用完毕的数据库应通过此方法关闭。
 
 **Since:** 9
 
@@ -32,17 +38,17 @@ Closes a distributed KV store. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
-| storeId | string | Yes | Unique identifier of the KV store to close. The KV store ID allows only letters, digits, and underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_), and cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in length. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| appId | string | Yes | 应用的BundleName，不可为空且长度范围为1-256字节。 |
+| storeId | string | Yes | 要关闭的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母 数字或下划线_。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当要关闭的数据库成功关闭，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -59,8 +65,8 @@ const options: distributedKVStore.Options = {
 }
 try {
   kvManager.getKVStore('storeId', options, async (err: BusinessError, store: distributedKVStore.SingleKVStore | null) => {
-    if (err != undefined) {
-      console.error(`Failed to get KVStore.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in getting KVStore');
@@ -70,17 +76,17 @@ try {
     if (kvManager != undefined) {
       // appId is the one in createKVManager.
       kvManager.closeKVStore(appId, 'storeId', (err: BusinessError)=> {
-        if (err != undefined) {
-          console.error(`Failed to close KVStore.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to close KVStore. Code: ${err.code}, message: ${err.message}`);
           return;
         }
         console.info('Succeeded in closing KVStore');
       });
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -90,7 +96,7 @@ try {
 closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 ```
 
-Closes a distributed KV store. This API uses a promise to return the result.
+通过storeId的值关闭指定的分布式键值数据库，如果使用kvConfig参数，关闭的是指定路径下的分布式键值数据库，使用Promise异步回调。
 
 **Since:** 9
 
@@ -106,21 +112,62 @@ Closes a distributed KV store. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
-| storeId | string | Yes | Unique identifier of the KV store to close. The KV store ID allows only letters, digits, and underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_), and cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in length. |
-| kvConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the {@code Options} object used for close the KVStore database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 24 |
+| appId | string | Yes | 应用的BundleName，不可为空且长度范围为1-256字节。 |
+| storeId | string | Yes | 要关闭的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母 数字或下划线_。 |
+| kvConfig | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No | 要关闭的数据库的配置信息，默认为空。<br>**Since:** 24 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let kvStore: distributedKVStore.SingleKVStore | null = null;
+
+const options: distributedKVStore.Options = {
+  createIfMissing: true,
+  encrypt: false,
+  backup: false,
+  autoSync: false,
+  kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
+  schema: undefined,
+  securityLevel: distributedKVStore.SecurityLevel.S3,
+  // From API version 24, you can use rootDir to specify the database storage path.
+  rootDir: "/data/storage/el2/database/entry"
+}
+try {
+  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then(async (store: distributedKVStore.SingleKVStore | null) => {
+    console.info('Succeeded in getting KVStore');
+    kvStore = store;
+    kvStore = null;
+    store = null;
+    if (kvManager != undefined) {
+      // appId refers to the appId in createKVManager. If rootDir is not configured in options, the closeKVStore does not require the options parameter.
+      kvManager.closeKVStore(appId, 'storeId', options).then(() => {
+        console.info('Succeeded in closing KVStore');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to close KVStore. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to close KVStore. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## deleteKVStore
 
@@ -128,7 +175,7 @@ Closes a distributed KV store. This API uses a promise to return the result.
 deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a distributed KV store. This API uses an asynchronous callback to return the result.
+通过storeId的值删除指定的分布式键值数据库，使用callback异步回调。
 
 **Since:** 9
 
@@ -144,18 +191,18 @@ Deletes a distributed KV store. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
-| storeId | string | Yes | Unique identifier of the KV store to delete. The KV store ID allows only letters, digits, and underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_), and cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in length. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| appId | string | Yes | 应用的BundleName，不可为空且长度范围为1-256字节。 |
+| storeId | string | Yes | 要删除的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母 数字或下划线_。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当要删除的数据库成功删除，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
+| 15100004 | Not found. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -173,8 +220,8 @@ const options: distributedKVStore.Options = {
 }
 try {
   kvManager.getKVStore('storeId', options, async (err: BusinessError, store: distributedKVStore.SingleKVStore | null) => {
-    if (err != undefined) {
-      console.error(`Failed to get KVStore.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in getting KVStore');
@@ -184,17 +231,17 @@ try {
     if (kvManager != undefined) {
       // appId is the one in createKVManager.
       kvManager.deleteKVStore(appId, 'storeId', (err: BusinessError) => {
-        if (err != undefined) {
-          console.error(`Failed to delete KVStore.code is ${err.code},message is ${err.message}`);
+        if (err) {
+          console.error(`Failed to delete KVStore. Code: ${err.code}, message: ${err.message}`);
           return;
         }
         console.info(`Succeeded in deleting KVStore`);
       });
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to delete KVStore.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to delete KVStore. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -204,7 +251,7 @@ try {
 deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 ```
 
-Deletes a distributed KV store. This API uses a promise to return the result.
+通过storeId的值删除指定的分布式键值数据库，如果使用kvConfig参数，删除的是指定路径下的分布式键值数据库，使用Promise异步回调。
 
 **Since:** 9
 
@@ -220,22 +267,63 @@ Deletes a distributed KV store. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
-| storeId | string | Yes | Unique identifier of the KV store to delete. The KV store ID allows only letters, digits, and underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_), and cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in length. |
-| kvConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the {@code Options} object used for delete the KVStore database.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 24 |
+| appId | string | Yes | 应用的BundleName，不可为空且长度范围为1-256字节。 |
+| storeId | string | Yes | 要删除的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母 数字或下划线_。 |
+| kvConfig | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No | 要删除的数据库的配置信息，默认为空。<br>**Since:** 24 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
+| 15100004 | Not found. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let kvStore: distributedKVStore.SingleKVStore | null = null;
+
+const options: distributedKVStore.Options = {
+  createIfMissing: true,
+  encrypt: false,
+  backup: false,
+  autoSync: false,
+  kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
+  schema: undefined,
+  securityLevel: distributedKVStore.SecurityLevel.S3,
+  // From API version 24, you can use rootDir to specify the database storage path.
+  rootDir: "/data/storage/el2/database/entry"
+}
+try {
+  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then(async (store: distributedKVStore.SingleKVStore | null) => {
+    console.info('Succeeded in getting KVStore');
+    kvStore = store;
+    kvStore = null;
+    store = null;
+    if (kvManager != undefined) {
+      // appId refers to the appId in createKVManager. If rootDir is not configured in options, the deleteKVStore does not require the options parameter.
+      kvManager.deleteKVStore(appId, 'storeId', options).then(() => {
+        console.info('Succeeded in deleting KVStore');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to delete KVStore. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to delete KVStore. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getAllKVStoreId
 
@@ -243,9 +331,9 @@ Deletes a distributed KV store. This API uses a promise to return the result.
 getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
-Obtains the IDs of all distributed KV stores that are created by  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_and have not been deleted by  
-[deleteKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. This API uses an asynchronous callback to return the result.
+获取所有通过  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)方法创建的且没有调用  
+[deleteKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#deletekvstore)方法删除的分布式键值数据库的storeId，使用callback异步回调。
 
 **Since:** 9
 
@@ -261,16 +349,16 @@ Obtains the IDs of all distributed KV stores that are created by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string[]&gt; | Yes | Callback used to return the IDs of all the distributed KV stores created. |
+| appId | string | Yes | 应用的BundleName，不可为空且长度范围为1-256字节。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | 回调函数。返回所有创建的分布式键值数据库的storeId。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -278,16 +366,16 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   // appId is the one in createKVManager.
   kvManager.getAllKVStoreId(appId, (err: BusinessError, data: string[]) => {
-    if (err != undefined) {
-      console.error(`Failed to get AllKVStoreId.code is ${err.code},message is ${err.message}`);
+    if (err) {
+      console.error(`Failed to get AllKVStoreId. Code: ${err.code}, message: ${err.message}`);
       return;
     }
     console.info('Succeeded in getting AllKVStoreId');
     console.info(`GetAllKVStoreId size = ${data.length}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get AllKVStoreId.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get AllKVStoreId. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -297,9 +385,9 @@ try {
 getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
-Obtains the IDs of all distributed KV stores that are created by  
-[getKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_and have not been deleted by  
-[deleteKVStore]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. This API uses a promise to return the result.
+获取所有通过  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)方法创建的且没有调用  
+[deleteKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#deletekvstore)方法删除的分布式键值数据库的storeId，使用Promise异步回调。
 
 **Since:** 9
 
@@ -315,21 +403,21 @@ Obtains the IDs of all distributed KV stores that are created by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
+| appId | string | Yes | 应用的BundleName，不可为空且长度范围为1-256字节。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string[]&gt; | Promise used to return the IDs of all the distributed KV stores created. |
+| Promise&lt;string[]&gt; | Promise对象。返回所有创建的分布式键值数据库的storeId。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -341,11 +429,11 @@ try {
     console.info('Succeeded in getting AllKVStoreId');
     console.info(`GetAllKVStoreId size = ${data.length}`);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get AllKVStoreId.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to get AllKVStoreId. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get AllKVStoreId.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get AllKVStoreId. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -355,14 +443,13 @@ try {
 getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): void
 ```
 
-Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV  
-    store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV  
-    store instance. For important data that cannot be regenerated, you are advised to use the backup and restore  
-    feature to prevent data loss. For details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+通过指定options和storeId，创建并获取分布式键值数据库，使用callback异步回调。获取数据库后，在使用完毕时需调用  
+[closeKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#closekvstore)关闭数据库释放资源。
+
+> **注意：**
+> 
+> 在获取已有的分布式键值数据库时，如果数据库文件无法打开（例如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，以防止数据丢失。有关备份恢复的使用方法，请参
+> 阅[数据库备份与恢复](../../../database/data-backup-and-restore.md)。
 
 **Since:** 9
 
@@ -378,19 +465,19 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| storeId | string | Yes | Unique identifier of the KV store. The KV store ID allows only letters, digits, and underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_), and cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in length. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration of the KV store to create. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Callback used to return the **SingleKVStore** or **DeviceKVStore** instance created. |
+| storeId | string | Yes | 数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下 划线_。 |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | 创建分布式键值实例的配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | 回调函数。返回创建的分布式键值数据库实例（根据kvStoreType的不同，可以创建SingleKVStore实例和DeviceKVStore实例） 。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100002](../errorcode-distributedKVStore.md#15100002-parameter-configuration-changes) | Open existed database with changed options. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| 15100002 | Open existed database with changed options. |
+| 15100003 | Database corrupted. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -407,19 +494,19 @@ try {
   };
   kvManager.getKVStore('storeId', options, (err: BusinessError, store: distributedKVStore.SingleKVStore) => {
     if (err) {
-      console.error(`Failed to get KVStore.code is ${err.code},message is ${err.message}`);
+      console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
       return;
     }
-    console.info("Succeeded in getting KVStore");
+    console.info('Succeeded in getting KVStore');
     kvStore = store;
     if (kvStore !== null) {
        // Perform subsequent data operations, such as adding, deleting, modifying, and querying data, and subscribing to data changes.
        // ...
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -429,14 +516,13 @@ try {
 getKVStore<T>(storeId: string, options: Options): Promise<T>
 ```
 
-Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses a promise to return the result.
-    **NOTE**  
-    
-    If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV  
-    store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV  
-    store instance. For important data that cannot be regenerated, you are advised to use the backup and restore  
-    feature to prevent data loss. For details, see  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+指定options和storeId，创建并获取分布式键值数据库，使用Promise回调。获取数据库后，在使用完毕时需调用  
+[closeKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#closekvstore)关闭数据库释放资源。
+
+> **注意：**
+> 
+> 获取已有的分布式键值数据库时，如果数据库文件无法打开（如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，防止数据丢失。备份恢复的使用方法详见
+> [数据库备份与恢复](../../../database/data-backup-and-restore.md)。
 
 **Since:** 9
 
@@ -452,24 +538,24 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| storeId | string | Yes | Unique identifier of the KV store. The KV store ID allows only letters, digits, and underscores (\_\_\_ESCAPED\_UNDERSCORE\_\_\_), and cannot exceed [MAX\_\_\_ESCAPED\_UNDERSCORE\_\_\_STORE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LENGTH]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in length. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration of the KV store to create. |
+| storeId | string | Yes | 数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下 划线_。 |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | 创建分布式键值实例的配置信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise used to return the **SingleKVStore** or **DeviceKVStore** instance created. |
+| Promise&lt;T&gt; | Promise对象。返回创建的分布式键值数据库实例（根据kvStoreType的不同，可以创建SingleKVStore实例和DeviceKVStore实例）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
-| [15100002](../errorcode-distributedKVStore.md#15100002-parameter-configuration-changes) | Open existed database with changed options. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| 15100002 | Open existed database with changed options. |
+| 15100003 | Database corrupted. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -482,17 +568,19 @@ try {
     backup: false,
     autoSync: false,
     kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
-    securityLevel: distributedKVStore.SecurityLevel.S3
+    securityLevel: distributedKVStore.SecurityLevel.S3,
+    // From API version 24, you can use rootDir to specify the database storage path.
+    rootDir: "/data/storage/el2/database/entry"
   };
   kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then((store: distributedKVStore.SingleKVStore) => {
-    console.info("Succeeded in getting KVStore");
+    console.info('Succeeded in getting KVStore');
     kvStore = store;
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get KVStore.code is ${err.code},message is ${err.message}`);
+    console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -502,7 +590,8 @@ try {
 off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 ```
 
-Unsubscribes from the termination (death) of the distributed data service. The **deathCallback** parameter must be a callback registered for subscribing to the termination of the distributed data service. Otherwise, the unsubscription will fail.
+取消订阅服务状态变更通知。必须先调用  
+[on('distributedDataServiceDie')](distributedKVStore.KVManager.on(event: 'distributedDataServiceDie', deathCallback: Callback&lt;void&gt;))订阅后，才能调用off取消订阅。参数中的deathCallback必须是已经订阅过的deathCallback，否则会取消订阅失败。
 
 **Since:** 9
 
@@ -516,16 +605,16 @@ Unsubscribes from the termination (death) of the distributed data service. The *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates the termination of the distributed data service. |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the **distributedDataServiceDie** event. |
+| event | 'distributedDataServiceDie' | Yes | 取消订阅的事件名，固定为'distributedDataServiceDie'，即服务状态变更事件。 |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数。如果该参数不填，那么会将之前订阅过的所有的deathCallback取消订阅。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -536,9 +625,9 @@ try {
     console.info('death callback call');
   }
   kvManager.off('distributedDataServiceDie', deathCallback);
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -548,7 +637,7 @@ try {
 offDistributedDataServiceDie(deathCallback?: Callback<void>): void
 ```
 
-Unregister the death callback. Not notification will be received when the data manager service is terminated.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The unregistered death callback must be a registered death callback of the database. If no death callback parameter is passed, all database death callbacks will be unregistered.
+取消订阅服务状态变更通知。必须先调用onDistributedDataServiceDie订阅后，才能调用offDistributedDataServiceDie取消订阅。参数中的deathCallback必须是已经订阅过的deathCallback，否则会取消订阅失败。
 
 **Since:** 23
 
@@ -564,7 +653,7 @@ Unregister the death callback. Not notification will be received when the data m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | the data manager service is terminated callback which has been registered. |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数。如果该参数不填，那么会将之前订阅过的所有的deathCallback取消订阅。 |
 
 ## on
 
@@ -572,7 +661,10 @@ Unregister the death callback. Not notification will be received when the data m
 on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 ```
 
-Subscribes to the termination (death) of the distributed data service. If the service is terminated, you need to register the callbacks for data change notifications and cross-device sync completion notifications again. In addition, an error will be returned for a sync operation.
+订阅服务终止事件。如果服务终止，需要重新调用  
+[on('dataChange')](distributedKVStore.SingleKVStore.on(event: 'dataChange', type: SubscribeType, listener: Callback&lt;ChangeNotification&gt;))和  
+[on('syncComplete')](distributedKVStore.SingleKVStore.on(event: 'syncComplete', syncCallback: Callback&lt;Array<[string, number]>&gt;&lt;[string, number]&gt;>))注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。调用on订阅后，在不需要监听时必须调用  
+[off('distributedDataServiceDie')](distributedKVStore.KVManager.off(event: 'distributedDataServiceDie', deathCallback?: Callback&lt;void&gt;))取消订阅。
 
 **Since:** 9
 
@@ -586,16 +678,16 @@ Subscribes to the termination (death) of the distributed data service. If the se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates the termination of the distributed data service. |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the subscription is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| event | 'distributedDataServiceDie' | Yes | 订阅的事件名，固定为'distributedDataServiceDie'，即服务终止事件。 |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。订阅成功，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameters types; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3.Parameter verification failed. |
+| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -606,9 +698,9 @@ try {
     console.info('death callback call');
   }
   kvManager.on('distributedDataServiceDie', deathCallback);
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -618,7 +710,7 @@ try {
 onDistributedDataServiceDie(deathCallback: Callback<void>): void
 ```
 
-Register a death callback to get notification when the data manager service is terminated.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the data manager service is terminated,you need to re-subscribe to data change notifications and synchronization completion notifications, and calling the sync method will return a failure.
+订阅服务终止事件。如果服务终止，需要重新调用onDataChange和onSyncComplete注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。调用onDistributedDataServiceDie订阅后，在不需要监听时必须调用offDistributedDataServiceDie取消订阅
 
 **Since:** 23
 
@@ -634,5 +726,5 @@ Register a death callback to get notification when the data manager service is t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deathCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | callback to be invoked when the data manager service is terminated. |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。订阅成功，err为undefined，否则为错误对象。 |
 

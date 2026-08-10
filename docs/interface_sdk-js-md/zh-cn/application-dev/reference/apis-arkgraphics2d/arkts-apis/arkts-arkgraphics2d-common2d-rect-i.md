@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+import { common2D } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## bottom
 
 ```TypeScript
@@ -18,7 +24,7 @@ bottom: double
 
 矩形区域的右下角纵坐标，浮点数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 11
 
@@ -38,7 +44,7 @@ left: double
 
 矩形区域的左上角横坐标，浮点数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 11
 
@@ -58,7 +64,7 @@ right: double
 
 矩形区域的右下角横坐标，浮点数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 11
 
@@ -78,7 +84,7 @@ top: double
 
 矩形区域的左上角纵坐标，浮点数。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 11
 

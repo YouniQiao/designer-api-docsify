@@ -1,7 +1,6 @@
 # SystemDefinedForm
 
-Represents the service widget data defined by the system. It is a child class of  
-[SystemDefinedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+系统定义的桌面卡片类型数据，是[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)的子类。
 
 **Inheritance/Implementation:** SystemDefinedForm extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
@@ -13,13 +12,19 @@ Represents the service widget data defined by the system. It is a child class of
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## abilityName
 
 ```TypeScript
 set abilityName(value: string)
 ```
 
-Indicates the ability name of form.
+卡片对应的ability名。
 
 **Type:** string
 
@@ -41,7 +46,7 @@ Indicates the ability name of form.
 set bundleName(value: string)
 ```
 
-Indicates the bundle name of form
+卡片所属的bundle名。
 
 **Type:** string
 
@@ -63,9 +68,9 @@ Indicates the bundle name of form
 set formId(value: int)
 ```
 
-Indicates the id of form
+卡片id。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -85,7 +90,7 @@ Indicates the id of form
 set formName(value: string)
 ```
 
-Indicates the name of form
+卡片名称。
 
 **Type:** string
 
@@ -107,7 +112,7 @@ Indicates the name of form
 set module(value: string)
 ```
 
-Indicates the module of form
+卡片所属的module名。
 
 **Type:** string
 

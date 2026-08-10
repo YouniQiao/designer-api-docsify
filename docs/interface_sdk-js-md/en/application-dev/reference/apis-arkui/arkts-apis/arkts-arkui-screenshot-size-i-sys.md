@@ -1,6 +1,6 @@
 # Size (System API)
 
-Describes the size of the screen region to capture.
+表示截取图像的大小。
 
 **Since:** 7
 
@@ -12,15 +12,21 @@ Describes the size of the screen region to capture.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript
 height: long
 ```
 
-Height of the screen region to capture, in px. The value must be a positive integer.
+表示截取图像的高度，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 7
 
@@ -38,9 +44,9 @@ Height of the screen region to capture, in px. The value must be a positive inte
 width: long
 ```
 
-Width of the screen region to capture, in px. The value must be a positive integer.
+表示截取图像的宽度，单位为px，该参数应为整数。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 7
 

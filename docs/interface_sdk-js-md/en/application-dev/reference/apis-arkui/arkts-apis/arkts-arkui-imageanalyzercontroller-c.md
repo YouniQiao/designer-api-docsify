@@ -1,6 +1,6 @@
 # ImageAnalyzerController
 
-Implements an AI image analysis controller, which provides control for image analysis features when bound to supported components.
+图像AI分析控制器。可以将此对象绑定至支持的组件，并通过该控制器调用其提供的方法。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Implements an AI image analysis controller, which provides control for image ana
 constructor()
 ```
 
-A constructor used to create an **ImageAnalyzerController** instance.
+构造函数。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ A constructor used to create an **ImageAnalyzerController** instance.
 getImageAnalyzerSupportTypes(): ImageAnalyzerType[]
 ```
 
-Obtains the analysis types supported by the corresponding component.
+获取此控制器已绑定组件所支持的AI分析类型。调用前需先通过 Image/ImageAnimator 等组件的 aiController 属性将本控制器绑定到组件，否则返回空数组。
 
 **Since:** 12
 
@@ -54,5 +54,5 @@ Obtains the analysis types supported by the corresponding component.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_[] | Analysis type supported by the corresponding component. |
+| [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[] | 对应组件支持的AI分析类型。 |
 

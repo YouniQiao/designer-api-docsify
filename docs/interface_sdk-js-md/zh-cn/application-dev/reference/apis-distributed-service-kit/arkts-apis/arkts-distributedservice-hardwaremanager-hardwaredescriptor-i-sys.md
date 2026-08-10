@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## srcNetworkId
 
 ```TypeScript
@@ -42,7 +48,7 @@ type: DistributedHardwareType
 
 分布式硬件类型。
 
-**类型：** DistributedHardwareType
+**类型：** [DistributedHardwareType](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)
 
 **起始版本：** 11
 

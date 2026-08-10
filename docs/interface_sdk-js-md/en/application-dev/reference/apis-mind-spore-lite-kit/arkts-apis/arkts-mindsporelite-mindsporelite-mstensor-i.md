@@ -10,6 +10,12 @@ Provides MSTensor definition
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
+
 ## getData
 
 ```TypeScript
@@ -34,33 +40,52 @@ Get MSTensor data
 | --- | --- |
 | ArrayBuffer | the data of tensor |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
 import { UIContext } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// File name of the preprocessed model input data
 let inputName = 'input_data.bin';
+let modelFile = '/path/to/xxx.ms';
 let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
 globalContext.getApplicationContext()
   .resourceManager
   .getRawFileContent(inputName)
   .then(async (buffer: Uint8Array) => {
     let inputBuffer = buffer.buffer;
-    let modelFile = '/path/to/xxx.ms';
+    console.info(`Succeeded in reading input data. File name: ${inputName}, Buffer size: ${inputBuffer.byteLength}`);
+    
     let mindSporeLiteModel: mindSporeLite.Model = await mindSporeLite.loadModelFromFile(modelFile);
+    console.info(`Succeeded in loading model. Model file: ${modelFile}`);
+    
     let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+    if (modelInputs == null || modelInputs.length === 0) {
+      console.error(`Failed to get model inputs. Model file: ${modelFile}`);
+      return;
+    }
+    
     modelInputs[0].setData(inputBuffer);
+    console.info(`Succeeded in setting input data. Input tensor: ${modelInputs[0].name}`);
+    
     mindSporeLiteModel.predict(modelInputs).then((mindSporeLiteTensor: mindSporeLite.MSTensor[]) => {
-      let output = new Float32Array(mindSporeLiteTensor[0].getData());
-      for (let i = 0; i < output.length; i++) {
-        console.info(output[i].toString());
+      if (mindSporeLiteTensor == null || mindSporeLiteTensor.length === 0) {
+        console.error(`Failed to get prediction output. Model file: ${modelFile}`);
+      } else {
+        let output = new Float32Array(mindSporeLiteTensor[0].getData());
+        console.info(`Succeeded in prediction. Output length: ${output.length}`);
+        for (let i = 0; i < Math.min(5, output.length); i++) {
+          console.info(`Output[${i}]: ${output[i].toString()}`);
+        }
       }
-    })
+    }).catch((error: Error) => {
+      console.error(`Failed to execute prediction. Model file: ${modelFile}, Error: ${error.message}`);
+    });
   })
   .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
+    console.error(`Failed to read input data. File name: ${inputName}, Error code: ${error.code}, Error message: ${error.message}`);
   });
 ```
 
@@ -94,27 +119,38 @@ Set MSTensor data
 | --- | --- |
 | 1000013 | Failed to set MSTensor data. Possible causes: 1. The input array buffer size is incorrect.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
 import { UIContext } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// File name of the preprocessed model input data
 let inputName = 'input_data.bin';
+let modelFile = '/path/to/xxx.ms';
 let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
 globalContext.getApplicationContext()
   .resourceManager
   .getRawFileContent(inputName)
   .then(async (buffer: Uint8Array) => {
     let inputBuffer = buffer.buffer;
-    let modelFile = '/path/to/xxx.ms';
+    console.info(`Succeeded in reading input data. File name: ${inputName}, Buffer size: ${inputBuffer.byteLength}`);
+    
     let mindSporeLiteModel: mindSporeLite.Model = await mindSporeLite.loadModelFromFile(modelFile);
+    console.info(`Succeeded in loading model. Model file: ${modelFile}`);
+    
     let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+    if (modelInputs == null || modelInputs.length === 0) {
+      console.error(`Failed to get model inputs. Model file: ${modelFile}`);
+      return;
+    }
+    
     modelInputs[0].setData(inputBuffer);
+    console.info(`Succeeded in setting input data. Input tensor: ${modelInputs[0].name}, Buffer size: ${inputBuffer.byteLength}`);
   })
   .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
+    console.error(`Failed to read input data. File name: ${inputName}, Error code: ${error.code}, Error message: ${error.message}`);
   });
 ```
 
@@ -126,7 +162,7 @@ dataSize: int
 
 The data size of the tensor, the unit is byte.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -146,7 +182,7 @@ dtype: DataType
 
 The data type of the tensor.
 
-**Type:** DataType
+**Type:** [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md)
 
 **Since:** 10
 
@@ -166,7 +202,7 @@ elementNum: int
 
 The number of elements in the tensor.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -186,7 +222,7 @@ format: Format
 
 The format of the tensor.
 
-**Type:** Format
+**Type:** [Format](arkts-mindsporelite-mindsporelite-format-e.md)
 
 **Since:** 10
 
@@ -226,7 +262,7 @@ shape: int[]
 
 The shape of the tensor.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # CliPermissionsResult (System API)
 
-Represents the CLI permission query result.
+表示CLI权限查询结果。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Represents the CLI permission query result.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+```
+
 ## permList
 
 ```TypeScript
 permList: Array<CliCommandPermissionResult>
 ```
 
-List of CLI permission information.
+CLI权限信息的列表。
 
 **Type:** Array&lt;CliCommandPermissionResult&gt;
 

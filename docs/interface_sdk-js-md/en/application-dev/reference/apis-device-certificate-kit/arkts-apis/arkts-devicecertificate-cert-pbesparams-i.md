@@ -1,6 +1,6 @@
 # PbesParams
 
-Represents PBES algorithm parameters. Currently, only PBES2 is supported.
+表示基于密码的加密算法参数，当前仅支持PBES2。
 
 **Since:** 21
 
@@ -10,15 +10,21 @@ Represents PBES algorithm parameters. Currently, only PBES2 is supported.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## encryptionAlgorithm
 
 ```TypeScript
 encryptionAlgorithm?: PbesEncryptionAlgorithm
 ```
 
-PBES algorithm type. The default value is **AES\_256\_CBC**.
+表示PBES加密算法类型。默认为AES_256_CBC。
 
-**Type:** PbesEncryptionAlgorithm
+**Type:** [PbesEncryptionAlgorithm](arkts-devicecertificate-cert-pbesencryptionalgorithm-e.md)
 
 **Default:** PbesEncryptionAlgorithm.AES_256_CBC
 
@@ -38,9 +44,9 @@ PBES algorithm type. The default value is **AES\_256\_CBC**.
 iterations?: int
 ```
 
-Number of iterations. The default value is **2048**.The value must be a positive integer.
+表示迭代次数。默认为2048。取值应为正整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 2048
 
@@ -60,9 +66,9 @@ Number of iterations. The default value is **2048**.The value must be a positive
 saltLen?: int
 ```
 
-Length of the salt value. The default value is **16**, and the minimum value is **8**.The value must be an integer greater than or equal to 8.
+表示盐值长度。默认为16，最小值为8。取值应为≥8的整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** 16
 

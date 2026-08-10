@@ -1,6 +1,6 @@
 # MenuItemGroupOptions
 
-Describes the header and footer of the menu item group.
+MenuItem分组的标题和尾部信息。
 
 **Since:** 9
 
@@ -16,9 +16,11 @@ Describes the header and footer of the menu item group.
 footer?: ResourceStr | CustomBuilder
 ```
 
-Footer of the menu item group.
+设置分组的菜单页脚，显示在分组中所有菜单项的底部。 
 
-**Type:** ResourceStr \| CustomBuilder
+未设置时，不显示菜单页脚。
+
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| CustomBuilder
 
 **Since:** 9
 
@@ -36,9 +38,11 @@ Footer of the menu item group.
 header?: ResourceStr | CustomBuilder
 ```
 
-Header of the menu item group.
+设置分组的标题，显示在分组中所有菜单项的顶部。 
 
-**Type:** ResourceStr \| CustomBuilder
+未设置时，不显示标题。
+
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| CustomBuilder
 
 **Since:** 9
 

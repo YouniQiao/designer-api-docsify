@@ -4,8 +4,6 @@
 declare type TemplateTypedFunc<T> = (item: T, index: number) => string
 ```
 
-Function that returns typed string to render one template.
-
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
@@ -22,12 +20,12 @@ Function that returns typed string to render one template.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | T | Yes | Each data item in the **arr** array. **T** indicates the data type passed in.  |
-| index | number | Yes | Index corresponding to the current data item.  |
+| item | T | Yes | arr中每一个数据项。T为开发者传入的数据类型。 <br>缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。 |
+| index | number | Yes | 当前数据项对应的索引。 <br>缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | template type.  |
+| string | 当前数据项生成的template type。 |
 

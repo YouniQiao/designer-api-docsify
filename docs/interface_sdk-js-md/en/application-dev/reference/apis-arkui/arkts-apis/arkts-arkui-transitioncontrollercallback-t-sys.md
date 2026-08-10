@@ -20,5 +20,5 @@ Callback function for transition controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | window.TransitionContext | Yes | The transition context  |
+| context | window.TransitionContext | Yes | The transition context |
 

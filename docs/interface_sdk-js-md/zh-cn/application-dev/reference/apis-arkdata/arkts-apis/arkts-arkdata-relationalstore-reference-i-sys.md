@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## refFields
 
 ```TypeScript
@@ -20,7 +26,7 @@ refFields: Record<string, string>
 
 表示关联表的关联字段。键值数据中键为子表字段，值为父表字段。
 
-**类型：** Record&lt;string, string&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **起始版本：** 11
 

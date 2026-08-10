@@ -1,6 +1,6 @@
 # Pkcs12ParsingConfig
 
-Represents the configuration for parsing P12.
+表示解析P12的配置。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Represents the configuration for parsing P12.
 
 **System capability:** SystemCapability.Security.Cert
 
+## Modules to Import
+
+```TypeScript
+import { cert } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## needsCert
 
 ```TypeScript
 needsCert?: boolean
 ```
 
-Whether to obtain the certificate. The default value is **true**. **true**: yes; **false**: no.
+表示是否获取证书。默认为true。true为获取，false为不获取。
 
 **Type:** boolean
 
@@ -38,7 +44,7 @@ Whether to obtain the certificate. The default value is **true**. **true**: yes;
 needsOtherCerts?: boolean
 ```
 
-Whether to obtain other certificates. The default value is **false**. **true**: yes; **false**: no.
+表示是否获取其他证书。默认为false。true为获取，false为不获取。
 
 **Type:** boolean
 
@@ -60,9 +66,9 @@ Whether to obtain other certificates. The default value is **false**. **true**: 
 needsPrivateKey?: boolean
 ```
 
-Whether to obtain the private key. The default value is **true**.
+表示是否获取私钥。默认为true。
 
-**true**: To obtain the private key in PKCS #8 format; **false**: Not to obtain the private key.
+true为获取，返回PKCS8编码的私钥数据；false为不获取。
 
 **Type:** boolean
 
@@ -84,7 +90,7 @@ Whether to obtain the private key. The default value is **true**.
 password: string
 ```
 
-Password.
+密码。
 
 **Type:** string
 
@@ -104,12 +110,13 @@ Password.
 privateKeyFormat?: EncodingBaseFormat
 ```
 
-Format of the private key to be obtained. Currently, the PEM and DER formats are supported. If this parameter is not specified, the PEM format is used by default.
-    **NOTE**  
-    
-    This parameter is valid only when **needsPrivateKey** is set to **true**.
+表示获取私钥的格式，当前支持PEM和DER格式。参数缺省时，默认为PEM格式。
 
-**Type:** EncodingBaseFormat
+> **说明：**
+> 
+> 当needsPrivateKey值为true时，该参数生效。
+
+**Type:** [EncodingBaseFormat](arkts-devicecertificate-cert-encodingbaseformat-e.md)
 
 **Default:** EncodingBaseFormat.PEM
 

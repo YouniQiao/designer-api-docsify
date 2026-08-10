@@ -1,6 +1,6 @@
 # NavigationOptions
 
-Defines the routing stack operation options.
+路由栈操作选项。
 
 **Since:** 12
 
@@ -16,11 +16,11 @@ Defines the routing stack operation options.
 animated?: boolean
 ```
 
-Whether to enable the transition animation.
+是否支持转场动画。
 
-**true**: yes; **false**: no
+true：支持转场动画；false：不支持转场动画。
 
-Default value: **true
+默认值：true
 
 **Type:** boolean
 
@@ -42,11 +42,11 @@ Default value: **true
 launchMode?: LaunchMode
 ```
 
-Operation mode of the routing stack.
+路由栈的操作模式。
 
-Default value: **LaunchMode.STANDARD
+默认值：LaunchMode.STANDARD
 
-**Type:** LaunchMode
+**Type:** [LaunchMode](arkts-arkui-launchmode-e.md)
 
 **Since:** 12
 

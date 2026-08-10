@@ -1,6 +1,6 @@
 # PhotoCaptureSetting
 
-Describes the settings for taking an image.
+拍摄照片的设置。
 
 **Since:** 10
 
@@ -10,15 +10,23 @@ Describes the settings for taking an image.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## compressionQuality
 
 ```TypeScript
 compressionQuality?: int
 ```
 
-Photo image compression quality.
+图片压缩质量值，取值范围为(1, 100)。
 
-**Type:** int
+当compressionQuality未下发时，默认按quality生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与compressionQuality均未下发则图片质量默认是高等。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -38,9 +46,9 @@ Photo image compression quality.
 location?: Location
 ```
 
-Geolocation information of the image (depending on the device hardware information by default).
+图片地理位置信息（默认以设备硬件信息为准）。
 
-**Type:** Location
+**Type:** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
 
 **Since:** 10
 
@@ -58,9 +66,7 @@ Geolocation information of the image (depending on the device hardware informati
 mirror?: boolean
 ```
 
-Whether mirror photography is enabled (disabled by default). Before using this enumerated value, call  
-[isMirrorSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether mirror photography is supported.  
-**true** if enabled, **false** otherwise.
+镜像使能开关（默认关）。使用之前需要使用[isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported)进行判断是否支持。true表示使能，false表示不使能。
 
 **Type:** boolean
 
@@ -80,9 +86,11 @@ Whether mirror photography is enabled (disabled by default). Before using this e
 quality?: QualityLevel
 ```
 
-Image quality (high by default).
+图片质量。
 
-**Type:** QualityLevel
+当quality未下发时，默认按compressionQuality下发生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与compressionQuality均未下发则图片质量默认是高等。
+
+**Type:** [QualityLevel](../../apis-image-kit/arkts-apis/arkts-image-videoprocessingengine-qualitylevel-e.md)
 
 **Since:** 10
 
@@ -100,9 +108,9 @@ Image quality (high by default).
 rotation?: ImageRotation
 ```
 
-Rotation angle of the image. The default value is **0**, indicating clockwise rotation.
+图片旋转角度（默认0度，顺时针旋转）。
 
-**Type:** ImageRotation
+**Type:** [ImageRotation](arkts-camera-camera-imagerotation-e.md)
 
 **Since:** 10
 

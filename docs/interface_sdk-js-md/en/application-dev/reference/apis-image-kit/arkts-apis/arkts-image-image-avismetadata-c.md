@@ -10,15 +10,21 @@ Avis metadata.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## delayTime
 
 ```TypeScript
 readonly delayTime?: int
 ```
 
-Delay of each frame. Unit: ms, The value should be an integer.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:ms.
+Delay of each frame. Unit: ms, The value should be an integer.&lt;br&gt;Unit:ms.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

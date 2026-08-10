@@ -1,5 +1,11 @@
 # connectToCandidateConfig
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## connectToCandidateConfig
 
 ```TypeScript
@@ -24,19 +30,19 @@ Connect to a specified candidate hotspot by networkId, only the configuration wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Network ID which will be connected. The value of networkId cannot be less than 0. |
+| networkId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Network ID which will be connected. The value of networkId cannot be less than 0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
-| [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
+| 401 | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. |
+| 2501000 | Operation failed. |
+| 2501001 | Wi-Fi STA disabled. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
@@ -76,23 +82,36 @@ Connect to the specified candidate hotspot using connect settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the connection settings. |
+| settings | [ConnectSettings](arkts-connectivity-wifimanager-connectsettings-i.md) | Yes | Indicates the connection settings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Returns the promise object that used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Returns the promise object that used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
-| [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
-| [2501005](../errorcode-wifi.md#2501005-no-user-response-to-the-connection-request) | The user does not respond. |
-| [2501006](../errorcode-wifi.md#2501006-connection-request-rejected) | The user refused the action. |
-| [2501007](../errorcode-wifi.md#2501007-parameter-verification-failed) | Parameter validation failed. |
+| 801 | Capability not supported. |
+| 2501006 | The user refused the action. |
+| 201 | Permission denied. |
+| 2501007 | Parameter validation failed. |
+| 2501005 | The user does not respond. |
+| 2501000 | Operation failed. |
+| 2501001 | Wi-Fi STA disabled. |
+
+## Examples
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  try {
+    let setting:wifiManager.ConnectSettings = { networkId: 0 }; // Candidate network ID, which is generated when a candidate network is added.
+    wifiManager.connectToCandidateConfig(setting);
+  }catch(error){
+    console.error("failed:" + JSON.stringify(error));
+  }
+```
 

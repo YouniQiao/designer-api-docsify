@@ -1,12 +1,18 @@
 # sendSystemAVKeyEvent (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## sendSystemAVKeyEvent
 
 ```TypeScript
 function sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 ```
 
-Send system media key event.The system automatically selects the recipient.
+发送按键事件给置顶会话。结果通过callback异步回调方式返回。
 
 **Since:** 9
 
@@ -24,34 +30,29 @@ Send system media key event.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The key event to be sent |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | 按键事件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当事件发送成功，err为undefined，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 202 | Not System App. |
+| 6600105 | Invalid session command. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { KeyEvent } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let keyItem: KeyEvent.Key = {code:0x49, pressedTime:2, deviceId:0};
 let event: KeyEvent.KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
 
-avSession.sendSystemAVKeyEvent(event, (err: BusinessError) => {
-  if (err) {
-    console.error(`SendSystemAVKeyEvent BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('SendSystemAVKeyEvent : SUCCESS ');
-  }
+avSession.sendSystemAVKeyEvent(event, () => {
+    console.info('Succeeded in sending system AV key event.');
 });
 ```
 
@@ -62,7 +63,7 @@ avSession.sendSystemAVKeyEvent(event, (err: BusinessError) => {
 function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>
 ```
 
-Send system media key event.The system automatically selects the recipient.
+发送按键事件给置顶会话。结果通过Promise异步回调方式返回。
 
 **Since:** 9
 
@@ -80,37 +81,34 @@ Send system media key event.The system automatically selects the recipient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The key event to be sent |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | 按键事件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | Promise对象。当事件发送成功，无返回结果，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| 6600101 | Session service exception. |
+| 201 | permission denied |
+| 202 | Not System App. |
+| 6600105 | Invalid session command. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { KeyEvent } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let keyItem: KeyEvent.Key = {code:0x49, pressedTime:2, deviceId:0};
 let event: KeyEvent.KeyEvent = {id:1, deviceId:0, actionTime:1, screenId:1, windowId:1, action:2, key:keyItem, unicodeChar:0, keys:[keyItem], ctrlKey:false, altKey:false, shiftKey:false, logoKey:false, fnKey:false, capsLock:false, numLock:false, scrollLock:false};
 
 avSession.sendSystemAVKeyEvent(event).then(() => {
-  console.info('SendSystemAVKeyEvent Successfully');
-}).catch((err: BusinessError) => {
-  console.error(`SendSystemAVKeyEvent BusinessError: code: ${err.code}, message: ${err.message}`);
+  console.info('Succeeded in sending system AV key event.');
 });
 ```
 

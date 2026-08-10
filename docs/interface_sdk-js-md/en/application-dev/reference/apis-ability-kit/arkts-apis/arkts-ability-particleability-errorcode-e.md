@@ -1,6 +1,6 @@
 # ErrorCode
 
-Enumerates the error codes that may be returned when an ability is started.
+定义启动Ability时返回的错误码。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the error codes that may be returned when an ability is started.
 INVALID_PARAMETER = -1
 ```
 
-Invalid parameter.
+无效的参数。
 
 **Since:** 7
 

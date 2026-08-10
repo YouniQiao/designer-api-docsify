@@ -1,7 +1,6 @@
 # EditorAttribute
 
-In the following API examples, you must first use  
-[getKeyboardDelegate]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+编辑框属性值。
 
 **Since:** 8
 
@@ -11,17 +10,23 @@ In the following API examples, you must first use
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
+```
+
 ## fluidLightMode
 
 ```TypeScript
 readonly fluidLightMode?: FluidLightMode
 ```
 
-Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default.
+流光模式。未设置或设置非法值时，默认不使用流光模式。
 
-This attribute is available only to system applications.
+该属性仅系统应用可以使用。
 
-**Type:** FluidLightMode
+**Type:** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
 **Since:** 20
 

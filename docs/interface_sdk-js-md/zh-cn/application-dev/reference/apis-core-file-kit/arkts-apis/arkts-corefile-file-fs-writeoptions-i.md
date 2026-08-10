@@ -1,6 +1,6 @@
 # WriteOptions
 
-可选项类型，支持write接口使用，WriteOptions继承自[Options]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+可选项类型，支持write接口使用，WriteOptions继承自[Options](arkts-corefile-file-fs-options-i.md)。
 
 **继承/实现关系：** WriteOptions extends [Options](arkts-corefile-file-fs-options-i.md)
 
@@ -11,6 +11,12 @@
 <!--Device-unnamed-export interface WriteOptions extends Options--><!--Device-unnamed-export interface WriteOptions extends Options-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
 
 ## length
 

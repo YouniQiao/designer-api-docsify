@@ -1,5 +1,11 @@
 # enableAppRecovery
 
+## 导入模块
+
+```TypeScript
+import { appRecovery } from 'kits/@kit.AbilityKit';
+```
+
 ## enableAppRecovery
 
 ```TypeScript
@@ -24,7 +30,7 @@ function enableAppRecovery(restart?: RestartFlag, saveOccasion?: SaveOccasionFla
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| restart | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 枚举类型，发生对应故障时是否重启，默认为重启。 |
-| saveOccasion | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 枚举类型，状态保存时机，默认为故障时保存。 |
-| saveMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 枚举类型，状态保存方式， 默认为文件缓存。 |
+| restart | [RestartFlag](arkts-ability-apprecovery-restartflag-e.md) | 否 | 枚举类型，发生对应故障时是否重启，默认为重启。 |
+| saveOccasion | [SaveOccasionFlag](arkts-ability-apprecovery-saveoccasionflag-e.md) | 否 | 枚举类型，状态保存时机，默认为故障时保存。 |
+| saveMode | [SaveModeFlag](arkts-ability-apprecovery-savemodeflag-e.md) | 否 | 枚举类型，状态保存方式， 默认为文件缓存。 |
 

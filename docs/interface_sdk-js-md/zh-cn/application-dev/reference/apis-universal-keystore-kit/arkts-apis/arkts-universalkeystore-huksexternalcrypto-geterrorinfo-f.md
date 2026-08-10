@@ -1,5 +1,11 @@
 # getErrorInfo
 
+## 导入模块
+
+```TypeScript
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## getErrorInfo
 
 ```TypeScript
@@ -22,9 +28,9 @@ function getErrorInfo(): HuksExternalErrorInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回的详细错误信息。 |
+| [HuksExternalErrorInfo](arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | 返回的详细错误信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';

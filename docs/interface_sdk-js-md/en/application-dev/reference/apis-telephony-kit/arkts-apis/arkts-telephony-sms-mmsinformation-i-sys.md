@@ -12,6 +12,12 @@ Defines the MMS message information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
 ## attachment
 
 ```TypeScript
@@ -40,7 +46,7 @@ messageType: MessageType
 
 Indicates the message type for the MMS message.
 
-**Type:** MessageType
+**Type:** [MessageType](../../apis-arkts/arkts-apis/arkts-arkts-messagetype-t.md)
 
 **Since:** 8
 
@@ -60,7 +66,7 @@ mmsType: MmsSendReq | MmsSendConf | MmsNotificationInd | MmsRespInd | MmsRetriev
 
 Indicates the PDU header type for the MMS message.
 
-**Type:** MmsSendReq \| MmsSendConf \| MmsNotificationInd \| MmsRespInd \| MmsRetrieveConf \| MmsAcknowledgeInd \| MmsDeliveryInd \| MmsReadOrigInd \| MmsReadRecInd
+**Type:** [MmsSendReq](arkts-telephony-sms-mmssendreq-i-sys.md) \| MmsSendConf \| MmsNotificationInd \| MmsRespInd \| MmsRetrieveConf \| MmsAcknowledgeInd \| MmsDeliveryInd \| MmsReadOrigInd \| MmsReadRecInd
 
 **Since:** 8
 

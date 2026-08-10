@@ -1,6 +1,6 @@
 # OnConfirmEvent
 
-定义网页触发 \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ 弹窗时的回调函数。
+定义网页触发 `confirm()` 弹窗时的回调函数。
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ result: JsResult
 
 通知Web组件用户的操作结果。
 
-**类型：** JsResult
+**类型：** [JsResult](../arkts-apis/arkts-arkweb-web-jsresult-c.md)
 
 **起始版本：** 12
 

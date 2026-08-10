@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## callerBundleName
 
 ```TypeScript
@@ -72,7 +78,7 @@ callerType?: CallerType
 
 调用方来源。
 
-**类型：** CallerType
+**类型：** [CallerType](arkts-avsession-avsession-callertype-e.md)
 
 **起始版本：** 22
 

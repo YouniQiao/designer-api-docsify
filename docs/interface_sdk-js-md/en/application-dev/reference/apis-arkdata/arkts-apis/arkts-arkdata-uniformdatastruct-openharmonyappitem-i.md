@@ -1,6 +1,6 @@
 # OpenHarmonyAppItem
 
-Represents data of the home screen icon type defined by the system.
+系统定义的桌面图标类型数据，用于跨应用共享桌面图标信息。典型使用场景包括：桌面启动器拖拽图标、应用商店分享应用图标或创建快捷方式等。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents data of the home screen icon type defined by the system.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { uniformDataStruct } from 'kits/@kit.ArkData';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-Application ability name corresponding to the icon.
+图标对应的应用ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如"com.example.myapplication.MainAbility"）。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Application ability name corresponding to the icon.
 appIconId: string
 ```
 
-Image ID of the icon.
+图标的图片id。
 
 **Type:** string
 
@@ -56,7 +62,7 @@ Image ID of the icon.
 appId: string
 ```
 
-ID of the application, for which the icon is used.
+图标对应的应用id。
 
 **Type:** string
 
@@ -76,7 +82,7 @@ ID of the application, for which the icon is used.
 appLabelId: string
 ```
 
-Label ID corresponding to the icon name.
+图标名称对应的标签id。
 
 **Type:** string
 
@@ -96,7 +102,7 @@ Label ID corresponding to the icon name.
 appName: string
 ```
 
-Name of the application, for which the icon is used.
+图标对应的应用名。
 
 **Type:** string
 
@@ -116,7 +122,7 @@ Name of the application, for which the icon is used.
 bundleName: string
 ```
 
-Bundle name corresponding to the icon.
+图标对应的应用bundle名，格式需符合应用包名规范。
 
 **Type:** string
 
@@ -136,9 +142,9 @@ Bundle name corresponding to the icon.
 details?: Record<string, int | long | double | string | Uint8Array>
 ```
 
-Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
+字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**Type:** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
 **Since:** 12
 
@@ -156,8 +162,8 @@ Object of the dictionary type used to describe the icon. The key is of the strin
 readonly uniformDataType: 'openharmony.app-item'
 ```
 
-Uniform data type, which has a fixed value of **openharmony.app-item**. For details, see  
-[UniformDataType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+统一数据类型标识为桌面图标类型数据，固定为“openharmony.app-item”，数据类型描述信息见  
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **Type:** 'openharmony.app-item'
 

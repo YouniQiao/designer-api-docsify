@@ -10,6 +10,12 @@ Describes the contents of the ranging results.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
+## Modules to Import
+
+```TypeScript
+import { ranging } from 'kits/@kit.ConnectivityKit';
+```
+
 ## angle
 
 ```TypeScript
@@ -18,7 +24,7 @@ angle: RangingMeasurement
 
 Azimuth angle output from ranging.
 
-**Type:** RangingMeasurement
+**Type:** [RangingMeasurement](arkts-connectivity-ranging-rangingmeasurement-i.md)
 
 **Since:** 26.0.0
 
@@ -58,7 +64,7 @@ distance: RangingMeasurement
 
 The distance measured by the ranging output.
 
-**Type:** RangingMeasurement
+**Type:** [RangingMeasurement](arkts-connectivity-ranging-rangingmeasurement-i.md)
 
 **Since:** 26.0.0
 
@@ -78,7 +84,7 @@ rssi: int
 
 Received signal strength.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

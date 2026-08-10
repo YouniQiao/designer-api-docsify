@@ -4,7 +4,7 @@
 type OnNativeEmbedObjectParamChangeCallback = (event: NativeEmbedParamDataInfo) => void
 ```
 
-Defines a callback triggered when the **param** element embedded in the same-layer rendered **object** tag is added,modified, or deleted.
+增加、修改或删除同层渲染object标签内嵌param元素时触发此回调。
 
 **Since:** 21
 
@@ -18,5 +18,5 @@ Defines a callback triggered when the **param** element embedded in the same-lay
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Detailed information about the changes of the **param** element embedded in the **object** tag.  |
+| event | [NativeEmbedParamDataInfo](../arkts-apis/arkts-arkweb-web-nativeembedparamdatainfo-i.md) | Yes | object标签内嵌param元素的详细变化信息。 |
 

@@ -1,5 +1,11 @@
 # getSupportedPowerMode
 
+## Modules to Import
+
+```TypeScript
+import { wifiManagerExt } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getSupportedPowerMode
 
 ```TypeScript
@@ -28,9 +34,9 @@ Obtains the supported power Mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
+| 801 | Capability not supported. |
+| 2701000 | Operation failed. |
+| 201 | Permission denied. |
 
 
 ## getSupportedPowerMode
@@ -55,17 +61,17 @@ Obtains the supported power Mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;PowerMode&gt;&gt; | Yes | the callback of model. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PowerMode&gt;&gt; | Yes | the callback of model. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
+| 801 | Capability not supported. |
+| 2701000 | Operation failed. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { wifiManagerExt } from '@kit.ConnectivityKit';

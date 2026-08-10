@@ -1,6 +1,6 @@
 # PositionWithAffinity
 
-Describes the position and affinity of a glyph.
+位置和亲和度。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes the position and affinity of a glyph.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { text } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## affinity
 
 ```TypeScript
 affinity: Affinity
 ```
 
-Affinity of the position.
+位置亲和度。
 
-**Type:** Affinity
+**Type:** [Affinity](../../apis-arkui/arkts-apis/arkts-arkui-affinity-t.md)
 
 **Since:** 12
 
@@ -36,9 +42,9 @@ Affinity of the position.
 position: int
 ```
 
-Index of the glyph relative to the paragraph. The value is an integer.
+字形相对于段落的索引，整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

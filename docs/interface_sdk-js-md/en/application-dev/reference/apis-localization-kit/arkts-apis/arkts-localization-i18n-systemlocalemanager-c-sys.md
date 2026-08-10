@@ -1,6 +1,6 @@
 # SystemLocaleManager (System API)
 
-Provide some functions for settings and startup guide to select language or region.
+提供语言、地区和时区信息排序的能力。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Provide some functions for settings and startup guide to select language or regi
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor()
 ```
 
-Creates a SystemLocaleManager object.
+创建SystemLocaleManager对象。
 
 **Since:** 23
 
@@ -34,7 +40,7 @@ Creates a SystemLocaleManager object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
 
 ## getLanguageInfoArray
 
@@ -42,7 +48,7 @@ Creates a SystemLocaleManager object.
 getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<LocaleItem>
 ```
 
-Obtains the list of languages after sorting.
+获取排序后的语言信息列表。
 
 **Since:** 23
 
@@ -58,22 +64,22 @@ Obtains the list of languages after sorting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| languages | Array&lt;string&gt; | Yes | Valid IDs of the languages to be sorted. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Language sorting option. |
+| languages | Array&lt;string&gt; | Yes | 待排序的语言列表，要求是合法的语言ID。 |
+| options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | No | 语言排序选项。默认值：所有属性都取默认值时的配置项。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LocaleItem&gt; | Language list after sorting. |
+| Array&lt;LocaleItem&gt; | 排序后的语言信息列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getRegionInfoArray
 
@@ -81,7 +87,7 @@ Obtains the list of languages after sorting.
 getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleItem>
 ```
 
-Obtains the IDs of the countries or regions after sorting.
+获取排序后的国家或地区信息列表。
 
 **Since:** 23
 
@@ -97,22 +103,22 @@ Obtains the IDs of the countries or regions after sorting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| regions | Array&lt;string&gt; | Yes | Valid IDs of the countries or regions to be sorted. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Country/region sorting option. By default, locale is the current system locale, isUseLocalName is false, and isSuggestedFirst is true. |
+| regions | Array&lt;string&gt; | Yes | 待排序的国家或地区列表，要求是合法的国家或地区ID。 |
+| options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | No | 国家或地区排序选项。 区域ID的默认值为系统当前区域ID，isUseLocalName的默认值为false，isSuggestedFirst的默认值为true。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LocaleItem&gt; | IDs of the countries or regions after sorting. |
+| Array&lt;LocaleItem&gt; | 排序后的国家或地区信息列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getTimeZoneCityItemArray
 
@@ -120,7 +126,7 @@ Obtains the IDs of the countries or regions after sorting.
 static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>
 ```
 
-Obtains list of time zone city items after sorting.
+获取排序后的时区城市组合信息列表。
 
 **Since:** 23
 
@@ -136,11 +142,11 @@ Obtains list of time zone city items after sorting.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TimeZoneCityItem&gt; | List of time zone city items after sorting. |
+| Array&lt;TimeZoneCityItem&gt; | 排序后的时区城市组合信息列表。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 

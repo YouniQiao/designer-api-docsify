@@ -1,6 +1,6 @@
 # BackupPriority (System API)
 
-Control backup and restore priority sequence
+控制备份和恢复的优先级顺序。
 
 **Since:** 12
 
@@ -12,15 +12,21 @@ Control backup and restore priority sequence
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { backup } from 'kits/@kit.CoreFileKit';
+```
+
 ## priority
 
 ```TypeScript
 priority?: int
 ```
 
-Indicates the priority of a bundle.
+应用的优先级，数值越大优先级越高。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 

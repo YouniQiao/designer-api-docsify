@@ -1,6 +1,6 @@
-# @ohos.transfer
+# @ohos.transfer(transfer模块)
 
-The transfer module provides transfer ability for subsystem class or interface.
+transfer模块提供子系统类或接口的转换能力。
 
 **Since:** 23
 
@@ -10,12 +10,18 @@ The transfer module provides transfer ability for subsystem class or interface.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { transfer } from 'kits/@kit.ArkTS';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [transferDynamic](arkts-arkts-transfer-transferdynamic-f.md#transferdynamic) | Converting the 1.2 object to a 1.0 object. |
-| [transferStatic](arkts-arkts-transfer-transferstatic-f.md#transferstatic) | Converting the 1.0 object to a 1.2 object. |
+| [transferDynamic](arkts-arkts-transfer-transferdynamic-f.md#transferdynamic) | 将1.2对象转换为1.0对象。 |
+| [transferStatic](arkts-arkts-transfer-transferstatic-f.md#transferstatic) | 将1.0对象转换为1.2对象。 |
 

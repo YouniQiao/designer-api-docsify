@@ -1,6 +1,6 @@
 # UIEnvWindowAvoidAreaInfoVP
 
-Describes \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ data types for window avoidance areas of different types. All types of window avoidance areas are measured in vp.
+窗口不同类型避让区域信息组成的[环境变量](../../../ui/arkts-env-system-property.md)数据类型，每种类型避让区域单位为vp。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Describes \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ data types for window avoidance are
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## cutout
 
 ```TypeScript
 cutout: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is **TYPE\_CUTOUT** type, in vp.
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_CUTOUT类型的避让区域，单位为vp。
 
-**Type:** UIEnvAvoidAreaVP
+**Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
 **Since:** 23
 
@@ -34,9 +40,9 @@ Avoidance area whose [AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is **T
 keyboard: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is **TYPE\_KEYBOARD** type, in vp.
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD类型的避让区域，单位为vp。
 
-**Type:** UIEnvAvoidAreaVP
+**Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
 **Since:** 23
 
@@ -52,10 +58,9 @@ Avoidance area whose [AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is **T
 navigationIndicator: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is **TYPE\_NAVIGATION\_INDICATOR**  
-type, in vp.
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_NAVIGATION_INDICATOR类型的避让区域，单位为vp。
 
-**Type:** UIEnvAvoidAreaVP
+**Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
 **Since:** 23
 
@@ -71,9 +76,9 @@ type, in vp.
 statusBar: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is **TYPE\_SYSTEM** type, in vp.
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM类型的避让区域，单位为vp。
 
-**Type:** UIEnvAvoidAreaVP
+**Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
 **Since:** 23
 

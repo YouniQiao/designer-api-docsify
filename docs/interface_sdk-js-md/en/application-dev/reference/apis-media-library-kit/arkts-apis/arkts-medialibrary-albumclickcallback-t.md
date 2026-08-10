@@ -20,11 +20,11 @@ The callback of onAlbumClick event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| albumInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| albumInfo | [AlbumInfo](arkts-medialibrary-file-albumpickercomponent-albuminfo-c.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | boolean  |
+| boolean | boolean |
 

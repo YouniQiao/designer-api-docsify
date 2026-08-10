@@ -1,12 +1,18 @@
 # quit
 
+## Modules to Import
+
+```TypeScript
+import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## quit
 
 ```TypeScript
 function quit(): void
 ```
 
-Quit the HiRetrieval project. This operation clears the current HiRetrieval config.Invoking init function again is required after invoking quit function.
+设置此设备退出应用灰度活动，退出后此设备将无法在云端被圈选。
 
 **Since:** 26.0.0
 

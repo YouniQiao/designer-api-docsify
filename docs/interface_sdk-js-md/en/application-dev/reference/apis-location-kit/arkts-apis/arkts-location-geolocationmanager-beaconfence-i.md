@@ -10,6 +10,12 @@ Beacon fence details.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## beaconFenceInfoType
 
 ```TypeScript
@@ -18,7 +24,7 @@ beaconFenceInfoType: BeaconFenceInfoType
 
 Beacon fence information type.
 
-**Type:** BeaconFenceInfoType
+**Type:** [BeaconFenceInfoType](arkts-location-geolocationmanager-beaconfenceinfotype-e.md)
 
 **Since:** 20
 
@@ -58,7 +64,7 @@ manufactureData?: BeaconManufactureData
 
 Beacon equipment manufacture data.
 
-**Type:** BeaconManufactureData
+**Type:** [BeaconManufactureData](arkts-location-geolocationmanager-beaconmanufacturedata-i.md)
 
 **Since:** 20
 

@@ -4,7 +4,7 @@
 type TwoParamCallback<T, G> = (data1: T, data2: G) => void
 ```
 
-Defines the callback type including two parameters.
+定义包含两个参数的回调类型。
 
 **Since:** 22
 

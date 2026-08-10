@@ -1,5 +1,11 @@
 # queryDevices
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## queryDevices
 
 ```TypeScript
@@ -22,7 +28,7 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| busType | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 由[BusType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_约定的设备总线类型，不填则查找所有类型设备。 |
+| busType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 由[BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)约定的设备总线类型，不填则查找所有类型设备。 |
 
 **返回值：**
 
@@ -34,10 +40,10 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
-| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) | ExternalDeviceManager service exception or busType parameter error. |
+| 201 | The permission check failed. |
+| 22900001 | ExternalDeviceManager service exception or busType parameter error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { deviceManager } from '@kit.DriverDevelopmentKit';

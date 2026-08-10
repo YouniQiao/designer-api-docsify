@@ -6,7 +6,7 @@
 function getUid(agent: WantAgent, callback: AsyncCallback<number>): void
 ```
 
-Obtains the UID of a WantAgent.
+获取WantAgent实例的用户ID。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,10 +26,10 @@ Obtains the UID of a WantAgent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | whose UID to obtain. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | Yes | Create a callback method for WantAgent. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 获取WantAgent实例的用户ID的回调方法。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -90,7 +90,7 @@ wantAgent.getWantAgent({
 function getUid(agent: WantAgent): Promise<number>
 ```
 
-Obtains the UID of a WantAgent.
+获取WantAgent实例的用户ID。使用Promise异步回调。
 
 **Since:** 7
 
@@ -110,15 +110,15 @@ Obtains the UID of a WantAgent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | whose UID to obtain. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the UID of the { |
+| Promise&lt;number&gt; | 以Promise形式返回获取WantAgent实例的用户ID。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

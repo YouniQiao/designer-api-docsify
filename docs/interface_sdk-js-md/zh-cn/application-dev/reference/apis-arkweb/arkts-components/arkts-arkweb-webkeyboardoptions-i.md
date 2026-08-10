@@ -18,7 +18,7 @@ customKeyboard?: CustomBuilder
 
 Set the custom keyboard builder when the custom keyboard is used.
 
-**类型：** CustomBuilder
+**类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ Set the custom keyboard builder when the custom keyboard is used.
 enterKeyType?: number
 ```
 
-Set the enter key type when the system keyboard is used, the "enter" key related to the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Set the enter key type when the system keyboard is used, the "enter" key related to the {@link inputMethodEngine}.
 
 **类型：** number
 

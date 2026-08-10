@@ -1,6 +1,6 @@
 # AdLoadListener
 
-Enumerates the callbacks used for the request for loading an ad.
+单广告位广告请求回调。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Enumerates the callbacks used for the request for loading an ad.
 
 **System capability:** SystemCapability.Advertising.Ads
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.AdsKit';
+```
+
 ## onAdLoadFailure
 
 ```TypeScript
 onAdLoadFailure(errorCode: number, errorMsg: string): void
 ```
 
-Called when an ad request fails.
+广告请求失败回调。
 
 **Since:** 11
 
@@ -32,10 +38,10 @@ Called when an ad request fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errorCode | number | Yes | Error code for the ad request failure. |
-| errorMsg | string | Yes | Error message for the ad request failure. |
+| errorCode | number | Yes | 广告请求失败的错误码。 |
+| errorMsg | string | Yes | 广告请求失败的错误信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';
@@ -57,7 +63,7 @@ const adLoaderListener: advertising.AdLoadListener = {
 onAdLoadSuccess(ads: Array<Advertisement>): void
 ```
 
-Called when an ad request is successful.
+广告请求成功后回调。
 
 **Since:** 11
 
@@ -73,9 +79,9 @@ Called when an ad request is successful.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ads | Array&lt;Advertisement&gt; | Yes | Ad data. |
+| ads | Array&lt;Advertisement&gt; | Yes | 广告数据。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { advertising } from '@kit.AdsKit';

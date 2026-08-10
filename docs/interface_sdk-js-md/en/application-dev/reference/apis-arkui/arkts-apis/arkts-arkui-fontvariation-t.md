@@ -4,7 +4,7 @@
 declare type FontVariation = import('../api/@ohos.graphics.text').default.FontVariation
 ```
 
-Define the FontVariation type.
+可变字体的属性。
 
 **Since:** 26.0.0
 

@@ -10,6 +10,12 @@ System configuration updated callback.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## Modules to Import
+
+```TypeScript
+import { systemConfiguration } from 'kits/@kit.AbilityKit';
+```
+
 ## onColorModeUpdated
 
 ```TypeScript

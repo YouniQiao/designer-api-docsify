@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { uiMaterial } from 'kits/@kit.ArkUI';
+```
+
 ## type
 
 ```TypeScript
@@ -20,7 +26,7 @@ type?: MaterialType
 
 默认值：MaterialType.NONE
 
-**类型：** MaterialType
+**类型：** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 
 **默认值：** uiMaterial.MaterialType.NONE
 

@@ -1,6 +1,6 @@
 # DialogBaseController
 
-The class used to control dialog.
+用于控制对话框的类。
 
 **Since:** 26.1.0
 
@@ -10,13 +10,19 @@ The class used to control dialog.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+```
+
 ## close
 
 ```TypeScript
 close(): void
 ```
 
-Close the corresponding dialog.
+关闭相应的对话框。
 
 **Since:** 26.1.0
 
@@ -36,7 +42,7 @@ Close the corresponding dialog.
 constructor()
 ```
 
-The constructor.
+构造函数。
 
 **Since:** 26.1.0
 
@@ -56,7 +62,7 @@ The constructor.
 getState(): DialogState
 ```
 
-Get the state.
+获取状态。
 
 **Since:** 26.1.0
 
@@ -74,5 +80,5 @@ Get the state.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | return the state. |
+| [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md) | 返回状态。 |
 

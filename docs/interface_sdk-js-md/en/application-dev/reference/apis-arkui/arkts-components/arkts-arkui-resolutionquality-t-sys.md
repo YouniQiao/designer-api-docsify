@@ -4,7 +4,7 @@
 declare type ResolutionQuality = import('../api/@ohos.multimedia.image').default.ResolutionQuality
 ```
 
-Enumerates all the levels available for the image resolution quality.
+分辨率质量等级类型。
 
 **Since:** 12
 

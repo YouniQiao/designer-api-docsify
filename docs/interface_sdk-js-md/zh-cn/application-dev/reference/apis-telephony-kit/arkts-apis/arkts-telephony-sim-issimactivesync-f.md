@@ -1,5 +1,11 @@
 # isSimActiveSync
 
+## 导入模块
+
+```TypeScript
+import { sim } from 'kits/@kit.TelephonyKit';
+```
+
 ## isSimActiveSync
 
 ```TypeScript
@@ -20,7 +26,7 @@ Checks whether the SIM card in a specified slot is activated.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slots supported by the device. |
 
 **返回值：**
 
@@ -28,7 +34,7 @@ Checks whether the SIM card in a specified slot is activated.
 | --- | --- |
 | boolean | Returns { |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';

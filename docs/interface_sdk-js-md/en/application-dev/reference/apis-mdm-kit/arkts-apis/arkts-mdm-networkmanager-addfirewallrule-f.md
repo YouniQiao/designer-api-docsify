@@ -1,28 +1,31 @@
 # addFirewallRule
 
+## Modules to Import
+
+```TypeScript
+import { networkManager } from 'kits/@kit.MDMKit';
+```
+
 ## addFirewallRule
 
 ```TypeScript
 function addFirewallRule(admin: Want, firewallRule: FirewallRule): void
 ```
 
-Adds firewall rules for the device. This API is suitable for enterprise network security management and control scenarios. For example, it can be used to restrict network access from specific IP addresses, prevent malicious network attacks, control network communication of applications, and manage the trustlist or blocklist for network access. This helps enterprises implement refined control over network access and prevent network attacks and data leaks.
+为设备添加防火墙过滤规则。适用于企业网络安全管控场景，例如限制特定IP地址的网络访问、防止恶意网络攻击、控制应用程序的网络通信、实现网络访问的允许名单或禁用名单管理，帮助企业精细化控制网络访问，防止网络攻击和数据泄露。
 
-In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.
+API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
 
-[LogType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is supported since API version 23.
-    **NOTE**  
-    
-    - After a rule with [Action]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ set to **ALLOW** is added, a rule with **Action** set  
-    to **DENY** is added by default to discard or intercept all network data packets that do not meet the **ALLOW**  
-    rule.  
-    
-    - After the device is restarted, the firewall rules are cleared.  
-    
-    - Rule matching order: Domain name filtering rules (added via  
-    [addDomainFilterRule]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_) are matched first, followed by IP firewall rules  
-    added by this API. Within both domain name rules and IP rules, matching is performed in the order of ALLOW, DENY,  
-    and REJECT [actions]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.
+从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
+
+> **说明：**
+> 
+> - 添加了[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW规则后，将会默认添加DENY规则，不在ALLOW规则之内的网络数据包将会被丢弃或拦截。
+> 
+> - 设备重启，将会清空防火墙过滤规则。
+> 
+> - 规则匹配顺序：先匹配域名过滤规则（由[addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md#adddomainfilterrule)添加），再匹配本接口添加的IP防火墙规则；在域名规则或IP规
+> 则中，均按[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW、DENY、REJECT的顺序进行匹配。
 
 **Since:** 12
 
@@ -40,19 +43,19 @@ In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| firewallRule | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Firewall rule to add. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| firewallRule | [FirewallRule](arkts-mdm-networkmanager-firewallrule-i.md) | Yes | 添加防火墙过滤规则。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { networkManager } from '@kit.MDMKit';

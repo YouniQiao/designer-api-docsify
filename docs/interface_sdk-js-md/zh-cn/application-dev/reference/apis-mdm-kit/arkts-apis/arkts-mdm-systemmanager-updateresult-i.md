@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## errorInfo
 
 ```TypeScript
@@ -18,7 +24,7 @@ errorInfo: ErrorInfo
 
 系统更新错误信息。
 
-**类型：** ErrorInfo
+**类型：** [ErrorInfo](arkts-mdm-systemmanager-errorinfo-i.md)
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ status: UpdateStatus
 
 系统更新状态。
 
-**类型：** UpdateStatus
+**类型：** [UpdateStatus](arkts-mdm-systemmanager-updatestatus-e.md)
 
 **起始版本：** 12
 

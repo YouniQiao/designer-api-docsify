@@ -1,6 +1,6 @@
 # Protocol
 
-Represents the Bluetooth protocol type.
+蓝牙协议类型。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Represents the Bluetooth protocol type.
 GATT = 0
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+[GATT协议](../../../connectivity/terminology.md#gatt)。
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ GATT = 0
 SPP = 1
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+[SPP协议](../../../connectivity/terminology.md#spp)。
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ SPP = 1
 OPP = 2
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+[OPP协议](../../../connectivity/terminology.md#opp)。
 
 **Since:** 20
 

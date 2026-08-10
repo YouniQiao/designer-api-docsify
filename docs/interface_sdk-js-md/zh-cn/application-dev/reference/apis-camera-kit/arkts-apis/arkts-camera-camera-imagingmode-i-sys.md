@@ -14,6 +14,12 @@ Implements imaging mode.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getImagingMode
 
 ```TypeScript
@@ -38,14 +44,14 @@ Gets current imaging mode.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The current imaging mode. |
+| [CameraImagingMode](arkts-camera-camera-cameraimagingmode-e-sys.md) | The current imaging mode. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## setImagingMode
 
@@ -71,12 +77,12 @@ Sets imaging mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Target imaging mode. |
+| mode | [CameraImagingMode](arkts-camera-camera-cameraimagingmode-e-sys.md) | 是 | Target imaging mode. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 

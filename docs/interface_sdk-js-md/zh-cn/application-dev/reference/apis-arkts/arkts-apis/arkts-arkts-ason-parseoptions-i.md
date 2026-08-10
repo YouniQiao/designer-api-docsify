@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
+```
+
 ## bigIntMode
 
 ```TypeScript
@@ -18,7 +24,7 @@ bigIntMode: BigIntMode
 
 定义处理BigInt的模式。
 
-**类型：** BigIntMode
+**类型：** [BigIntMode](arkts-arkts-ason-bigintmode-e.md)
 
 **起始版本：** 12
 
@@ -38,7 +44,7 @@ parseReturnType: ParseReturnType
 
 定义解析结果的返回类型。
 
-**类型：** ParseReturnType
+**类型：** [ParseReturnType](arkts-arkts-ason-parsereturntype-e.md)
 
 **起始版本：** 12
 

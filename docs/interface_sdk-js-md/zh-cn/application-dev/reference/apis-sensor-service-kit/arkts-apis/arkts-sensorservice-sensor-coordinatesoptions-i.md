@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## x
 
 ```TypeScript
@@ -18,7 +24,7 @@ x: int
 
 x坐标方向，用于指定旋转矩阵变换在x轴的方向。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 
@@ -36,7 +42,7 @@ y: int
 
 y坐标方向，用于指定旋转矩阵变换在y轴的方向。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 8
 

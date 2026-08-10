@@ -1,10 +1,11 @@
 # PersistentStorage
 
 PersistentStorage提供了UI状态的持久化存储能力，将选定的AppStorage属性持久化到文件中，在应用重启时从文件中恢复这些属性值并写入到AppStorage。具体UI使用说明，详见  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
-    **说明：**  
-    
-    从API version 12开始，PersistentStorage支持null、undefined。
+[PersistentStorage：持久化存储UI状态](../../../ui/state-management/arkts-persiststorage.md)。
+
+> **说明：**
+> 
+> 从API version 12开始，PersistentStorage支持null、undefined。
 
 **起始版本：** 7
 
@@ -20,10 +21,10 @@ PersistentStorage提供了UI状态的持久化存储能力，将选定的AppStor
 static DeleteProp(key: string): void
 ```
 
-是[PersistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_的逆向操作。将key对应的属性从  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中删除，后续  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_的操作对PersistentStorage不会再有影响。如需再次持久化，可再次调用  
-[PersistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_接口。
+是[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)的逆向操作。将key对应的属性从  
+[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)中删除，后续  
+[AppStorage](../../../ui/state-management/arkts-appstorage.md)的操作对PersistentStorage不会再有影响。如需再次持久化，可再次调用  
+[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)接口。
 
 **起始版本：** 7
 
@@ -75,11 +76,11 @@ static Keys(): Array<string>
 static PersistProp<T>(key: string, defaultValue: T): void
 ```
 
-将\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中key对应的属性持久化到文件中。该接口应在访问AppStorage之前调用。
+将[AppStorage](../../../ui/state-management/arkts-appstorage.md)中key对应的属性持久化到文件中。该接口应在访问AppStorage之前调用。
 
 确定属性的类型和值的顺序如下：
 
-1. 如果\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_文件中存在key对应的属性，在AppStorage中创建对应的key，并用在PersistentStorage中找到的key的属性初始化。
+1. 如果[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)文件中存在key对应的属性，在AppStorage中创建对应的key，并用在PersistentStorage中找到的key的属性初始化。
 
 2. 如果PersistentStorage文件中没有查询到key对应的属性，则在AppStorage中查找key对应的属性。如果找到key对应的属性，则将该属性持久化。
 
@@ -117,7 +118,7 @@ static PersistProps(
   ): void
 ```
 
-行为与[PersistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_类似，不同在于可以一次性持久化多个数据。该接口应在访问AppStorage之前调用，适合在应用启动时初始化。
+行为与[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)类似，不同在于可以一次性持久化多个数据。该接口应在访问AppStorage之前调用，适合在应用启动时初始化。
 
 **起始版本：** 7
 
@@ -135,7 +136,7 @@ static PersistProps(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| properties | {       key: string;       defaultValue: any;     }[] | 是 |  |
+| properties | {       key: string;       defaultValue: any;     }[] | 是 |  |
 
 ## deleteProp
 
@@ -143,10 +144,10 @@ static PersistProps(
 static deleteProp(key: string): void
 ```
 
-是[persistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_的逆向操作。将key对应的属性从  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中删除，后续  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_的操作对PersistentStorage不会再有影响。如需再次持久化，可再次调用  
-[persistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_接口。
+是[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)的逆向操作。将key对应的属性从  
+[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)中删除，后续  
+[AppStorage](../../../ui/state-management/arkts-appstorage.md)的操作对PersistentStorage不会再有影响。如需再次持久化，可再次调用  
+[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)接口。
 
 **起始版本：** 10
 
@@ -194,11 +195,11 @@ static keys(): Array<string>
 static persistProp<T>(key: string, defaultValue: T): void
 ```
 
-将\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_中key对应的属性持久化到文件中。该接口通常在访问AppStorage之前调用。
+将[AppStorage](../../../ui/state-management/arkts-appstorage.md)中key对应的属性持久化到文件中。该接口通常在访问AppStorage之前调用。
 
 确定属性的类型和值的顺序如下：
 
-1. 如果\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_文件中存在key对应的属性，在AppStorage中创建对应的key，并用在PersistentStorage中找到的key的属性初始化。
+1. 如果[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)文件中存在key对应的属性，在AppStorage中创建对应的key，并用在PersistentStorage中找到的key的属性初始化。
 
 2. 如果PersistentStorage文件中没有查询到key对应的属性，则在AppStorage中查找key对应的属性。如果找到key对应的属性，则将该属性持久化。
 
@@ -229,7 +230,7 @@ static persistProp<T>(key: string, defaultValue: T): void
 static persistProps(props: PersistPropsOptions[]): void
 ```
 
-行为与[persistProp]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_类似，不同在于可以一次性持久化多个数据。该接口通常在访问AppStorage之前调用，适合在应用启动时初始化。
+行为与[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)类似，不同在于可以一次性持久化多个数据。该接口通常在访问AppStorage之前调用，适合在应用启动时初始化。
 
 **起始版本：** 10
 
@@ -245,5 +246,5 @@ static persistProps(props: PersistPropsOptions[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| props | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | 是 | 持久化数组，每项包含属性名和默认值。 |
+| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | 是 | 持久化数组，每项包含属性名和默认值。 |
 

@@ -1,13 +1,19 @@
 # unregisterConversationListener (System API)
 
+## Modules to Import
+
+```TypeScript
+import { conversation } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## unregisterConversationListener
 
 ```TypeScript
 function unregisterConversationListener(bundleName: string, abilityName: string): void
 ```
 
-Unregisters the listener with the specified bundle name and ability name. This API must be used in pairs with  
-[registerConversationListener]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to unregister a registered listener. When the listener is no longer needed, call this API to unregister the listener to release resources. If the listener is not unregistered, resources will be continuously occupied. Only one listener can be registered for the same bundle name and ability name. Duplicate registration will overwrite the previously registered listener.After the listener is unregistered, the listener that is currently in effect will be removed. After this API is called, the app will no longer receive session data of the specified bundle name and ability name. If no listener has been registered for the specified bundle name and ability name, this API returns a success message.
+注销指定Bundle名和Ability名的会话监听。需与注册监听器  
+[registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerconversationlistener)配对使用，用于注销已注册的会话监听器。在不再需要接收消息时应调用注销监听器以释放资源，未注销会导致资源持续占用。同一Bundle名和Ability名只能注册一个监听器，重复注册会覆盖之前的监听器，注销后将移除当前生效的监听器。调用此接口后，应用将不再接收对应Bundle名和Ability名的会话数据。如果之前未注册过指定Bundle名和Ability名的监听器，此接口同样返回成功。
 
 **Since:** 26.1.0
 
@@ -27,16 +33,34 @@ Unregisters the listener with the specified bundle name and ability name. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the bundle whose listener is to be unregistered. The value contains 1 to 127 bytes and must be the same as the bundle name used during listener registration. If an invalid or empty value is passed, error code 401 is returned. |
-| abilityName | string | Yes | Name of the ability whose listener is to be unregistered. The value contains 1 to 127 bytes and must be the same as the ability name used during listener registration. If an invalid or empty value is passed, error code 401 is returned. |
+| bundleName | string | Yes | 要取消监听的Bundle名，Bundle名长度范围为1-127字节，需与注册监听时使用的Bundle名一致。 传入无效或空值时返回错误码401。 |
+| abilityName | string | Yes | 要取消监听的Ability名，Ability名长度范围为1-127字节，需与注册监听时使用的Ability名一致。 传入无效或空值时返回错误码401。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. The application does not have the required permission to access distributed data. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. The bundleName or abilityName is invalid or empty. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-internal-error) | Internal error. |
+| 401 | Invalid parameter. The bundleName or abilityName is invalid or empty. |
+| 801 | Capability not supported. |
+| 201 | Permission denied. The application does not have the required permission to access distributed data. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+| 2000001 | Internal error. |
+
+## Examples
+
+```TypeScript
+import { conversation } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName: string = 'com.example.demo';
+  let abilityName: string = 'EntryAbility';
+
+  conversation.unregisterConversationListener(bundleName, abilityName);
+  console.info(`unregisterConversationListener success`);
+} catch (err) {
+  const e: BusinessError = err as BusinessError;
+  console.error(`unregisterConversationListener errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 

@@ -1,8 +1,8 @@
 # AlertDialogParamWithButtons
 
-Inherited from [AlertDialogParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。
 
-**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-arkui-component/alertdialog-alertdialogparam-i.md)
+**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
 
 **Since:** 7
 
@@ -18,11 +18,9 @@ Inherited from [AlertDialogParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 primaryButton: AlertDialogButtonBaseOptions
 ```
 
-Information about the primary button, including the enabling status, default focus, button style, text content,text color, button background color, and click callback. When the dialog box has focus and focus has not been shifted using the **Tab** key, the button responds to the **Enter** key by default, and multiple dialog boxes can gain focus consecutively to respond automatically. The default response to the **Enter** key does not work when  
-**defaultFocus** is set to **true**. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+主要Button的使能状态、默认焦点、按钮风格、文本内容、文本色、按钮背景色和点击回调。在弹窗获焦且未进行tab键走焦时，该按钮默认响应Enter键，且多重弹窗可自动获焦连续响应。默认响应Enter键能力在defaultFocus为true时不生效。 具体使用方式请参考[示例7](../../../reference/apis-arkui/arkui-ts/ts-methods-alert-dialog-box.md#示例7自定义背景模糊效果参数) 。
 
-**Type:** AlertDialogButtonBaseOptions
+**Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialog-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
 
@@ -40,9 +38,9 @@ Information about the primary button, including the enabling status, default foc
 secondaryButton: AlertDialogButtonBaseOptions
 ```
 
-Information about the secondary button, including the enabling status, default focus, button style, text content,text color, button background color, and click callback.
+次要Button的使能状态、默认焦点、按钮风格、文本内容、文本色、按钮背景色和点击回调。
 
-**Type:** AlertDialogButtonBaseOptions
+**Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialog-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
 

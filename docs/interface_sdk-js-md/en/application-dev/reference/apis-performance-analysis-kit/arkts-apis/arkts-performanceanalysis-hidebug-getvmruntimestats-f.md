@@ -1,12 +1,18 @@
 # getVMRuntimeStats
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getVMRuntimeStats
 
 ```TypeScript
 function getVMRuntimeStats(): GcStats
 ```
 
-Obtains the system GC statistics.
+��ȡϵͳGCͳ����Ϣ��
 
 **Since:** 12
 
@@ -20,9 +26,9 @@ Obtains the system GC statistics.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | System GC statistics. |
+| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | ϵͳGCͳ����Ϣ�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

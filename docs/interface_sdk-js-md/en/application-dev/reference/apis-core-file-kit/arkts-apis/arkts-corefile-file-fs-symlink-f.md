@@ -1,15 +1,22 @@
 # symlink
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## symlink
 
 ```TypeScript
 declare function symlink(target: string, srcPath: string): Promise<void>
 ```
 
-Creates a symbolic link based on a file path. This API uses a promise to return the result.
-    **NOTE**  
-    
-    Since API version 11, this API cannot be used by third-party applications.
+基于文件路径创建符号链接，使用promise异步回调。
+
+> **说明：**
+> 
+> 从API version 11开始，不支持三方应用使用。
 
 **Since:** 9
 
@@ -23,33 +30,33 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | string | Yes | Application sandbox path of the target file. |
-| srcPath | string | Yes | Application sandbox path of the symbolic link. |
+| target | string | Yes | 要链接的目标文件的应用沙箱路径。 |
+| srcPath | string | Yes | 符号链接文件的应用沙箱路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900018 | Not a directory |
+| 13900030 | File name too long |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900005 | I/O error |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
+| 13900008 | Bad file descriptor |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 
 
 ## symlink
@@ -58,10 +65,11 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void
 ```
 
-Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Since API version 11, this API cannot be used by third-party applications.
+基于文件路径创建符号链接，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 11开始，不支持三方应用使用。
 
 **Since:** 9
 
@@ -75,26 +83,26 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | string | Yes | Application sandbox path of the target file. |
-| srcPath | string | Yes | Application sandbox path of the symbolic link. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| target | string | Yes | 要链接的目标文件的应用沙箱路径。 |
+| srcPath | string | Yes | 符号链接文件的应用沙箱路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步创建符号链接信息之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
+| 13900018 | Not a directory |
+| 13900030 | File name too long |
+| 13900025 | No space left on device |
+| 13900027 | Read-only file system |
+| 13900005 | I/O error |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900011 | Out of memory |
 | 13900012 | Permission denied |
 | 13900013 | Bad address |
 | 13900015 | File exists |
-| 13900018 | Not a directory |
-| 13900025 | No space left on device |
-| 13900027 | Read-only file system |
-| 13900030 | File name too long |
+| 13900008 | Bad file descriptor |
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
+| 13900011 | Out of memory |
 

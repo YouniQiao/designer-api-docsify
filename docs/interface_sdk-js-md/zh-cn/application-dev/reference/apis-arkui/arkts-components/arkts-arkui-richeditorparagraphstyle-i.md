@@ -19,7 +19,7 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 设置文本段落缩进，当段落仅存在ImageSpan或BuilderSpan时，此属性值不生效。参数为Dimension类型时，不支持以Percentage形式设置，默认单位为vp。默认值：{"size":  
 ["0.00px","0.00px"]}
 
-**类型：** Dimension \| LeadingMarginPlaceholder
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| LeadingMarginPlaceholder
 
 **起始版本：** 11
 
@@ -39,13 +39,13 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 lineBreakStrategy?: LineBreakStrategy
 ```
 
-设置折行规则。
+设置折行规则。 
 
 默认值：LineBreakStrategy.GREEDY
 
 在wordBreak不等于breakAll的时候生效，不支持连字符。
 
-**类型：** LineBreakStrategy
+**类型：** [LineBreakStrategy](../arkts-apis/arkts-arkui-enums-linebreakstrategy-e.md)
 
 **起始版本：** 12
 
@@ -97,10 +97,10 @@ shaderStyle?: ShaderStyle
 
 默认值：undefined，不设置着色器效果。
 
-该接口与[RichEditorTextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于  
-[RichEditorTextStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_的fontColor。
+该接口与[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于  
+[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)的fontColor。
 
-**类型：** ShaderStyle
+**类型：** [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md)
 
 **起始版本：** 26.0.0
 
@@ -122,7 +122,7 @@ textAlign?: TextAlign
 
 设置文本段落在水平方向的对齐方式。默认值：TextAlign.START
 
-**类型：** TextAlign
+**类型：** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
 
 **起始版本：** 11
 
@@ -146,7 +146,7 @@ textDirection?: TextDirection
 
 默认值：TextDirection.DEFAULT
 
-**类型：** TextDirection
+**类型：** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
 
 **起始版本：** 23
 
@@ -170,7 +170,7 @@ textVerticalAlign?: TextVerticalAlign
 
 默认值：TextVerticalAlign.BASELINE
 
-**类型：** TextVerticalAlign
+**类型：** [TextVerticalAlign](../arkts-apis/arkts-arkui-textverticalalign-e.md)
 
 **起始版本：** 20
 
@@ -192,9 +192,9 @@ wordBreak?: WordBreak
 
 设置断行规则。
 
-默认值：WordBreak.BREAK\_WORD。
+默认值：WordBreak.BREAK_WORD。
 
-**类型：** WordBreak
+**类型：** [WordBreak](../arkts-apis/arkts-arkui-enums-wordbreak-e.md)
 
 **起始版本：** 12
 

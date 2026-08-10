@@ -1,27 +1,31 @@
 # setUsbStorageDeviceAccessPolicy
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.MDMKit';
+```
+
 ## setUsbStorageDeviceAccessPolicy
 
 ```TypeScript
 function setUsbStorageDeviceAccessPolicy(admin: Want, usbPolicy: UsbPolicy): void
 ```
 
-Sets the USB storage device (baseClass = 0x08) access policy.
-    **NOTE**  
-    
-    Before calling the API, read and write operations on the USB storage device should be suspended to ensure  
-    operational stability and data integrity. Otherwise, unexpected exceptions may occur.  
-    A policy conflict occurs when you set the USB storage device access policy to read, write, or read-only in the  
-    following scenarios:
+设置USB存储设备（baseClass = 0x08）访问策略。
 
-1. The USB capability of the device has been disabled via [setDisallowedPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.2. The USB storage device has been disallowed to use through [addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.3. The USB storage write capability has been disabled for specific users via [setDisallowedPolicyForAccount]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+> **说明：**
+> 
+> 在调用接口前，确保已暂停USB存储设备的读写操作，保证操作的稳定性和数据的完整性，否则可能出现不可预期的异常。
+> 以下情况下，通过本接口设置USB存储设备访问策略为可读可写/只读，会报策略冲突：
 
-A policy conflict is reported if the USB storage device access policy is disabled by calling this API in the following scenarios:
+1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了设备USB能力。2. 已经通过[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)接口将存储类型的USB设备添加为禁止使用的USB设备类型。3. 已经通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)接口禁用了某用户USB存储设备写入能力。
 
-1. The USB capability of the device has been disabled via [setDisallowedPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.2. The available USB devices have been added through [addAllowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_.3. The USB storage write capability has been disabled for specific users via [setDisallowedPolicyForAccount]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_.
+以下情况下，通过本接口设置USB存储设备访问策略为禁用，会报策略冲突：
 
-You can disable a USB storage device by calling this API or  
-[addDisallowedUsbDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_. The latter is recommended.
+1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了设备USB能力。2. 已经通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices)接口添加了USB设备可用名单。3. 已经通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)接口禁用了某用户USB存储设备写入能力。
+
+通过本接口设置，或者通过[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)接口添加存储类型的USB设备，均可禁用USB存储设备。推荐使用后者。
 
 **Since:** 12
 
@@ -41,21 +45,21 @@ You can disable a USB storage device by calling this API or
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| usbPolicy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Access policy of the USB storage device. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| usbPolicy | [UsbPolicy](arkts-mdm-usbmanager-usbpolicy-e.md) | Yes | USB存储设备访问策略。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200007](../errorcode-enterpriseDeviceManager.md#9200007-system-ability-error) | The system ability works abnormally. |
-| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 9200010 | A conflict policy has been configured. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200007 | The system ability works abnormally. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { usbManager } from '@kit.MDMKit';

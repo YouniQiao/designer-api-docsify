@@ -1,13 +1,11 @@
 # BadgeStyle
 
-Describes the badge style. It includes the font color, font size, badge color, badge size, etc.
-    **NOTE**  
-    
-    - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the  
-    badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes  
-    the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is  
-    recommended that you use the [Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ component with its  
-    [outline]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ attribute instead of the **Badge** component.
+Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大小。
+
+> **说明：**
+> 
+> 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边线。如
+> 需实现相关场景，建议使用[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件设置[outline](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#outline)代替Badge组件。
 
 **Since:** 7
 
@@ -23,11 +21,11 @@ Describes the badge style. It includes the font color, font size, badge color, b
 badgeColor?: ResourceColor
 ```
 
-Badge color.
+Badge的颜色。
 
-Default value: **Color.Red
+默认值：Color.Red
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Red
 
@@ -49,13 +47,17 @@ Default value: **Color.Red
 badgeSize?: number | ResourceStr
 ```
 
-Badge size. The value of this parameter is a string of the number type. The unit can be px, vp, fp, or lpx, for example, 10 or 16fp. If no unit is specified, fp is used by default. If the value is **0**, the badge is not displayed.
+Badge的大小。string类型支持number类型取值的字符串形式，可以附带单位，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"16"、"16fp"，不附带单位时默认单位为"fp"。
 
-Unit: fp. Default value: **16vp**.
+默认值：16vp
 
-**NOTE**
+默认单位：fp
 
-1. Percentage values are not supported. If a percentage value is set, the default value is used.2. If **fontSize** is set and **badgeSize** is smaller than fontSize, **badgeSize** will take effect based on the value of **fontSize**.
+取值范围：大于0；取值为0时不显示Badge，取值小于0时取默认值。
+
+**说明：**
+
+1. 不支持设置百分比，当设置为百分比时，按照默认值处理。2. 从API version 20开始，支持ResourceStr类型。3. 当设置了fontSize且badgeSize小于fontSize时，badgeSize将按照fontSize生效。
 
 **Type:** number \| ResourceStr
 
@@ -79,11 +81,11 @@ Unit: fp. Default value: **16vp**.
 borderColor?: ResourceColor
 ```
 
-Color of the background border.
+底板描边颜色。
 
-Default value: **Color.Red
+默认值：Color.Red
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Red
 
@@ -105,17 +107,17 @@ Default value: **Color.Red
 borderWidth?: Length
 ```
 
-Width of the background border.
+底板描边粗细。
 
-Default value: **1**
+默认值：1
 
-Unit: vp
+单位：vp
 
-**NOTE**
+**说明：**
 
-Percentage values are not supported. If a percentage value is set, the default value is used.
+不支持设置百分比，当设置为百分比时，按照默认值处理。
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 1vp
 
@@ -137,11 +139,11 @@ Percentage values are not supported. If a percentage value is set, the default v
 color?: ResourceColor
 ```
 
-Font color.
+文本颜色。
 
-Default value: **Color.White
+默认值：Color.White
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.White
 
@@ -163,15 +165,15 @@ Default value: **Color.White
 enableAutoAvoidance?: boolean
 ```
 
-Whether to enable avoidance when the badge text is extended.
+角标文本延伸显示时是否避让。
 
-The value **true** means to enable avoidance, and **false** means the opposite.
+true表示避让，false表示不避让。
 
-Default value: **false**.
+默认值：false
 
-**NOTE**
+**说明：**
 
-1. The avoidance effect is that the badge text is extended to the inside of the component.2. When the width of the outer border is greater than 0, the extension start point of the badge is the inner side of the outer border.3. When position is set to a specific coordinate value, the badge does not perform avoidance.
+1. 避让效果为角标文本向组件内部延伸显示。2. 当外描边的宽度大于0时，角标的延伸起点为外描边的内侧。3. 当position设置为具体坐标值时，角标不进行避让处理。
 
 **Type:** boolean
 
@@ -195,17 +197,17 @@ Default value: **false**.
 fontSize?: number | ResourceStr
 ```
 
-Font size. The value of this parameter is a string of the number type. The unit can be px, vp, fp, or lpx, for example, 10 or 10fp. If no unit is specified, fp is used by default.
+文本大小。string类型仅支持number类型取值的字符串形式，可以附带单位，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"10"、"10fp"，不附带单位时默认单位为"fp"。
 
-Default value: **10vp**
+默认值：10vp
 
-Default unit: fp
+默认单位：fp
 
-The value must be greater than 0. If the value is **0**, the text is not displayed. If the value is less than 0,the default value is used.
+取值范围：大于0；取值为0时不显示文本，取值小于0时取默认值。
 
-**NOTE**
+**说明：**
 
-1. Percentage values are not supported. If a percentage value is set, the default value is used.
+1. 不支持设置百分比，当设置为百分比时，按照默认值处理。2. 从API version 20开始，支持ResourceStr类型。
 
 **Type:** number \| ResourceStr
 
@@ -229,14 +231,13 @@ The value must be greater than 0. If the value is **0**, the text is not display
 fontWeight?: number | FontWeight | ResourceStr
 ```
 
-Font weight of the text. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a bolder font. For the number type, if the value is not within the range, the default value **400**  
-is used. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.
+设置文本的字体粗细。number类型取值范围：[100, 900]，取值间隔为100。取值越大，字体越粗。设置number类型在取值范围外时，按默认值400处理。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
 
-Default value: **FontWeight.Normal**
+默认值：FontWeight.Normal
 
-**NOTE**
+**说明：**
 
-Percentage values are not supported. If a percentage value is set, the default value is used. The ResourceStr type is supported since API version 20.
+不支持设置百分比，当设置为百分比时，按照默认值处理。从API version 20开始，支持ResourceStr类型。
 
 **Type:** number \| FontWeight \| ResourceStr
 
@@ -258,11 +259,11 @@ Percentage values are not supported. If a percentage value is set, the default v
 outerBorderColor?: ResourceColor
 ```
 
-Color of the background outer border.
+底板外描边颜色。
 
-Default value: **Color.White
+默认值：Color.White
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.White
 
@@ -284,15 +285,15 @@ Default value: **Color.White
 outerBorderWidth?: LengthMetrics
 ```
 
-Width of the background outer border.
+底板外描边粗细。
 
-Default value: **0**.
+默认值：0
 
-Unit: vp
+单位：vp
 
-Percentage values are not supported. If a percentage value is set, the default value is used.
+不支持设置百分比，当设置为百分比时，按照默认值处理。
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
 **Default:** 0vp
 

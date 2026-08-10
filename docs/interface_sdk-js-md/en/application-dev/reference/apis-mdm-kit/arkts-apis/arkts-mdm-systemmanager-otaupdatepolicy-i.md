@@ -1,6 +1,6 @@
 # OtaUpdatePolicy
 
-Represents an OTA update policy.
+升级策略。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents an OTA update policy.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { systemManager } from 'kits/@kit.MDMKit';
+```
+
 ## delayUpdateTime
 
 ```TypeScript
 delayUpdateTime?: number
 ```
 
-Period for which the update is postponed, in hours.
+表示延迟升级时间（单位：小时）。
 
 **Type:** number
 
@@ -36,9 +42,9 @@ Period for which the update is postponed, in hours.
 disableSystemOtaUpdate?: boolean
 ```
 
-Whether to disable public network upgrade. The value **true** indicates that public network upgrade is disabled,and the value **false** indicates the opposite. If this field is used as an input parameter of  
-[systemManager.setOtaUpdatePolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, the default value can be retained.The current configuration can be obtained via the  
-[systemManager.getOtaUpdatePolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API. After public network upgrade is disabled, you can perform intranet upgrade.
+表示是否禁用在公网环境下升级。true表示禁用公网升级，false表示不禁用公网升级。如果作为  
+[systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setotaupdatepolicy)的入参，该字段可缺省，缺省时保持当前配置不变。当前配置可通过  
+[systemManager.getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getotaupdatepolicy)接口获取。禁用公网升级后，可以采用内网升级。
 
 **Type:** boolean
 
@@ -58,7 +64,7 @@ Whether to disable public network upgrade. The value **true** indicates that pub
 installEndTime?: number
 ```
 
-End time (timestamp) of the installation window.
+表示指定安装窗口结束时间（时间戳）。
 
 **Type:** number
 
@@ -78,7 +84,7 @@ End time (timestamp) of the installation window.
 installStartTime?: number
 ```
 
-Start time (timestamp) of the installation window.
+表示指定安装窗口起始时间（时间戳）。
 
 **Type:** number
 
@@ -98,7 +104,7 @@ Start time (timestamp) of the installation window.
 latestUpdateTime?: number
 ```
 
-Latest update time (timestamp).
+表示最晚升级时间（时间戳）。
 
 **Type:** number
 
@@ -118,9 +124,9 @@ Latest update time (timestamp).
 policyType: PolicyType
 ```
 
-Type of the update policy.
+表示升级策略类型。
 
-**Type:** PolicyType
+**Type:** [PolicyType](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileshare-policytype-e.md)
 
 **Since:** 12
 
@@ -138,7 +144,7 @@ Type of the update policy.
 version: string
 ```
 
-Version of the software to update.
+表示待升级软件版本号。
 
 **Type:** string
 

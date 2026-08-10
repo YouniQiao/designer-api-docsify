@@ -1,6 +1,6 @@
 # DisposedType (System API)
 
-Enumerates the types of application disposals.
+标识拦截应用程序的方式，例如禁用应用的全部能力、禁用应用的指定能力、或者不禁用。
 
 **Since:** 11
 
@@ -18,7 +18,7 @@ Enumerates the types of application disposals.
 BLOCK_APPLICATION = 1
 ```
 
-All abilities of the application are blocked. That is, the entire application is blocked.
+应用所有能力都将被禁用。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ All abilities of the application are blocked. That is, the entire application is
 BLOCK_ABILITY = 2
 ```
 
-A specific ability of the application is blocked.
+应用指定的能力才会被禁用。
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ A specific ability of the application is blocked.
 NON_BLOCK = 3
 ```
 
-The application is not blocked.
+应用所有能力不会被禁用。
 
 **Since:** 11
 

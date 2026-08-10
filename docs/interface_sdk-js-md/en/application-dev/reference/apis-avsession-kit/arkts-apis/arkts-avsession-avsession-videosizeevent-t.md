@@ -18,6 +18,6 @@ The video size event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | int | Yes | video width  |
-| height | int | Yes | video height  |
+| width | int | Yes | 视频宽度。 取值范围为全体整数 取值限定为整数。 |
+| height | int | Yes | video width 取值范围为全体整数 取值限定为整数。 |
 

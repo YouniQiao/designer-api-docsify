@@ -1,12 +1,18 @@
 # getCurrentConfig
 
+## Modules to Import
+
+```TypeScript
+import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getCurrentConfig
 
 ```TypeScript
 function getCurrentConfig(): HiRetrievalConfig
 ```
 
-Query the current HiRetrieval config.
+获取当前应用灰度活动配置。
 
 **Since:** 26.0.0
 
@@ -22,5 +28,5 @@ Query the current HiRetrieval config.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the current HiRetrieval config, an empty HiRetrievalConfig will be returned if the result of invoking isParticipant function is false. |
+| [HiRetrievalConfig](arkts-performanceanalysis-hiretrieval-hiretrievalconfig-i.md) | 当前应用灰度活动配置，包含用户类型、设备类型、设备型号等参数，用于标识和圈选设备参与应用灰度活动。 |
 

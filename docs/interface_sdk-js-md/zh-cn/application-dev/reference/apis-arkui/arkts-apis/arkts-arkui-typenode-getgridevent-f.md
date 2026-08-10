@@ -22,11 +22,11 @@ Get the event instance of Grid node.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the target FrameNode. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | the target FrameNode. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return the event instance of FrameNode, and return undefined if it does not exist. |
+| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) | Return the event instance of FrameNode, and return undefined if it does not exist. |
 

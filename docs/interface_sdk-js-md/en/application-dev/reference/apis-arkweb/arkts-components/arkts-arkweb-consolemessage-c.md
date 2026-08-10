@@ -1,6 +1,6 @@
 # ConsoleMessage
 
-Encompassed message information as parameters to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Encompassed message information as parameters to {@link onConsole} method.
 
 **Since:** 8
 
@@ -34,10 +34,10 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | The console message. |
-| sourceId | string | Yes | The Web source file's path and name. |
-| lineNumber | number | Yes | The line number of the console message. |
-| messageLevel | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The console log level. |
+| message | string | Yes | ConsoleMessage的日志输出信息。 |
+| sourceId | string | Yes | 网页源文件的路径和文件名。 |
+| lineNumber | number | Yes | ConsoleMessage的行号。 |
+| messageLevel | [MessageLevel](../arkts-apis/arkts-arkweb-web-messagelevel-e.md) | Yes | ConsoleMessage的日志级别。 |
 
 ## constructor
 
@@ -45,7 +45,7 @@ Constructor.
 constructor()
 ```
 
-Constructor.
+ConsoleMessage的构造函数。
 
 **Since:** 9
 
@@ -63,7 +63,7 @@ Constructor.
 getLineNumber(): number
 ```
 
-Gets the line number of a console message.
+获取ConsoleMessage的行数。
 
 **Since:** 8
 
@@ -79,7 +79,7 @@ Gets the line number of a console message.
 
 | Type | Description |
 | --- | --- |
-| number | Return the line number of a console message. |
+| number | 返回ConsoleMessage的行数。 |
 
 ## getMessage
 
@@ -87,7 +87,7 @@ Gets the line number of a console message.
 getMessage(): string
 ```
 
-Gets the message of a console message.
+获取ConsoleMessage的日志信息。
 
 **Since:** 8
 
@@ -103,7 +103,7 @@ Gets the message of a console message.
 
 | Type | Description |
 | --- | --- |
-| string | Return the message of a console message. |
+| string | 返回ConsoleMessage的日志信息。 |
 
 ## getMessageLevel
 
@@ -111,7 +111,7 @@ Gets the message of a console message.
 getMessageLevel(): MessageLevel
 ```
 
-Gets the message level of a console message.
+获取ConsoleMessage的信息级别。
 
 **Since:** 8
 
@@ -127,21 +127,21 @@ Gets the message level of a console message.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the message level of a console message, which can be { |
+| [MessageLevel](../arkts-apis/arkts-arkweb-web-messagelevel-e.md) | 返回ConsoleMessage的信息级别。 |
 
 ## getSource
 
 ```TypeScript
-getSource(): ConsoleMessageSource
+getSource() : ConsoleMessageSource
 ```
 
-Gets the source of a console message.
+获取ConsoleMessage的日志来源。
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-ConsoleMessage-getSource(): ConsoleMessageSource--><!--Device-ConsoleMessage-getSource(): ConsoleMessageSource-End-->
+<!--Device-ConsoleMessage-getSource() : ConsoleMessageSource--><!--Device-ConsoleMessage-getSource() : ConsoleMessageSource-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -149,7 +149,7 @@ Gets the source of a console message.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the source of a console message. |
+| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) | 返回ConsoleMessage的日志来源。 |
 
 ## getSourceId
 
@@ -157,7 +157,7 @@ Gets the source of a console message.
 getSourceId(): string
 ```
 
-Gets the Web source file's path and name of a console message.
+获取网页源文件路径和文件名。
 
 **Since:** 8
 
@@ -173,5 +173,5 @@ Gets the Web source file's path and name of a console message.
 
 | Type | Description |
 | --- | --- |
-| string | Return the Web source file's path and name of a console message. |
+| string | 返回网页源文件路径和文件名。 |
 

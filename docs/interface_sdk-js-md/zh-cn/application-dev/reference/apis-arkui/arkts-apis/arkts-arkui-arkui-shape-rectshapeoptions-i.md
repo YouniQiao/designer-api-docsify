@@ -2,7 +2,7 @@
 
 RectShape 的构造函数参数。
 
-继承自[ShapeSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)。
 
 **继承/实现关系：** RectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)
 
@@ -14,6 +14,12 @@ RectShape 的构造函数参数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
+
 ## radius
 
 ```TypeScript
@@ -22,7 +28,7 @@ radius?: double | string | Array<double | string>
 
 矩形形状的圆角半径。
 
-类型为number时取值范围是[0, +∞)，string时是[Length]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。
 
 单位：vp
 

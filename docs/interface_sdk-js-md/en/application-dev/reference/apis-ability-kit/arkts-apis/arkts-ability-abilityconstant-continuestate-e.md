@@ -1,7 +1,7 @@
 # ContinueState
 
-Enumerates the mission continuation states of the application. It is used in the  
-[setMissionContinueState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_API of [UIAbilityContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+流转状态枚举值。用于表示当前应用任务流转的状态。可配合[UIAbilityContext](arkts-ability-uiabilitycontext-c.md)的  
+[setMissionContinueState](arkts-ability-uiabilitycontext-c.md#setmissioncontinuestate)方法进行设置。
 
 **Since:** 10
 
@@ -17,7 +17,7 @@ Enumerates the mission continuation states of the application. It is used in the
 ACTIVE = 0
 ```
 
-Mission continuation is activated for the current application.
+指示当前应用任务流转处于激活状态。
 
 **Since:** 10
 
@@ -37,7 +37,7 @@ Mission continuation is activated for the current application.
 INACTIVE = 1
 ```
 
-Mission continuation is not activated for the current application.
+指示当前应用任务流转处于未激活状态。
 
 **Since:** 10
 

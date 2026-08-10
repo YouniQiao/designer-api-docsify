@@ -1,5 +1,11 @@
 # setUserOperation（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## setUserOperation
 
 ```TypeScript
@@ -24,7 +30,7 @@ function setUserOperation(operation: Operation, mac: string, params: string): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| operation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 操作类型 |
+| operation | [Operation](../../apis-mdm-kit/arkts-apis/arkts-mdm-devicecontrol-operation-e.md) | 是 | 操作类型 |
 | mac | string | 是 | MAC address. |
 | params | string | 是 | Operation parameters. |
 
@@ -32,11 +38,11 @@ function setUserOperation(operation: Operation, mac: string, params: string): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 console.info('User operate');

@@ -1,6 +1,6 @@
 # TextDisplayState
 
-Enumerates text display states. Native result after text typesetting, which is irrelevant to external display factors such as external canvas cropping and screen overflow.
+文本显示状态的枚举。表示文本排版后的原生结果，与外部画布裁切、溢出屏幕等外部显示因素无关。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumerates text display states. Native result after text typesetting, which is i
 UNKNOWN = 0
 ```
 
-Unknown display state, which is the default state.
+未知显示状态，默认状态。
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Unknown display state, which is the default state.
 ALL = 1
 ```
 
-Complete display state, in which the text is not truncated or omitted and all content is displayed normally.
+完整显示状态，文本无截断、无省略，全部内容正常显示。
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ Complete display state, in which the text is not truncated or omitted and all co
 CLIP = 2
 ```
 
-Cropping display state, in which the part of the text that exceeds the typesetting area is directly cropped and hidden.
+裁剪显示状态，文本超出排版区域的部分被直接裁剪隐藏。
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ Cropping display state, in which the part of the text that exceeds the typesetti
 OMITTED = 3
 ```
 
-Ellipsized display state, in which part of the content is replaced by specified characters (such as ellipsis '...') when the text exceeds the typesetting area.
+省略显示状态，文本超出排版区域后，部分内容以指定字符（如省略号 '...'）替代展示。
 
 **Since:** 26.0.0
 

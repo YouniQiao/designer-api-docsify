@@ -1,8 +1,8 @@
 # ResolvedRelativeTimeFormatOptions
 
-An object with properties reflecting the locale and formatting options computed during initialization of the \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ object
+An object with properties reflecting the locale and formatting options computed during initialization of the `Intl.RelativeTimeFormat` object
 
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#Description).
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -14,7 +14,7 @@ An object with properties reflecting the locale and formatting options computed 
 locale: UnicodeBCP47LocaleIdentifier
 ```
 
-**Type:** UnicodeBCP47LocaleIdentifier
+**Type:** [UnicodeBCP47LocaleIdentifier](arkts-intl-unicodebcp47localeidentifier-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -34,7 +34,7 @@ numberingSystem: string
 numeric: RelativeTimeFormatNumeric
 ```
 
-**Type:** RelativeTimeFormatNumeric
+**Type:** [RelativeTimeFormatNumeric](arkts-intl-relativetimeformatnumeric-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -44,7 +44,7 @@ numeric: RelativeTimeFormatNumeric
 style: RelativeTimeFormatStyle
 ```
 
-**Type:** RelativeTimeFormatStyle
+**Type:** [RelativeTimeFormatStyle](arkts-intl-relativetimeformatstyle-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

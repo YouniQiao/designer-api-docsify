@@ -1,6 +1,6 @@
 # DeviceType (System API)
 
-Defines the values of **deviceType** used in **RootInfo**.
+组成RootInfo中的deviceType字段，表明此设备的类型。
 
 **Since:** 9
 
@@ -20,7 +20,7 @@ Defines the values of **deviceType** used in **RootInfo**.
 DEVICE_LOCAL_DISK = 1
 ```
 
-Local disk.
+本地c,d...盘。
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ Local disk.
 DEVICE_SHARED_DISK = 2
 ```
 
-Shared disk.
+多用户共享盘。
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ Shared disk.
 DEVICE_SHARED_TERMINAL = 3
 ```
 
-Distributed network device.
+分布式网络终端设备。
 
 **Since:** 9
 
@@ -86,7 +86,7 @@ Distributed network device.
 DEVICE_NETWORK_NEIGHBORHOODS = 4
 ```
 
-Network neighbor device.
+网络邻居设备。
 
 **Since:** 9
 
@@ -108,7 +108,7 @@ Network neighbor device.
 DEVICE_EXTERNAL_MTP = 5
 ```
 
-MTP device.
+MTP设备。
 
 **Since:** 9
 
@@ -130,7 +130,7 @@ MTP device.
 DEVICE_EXTERNAL_USB = 6
 ```
 
-USB device.
+USB设备。
 
 **Since:** 9
 
@@ -152,7 +152,7 @@ USB device.
 DEVICE_EXTERNAL_CLOUD = 7
 ```
 
-Cloud disk.
+云盘设备。
 
 **Since:** 9
 

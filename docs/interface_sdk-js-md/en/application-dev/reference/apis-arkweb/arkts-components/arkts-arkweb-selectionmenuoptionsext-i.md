@@ -1,6 +1,6 @@
 # SelectionMenuOptionsExt
 
-Represents the selection menu option extension.
+自定义菜单扩展项。
 
 **Since:** 13
 
@@ -16,13 +16,13 @@ Represents the selection menu option extension.
 menuType?: MenuType
 ```
 
-Type of the custom selection menu.
+自定义选择菜单类型。
 
-Default value: **MenuType.SELECTION\_MENU**
+默认值：`MenuType.SELECTION_MENU`。
 
-Since API version 20, **MenuType.PREVIEW\_MENU** supports hyperlink preview.
+从API version 20起，`MenuType.PREVIEW_MENU`支持超链接预览。
 
-**Type:** MenuType
+**Type:** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-menutype-e.md)
 
 **Since:** 13
 
@@ -38,9 +38,9 @@ Since API version 20, **MenuType.PREVIEW\_MENU** supports hyperlink preview.
 onAppear?: Callback<void>
 ```
 
-Callback invoked when the custom selection menu appears.
+自定义选择菜单弹出时回调。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 13
 
@@ -56,9 +56,9 @@ Callback invoked when the custom selection menu appears.
 onDisappear?: Callback<void>
 ```
 
-Callback invoked when the custom selection menu disappears.
+自定义选择菜单关闭时回调。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 13
 
@@ -74,9 +74,9 @@ Callback invoked when the custom selection menu disappears.
 onMenuHide?: Callback<void>
 ```
 
-Callback invoked when the custom context menu on selection is hidden.
+自定义选择菜单隐藏时回调。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 21
 
@@ -92,9 +92,9 @@ Callback invoked when the custom context menu on selection is hidden.
 onMenuShow?: Callback<void>
 ```
 
-Callback invoked when the custom context menu on selection is shown.
+自定义选择菜单显示时回调。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 21
 
@@ -110,9 +110,9 @@ Callback invoked when the custom context menu on selection is shown.
 preview?: CustomBuilder
 ```
 
-Preview content style of the custom selection menu. If this parameter is not set, there is no preview content.
+自定义选择菜单的预览内容样式，未配置时无预览内容。
 
-**Type:** CustomBuilder
+**Type:** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **Since:** 13
 
@@ -128,9 +128,9 @@ Preview content style of the custom selection menu. If this parameter is not set
 previewMenuOptions?: PreviewMenuOptions
 ```
 
-Custom preview menu options.
+自定义选择预览菜单选项。
 
-**Type:** PreviewMenuOptions
+**Type:** [PreviewMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-previewmenuoptions-i.md)
 
 **Since:** 20
 

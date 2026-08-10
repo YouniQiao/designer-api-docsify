@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | The module defines environment change information. Configuration is an interface definition and is used only for field declaration. |
+| [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | 定义环境变化信息。Configuration是接口定义，仅做字段声明。 |
 

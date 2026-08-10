@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## mechId
 
 ```TypeScript
@@ -20,7 +26,7 @@ mechId: int
 
 机械设备唯一ID
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -40,7 +46,7 @@ status: RotationAxesStatus
 
 Rotate axis status.
 
-**类型：** RotationAxesStatus
+**类型：** [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md)
 
 **起始版本：** 20
 

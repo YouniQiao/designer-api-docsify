@@ -1,6 +1,6 @@
 # PickerResult
 
-Defines the processing result of the camera picker.
+相机选择器的处理结果。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Defines the processing result of the camera picker.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { cameraPicker } from 'kits/@kit.CameraKit';
+```
+
 ## mediaType
 
 ```TypeScript
 mediaType: PickerMediaType
 ```
 
-Media type.
+返回的媒体类型。
 
-**Type:** PickerMediaType
+**Type:** [PickerMediaType](arkts-camera-camerapicker-pickermediatype-e.md)
 
 **Since:** 11
 
@@ -36,9 +42,9 @@ Media type.
 resultCode: int
 ```
 
-Result code. The value **0** means that the processing is successful, and **-1** means that the processing fails.
+处理的结果，成功返回0，失败返回-1。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 
@@ -56,9 +62,7 @@ Result code. The value **0** means that the processing is successful, and **-1**
 resultUri: string
 ```
 
-URI of the result. If **saveUri** is empty, **resultUri** is a public media path. If **saveUri** is not empty and the application has the write permission on the URI, the value of **resultUri** is the same as that of  
-**saveUri**. If **saveUri** is not empty and the application does not have the write permission on the URI,  
-**resultUri** cannot be obtained.
+返回的uri地址。若saveUri为空，resultUri为公共媒体路径。若saveUri不为空且具备写权限，resultUri与saveUri相同。若saveUri不为空且不具备写权限，则无法获取到resultUri。
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # AVCastControlCommand
 
-The definition of cast command to be sent to the session
+投播控制器接受的命令的对象描述。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ The definition of cast command to be sent to the session
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## command
 
 ```TypeScript
 command: AVCastControlCommandType
 ```
 
-The command value \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
+命令。每种命令对应的参数不同，具体的对应关系可查阅[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)。
 
-**Type:** AVCastControlCommandType
+**Type:** [AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ The command value \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_
 parameter?: media.PlaybackSpeed | double | string | LoopMode
 ```
 
-Parameter carried in the command.The seek command must carry the number parameter.The setVolume command must carry the number parameter.The toggleFavorite command must carry the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ parameter.The setSpeed command must carry the \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ parameter.The setLoopMode command must carry the \_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ parameter.Other commands do not need to carry parameters.
+命令对应的参数。
 
-**Type:** media.PlaybackSpeed \| double \| string \| LoopMode
+**Type:** ArkTS-Dyn: media.PlaybackSpeed \| number \| string \| LoopMode  <br>ArkTS-Sta：media.PlaybackSpeed \| double \| string \| LoopMode
 
 **Since:** 10
 

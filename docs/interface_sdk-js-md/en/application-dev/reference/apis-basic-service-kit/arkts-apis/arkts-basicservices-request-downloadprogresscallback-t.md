@@ -18,6 +18,6 @@ The callback function for the download progress event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receivedSize | long | Yes | the length of downloaded data, in bytes.  |
-| totalSize | long | Yes | the length of data expected to be downloaded, in bytes.  |
+| receivedSize | long | Yes | the length of downloaded data, in bytes. |
+| totalSize | long | Yes | the length of data expected to be downloaded, in bytes. |
 

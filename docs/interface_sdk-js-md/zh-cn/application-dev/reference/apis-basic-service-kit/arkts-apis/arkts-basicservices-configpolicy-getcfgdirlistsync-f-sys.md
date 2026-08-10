@@ -1,5 +1,11 @@
 # getCfgDirListSync（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { configPolicy } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getCfgDirListSync
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # TextPickerRangeContent
 
-Defines the content for single-column picker options.
+单列数据选择器的数据选项内容。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Defines the content for single-column picker options.
 icon: string | Resource
 ```
 
-Image resource. If the value is a string, such as **"/common/hello.png"**, it represents the path to the image.
+图片资源。当icon为string类型时，表示图片存放的路径，例如"/common/hello.png"；当icon为Resource类型时，表示资源引用。
 
 **Type:** string \| Resource
 
@@ -38,11 +38,14 @@ Image resource. If the value is a string, such as **"/common/hello.png"**, it re
 text?: string | Resource
 ```
 
-Text information.
+文本信息。
 
-An empty character string is used by default.
+> 默认值：空字符串
 
-Note: Text truncation occurs when content exceeds column width.
+> **说明：**
+> 
+> 1. 未设置该属性时，使用默认值。
+> 2. 当文本长度大于列宽时，文本被截断。
 
 **Type:** string \| Resource
 

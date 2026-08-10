@@ -1,5 +1,11 @@
 # offAcbStateChange
 
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offAcbStateChange
 
 ```TypeScript
@@ -22,12 +28,12 @@ function offAcbStateChange(callback?: Callback<AcbStateParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AcbStateParam&gt; | 否 | 要监听的事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AcbStateParam&gt; | 否 | 要监听的事件的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| 801 | Capability not supported because the chip does not support it. |
+| 36100099 | Operation failed. |
 

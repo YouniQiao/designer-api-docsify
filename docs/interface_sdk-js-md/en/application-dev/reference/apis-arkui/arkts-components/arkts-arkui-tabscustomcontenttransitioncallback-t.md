@@ -4,7 +4,7 @@
 declare type TabsCustomContentTransitionCallback = (from: number, to: number) => TabContentAnimatedTransition | undefined
 ```
 
-Defines the callback invoked when the custom tab transition animation starts.
+自定义Tabs页面切换动画开始时触发的回调。
 
 **Since:** 18
 
@@ -22,12 +22,12 @@ Defines the callback invoked when the custom tab transition animation starts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | number | Yes | Index of the currently displayed tab before the animation starts. The index is zero-based.< br>Value range: [0, Index value — 1]. If the value exceeds the index value or is less than 0, no transition animation is displayed.  |
-| to | number | Yes | Index of the target tab before the animation starts. The index is zero-based.\_\_\_HTML\_TAG\_USD\_0\_\_\_Value range: [0, Index value — 1]. If the value exceeds the index value or is less than 0, no transition animation is displayed.  |
+| from | number | Yes | 动画开始时，当前页面的index值，索引从0开始。<br/>取值范围：[0, 页签总数-1]，当设置的值超过索引值或小于0时无转场动画。 |
+| to | number | Yes | 动画开始时，目标页面的index值，索引从0开始。<br/>取值范围：[0, 页签总数-1]，当设置的值超过索引值或小于0时无转场动画。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Information about the custom tab switching animation.  |
+| [TabContentAnimatedTransition](../arkts-apis/arkts-arkui-tabs-tabcontentanimatedtransition-i.md) \| undefined | Information about the custom tab switching animation. |
 

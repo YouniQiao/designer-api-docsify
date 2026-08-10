@@ -10,15 +10,21 @@
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
+## 导入模块
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## gauge
 
 ```TypeScript
 gauge?: boolean
 ```
 
-后台任务的进度通知策略。
+后台任务的进度通知策略。 
 
-- true，显示进度、成功、失败通知。  
+- true，显示进度、成功、失败通知。   
 - false，仅显示成功、失败通知。
 
 默认为false。
@@ -39,9 +45,9 @@ gauge?: boolean
 notification: Notification
 ```
 
-通知栏自定义设置。默认值为\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_
+通知栏自定义设置。默认值为`{}`
 
-**类型：** Notification
+**类型：** [Notification](arkts-basicservices-agent-notification-i.md)
 
 **起始版本：** 15
 

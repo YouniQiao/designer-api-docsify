@@ -120,7 +120,7 @@ getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return the response data. string type indicate string in HTML format. number type indicate file handle. Resource type indicate \_\_\_ESCAPED\_DOLLAR\_\_\_rawfile resource. ArrayBuffer type indicate binary data. |
+| string | Return the response data. string type indicate string in HTML format. number type indicate file handle. Resource type indicate \\$rawfile resource. ArrayBuffer type indicate binary data. |
 
 ## getResponseEncoding
 
@@ -190,7 +190,7 @@ getResponseIsReady(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_表示响应数据已准备好，\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_表示未准备好。 |
+| boolean | `true`表示响应数据已准备好，`false`表示未准备好。 |
 
 ## getResponseMimeType
 
@@ -286,7 +286,7 @@ setResponseData(data: string | number | Resource | ArrayBuffer): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| number \| Resource \| ArrayBuffer | 是 | 要设置的资源响应数据。 string表示HTML格式的字符串。 number表示文件句柄，此句柄由系统的Web组件负责关闭。 Resource表示应用rawfile目录下文件资源.\_\_\_HTML\_TAG\_USD\_0\_\_\_**起始版本：** 9 - 10 |
+| data | string \| number \| Resource \| ArrayBuffer | 是 | 要设置的资源响应数据。 string表示HTML格式的字符串。 number表示文件句柄，此句柄由系统的Web组件负责关闭。 Resource表示应用rawfile目录下文件资源.<br>**起始版本：** 9 - 10 |
 
 ## setResponseEncoding
 

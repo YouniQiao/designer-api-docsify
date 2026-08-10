@@ -1,5 +1,11 @@
 # offNfcStateChange
 
+## Modules to Import
+
+```TypeScript
+import { nfcController } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offNfcStateChange
 
 ```TypeScript
@@ -20,5 +26,5 @@ unregister nfc state changed event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;NfcState&gt; | No | Callback used to listen to the nfc state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NfcState&gt; | No | Callback used to listen to the nfc state changed event. |
 

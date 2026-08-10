@@ -1,12 +1,18 @@
 # getAllPreinstalledApplicationInfo (System API)
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getAllPreinstalledApplicationInfo
 
 ```TypeScript
 function getAllPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>
 ```
 
-Obtains information about all preinstalled applications. This API uses a promise to return the result.
+获取所有预置应用信息。使用Promise异步回调。
 
 **Since:** 12
 
@@ -24,16 +30,16 @@ Obtains information about all preinstalled applications. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PreinstalledApplicationInfo&gt;&gt; | Promise used to return the array of preinstalled applications obtained. |
+| Promise&lt;Array&lt;PreinstalledApplicationInfo&gt;&gt; | Promise对象，返回Array&lt;PreinstalledApplicationInfo&gt;。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

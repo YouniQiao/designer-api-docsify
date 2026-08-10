@@ -20,6 +20,6 @@ Defines the callback type used in OnVisibleIndexesChange.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | the first index in visible content.  |
-| end | int | Yes | the last index in visible content.  |
+| start | int | Yes | the first index in visible content. |
+| end | int | Yes | the last index in visible content. |
 

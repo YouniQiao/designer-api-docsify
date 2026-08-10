@@ -1,5 +1,11 @@
 # getExtBundleStats（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## getExtBundleStats
 
 ```TypeScript
@@ -26,7 +32,7 @@ function getExtBundleStats(userId: int, businessName: string): Promise<ExtBundle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 用户id。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 用户id。 |
 | businessName | string | 是 | 系统应用包名或系统服务名称。 |
 
 **返回值：**
@@ -39,38 +45,23 @@ function getExtBundleStats(userId: int, businessName: string): Promise<ExtBundle
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| 13600001 | IPC error. |
-| 13600010 | The input parameter is invalid. |
 | 13600012 | Failed to query the specified business space usage. |
+| 13600010 | The input parameter is invalid. |
+| 201 | Permission verification failed. |
+| 202 | The caller is not a system application. |
+| 13600001 | IPC error. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let userId: number = 100;
-let businessName: string = 'com.example.storagedemo';
+let businessName: string = "com.example.storagedemo";
 storageStatistics.getExtBundleStats(userId, businessName).then((bundleStats: storageStatistics.ExtBundleStats) => {
   console.info("getExtBundleStats successfully.");
 }).catch((err: BusinessError) => {
-  console.error(`getExtBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: int = 100;
-let businessName: string = 'com.example.storagedemo';
-storageStatistics.getExtBundleStats(userId, businessName).then((bundleStats: storageStatistics.ExtBundleStats) => {
-  console.info("getExtBundleStats successfully.");
-}).catch((err: BusinessError): void => {
   console.error(`getExtBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 ```

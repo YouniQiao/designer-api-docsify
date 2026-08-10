@@ -1,6 +1,6 @@
 # VolumeEvent
 
-Describes the event received by the application when the volume is changed.
+音量改变时，应用接收到的事件。
 
 **Since:** 9
 
@@ -9,6 +9,12 @@ Describes the event received by the application when the volume is changed.
 <!--Device-audio-interface VolumeEvent--><!--Device-audio-interface VolumeEvent-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
+
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
 
 ## networkId
 
@@ -38,7 +44,7 @@ percentage?: int
 
 Volume percentage, which is an integer ranging from [0, 100].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -58,7 +64,7 @@ volumeGroupId: int
 
 volumeGroup id
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

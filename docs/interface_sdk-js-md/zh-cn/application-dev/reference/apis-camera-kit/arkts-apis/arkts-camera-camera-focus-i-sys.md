@@ -1,6 +1,6 @@
 # Focus
 
-Focus继承自[FocusQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。
 
 对焦类，对设备对焦操作。
 
@@ -13,6 +13,12 @@ Focus继承自[FocusQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
 <!--Device-camera-interface Focus extends FocusQuery--><!--Device-camera-interface Focus extends FocusQuery-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getFocusAssist
 
@@ -42,10 +48,10 @@ Checks whether the focus assist is enabled.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 function getFocusAssist(professionalPhotoSession: camera.ProfessionalPhotoSession): boolean {
@@ -83,16 +89,16 @@ Obtains the focus drive type in use.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Focus drive type. |
+| [FocusDrivenType](arkts-camera-camera-focusdriventype-e-sys.md) | Focus drive type. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -132,16 +138,16 @@ Obtains the focus range type in use.
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Focus range type. |
+| [FocusRangeType](arkts-camera-camera-focusrangetype-e-sys.md) | Focus range type. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -166,7 +172,7 @@ setFocusAssist(enabled: boolean): void
 ```
 
 Sets the focus assist. Before the setting, call  
-[isFocusAssistSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether the device supports the focus assist.
+[isFocusAssistSupported](arkts-camera-camera-focusquery-i-sys.md#isfocusassistsupported) to check whether the device supports the focus assist.
 
 **起始版本：** 12
 
@@ -188,11 +194,11 @@ Sets the focus assist. Before the setting, call
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -215,7 +221,7 @@ setFocusDriven(type: FocusDrivenType): void
 ```
 
 Sets a focus drive type. Before the setting, call  
-[isFocusDrivenTypeSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether the focus drive type is supported.
+[isFocusDrivenTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isfocusdriventypesupported) to check whether the focus drive type is supported.
 
 **起始版本：** 15
 
@@ -231,19 +237,19 @@ Sets a focus drive type. Before the setting, call
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Focus drive type. |
+| type | [FocusDrivenType](arkts-camera-camera-focusdriventype-e-sys.md) | 是 | Focus drive type. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 7400102 | Operation not allowed. |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -266,7 +272,7 @@ setFocusRange(type: FocusRangeType): void
 ```
 
 Sets a focus range type. Before the setting, call  
-[isFocusRangeTypeSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether the focus range type is supported.
+[isFocusRangeTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isfocusrangetypesupported) to check whether the focus range type is supported.
 
 **起始版本：** 15
 
@@ -282,19 +288,19 @@ Sets a focus range type. Before the setting, call
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Focus range type. |
+| type | [FocusRangeType](arkts-camera-camera-focusrangetype-e-sys.md) | 是 | Focus range type. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 7400102 | Operation not allowed. |
+| 7400103 | Session not config. |
+| 7400201 | Camera service fatal error. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

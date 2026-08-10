@@ -1,8 +1,8 @@
 # HiTraceOutputLevel
 
-Enumerates trace output levels.
+枚举，跟踪输出级别。
 
-The trace output level lower than the threshold does not take effect. The log version threshold is **INFO**, and the nolog version threshold is **COMMERCIAL**.
+低于系统跟踪输出级别阈值的打点将不会生效。log版本阈值为INFO；nolog版本阈值为COMMERCIAL。
 
 **Since:** 19
 
@@ -18,7 +18,7 @@ The trace output level lower than the threshold does not take effect. The log ve
 DEBUG = 0
 ```
 
-Level used only for debugging, which has the lowest priority.
+仅用于调试的输出级别，优先级最低。低于系统跟踪输出级别阈值时打点不会生效。
 
 **Since:** 19
 
@@ -36,7 +36,7 @@ Level used only for debugging, which has the lowest priority.
 INFO = 1
 ```
 
-Level for the log version.
+用于log版本的输出级别，log版本阈值为INFO。
 
 **Since:** 19
 
@@ -54,7 +54,7 @@ Level for the log version.
 CRITICAL = 2
 ```
 
-Level for the log version, which has a higher priority than **INFO**.
+用于log版本的输出级别，优先级高于INFO，用于需要重点关注的trace事件。
 
 **Since:** 19
 
@@ -72,7 +72,7 @@ Level for the log version, which has a higher priority than **INFO**.
 COMMERCIAL = 3
 ```
 
-Level for the nolog version, which has the highest priority.
+用于nolog版本的输出级别，优先级最高。nolog版本阈值为COMMERCIAL。
 
 **Since:** 19
 
@@ -90,7 +90,7 @@ Level for the nolog version, which has the highest priority.
 MAX = COMMERCIAL
 ```
 
-Maximum trace output level: **COMMERCIAL**.
+输出级别范围限制，MAX = COMMERCIAL。
 
 **Since:** 19
 

@@ -14,6 +14,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## audioEncodeBitRate
 
 ```TypeScript
@@ -44,7 +50,7 @@ audioEncoder?: AudioEncoder
 
 音频编码格式。默认值为DEFAULT，API8之后将废弃。请使用"audioEncoderMime"替代。
 
-**类型：** AudioEncoder
+**类型：** [AudioEncoder](arkts-media-multimedia-media-audioencoder-e.md)
 
 **起始版本：** 6
 
@@ -66,7 +72,7 @@ audioEncoderMime?: CodecMimeType
 
 音频编码格式MIME。用于替代audioEncoder。
 
-**类型：** CodecMimeType
+**类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
 **起始版本：** 8
 
@@ -110,7 +116,7 @@ fileFormat?: ContainerFormatType
 
 输出文件格式，详见ContainerFormatType。用于替代"format"。
 
-**类型：** ContainerFormatType
+**类型：** [ContainerFormatType](arkts-media-multimedia-media-containerformattype-e.md)
 
 **起始版本：** 8
 
@@ -132,7 +138,7 @@ format?: AudioOutputFormat
 
 音频输出格式。默认值为DEFAULT。API8之后废弃，使用"fileFormat"替代。
 
-**类型：** AudioOutputFormat
+**类型：** [AudioOutputFormat](arkts-media-multimedia-media-audiooutputformat-e.md)
 
 **起始版本：** 6
 
@@ -154,7 +160,7 @@ location?: Location
 
 地理位置信息。
 
-**类型：** Location
+**类型：** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
 
 **起始版本：** 6
 

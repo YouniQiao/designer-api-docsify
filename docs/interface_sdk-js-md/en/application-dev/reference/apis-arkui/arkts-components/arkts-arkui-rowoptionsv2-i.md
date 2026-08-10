@@ -1,11 +1,6 @@
 # RowOptionsV2
 
-Sets the spacing between child components of the **Row** component.
-    **NOTE**  
-    
-    To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
-    While starting version information is preserved for historical anonymous objects, there may be cases where the  
-    outer element's @since version number is higher than inner element's. This does not affect interface usability.
+设置Row组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。
 
 **Since:** 18
 
@@ -21,14 +16,23 @@ Sets the spacing between child components of the **Row** component.
 space?: SpaceType
 ```
 
-Spacing between child components.This parameter does not take effect if the value specified is a negative number, or if **justifyContent** is set to  
-**FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**.Unit: vp. Invalid values are treated as the default value.  
-    **NOTE**  
-    
-    The value of **space** can be a number greater than or equal to 0, a string that can be converted to a number, or a  
-    Resource type that can be converted to a number. Default value: **0**.
+横向布局元素间距。
 
-**Type:** SpaceType
+取值范围：大于等于0。
+
+从API version 9开始，justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时space参数不生效。
+
+默认值：0
+
+单位：vp
+
+非法值：按默认值处理。
+
+**说明：**
+
+space取值是大于等于0的数字，或者可以转换为非负数字的字符串，或者可以转换为数字的Resource类型数据。负数作为非法值将被当作默认值0处理。
+
+**Type:** [SpaceType](arkts-arkui-spacetype-t.md)
 
 **Since:** 18
 

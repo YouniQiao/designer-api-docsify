@@ -1,14 +1,20 @@
 # isNotificationEnabled
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
+
 ## isNotificationEnabled
 
 ```TypeScript
 function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-Queries the notification authorization status of the current application. This API uses an asynchronous callback to return the result.
+查询当前应用通知授权状态。使用callback异步回调。
 
-This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
+用于在发布通知前检查当前应用是否被允许发送通知，避免在通知授权关闭时发布导致失败。
 
 **Since:** 11
 
@@ -25,20 +31,22 @@ This API is used to check whether the current application is allowed to send not
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification can be published; **false** means the opposite. If this API call fails, an error object is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true，表示允许发布通知；返回false，表示禁止发布通知；调用失败返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 1600008 | The user does not exist.<br>**Applicable version:** 11 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 201 | Permission denied.<br>**Applicable version:** 9 - 10 |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface.<br>**Applicable version:** 9 - 10 |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 17700001 | The specified bundle name was not found.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -61,9 +69,9 @@ notificationManager.isNotificationEnabled(isNotificationEnabledCallback);
 function isNotificationEnabled(): Promise<boolean>
 ```
 
-Queries the notification authorization status of the current application. This API uses a promise to return the result.
+查询当前应用通知授权状态。使用Promise异步回调。
 
-This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
+用于在发布通知前检查当前应用是否被允许发送通知，避免在通知使能关闭时发布导致失败。
 
 **Since:** 11
 
@@ -80,19 +88,21 @@ This API is used to check whether the current application is allowed to send not
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回true，表示允许发布通知；返回false，表示禁止发布通知。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+| 1600008 | The user does not exist.<br>**Applicable version:** 11 and later |
+| 201 | Permission denied.<br>**Applicable version:** 9 - 10 |
+| 1600001 | Internal error. |
+| 202 | Not system application to call the interface.<br>**Applicable version:** 9 - 10 |
+| 1600002 | Marshalling or unmarshalling error. |
+| 1600003 | Failed to connect to the service. |
+| 17700001 | The specified bundle name was not found.<br>**Applicable version:** 11 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

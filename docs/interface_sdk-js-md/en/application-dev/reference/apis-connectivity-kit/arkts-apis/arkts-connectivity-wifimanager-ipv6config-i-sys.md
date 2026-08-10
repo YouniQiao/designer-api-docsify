@@ -12,6 +12,12 @@ Wi-Fi Ipv6 configuration information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## dnsServers
 
 ```TypeScript
@@ -100,7 +106,7 @@ prefixLength: int
 
 Prefix length.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

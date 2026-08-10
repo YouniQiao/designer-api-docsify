@@ -1,12 +1,18 @@
 # onContinuousTaskCancel
 
+## Modules to Import
+
+```TypeScript
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## onContinuousTaskCancel
 
 ```TypeScript
 function onContinuousTaskCancel(callback: Callback<ContinuousTaskCancelInfo>): void
 ```
 
-Register continuous task cancel callback.
+注册长时任务取消的监听，使用callback异步回调。
 
 **Since:** 23
 
@@ -22,12 +28,12 @@ Register continuous task cancel callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinuousTaskCancelInfo&gt; | Yes | the callback of continuous task cancel. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskCancelInfo&gt; | Yes | the callback of continuous task cancel. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Callback parameter error; 2. Register a exist callback type; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Callback parameter error; 2. Register a exist callback type; 3. Parameter verification failed. |
+| 201 | Permission denied. |
 

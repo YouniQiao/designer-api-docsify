@@ -1,6 +1,6 @@
 # Profiler
 
-Profiler tools for inspectors.
+inspector的性能分析（Profiler）工具。
 
 **Since:** 8
 
@@ -19,7 +19,7 @@ Profiler tools for inspectors.
 
 | Name | Description |
 | --- | --- |
-| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md#registervsynccallback) | Registers vsync callback for profiler. |
-| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md#unregistervsynccallback) | Unregisters vsync callback. |
+| [registerVsyncCallback](arkts-arkui-profiler-registervsynccallback-f-sys.md#registervsynccallback) | 为profiler注册vsync回调。 |
+| [unregisterVsyncCallback](arkts-arkui-profiler-unregistervsynccallback-f-sys.md#unregistervsynccallback) | 注销vsync回调。 |
 <!--DelEnd-->
 

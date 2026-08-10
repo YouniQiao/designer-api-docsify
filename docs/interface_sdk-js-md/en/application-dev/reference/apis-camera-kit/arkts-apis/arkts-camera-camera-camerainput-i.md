@@ -1,8 +1,8 @@
 # CameraInput
 
-CameraInput** defines the camera input object.
+相机设备输入对象。
 
-It provides camera device information used in [Session]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
 
 **Since:** 10
 
@@ -12,13 +12,19 @@ It provides camera device information used in [Session]\_\_\_JSDOC\_LINK\_DESC\_
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## close
 
 ```TypeScript
 close(callback: AsyncCallback<void>): void
 ```
 
-Closes this camera device. This API uses an asynchronous callback to return the result.
+关闭相机，通过注册回调函数获取状态。使用callback异步回调。
 
 **Since:** 10
 
@@ -34,13 +40,13 @@ Closes this camera device. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the camera device is closed successfully, **err** is **undefined**. Otherwise, **err** is an error object with an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当关闭相机成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## close
 
@@ -48,7 +54,7 @@ Closes this camera device. This API uses an asynchronous callback to return the 
 close(): Promise<void>
 ```
 
-Closes this camera device. This API uses a promise to return the result.
+关闭相机，使用Promise异步回调。
 
 **Since:** 10
 
@@ -64,13 +70,13 @@ Closes this camera device. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
 
 ## getPhysicalCameraOrientation
 
@@ -84,7 +90,7 @@ ArkTS-Sta:
 getPhysicalCameraOrientation(): int
 ```
 
-Obtains the physical camera orientation in the current fold state of the device.
+获取设备当前折叠状态下的物理镜头角度。
 
 **Since:** 22
 
@@ -100,7 +106,7 @@ Obtains the physical camera orientation in the current fold state of the device.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Physical camera orientation. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value ranges from 0 to 360, in degrees. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回设备当前折叠状态下的物理镜头角度。 &lt;br&gt;单位为度数（degree），取值范围为[0, 360]。 |
 
 ## isPhysicalCameraOrientationVariable
 
@@ -108,7 +114,7 @@ Obtains the physical camera orientation in the current fold state of the device.
 isPhysicalCameraOrientationVariable(): boolean
 ```
 
-Checks whether the physical camera orientation is adjustable in different fold states of the device.
+查询设备不同折叠状态下，相机物理镜头角度是否可变。
 
 **Since:** 22
 
@@ -124,7 +130,7 @@ Checks whether the physical camera orientation is adjustable in different fold s
 
 | Type | Description |
 | --- | --- |
-| boolean | Checks whether the physical camera orientation is adjustable in different fold states of the device. **true** if adjustable, **false** otherwise. If the API call fails, undefined is returned. |
+| boolean | 查询设备不同折叠状态下，相机物理镜头角度是否可变。true表示可变，false表示不可变。若接口调用失败，返回undefined。 |
 
 ## off('error')
 
@@ -132,7 +138,7 @@ Checks whether the physical camera orientation is adjustable in different fold s
 off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void
 ```
 
-Unsubscribes from CameraInput error events.
+注销监听CameraInput的错误事件。
 
 **Since:** 10
 
@@ -148,9 +154,9 @@ Unsubscribes from CameraInput error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a CameraInput instance is created. This event is triggered and the result is returned when an error occurs on the camera device. For example, if the camera device is unavailable or a conflict occurs, the error information is returned. |
-| camera | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera device. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used to return the result. If this parameter is specified, only the corresponding callback will be unregistered (the callback object cannot be an anonymous function); otherwise, all registered callbacks will be unregistered. |
+| type | 'error' | Yes | 监听事件，固定为'error'，CameraInput对象创建成功可监听。相机设备出错情况下可触发该事件并返回结果，比如设备不可用或者冲突等返回对应错误信息。 |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | CameraDevice对象。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数，如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。 |
 
 ## off('cameraOcclusionDetection')
 
@@ -158,7 +164,7 @@ Unsubscribes from CameraInput error events.
 off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void
 ```
 
-Unsubscribes from **CameraInput** occlusion events. This API uses an asynchronous callback to return the result.
+注销监听CameraInput的镜头遮挡或脏污事件。使用callback异步回调。
 
 **Since:** 23
 
@@ -174,8 +180,14 @@ Unsubscribes from **CameraInput** occlusion events. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cameraOcclusionDetection' | Yes | Event type. The value is fixed at **'cameraOcclusionDetection'**. The event can be listened for when a **CameraInput** instance is created. It is triggered when the occlusion status of the camera lens changes, and the occlusion status is returned. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CameraOcclusionDetectionResult&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| type | 'cameraOcclusionDetection' | Yes | 监听事件，固定为'cameraOcclusionDetection'，CameraInput对象创建成功可监听。相机镜头被遮挡或有脏污可 触发该事件并返回结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraOcclusionDetectionResult&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否 则取消所有callback。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 202 | Not System Application.<br>**Applicable version:** 12 - 22 |
 
 ## offCameraOcclusionDetection
 
@@ -197,7 +209,7 @@ Unsubscribes from camera occlusion detection results.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CameraOcclusionDetectionResult&gt; | No | Callback used to get detection results. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraOcclusionDetectionResult&gt; | No | Callback used to get detection results. |
 
 ## offError
 
@@ -219,8 +231,8 @@ Unsubscribes from error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera device. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used to get the camera input errors. |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to get the camera input errors. |
 
 ## on('error')
 
@@ -228,10 +240,11 @@ Unsubscribes from error events.
 on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
 ```
 
-Subscribes to CameraInput error events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听CameraInput的错误事件，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 10
 
@@ -247,9 +260,9 @@ Subscribes to CameraInput error events. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a CameraInput instance is created. This event is triggered and the result is returned when an error occurs on the camera device. For example, if the camera device is unavailable or a conflict occurs, the error information is returned. |
-| camera | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera device. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to return an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | 'error' | Yes | 监听事件，固定为'error'，CameraInput对象创建成功可监听。相机设备出错情况下可触发该事件并返回结果，比如设备不可用或者冲突等返回对应错误信息。 |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | CameraDevice对象。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 回调函数，用于获取结果。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 ## on('cameraOcclusionDetection')
 
@@ -257,10 +270,11 @@ Subscribes to CameraInput error events. This API uses an asynchronous callback t
 on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void
 ```
 
-Subscribes to **CameraInput** occlusion events. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+监听CameraInput的镜头遮挡或脏污事件，通过注册回调函数获取结果。使用callback异步回调。
+
+> **说明：**
+> 
+> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **Since:** 23
 
@@ -276,8 +290,14 @@ Subscribes to **CameraInput** occlusion events. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cameraOcclusionDetection' | Yes | Event type. The value is fixed at **'cameraOcclusionDetection'**. The event can be listened for when a **CameraInput** instance is created. It is triggered when the occlusion status of the camera lens changes, and the occlusion status is returned. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CameraOcclusionDetectionResult&gt; | Yes | Callback used to return the occlusion status. |
+| type | 'cameraOcclusionDetection' | Yes | 监听事件，固定为'cameraOcclusionDetection'，CameraInput对象创建成功可监听。相机镜头被遮挡或有脏污可 触发该事件并返回结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraOcclusionDetectionResult&gt; | Yes | 回调函数，用于获取结果。返回遮挡状态。 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 202 | Not System Application.<br>**Applicable version:** 12 - 22 |
 
 ## onCameraOcclusionDetection
 
@@ -299,7 +319,7 @@ Subscribes to camera occlusion detection results.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CameraOcclusionDetectionResult&gt; | Yes | Callback used to get detection results. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraOcclusionDetectionResult&gt; | Yes | Callback used to get detection results. |
 
 ## onError
 
@@ -321,8 +341,8 @@ Subscribes to error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Camera device. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to get the camera input errors. |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to get the camera input errors. |
 
 ## open
 
@@ -330,7 +350,7 @@ Subscribes to error events.
 open(callback: AsyncCallback<void>): void
 ```
 
-Opens this camera device. This API uses an asynchronous callback to return the result.
+打开相机，通过注册回调函数获取状态。使用callback异步回调。
 
 **Since:** 10
 
@@ -346,15 +366,15 @@ Opens this camera device. This API uses an asynchronous callback to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the camera device is opened successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当打开相机成功，err为undefined，否则为错误对象，错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
-| [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
+| 7400107 | Can not use camera cause of conflict. |
+| 7400108 | Camera disabled cause of security reason. |
 
 ## open
 
@@ -362,7 +382,7 @@ Opens this camera device. This API uses an asynchronous callback to return the r
 open(): Promise<void>
 ```
 
-Opens this camera device. This API uses a promise to return the result.
+打开相机，使用Promise异步回调。
 
 **Since:** 10
 
@@ -378,16 +398,16 @@ Opens this camera device. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
-| [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error. |
+| 7400107 | Can not use camera cause of conflict. |
+| 7400108 | Camera disabled cause of security reason. |
 
 ## open
 
@@ -395,7 +415,7 @@ Opens this camera device. This API uses a promise to return the result.
 open(isSecureEnabled: boolean): Promise<bigint>
 ```
 
-Opens this camera device. This API uses a promise to return the result.
+打开相机。使用Promise异步回调。
 
 **Since:** 12
 
@@ -411,21 +431,21 @@ Opens this camera device. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSecureEnabled | boolean | Yes | Whether to open the camera device in secure mode. **true** to open in secure mode, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is returned. |
+| isSecureEnabled | boolean | Yes | 设置true为使能以安全的方式打开相机，设置false则反之。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;bigint&gt; | Promise used to return the handle to the camera device in secure mode. |
+| Promise&lt;bigint&gt; | Promise对象，返回安全相机的句柄。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
-| [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400201 | Camera service fatal error. |
+| 7400107 | Can not use camera cause of conflict. |
+| 7400108 | Camera disabled cause of security reason. |
 
 ## open
 
@@ -433,7 +453,7 @@ Opens this camera device. This API uses a promise to return the result.
 open(type: CameraConcurrentType): Promise<void>
 ```
 
-Opens the camera with the specified concurrency type. This API uses a promise to return the result.
+以指定的并发类型打开相机。使用Promise异步回调。
 
 **Since:** 18
 
@@ -449,22 +469,22 @@ Opens the camera with the specified concurrency type. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Concurrency type. If the API fails to be called, an error code is returned. |
+| type | [CameraConcurrentType](arkts-camera-camera-cameraconcurrenttype-e.md) | Yes | 以指定的并发类型打开相机。接口调用失败会返回相应错误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400107](../errorcode-camera.md#7400107-camera-conflict) | Can not use camera cause of conflict. |
-| [7400108](../errorcode-camera.md#7400108-camera-disabled-due-to-security-reasons) | Camera disabled cause of security reason. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error. |
+| 7400107 | Can not use camera cause of conflict. |
+| 7400108 | Camera disabled cause of security reason. |
 
 ## usePhysicalCameraOrientation
 
@@ -472,7 +492,7 @@ Opens the camera with the specified concurrency type. This API uses a promise to
 usePhysicalCameraOrientation(isUsed: boolean): void
 ```
 
-Enables or disables the use of the physical camera orientation.
+选择是否使用物理镜头角度。
 
 **Since:** 22
 
@@ -488,12 +508,12 @@ Enables or disables the use of the physical camera orientation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isUsed | boolean | Yes | Enables or disables the use of the physical camera orientation. **true** to enable, **false** otherwise. |
+| isUsed | boolean | Yes | 选择是否使用物理镜头角度。true表示使用，false表示不使用。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| 7400102 | Operation not allowed. |
+| 7400201 | Camera service fatal error. |
 

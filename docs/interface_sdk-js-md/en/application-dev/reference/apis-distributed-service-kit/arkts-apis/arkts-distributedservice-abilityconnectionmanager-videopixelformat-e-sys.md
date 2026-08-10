@@ -1,6 +1,6 @@
 # VideoPixelFormat (System API)
 
-Video pixelFormat Configuration Options.
+视频像素格式配置选项。
 
 **Since:** 18
 
@@ -18,7 +18,7 @@ Video pixelFormat Configuration Options.
 UNKNOWN = -1
 ```
 
-Unknown.
+未知格式。
 
 **Since:** 18
 
@@ -38,7 +38,7 @@ Unknown.
 NV12 = 0
 ```
 
-NV12. yuv 420 semiplanar.
+NV12。yuv 420 semiplanar。
 
 **Since:** 18
 
@@ -58,7 +58,7 @@ NV12. yuv 420 semiplanar.
 NV21 = 1
 ```
 
-NV21. yvu 420 semiplanar.
+NV21。yvu 420 semiplanar。
 
 **Since:** 18
 

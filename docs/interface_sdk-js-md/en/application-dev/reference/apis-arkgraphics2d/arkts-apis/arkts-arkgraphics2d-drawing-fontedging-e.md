@@ -1,6 +1,10 @@
 # FontEdging
 
-Enumerates the font edging types.
+字型边缘效果类型枚举。
+
+> **说明：**
+> 
+> FontEdging不支持位图字体（如点阵字体、emoji等）。
 
 **Since:** 12
 
@@ -16,7 +20,7 @@ Enumerates the font edging types.
 ALIAS = 0
 ```
 
-No anti-aliasing processing is used.
+无抗锯齿处理。
 
 **Since:** 12
 
@@ -34,7 +38,7 @@ No anti-aliasing processing is used.
 ANTI_ALIAS = 1
 ```
 
-Uses anti-aliasing to smooth the jagged edges.
+使用抗锯齿来平滑字型边缘。
 
 **Since:** 12
 
@@ -52,7 +56,7 @@ Uses anti-aliasing to smooth the jagged edges.
 SUBPIXEL_ANTI_ALIAS = 2
 ```
 
-Uses sub-pixel anti-aliasing to provide a smoother effect for jagged edges.
+使用次像素级别的抗锯齿平滑字型边缘，可以获得更平滑的字型渲染效果。
 
 **Since:** 12
 

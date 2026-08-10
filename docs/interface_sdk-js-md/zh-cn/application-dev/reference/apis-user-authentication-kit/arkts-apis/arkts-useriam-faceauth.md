@@ -1,6 +1,6 @@
 # @ohos.userIAM.faceAuth(人脸认证)
 
-faceAuth**模块是OpenHarmony用户身份认证体系（UserIAM）的重要组成部分，用于管理人脸录入功能。该模块提供了人脸认证管理的核心API，使开发者能够在应用内录入和管理人脸信息。
+**faceAuth**模块是OpenHarmony用户身份认证体系（UserIAM）的重要组成部分，用于管理人脸录入功能。该模块提供了人脸认证管理的核心API，使开发者能够在应用内录入和管理人脸信息。
 
 该模块主要用于以下场景：
 
@@ -15,6 +15,12 @@ faceAuth**模块是OpenHarmony用户身份认证体系（UserIAM）的重要组�
 <!--Device-unnamed-declare namespace faceAuth--><!--Device-unnamed-declare namespace faceAuth-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.FaceAuth
+
+## 导入模块
+
+```TypeScript
+import { faceAuth } from 'kits/@kit.UserAuthenticationKit';
+```
 
 ## 汇总
 

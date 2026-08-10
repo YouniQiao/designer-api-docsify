@@ -1,6 +1,6 @@
 # UsbIsoPacketDescriptor
 
-Describes packet information returned in real time by the transfer callback.
+实时传输模式回调返回的分包信息。
 
 **Since:** 18
 
@@ -10,15 +10,21 @@ Describes packet information returned in real time by the transfer callback.
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## actualLength
 
 ```TypeScript
 actualLength: int
 ```
 
-Actual length of the read or written data.Unit: bytes.
+读写操作的实际长度值。（单位：字节）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -34,9 +40,9 @@ Actual length of the read or written data.Unit: bytes.
 length: int
 ```
 
-Expected length of the read or written data.Unit: bytes.
+读写操作的期望长度值。（单位：字节）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 
@@ -52,9 +58,9 @@ Expected length of the read or written data.Unit: bytes.
 status: UsbTransferStatus
 ```
 
-Status returned by callback.
+实时传输分包的状态码。
 
-**Type:** UsbTransferStatus
+**Type:** [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
 
 **Since:** 18
 

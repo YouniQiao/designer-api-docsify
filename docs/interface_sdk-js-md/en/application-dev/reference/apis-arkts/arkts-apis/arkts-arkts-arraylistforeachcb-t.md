@@ -4,7 +4,7 @@
 export type ArrayListForEachCb<T> =  (value: T, index: int, arrlist: ArrayList<T>) => void
 ```
 
-The type of ArrayList callback function.
+ArrayList中forEach方法的回调函数。
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ The type of ArrayList callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | The current element being processed  |
-| index | int | Yes | The index of the current element  |
-| arrlist | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | The ArrayList instance being traversed  |
+| value | T | Yes | 当前遍历到的元素。 |
+| index | int | Yes | 当前遍历到的下标值。 |
+| arrlist | [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)&lt;T&gt; | Yes | 当前调用forEach方法的实例对象。 |
 

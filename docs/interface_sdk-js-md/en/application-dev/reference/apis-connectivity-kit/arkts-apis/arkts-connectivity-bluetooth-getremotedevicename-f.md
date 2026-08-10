@@ -1,5 +1,11 @@
 # getRemoteDeviceName
 
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getRemoteDeviceName
 
 ```TypeScript
@@ -34,7 +40,7 @@ Obtains the name of a peer Bluetooth device.
 | --- | --- |
 | string | Returns the device name in character string format. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let remoteDeviceName : string = bluetooth.getRemoteDeviceName("XX:XX:XX:XX:XX:XX");

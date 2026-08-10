@@ -1,12 +1,18 @@
 # onFormAdd (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formObserver } from 'kits/@kit.FormKit';
+```
+
 ## onFormAdd
 
 ```TypeScript
 function onFormAdd(observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Listens to the event of add form.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_You can use this method to listen to the event of add form.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+Listens to the event of add form.&lt;p&gt;You can use this method to listen to the event of add form.&lt;/p&gt;
 
 **Since:** 23
 
@@ -24,15 +30,15 @@ Listens to the event of add form.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_You can use 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observerCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 201 | Permissions denied. |
+| 202 | The application is not a system application. |
 
 
 ## onFormAdd
@@ -41,7 +47,7 @@ Listens to the event of add form.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_You can use 
 function onFormAdd(hostBundleName: string, observerCallback: Callback<formInfo.RunningFormInfo>): void
 ```
 
-Listens to the event of add form.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_You can use this method to listen to the event of add form for a particular card host.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_
+Listens to the event of add form.&lt;p&gt;You can use this method to listen to the event of add form for a particular card host.&lt;/p&gt;
 
 **Since:** 23
 
@@ -60,13 +66,13 @@ Listens to the event of add form.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_You can use 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hostBundleName | string | Yes | Indicates the bundle name of the form host application. |
-| observerCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
+| observerCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.RunningFormInfo&gt; | Yes | The callback is used to return the running form info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 201 | Permissions denied. |
+| 202 | The application is not a system application. |
 

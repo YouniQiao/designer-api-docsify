@@ -1,5 +1,11 @@
 # alloc
 
+## 导入模块
+
+```TypeScript
+import { fastbuffer } from 'kits/@kit.ArkTS';
+```
+
 ## alloc
 
 ```TypeScript
@@ -22,17 +28,17 @@ function alloc(size: number, fill?: string | FastBuffer | number, encoding?: Buf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | number | 是 | 指定的FastBuffer对象长度，单位：字节。取值范围：0 <= size <= UINT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| size | number | 是 | 指定的FastBuffer对象长度，单位：字节。取值范围：0 <= size <= UINT32_MAX。 |
 | fill | string \| FastBuffer \| number | 否 | 填充至新缓冲区的值，默认值：0。 |
-| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 编码格式（当\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 | 编码格式（当`fill`为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回一个FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回一个FastBuffer对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

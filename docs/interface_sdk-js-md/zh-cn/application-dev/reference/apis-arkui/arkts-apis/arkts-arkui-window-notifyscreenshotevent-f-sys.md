@@ -1,5 +1,11 @@
 # notifyScreenshotEvent（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## notifyScreenshotEvent
 
 ```TypeScript
@@ -22,7 +28,7 @@ function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 截屏事件类型。 |
+| eventType | [ScreenshotEventType](arkts-arkui-window-screenshoteventtype-e.md) | 是 | 截屏事件类型。 |
 
 **返回值：**
 
@@ -34,11 +40,11 @@ function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

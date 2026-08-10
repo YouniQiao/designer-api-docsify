@@ -1,12 +1,6 @@
 # UIExtensionComponent properties/events
 
-The [universal attributes]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ are supported.
-
-Universal events, such as the [click event]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, are not supported.
-
-The events are passed to the remote UIExtensionAbility for processing after coordinate conversion.
-
-The following events are supported:
+定义UIExtensionComponent的属性函数。
 
 **Inheritance/Implementation:** UIExtensionComponentAttribute extends [CommonMethod<UIExtensionComponentAttribute>](CommonMethod<UIExtensionComponentAttribute>)
 

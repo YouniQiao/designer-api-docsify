@@ -1,6 +1,6 @@
 # TouchEvent
 
-Defines a touch event.
+触屏输入事件。
 
 **Inheritance/Implementation:** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
@@ -12,15 +12,21 @@ Defines a touch event.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
+## Modules to Import
+
+```TypeScript
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'kits/@kit.InputKit';
+```
+
 ## action
 
 ```TypeScript
 action: Action
 ```
 
-Event type.
+触屏输入事件类型。
 
-**Type:** Action
+**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
 **Since:** 9
 
@@ -36,9 +42,9 @@ Event type.
 sourceType: SourceType
 ```
 
-Device type of the touch source.
+触屏来源的设备类型。
 
-**Type:** SourceType
+**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 
 **Since:** 9
 
@@ -54,9 +60,9 @@ Device type of the touch source.
 touch: Touch
 ```
 
-Current touch point.
+当前触屏点信息。
 
-**Type:** Touch
+**Type:** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)
 
 **Since:** 9
 
@@ -72,9 +78,9 @@ Current touch point.
 touches: Touch[]
 ```
 
-All touch points.
+所有触屏点。
 
-**Type:** Touch[]
+**Type:** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)[]
 
 **Since:** 9
 

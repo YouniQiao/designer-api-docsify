@@ -1,12 +1,18 @@
 # openScanner
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## openScanner
 
 ```TypeScript
 function openScanner(scannerId: string): Promise<void>
 ```
 
-Opens a scanner. This API uses a promise to return the result.
+打开扫描仪。使用Promise异步回调。
 
 **Since:** 20
 
@@ -22,21 +28,21 @@ Opens a scanner. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | ID of the scanner to be opened. |
+| scannerId | string | Yes | 要打开的扫描仪的ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 201 | Permission denied. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { scan } from '@kit.BasicServicesKit';

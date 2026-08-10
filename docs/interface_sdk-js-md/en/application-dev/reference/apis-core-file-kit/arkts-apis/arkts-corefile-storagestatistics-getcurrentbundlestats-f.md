@@ -1,12 +1,18 @@
 # getCurrentBundleStats
 
+## Modules to Import
+
+```TypeScript
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
+```
+
 ## getCurrentBundleStats
 
 ```TypeScript
 function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 ```
 
-Obtains the storage space (in bytes) of this application. This API uses an asynchronous callback to return the result.
+应用异步获取当前应用存储空间大小（单位为Byte），使用callback异步回调。
 
 **Since:** 9
 
@@ -20,17 +26,17 @@ Obtains the storage space (in bytes) of this application. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BundleStats&gt; | Yes | Callback used to return the application space obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleStats&gt; | Yes | 获取指定卷上的应用存储空间大小之后的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
+| 401 | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -51,7 +57,7 @@ storageStatistics.getCurrentBundleStats((error: BusinessError, bundleStats: stor
 function getCurrentBundleStats(): Promise<BundleStats>
 ```
 
-Obtains the storage space (in bytes) of this application. This API uses a promise to return the result.
+应用异步获取当前应用存储空间大小（单位为Byte），以Promise方式返回。
 
 **Since:** 9
 
@@ -65,17 +71,17 @@ Obtains the storage space (in bytes) of this application. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleStats&gt; | Promise used to return the application storage space obtained. |
+| Promise&lt;BundleStats&gt; | Promise对象，返回指定卷上的应用存储空间大小（单位为Byte）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
+| 401 | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -1,5 +1,11 @@
 # registerTypeDescriptors（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+```
+
 ## registerTypeDescriptors
 
 ```TypeScript
@@ -40,8 +46,8 @@ function registerTypeDescriptors(typeDescriptors: Array<TypeDescriptor>): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [20400002](../errorcode-udmf.md#20400002-标准化数据类型描述符格式错误) | The format of one or more typeDescriptors are invalid. |
-| [20400003](../errorcode-udmf.md#20400003-标准化数据类型描述符内容错误) | The content of one or more typeDescriptors violate rules. |
+| 20400003 | The content of one or more typeDescriptors violate rules. |
+| 20400002 | The format of one or more typeDescriptors are invalid. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission denied, non-system app called system api. |
 

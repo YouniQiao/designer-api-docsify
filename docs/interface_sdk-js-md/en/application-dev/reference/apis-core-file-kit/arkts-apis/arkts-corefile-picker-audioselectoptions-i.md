@@ -1,6 +1,6 @@
 # AudioSelectOptions
 
-Defines options for selecting audio clips.
+音频选择选项。
 
 **Since:** 23
 
@@ -11,4 +11,10 @@ Defines options for selecting audio clips.
 <!--Device-picker-interface AudioSelectOptions--><!--Device-picker-interface AudioSelectOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
+
+## Modules to Import
+
+```TypeScript
+import { picker } from 'kits/@kit.CoreFileKit';
+```
 

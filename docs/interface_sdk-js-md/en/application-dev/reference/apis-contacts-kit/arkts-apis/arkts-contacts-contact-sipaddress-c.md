@@ -1,6 +1,6 @@
 # SipAddress
 
-Defines a contact's SIP address.
+联系人的会话发起协议(SIP)地址类。
 
 **Since:** 7
 
@@ -10,13 +10,19 @@ Defines a contact's SIP address.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
+## Modules to Import
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## CUSTOM_LABEL
 
 ```TypeScript
 static readonly CUSTOM_LABEL: 0
 ```
 
-Custom mailbox type, the default value is **0**.
+自定义邮箱类型，默认值为0。
 
 **Type:** 0
 
@@ -36,7 +42,7 @@ Custom mailbox type, the default value is **0**.
 static readonly INVALID_LABEL_ID: -1
 ```
 
-Invalid mailbox, the default value is **-1**.
+无效邮箱类型，默认值为-1。
 
 **Type:** -1
 
@@ -56,7 +62,7 @@ Invalid mailbox, the default value is **-1**.
 static readonly SIP_HOME: 1
 ```
 
-Home SIP address, the default value is **1**.
+家庭会话发起协议(SIP)地址类型，默认值为1。
 
 **Type:** 1
 
@@ -76,7 +82,7 @@ Home SIP address, the default value is **1**.
 static readonly SIP_OTHER: 3
 ```
 
-Other SIP address, the default value is **3**.
+其它会话发起协议(SIP)地址类型，默认值为3。
 
 **Type:** 3
 
@@ -96,7 +102,7 @@ Other SIP address, the default value is **3**.
 static readonly SIP_WORK: 2
 ```
 
-Work SIP address, the default value is **2**.
+工作会话发起协议(SIP)地址类型，默认值为2。
 
 **Type:** 2
 
@@ -116,7 +122,7 @@ Work SIP address, the default value is **2**.
 labelId?: number
 ```
 
-Mailbox type.
+邮箱的类型。
 
 **Type:** number
 
@@ -136,7 +142,7 @@ Mailbox type.
 labelName?: string
 ```
 
-Name of the mailbox type.
+邮箱的类型名称。
 
 **Type:** string
 
@@ -156,7 +162,7 @@ Name of the mailbox type.
 sipAddress: string
 ```
 
-SIP address.
+会话发起协议(SIP)地址。
 
 **Type:** string
 

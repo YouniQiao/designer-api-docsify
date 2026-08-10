@@ -1,6 +1,6 @@
 # ReadTextOptions
 
-可选项类型，支持readText接口使用，ReadTextOptions继承自[ReadOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+可选项类型，支持readText接口使用，ReadTextOptions继承自[ReadOptions](arkts-corefile-file-fs-readoptions-i.md)。
 
 **继承/实现关系：** ReadTextOptions extends [ReadOptions](arkts-corefile-file-fs-readoptions-i.md)
 
@@ -11,6 +11,12 @@
 <!--Device-unnamed-export interface ReadTextOptions extends ReadOptions--><!--Device-unnamed-export interface ReadTextOptions extends ReadOptions-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
 
 ## encoding
 

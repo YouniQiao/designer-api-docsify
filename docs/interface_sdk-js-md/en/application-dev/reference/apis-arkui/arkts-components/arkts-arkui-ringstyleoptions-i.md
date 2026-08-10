@@ -1,11 +1,10 @@
 # RingStyleOptions
 
-Options of the ring style without scales.
+环形无刻度样式选项。
 
-Inherits from [ScanEffectOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[CommonProgressStyleOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
 
-**Inheritance/Implementation:** RingStyleOptions extends [ScanEffectOptions](../arkts-apis/arkts-arkui-component/progress-scaneffectoptions-i.md), [CommonProgressStyleOptions](../arkts-apis/arkts-arkui-component/progress-commonprogressstyleoptions-i.md)
+**Inheritance/Implementation:** RingStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
 **Since:** 10
 
@@ -21,11 +20,11 @@ Inherits from [ScanEffectOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and
 shadow?: boolean
 ```
 
-Whether to enable the shadow effect.
+进度条阴影开关。
 
-**true**: The shadow effect is enabled. **false**: The shadow effect is disabled.
+true：表示打开进度条阴影；false：表示关闭进度条阴影。
 
-Default value: **false
+默认值：false
 
 **Type:** boolean
 
@@ -47,12 +46,11 @@ Default value: **false
 status?: ProgressStatus
 ```
 
-Progress state. When this parameter is set to **ProgressStatus.LOADING**, the update check animation is enabled,and the progress value setting does not take effect. When the value changes from **ProgressStatus.LOADING** to  
-**ProgressStatus.PROGRESSING**, the update check animation runs to completion and then stops.
+设置进度条状态。当设置为ProgressStatus.LOADING时会开启检查更新动效，此时设置进度值不生效。当从ProgressStatus.LOADING设置为ProgressStatus.PROGRESSING时，检查更新动效会执行到终点再停止。
 
-Default value: **ProgressStatus.PROGRESSING
+默认值：ProgressStatus.PROGRESSING
 
-**Type:** ProgressStatus
+**Type:** [ProgressStatus](arkts-arkui-progressstatus-e.md)
 
 **Since:** 10
 
@@ -72,11 +70,15 @@ Default value: **ProgressStatus.PROGRESSING
 strokeWidth?: Length
 ```
 
-Stroke width of the progress indicator. Percentage values are not supported.
+设置进度条宽度。
 
-Default value: **4.0vp
+默认值：4.0vp
 
-**Type:** Length
+取值范围：大于0的数值，不支持百分比设置。
+
+超出取值范围或设置非法值时按默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
 

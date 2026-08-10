@@ -1,8 +1,8 @@
 # TapRecognizer
 
-Implements a tap gesture recognizer object. Inherits from [GestureRecognizer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+点击手势识别器对象，继承自[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
 
-**Inheritance/Implementation:** TapRecognizer extends [GestureRecognizer](arkts-arkui-component/gesture-gesturerecognizer-c.md)
+**Inheritance/Implementation:** TapRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **Since:** 18
 
@@ -18,7 +18,7 @@ Implements a tap gesture recognizer object. Inherits from [GestureRecognizer]\_\
 getTapCount(): number
 ```
 
-Obtains the number of consecutive taps required for the tap gesture to be recognized.
+返回预设点击手势识别器连续点击次数阈值。
 
 **Since:** 18
 
@@ -36,5 +36,5 @@ Obtains the number of consecutive taps required for the tap gesture to be recogn
 
 | Type | Description |
 | --- | --- |
-| number | Number of consecutive taps required for the tap gesture to be recognized. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value range: [0, +∞) |
+| number | 预设点击手势识别器连续点击次数阈值。&lt;br/&gt;取值范围：[0, +∞) |
 

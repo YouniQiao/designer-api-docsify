@@ -1,6 +1,6 @@
 # TextChangeReason (System API)
 
-Enumerates the reasons for component content changes.
+组件内容变化原因。
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ Enumerates the reasons for component content changes.
 UNKNOWN = 0
 ```
 
-Unknown reason.
+未知原因。
 
 **Since:** 20
 
@@ -38,7 +38,7 @@ Unknown reason.
 INPUT = 1
 ```
 
-User input.
+用户输入。
 
 **Since:** 20
 
@@ -58,7 +58,7 @@ User input.
 PASTE = 2
 ```
 
-Paste operation.
+粘贴。
 
 **Since:** 20
 
@@ -78,7 +78,7 @@ Paste operation.
 CUT = 3
 ```
 
-Cut operation.
+剪切。
 
 **Since:** 20
 
@@ -98,7 +98,7 @@ Cut operation.
 DRAG = 4
 ```
 
-Drag and drop operation.
+拖拽。
 
 **Since:** 20
 
@@ -118,7 +118,7 @@ Drag and drop operation.
 AUTO_FILL = 5
 ```
 
-Auto-fill operation.
+自动填充。
 
 **Since:** 20
 
@@ -138,7 +138,7 @@ Auto-fill operation.
 AI_WRITE = 6
 ```
 
-AI-assisted writing.
+AI帮写。
 
 **Since:** 20
 
@@ -158,7 +158,7 @@ AI-assisted writing.
 REDO = 7
 ```
 
-Redo operation.
+重做。
 
 **Since:** 20
 
@@ -178,7 +178,7 @@ Redo operation.
 UNDO = 8
 ```
 
-Undo operation.
+撤销。
 
 **Since:** 20
 
@@ -198,7 +198,7 @@ Undo operation.
 CONTROLLER = 9
 ```
 
-Component API call.
+开发者调用组件接口。
 
 **Since:** 20
 
@@ -218,7 +218,7 @@ Component API call.
 ACCESSIBILITY = 10
 ```
 
-Accessibility API.
+无障碍接口。
 
 **Since:** 20
 
@@ -238,7 +238,7 @@ Accessibility API.
 COLLABORATION = 11
 ```
 
-Cross-device photographing.
+跨端拍照。
 
 **Since:** 20
 
@@ -258,7 +258,7 @@ Cross-device photographing.
 STYLUS = 12
 ```
 
-Stylus input.
+手写笔。
 
 **Since:** 20
 

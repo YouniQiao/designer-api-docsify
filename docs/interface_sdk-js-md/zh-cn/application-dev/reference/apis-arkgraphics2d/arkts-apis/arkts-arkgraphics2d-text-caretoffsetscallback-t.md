@@ -20,13 +20,13 @@ type CaretOffsetsCallback = (offset: double, index: int, leadingEdge: boolean) =
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | Offset of each character in a text line. The value is a floating point number.  |
-| index | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | Index of each character in a text line. The value is an integer.  |
-| leadingEdge | boolean | 是 | Whether the cursor is located at the front of the character. The value true means that the cursor is located at the front of the character, that is, the offset does not contain the character width. The value false means that the cursor is located at the rear of the character, that is, the offset contains the character width.  |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Offset of each character in a text line. The value is a floating point number. |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Index of each character in a text line. The value is an integer. |
+| leadingEdge | boolean | 是 | Whether the cursor is located at the front of the character. The value true means that the cursor is located at the front of the character, that is, the offset does not contain the character width. The value false means that the cursor is located at the rear of the character, that is, the offset contains the character width. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 表示是否停止调用该回调函数，true表示停止调用该回调函数，false表示继续调用该回调函数。  |
+| boolean | 表示是否停止调用该回调函数，true表示停止调用该回调函数，false表示继续调用该回调函数。 |
 

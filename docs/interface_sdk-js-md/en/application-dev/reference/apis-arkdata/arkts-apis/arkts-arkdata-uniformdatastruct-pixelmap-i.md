@@ -1,6 +1,6 @@
 # PixelMap
 
-Represents data of the pixel map type defined by the system.
+系统定义的像素图类型数据，用于描述图像像素数据。创建PixelMap对象后，可用于图像拖拽、图像共享等场景，实现跨应用的图像数据传递。
 
 **Since:** 15
 
@@ -10,15 +10,21 @@ Represents data of the pixel map type defined by the system.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { uniformDataStruct } from 'kits/@kit.ArkData';
+```
+
 ## details
 
 ```TypeScript
 details?: Record<string, int | long | double | string | Uint8Array>
 ```
 
-Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
+字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**Type:** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
 **Since:** 15
 
@@ -36,7 +42,7 @@ Object of the dictionary type used to describe the icon. The key is of the strin
 pixelMap: image.PixelMap
 ```
 
-Binary data of the pixel map.
+像素图对象。
 
 **Type:** image.PixelMap
 
@@ -56,8 +62,8 @@ Binary data of the pixel map.
 readonly uniformDataType: 'openharmony.pixel-map'
 ```
 
-Uniform data type, which has a fixed value of **openharmony.pixel-map**. For details, see  
-[UniformDataType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+统一数据类型标识为像素图类型数据，固定为"openharmony.pixel-map"，数据类型描述信息见  
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **Type:** 'openharmony.pixel-map'
 

@@ -1,13 +1,19 @@
 # getSystemLocale
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getSystemLocale
 
 ```TypeScript
 export function getSystemLocale(): string
 ```
 
-    [System.getSystemLocale]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_代替。  
-    获取系统区域ID。
+> [System.getSystemLocale](arkts-localization-i18n-system-c.md#getsystemlocaleinstance)代替。
+> 获取系统区域ID。
 
 **起始版本：** 7
 

@@ -18,9 +18,9 @@ pointColor?: ResourceColor
 
 设置Switch类型的圆形滑块颜色。
 
-默认值：\$r('sys.color.ohos\_id\_color\_foreground\_contrary')
+默认值：\$r('sys.color.ohos_id_color_foreground_contrary')
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -103,9 +103,9 @@ unselectedColor?: ResourceColor
 设置Switch类型关闭状态的背景颜色。
 
 默认值：深色和浅色模式下均为0x337F7F7F。从API version 20开始，如果开启了  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_能力，浅色模式下默认值为0x19000000，表现效果为10%透明度的黑色；深色模式下默认值为0x19FFFFFF，表现效果为10%透明度的白色。
+[优化深浅色模式切换开销](../../../ui/ui-dark-light-color-adaptation.md#优化深浅色模式切换开销)能力，浅色模式下默认值为0x19000000，表现效果为10%透明度的黑色；深色模式下默认值为0x19FFFFFF，表现效果为10%透明度的白色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 

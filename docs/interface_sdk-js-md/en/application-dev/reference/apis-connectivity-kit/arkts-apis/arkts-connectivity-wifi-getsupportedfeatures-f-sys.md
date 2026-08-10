@@ -1,5 +1,11 @@
 # getSupportedFeatures (System API)
 
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getSupportedFeatures
 
 ```TypeScript
@@ -8,7 +14,7 @@ function getSupportedFeatures(): number
 
 Obtains the features supported by this device.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_To check whether this device supports a specified feature.
+&lt;p&gt;To check whether this device supports a specified feature.
 
 **Since:** 7
 

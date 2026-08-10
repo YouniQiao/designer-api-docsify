@@ -1,6 +1,6 @@
 # FaultType
 
-Enumerates the fault types.
+故障类型枚举。
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ Enumerates the fault types.
 NO_SPECIFIC = 0
 ```
 
-No specific fault type.
+不区分故障类型。
 
 **Since:** 8
 
@@ -38,7 +38,7 @@ No specific fault type.
 CPP_CRASH = 2
 ```
 
-Native program crash.
+Native运行时异常。
 
 **Since:** 8
 
@@ -56,7 +56,7 @@ Native program crash.
 JS_CRASH = 3
 ```
 
-JS program crash.
+JS程序故障类型。
 
 **Since:** 8
 
@@ -74,7 +74,7 @@ JS program crash.
 APP_FREEZE = 4
 ```
 
-Application freezing.
+应用程序冻屏故障类型。
 
 **Since:** 8
 

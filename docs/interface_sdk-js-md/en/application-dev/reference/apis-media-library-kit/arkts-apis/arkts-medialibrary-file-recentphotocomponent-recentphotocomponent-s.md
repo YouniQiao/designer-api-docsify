@@ -12,6 +12,12 @@ Declare struct RecentPhotoComponent
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckInfoCallback, PhotoSource, RecentPhotoClickCallback, RecentPhotoOptions, RecentPhotoInfo } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## build
 
 ```TypeScript
@@ -94,7 +100,7 @@ recentPhotoOptions?: RecentPhotoOptions
 
 recentPhotoOptions
 
-**Type:** RecentPhotoOptions
+**Type:** [RecentPhotoOptions](arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md)
 
 **Since:** 26.0.0
 

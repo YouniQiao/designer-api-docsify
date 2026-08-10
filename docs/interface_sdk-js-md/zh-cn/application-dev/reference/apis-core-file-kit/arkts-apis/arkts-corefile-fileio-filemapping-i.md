@@ -1,6 +1,6 @@
 # FileMapping
 
-文件映射对象，在调用FileMapping的方法前，需要先通过[mmap()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_或方法[mmapSync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_构建一个FileMapping实例。
+文件映射对象，在调用FileMapping的方法前，需要先通过[mmap()](arkts-corefile-fileio-mmap-f.md#mmap)或方法[mmapSync()](arkts-corefile-fileio-mmapsync-f.md#mmapsync)构建一个FileMapping实例。
 
 **起始版本：** 26.0.0
 
@@ -9,6 +9,12 @@
 <!--Device-fileIo-interface FileMapping--><!--Device-fileIo-interface FileMapping-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
 
 ## capacity
 
@@ -39,8 +45,8 @@ capacity(): int
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## flip
 
@@ -51,8 +57,8 @@ flip(): void
 翻转文件映射区，将写入准备状态切换为读取准备状态。调用后，limit被设置为当前position的值，position被重置为0。
 
 推荐在一系列  
-[write()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_操作完成后，调用此方法准备后续的  
-[read()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_操作。
+[write()](arkts-corefile-fileio-stream-i.md#write)操作完成后，调用此方法准备后续的  
+[read()](arkts-corefile-fileio-stream-i.md#read)操作。
 
 **起始版本：** 26.0.0
 
@@ -69,8 +75,8 @@ flip(): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## getLimit
 
@@ -101,8 +107,8 @@ getLimit(): int
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## getPosition
 
@@ -133,8 +139,8 @@ getPosition(): int
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## msync
 
@@ -143,9 +149,10 @@ msync(): Promise<void>
 ```
 
 将整个文件映射区的数据同步到磁盘文件。使用Promise异步回调。
-    **说明：**  
-    
-    如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+
+> **说明：**
+> 
+> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -167,12 +174,12 @@ msync(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
 ## msync
 
@@ -181,9 +188,10 @@ msync(position: int, length: int): Promise<void>
 ```
 
 将文件映射区指定范围内的数据同步到磁盘文件。使用Promise异步回调。
-    **说明：**  
-    
-    如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+
+> **说明：**
+> 
+> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -212,12 +220,12 @@ msync(position: int, length: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
 ## msyncSync
 
@@ -226,9 +234,10 @@ msyncSync(): void
 ```
 
 以同步方法将整个文件映射区的数据同步到磁盘文件。
-    **说明：**  
-    
-    如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+
+> **说明：**
+> 
+> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -244,12 +253,12 @@ msyncSync(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
 ## msyncSync
 
@@ -258,9 +267,10 @@ msyncSync(position: int, length: int): void
 ```
 
 以同步方法将文件映射区指定范围内的数据同步到磁盘文件。
-    **说明：**  
-    
-    如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+
+> **说明：**
+> 
+> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -283,12 +293,12 @@ msyncSync(position: int, length: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900011 | Out of memory |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
 | 13900055 | Mmap operation not supported |
+| 13900050 | Internal resource error |
+| 13900014 | Device or resource busy |
+| 13900011 | Out of memory |
 
 ## read
 
@@ -326,10 +336,10 @@ read(buffer: ArrayBuffer, length?: int): int
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 
 ## read
 
@@ -368,10 +378,10 @@ read(position: int, buffer: ArrayBuffer, length?: int): int
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 
 ## remaining
 
@@ -402,8 +412,8 @@ remaining(): int
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## setLimit
 
@@ -427,15 +437,15 @@ setLimit(limit: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| limit | int | 是 | 要设置的可读写区域上界值，单位为Byte。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值需大于等于0，且小于等于当前[capacity]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
+| limit | int | 是 | 要设置的可读写区域上界值，单位为Byte。 &lt;br&gt;取值需大于等于0，且小于等于当前[capacity](arkts-corefile-fileio-filemapping-i.md#capacity)。若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## setPosition
 
@@ -459,15 +469,15 @@ setPosition(position: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | int | 是 | 期望设置的目标位置，单位为Byte。 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_必须为非负数且不大于当前可读写上界的limit，可通过[getLimit()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_获得可读写上界的limit。 |
+| position | int | 是 | 期望设置的目标位置，单位为Byte。 &lt;br&gt;必须为非负数且不大于当前可读写上界的limit，可通过[getLimit()](arkts-corefile-fileio-filemapping-i.md#getlimit)获得可读写上界的limit。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
 | 13900052 | Mmap buffer released |
+| 13900050 | Internal resource error |
 
 ## unmap
 
@@ -561,11 +571,11 @@ write(data: ArrayBuffer, length?: int): int
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 
 ## write
 
@@ -604,9 +614,9 @@ write(position: int, data: ArrayBuffer, length?: int): int
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 13900050 | Internal resource error |
-| 13900051 | Buffer read/write out of bounds |
 | 13900052 | Mmap buffer released |
 | 13900053 | Read-only mmap buffer |
 | 13900054 | Mmap buffer is inaccessible |
+| 13900050 | Internal resource error |
+| 13900051 | Buffer read/write out of bounds |
 

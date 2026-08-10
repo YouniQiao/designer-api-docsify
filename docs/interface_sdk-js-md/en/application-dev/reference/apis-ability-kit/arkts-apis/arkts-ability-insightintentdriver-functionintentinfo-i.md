@@ -1,8 +1,6 @@
 # FunctionIntentInfo (System API)
 
-Defines the parameter type of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_decorator. All parameters inherit from  
-[IntentDecoratorInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+[@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)装饰器的参数类型，当前全部属性均继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)。
 
 **Since:** 20
 
@@ -15,4 +13,10 @@ Defines the parameter type of the
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
 

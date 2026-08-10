@@ -18,7 +18,7 @@ dismiss: Callback<void>
 
 Popup关闭回调函数。开发者需要退出时调用，不需要退出时无需调用。
 
-**类型：** Callback&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ reason: DismissReason
 
 关闭原因，返回本次拦截Popup消失的事件原因。
 
-**类型：** DismissReason
+**类型：** [DismissReason](arkts-arkui-dismissreason-e.md)
 
 **起始版本：** 12
 

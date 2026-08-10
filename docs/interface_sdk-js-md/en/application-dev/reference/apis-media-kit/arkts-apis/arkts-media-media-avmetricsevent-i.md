@@ -10,6 +10,12 @@ Describes the information of an Metrics Event.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## details
 
 ```TypeScript
@@ -18,7 +24,7 @@ details: Record<string, Object>
 
 The detailed information of the event.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 23
 
@@ -38,7 +44,7 @@ event: AVMetricsEventType
 
 Type of the metrics event.
 
-**Type:** AVMetricsEventType
+**Type:** [AVMetricsEventType](arkts-media-media-avmetricseventtype-e.md)
 
 **Since:** 23
 
@@ -56,9 +62,9 @@ Type of the metrics event.
 playbackPosition: int
 ```
 
-The playback progress position when the event occurs, in ms.
+The playback progress position when the event occurs.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -74,9 +80,9 @@ The playback progress position when the event occurs, in ms.
 timeStamp: long
 ```
 
-Absolute timestamp when the event occurred, in ms.
+Absolute timestamp when the event occurred.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 23
 

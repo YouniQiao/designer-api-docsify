@@ -12,15 +12,21 @@ Defines user status data.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## errCode
 
 ```TypeScript
 errCode: int
 ```
 
-Business error code.The value \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ indicates success, and other values indicate failure.
+Business error code.The value `0` indicates success, and other values indicate failure.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -42,7 +48,7 @@ feature: UserStatusFeature
 
 User status detection feature type.
 
-**Type:** UserStatusFeature
+**Type:** [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -62,9 +68,9 @@ User status detection feature type.
 result: int
 ```
 
-User status detection result.The value \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_ indicates success, and other values indicate failure.
+User status detection result.The value `0` indicates success, and other values indicate failure.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

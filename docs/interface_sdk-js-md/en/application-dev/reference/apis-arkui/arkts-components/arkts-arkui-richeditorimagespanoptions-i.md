@@ -1,6 +1,6 @@
 # RichEditorImageSpanOptions
 
-Sets the offset and style of an image span.
+设置图片的偏移位置和图片样式信息。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Sets the offset and style of an image span.
 onHover?: OnHoverCallback
 ```
 
-Callback triggered on mouse hover. If this parameter is omitted, no corresponding action is taken.
+鼠标悬停触发回调。省略时，不执行鼠标悬停回调行为。
 
 **Since:** 14
 
@@ -36,9 +36,9 @@ Callback triggered on mouse hover. If this parameter is omitted, no correspondin
 gesture?: RichEditorGesture
 ```
 
-Behavior-triggered callback. If this parameter is left empty, only the default system behavior is supported.
+行为触发回调。省略时，仅使用系统默认行为。
 
-**Type:** RichEditorGesture
+**Type:** [RichEditorGesture](arkts-arkui-richeditorgesture-i.md)
 
 **Since:** 11
 
@@ -58,9 +58,9 @@ Behavior-triggered callback. If this parameter is left empty, only the default s
 imageStyle?: RichEditorImageSpanStyle
 ```
 
-Image style.
+图片样式信息。当需要自定义图片的大小、垂直对齐方式、缩放类型等样式时传入此参数；省略时，使用系统默认图片样式。
 
-**Type:** RichEditorImageSpanStyle
+**Type:** [RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md)
 
 **Since:** 10
 
@@ -80,9 +80,9 @@ Image style.
 offset?: number
 ```
 
-Position of the image span to be added. If this parameter is omitted, the span is added to the end of all content.
+添加图片的位置。省略时，添加到所有内容的末尾。
 
-If the value specified is less than 0, the span is placed at the beginning of all content. If the value is greater than the length of all content, the span is placed at the end of all content.
+当值小于0时，设置在所有内容最前面；当值大于所有内容长度时，设置在所有内容最后面。
 
 **Type:** number
 

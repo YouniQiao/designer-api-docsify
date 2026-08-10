@@ -1,12 +1,18 @@
 # isRTL
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## isRTL
 
 ```TypeScript
 export function isRTL(locale: string): boolean
 ```
 
-Checks whether the input character is of the right to left (RTL) language.
+判断语言是否为镜像语言。在镜像语言下，UI界面需要[镜像显示](../../../internationalization/i18n-ui-design.md#界面镜像)。
 
 **Since:** 23
 
@@ -22,11 +28,11 @@ Checks whether the input character is of the right to left (RTL) language.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | Input character. If the input is a string, only the type of the first character is checked. |
+| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true if the input character is of the RTL language, and false otherwise. |
+| boolean | true表示该语言是镜像语言，false表示该语言不是镜像语言。 |
 

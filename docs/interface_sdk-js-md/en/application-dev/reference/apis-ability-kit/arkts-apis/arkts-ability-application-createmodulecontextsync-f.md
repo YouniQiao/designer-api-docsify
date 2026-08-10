@@ -1,19 +1,22 @@
 # createModuleContextSync
 
+## Modules to Import
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## createModuleContextSync
 
 ```TypeScript
 export function createModuleContextSync(context: Context, moduleName: string): Context
 ```
 
-Creates the context for a module. The  
-[resourceManager.Configuration]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ in the created module context inherits from the input context, making it convenient for you to access  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
-    **NOTE**  
-    
-    Creating a module context involves resource querying and initialization, which can be time-consuming. In  
-    scenarios where application fluidity is critical, avoid frequently or repeatedly calling the  
-    **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
+创建指定模块的上下文。创建出的模块上下文中[resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-configuration-c.md/arkts-localization-resourcemanager-configuration-c.md)资源继承自入参上下文，便于开发者获取[跨HAP/HSP包应用资源](../../../quick-start/resource-categories-and-access.md#跨haphsp包应用资源)。
+
+> **说明：**
+> 
+> 由于创建模块上下文的过程涉及资源查询与初始化，耗时相对较长，在对应用流畅性要求较高的场景下，不建议频繁或多次调用createModuleContext接口创建多个Context实例，以免影响用户体验。
 
 **Since:** 26.1.0
 
@@ -31,19 +34,19 @@ Creates the context for a module. The
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. |
-| moduleName | string | Yes | Module name. |
+| context | [Context](arkts-ability-context-c.md) | Yes | 表示应用上下文。 |
+| moduleName | string | Yes | 表示应用模块名。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Return the context created. |
+| [Context](arkts-ability-context-c.md) | 返回创建的上下文。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| 16000021 | The module does not exist. |
+| 16000021 | 模块不存在。 |
+| 16000011 | 上下文不存在。 |
 

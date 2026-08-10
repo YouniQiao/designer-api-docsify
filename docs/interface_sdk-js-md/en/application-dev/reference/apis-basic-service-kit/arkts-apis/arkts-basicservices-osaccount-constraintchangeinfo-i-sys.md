@@ -1,6 +1,6 @@
 # ConstraintChangeInfo (System API)
 
-Defines the constraint change information.
+表示约束变更信息。
 
 **Since:** 23
 
@@ -12,13 +12,19 @@ Defines the constraint change information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## constraint
 
 ```TypeScript
 constraint: string
 ```
 
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ that has been changed.
+发生变更的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。
 
 **Type:** string
 
@@ -38,9 +44,9 @@ constraint: string
 isEnabled: boolean
 ```
 
-Enabling state of the changed constraint. The default value is **false**.
+发生变更的约束的使能状态。默认：false。
 
-The value **true** indicates that the target constraint is enabled, and **false** indicates the opposite.
+true表示目标约束已使能；false表示目标约束未使能。
 
 **Type:** boolean
 

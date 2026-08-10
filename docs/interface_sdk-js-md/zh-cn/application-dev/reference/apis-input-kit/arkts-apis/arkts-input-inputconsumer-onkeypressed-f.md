@@ -1,5 +1,11 @@
 # onKeyPressed
 
+## 导入模块
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## onKeyPressed
 
 ```TypeScript
@@ -20,46 +26,13 @@ function onKeyPressed(options: KeyPressedConfig, callback: Callback<KeyEvent>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | Key consumption settings. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | 是 | Callback used to return key events. |
+| options | [KeyPressedConfig](arkts-input-inputconsumer-keypressedconfig-i.md) | 是 | Key consumption settings. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 是 | Callback used to return key events. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-
-**示例：**
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { inputConsumer, KeyEvent } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            let options: inputConsumer.KeyPressedConfig = {
-              key: 16,
-              action: 1,
-              isRepeat: false,
-            }
-            // 订阅按键按下事件
-            inputConsumer.onKeyPressed(options, (event: KeyEvent) => {
-              console.info(`Succeeded in subscribing ${JSON.stringify(event)}.`);
-            });
-          } catch (error) {
-            console.error(`Failed to subscribe , Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
 

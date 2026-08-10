@@ -1,6 +1,6 @@
 # HuksExternalCryptoParam
 
-Defines the type of the param array used for calling the API.
+表示调用接口使用的param数组的类型。
 
 **Since:** 22
 
@@ -10,15 +10,21 @@ Defines the type of the param array used for calling the API.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
+## Modules to Import
+
+```TypeScript
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## tag
 
 ```TypeScript
 tag: HuksExternalCryptoTag
 ```
 
-Parameter tag, which is used to distinguish parameters.
+参数标签，用于区分参数。
 
-**Type:** HuksExternalCryptoTag
+**Type:** [HuksExternalCryptoTag](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotag-e.md)
 
 **Since:** 22
 
@@ -34,7 +40,7 @@ Parameter tag, which is used to distinguish parameters.
 value: boolean | int | bigint | Uint8Array
 ```
 
-Value of the tag.
+标签对应值。
 
 **Type:** boolean \| int \| bigint \| Uint8Array
 

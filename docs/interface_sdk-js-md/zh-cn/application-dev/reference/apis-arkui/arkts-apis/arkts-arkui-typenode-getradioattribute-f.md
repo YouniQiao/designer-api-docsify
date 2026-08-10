@@ -22,11 +22,11 @@ export function getRadioAttribute(node: FrameNode): RadioAttribute | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 目标FrameNode. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 目标FrameNode. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

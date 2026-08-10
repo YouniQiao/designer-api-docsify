@@ -1,5 +1,11 @@
 # getExtensionAbilityResourceInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleResourceManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getExtensionAbilityResourceInfo
 
 ```TypeScript
@@ -25,9 +31,9 @@ function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityTyp
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用包名。 |
-| extensionAbilityType | bundleManager.ExtensionAbilityType | 是 | 应用的扩展组件类型，仅支持ExtensionAbilityType.INPUT\_\_\_ESCAPED\_UNDERSCORE\_\_\_METHOD 、ExtensionAbilityType.SHARE、ExtensionAbilityType.ACTION。 |
-| resourceFlags | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 是 | 资源信息标志，指示需要获取的资源信息的内容。 |
-| appIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 否 | 应用分身的ID，默认值是0。取值范围0~5，取值为0表示主应用。 |
+| extensionAbilityType | bundleManager.ExtensionAbilityType | 是 | 应用的扩展组件类型，仅支持ExtensionAbilityType.INPUT_METHOD 、ExtensionAbilityType.SHARE、ExtensionAbilityType.ACTION。 |
+| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 资源信息标志，指示需要获取的资源信息的内容。 |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 应用分身的ID，默认值是0。取值范围0~5，取值为0表示主应用。 |
 
 **返回值：**
 
@@ -39,12 +45,12 @@ function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityTyp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range or not found. |
+| 17700061 | AppIndex not in valid range or not found. |
+| 201 | Permission denied. |
+| 202 | Permission denied, non-system app called system api. |
+| 17700001 | The specified bundleName is not found. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager, bundleResourceManager } from '@kit.AbilityKit';

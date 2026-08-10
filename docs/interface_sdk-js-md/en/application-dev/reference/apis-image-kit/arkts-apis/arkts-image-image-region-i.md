@@ -1,6 +1,6 @@
 # Region
 
-Describes the region information.
+表示区域信息。
 
 **Since:** 8
 
@@ -10,15 +10,21 @@ Describes the region information.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## size
 
 ```TypeScript
 size: Size
 ```
 
-Region size.
+区域大小。
 
-**Type:** Size
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **Since:** 8
 
@@ -38,9 +44,9 @@ Region size.
 x: int
 ```
 
-X coordinate of the top-left corner of the region, in px.
+区域左上角横坐标。单位：像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -60,9 +66,9 @@ X coordinate of the top-left corner of the region, in px.
 y: int
 ```
 
-Y coordinate of the top-left corner of the region, in px.
+区域左上角纵坐标。单位：像素（px）。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 

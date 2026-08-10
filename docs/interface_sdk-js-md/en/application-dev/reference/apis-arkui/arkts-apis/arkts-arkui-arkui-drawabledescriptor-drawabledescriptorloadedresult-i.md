@@ -1,6 +1,6 @@
 # DrawableDescriptorLoadedResult
 
-The result of loading image.
+传入的图片资源或地址的加载结果。
 
 **Since:** 23
 
@@ -10,13 +10,21 @@ The result of loading image.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+```
+
 ## imageHeight
 
 ```TypeScript
 imageHeight: int
 ```
 
-The height of the image, in px.
+图片的高度。
+
+单位：px
 
 **Type:** int
 
@@ -36,7 +44,9 @@ The height of the image, in px.
 imageWidth: int
 ```
 
-The width of the image, in px.
+图片的宽度。
+
+单位：px
 
 **Type:** int
 

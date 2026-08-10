@@ -4,7 +4,11 @@
 declare type SizeChangeCallback = (oldValue: SizeOptions, newValue: SizeOptions) => void
 ```
 
-Defines the callback type used in onSizeChange.The value of oldValue is last size of the component.The value of newValue is new size of the component.
+组件区域变化时的回调类型。
+
+oldValue表示目标元素变化之前的宽高。
+
+newValue表示目标元素变化之后的宽高。
 
 **Since:** 12
 
@@ -24,6 +28,6 @@ Defines the callback type used in onSizeChange.The value of oldValue is last siz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
-| newValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| oldValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes |  |
+| newValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes |  |
 

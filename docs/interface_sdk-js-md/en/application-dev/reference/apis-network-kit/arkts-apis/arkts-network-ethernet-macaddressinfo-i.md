@@ -10,6 +10,12 @@ Defines the mac address info of the Ethernet.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
+## Modules to Import
+
+```TypeScript
+import { ethernet } from 'kits/@kit.NetworkKit';
+```
+
 ## iface
 
 ```TypeScript

@@ -1,6 +1,14 @@
 # PointUtils
 
-This class offers a comprehensive set of operations for handling common2D Point objects.
+本Class是提供处理坐标点的工具类，支持对坐标点进行取反、偏移等操作，适用于需要对坐标点进行变换处理的图形绘制场景。
+
+> **说明：**
+> 
+> - 本Class首批接口从API版本26.0.0开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **Since:** 26.0.0
 
@@ -10,13 +18,19 @@ This class offers a comprehensive set of operations for handling common2D Point 
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## negate
 
 ```TypeScript
 static negate(point: common2D.Point): void
 ```
 
-Negates the point's coordinates.
+对点的坐标取反。
 
 **Since:** 26.0.0
 
@@ -32,7 +46,7 @@ Negates the point's coordinates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | common2D.Point | Yes | Specifies the point to be negated. |
+| point | common2D.Point | Yes | 要取反的点。 |
 
 ## offset
 
@@ -46,7 +60,7 @@ ArkTS-Sta:
 static offset(point: common2D.Point, dx: double, dy: double): void
 ```
 
-Offsets the point's coordinates by dx, dy.
+将指定坐标点沿着x轴和y轴方向偏移一定距离。
 
 **Since:** 26.0.0
 
@@ -62,7 +76,7 @@ Offsets the point's coordinates by dx, dy.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | common2D.Point | Yes | Specifies the point to be offset. |
-| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Indicates the distance to offset on the x-axis in pixels. |
-| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Indicates the distance to offset on the y-axis in pixels. |
+| point | common2D.Point | Yes | 要偏移的点。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
 

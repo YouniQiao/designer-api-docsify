@@ -11,6 +11,12 @@ Provides interfaces for acquiring location information, managing location switch
 **System capability:** 
 - API version 11 and later: SystemCapability.Location.Location.Core
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## Summary
 
 ### Functions
@@ -40,7 +46,7 @@ Provides interfaces for acquiring location information, managing location switch
 | [getGeofenceSupportedCoordTypes](arkts-location-geolocationmanager-getgeofencesupportedcoordtypes-f.md#getgeofencesupportedcoordtypes) | Obtains the coordinate system types supported by geofence. |
 | [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getlastlocation) | Obtain last known location. |
 | [getPoiInfo](arkts-location-geolocationmanager-getpoiinfo-f.md#getpoiinfo) | Obtaining POI Information. |
-| [getPostProcessingTrack](arkts-location-geolocationmanager-getpostprocessingtrack-f.md#getpostprocessingtrack) | Obtain post-processing trajectory information under specific sport mode. Only  [SKIING]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is supported currently.  Before calling this API, you need to call  [on('locationChange')]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and set the input parameter  [sportsType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to the specific sport mode to start tracking.  Returns data within 24 hours since tracking started; Subsequent calls return only new records. |
+| [getPostProcessingTrack](arkts-location-geolocationmanager-getpostprocessingtrack-f.md#getpostprocessingtrack) | Obtain post-processing trajectory information under specific sport mode. Only  [SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently.  Before calling this API, you need to call  [on('locationChange')](geoLocationManager.on('locationChange')) and set the input parameter  [sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i.md#sportstype) to the specific sport mode to start tracking.  Returns data within 24 hours since tracking started; Subsequent calls return only new records. |
 | [isBeaconFenceSupported](arkts-location-geolocationmanager-isbeaconfencesupported-f.md#isbeaconfencesupported) | Check whether the BeaconFence service is supported. |
 | [isCachedGnssServiceSupported](arkts-location-geolocationmanager-iscachedgnssservicesupported-f.md#iscachedgnssservicesupported) | Check whether the cached GNSS service is supported. |
 | [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isgeocoderavailable) | Obtain geocoding service status. |
@@ -49,7 +55,7 @@ Provides interfaces for acquiring location information, managing location switch
 | [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#islocationenabled) | Obtain current location switch status. |
 | [isPoiServiceSupported](arkts-location-geolocationmanager-ispoiservicesupported-f.md#ispoiservicesupported) | Check whether the POI service is supported. |
 | [isWlanBssidMatched](arkts-location-geolocationmanager-iswlanbssidmatched-f.md#iswlanbssidmatched) | Check whether the WLAN scan results match the WLAN BSSID list. |
-| [off](arkts-location-geolocationmanager-off-f.md#off) | Unsubscribe location changed.You are advised to use the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ instead. |
+| [off](arkts-location-geolocationmanager-off-f.md#off) | Unsubscribe location changed.You are advised to use the {@link offLocationChange} instead. |
 | [off](arkts-location-geolocationmanager-off-f.md#off-1) | Unsubscribe continuous location error changed. |
 | [off](arkts-location-geolocationmanager-off-f.md#off-2) | Unsubscribe location switch changed. |
 | [off](arkts-location-geolocationmanager-off-f.md#off-3) | Unsubscribe to cache GNSS locations update messages. |
@@ -67,7 +73,7 @@ Provides interfaces for acquiring location information, managing location switch
 | [offLocationError](arkts-location-geolocationmanager-offlocationerror-f.md#offlocationerror) | Unsubscribe continuous location error changed. |
 | [offNmeaMessage](arkts-location-geolocationmanager-offnmeamessage-f.md#offnmeamessage) | Unsubscribe nmea message changed. |
 | [offSatelliteStatusChange](arkts-location-geolocationmanager-offsatellitestatuschange-f.md#offsatellitestatuschange) | Unsubscribe satellite status changed. |
-| [on](arkts-location-geolocationmanager-on-f.md#on) | Subscribe location changed.You are advised to use the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ instead. |
+| [on](arkts-location-geolocationmanager-on-f.md#on) | Subscribe location changed.You are advised to use the {@link onLocationChange} instead. |
 | [on](arkts-location-geolocationmanager-on-f.md#on-1) | Subscribe continuous location error changed. |
 | [on](arkts-location-geolocationmanager-on-f.md#on-2) | Subscribe location switch changed. |
 | [on](arkts-location-geolocationmanager-on-f.md#on-3) | Subscribe to cache GNSS locations update messages. |

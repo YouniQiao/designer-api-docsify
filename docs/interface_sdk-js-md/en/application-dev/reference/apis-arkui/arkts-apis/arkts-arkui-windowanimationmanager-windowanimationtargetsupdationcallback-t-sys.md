@@ -5,7 +5,7 @@ type WindowAnimationTargetsUpdationCallback = (fullScreenWindowTarget: WindowAni
     floatingWindowTargets: Array<WindowAnimationTarget>) => void
 ```
 
-Callback function on window animation targets update.
+动画目标窗口更新时的回调。
 
 **Since:** 23
 
@@ -21,6 +21,6 @@ Callback function on window animation targets update.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullScreenWindowTarget | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The fullscreen window target.  |
-| floatingWindowTargets | Array&lt;WindowAnimationTarget&gt; | Yes | All the floating window targets.  |
+| fullScreenWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 全屏状态的动画目标窗口。 |
+| floatingWindowTargets | Array&lt;WindowAnimationTarget&gt; | Yes | 悬浮状态的动画目标窗口。 |
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## displayHeight
 
 ```TypeScript
@@ -20,7 +26,7 @@ displayHeight: int
 
 屏幕高度，单位：px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -40,7 +46,7 @@ displayWidth: int
 
 屏幕宽度，单位：px。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -60,7 +66,7 @@ displayX: int
 
 鼠标指针位于屏幕的X坐标上的位置。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -80,7 +86,7 @@ displayY: int
 
 鼠标指针位于屏幕的Y坐标上的位置。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

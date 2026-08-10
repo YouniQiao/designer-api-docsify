@@ -1,5 +1,11 @@
 # onSystemLoadChange
 
+## Modules to Import
+
+```TypeScript
+import { systemLoad } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onSystemLoadChange
 
 ```TypeScript
@@ -20,5 +26,5 @@ Register system load callback for perception system load change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SystemLoadLevel&gt; | Yes | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SystemLoadLevel&gt; | Yes | Asynchronous callback interface. |
 

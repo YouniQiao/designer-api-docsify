@@ -32,7 +32,7 @@ A common internal error occurs during form processing.
 ERR_PERMISSION_DENY = 2
 ```
 
-The application does not have permission to use forms.Ensure that the application is granted with the ohos.permission.REQUIRE\_FORM and ohos.permission.GET\_BUNDLE\_INFO\_PRIVILEGED permissions.
+The application does not have permission to use forms.Ensure that the application is granted with the ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED permissions.
 
 **Since:** 8
 

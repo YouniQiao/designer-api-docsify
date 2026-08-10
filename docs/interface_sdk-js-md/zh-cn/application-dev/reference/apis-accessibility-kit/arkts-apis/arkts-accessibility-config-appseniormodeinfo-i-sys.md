@@ -12,6 +12,12 @@ Indicates the senior mode information of an application.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { config } from 'kits/@kit.AccessibilityKit';
+```
+
 ## appIndex
 
 ```TypeScript
@@ -20,7 +26,7 @@ appIndex?: int
 
 Indicates the index of clone app.The value must be an integer greater than or equal to 0. Default value: 0.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 26.0.0
 

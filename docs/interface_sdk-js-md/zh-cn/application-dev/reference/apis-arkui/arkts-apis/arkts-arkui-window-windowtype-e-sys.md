@@ -18,8 +18,8 @@ TYPE_INPUT_METHOD
 
 表示输入法窗口。
 
-**说明：** 从API version 9开始支持，从API version 13开始废弃，无替代窗口类型，输入法相关控制都请调用  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_执行。
+**说明：** 从API version 9开始支持，从API version 13开始废弃，无替代窗口类型，输入法相关控制都请调用
+[输入法框架侧接口](../../../inputmethod/inputmethod-application-guide.md)执行。
 
 **起始版本：** 9
 
@@ -421,7 +421,7 @@ TYPE_SCREEN_CONTROL = 23
 TYPE_FLOAT_NAVIGATION = 22
 ```
 
-TYPE\_FLOAT\_NAVIGATION.
+TYPE_FLOAT_NAVIGATION.
 
 **起始版本：** 16
 

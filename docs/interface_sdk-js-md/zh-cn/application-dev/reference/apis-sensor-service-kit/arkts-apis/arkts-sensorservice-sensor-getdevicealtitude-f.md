@@ -1,5 +1,11 @@
 # getDeviceAltitude
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## getDeviceAltitude
 
 ```TypeScript
@@ -20,62 +26,33 @@ function getDeviceAltitude(seaPressure: double, currentPressure: double, callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| seaPressure | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 海平面气压值，单位为hPa。 |
-| currentPressure | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 指定的气压值，单位为hPa。 |
-| callback | ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;double&gt; | 是 | 回调函数，异步返回指定的气压值对应的海拔高度，单位为米。 |
+| seaPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 海平面气压值，单位为hPa。 |
+| currentPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 指定的气压值，单位为hPa。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | 回调函数，异步返回指定的气压值对应的海拔高度，单位为米。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // 使用try catch对可能出现的异常进行捕获
 try {
   let seaPressure = 1013.2;
   let currentPressure = 1500.0;
-  sensor.getDeviceAltitude(seaPressure, currentPressure, (err, data) => {
-    let error = err as BusinessError;
-    let dataValue = data as number;
-    if (error) {
-      console.error(`Failed to get altitude. Code: ${error.code}, message: ${error.message}`);
+  sensor.getDeviceAltitude(seaPressure, currentPressure, (err: BusinessError, data: number) => {
+    if (err) {
+      console.error(`Failed to get altitude. Code: ${err.code}, message: ${err.message}`);
       return;
     }
-    console.info('Succeeded in getting altitude: ' + dataValue);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get altitude. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sensor } from '@kit.SensorServiceKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  let seaPressure = 1013.2;
-  let currentPressure = 1500.0;
-  sensor.getDeviceAltitude(seaPressure, currentPressure, (err, data) => {
-    let error = err as BusinessError;
-    let dataValue = data as double;
-    if (error) {
-      console.error(`Failed to get altitude. Code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info('Succeeded in getting altitude: ' + dataValue);
+    console.info('Succeeded in getting altitude: ' + data);
   });
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -104,29 +81,27 @@ function getDeviceAltitude(seaPressure: double, currentPressure: double): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| seaPressure | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 海平面气压值，单位为hPa。 |
-| currentPressure | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | 指定的气压值，单位为hPa。 |
+| seaPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 海平面气压值，单位为hPa。 |
+| currentPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 指定的气压值，单位为hPa。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;double&gt; | Promise对象，使用异步方式返回指定的气压值对应的海拔高度，单位为米。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;double&gt; | Promise对象，使用异步方式返回指定的气压值对应的海拔高度，单位为米。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // 使用try catch对可能出现的异常进行捕获
 try {
@@ -134,28 +109,6 @@ try {
   let currentPressure = 1500.0;
   const promise = sensor.getDeviceAltitude(seaPressure, currentPressure);
   promise.then((data: number) => {
-    console.info('Succeeded in getting sensor_getDeviceAltitude_Promise', data);
-  }, (err: BusinessError) => {
-    console.error(`Failed to get altitude. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get altitude. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sensor } from '@kit.SensorServiceKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  let seaPressure = 1013.2;
-  let currentPressure = 1500.0;
-  const promise = sensor.getDeviceAltitude(seaPressure, currentPressure);
-  promise.then((data: double) => {
     console.info('Succeeded in getting sensor_getDeviceAltitude_Promise', data);
   }, (err: BusinessError) => {
     console.error(`Failed to get altitude. Code: ${err.code}, message: ${err.message}`);

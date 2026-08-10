@@ -12,6 +12,12 @@ ManualFocus object.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getFocusDistance
 
 ArkTS-Dyn:
@@ -40,32 +46,15 @@ Gets current focus distance, ranging from 0.0 to 1.0, with 0.0 being shortest di
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | The current focus distance. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The current focus distance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 24 and later |
-
-**Example**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getFocusDistance(professionalPhotoSession: camera.ProfessionalPhotoSession): number {
-  let distance: number = 0;
-  try {
-    distance = professionalPhotoSession.getFocusDistance();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getFocusDistance call failed. error code: ${err.code}`);
-  }
-  return distance;
-}
-```
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**Applicable version:** 12 - 23 |
 
 ## setFocusDistance
 
@@ -95,29 +84,14 @@ Sets focus distance. Possible distance values range from 0.0 to 1.0, with 0.0 be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distance | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Focus distance. |
+| distance | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Focus distance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 24 and later |
-
-**Example**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setFocusDistance(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
-  try {
-    let distance: number = 0.5;
-    professionalPhotoSession.setFocusDistance(distance);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setFocusDistance call failed. error code: ${err.code}`);
-  }
-}
-```
+| 7400101 | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 23 |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**Applicable version:** 12 - 23 |
 

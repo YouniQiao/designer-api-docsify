@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## appNewGroup
 
 ```TypeScript
@@ -20,7 +26,7 @@ appNewGroup: int
 
 变化后的应用分组。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -40,7 +46,7 @@ appOldGroup: int
 
 变化前的应用分组。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -82,10 +88,10 @@ changeReason: long
 
 - 256:使用记录初创建时，默认匹配的原因。  
 - 512:计算优先级分组时异常。  
-- 768:使用时长变化。  
+- 768:使用时长变化。   
 - 1024:有其他应用为当前应用强制设置优先级分组。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 9
 
@@ -105,7 +111,7 @@ userId: int
 
 用户id。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 

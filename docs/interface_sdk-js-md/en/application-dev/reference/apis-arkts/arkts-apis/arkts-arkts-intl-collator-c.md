@@ -64,7 +64,7 @@ Creates a new Collator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | No | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| options | [CollatorOptions](arkts-arkts-intl-collatoroptions-i.md) | No | the options. |
 
 ## resolvedOptions
 
@@ -88,7 +88,7 @@ Returns resolved options.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | the resolved options. |
+| [ResolvedCollatorOptions](arkts-arkts-intl-resolvedcollatoroptions-i.md) | the resolved options. |
 
 ## supportedLocalesOf
 
@@ -113,7 +113,7 @@ Returns supported locales.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | Yes | the locales. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | the options. |
+| options | [CollatorOptions](arkts-arkts-intl-collatoroptions-i.md) | No | the options. |
 
 **Return value:**
 

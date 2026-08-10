@@ -4,7 +4,9 @@
 export type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLineInfo
 ```
 
-Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions.
+根据Grid的总偏移量，计算当前页面起始行的位置，用于快速滑动或反向滑动场景。  
+**系统接口：** 此接口为系统接口。  
+**模型约束：** 此接口仅可在Stage模型下使用。
 
 **Since:** 23
 
@@ -22,11 +24,11 @@ Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| totalOffset | double | Yes | The total offset to scroll to.  |
+| totalOffset | double | Yes | 总滚动偏移量，即Grid当中第一个GridItem的顶部与Grid顶部之间的偏移量。 单位：vp。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | - |
+| [StartLineInfo](arkts-arkui-grid-startlineinfo-i-sys.md) | - |
 

@@ -1,5 +1,11 @@
 # onAdd
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## onAdd
 
 ```TypeScript
@@ -20,17 +26,5 @@ Register the callback for display add events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | 是 | the display id of changed |
-
-**示例：**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<long> = (data: long) => {
-  console.info(`Listening enabled. Data: ${data}`);
-};
-
-display.onAdd(callback);
-```
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 | the display id of changed |
 

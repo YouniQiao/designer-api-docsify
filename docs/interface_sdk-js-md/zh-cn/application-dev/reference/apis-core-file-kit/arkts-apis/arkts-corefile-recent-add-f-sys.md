@@ -1,5 +1,11 @@
 # add（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { recent } from 'kits/@kit.CoreFileKit';
+```
+
 ## add
 
 ```TypeScript
@@ -34,11 +40,11 @@ function add(uri: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13900002 | No such file or directory |
 | 13900020 | Invalid argument |
+| 13900002 | No such file or directory |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let uri = 'file://docs/storage/Users/currentUser/<publicPath>';

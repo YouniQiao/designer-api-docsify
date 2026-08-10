@@ -1,6 +1,6 @@
 # RoundedCorner
 
-Describes a single rounded corner on the screen.
+屏幕圆角定义。
 
 **Since:** 23
 
@@ -10,15 +10,21 @@ Describes a single rounded corner on the screen.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## position
 
 ```TypeScript
 readonly position: Position
 ```
 
-Coordinates of the center point of the rounded corner.
+圆角圆心的坐标点。
 
-**Type:** Position
+**Type:** [Position](arkts-arkui-display-position-i.md)
 
 **Since:** 23
 
@@ -38,9 +44,9 @@ Coordinates of the center point of the rounded corner.
 readonly radius: int
 ```
 
-The radius of round corner, measured in px.
+圆角半径，单位为px。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -60,9 +66,9 @@ The radius of round corner, measured in px.
 readonly type: CornerType
 ```
 
-Type of the rounded corner.
+圆角类型。
 
-**Type:** CornerType
+**Type:** [CornerType](arkts-arkui-display-cornertype-e.md)
 
 **Since:** 23
 

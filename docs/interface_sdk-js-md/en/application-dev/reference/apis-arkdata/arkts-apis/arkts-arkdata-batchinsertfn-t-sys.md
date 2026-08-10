@@ -4,7 +4,7 @@
 type BatchInsertFn = (uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCallback<int>) => void
 ```
 
-Callback function called when inserting multiple data records into the database.
+批量插入操作的属性类型。
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ Callback function called when inserting multiple data records into the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Indicates the position where the data is to insert.  |
-| valueBuckets | Array&lt;ValuesBucket&gt; | Yes | Indicates the data to insert.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | Returns the number of data records inserted.  |
+| uri | string | Yes | Indicates the position where the data is to insert. |
+| valueBuckets | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | Indicates the data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Returns the number of data records inserted. |
 

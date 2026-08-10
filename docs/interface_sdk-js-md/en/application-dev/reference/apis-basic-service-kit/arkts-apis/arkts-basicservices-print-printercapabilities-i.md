@@ -1,6 +1,6 @@
 # PrinterCapabilities
 
-Defines the printer capabilities.
+定义打印机能力的接口。
 
 **Since:** 14
 
@@ -10,13 +10,19 @@ Defines the printer capabilities.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## options
 
 ```TypeScript
 options?: string
 ```
 
-Printer capability details.
+表示打印机能力详细信息。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Printer capability details.
 supportedColorModes: Array<PrintColorMode>
 ```
 
-List of color modes supported by the printer.
+表示打印机支持的色彩模式列表。
 
 **Type:** Array&lt;PrintColorMode&gt;
 
@@ -52,7 +58,7 @@ List of color modes supported by the printer.
 supportedDuplexModes: Array<PrintDuplexMode>
 ```
 
-List of single- and double-sided modes supported by the printer.
+表示打印机支持的单双面模式列表。
 
 **Type:** Array&lt;PrintDuplexMode&gt;
 
@@ -70,7 +76,7 @@ List of single- and double-sided modes supported by the printer.
 supportedMediaTypes?: Array<string>
 ```
 
-List of paper types supported by the printer.
+表示打印机支持的纸张类型列表。
 
 **Type:** Array&lt;string&gt;
 
@@ -88,7 +94,7 @@ List of paper types supported by the printer.
 supportedOrientations?: Array<PrintOrientationMode>
 ```
 
-List of print directions supported by the printer.
+表示打印机支持的打印方向列表。
 
 **Type:** Array&lt;PrintOrientationMode&gt;
 
@@ -106,7 +112,7 @@ List of print directions supported by the printer.
 supportedPageSizes: Array<PrintPageSize>
 ```
 
-List of paper sizes supported by the printer.
+表示打印机支持的纸张尺寸列表。
 
 **Type:** Array&lt;PrintPageSize&gt;
 
@@ -124,7 +130,7 @@ List of paper sizes supported by the printer.
 supportedQualities?: Array<PrintQuality>
 ```
 
-List of print quality supported by the printer.
+表示打印机支持的打印质量列表。
 
 **Type:** Array&lt;PrintQuality&gt;
 
@@ -133,46 +139,6 @@ List of print quality supported by the printer.
 **ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 <!--Device-PrinterCapabilities-supportedQualities?: Array<PrintQuality>--><!--Device-PrinterCapabilities-supportedQualities?: Array<PrintQuality>-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-## vendorJobAttrAbility
-
-```TypeScript
-vendorJobAttrAbility?: string
-```
-
-Ability to configure job vendor-specific attributes.
-
-**Type:** string
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrinterCapabilities-vendorJobAttrAbility?: string--><!--Device-PrinterCapabilities-vendorJobAttrAbility?: string-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-## vendorPrinterPrefAbility
-
-```TypeScript
-vendorPrinterPrefAbility?: string
-```
-
-Ability to configure printer vendor-specific preferences.
-
-**Type:** string
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrinterCapabilities-vendorPrinterPrefAbility?: string--><!--Device-PrinterCapabilities-vendorPrinterPrefAbility?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

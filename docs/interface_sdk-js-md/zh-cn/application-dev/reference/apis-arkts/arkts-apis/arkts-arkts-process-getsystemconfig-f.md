@@ -1,5 +1,11 @@
 # getSystemConfig
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## getSystemConfig
 
 ```TypeScript
@@ -32,7 +38,7 @@ function getSystemConfig(name: number): number
 | --- | --- |
 | number | 返回系统配置信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let _SC_ARG_MAX = 0;

@@ -1,6 +1,6 @@
 # WantAgent
 
-Defines the information about the redirected-to ability.
+跳转目标的ability信息。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Defines the information about the redirected-to ability.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## abilityName
 
 ```TypeScript
 abilityName: string
 ```
 
-Name of the target ability.
+指明跳转目标的ability名称。
 
 **Type:** string
 
@@ -34,9 +40,9 @@ Name of the target ability.
 parameters?: Record<string, Object>
 ```
 
-Parameters to be transferred to the target.
+需要传递到目标的参数。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 12
 
@@ -52,7 +58,7 @@ Parameters to be transferred to the target.
 pkgName: string
 ```
 
-Name of the target package.
+指明跳转目标的包名。
 
 **Type:** string
 
@@ -70,7 +76,7 @@ Name of the target package.
 uri?: string
 ```
 
-URI of the target ability.
+指明跳转目标的uri信息。
 
 **Type:** string
 

@@ -1,9 +1,9 @@
 # BackgroundTaskMode
 
-长时任务主类型。通常与长时任务子类型[BackgroundTaskSubmode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_配合使用，对照关系请参考长时任务主类型与子类型对照表，两者共同作为API version 21新增的  
-[申请]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[更新]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_长时任务接口入参，用于指定长时任务类型。\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_仅当主类型为MODE\_SPECIAL\_SCENARIO\_PROCESSING特殊场景类型，或非PC/2in1设备主类型为MODE\_TASK\_KEEPING计算任务时，调用长时任务相关接口时需同时申请ACL权限  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_，其他场景无需申请该权限。
+长时任务主类型。通常与长时任务子类型[BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)配合使用，对照关系请参考长时任务主类型与子类型对照表，两者共同作为API version 21新增的  
+[申请](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)、  
+[更新](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)长时任务接口入参，用于指定长时任务类型。&lt;/br&gt;仅当主类型为MODE_SPECIAL_SCENARIO_PROCESSING特殊场景类型，或非PC/2in1设备主类型为MODE_TASK_KEEPING计算任务时，调用长时任务相关接口时需同时申请ACL权限  
+[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)，其他场景无需申请该权限。
 
 **起始版本：** 21
 
@@ -25,7 +25,7 @@ MODE_DATA_TRANSFER = 1
 
 **说明：**
 
-1. 在数据传输时，应用需要更新进度，如果进度长时间（超过10分钟）未更新，数据传输的长时任务会被取消。2. 更新进度的通知类型必须为实况窗，具体实现可参考[startBackgroundRunning()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_中的示例。
+1. 在数据传输时，应用需要更新进度，如果进度长时间（超过10分钟）未更新，数据传输的长时任务会被取消。2. 更新进度的通知类型必须为实况窗，具体实现可参考[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)中的示例。
 
 **起始版本：** 21
 
@@ -45,7 +45,7 @@ MODE_AUDIO_PLAYBACK = 2
 
 使用场景举例：音频、视频在后台播放，音视频投播。
 
-**说明：** 申请/更新MODE\_AUDIO\_PLAYBACK类型长时任务但不接入AVSession，申请/更新长时任务成功后会在通知栏显示通知。接入AVSession后，后台任务模块不会发送通知栏通知，由AVSession发送通知。
+**说明：** 申请/更新MODE_AUDIO_PLAYBACK类型长时任务但不接入AVSession，申请/更新长时任务成功后会在通知栏显示通知。接入AVSession后，后台任务模块不会发送通知栏通知，由AVSession发送通知。
 
 **起始版本：** 21
 
@@ -65,9 +65,9 @@ MODE_AUDIO_RECORDING = 3
 
 录制。
 
-使用场景举例：录音、录屏退后台。\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_
+使用场景举例：录音、录屏退后台。&lt;!--Del--&gt;
 
-**说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+**说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。&lt;!--DelEnd--&gt;
 
 **起始版本：** 21
 
@@ -141,9 +141,9 @@ MODE_VOIP = 8
 
 音视频通话。
 
-使用场景举例：某些聊天类应用（具有音视频业务）音频、视频通话时退后台。 \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_
+使用场景举例：某些聊天类应用（具有音视频业务）音频、视频通话时退后台。 &lt;!--Del--&gt;
 
-**说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+**说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。&lt;!--DelEnd--&gt;
 
 **起始版本：** 21
 
@@ -163,8 +163,8 @@ MODE_TASK_KEEPING = 9
 
 使用场景举例：杀毒软件。
 
-**说明：** 仅对PC/2in1设备开放，或者非PC/2in1设备但申请了ACL权限为  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的应用开放。
+**说明：** 仅对PC/2in1设备开放，或者非PC/2in1设备但申请了ACL权限为
+[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)的应用开放。
 
 **起始版本：** 21
 
@@ -182,7 +182,7 @@ MODE_AV_PLAYBACK_AND_RECORD = 12
 
 多媒体相关业务。
 
-使用场景举例：音视频播放、录制、音视频通话场景，场景需与长时任务子类型相匹配。在上述场景下，选择此类型或者对应的长时任务主类型均可。例如：音视频播放场景可以申请MODE\_AUDIO\_PLAYBACK或者MODE\_AV\_PLAYBACK\_AND\_RECORD长时任务主类型。
+使用场景举例：音视频播放、录制、音视频通话场景，场景需与长时任务子类型相匹配。在上述场景下，选择此类型或者对应的长时任务主类型均可。例如：音视频播放场景可以申请MODE_AUDIO_PLAYBACK或者MODE_AV_PLAYBACK_AND_RECORD长时任务主类型。
 
 **起始版本：** 22
 
@@ -206,7 +206,7 @@ MODE_SPECIAL_SCENARIO_PROCESSING = 13
 
 **说明：**
 
-1. 如果应用需要在后台长时间运行，可以通过[requestAuthFromUser]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口请求用户授权、通过[checkSpecialScenarioAuth]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_接口查询用户授权结果。2. 从API version 24开始，仅对申请ACL权限\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_的应用开放。API version 23及之前版本，仅对申请ACL权限\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_的应用开放，已经申请该权限的应用在API version 24之后不受影响。3. 必须单独使用且不支持通知合并，即申请或更新长时任务时，长时任务类型只能有特殊场景类型，否则返回错误。
+1. 如果应用需要在后台长时间运行，可以通过[requestAuthFromUser](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#requestauthfromuser)接口请求用户授权、通过[checkSpecialScenarioAuth](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#checkspecialscenarioauth)接口查询用户授权结果。2. 从API version 24开始，仅对申请ACL权限[ohos.permission.KEEP_BACKGROUND_RUNNING_SPECIAL_SCENARIO](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_special_scenario)的应用开放。API version 23及之前版本，仅对申请ACL权限[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)的应用开放，已经申请该权限的应用在API version 24之后不受影响。3. 必须单独使用且不支持通知合并，即申请或更新长时任务时，长时任务类型只能有特殊场景类型，否则返回错误。
 
 **起始版本：** 22
 

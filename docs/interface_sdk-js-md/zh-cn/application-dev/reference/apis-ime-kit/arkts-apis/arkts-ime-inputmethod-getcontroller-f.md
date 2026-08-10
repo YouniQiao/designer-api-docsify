@@ -1,12 +1,18 @@
 # getController
 
+## 导入模块
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## getController
 
 ```TypeScript
 function getController(): InputMethodController
 ```
 
-获取客户端实例[InputMethodController]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md)。
 
 **含义/功能**：获取当前应用的输入法客户端控制器实例，用于后续与输入法进行交互（绑定、显示/隐藏键盘、同步编辑框状态等）。
 
@@ -26,15 +32,15 @@ function getController(): InputMethodController
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回当前客户端实例。 |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | 返回当前客户端实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
+| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();

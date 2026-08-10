@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+```
+
 ## active
 
 ```TypeScript
@@ -62,7 +68,7 @@ actived?: boolean
 bundleName?: string
 ```
 
-窗口归属应用的包名，默认值为空。
+窗口归属应用的包名，默认值为空，用于在多窗口场景下根据应用包名筛选目标窗口。
 
 从API version 11开始，该接口支持在原子化服务中使用。
 
@@ -88,7 +94,7 @@ displayId?: int
 
 从API version 20开始，该接口支持在原子化服务中使用。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 20
 
@@ -128,7 +134,7 @@ focused?: boolean
 title?: string
 ```
 
-窗口的标题信息，默认值为空。 从API version 11开始，该接口支持在原子化服务中使用。
+窗口的标题信息，默认值为空，用于在多窗口场景下根据窗口标题筛选目标窗口。 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 

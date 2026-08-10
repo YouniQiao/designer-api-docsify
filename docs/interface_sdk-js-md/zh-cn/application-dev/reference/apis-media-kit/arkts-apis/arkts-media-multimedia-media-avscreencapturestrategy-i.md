@@ -10,6 +10,12 @@ Provides the media AVScreenCaptureStrategy definition.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## enableBFrame
 
 ```TypeScript
@@ -76,7 +82,7 @@ privacyMaskMode?: int
 
 Set the fill mode for screen capture when a privacy window exists.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 

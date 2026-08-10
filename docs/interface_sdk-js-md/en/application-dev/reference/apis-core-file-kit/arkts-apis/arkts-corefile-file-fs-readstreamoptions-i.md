@@ -1,6 +1,6 @@
 # ReadStreamOptions
 
-Defines the options used in **createReadStream()**.
+可选项类型，支持 createReadStream 接口使用。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ Defines the options used in **createReadStream()**.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## end
 
 ```TypeScript
 end?: long
 ```
 
-End position to read the data, in bytes. This parameter is optional. The default value is the end of the file.
+表示期望读取结束的位置，单位为Byte。可选，默认文件末尾。
 
 **Type:** long
 
@@ -34,7 +40,7 @@ End position to read the data, in bytes. This parameter is optional. The default
 start?: long
 ```
 
-Start position to read the data, in bytes. This parameter is optional. By default, data is read from the current position.
+表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。
 
 **Type:** long
 

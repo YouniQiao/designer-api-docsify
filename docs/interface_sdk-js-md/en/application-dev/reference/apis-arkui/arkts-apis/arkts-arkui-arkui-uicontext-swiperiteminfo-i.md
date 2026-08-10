@@ -1,6 +1,6 @@
 # SwiperItemInfo
 
-The information of changed SwiperItem.
+Swiper子组件的信息。
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ The information of changed SwiperItem.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## index
 
 ```TypeScript
 index: int
 ```
 
-The index of SwiperItem.The value should be an integer.
+Swiper子组件在Swiper中的索引。取值限定为整数。
 
 **Type:** int
 
@@ -36,7 +42,7 @@ The index of SwiperItem.The value should be an integer.
 uniqueId: int
 ```
 
-The uniqueId of SwiperItem.The value should be an integer.
+Swiper子组件的唯一标识符。取值限定为整数。
 
 **Type:** int
 

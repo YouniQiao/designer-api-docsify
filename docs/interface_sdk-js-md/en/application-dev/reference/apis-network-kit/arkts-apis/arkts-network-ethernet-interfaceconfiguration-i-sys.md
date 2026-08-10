@@ -12,6 +12,12 @@ Defines the network configuration for the Ethernet connection.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { ethernet } from 'kits/@kit.NetworkKit';
+```
+
 ## dnsServers
 
 ```TypeScript
@@ -60,7 +66,7 @@ httpProxy?: HttpProxy
 
 Indicates the HttpProxy settings, no proxy is to be used as default.
 
-**Type:** HttpProxy
+**Type:** [HttpProxy](arkts-network-ethernet-httpproxy-t.md)
 
 **Since:** 10
 
@@ -98,7 +104,7 @@ Ethernet connection static configuration IP information.The address value range 
 mode: IPSetMode
 ```
 
-**Type:** IPSetMode
+**Type:** [IPSetMode](arkts-network-ethernet-ipsetmode-e-sys.md)
 
 **Since:** 9
 

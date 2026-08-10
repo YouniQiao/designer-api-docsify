@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
+## 导入模块
+
+```TypeScript
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## close
 
 ```TypeScript
@@ -34,9 +40,9 @@ close(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -82,16 +88,16 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | 是 | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Connection&gt; | 否 | 注册的回调函数。[Connection]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | 否 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md)返回的连接对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| 32390206 | Parameter invalid. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -143,16 +149,16 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | 是 | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时触发。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | 否 | 注册的回调函数，number为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 注册的回调函数，number为返回的错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| 32390206 | Parameter invalid. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -203,41 +209,14 @@ offConnectionAccepted(callback?: Callback<Connection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Connection&gt; | 否 | 注册的回调函数。[Connection]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | 否 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md)返回的连接对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
-
-**示例：**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let name: string = "demo";
-  hilog.info(0x0000, TAG, 'start server name = ' + name);
-  // 使用服务名构造Server
-  let server: linkEnhance.Server = linkEnhance.createServer(name);
-  server.onConnectionAccepted((connection: linkEnhance.Connection): void => {
-    hilog.info(0x0000, TAG, 'accept new connection');
-  });
-  // 取消订阅服务接收
-  server.offConnectionAccepted((connection: linkEnhance.Connection): void => {
-    hilog.info(0x0000, TAG, 'accept new connection');
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
+| 32390206 | Parameter invalid. |
+| 201 | Permission denied. |
 
 ## offServerStopped
 
@@ -263,41 +242,14 @@ offServerStopped(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | 否 | 注册的回调函数，int为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 注册的回调函数，int为返回的错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
-
-**示例：**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let name: string = "demo";
-  hilog.info(0x0000, TAG, 'start server name = ' + name);
-  // 使用服务名构造Server
-  let server: linkEnhance.Server = linkEnhance.createServer(name);
-  server.onServerStopped((reason: int): void => {
-    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
-  });
-  // 取消订阅服务停止
-  server.offServerStopped((reason: int): void => {
-    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
+| 32390206 | Parameter invalid. |
+| 201 | Permission denied. |
 
 ## on('connectionAccepted')
 
@@ -324,16 +276,16 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | 是 | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Connection&gt; | 是 | 注册的回调函数。[Connection]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | 是 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md)返回的连接对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| 32390206 | Parameter invalid. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -385,16 +337,16 @@ on(type: 'serverStopped', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | 是 | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时，触发该事件。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt; | 是 | 注册的回调函数，number为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 注册的回调函数，number为返回的错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| 32390206 | Parameter invalid. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -445,41 +397,14 @@ onConnectionAccepted(callback: Callback<Connection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Connection&gt; | 是 | 注册的回调函数。[Connection]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | 是 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md)返回的连接对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
-
-**示例：**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let name: string = "demo";
-  hilog.info(0x0000, TAG, 'start server name = ' + name);
-  // 使用服务名构造Server
-  let server: linkEnhance.Server = linkEnhance.createServer(name);
-
-  // 订阅服务接收事件
-  server.onConnectionAccepted((connection: linkEnhance.Connection): void => {
-    hilog.info(0x0000, TAG, 'serverOnCallback = ' + JSON.stringify(connection));
-  });
-  // 启动服务
-  server.start();
-} catch (err) {
-  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
+| 32390206 | Parameter invalid. |
+| 201 | Permission denied. |
 
 ## onServerStopped
 
@@ -505,41 +430,14 @@ onServerStopped(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | 是 | 注册的回调函数，int为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 注册的回调函数，int为返回的错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
-
-**示例：**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let name: string = "demo";
-  hilog.info(0x0000, TAG, 'start server name = ' + name);
-  // 使用服务名构造Server
-  let server: linkEnhance.Server = linkEnhance.createServer(name);
-
-  // 订阅服务停止
-  server.onServerStopped((reason: int): void => {
-    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
-  });
-  // 启动服务
-  server.start();
-} catch (err) {
-  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
+| 32390206 | Parameter invalid. |
+| 201 | Permission denied. |
 
 ## start
 
@@ -565,11 +463,11 @@ start(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [32390202](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390202-服务个数超出限制) | The number of servers exceeds the limit. |
-| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) | Internal error. |
+| 32390300 | Internal error. |
+| 32390202 | The number of servers exceeds the limit. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';
@@ -595,7 +493,7 @@ try {
 stop(): void
 ```
 
-使用完服务时，调用\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_停止服务，停止后可以调用\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_重新开启服务。
+使用完服务时，调用`stop`停止服务，停止后可以调用`start`重新开启服务。
 
 **起始版本：** 20
 
@@ -613,9 +511,9 @@ stop(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { linkEnhance } from '@kit.DistributedServiceKit';

@@ -1,5 +1,11 @@
 # stopMirror（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { screen } from 'kits/@kit.ArkUI';
+```
+
 ## stopMirror
 
 ```TypeScript
@@ -22,20 +28,18 @@ function stopMirror(mirrorScreen:Array<long>, callback: AsyncCallback<void>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;long&gt; | 是 | 镜像屏幕ID集合，其中ID应为整数。 mirrorScreen数组大小不应超过1000。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 回调函数。当停止屏幕镜像模式成功，err为undefined，否则为错误对象。 |
+| mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt; | 是 | 镜像屏幕ID集合，其中ID应为整数。 mirrorScreen数组大小不应超过1000。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止屏幕镜像模式成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1400001 | Invalid display or screen. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -47,22 +51,6 @@ screen.stopMirror(mirrorScreenIds, (err: BusinessError) => {
   const errCode: number = err.code;
   if (errCode) {
     console.error(`Failed to stop mirror screens. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in stopping mirror screens.');
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let mirrorScreenIds: Array<long> = [1, 2, 3];
-screen.stopMirror(mirrorScreenIds, (err: BusinessError | null) => {
-  const errCode = err?.code;
-  if (errCode) {
-    console.error(`Failed to stop mirror screens. Code: ${err?.code}, message: ${err?.message}`);
     return;
   }
   console.info('Succeeded in stopping mirror screens.');
@@ -92,7 +80,7 @@ function stopMirror(mirrorScreen:Array<long>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;long&gt; | 是 | 镜像屏幕ID集合，其中ID应为整数。mirrorScreen数组大小不应超过1000。 |
+| mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt; | 是 | 镜像屏幕ID集合，其中ID应为整数。mirrorScreen数组大小不应超过1000。 |
 
 **返回值：**
 
@@ -104,13 +92,11 @@ function stopMirror(mirrorScreen:Array<long>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1400001 | Invalid display or screen. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -122,17 +108,6 @@ screen.stopMirror(mirrorScreenIds).then(() => {
   console.info('Succeeded in stopping mirror screens.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to stop mirror screens. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let mirrorScreenIds: Array<long> = [1, 2, 3];
-screen.stopMirror(mirrorScreenIds).then(() => {
-  console.info('Succeeded in stopping mirror screens.');
-}).catch((err: Error) => {
-  console.error(`Failed to stop mirror screens. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
 

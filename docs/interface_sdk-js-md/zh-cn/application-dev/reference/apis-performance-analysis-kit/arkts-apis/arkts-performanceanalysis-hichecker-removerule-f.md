@@ -1,14 +1,20 @@
 # removeRule
 
+## 导入模块
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## removeRule
 
 ```TypeScript
 function removeRule(rule: bigint): void
 ```
 
-    **˵����**  
-    
-    ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.removeCheckRule]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_�����
+> **˵����**
+> 
+> ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removecheckrule)�����
 
 ɾ��һ�����������ɾ���Ĺ��������������Ч��
 
@@ -30,7 +36,7 @@ function removeRule(rule: bigint): void
 | --- | --- | --- | --- |
 | rule | bigint | 是 | ��Ҫɾ���Ĺ��� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 删除一条规则

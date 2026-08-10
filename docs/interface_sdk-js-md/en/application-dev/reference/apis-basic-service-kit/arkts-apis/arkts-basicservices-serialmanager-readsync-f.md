@@ -1,12 +1,18 @@
 # readSync
 
+## Modules to Import
+
+```TypeScript
+import { serialManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## readSync
 
 ```TypeScript
 function readSync(portId: int, buffer: Uint8Array, timeout?: int): int
 ```
 
-Reads data from the serial port device synchronously.
+从串口设备同步读取数据。
 
 **Since:** 19
 
@@ -20,28 +26,28 @@ Reads data from the serial port device synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| buffer | Uint8Array | Yes | Buffer for reading data, with a maximum length of 8192 bytes. |
-| timeout | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Timeout interval.Unit: milliseconds. If the API has no data in the buffer of the target port, it returns the result after waiting for the specified time. The default value **0** indicates that the API returns the result without waiting. |
+| portId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标设备的端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取的串口参数SerialPort。 |
+| buffer | Uint8Array | Yes | 读取数据的缓冲区，最大长度为8192比特。 |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 超时时间（单位：毫秒）。API在目标端口缓冲区无数据时，等待指定时间后返回。默认值0表示不等待直接返回。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Length of the data read. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回读取数据长度。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
-| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) | PortId does not exist. |
-| [31400005](../../apis-basic-services-kit/errorcode-usb.md#31400005-device-not-opened) | The serial port device is not opened. Call the open API first. |
-| [31400006](../../apis-basic-services-kit/errorcode-usb.md#31400006-data-transfer-timeout) | Data transfer timed out. |
-| [31400007](../../apis-basic-services-kit/errorcode-usb.md#31400007-io-exception) | I/O exception. Possible causes:  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. The transfer was canceled.  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. The device offered more data than allowed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 31400007 | I/O exception. Possible causes:  &lt;br&gt;1. The transfer was canceled.  &lt;br&gt;2. The device offered more data than allowed. |
+| 31400006 | Data transfer timed out. |
+| 31400005 | The serial port device is not opened. Call the open API first. |
+| 31400003 | PortId does not exist. |
+| 31400001 | Serial port management exception. |
 
-**Example**
+## Examples
 
 The following sample code shows the basic process for calling the readSync API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
 
@@ -53,8 +59,8 @@ import { serialManager } from '@kit.BasicServicesKit';
 function readSync() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
-  if (portList === undefined || portList.length === 0) {
-    console.info('usbSerial portList is empty');
+  if (!portList || portList.length === 0) {
+    console.error('usbSerial portList is empty');
     return;
   }
   let portId: number = portList[0].portId;
@@ -63,8 +69,8 @@ function readSync() {
   if (!serialManager.hasSerialRight(portId)) {
     serialManager.requestSerialRight(portId).then(result => {
       if (!result) {
-        // If the application does not have the access permission and is not granted by the user, the application exits.
-        console.info('user is not granted the operation  permission');
+        // If the application does not have the access permission and the user does not grant the permission, the application exits.
+        console.error('user is not granted the operation permission');
         return;
       } else {
         console.info('grant permission successfully');
@@ -87,6 +93,14 @@ function readSync() {
     console.info('readSync usbSerial success, readSyncBuffer: ' + readSyncBuffer.toString());
   } catch (error) {
     console.error('readSync usbSerial error, ' + JSON.stringify(error));
+  }
+
+  // Close the serial port device.
+  try {
+    serialManager.close(portId);
+    console.info('close usbSerial success, portId: ' + portId);
+  } catch (error) {
+    console.error('close usbSerial error, ' + JSON.stringify(error));
   }
 }
 ```

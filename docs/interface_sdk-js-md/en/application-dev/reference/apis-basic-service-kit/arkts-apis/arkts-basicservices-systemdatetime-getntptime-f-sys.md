@@ -1,12 +1,18 @@
 # getNtpTime (System API)
 
+## Modules to Import
+
+```TypeScript
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getNtpTime
 
 ```TypeScript
 function getNtpTime(): long
 ```
 
-Obtains the actual time calculated based on the last updated NTP time. This API returns the result synchronously.
+使用同步方式获取基于上次更新的NTP时间所计算出的真实时间。
 
 **Since:** 14
 
@@ -22,16 +28,16 @@ Obtains the actual time calculated based on the last updated NTP time. This API 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Unix epoch time (ms) calculated based on the last updated NTP time. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 基于上次更新的NTP时间所计算出的Unix纪元时间(ms)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [13000002](../../apis-basic-services-kit/errorcode-time.md#13000002-ntp-time-not-updated) | updateNtpTime() is not called successfully. |
+| 13000002 | updateNtpTime() is not called successfully. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

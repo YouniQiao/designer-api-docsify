@@ -4,7 +4,7 @@
 export type AgentExtensionContext = _AgentExtensionContext
 ```
 
-The context of the agent service ability.
+agent service ability的上下文。
 
 **Since:** 24
 

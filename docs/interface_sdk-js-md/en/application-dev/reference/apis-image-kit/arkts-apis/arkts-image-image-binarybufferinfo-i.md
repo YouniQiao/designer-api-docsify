@@ -1,6 +1,6 @@
 # BinaryBufferInfo
 
-Describes binary buffer info.
+描述二值图像缓冲区内的信息及数据。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Describes binary buffer info.
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## bytesPerRow
 
 ```TypeScript
 bytesPerRow?: int
 ```
 
-Bytes per row.If it is not specified, it will be calculated as (width + 7) / 8.The value range is all integers.
+每行字节数。若未指定，将按(width + 7) / 8计算。该值应为整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -36,7 +42,7 @@ Bytes per row.If it is not specified, it will be calculated as (width + 7) / 8.T
 data: ArrayBuffer
 ```
 
-Describes binary buffer.
+图像数据缓冲区，包含二值图像数据。
 
 **Type:** ArrayBuffer
 
@@ -56,9 +62,9 @@ Describes binary buffer.
 size: Size
 ```
 
-Describes binary buffer size.
+图像尺寸，包含宽度和高度。
 
-**Type:** Size
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **Since:** 26.0.0
 

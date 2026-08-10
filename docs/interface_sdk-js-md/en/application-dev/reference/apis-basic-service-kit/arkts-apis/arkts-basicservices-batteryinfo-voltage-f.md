@@ -1,12 +1,18 @@
 # voltage
 
+## Modules to Import
+
+```TypeScript
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+```
+
 ## voltage
 
 ```TypeScript
 function voltage(): int
 ```
 
-Battery voltage of the device, in unit of microvolt.
+表示当前设备电池的电压，单位微伏。
 
 **Since:** 23
 
@@ -20,5 +26,5 @@ Battery voltage of the device, in unit of microvolt.
 
 | Type | Description |
 | --- | --- |
-| int | Returns the battery voltage of the device, in unit of microvolt. |
+| int | 返回当前设备电池的电压，单位微伏。 |
 

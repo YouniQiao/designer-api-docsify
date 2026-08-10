@@ -1,9 +1,9 @@
 # Storage
 
-Provides APIs for obtaining and modifying storage data.
+提供获取和修改存储数据的接口。
 
-Before calling the following APIs, use [data\_storage.getStorage]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-[data\_storage.getStorageSync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the **Storage** instance.
+下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md#getstorage)或  
+[data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getstoragesync)获取到Storage实例，再通过此实例调用对应接口。
 
 **Since:** 6
 
@@ -23,7 +23,7 @@ Before calling the following APIs, use [data\_storage.getStorage]\_\_\_JSDOC\_LI
 clear(callback: AsyncCallback<void>): void
 ```
 
-Clears this **Storage** object. This API uses an asynchronous callback to return the result.
+清除此存储对象中的所有存储。使用callback方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -39,9 +39,9 @@ Clears this **Storage** object. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 storage.clear(function (err) {
@@ -59,7 +59,7 @@ storage.clear(function (err) {
 clear(): Promise<void>
 ```
 
-Clears this **Storage** object. This API uses a promise to return the result.
+清除此存储对象中的所有存储。使用Promise方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -75,9 +75,9 @@ Clears this **Storage** object. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A promise object. |
+| Promise&lt;void&gt; | Promise实例，用于异步处理。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let promiseclear = storage.clear();
@@ -94,7 +94,7 @@ promiseclear.then(() => {
 clearSync(): void
 ```
 
-Clears this **Storage** object.
+清除此存储对象中的所有存储。
 
 **Since:** 6
 
@@ -106,7 +106,7 @@ Clears this **Storage** object.
 
 <!--Device-Storage-clearSync(): void--><!--Device-Storage-clearSync(): void-End-->
 
-**Example**
+## Examples
 
 ```TypeScript
 storage.clearSync();
@@ -118,7 +118,7 @@ storage.clearSync();
 delete(key: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes data with the specified key from this storage object. This API uses an asynchronous callback to return the result.
+从存储对象中删除名为给定key的存储。使用callback方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -134,10 +134,10 @@ Deletes data with the specified key from this storage object. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. It cannot be empty. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | 要获取的存储key名称，不能为空。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 storage.delete('startup', function (err) {
@@ -155,7 +155,7 @@ storage.delete('startup', function (err) {
 delete(key: string): Promise<void>
 ```
 
-Deletes data with the specified key from this storage object. This API uses a promise to return the result.
+从存储对象删除名为给定key的存储。使用Promise方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -171,15 +171,15 @@ Deletes data with the specified key from this storage object. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. |
+| key | string | Yes | 要获取的存储key名称。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise实例，用于异步处理。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let promisedel = storage.delete('startup')
@@ -196,7 +196,7 @@ promisedel.then(() => {
 deleteSync(key: string): void
 ```
 
-Deletes data with the specified key from this storage object.
+从存储对象中删除名为给定key的存储。
 
 **Since:** 6
 
@@ -212,9 +212,9 @@ Deletes data with the specified key from this storage object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. It cannot be empty. |
+| key | string | Yes | 要获取的存储key名称。它不能为空。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 storage.deleteSync('startup');
@@ -226,7 +226,7 @@ storage.deleteSync('startup');
 flush(callback: AsyncCallback<void>): void
 ```
 
-Saves the modification of this object to the **Storage** instance and synchronizes the modification to the file.This API uses an asynchronous callback to return the result.
+将当前storage对象中的修改保存到当前的storage，并异步存储到文件中。使用callback方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -242,9 +242,9 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 storage.flush(function (err) {
@@ -262,7 +262,7 @@ storage.flush(function (err) {
 flush(): Promise<void>
 ```
 
-Saves the modification of this object to the **Storage** instance and synchronizes the modification to the file.This API uses a promise to return the result.
+将当前storage对象中的修改保存到当前的storage，并异步存储到文件中。使用Promise方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -278,9 +278,9 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise实例，用于异步处理。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let promiseflush = storage.flush();
@@ -297,7 +297,7 @@ promiseflush.then(() => {
 flushSync(): void
 ```
 
-Saves the modification of this object to the **Storage** instance and synchronizes the modification to the file.
+将当前storage对象中的修改保存到当前的storage，并同步存储到文件中。
 
 **Since:** 6
 
@@ -309,7 +309,7 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 <!--Device-Storage-flushSync(): void--><!--Device-Storage-flushSync(): void-End-->
 
-**Example**
+## Examples
 
 ```TypeScript
 storage.flushSync();
@@ -321,7 +321,7 @@ storage.flushSync();
 get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 ```
 
-Obtains the value corresponding to a key. If the value is null or not of the default value type, **defValue** is returned. This API uses an asynchronous callback to return the result.
+获取键对应的值，如果值为null或者非默认值类型，返回默认数据defValue。使用callback方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -337,11 +337,11 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. It cannot be empty. |
-| defValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ValueType&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | 要获取的存储key名称，不能为空。 |
+| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 默认返回值。支持number、string、boolean。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 storage.get('startup', 'default', function(err, value) {
@@ -359,7 +359,7 @@ storage.get('startup', 'default', function(err, value) {
 get(key: string, defValue: ValueType): Promise<ValueType>
 ```
 
-Obtains the value corresponding to a key. If the value is null or not of the default value type, **defValue** is returned. This API uses a promise to return the result.
+获取键对应的值，如果值为null或者非默认值类型，返回默认数据defValue。使用Promise方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -375,16 +375,16 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. It cannot be empty. |
-| defValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
+| key | string | Yes | 要获取的存储key名称，不能为空。 |
+| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 默认返回值。支持number、string、boolean。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise used to return the result. |
+| Promise&lt;ValueType&gt; | Promise实例，用于异步获取结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let promiseget = storage.get('startup', 'default');
@@ -401,7 +401,7 @@ promiseget.then((value) => {
 getSync(key: string, defValue: ValueType): ValueType
 ```
 
-Obtains the value corresponding to a key. If the value is null or not of the default value type, **defValue** is returned.
+获取键对应的值，如果值为null或者非默认值类型，返回默认数据defValue。
 
 **Since:** 6
 
@@ -417,16 +417,16 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. It cannot be empty. |
-| defValue | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Default value to be returned if the value of the specified key does not exist. It can be a number, string, or Boolean value. |
+| key | string | Yes | 要获取的存储key名称，不能为空。 |
+| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 给定key的存储不存在，则要返回的默认值。支持number、string、boolean。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Value corresponding to the specified key. If the value is null or not in the default value format, the default value is returned. |
+| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 键对应的值，如果值为null或者非默认值类型，返回默认数据。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let value = storage.getSync('startup', 'default');
@@ -439,7 +439,7 @@ console.info("The value of startup is " + value);
 has(key: string, callback: AsyncCallback<boolean>): boolean
 ```
 
-Checks whether the storage object contains data with a given key. This API uses an asynchronous callback to return the result.
+检查存储对象是否包含名为给定key的存储。使用callback方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -455,16 +455,16 @@ Checks whether the storage object contains data with a given key. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. It cannot be empty. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | 要获取的存储key名称，不能为空。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the storage object contains data with the specified key; returns **false** otherwise. |
+| boolean | true表示存在，false表示不存在。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 storage.has('startup', function (err, isExist) {
@@ -484,7 +484,7 @@ storage.has('startup', function (err, isExist) {
 has(key: string): Promise<boolean>
 ```
 
-Checks whether the storage object contains data with a given key. This API uses a promise to return the result.
+检查存储对象是否包含名为给定key的存储。使用Promise方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -500,15 +500,15 @@ Checks whether the storage object contains data with a given key. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. It cannot be empty. |
+| key | string | Yes | 要获取的存储key名称，不能为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise实例，用于异步处理。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let promisehas = storage.has('startup')
@@ -527,7 +527,7 @@ promisehas.then((isExist) => {
 hasSync(key: string): boolean
 ```
 
-Checks whether the storage object contains data with a given key.
+检查存储对象是否包含名为给定key的存储。
 
 **Since:** 6
 
@@ -543,15 +543,15 @@ Checks whether the storage object contains data with a given key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. It cannot be empty. |
+| key | string | Yes | 要获取的存储key名称，不能为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the storage object contains data with the specified key; returns **false** otherwise. |
+| boolean | true 表示存在，false表示不存在。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let isExist = storage.hasSync('startup');
@@ -566,7 +566,7 @@ if (isExist) {
 off(type: 'change', callback: Callback<StorageObserver>): void
 ```
 
-Unsubscribes from data changes.
+当不再进行订阅数据变更时，使用此接口取消订阅。
 
 **Since:** 6
 
@@ -582,10 +582,10 @@ Unsubscribes from data changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'change' | Yes | Event type. The value **change** indicates data change events. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StorageObserver&gt; | Yes | Callback for the data change. |
+| type | 'change' | Yes | 事件类型，固定值'change'，表示数据变更。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StorageObserver&gt; | Yes | 需要取消的回调对象实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let observer = function (key) {
@@ -600,7 +600,7 @@ storage.off('change', observer);
 on(type: 'change', callback: Callback<StorageObserver>): void
 ```
 
-Subscribes to data changes. The **StorageObserver** needs to be implemented. When the value of the key subscribed to is changed, a callback will be invoked after **flush()** or **flushSync()** is executed.
+订阅数据变更者类需要实现StorageObserver接口，订阅的key的值发生变更后，在执行flush/flushSync方法后，callback方法会被回调。
 
 **Since:** 6
 
@@ -616,10 +616,10 @@ Subscribes to data changes. The **StorageObserver** needs to be implemented. Whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'change' | Yes | Event type. The value **change** indicates data change events. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;StorageObserver&gt; | Yes | Callback used to return the result. |
+| type | 'change' | Yes | 事件类型，固定值'change'，表示数据变更。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StorageObserver&gt; | Yes | 回调对象实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let observer = function (key) {
@@ -636,7 +636,7 @@ storage.flushSync();  // observer will be called.
 put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 ```
 
-Obtains the **Storage** instance corresponding to the specified file, writes data to the **Storage** instance using a **Storage** API, and saves the modification using **flush()** or **flushSync()**. This API uses an asynchronous callback to return the result.
+首先获取指定文件对应的Storage实例，然后借助Storage API将数据写入Storage实例，通过flush或者flushSync将Storage实例持久化。使用callback方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -652,11 +652,11 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. It cannot be empty. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | New value to store. It can be a number, string, or Boolean value. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | 要修改的存储的key，不能为空。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 存储的新值。支持number、string、boolean。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 storage.put('startup', 'auto', function (err) {
@@ -674,7 +674,7 @@ storage.put('startup', 'auto', function (err) {
 put(key: string, value: ValueType): Promise<void>
 ```
 
-Obtains the **Storage** instance corresponding to the specified file, writes data to the **Storage** instance using a **Storage** API, and saves the modification using **flush()** or **flushSync()**. This API uses a promise to return the result.
+首先获取指定文件对应的Storage实例，然后借助Storage API将数据写入Storage实例，通过flush或者flushSync将Storage实例持久化。使用Promise方式返回结果，此方法为异步方法。
 
 **Since:** 6
 
@@ -690,16 +690,16 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. It cannot be empty. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | New value to store. It can be a number, string, or Boolean value. |
+| key | string | Yes | 要修改的存储的key，不能为空。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 存储的新值。支持number、string、boolean。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise实例，用于异步处理。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let promiseput = storage.put('startup', 'auto');
@@ -716,7 +716,7 @@ promiseput.then(() => {
 putSync(key: string, value: ValueType): void
 ```
 
-Obtains the **Storage** instance corresponding to the specified file, writes data to the **Storage** instance using a **Storage** API, and saves the modification using **flush()** or **flushSync()**.
+首先获取指定文件对应的Storage实例，然后借助Storage API将数据写入Storage实例，通过flush或者flushSync将Storage实例持久化。
 
 **Since:** 6
 
@@ -732,10 +732,10 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the data. It cannot be empty. |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | New value to store. It can be a number, string, or Boolean value. |
+| key | string | Yes | 要修改的存储的key，不能为空。 |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 存储的新值。支持number、string、boolean。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 storage.putSync('startup', 'auto');

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## album
 
 ```TypeScript
@@ -60,7 +66,7 @@ assetId: string
 
 - 该属性发生变化则其他元数据属性都将被刷新。  
 - 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。  
-- 当该属性设为空值时，调用[setAVMetadata]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法将失败，返回错误码6600101。
+- 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setavmetadata)方法将失败，返回错误码6600101。
 
 **类型：** string
 
@@ -215,9 +221,9 @@ description?: string
 displayTags?: int
 ```
 
-媒体资源的金标类型，取值参考[DisplayTag]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -253,7 +259,7 @@ duration?: long
 
 媒体时长，单位毫秒（ms）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 
@@ -271,7 +277,7 @@ duration?: long
 fastForwardSkipIntervals?: SkipIntervals
 ```
 
-快进支持的时间间隔。默认为SECONDS\_15，即15秒。
+快进支持的时间间隔。默认为SECONDS_15，即15秒。
 
 系统会使用此值作为快进操作的时间间隔，而非skipIntervals的值。
 
@@ -279,7 +285,7 @@ fastForwardSkipIntervals?: SkipIntervals
 
 **起始版本**：26.0.0
 
-**类型：** SkipIntervals
+**类型：** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **起始版本：** 26.0.0
 
@@ -297,9 +303,9 @@ fastForwardSkipIntervals?: SkipIntervals
 filter?: int
 ```
 
-当前会话支持的协议，默认为TYPE\_CAST\_PLUS\_STREAM。具体取值参考[ProtocolType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+当前会话支持的协议，默认为TYPE_CAST_PLUS_STREAM。具体取值参考[ProtocolType](arkts-avsession-avsession-protocoltype-e.md)。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -420,7 +426,7 @@ publishDate?: Date
 rewindSkipIntervals?: SkipIntervals
 ```
 
-快退支持的时间间隔。默认为SECONDS\_15，即15秒。
+快退支持的时间间隔。默认为SECONDS_15，即15秒。
 
 系统会使用此值作为快退操作的时间间隔，而非skipIntervals的值。
 
@@ -428,7 +434,7 @@ rewindSkipIntervals?: SkipIntervals
 
 **起始版本**：26.0.0
 
-**类型：** SkipIntervals
+**类型：** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **起始版本：** 26.0.0
 
@@ -468,9 +474,9 @@ singleLyricText?: string
 skipIntervals?: SkipIntervals
 ```
 
-快进快退支持的时间间隔。默认为SECONDS\_15，即15秒。
+快进快退支持的时间间隔。默认为SECONDS_15，即15秒。
 
-**类型：** SkipIntervals
+**类型：** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **起始版本：** 11
 

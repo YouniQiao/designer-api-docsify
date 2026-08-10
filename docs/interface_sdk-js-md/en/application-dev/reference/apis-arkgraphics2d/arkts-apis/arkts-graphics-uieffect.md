@@ -1,9 +1,15 @@
 # @ohos.graphics.uiEffect
 
-This module provides basic capabilities for component effects, including blur, brightening, and more.Effects are categorized into the Filter and VisualEffect classes, and effects of the same class can be cascaded under an instance of that effect class. Using this module, you can quickly implement complex visual effects without needing to master underlying image processing algorithms, reducing development complexity and improving user experience.In actual development, blur can be used for background blurring, and brightening can be used for bright screen display, etc.
+本模块提供组件效果的一些基础能力，包括模糊、提亮等。效果被分为Filter和VisualEffect大类，同类效果可以级联在一个效果大类的实例下。使用该模块可以快速实现复杂的视觉效果，无需开发者掌握底层的图像处理算法，降低了开发复杂度，提升了用户体验。在实际开发中，模糊可用于背景虚化，提亮可用于亮屏显示等。
 
-- [Filter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_: Used to add specified Filter effects to a component.  
-- [VisualEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_: Used to add specified VisualEffect effects to a component.
+- [Filter](arkts-arkgraphics2d-uieffect-filter-i.md)：用于添加指定Filter效果到组件上。  
+- [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md)：用于添加指定VisualEffect效果到组件上。
+
+## Modules to Import
+
+```TypeScript
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+```
 
 ## Summary
 
@@ -11,13 +17,13 @@ This module provides basic capabilities for component effects, including blur, b
 
 | Name | Description |
 | --- | --- |
-| [uiEffect](arkts-arkgraphics2d-uieffect-n.md) | This module provides basic capabilities for component effects, including blur, brightening, and more.Effects are categorized into the Filter and VisualEffect classes, and effects of the same class can be cascaded under an instance of that effect class. Using this module, you can quickly implement complex visual effects without needing to master underlying image processing algorithms, reducing development complexity and improving user experience.In actual development, blur can be used for background blurring, and brightening can be used for bright screen display, etc.  - [Filter]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_: Used to add specified Filter effects to a component.  - [VisualEffect]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_: Used to add specified VisualEffect effects to a component. |
+| [uiEffect](arkts-arkgraphics2d-uieffect-n.md) | 本模块提供组件效果的一些基础能力，包括模糊、提亮等。效果被分为Filter和VisualEffect大类，同类效果可以级联在一个效果大类的实例下。使用该模块可以快速实现复杂的视觉效果，无需开发者掌握底层的图像处理算法，降低了开发复杂度，提升了用户体验。在实际开发中，模糊可用于背景虚化，提亮可用于亮屏显示等。  - [Filter](arkts-arkgraphics2d-uieffect-filter-i.md)：用于添加指定Filter效果到组件上。  - [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md)：用于添加指定VisualEffect效果到组件上。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | Parameter list of BrightnessBlender, used to configure various properties of the brightness effect,including grayscale adjustment coefficients, saturation, and blending ratio parameters. |
+| [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | BrightnessBlender的参数列表，用于配置提亮效果的各项属性，包括灰度调整系数、饱和度和混合比例等参数。 |
 <!--DelEnd-->
 

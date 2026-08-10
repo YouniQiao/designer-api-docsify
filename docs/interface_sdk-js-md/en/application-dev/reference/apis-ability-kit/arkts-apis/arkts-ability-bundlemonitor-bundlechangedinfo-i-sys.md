@@ -1,6 +1,6 @@
 # BundleChangedInfo (System API)
 
-This module defines the result information of monitoring install, update and uninstall.
+应用变更信息。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ This module defines the result information of monitoring install, update and uni
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { bundleMonitor } from 'kits/@kit.AbilityKit';
+```
+
 ## appIndex
 
 ```TypeScript
 readonly appIndex: int
 ```
 
-The app index of clone app
+应用状态发生变化的应用分身索引。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -38,7 +44,7 @@ The app index of clone app
 readonly bundleName: string
 ```
 
-The bundle name
+应用状态发生变化的应用Bundle名称。
 
 **Type:** string
 
@@ -58,9 +64,9 @@ The bundle name
 readonly userId: int
 ```
 
-The user id
+应用状态发生变化的用户ID，可以通过getOsAccountLocalId接口获取。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

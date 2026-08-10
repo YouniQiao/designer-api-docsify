@@ -10,6 +10,12 @@ Describes the contents of the discovery results
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { connection } from 'kits/@kit.ConnectivityKit';
+```
+
 ## deviceClass
 
 ```TypeScript
@@ -18,7 +24,7 @@ deviceClass: DeviceClass
 
 The class of the device
 
-**Type:** DeviceClass
+**Type:** [DeviceClass](arkts-connectivity-connection-deviceclass-i.md)
 
 **Since:** 18
 
@@ -78,7 +84,7 @@ rssi: int
 
 RSSI of the remote device
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 18
 

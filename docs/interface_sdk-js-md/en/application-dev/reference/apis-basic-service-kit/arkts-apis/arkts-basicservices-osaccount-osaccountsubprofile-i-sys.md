@@ -1,6 +1,6 @@
 # OsAccountSubProfile (System API)
 
-Definition of an OS account sub-profile.
+系统账号子Profile的定义
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Definition of an OS account sub-profile.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## distributedInfo
 
 ```TypeScript
 distributedInfo?: distributedAccount.DistributedInfo
 ```
 
-Distributed account information bound to the OS account sub-profile.
+系统账号子profile绑定的分布式账号信息。
 
 **Type:** distributedAccount.DistributedInfo
 
@@ -40,9 +46,9 @@ Distributed account information bound to the OS account sub-profile.
 id: int
 ```
 
-Identifier of the OS account sub-profile.
+系统账号子profile的标识符。取值范围为全体整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -62,9 +68,9 @@ Identifier of the OS account sub-profile.
 index: int
 ```
 
-Position index of the OS account sub-profile, ranging from 0 to the number of sub-profiles minus 1.This index is unique within each OS account and is automatically assigned by the system when the sub-profile is created.
+系统账号子profile的位置索引，取值范围：0~子profile个数减1。该索引在每个系统账号下唯一，由系统在创建子Profile时自动分配。取值范围为全体整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -84,9 +90,9 @@ Position index of the OS account sub-profile, ranging from 0 to the number of su
 osAccountLocalId: int
 ```
 
-Local ID of the OS account to which the sub-profile belongs.
+子profile所属系统账号的本地标识符。取值范围为全体整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

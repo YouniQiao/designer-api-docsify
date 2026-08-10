@@ -1,6 +1,6 @@
 # GestureInterface
 
-Defines the gesture API.
+定义Gesture接口。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Defines the gesture API.
 allowedTypes(types: Array<SourceTool>): T
 ```
 
-Sets the input types that can trigger the gesture response.
+设置手势响应的输入类型。
 
 **Since:** 14
 
@@ -34,13 +34,13 @@ Sets the input types that can trigger the gesture response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;SourceTool&gt; | Yes | Input types that can trigger the gesture response. |
+| types | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | Yes | 手势响应的输入类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## tag
 
@@ -48,7 +48,7 @@ Sets the input types that can trigger the gesture response.
 tag(tag: string): T
 ```
 
-Sets a gesture tag.
+设置手势的标志。
 
 **Since:** 11
 
@@ -66,11 +66,11 @@ Sets a gesture tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tag | string | Yes | Gesture tag. |
+| tag | string | Yes | 手势的标志。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 

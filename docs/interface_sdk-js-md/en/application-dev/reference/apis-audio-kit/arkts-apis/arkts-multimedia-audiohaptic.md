@@ -1,8 +1,7 @@
 # @ohos.multimedia.audioHaptic
 
-Audio-haptic enables users to get rhythmic auditory and haptic feedback while having incoming calls or messages.
+音振协同
 
-**Device behavior difference**: For a device without a vibration component, no vibration effect is generated.
 
 **Since:** 11
 
@@ -12,35 +11,41 @@ Audio-haptic enables users to get rhythmic auditory and haptic feedback while ha
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
+## Modules to Import
+
+```TypeScript
+import { audioHaptic } from 'kits/@kit.AudioKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getaudiohapticmanager) | Obtains an \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ instance. This object is singleton in one process. |
+| [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getaudiohapticmanager) | 获取音振管理器。 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AudioHapticFileDescriptor](arkts-audio-audiohaptic-audiohapticfiledescriptor-i.md) | Describes the audio-haptic file descriptor. |
-| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | Manages the audio-haptic feature. Before calling any API in AudioHapticManager, you must use  [getAudioHapticManager]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to create an AudioHapticManager instance. |
-| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i.md) | Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use  [createPlayer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_to create an AudioHapticPlayer instance. |
-| [AudioHapticPlayerOptions](arkts-audio-audiohaptic-audiohapticplayeroptions-i.md) | Describes the options for the audio-haptic player. |
+| [AudioHapticFileDescriptor](arkts-audio-audiohaptic-audiohapticfiledescriptor-i.md) | 描述音振文件描述符。  > **注意：** >  > 开发者需要确保fd是可用的文件描述符，且offset和length的值都是正确的。 |
+| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | 管理音振协同功能。在调用AudioHapticManager的接口前，需要先通过[getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getaudiohapticmanager)创建实例。 |
+| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i.md) | 音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过  [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)创建实例。 |
+| [AudioHapticPlayerOptions](arkts-audio-audiohaptic-audiohapticplayeroptions-i.md) | 音振播放器选项。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i-sys.md) | Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use  [createPlayer]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_to create an AudioHapticPlayer instance. |
+| [AudioHapticPlayer](arkts-audio-audiohaptic-audiohapticplayer-i-sys.md) | 音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过  [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)创建实例。 |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md) | Enumerates the audio haptic types. |
-| [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md) | Enumerates the audio latency modes. |
+| [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md) | 枚举，音振类型。 |
+| [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md) | 枚举，音频时延模式。 |
 

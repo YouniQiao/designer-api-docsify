@@ -18,7 +18,7 @@ enableSnapToEnd?: boolean
 
 在Scroll组件限位滚动模式下，该属性设置为true后，不允许Scroll在最后一页和末尾间自由滑动，该属性设置为false后，允许Scroll在最后一页和末尾间自由滑动。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_说明\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_1. 该属性值默认为true。\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_2. 该属性仅当snapPagination属性为Array\&lt;Dimension\&gt;时生效，不支持Dimension。\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1. 该属性值默认为true。&lt;br&gt;2. 该属性仅当snapPagination属性为Array\&lt;Dimension\&gt;时生效，不支持Dimension。&lt;/p&gt;
 
 **类型：** boolean
 
@@ -44,7 +44,7 @@ enableSnapToStart?: boolean
 
 在Scroll组件限位滚动模式下，该属性设置为true后，不允许Scroll在开头和第一页间自由滑动，该属性设置为false后，允许Scroll在开头和第一页间自由滑动。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_说明\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_1. 该属性值默认为true。\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_2. 该属性仅当snapPagination属性为Array\&lt;Dimension\&gt;时生效，不支持Dimension。\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1. 该属性值默认为true。&lt;br&gt;2. 该属性仅当snapPagination属性为Array\&lt;Dimension\&gt;时生效，不支持Dimension。&lt;/p&gt;
 
 **类型：** boolean
 
@@ -70,7 +70,7 @@ snapAlign: ScrollSnapAlign
 
 限位滚动时的对齐方式。
 
-**类型：** ScrollSnapAlign
+**类型：** [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md)
 
 **默认值：** ScrollSnapAlign.NONE [since 11]
 
@@ -94,9 +94,9 @@ snapPagination?: Dimension | Array<Dimension>
 
 限位滚动时的分页点。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_说明\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_1.当属性为Dimension时，Dimension表示每页的大小，系统按照该大小进行分页。\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_2.当属性为Array\&lt;Dimension\&gt;时，每个Dimension表示分页点，系统按照分页点进行分页。每个Dimension的范围为[0,可滑动距离]。\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_3.当该属性不填或者Dimension为小于等于0的输入时，按异常值，无限位滚动处理。当该属性值为Array\&lt;Dimension\&gt;数组时，数组中的数值必须为单调递增。\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_4.当输入为百分比时，实际的大小为Scroll组件的视口与百分比数值之积。\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1.当属性为Dimension时，Dimension表示每页的大小，系统按照该大小进行分页。&lt;br&gt;2.当属性为Array\&lt;Dimension\&gt;时，每个Dimension表示分页点，系统按照分页点进行分页。每个Dimension的范围为[0,可滑动距离]。&lt;br&gt;3.当该属性不填或者Dimension为小于等于0的输入时，按异常值，无限位滚动处理。当该属性值为Array\&lt;Dimension\&gt;数组时，数组中的数值必须为单调递增。&lt;br&gt;4.当输入为百分比时，实际的大小为Scroll组件的视口与百分比数值之积。&lt;/p&gt;
 
-**类型：** Dimension \| Array&lt;Dimension&gt;
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| Array&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
 
 **默认值：** 100%
 

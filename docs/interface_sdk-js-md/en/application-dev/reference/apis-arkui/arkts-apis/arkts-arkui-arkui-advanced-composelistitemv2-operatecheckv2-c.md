@@ -1,6 +1,6 @@
 # OperateCheckV2
 
-Declare type OperateCheckV2
+列表右侧元素为Switch、CheckBox、Radio的类型。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Declare type OperateCheckV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(options?: OperateCheckV2Options)
 ```
 
-The constructor of OperateCheckV2.
+OperateCheckV2的构造函数。
 
 **Since:** 26.0.0
 
@@ -34,7 +40,7 @@ The constructor of OperateCheckV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options of OperateCheckV2 |
+| options | [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | No | OperateCheckV2的可选项 |
 
 ## onChange
 
@@ -42,7 +48,7 @@ The constructor of OperateCheckV2.
 public onChange?: OnChangeCallback
 ```
 
-Callback function when operate the checkbox/switch/radio.
+操作checkbox/switch/radio时的回调函数。
 
 **Since:** 26.0.0
 
@@ -60,9 +66,9 @@ Callback function when operate the checkbox/switch/radio.
 public accessibilityDescription?: ResourceStr
 ```
 
-The accessibilityDescription of the checkbox/switch/radio.
+Switch/CheckBox/Radio的无障碍描述。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -80,7 +86,7 @@ The accessibilityDescription of the checkbox/switch/radio.
 public accessibilityLevel?: string
 ```
 
-The accessibilityLevel of the checkbox/switch/radio.
+Switch/CheckBox/Radio的无障碍重要性。
 
 **Type:** string
 
@@ -102,9 +108,9 @@ The accessibilityLevel of the checkbox/switch/radio.
 public accessibilityText?: ResourceStr
 ```
 
-The accessibilityText of the checkbox/switch/radio.
+Switch/CheckBox/Radio的无障碍文本属性。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -122,7 +128,7 @@ The accessibilityText of the checkbox/switch/radio.
 public isCheck?: boolean
 ```
 
-Whether is checked on default.
+是否默认选中。
 
 **Type:** boolean
 

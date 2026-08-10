@@ -1,0 +1,138 @@
+# BluetoothState
+
+The enum of bluetooth state.
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+<!--Device-access-export enum BluetoothState--><!--Device-access-export enum BluetoothState-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+## STATE_OFF
+
+```TypeScript
+STATE_OFF = 0
+```
+
+Indicates the local Bluetooth is off
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BluetoothState-STATE_OFF = 0--><!--Device-BluetoothState-STATE_OFF = 0-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+## STATE_TURNING_ON
+
+```TypeScript
+STATE_TURNING_ON = 1
+```
+
+Indicates the local Bluetooth is turning on
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BluetoothState-STATE_TURNING_ON = 1--><!--Device-BluetoothState-STATE_TURNING_ON = 1-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+## STATE_ON
+
+```TypeScript
+STATE_ON = 2
+```
+
+Indicates the local Bluetooth is on, and ready for use
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BluetoothState-STATE_ON = 2--><!--Device-BluetoothState-STATE_ON = 2-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+## STATE_TURNING_OFF
+
+```TypeScript
+STATE_TURNING_OFF = 3
+```
+
+Indicates the local Bluetooth is turning off
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BluetoothState-STATE_TURNING_OFF = 3--><!--Device-BluetoothState-STATE_TURNING_OFF = 3-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+## STATE_BLE_TURNING_ON
+
+```TypeScript
+STATE_BLE_TURNING_ON = 4
+```
+
+Indicates the local Bluetooth is turning LE mode on
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4--><!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+## STATE_BLE_ON
+
+```TypeScript
+STATE_BLE_ON = 5
+```
+
+Indicates the local Bluetooth is in LE only mode
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BluetoothState-STATE_BLE_ON = 5--><!--Device-BluetoothState-STATE_BLE_ON = 5-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+
+## STATE_BLE_TURNING_OFF
+
+```TypeScript
+STATE_BLE_TURNING_OFF = 6
+```
+
+Indicates the local Bluetooth is turning off LE only mode
+
+**起始版本：** 10
+
+**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6--><!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6-End-->
+
+**系统能力：** SystemCapability.Communication.Bluetooth.Core
+

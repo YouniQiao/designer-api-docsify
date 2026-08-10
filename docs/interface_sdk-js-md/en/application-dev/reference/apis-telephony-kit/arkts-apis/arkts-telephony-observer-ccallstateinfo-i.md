@@ -10,6 +10,12 @@ Indicates carrier call state and number.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
+## Modules to Import
+
+```TypeScript
+import { observer } from 'kits/@kit.TelephonyKit';
+```
+
 ## state
 
 ```TypeScript
@@ -18,7 +24,7 @@ state: CCallState
 
 Indicates carrier call state.
 
-**Type:** CCallState
+**Type:** [CCallState](arkts-telephony-call-ccallstate-e.md)
 
 **Since:** 23
 

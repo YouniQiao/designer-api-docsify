@@ -1,14 +1,26 @@
 # finish
 
+## Modules to Import
+
+```TypeScript
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
+```
+
 ## finish
 
 ```TypeScript
 function finish(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void
 ```
 
-Finishes the key operation. This API uses an asynchronous callback to return the result.
+finish操作密钥接口。使用callback异步回调。
 
-The **huks.init**, **huks.update**, and **huks.finish** must be used together.
+huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.finishSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-finishsession-f.md#finishsession)
+> 替代。
 
 **Since:** 8
 
@@ -26,9 +38,9 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | number | Yes | Handle of the **finish** operation, which is of the uint64 type. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameter set used for the **finish** operation. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HuksResult&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| handle | number | Yes | Finish操作的uint64类型的handle值。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Finish的参数集合。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | Yes | 回调函数。当密钥操作finish成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
 
 
 ## finish
@@ -37,9 +49,15 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 function finish(handle: number, options: HuksOptions): Promise<HuksResult>
 ```
 
-Finishes the key operation. This API uses a promise to return the result.
+finish操作密钥接口。使用Promise异步回调。
 
-The **huks.init**, **huks.update**, and **huks.finish** must be used together.
+huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [huks.finishSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-finishsession-f.md#finishsession)
+> 替代。
 
 **Since:** 8
 
@@ -57,12 +75,12 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | number | Yes | Handle of the **finish** operation, which is of the uint64 type. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameter set used for the **finish** operation. |
+| handle | number | Yes | Finish操作的uint64类型的handle值。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Finish操作的参数集合。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksResult&gt; | Promise that returns **HuksResult**. |
+| Promise&lt;HuksResult&gt; | Promise对象，返回HuksResult。 |
 

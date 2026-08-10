@@ -1,5 +1,11 @@
 # isOpenTouchGuideSync
 
+## 导入模块
+
+```TypeScript
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+```
+
 ## isOpenTouchGuideSync
 
 ```TypeScript
@@ -26,7 +32,7 @@ function isOpenTouchGuideSync(): boolean
 | --- | --- |
 | boolean | 表示是否开启了触摸浏览模式。true表示开启了触摸浏览，false表示未开启触摸浏览。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';

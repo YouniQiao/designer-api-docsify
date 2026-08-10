@@ -1,6 +1,6 @@
 # SystemSoundType
 
-Enumerates the system sound effect types.
+枚举，表示系统音效类型。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the system sound effect types.
 PHOTO_SHUTTER = 0
 ```
 
-The sound indicates image capture.
+拍照音效。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ The sound indicates image capture.
 VIDEO_RECORDING_BEGIN = 1
 ```
 
-The sound indicates the beginning of video recording.
+视频录制开始音效。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ The sound indicates the beginning of video recording.
 VIDEO_RECORDING_END = 2
 ```
 
-The sound indicates the end of video recording.
+视频录制结束音效。
 
 **Since:** 23
 

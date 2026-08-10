@@ -1,6 +1,6 @@
 # CreateOsAccountForDomainOptions (System API)
 
-Represents a set of optional parameters for creating an OS account bound to the specified domain account. It inherits from [CreateOsAccountOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示用于创建与指定域账号绑定的系统账号的可选参数。继承自[CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md)。
 
 **Inheritance/Implementation:** CreateOsAccountForDomainOptions extends [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md)
 
@@ -13,4 +13,10 @@ Represents a set of optional parameters for creating an OS account bound to the 
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
 

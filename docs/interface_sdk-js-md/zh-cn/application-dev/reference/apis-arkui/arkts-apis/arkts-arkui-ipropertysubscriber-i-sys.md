@@ -34,7 +34,7 @@ aboutToBeDeleted(owningView?: IPropertySubscriber): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| owningView | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 所在自定义组件；不传入则不指定关联的自定义组件。 |
+| owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 否 | 所在自定义组件；不传入则不指定关联的自定义组件。 |
 
 ## id
 

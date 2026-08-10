@@ -1,6 +1,6 @@
 # HashParam (System API)
 
-Defines the hash parameters for bundle installation and uninstall.
+应用程序安装卸载哈希参数信息。
 
 **Since:** 9
 
@@ -12,13 +12,19 @@ Defines the hash parameters for bundle installation and uninstall.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
+
 ## hashValue
 
 ```TypeScript
 hashValue: string
 ```
 
-Hash value.
+哈希值。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ Hash value.
 moduleName: string
 ```
 
-Module name of the bundle.
+应用程序模块名称。
 
 **Type:** string
 

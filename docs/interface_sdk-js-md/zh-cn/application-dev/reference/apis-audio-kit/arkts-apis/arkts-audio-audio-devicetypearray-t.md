@@ -4,7 +4,7 @@
 type DeviceTypeArray = Array<DeviceType>
 ```
 
-数组类型，[DeviceType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_数组。
+数组类型，[DeviceType](arkts-audio-audio-devicetype-e.md)数组。
 
 **起始版本：** 26.0.0
 

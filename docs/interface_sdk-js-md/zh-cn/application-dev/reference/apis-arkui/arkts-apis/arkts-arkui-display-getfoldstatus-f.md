@@ -1,5 +1,11 @@
 # getFoldStatus
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## getFoldStatus
 
 ```TypeScript
@@ -22,15 +28,15 @@ function getFoldStatus(): FoldStatus
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | FoldStatus对象，返回当前可折叠设备的折叠状态。 |
+| [FoldStatus](arkts-arkui-enums-foldstatus-e.md) | FoldStatus对象，返回当前可折叠设备的折叠状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 1400003 | This display manager service works abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let data: display.FoldStatus = display.getFoldStatus();

@@ -1,6 +1,6 @@
 # AVQueueInfo (System API)
 
-The play list information definition.
+歌单（歌曲列表）的相关属性。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ The play list information definition.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## avQueueId
 
 ```TypeScript
 avQueueId: string
 ```
 
-The id of play list
+歌单（歌曲列表）唯一标识Id。
 
 **Type:** string
 
@@ -38,7 +44,7 @@ The id of play list
 avQueueImage: image.PixelMap | string
 ```
 
-The artwork of play list, can be a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or a URI formatted string,
+歌单（歌曲列表）封面图，图片的像素数据或者图片路径地址（本地路径或网络路径）。
 
 **Type:** image.PixelMap \| string
 
@@ -58,7 +64,7 @@ The artwork of play list, can be a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or a UR
 avQueueName: string
 ```
 
-The name of play list
+歌单（歌曲列表）名称。
 
 **Type:** string
 
@@ -78,7 +84,7 @@ The name of play list
 bundleName: string
 ```
 
-The bundle name of application which current play list belongs to.
+歌单所属应用包名。
 
 **Type:** string
 
@@ -98,9 +104,9 @@ The bundle name of application which current play list belongs to.
 lastPlayedTime?: long
 ```
 
-The time when the user last played the playlist.The time format can be system, such as 1611081385000, it means 2021-01-20 02:36:25.
+歌单最后播放时间。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 11
 

@@ -12,6 +12,12 @@ Indicates the mark information of the phone number.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## isCloud
 
 ```TypeScript
@@ -60,7 +66,7 @@ markCount?: int
 
 Indicates the count of number mark.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -120,7 +126,7 @@ markType: MarkType
 
 Indicates the type of number mark.
 
-**Type:** MarkType
+**Type:** [MarkType](arkts-telephony-call-marktype-e-sys.md)
 
 **Since:** 12
 

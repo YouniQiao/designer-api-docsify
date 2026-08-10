@@ -1,5 +1,11 @@
 # registerTraceListener
 
+## 导入模块
+
+```TypeScript
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## registerTraceListener
 
 ```TypeScript
@@ -26,15 +32,15 @@ function registerTraceListener(callback: TraceEventListener): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 注册的回调函数，用于监听应用trace捕获开关状态变化。当trace捕获开关状态发生变化时 （从开启变为关闭或从关闭变为开启），会触发此回调并传入当前的trace状态。注册成功后会立即执行一次回调，后续每次trace捕获开关状态变化 都会触发回调。 |
+| callback | [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md) | 是 | 注册的回调函数，用于监听应用trace捕获开关状态变化。当trace捕获开关状态发生变化时 （从开启变为关闭或从关闭变为开启），会触发此回调并传入当前的trace状态。注册成功后会立即执行一次回调，后续每次trace捕获开关状态变化 都会触发回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | 回调注册状态。 >= 0：注册成功，返回用于注销的回调索引，索引范围[0, 9]； -1：已达到最大回调函数注册数量； -2：无效参数，参数非TraceEventListener类型。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 回调注册状态。 >= 0：注册成功，返回用于注销的回调索引，索引范围[0, 9]； -1：已达到最大回调函数注册数量； -2：无效参数，参数非TraceEventListener类型。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // 注册的回调函数定义

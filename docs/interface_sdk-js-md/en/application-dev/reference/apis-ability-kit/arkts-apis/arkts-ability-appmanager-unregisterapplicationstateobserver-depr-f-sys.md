@@ -6,7 +6,7 @@
 function unregisterApplicationStateObserver(observerId: number, callback: AsyncCallback<void>): void
 ```
 
-Unregister application state observer.
+取消注册应用程序状态观测器。使用callback异步回调。
 
 **Since:** 8
 
@@ -28,10 +28,10 @@ Unregister application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observerId | number | Yes | Indicates the number code of the observer. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Represents the specified callback method. |
+| observerId | number | Yes | 表示观察者的编号代码。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 表示指定的callback回调方法。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';
@@ -56,7 +56,7 @@ appManager.unregisterApplicationStateObserver(observerId, unregisterApplicationS
 function unregisterApplicationStateObserver(observerId: number): Promise<void>
 ```
 
-Unregister application state observer.
+取消注册应用程序状态观测器。使用Promise异步回调。
 
 **Since:** 8
 
@@ -78,15 +78,15 @@ Unregister application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observerId | number | Yes | Indicates the number code of the observer. |
+| observerId | number | Yes | 表示观察者的编号代码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import appManager from '@ohos.application.appManager';

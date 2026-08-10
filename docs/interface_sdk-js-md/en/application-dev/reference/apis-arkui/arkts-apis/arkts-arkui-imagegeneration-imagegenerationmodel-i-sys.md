@@ -12,6 +12,12 @@ AI Image Model Abstract Interface.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## cancelImageGeneration
 
 ```TypeScript
@@ -36,7 +42,7 @@ Cancel AI image generation task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | int | Yes | The session id for cancel an AI image generation task. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value: range: [0, +∞] |
+| sessionId | int | Yes | The session id for cancel an AI image generation task. &lt;br&gt;Value: range: [0, +∞] |
 
 ## getModelSupportStyles
 
@@ -88,9 +94,9 @@ User use complaint menu to complain the result of an AI-generated image task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | int | Yes | The session id of AI image generation task. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value: range: [0, +∞] |
-| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The origin request for AI-generated image task. |
-| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The result for AI-generated image task. |
+| sessionId | int | Yes | The session id of AI image generation task. &lt;br&gt;Value: range: [0, +∞] |
+| request | [GenerateImageTaskParams](arkts-arkui-imagegeneration-generateimagetaskparams-i-sys.md) | Yes | The origin request for AI-generated image task. |
+| result | [GenerateImageTaskResult](arkts-arkui-imagegeneration-generateimagetaskresult-i-sys.md) | Yes | The result for AI-generated image task. |
 
 ## requestImageGeneration
 
@@ -117,7 +123,7 @@ Request AI image generation task to get the generated image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | int | Yes | The session id for requesting an AI image generation task. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Value: range:[0, +∞] |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters for requesting an AI image generation task. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GenerateImageTaskPartialResult&gt; | Yes | the callback used to return the GenerateImageTaskPartialResult. |
+| sessionId | int | Yes | The session id for requesting an AI image generation task. &lt;br&gt;Value: range:[0, +∞] |
+| params | [GenerateImageTaskParams](arkts-arkui-imagegeneration-generateimagetaskparams-i-sys.md) | Yes | Parameters for requesting an AI image generation task. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GenerateImageTaskPartialResult&gt; | Yes | the callback used to return the GenerateImageTaskPartialResult. |
 

@@ -1,6 +1,6 @@
 # ScanMode
 
-The enum of scan mode.
+扫描模式的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ The enum of scan mode.
 SCAN_MODE_LOW_LATENCY = 2
 ```
 
-High-power mode with a higher scan frequency.
+高功率模式，扫描频率高。
 
 **Since:** 26.0.0
 

@@ -1,17 +1,22 @@
 # off (System API)
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## off('uninstallDLPSandbox')
 
 ```TypeScript
 function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>): void
 ```
 
-Unsubscribes from the DLP sandbox uninstall event. After the API is successfully called, the application will no longer receive callback notifications for the DLP sandbox uninstall event.
+取消监听DLP沙箱卸载事件。调用成功后，应用不再接收DLP沙箱卸载事件的回调通知。
 
-This API can be called only after a listener is registered using  
-[on]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+必须在调用[on](dlpPermission.on(type: 'uninstallDLPSandbox', listener: Callback&lt;DLPSandboxState&gt;))注册监听后才能调用此方法取消监听。
 
-When the DLP management application exits or no longer needs to track sandbox status changes, unregister the listener to release resources.
+DLP管理应用退出或不再需要追踪沙箱状态变化时，取消事件订阅以释放监听资源。
 
 **Since:** 10
 
@@ -29,32 +34,26 @@ When the DLP management application exits or no longer needs to track sandbox st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'uninstallDLPSandbox' | Yes | Event type. It has a fixed value of **uninstallDLPSandbox**, which indicates the DLP sandbox application uninstall event. |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DLPSandboxState&gt; | No | Callback used when a sandbox application is uninstalled. By default, this parameter is left blank, which unregisters all callbacks for the sandbox uninstall event. |
+| type | 'uninstallDLPSandbox' | Yes | 监听事件类型。固定值为'uninstallDLPSandbox'：DLP沙箱卸载事件。 |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DLPSandboxState&gt; | No | 沙箱应用卸载事件的回调。默认为空，表示取消该类型事件的所有回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| 19100001 | Invalid parameter value. |
+| 19100011 | The system ability works abnormally. |
+| 201 | Permission denied. |
+| 202 | Non-system applications use system APIs. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-try {
-  dlpPermission.off('uninstallDLPSandbox', (info: dlpPermission.DLPSandboxState) => {
-    console.info('uninstallDLPSandbox event', info.appIndex, info.bundleName)
-  }); // Unsubscribe from the DLP sandbox application uninstall event.
-} catch (err) {
-  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-}
+dlpPermission.off('uninstallDLPSandbox', (info: dlpPermission.DLPSandboxState) => {
+  console.info('uninstallDLPSandbox event', info.appIndex, info.bundleName)
+}); // Unsubscribe from the DLP sandbox application uninstall event.
 ```
 

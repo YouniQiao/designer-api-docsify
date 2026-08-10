@@ -1,6 +1,6 @@
 # SplitPolicy
 
-Splitpolicy indicates the policy of pages pushed to the stack.
+表示MultiNavigation中页面的类型。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Splitpolicy indicates the policy of pages pushed to the stack.
 HOME_PAGE = 0
 ```
 
-Indicates that the page will be pushed to the stack as home page.
+主页页面类型。全屏模式显示。
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Indicates that the page will be pushed to the stack as home page.
 DETAIL_PAGE = 1
 ```
 
-Indicates that the page will be pushed to the stack as detail page.
+详情页页面类型。分栏模式显示。
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Indicates that the page will be pushed to the stack as detail page.
 FULL_PAGE = 2
 ```
 
-Indicates that the page will be pushed to the stack as full-screen page.
+全屏页页面类型。全屏模式显示。
 
 **Since:** 23
 

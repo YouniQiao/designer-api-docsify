@@ -2,7 +2,7 @@
 
 用于clipShape和maskShape接口的椭圆形状。
 
-继承自[BaseShape]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)。
 
 **继承/实现关系：** EllipseShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
 
@@ -13,6 +13,12 @@
 <!--Device-unnamed-export declare class EllipseShape extends BaseShape--><!--Device-unnamed-export declare class EllipseShape extends BaseShape-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+```
 
 ## constructor
 
@@ -36,5 +42,5 @@ constructor(options?: ShapeSize)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 形状的大小。 |
+| options | [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md) | 否 | 形状的大小。 |
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## filter
 
 ```TypeScript
@@ -18,7 +24,7 @@ filter?: Filter
 
 文件过滤配置项。 可选，设置过滤条件。
 
-**类型：** Filter
+**类型：** [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md)
 
 **起始版本：** 23
 

@@ -12,6 +12,12 @@ This interface is used to notify the listener of any device Spatialization or He
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## deviceDescriptor
 
 ```TypeScript
@@ -20,7 +26,7 @@ deviceDescriptor: AudioDeviceDescriptor
 
 Audio device description.
 
-**Type:** AudioDeviceDescriptor
+**Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md)
 
 **Since:** 12
 

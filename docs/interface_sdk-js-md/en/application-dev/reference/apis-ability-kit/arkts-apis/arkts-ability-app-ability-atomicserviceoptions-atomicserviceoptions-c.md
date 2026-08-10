@@ -1,7 +1,7 @@
 # AtomicServiceOptions
 
-AtomicServiceOptions** is used as an input parameter of  
-[openAtomicService()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to carry arguments. It inherits from [StartOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+**AtomicServiceOptions** is used as an input parameter of  
+[openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice) to carry arguments. It inherits from [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md).
 
 **Inheritance/Implementation:** AtomicServiceOptions extends [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
 
@@ -13,15 +13,21 @@ AtomicServiceOptions** is used as an input parameter of
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+import { AtomicServiceOptions } from 'kits/@kit.AbilityKit';
+```
+
 ## completionHandlerForAtomicService
 
 ```TypeScript
 completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 ```
 
-Operation class for receiving the result of opening an atomic service.
+打开原子化服务结果的操作类，用于接收打开原子化服务的结果。
 
-**Type:** CompletionHandlerForAtomicService
+**Type:** [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
 
 **Since:** 20
 
@@ -41,10 +47,9 @@ Operation class for receiving the result of opening an atomic service.
 flags?: int
 ```
 
-Mode in which the system processes the startup. For example, **wantConstant.Flags.FLAG\_INSTALL\_ON\_DEMAND**  
-indicates that the installation-free capability is used.
+系统处理该次启动的方式。例如通过wantConstant.Flags.FLAG_INSTALL_ON_DEMAND表示使用免安装能力。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 12
 
@@ -64,9 +69,9 @@ indicates that the installation-free capability is used.
 parameters?: Record<string, Object>
 ```
 
-Additional parameters. For details, see the **parameters** field in [Want]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示额外参数描述。具体描述参考[Want](arkts-ability-app-ability-want-want-c.md)中parameters字段描述。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 12
 

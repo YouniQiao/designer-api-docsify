@@ -26,13 +26,13 @@ value: ["320vp", "600vp", "840vp"],
 
 reference: BreakpointsReference.WindowSize
 
-}
+} 
 
 非法值：按默认值处理。
 
 单位：vp
 
-**类型：** BreakPoints
+**类型：** [BreakPoints](../arkts-apis/arkts-arkui-gridrow-breakpoints-i.md)
 
 **起始版本：** 9
 
@@ -57,7 +57,7 @@ columns?: number | GridRowColumnOption
 取值为大于0的整数。
 
 - API version 20之前：默认值为12。  
-- API version 20及之后：默认值为{ xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 }
+- API version 20及之后：默认值为{ xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 } 
 
 非法值：按默认值处理。
 
@@ -83,11 +83,11 @@ direction?: GridRowDirection
 
 栅格布局排列方向。支持Row（行方向排列，适用于常规LTR布局）和RowReverse（逆序行方向排列，适用于RTL布局或需要反向排列的场景）。
 
-默认值：GridRowDirection.Row
+默认值：GridRowDirection.Row 
 
 非法值：按默认值处理。
 
-**类型：** GridRowDirection
+**类型：** [GridRowDirection](../arkts-apis/arkts-arkui-gridrow-gridrowdirection-e.md)
 
 **起始版本：** 9
 
@@ -109,13 +109,13 @@ gutter?: Length | GutterOption
 
 栅格布局间距。
 
-默认值：0vp
+默认值：0vp 
 
 非法值：按默认值处理。
 
 单位：vp
 
-**类型：** Length \| GutterOption
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| GutterOption
 
 **起始版本：** 9
 

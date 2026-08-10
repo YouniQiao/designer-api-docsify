@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## animationForHidden
 
 ```TypeScript
@@ -34,16 +40,16 @@ animationForHidden(context: TransitionContext): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 属性转换时的上下文。 |
+| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | 是 | 属性转换时的上下文。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.ts
@@ -141,16 +147,16 @@ animationForShown(context: TransitionContext): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 属性转换时的上下文。 |
+| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | 是 | 属性转换时的上下文。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // xxx.ts

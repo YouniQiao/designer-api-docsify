@@ -1,5 +1,7 @@
 # BundleEvents (System API)
 
+FA模型的使用信息属性集合。
+
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -10,15 +12,21 @@
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## appGroup
 
 ```TypeScript
 appGroup?: int
 ```
 
-The usage group of the application.
+应用程序的使用优先级组。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -36,7 +44,7 @@ The usage group of the application.
 bundleName?: string
 ```
 
-The bundle name.
+应用名称。
 
 **Type:** string
 
@@ -56,9 +64,9 @@ The bundle name.
 eventId?: int
 ```
 
-The event id.
+应用事件类型。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -76,9 +84,9 @@ The event id.
 eventOccurredTime?: long
 ```
 
-The time when this state occurred, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ Unit:ms
+应用事件发生的时间戳，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -96,7 +104,7 @@ The time when this state occurred, in milliseconds.\_\_\_HTML\_TAG\_DESC\_USD\_0
 indexOfLink?: string
 ```
 
-The shortcut ID.
+快捷方式id。
 
 **Type:** string
 
@@ -116,7 +124,7 @@ The shortcut ID.
 nameOfClass?: string
 ```
 
-The class name.
+类名。
 
 **Type:** string
 

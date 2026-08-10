@@ -4,7 +4,7 @@
 export type CommonEventPublishData = _CommonEventPublishData
 ```
 
-Describes the content and properties of a common event.
+描述公共事件内容和属性。
 
 **Since:** 10
 

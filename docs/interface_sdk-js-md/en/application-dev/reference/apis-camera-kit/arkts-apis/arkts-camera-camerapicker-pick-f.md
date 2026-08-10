@@ -1,17 +1,22 @@
 # pick
 
+## Modules to Import
+
+```TypeScript
+import { cameraPicker } from 'kits/@kit.CameraKit';
+```
+
 ## pick
 
 ```TypeScript
 function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfile: PickerProfile): Promise<PickerResult>
 ```
 
-Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result.
-    **NOTE**  
-    
-    When an application is running on a widescreen foldable device and the camera picker is launched while the device  
-    is unfolded, switching the device from unfolded to folded will automatically move the camera picker to the  
-    background.
+拉起相机选择器，根据媒体类型进入相应的模式。使用Promise异步回调。
+
+> **说明：**
+> 
+> 当应用在阔折叠设备上运行时，如果已在设备展开态下启动相机picker，将设备由展开态切换到折叠态，相机picker被自动推至后台。
 
 **Since:** 11
 
@@ -27,17 +32,17 @@ Starts the camera picker and enters the corresponding mode based on the media ty
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. |
-| mediaTypes | Array&lt;PickerMediaType&gt; | Yes | Media type. |
-| pickerProfile | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Profile of the camera picker. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 应用上下文。 |
+| mediaTypes | Array&lt;PickerMediaType&gt; | Yes | 媒体类型。 |
+| pickerProfile | [PickerProfile](arkts-camera-camerapicker-pickerprofile-c.md) | Yes | pickerProfile对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PickerResult&gt; | Promise used to return the processing result ( [PickerResult]{ |
+| Promise&lt;PickerResult&gt; | Promise对象，返回相机选择器的处理结果[PickerResult]{ |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { cameraPicker } from '@kit.CameraKit';

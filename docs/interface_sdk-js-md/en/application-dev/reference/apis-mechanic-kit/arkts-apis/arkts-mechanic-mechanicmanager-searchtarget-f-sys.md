@@ -1,5 +1,11 @@
 # searchTarget (System API)
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## searchTarget
 
 ```TypeScript
@@ -22,8 +28,8 @@ Searching for a specified target.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target infomation. |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters to use when searching. |
+| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Target infomation. |
+| params | [SearchParams](../../apis-arkui/arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) | Yes | Parameters to use when searching. |
 
 **Return value:**
 
@@ -35,13 +41,13 @@ Searching for a specified target.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
-| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
 | 33300004 | Camera not opened. |
+| 202 | Not system application. |
+| 33300001 | Service exception. |
+| 33300002 | Device not connected. |
+| 33300003 | Feature not supported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let targetInfo: mechanicManager.TargetInfo = {

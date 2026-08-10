@@ -8,23 +8,23 @@ onAllErrors接口与onerror接口之间的行为差异如下：
 
 1. 异常捕获范围
 
-onAllErrors接口可以捕获Worker线程的onmessage回调、timer回调以及文件执行等流程中产生的全局异常。
+ onAllErrors接口可以捕获Worker线程的onmessage回调、timer回调以及文件执行等流程中产生的全局异常。
 
-onerror接口仅能捕获Worker线程的onmessage回调中同步方法产生的异常，无法捕获多线程回调和模块化相关异常。
+ onerror接口仅能捕获Worker线程的onmessage回调中同步方法产生的异常，无法捕获多线程回调和模块化相关异常。
 
 2. 异常捕获后的线程状态
 
-onAllErrors接口捕获异常后，Worker线程仍然存活并可以继续使用。这使开发者可以在捕获异常后执行其他操作，无需担心线程终止。
+ onAllErrors接口捕获异常后，Worker线程仍然存活并可以继续使用。这使开发者可以在捕获异常后执行其他操作，无需担心线程终止。
 
-onerror接口捕获异常后，Worker线程会进入销毁流程，无法继续使用。这意味着在onerror触发后，Worker线程将被终止，后续操作将无法进行。
+ onerror接口捕获异常后，Worker线程会进入销毁流程，无法继续使用。这意味着在onerror触发后，Worker线程将被终止，后续操作将无法进行。
 
 3. 适用场景
 
-onAllErrors接口适用于捕获Worker线程中所有类型异常的场景，特别是确保异常发生后Worker线程仍能继续运行的复杂场景。
+ onAllErrors接口适用于捕获Worker线程中所有类型异常的场景，特别是确保异常发生后Worker线程仍能继续运行的复杂场景。
 
-onerror接口适用于只需要捕获onmessage回调中同步异常的简单场景。由于捕获异常后线程会被销毁，适用于不需要继续使用Worker线程的情况。
+ onerror接口适用于只需要捕获onmessage回调中同步异常的简单场景。由于捕获异常后线程会被销毁，适用于不需要继续使用Worker线程的情况。
 
-推荐使用onAllErrors接口，因为它提供了更全面的异常捕获能力，并且不会导致线程终止。
+ 推荐使用onAllErrors接口，因为它提供了更全面的异常捕获能力，并且不会导致线程终止。
 
 **继承/实现关系：** ThreadWorker implements [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
 
@@ -35,6 +35,12 @@ onerror接口适用于只需要捕获onmessage回调中同步异常的简单场�
 <!--Device-worker-class ThreadWorker implements WorkerEventTarget--><!--Device-worker-class ThreadWorker implements WorkerEventTarget-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
 
 ## addEventListener
 
@@ -59,16 +65,16 @@ addEventListener(type: string, listener: WorkerEventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 监听的事件类型。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当指定类型的事件发生时调用的回调函数。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 | 当指定类型的事件发生时调用的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -107,16 +113,16 @@ ThreadWorker构造函数。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scriptURL | string | 是 | Worker线程文件的路径。路径规则详细参考文件路径注意事项。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Worker构造的选项。此参数不填时，对应各属性取其默认值。 |
+| options | [WorkerOptions](arkts-arkts-worker-workeroptions-i.md) | 否 | Worker构造的选项。此参数不填时，对应各属性取其默认值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed. |
-| [10200007](../errorcode-utils.md#10200007-worker文件路径异常) | The worker file path is invalid. |
+| 10200003 | Worker initialization failed. |
+| 10200007 | The worker file path is invalid. |
 
-**示例：**
+## 示例
 
 以下示例展示了在Stage模型的entry模块Index.ets文件中加载Worker线程文件的方法，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../arkts-utils/worker-introduction.md#文件路径注意事项)。
 
@@ -150,7 +156,7 @@ dispatchEvent(event: Event): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要分发的事件。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | 是 | 需要分发的事件。 |
 
 **返回值：**
 
@@ -162,9 +168,9 @@ dispatchEvent(event: Event): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -204,16 +210,16 @@ off(type: string, listener?: WorkerEventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 需要移除的事件类型。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | listener 要移除的事件监听的回调函数。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 否 | listener 要移除的事件监听的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -264,16 +270,16 @@ on(type: string, listener: WorkerEventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 监听的事件类型。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当指定类型的事件发生时调用的回调函数。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 | 当指定类型的事件发生时调用的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -312,8 +318,8 @@ onAllErrors?: ErrorCallback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## once
 
@@ -338,16 +344,16 @@ once(type: string, listener: WorkerEventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 监听的事件类型。 |
-| listener | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| listener | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -384,14 +390,14 @@ onerror?: (err: ErrorEvent) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| err | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## onexit
 
@@ -421,8 +427,8 @@ onexit?: (code: number) => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## onmessage
 
@@ -446,14 +452,14 @@ onmessage?: (event: MessageEvents) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## onmessageerror
 
@@ -477,14 +483,14 @@ onmessageerror?: (event: MessageEvents) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| 10200005 | The called API is not supported in the worker thread. |
+| 10200004 | The Worker instance is not running. |
 
 ## postMessage
 
@@ -515,10 +521,10 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| 10200006 | An exception occurred during serialization. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Worker.ets
@@ -616,16 +622,16 @@ postMessage(message: Object, options?: PostMessageOptions): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | message | Object | 是 | 发送至Worker的数据，该数据对象必须是可序列化对象。 支持的参数类型请参考序列化支持类型。 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 当填入该参数时，其作用与传入ArrayBuffer[]相同， 该数组中对象的所有权会被转移到Worker线程，在宿主线程中将变为不可用，仅在Worker线程中可用。 若不填入该参数，默认设置为undefined，通过拷贝数据的方式传输信息到Worker线程。 |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 | 当填入该参数时，其作用与传入ArrayBuffer[]相同， 该数组中对象的所有权会被转移到Worker线程，在宿主线程中将变为不可用，仅在Worker线程中可用。 若不填入该参数，默认设置为undefined，通过拷贝数据的方式传输信息到Worker线程。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| 10200006 | An exception occurred during serialization. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { worker } from '@kit.ArkTS';
@@ -669,10 +675,10 @@ postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| 10200006 | An exception occurred during serialization. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -744,9 +750,9 @@ registerGlobalCallObject(instanceName: string, globalCallObject: Object): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -815,9 +821,9 @@ removeAllListener(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -853,15 +859,15 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 需要移除的事件类型。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 移除监听事件后执行的回调函数。 |
+| callback | [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md) | 否 | 移除监听事件后执行的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -900,9 +906,9 @@ terminate(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets
@@ -940,9 +946,9 @@ unregisterGlobalCallObject(instanceName?: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| 10200004 | The Worker instance is not running. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 // Index.ets

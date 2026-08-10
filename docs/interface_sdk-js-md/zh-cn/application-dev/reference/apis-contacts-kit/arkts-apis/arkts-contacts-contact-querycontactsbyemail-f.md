@@ -1,5 +1,11 @@
 # queryContactsByEmail
 
+## 导入模块
+
+```TypeScript
+import { contact } from 'kits/@kit.ContactsKit';
+```
+
 ## queryContactsByEmail
 
 ```TypeScript
@@ -7,7 +13,7 @@ function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Conta
 ```
 
 根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
@@ -28,9 +34,9 @@ function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Conta
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | email | string | 是 | 联系人的邮箱地址。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -53,7 +59,7 @@ function queryContactsByEmail(context: Context, email: string, callback: AsyncCa
 ```
 
 根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -69,18 +75,18 @@ function queryContactsByEmail(context: Context, email: string, callback: AsyncCa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
 | email | string | 是 | 联系人的邮箱地址。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -108,7 +114,7 @@ function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCall
 ```
 
 根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
@@ -129,10 +135,10 @@ function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCall
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | email | string | 是 | 联系人的邮箱地址。 |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 创建联系人的应用信息类，如果传入参数为空默认使用系统联系人应用查询。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空默认使用系统联系人应用查询。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -160,7 +166,7 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
 ```
 
 根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -176,19 +182,19 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
 | email | string | 是 | 联系人的邮箱地址。 |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 创建联系人的应用信息类，如果传入参数为空则使用系统联系人应用。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空则使用系统联系人应用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -220,7 +226,7 @@ function queryContactsByEmail(email: string, attrs: ContactAttributes, callback:
 ```
 
 根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
@@ -241,10 +247,10 @@ function queryContactsByEmail(email: string, attrs: ContactAttributes, callback:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | email | string | 是 | 联系人的邮箱地址。 |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -270,7 +276,7 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
 ```
 
 根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -286,19 +292,19 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
 | email | string | 是 | 联系人的邮箱地址。 |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -328,7 +334,7 @@ function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttri
 ```
 
 根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
@@ -349,11 +355,11 @@ function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttri
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | email | string | 是 | 联系人的邮箱地址。 |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -382,7 +388,7 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder, a
 ```
 
 根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -398,20 +404,20 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder, a
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
 | email | string | 是 | 联系人的邮箱地址。 |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回查询到的联系人对象数组；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
@@ -445,7 +451,7 @@ function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAtt
 ```
 
 根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
@@ -466,8 +472,8 @@ function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAtt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | email | string | 是 | 联系人的邮箱地址。 |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 联系人的属性列表，不传默认查询所有联系人属性。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | 否 | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 否 | 联系人的属性列表，不传默认查询所有联系人属性。 |
 
 **返回值：**
 
@@ -475,7 +481,7 @@ function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAtt
 | --- | --- |
 | Promise&lt;Array&lt;Contact&gt;&gt; | Promise对象。返回查询到的联系人数组对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';
@@ -500,7 +506,7 @@ function queryContactsByEmail(context: Context, email: string, holder?: Holder, 
 ```
 
 根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -516,10 +522,10 @@ function queryContactsByEmail(context: Context, email: string, holder?: Holder, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 应用上下文Context。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
 | email | string | 是 | 联系人的邮箱地址。 |
-| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
-| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 联系人的属性列表，不传默认查询所有联系人属性。 |
+| holder | [Holder](arkts-contacts-contact-holder-c.md) | 否 | 创建联系人的应用信息类，不传该参数，则默认使用系统联系人应用查询。 |
+| attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 否 | 联系人的属性列表，不传默认查询所有联系人属性。 |
 
 **返回值：**
 
@@ -531,10 +537,10 @@ function queryContactsByEmail(context: Context, email: string, holder?: Holder, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| 201 | Permission denied. |
 
-**示例：**
+## 示例
 
 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 

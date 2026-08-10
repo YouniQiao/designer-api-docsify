@@ -1,6 +1,6 @@
 # GlobalScope
 
-Implements the running environment of the Worker thread. The GlobalScope class inherits from WorkerEventTarget.
+Worker线程自身的运行环境，GlobalScope类继承WorkerEventTarget。
 
 **Inheritance/Implementation:** GlobalScope extends [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
 
@@ -12,13 +12,19 @@ Implements the running environment of the Worker thread. The GlobalScope class i
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+```
+
 ## onerror
 
 ```TypeScript
 onerror?: (ev: ErrorEvent) => void
 ```
 
-Called when an exception occurs during worker execution. The event handler is executed in the Worker thread.In the callback function, the ev type is ErrorEvent, indicating the received abnormal data.
+Worker在执行过程中发生异常被调用的回调函数，该回调函数在Worker线程中执行。其中ev类型为ErrorEvent，表示收到的异常数据。
 
 **Since:** 9
 
@@ -34,7 +40,7 @@ Called when an exception occurs during worker execution. The event handler is ex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ev | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| ev | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |  |
 
 ## name
 
@@ -42,7 +48,7 @@ Called when an exception occurs during worker execution. The event handler is ex
 readonly name: string
 ```
 
-Worker instance specified when there is a new Worker instance.
+Worker的名字，new Worker时指定。
 
 **Type:** string
 
@@ -62,9 +68,9 @@ Worker instance specified when there is a new Worker instance.
 readonly self: GlobalScope & typeof globalThis
 ```
 
-GlobalScope itself.
+GlobalScope本身。
 
-**Type:** GlobalScope & typeof globalThis
+**Type:** [GlobalScope](arkts-arkts-worker-globalscope-i.md) & typeof globalThis
 
 **Since:** 9
 

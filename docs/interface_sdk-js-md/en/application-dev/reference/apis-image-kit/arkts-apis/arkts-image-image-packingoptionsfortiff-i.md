@@ -1,6 +1,6 @@
 # PackingOptionsForTiff
 
-Describes the options for tiff image packing.
+描述TIFF图像编码参数的选项。
 
 **Since:** 26.0.0
 
@@ -10,18 +10,24 @@ Describes the options for tiff image packing.
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## compression
 
 ```TypeScript
 compression?: int
 ```
 
-Compression algorithm type: 3 (CCITT G3), 4 (CCITT G4), 5 (LZW).  
-- For binary image: must be 3 (G3) or 4 (G4), automatically uses 4 (G4).  
-- For Y8/RGB\_888 format: automatically uses LZW (5), user setting is ignored.  
-The value should be an integer, Currently, only 3, 4, and 5 are supported.
+该值应为整数，目前仅支持取3、4、5，分别对应压缩算法类型：3（CCITT G3）、4（CCITT G4）、5（LZW）。
 
-**Type:** int
+- 对于二值图像：必须为3（G3）或4（G4），自动使用4（G4）。  
+- 对于Y8/RGB_888格式：自动使用LZW（5），不支持指定其他压缩算法。
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -39,9 +45,9 @@ The value should be an integer, Currently, only 3, 4, and 5 are supported.
 orientation?: Orientation
 ```
 
-Image orientation.Default value is TOP\_LEFT.
+图像方向。默认值为TOP_LEFT。
 
-**Type:** Orientation
+**Type:** [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md)
 
 **Since:** 26.0.0
 
@@ -59,9 +65,9 @@ Image orientation.Default value is TOP\_LEFT.
 resolutionUnit?: int
 ```
 
-Resolution unit: 1 (No unit), 2 (Inch), 3 (Centimeter).Currently, only 1, 2, and 3 are supported.
+分辨率单位：1（无单位）、2（英寸）、3（厘米）。目前仅支持1、2、3。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -79,9 +85,9 @@ Resolution unit: 1 (No unit), 2 (Inch), 3 (Centimeter).Currently, only 1, 2, and
 xResolution?: double
 ```
 
-Horizontal resolution.The value must be greater than 0.
+水平分辨率。该值必须大于0。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 
@@ -99,9 +105,9 @@ Horizontal resolution.The value must be greater than 0.
 yResolution?: double
 ```
 
-Vertical resolution.The value must be greater than 0.
+垂直分辨率。该值必须大于0。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 26.0.0
 

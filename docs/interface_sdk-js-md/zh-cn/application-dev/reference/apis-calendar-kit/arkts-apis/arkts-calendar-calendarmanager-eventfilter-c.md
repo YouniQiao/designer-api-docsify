@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
+## 导入模块
+
+```TypeScript
+import { calendarManager } from 'kits/@kit.CalendarKit';
+```
+
 ## filterById
 
 ```TypeScript
@@ -36,9 +42,9 @@ static filterById(ids: number[]): EventFilter
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回日程过滤器对象。 |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 返回日程过滤器对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -119,9 +125,9 @@ static filterByTime(start: number, end: number): EventFilter
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回日程过滤器对象。 |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 返回日程过滤器对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -196,9 +202,9 @@ static filterByTitle(title: string): EventFilter
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回日程过滤器对象。 |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 返回日程过滤器对象。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

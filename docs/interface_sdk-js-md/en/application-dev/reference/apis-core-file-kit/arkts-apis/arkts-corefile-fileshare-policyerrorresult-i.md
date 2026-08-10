@@ -1,6 +1,6 @@
 # PolicyErrorResult
 
-Failed policy result on URI.
+授予或激活权限失败的URI策略结果。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Failed policy result on URI.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
+## Modules to Import
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## code
 
 ```TypeScript
 code: PolicyErrorCode
 ```
 
-Indicates the error code of the failure in the policy information.
+授权策略失败的URI对应的错误码。
 
-**Type:** PolicyErrorCode
+**Type:** [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
 
 **Since:** 11
 
@@ -34,7 +40,7 @@ Indicates the error code of the failure in the policy information.
 message: string
 ```
 
-Indicates the reason of the failure in the policy information.
+授权策略失败的URI对应的原因。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Indicates the reason of the failure in the policy information.
 uri: string
 ```
 
-Indicates the failed uri of the policy information.
+授予或激活权限失败的URI。
 
 **Type:** string
 

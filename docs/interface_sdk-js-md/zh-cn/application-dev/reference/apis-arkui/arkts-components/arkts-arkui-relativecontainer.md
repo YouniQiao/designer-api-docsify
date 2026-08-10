@@ -49,3 +49,9 @@ RelativeContainer()
 
 ## 汇总
 
+- [BarrierStyle](arkts-arkui-relativecontainer-barrierstyle-i.md)
+- [GuideLinePosition](arkts-arkui-relativecontainer-guidelineposition-i.md)
+- [GuideLineStyle](arkts-arkui-relativecontainer-guidelinestyle-i.md)
+- [LocalizedBarrierStyle](arkts-arkui-relativecontainer-localizedbarrierstyle-i.md)
+- [BarrierDirection](arkts-arkui-relativecontainer-barrierdirection-e.md)
+- [LocalizedBarrierDirection](arkts-arkui-relativecontainer-localizedbarrierdirection-e.md)

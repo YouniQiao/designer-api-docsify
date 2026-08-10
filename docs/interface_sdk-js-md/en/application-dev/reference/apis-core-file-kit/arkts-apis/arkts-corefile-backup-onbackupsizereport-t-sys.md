@@ -4,7 +4,7 @@
 type OnBackupSizeReport = (reportInfo: string) => void
 ```
 
-function that returns backup datasize by bundleName.
+返回应用备份数据量信息的回调函数。
 
 **Since:** 18
 
@@ -20,5 +20,5 @@ function that returns backup datasize by bundleName.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reportInfo | string | Yes | -the scanned backup datasize infos.  |
+| reportInfo | string | Yes | 框架扫描到的应用待备份数据量信息，为JSON格式字符串。 |
 

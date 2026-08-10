@@ -1,6 +1,6 @@
 # InsightIntentInfo (System API)
 
-Defines the intent information, which is the specific parameter configuration of the intent in the device.
+意图信息，表示设备中意图的具体参数配置。
 
 **Since:** 20
 
@@ -12,13 +12,19 @@ Defines the intent information, which is the specific parameter configuration of
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+```
+
 ## bundleName
 
 ```TypeScript
 readonly bundleName: string
 ```
 
-Bundle name of the application.
+表示应用包名称。
 
 **Type:** string
 
@@ -40,9 +46,9 @@ Bundle name of the application.
 readonly developType?: DevelopType
 ```
 
-Development mode of the intent.
+表示意图的开发方式。
 
-**Type:** DevelopType
+**Type:** [DevelopType](arkts-ability-insightintentdriver-developtype-e-sys.md)
 
 **Since:** 23
 
@@ -62,7 +68,7 @@ Development mode of the intent.
 readonly displayDescription: string
 ```
 
-Description of the intent displayed in the InsightIntent framework.
+表示在意图框架中显示的意图描述。
 
 **Type:** string
 
@@ -84,7 +90,7 @@ Description of the intent displayed in the InsightIntent framework.
 readonly displayName: string
 ```
 
-Name of the intent displayed in the InsightIntent framework.
+表示在意图框架中显示的意图名称。
 
 **Type:** string
 
@@ -106,8 +112,8 @@ Name of the intent displayed in the InsightIntent framework.
 readonly domain: string
 ```
 
-Vertical domain of the intent. It is used to categorize intents by vertical fields (for example, video, music,and games). For details about the value range, see the vertical domain fields in  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+表示意图垂域，用于将意图按垂直领域分类（例如：视频、音乐、游戏），取值范围参见  
+[各垂域的智慧分发特性列表](https://developer.huawei.com/consumer/cn/doc/service/intents-ai-distribution-characteristic-0000001901922213#section2656133582215)中的垂域字段。
 
 **Type:** string
 
@@ -129,7 +135,7 @@ Vertical domain of the intent. It is used to categorize intents by vertical fiel
 readonly entities: Array<EntityInfo>
 ```
 
-Entity information contained in the intent.
+表示意图包含的实体信息。
 
 **Type:** Array&lt;EntityInfo&gt;
 
@@ -151,7 +157,7 @@ Entity information contained in the intent.
 readonly icon: string
 ```
 
-Icon of the intent.
+表示意图图标。
 
 **Type:** string
 
@@ -173,7 +179,7 @@ Icon of the intent.
 readonly intentName: string
 ```
 
-Intent name.
+表示意图名称。
 
 **Type:** string
 
@@ -195,14 +201,13 @@ Intent name.
 readonly intentType: InsightIntentType
 ```
 
-Type of intent defined by the intent decorator.
+表示通过意图装饰器定义的意图类型。
 
-**NOTE**
+**说明：**
 
-For intents developed using a configuration file, the return value of this field is  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ by default.
+对于使用配置文件开发的意图，该字段返回值默认为[@InsightIntentEntry](./js-apis-app-ability-InsightIntentDecorator.md#insightintententry)类型装饰器。
 
-**Type:** InsightIntentType
+**Type:** [InsightIntentType](arkts-ability-insightintentdriver-insightintenttype-e-sys.md)
 
 **Since:** 20
 
@@ -222,7 +227,7 @@ For intents developed using a configuration file, the return value of this field
 readonly intentVersion: string
 ```
 
-Version number of the intent. It is used to distinguish and manage intents when their capabilities evolve.
+意图版本号，当意图能力演进时，可通过版本号进行区分和管理。
 
 **Type:** string
 
@@ -244,7 +249,7 @@ Version number of the intent. It is used to distinguish and manage intents when 
 readonly keywords: string[]
 ```
 
-Search keywords for the intent.
+表示意图的搜索关键字。
 
 **Type:** string[]
 
@@ -266,7 +271,7 @@ Search keywords for the intent.
 readonly llmDescription: string
 ```
 
-Function of an intent, which helps large language models understand the intent.
+表示意图的功能，用于大型语言模型理解该意图。
 
 **Type:** string
 
@@ -288,7 +293,7 @@ Function of an intent, which helps large language models understand the intent.
 readonly moduleName: string
 ```
 
-Module name.
+表示模块名称。
 
 **Type:** string
 
@@ -310,9 +315,9 @@ Module name.
 readonly parameters: Record<string, Object>
 ```
 
-Data format of intent parameters, which is used to define the input data format during intent calls.
+表示意图参数的数据格式声明，用于意图调用时定义入参的数据格式。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 20
 
@@ -332,9 +337,9 @@ Data format of intent parameters, which is used to define the input data format 
 readonly result: Record<string, Object>
 ```
 
-Execution result returned.
+表示意图调用返回的结果。
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 20
 
@@ -354,8 +359,7 @@ Execution result returned.
 readonly schema: string
 ```
 
-Standard intent name. If an intent in the standard intent list matches both the **schema** and **intentVersion**  
-fields, it is processed as a standard intent.
+标准意图名称，如果在标准意图列表中存在schema与intentVersion字段均匹配的意图，则按照标准意图处理。
 
 **Type:** string
 
@@ -377,14 +381,13 @@ fields, it is processed as a standard intent.
 readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo
 ```
 
-Intent information for specific intent decorators.
+表示特定意图装饰器的意图信息。 
 
-**NOTE**
+**说明：**
 
-For intents developed using a configuration file, the return value of this field is  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ by default.
+对于使用配置文件开发的意图，该字段返回值默认为[EntryIntentInfo](#entryintentinfo20)。
 
-**Type:** LinkIntentInfo \| PageIntentInfo \| FunctionIntentInfo \| FormIntentInfo \| EntryIntentInfo
+**Type:** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| PageIntentInfo \| FunctionIntentInfo \| FormIntentInfo \| EntryIntentInfo
 
 **Since:** 20
 
@@ -404,9 +407,9 @@ For intents developed using a configuration file, the return value of this field
 readonly subIntentInfoForConfiguration?: SubIntentInfoForConfiguration
 ```
 
-Unique information about the intent developed using a configuration file.
+表示使用配置文件开发的意图的特有信息。
 
-**Type:** SubIntentInfoForConfiguration
+**Type:** [SubIntentInfoForConfiguration](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md)
 
 **Since:** 23
 

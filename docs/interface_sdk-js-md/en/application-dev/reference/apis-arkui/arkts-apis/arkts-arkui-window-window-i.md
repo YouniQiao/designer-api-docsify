@@ -1,10 +1,11 @@
 # Window
 
-Represents a window instance, which is the basic unit managed by the window manager.
+当前窗口实例，窗口管理器管理的基本单元。
 
-In the following API examples, you must use  
-[getLastWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_,  
-[createWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_,or [findWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+下列API示例中都需先使用  
+[getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow)、  
+[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)、  
+[findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
 
 **Since:** 6
 
@@ -14,13 +15,19 @@ In the following API examples, you must use
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## clearWindowMask
 
 ```TypeScript
 clearWindowMask(): Promise<void>
 ```
 
-Clear the window mask of window
+清除异形窗口的掩码使其恢复为矩形窗口，使用Promise异步回调。异形窗口为非常规形状的窗口，掩码用于描述异形窗口的形状。此接口仅限子窗和全局悬浮窗可用。
 
 **Since:** 24
 
@@ -36,16 +43,16 @@ Clear the window mask of window
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. 3. The window has not set window mask yet. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and float windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. 3. The window has not set window mask yet. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and float windows are supported. |
 
 ## clientToGlobalDisplay
 
@@ -59,9 +66,9 @@ ArkTS-Sta:
 clientToGlobalDisplay(winX: int, winY: int): Position
 ```
 
-Converts relative coordinates (based on the top-left corner of the current window) into global coordinates (based on the top-left corner of the primary screen).
+将相对于当前窗口左上角的坐标转换为相对于主屏幕左上角的全局坐标。
 
-This API is not supported in windows that are subject to display scaling, such as floating windows on phones or tablets not in free windows mode.
+不支持在经过显示缩放的窗口中调用，例如手机或平板设备在非自由多窗模式下的悬浮窗场景。
 
 **Since:** 20
 
@@ -75,23 +82,23 @@ This API is not supported in windows that are subject to display scaling, such a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| winX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset along the X-axis, in pixels, with the top-left corner of the current window as the origin. A positive value moves the window to the right; a negative value moves it to the left. The value must be an integer. Non-integer values are rounded down. |
-| winY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset along the Y-axis, in pixels, with the top-left corner of the current window as the origin. A positive value moves the window downward; a negative value moves it upward. The value must be an integer. Non-integer values are rounded down. |
+| winX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示以当前窗口左上角为原点的x轴方向偏移量，单位为px。值为正表示在原点右侧， 值为负表示在原点左侧。该参数应为整数，非整数输入将向下取整。 |
+| winY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示以当前窗口左上角为原点的y轴方向偏移量，单位为px。值为正表示在原点下方， 值为负表示在原点上方。该参数应为整数，非整数输入将向下取整。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Coordinates after conversion. |
+| [Position](arkts-arkui-display-position-i.md) | 返回转换后的坐标。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1300010 | The operation in the current window status is invalid. |
 
 ## convertOrientationAndRotation
 
@@ -105,24 +112,24 @@ ArkTS-Sta:
 convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: int): int
 ```
 
-Enables conversion between window orientation, screen orientation, and screen angle.
+提供窗口方向、屏幕方向和屏幕角度互相转换的能力。
 
-Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3,corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and the  
-[Orientation]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ enum. For example, setting **Orientation** to **LANDSCAPE**  
-indicates a landscape window orientation.  
-    **NOTE**  
-    
-    The following figure and table show the relationship between the window orientation, screen orientation, and  
-    screen angle of a bar-type device.  
-    
-    !\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_  
-    
-| Screen Angle| Screen Orientation| Window Orientation|  
+窗口方向指窗口所在屏幕的方向，以窗口模块对横竖屏的定义方式表示，窗口的方向分别用0、1、2和3表示竖屏、反向横屏、反向竖屏和横屏四个方向，其对横竖屏的定义与  
+[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)和枚举类  
+[Orientation](arkts-arkui-window-orientation-e.md)中对横竖屏的定义一致，如Orientation设置为LANDSCAPE时，窗口方向为横屏。
+
+> **说明：**
+> 
+> 示意图和表格展示了直板机窗口方向、屏幕方向和屏幕角度的关系。
+> 
+> ![orientationAndRotation](../../../reference/apis-arkui/figures/orientationAndRotation.PNG)
+
+| 屏幕角度 | 屏幕方向 | 窗口方向 |  
 | ------- | ------- | ------- |  
 | 0 | PORTRAIT | PORTRAIT |  
-| 90 | LANDSCAPE | LANDSCAPE\_INVERTED |  
-| 180 | PORTRAIT\_INVERTED | PORTRAIT\_INVERTED |  
-| 270 | LANDSCAPE\_INVERTED | LANDSCAPE |
+| 90 | LANDSCAPE | LANDSCAPE_INVERTED |  
+| 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED |  
+| 270 | LANDSCAPE_INVERTED | LANDSCAPE |
 
 **Since:** 23
 
@@ -136,23 +143,23 @@ indicates a landscape window orientation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the value to convert. |
-| to | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the target value. |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Value to convert. The value is an integer. If a floating-point number is entered, the value is rounded down. The value range is [0, 3]. If the value is out of the range, it is an invalid parameter (error code \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is thrown) . |
+| from | [RotationInfoType](arkts-arkui-window-rotationinfotype-e.md) | Yes | 待转换的值的类型。 |
+| to | [RotationInfoType](arkts-arkui-window-rotationinfotype-e.md) | Yes | 目标值的类型。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 待转换的值。该参数为整数，浮点数输入将向下取整，取值范围为[0, 3]，范围外为非法参数（抛出错误码 [401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Converted value of the target type. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回目标类型的转换值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## createSubWindowWithOptions
 
@@ -160,7 +167,7 @@ indicates a landscape window orientation.
 createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Window>
 ```
 
-Creates a child window under the main window, another child window, or floating window. This API uses a promise to return the result.
+创建主窗口、子窗口或悬浮窗下的子窗口，使用Promise异步回调。
 
 **Since:** 12
 
@@ -178,24 +185,24 @@ Creates a child window under the main window, another child window, or floating 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the child window. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters used for creating the child window. If **decorEnabled** is set to true, the child window does not use an \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. If **decorEnabled** is set to **false**, the child window uses an immersive layout. |
+| name | string | Yes | 子窗口的名字。 |
+| options | [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md) | Yes | 子窗口参数。decorEnabled为true时，子窗口为非 [沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)；decorEnabled为false时，子窗口为沉浸式布局。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to used to return the child window created. |
+| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Promise对象。返回当前Window下创建的子窗口对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows, subwindows, and floating windows are supported; 2. When SubWindowOptions.zLevelAboveParentLoosened is true, only main windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
+| 1300004 | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows, subwindows, and floating windows are supported; 2. When SubWindowOptions.zLevelAboveParentLoosened is true, only main windows are supported. |
 
 ## destroy
 
@@ -203,7 +210,12 @@ Creates a child window under the main window, another child window, or floating 
 destroy(callback: AsyncCallback<void>): void
 ```
 
-Destroys this window. This API uses an asynchronous callback to return the result.
+销毁当前窗口，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [destroyWindow()](arkts-arkui-window-window-i.md#destroywindow)替代。
 
 **Since:** 7
 
@@ -221,7 +233,7 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## destroy
 
@@ -229,7 +241,11 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 destroy(): Promise<void>
 ```
 
-Destroys this window. This API uses a promise to return the result.
+销毁当前窗口，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[destroyWindow()](arkts-arkui-window-window-i.md#destroywindow)替代。
 
 **Since:** 7
 
@@ -247,7 +263,7 @@ Destroys this window. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## destroyWindow
 
@@ -255,7 +271,7 @@ Destroys this window. This API uses a promise to return the result.
 destroyWindow(callback: AsyncCallback<void>): void
 ```
 
-Destroys this window. This API uses an asynchronous callback to return the result. It takes effect for a system window, an application child window, a global floating window, or a modal window.
+销毁当前窗口，使用callback异步回调，支持系统窗口及应用子窗口，全局悬浮窗和模态窗。
 
 **Since:** 9
 
@@ -271,13 +287,14 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300003 | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## destroyWindow
 
@@ -285,7 +302,7 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 destroyWindow(): Promise<void>
 ```
 
-Destroys this window. This API uses a promise to return the result. It takes effect for a system window, an application child window, a global floating window, or a modal window.
+销毁当前窗口，使用Promise异步回调，支持系统窗口及应用子窗口，全局悬浮窗和模态窗。
 
 **Since:** 9
 
@@ -301,13 +318,14 @@ Destroys this window. This API uses a promise to return the result. It takes eff
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300003 | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## disableLandscapeMultiWindow
 
@@ -315,11 +333,9 @@ Destroys this window. This API uses a promise to return the result. It takes eff
 disableLandscapeMultiWindow(): Promise<void>
 ```
 
-Disables the landscape multi-window mode for the UI page that supports the horizontal layout.
+应用部分界面支持横向布局时，在退出该界面时去使能，去使能后不支持进入横向多窗。
 
-This API takes effect only for the main window of the application. In addition, **preferMultiWindowOrientation**  
-must be set to **landscape\_auto** in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ tag in the **module.json5** file.
+此接口只对应用主窗口生效，且需要在module.json5配置文件中[abilities](../../../quick-start/module-configuration-file.md#abilities标签)标签中配置preferMultiWindowOrientation属性为"landscape_auto"。
 
 **Since:** 12
 
@@ -335,14 +351,14 @@ must be set to **landscape\_auto** in the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
+| 1300003 | 窗口管理器服务运行异常。可能原因：内部错误。 |
+| 1300002 | 该窗口状态异常。可能原因：窗口未创建或已销毁。 |
 
 ## enableDrag
 
@@ -350,9 +366,9 @@ must be set to **landscape\_auto** in the
 enableDrag(enable: boolean): Promise<void>
 ```
 
-Enables or disables window dragging. This API takes effect only for system windows, application child windows,global floating windows, and modal windows. This API uses a promise to return the result.
+使能/禁止拖拽窗口，仅对系统窗口、应用子窗口、全局悬浮窗和模态窗口生效。使用Promise异步回调。
 
-After window dragging is enabled, the window can be resized using the mouse or touch operations.
+使能后，将允许通过鼠标操作或触摸对窗口进行拉伸操作。
 
 **Since:** 20
 
@@ -366,22 +382,23 @@ After window dragging is enabled, the window can be resized using the mouse or t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | The value true means to enable window dragging, and false means the opposite. |
+| enable | boolean | Yes | 是否允许拖拽。&lt;br&gt;true表示允许，false表示不允许。&lt;/br&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 14 - 19 |
 
 ## enableLandscapeMultiWindow
 
@@ -389,11 +406,9 @@ After window dragging is enabled, the window can be resized using the mouse or t
 enableLandscapeMultiWindow(): Promise<void>
 ```
 
-Enables the landscape multi-window mode for the UI page that supports the horizontal layout. You are not advised to call this API for the UI page that adopts the vertical layout.
+应用部分界面支持横向布局时，在进入该界面时使能，使能后可支持进入横向多窗。不建议竖向布局界面使用。
 
-This API takes effect only for the main window of the application. In addition, **preferMultiWindowOrientation**  
-must be set to **landscape\_auto** in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ tag in the **module.json5** file.
+此接口只对应用主窗口生效，且需要在module.json5配置文件中[abilities](../../../quick-start/module-configuration-file.md#abilities标签)标签中配置preferMultiWindowOrientation属性为"landscape_auto"。
 
 **Since:** 12
 
@@ -409,14 +424,14 @@ must be set to **landscape\_auto** in the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
+| 1300003 | 窗口管理器服务运行异常。可能原因：内部错误。 |
+| 1300002 | 该窗口状态异常。可能原因：窗口未创建或已销毁。 |
 
 ## getAvoidArea
 
@@ -424,25 +439,24 @@ must be set to **landscape\_auto** in the
 getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area,and soft keyboard area. This API uses an asynchronous callback to return the result.
+获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。
 
-Main window/Child window:
+主窗口/子窗口：
 
-- In the free-floating window mode under the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ state (the window mode is  
-**window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type (  
-[AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is **TYPE\_KEYBOARD**) is available.  
-- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
-of the system bar type ([AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is **TYPE\_SYSTEM**) is available.  
-- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
-not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
-- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
-to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
+仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
 
-Global floating window, modal window, or system window:
+全局悬浮窗、模态窗或系统窗口：
 
-- This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ is called. Otherwise, the obtained avoidance area is empty.
+- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+为空。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](arkts-arkui-window-window-i.md#getwindowavoidarea)替代。
 
 **Since:** 7
 
@@ -460,8 +474,8 @@ Global floating window, modal window, or system window:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the area. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AvoidArea&gt; | Yes | Callback used to return the area. |
+| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes | 表示避让区类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AvoidArea&gt; | Yes | 回调函数。返回窗口内容避让区域。 |
 
 ## getAvoidArea
 
@@ -469,25 +483,24 @@ Global floating window, modal window, or system window:
 getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area,and soft keyboard area. This API uses an asynchronous callback to return the result.
+获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。
 
-Main window/Child window:
+主窗口/子窗口：
 
-- In the free-floating window mode under the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ state (the window mode is  
-**window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type (  
-[AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is **TYPE\_KEYBOARD**) is available.  
-- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
-of the system bar type ([AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is **TYPE\_SYSTEM**) is available.  
-- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
-not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
-- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
-to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
+仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
 
-Global floating window, modal window, or system window:
+全局悬浮窗、模态窗或系统窗口：
 
-- This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ is called. Otherwise, the obtained avoidance area is empty.
+- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+为空。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](arkts-arkui-window-window-i.md#getwindowavoidarea)替代。
 
 **Since:** 7
 
@@ -505,13 +518,13 @@ Global floating window, modal window, or system window:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the area. |
+| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes | 表示避让区类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AvoidArea&gt; | Promise used to return the area. |
+| Promise&lt;AvoidArea&gt; | Promise对象。返回窗口内容避让区域。 |
 
 ## getColorSpace
 
@@ -519,7 +532,11 @@ Global floating window, modal window, or system window:
 getColorSpace(): Promise<ColorSpace>
 ```
 
-Obtains the color space of this window. This API uses a promise to return the result.
+获取当前窗口色域模式，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[getWindowColorSpace()](arkts-arkui-window-window-i.md#getwindowcolorspace)替代。
 
 **Since:** 8
 
@@ -537,7 +554,7 @@ Obtains the color space of this window. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ColorSpace&gt; | Promise used to return the current color space. |
+| Promise&lt;ColorSpace&gt; | Promise对象。返回当前色域模式。 |
 
 ## getColorSpace
 
@@ -545,7 +562,11 @@ Obtains the color space of this window. This API uses a promise to return the re
 getColorSpace(callback: AsyncCallback<ColorSpace>): void
 ```
 
-Obtains the color space of this window. This API uses an asynchronous callback to return the result.
+获取当前窗口色域模式，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[getWindowColorSpace()](arkts-arkui-window-window-i.md#getwindowcolorspace)替代。
 
 **Since:** 8
 
@@ -563,7 +584,7 @@ Obtains the color space of this window. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ColorSpace&gt; | Yes | Callback used to return the result. When the color space is obtained successfully, **err** is **undefined**, and **data** is the current color space. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ColorSpace&gt; | Yes | 回调函数。当获取成功，err为undefined，data为当前色域模式。 |
 
 ## getDecorButtonStyle
 
@@ -571,7 +592,7 @@ Obtains the color space of this window. This API uses an asynchronous callback t
 getDecorButtonStyle(): DecorButtonStyle
 ```
 
-Obtains the button style of the decoration bar. The setting takes effect only for the main window and child windows.
+获取装饰栏按钮样式，仅对主窗和子窗生效。
 
 **Since:** 14
 
@@ -587,16 +608,16 @@ Obtains the button style of the decoration bar. The setting takes effect only fo
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Button style on the decoration bar of the current window. The decoration button area is located in the top-right corner of the window. |
+| [DecorButtonStyle](arkts-arkui-window-decorbuttonstyle-i.md) | 返回当前窗口装饰栏上的按钮样式，窗口装饰按钮区域位于窗口的右上角。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. |
 
 ## getGlobalRect
 
@@ -604,9 +625,9 @@ Obtains the button style of the decoration bar. The setting takes effect only fo
 getGlobalRect(): Rect
 ```
 
-Obtains the actual display area of this window on the physical screen. This API returns the result synchronously.
+获取窗口在其所在物理屏幕上的真实显示区域，同步接口。
 
-This API can determine the actual on-screen location and size of a window that has been resized on certain devices.
+在某些设备上，窗口显示时可能经过了缩放，此接口可以获取缩放后窗口在屏幕上的真实位置和大小。
 
 **Since:** 13
 
@@ -622,15 +643,15 @@ This API can determine the actual on-screen location and size of a window that h
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A set of four values, which indicates the horizontal distance from the screen's top-left corner to the window's left edge, the vertical distance from the screen's top-left corner to the window's top edge, the width of the window after scaling, and the height of the window after scaling. |
+| [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | 四元组分别表示距离屏幕左上角的x坐标、距离屏幕左上角的y坐标、缩放后的窗口宽度和缩放后的窗口高度。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Failed to convert result into JS value object. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Failed to convert result into JS value object. |
 
 ## getImmersiveModeEnabledState
 
@@ -638,13 +659,12 @@ This API can determine the actual on-screen location and size of a window that h
 getImmersiveModeEnabledState(): boolean
 ```
 
-Checks whether the immersive layout is enabled for this window.
+查询当前窗口是否开启沉浸式布局。
 
-This API can be called only by the main window and child windows.
+仅支持主窗和子窗调用。
 
-The return value is consistent with the settings applied via  
-[setImmersiveModeEnabledState()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[setWindowLayoutFullScreen()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. If neither of these APIs has been called, the default return value is **false**.
+返回值与[setImmersiveModeEnabledState()](arkts-arkui-window-window-i.md#setimmersivemodeenabledstate)以及  
+[setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)设置结果一致，若未调用上述两个接口则默认返回false。
 
 **Since:** 12
 
@@ -660,14 +680,14 @@ The return value is consistent with the settings applied via
 
 | Type | Description |
 | --- | --- |
-| boolean |  The value true means the immersive mode is enabled, and false means the opposite. |
+| boolean | 是否设置开启沉浸式布局。true表示开启沉浸式布局，false表示关闭沉浸式布局。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 
 ## getParentWindow
 
@@ -675,7 +695,7 @@ The return value is consistent with the settings applied via
 getParentWindow(): Window
 ```
 
-Obtains the parent window of this child window.
+获取子窗口的父窗口。
 
 **Since:** 19
 
@@ -691,16 +711,16 @@ Obtains the parent window of this child window.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Parent window. |
+| [Window](arkts-arkui-window-window-i.md) | 子窗口的父窗口对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Not called from subWindow. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. |
+| 1300009 | The parent window is invalid. |
 
 ## getPreferredOrientation
 
@@ -708,7 +728,7 @@ Obtains the parent window of this child window.
 getPreferredOrientation(): Orientation
 ```
 
-Obtains the orientation of the window. If no orientation is specified, **window.Orientation.UNSPECIFIED** is returned.
+获取窗口的显示方向属性。未指定方向时，返回window.Orientation.UNSPECIFIED。
 
 **Since:** 12
 
@@ -724,13 +744,13 @@ Obtains the orientation of the window. If no orientation is specified, **window.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Display orientation. |
+| [Orientation](arkts-arkui-window-orientation-e.md) | 窗口显示方向的属性。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## getProperties
 
@@ -738,7 +758,11 @@ Obtains the orientation of the window. If no orientation is specified, **window.
 getProperties(callback: AsyncCallback<WindowProperties>): void
 ```
 
-Obtains the properties of this window. This API uses an asynchronous callback to return the result.
+获取当前窗口的属性，使用callback异步回调，返回WindowProperties。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)替代。
 
 **Since:** 6
 
@@ -756,7 +780,7 @@ Obtains the properties of this window. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowProperties&gt; | Yes | Callback used to return the window properties. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WindowProperties&gt; | Yes | 回调函数。返回当前窗口属性。 |
 
 ## getProperties
 
@@ -764,7 +788,11 @@ Obtains the properties of this window. This API uses an asynchronous callback to
 getProperties(): Promise<WindowProperties>
 ```
 
-Obtains the properties of this window. This API uses a promise to return the result.
+获取当前窗口的属性，使用Promise异步回调，返回WindowProperties。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)替代。
 
 **Since:** 6
 
@@ -782,7 +810,7 @@ Obtains the properties of this window. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowProperties&gt; | Promise used to return the window properties. |
+| Promise&lt;WindowProperties&gt; | Promise对象。返回当前窗口属性。 |
 
 ## getStatusBarProperty
 
@@ -790,9 +818,9 @@ Obtains the properties of this window. This API uses a promise to return the res
 getStatusBarProperty(): StatusBarProperty
 ```
 
-Obtains the properties (for example, text color) of the status bar in the main window.
+获取主窗口状态栏的属性，如状态栏文字颜色。
 
-Calling this API is not supported for child window and will cause error code 1300004.
+子窗口不支持查询，调用会返回错误码1300004。
 
 **Since:** 18
 
@@ -808,14 +836,14 @@ Calling this API is not supported for child window and will cause error code 130
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Status bar properties, such as its color. |
+| [StatusBarProperty](arkts-arkui-window-statusbarproperty-i.md) | 当前状态栏属性，如状态栏颜色。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 
 ## getSubWindowZLevel
 
@@ -829,7 +857,7 @@ ArkTS-Sta:
 getSubWindowZLevel(): int
 ```
 
-Obtains the z-level of the current child window. This API cannot be called by the main window or system window.
+获取当前子窗口层级级别。不支持主窗、系统窗调用。
 
 **Since:** 18
 
@@ -845,15 +873,15 @@ Obtains the z-level of the current child window. This API cannot be called by th
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Z-level of the child window. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 当前子窗口层级级别。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getSubWindowZLevel can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 801 | Capability not supported. Function setSubWindowZLevel can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## getTitleButtonRect
 
@@ -861,7 +889,7 @@ Obtains the z-level of the current child window. This API cannot be called by th
 getTitleButtonRect(): TitleButtonRect
 ```
 
-Obtains the rectangle that holds the minimize, maximize, and close buttons on the title bar of the main window or the decorated child window.
+获取主窗口或启用装饰的子窗口的标题栏上的最小化、最大化、关闭按钮矩形区域。
 
 **Since:** 11
 
@@ -877,14 +905,14 @@ Obtains the rectangle that holds the minimize, maximize, and close buttons on th
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Rectangle obtained, which is located in the top-right corner of the window. |
+| [TitleButtonRect](arkts-arkui-window-titlebuttonrect-i.md) | 标题栏上的最小化、最大化、关闭按钮矩形区域，该区域位置坐标相对窗口右上角。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## getUIContext
 
@@ -892,7 +920,7 @@ Obtains the rectangle that holds the minimize, maximize, and close buttons on th
 getUIContext() : UIContext
 ```
 
-Obtains a UIContext instance.
+获取UIContext实例。
 
 **Since:** 10
 
@@ -910,13 +938,13 @@ Obtains a UIContext instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | UIContext instance obtained. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 返回UIContext实例对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## getWindowAvoidArea
 
@@ -924,32 +952,26 @@ Obtains a UIContext instance.
 getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 ```
 
-Obtains the avoid area of this window.
+获取当前窗口避让区域。
 
-Main window/Child window:
+主窗口/子窗口：
 
-- In the free-floating window mode under the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ state (the window mode is  
-**window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type (  
-[AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is **TYPE\_KEYBOARD**) is available.  
-- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
-of the system bar type ([AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is **TYPE\_SYSTEM**) is available.  
-- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
-not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
-- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
-to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在固定态软键盘（  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
 
-Global floating window, modal window, or system window:
+全局悬浮窗、模态窗或系统窗口：
 
-- This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ is called. Otherwise, the obtained avoidance area is empty.
+- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取避让区域，否则获取的避让区域为空。
 
-This API is generally applicable to the following scenarios:
+该接口一般适用于两种场景：
 
-- In the [onWindowStageCreate()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ callback, this  
-API is used to obtain the initial layout avoid area when the application starts.  
-- This API is used when a child window needs to temporarily display content and requires layout adjustments to  
-avoid certain areas.
+- 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)方法中，获取应用启动时的初始布局避让区域时可  
+调用该接口。  
+- 当应用内子窗需要临时显示，对显示内容做布局避让时可调用该接口。
 
 **Since:** 9
 
@@ -965,20 +987,20 @@ avoid certain areas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the area |
+| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes | Type of the area |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Area where the window cannot be displayed. |
+| [AvoidArea](arkts-arkui-window-avoidarea-i.md) | 窗口内容避让区域。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Convert avoid area failed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Convert avoid area failed. |
 
 ## getWindowAvoidAreaIgnoringVisibility
 
@@ -986,23 +1008,20 @@ avoid certain areas.
 getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 ```
 
-Obtains the avoid area of this application window, even if the avoid area is invisible.
+获取当前应用窗口的避让区域，即使避让区域当前处于不可见状态。
 
-Main window/Child window:
+主窗口/子窗口：
 
-- When the main window is in the free-floating window mode under a non-  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ state (the window mode is  
-**window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type (  
-[AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is **TYPE\_SYSTEM**) is available.  
-- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
-not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
-- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
-to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
+- 主窗口在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在系统栏（  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
 
-Global floating window, modal window, or system window:
+全局悬浮窗、模态窗或系统窗口：
 
-- This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is called. Otherwise, the obtained avoidance area is empty.
+- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+为空。
 
 **Since:** 22
 
@@ -1016,22 +1035,22 @@ Global floating window, modal window, or system window:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the area. |
+| type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes | Type of the area. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Area where the window cannot be displayed. |
+| [AvoidArea](arkts-arkui-window-avoidarea-i.md) | 窗口内容避让区域。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Convert avoid area failed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Convert avoid area failed. |
+| 1300016 | Parameter error. |
 
 ## getWindowColorSpace
 
@@ -1039,7 +1058,7 @@ Global floating window, modal window, or system window:
 getWindowColorSpace(): ColorSpace
 ```
 
-Obtains the color space of this window.
+获取当前窗口色域模式。
 
 **Since:** 9
 
@@ -1055,13 +1074,13 @@ Obtains the color space of this window.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Color space obtained. |
+| [ColorSpace](arkts-arkui-window-colorspace-e.md) | 当前色域模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## getWindowCornerRadius
 
@@ -1075,8 +1094,7 @@ ArkTS-Sta:
 getWindowCornerRadius(): double
 ```
 
-Obtains the radius of rounded corners of a child window or floating window. If  
-[setWindowCornerRadius()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is not called to set the radius of rounded corners, this API returns the default radius of rounded corners.
+该接口用于获取子窗或悬浮窗的圆角半径值，在未调用[setWindowCornerRadius()](arkts-arkui-window-window-i.md#setwindowcornerradius)接口设置窗口圆角半径值时，调用此接口可获取窗口默认圆角半径值。
 
 **Since:** 17
 
@@ -1092,15 +1110,15 @@ Obtains the radius of rounded corners of a child window or floating window. If
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Radius of the rounded corner of the child window or floating window, measured in vp. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 当前子窗或悬浮窗的圆角半径值，单位为vp。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and float windows are supported. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and float windows are supported. |
 
 ## getWindowDecorHeight
 
@@ -1114,8 +1132,10 @@ ArkTS-Sta:
 getWindowDecorHeight(): int
 ```
 
-Obtains the height of the title bar of this window. This API takes effect for the window that has a title bar and a three-button area. In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+对存在标题栏和三键区的窗口形态生效，用于获取窗口的标题栏高度。如果使用Stage模型，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+
+由于系统像素转换可能存在精度误差，调用[setWindowDecorHeight()](arkts-arkui-window-window-i.md#setwindowdecorheight)设置的值与获取的值可能存在1vp的差异。
 
 **Since:** 11
 
@@ -1131,14 +1151,14 @@ Obtains the height of the title bar of this window. This API takes effect for th
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Height of the title bar. The value is an integer in the range [37,112]. The unit is vp. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回的窗口标题栏高度。该参数为整数，取值范围为[37,112]，单位为vp。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## getWindowDecorVisible
 
@@ -1146,8 +1166,8 @@ Obtains the height of the title bar of this window. This API takes effect for th
 getWindowDecorVisible(): boolean
 ```
 
-Checks whether the title bar of this window is visible. In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+查询窗口标题栏是否可见。如果使用Stage模型，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
 **Since:** 18
 
@@ -1163,14 +1183,14 @@ Checks whether the title bar of this window is visible. In the stage model, this
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the title bar is visible. **true** if visible, **false** otherwise. |
+| boolean | 返回当前窗口标题栏是否可见，true表示可见，false表示不可见。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## getWindowDensityInfo
 
@@ -1178,7 +1198,7 @@ Checks whether the title bar of this window is visible. In the stage model, this
 getWindowDensityInfo(): WindowDensityInfo
 ```
 
-Obtains the display density information of this window.
+获取当前窗口所在屏幕的系统显示大小缩放系数、系统默认显示大小缩放系数和自定义显示大小缩放系数信息。
 
 **Since:** 15
 
@@ -1194,14 +1214,14 @@ Obtains the display density information of this window.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Display density information of the window. If the return value is [-1, -1, -1], the current device does not support this API. |
+| [WindowDensityInfo](arkts-arkui-window-windowdensityinfo-i.md) | 当前窗口的显示大小缩放系数信息。当返回值为[-1, -1, -1]时，表示当前设备不支持使用该接口。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## getWindowLimits
 
@@ -1209,7 +1229,7 @@ Obtains the display density information of this window.
 getWindowLimits(): WindowLimits
 ```
 
-Obtains the size limits of this application window, in px.
+获取当前应用窗口的尺寸限制，单位为物理像素px。
 
 **Since:** 11
 
@@ -1225,14 +1245,14 @@ Obtains the size limits of this application window, in px.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Window size limits. |
+| [WindowLimits](arkts-arkui-window-windowlimits-i.md) | 当前窗口尺寸限制。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## getWindowLimitsVP
 
@@ -1240,9 +1260,9 @@ Obtains the size limits of this application window, in px.
 getWindowLimitsVP(): WindowLimits
 ```
 
-Obtains the size limits of this application window, in vp.
+获取当前应用窗口的尺寸限制，单位为虚拟像素vp。
 
-For system windows and global floating windows, the default minimum width and height are set to 1 px. The 1 vp value obtained via this API represents the result after rounding calculations.
+对于系统窗口和全局悬浮窗，默认窗口宽高的系统限制最小值为1px，通过此接口获取到的1vp，是计算取整后的值。
 
 **Since:** 22
 
@@ -1256,14 +1276,14 @@ For system windows and global floating windows, the default minimum width and he
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Window size limits. |
+| [WindowLimits](arkts-arkui-window-windowlimits-i.md) | 当前窗口尺寸限制。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## getWindowProperties
 
@@ -1271,7 +1291,7 @@ For system windows and global floating windows, the default minimum width and he
 getWindowProperties(): WindowProperties
 ```
 
-Obtains the properties of this window.
+获取当前窗口的属性。
 
 **Since:** 9
 
@@ -1287,13 +1307,13 @@ Obtains the properties of this window.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Window properties obtained. |
+| [WindowProperties](arkts-arkui-window-windowproperties-i.md) | 当前窗口属性。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## getWindowStateSnapshot
 
@@ -1301,7 +1321,7 @@ Obtains the properties of this window.
 getWindowStateSnapshot(): Promise<string>
 ```
 
-Get window state snapshot, including isPcMode information.
+获取设备形态，仅测试使用
 
 **Since:** 23
 
@@ -1325,9 +1345,9 @@ Get window state snapshot, including isPcMode information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. Possible cause: The device does not support the API itself. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed; |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
+| 1300003 | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. Possible cause: The device does not support the API itself. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed; |
 
 ## getWindowStatus
 
@@ -1335,15 +1355,15 @@ Get window state snapshot, including isPcMode information.
 getWindowStatus(): WindowStatusType
 ```
 
-Obtains the mode of this window.
-    **NOTE**  
-    
-    In \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode, when the window is  
-    maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on  
-    tablets), the return value differs based on the  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ setting. For  
-    versions below 14, the return value is **WindowStatusType::FULL\_SCREEN**. For versions 14 and above, the return  
-    value is **WindowStatusType::MAXIMIZE**.
+获取当前应用窗口的模式。
+
+> **说明：**
+> 
+> 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
 
 **Since:** 12
 
@@ -1359,14 +1379,14 @@ Obtains the mode of this window.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Window mode. |
+| [WindowStatusType](../arkts-components/arkts-arkui-windowstatustype-t.md) | 当前窗口模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## getWindowSystemBarProperties
 
@@ -1374,7 +1394,7 @@ Obtains the mode of this window.
 getWindowSystemBarProperties(): SystemBarProperties
 ```
 
-Obtains the properties of the \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button navigation bar and \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_status bar in the main window.
+获取主窗口&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性。
 
 **Since:** 12
 
@@ -1390,15 +1410,15 @@ Obtains the properties of the \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button 
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Properties of the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_status bar. |
+| [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 当前&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏属性。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Create js object failed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 1300003 | This window manager service works abnormally. Possible cause: Create js object failed. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 
 ## getWindowTransitionAnimation
 
@@ -1406,9 +1426,9 @@ Obtains the properties of the \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button 
 getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAnimation | undefined
 ```
 
-Obtains the window transition animation configuration in a specific scenario.
+获取特定场景下的窗口转场动画配置。
 
-Currently, this API can be used only on the main window of an application.
+当前只支持在应用主窗下使用。
 
 **Since:** 20
 
@@ -1426,23 +1446,23 @@ Currently, this API can be used only on the main window of an application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transitionType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scene of the transition animation. Currently, only the destruction scene is supported. |
+| transitionType | [WindowTransitionType](arkts-arkui-window-windowtransitiontype-e.md) | Yes | 本次转场动画场景。当前只支持销毁场景。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Transition animation configuration in the corresponding scene. If the [setWindowTransitionAnimation]{ |
+| [TransitionAnimation](arkts-arkui-window-transitionanimation-i.md) | 对应场景下的转场动画配置。当未使用过 [setWindowTransitionAnimation]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1300004 | Unauthorized operation. |
 
 ## globalDisplayToClient
 
@@ -1456,9 +1476,9 @@ ArkTS-Sta:
 globalDisplayToClient(globalDisplayX: int, globalDisplayY: int): Position
 ```
 
-Converts global coordinates (based on the top-left corner of the primary screen) into relative coordinates (based on the top-left corner of the current window).
+将相对于主屏幕左上角的全局坐标转换为相对于当前窗口左上角的坐标。
 
-This API is not supported in windows that are subject to display scaling, such as floating windows on phones or tablets not in free windows mode.
+不支持在经过显示缩放的窗口中调用，例如手机或平板设备在非自由多窗模式下的悬浮窗场景。
 
 **Since:** 20
 
@@ -1472,23 +1492,23 @@ This API is not supported in windows that are subject to display scaling, such a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| globalDisplayX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset along the X-axis, in pixels, with the top-left corner of the current window as the origin. A positive value moves the window to the right; a negative value moves it to the left. The value must be an integer. Non-integer values are rounded down. |
-| globalDisplayY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset along the Y-axis, in pixels, with the top-left corner of the current window as the origin. A positive value moves the window downward; a negative value moves it upward. The value must be an integer. Non-integer values are rounded down. |
+| globalDisplayX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示以当前窗口左上角为原点的x轴方向偏移量，单位为px。值为正表示在原点右侧， 值为负表示在原点左侧。该参数应为整数，非整数输入将向下取整。 |
+| globalDisplayY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示以当前窗口左上角为原点的y轴方向偏移量，单位为px。 值为正表示在原点下方，值为负表示在原点上方。该参数应为整数，非整数输入将向下取整。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Coordinates after conversion. |
+| [Position](arkts-arkui-display-position-i.md) | 返回转换后的坐标。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1300010 | The operation in the current window status is invalid. |
 
 ## isFloatNavigationAvoidAreaEnabled
 
@@ -1496,7 +1516,7 @@ This API is not supported in windows that are subject to display scaling, such a
 isFloatNavigationAvoidAreaEnabled(): boolean
 ```
 
-Get whether the float navigation avoid area can be obtained.
+查询当前窗口是否支持获取三键导航类型的避让区域。
 
 **Since:** 26.0.0
 
@@ -1514,13 +1534,13 @@ Get whether the float navigation avoid area can be obtained.
 
 | Type | Description |
 | --- | --- |
-| boolean | enable - If true, the float navigation avoid area can be obtained. If false, the float navigation avoid area can not be obtained. |
+| boolean | 是否支持获取三键导航类型的避让区域。 &lt;br&gt;true表示支持，false表示不支持。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Create js value failed. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Create js value failed. |
 
 ## isFocused
 
@@ -1528,7 +1548,9 @@ Get whether the float navigation avoid area can be obtained.
 isFocused(): boolean
 ```
 
-Checks whether this window is focused.
+判断当前窗口是否已获焦。为获取准确的获焦状态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。
+
+可使用[on('windowEvent')](window.Window.on(type: 'windowEvent', callback: Callback&lt;WindowEventType&gt;))监听对应状态变更，再执行对应具体业务。
 
 **Since:** 12
 
@@ -1544,13 +1566,13 @@ Checks whether this window is focused.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the window is focused. **true** if focused, **false** otherwise. |
+| boolean | 当前窗口是否已获焦。true表示当前窗口已获焦，false则表示当前窗口未获焦。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## isGestureBackEnabled
 
@@ -1558,7 +1580,7 @@ Checks whether this window is focused.
 isGestureBackEnabled(): boolean
 ```
 
-Obtains whether the back gesture is enabled for the current window. This API can be successfully called only for the main window, and error code 1300004 is returned on other windows.
+获取当前窗口是否启用返回手势功能，仅主窗可以调用成功，其他类型的窗口调用返回1300004错误码。
 
 **Since:** 13
 
@@ -1574,15 +1596,15 @@ Obtains whether the back gesture is enabled for the current window. This API can
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the back gesture feature is enabled. **true** if enabled, **false** otherwise. |
+| boolean | 是否已经启用返回手势。true表示已启用返回手势功能，false表示已禁用返回手势功能。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 
 ## isImmersiveLayout
 
@@ -1590,7 +1612,7 @@ Obtains whether the back gesture is enabled for the current window. This API can
 isImmersiveLayout(): boolean
 ```
 
-Checks whether this window is in immersive mode.
+查询当前窗口是否处于沉浸式布局状态。
 
 **Since:** 20
 
@@ -1604,14 +1626,14 @@ Checks whether this window is in immersive mode.
 
 | Type | Description |
 | --- | --- |
-| boolean | The value true means that the layout is immersive, and false means the opposite. |
+| boolean | 是否处于沉浸式布局状态。true表示处于沉浸式布局状态，false表示不处于沉浸式布局状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## isInFreeWindowMode
 
@@ -1619,7 +1641,7 @@ Checks whether this window is in immersive mode.
 isInFreeWindowMode(): boolean
 ```
 
-Checks whether this window is in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_mode.
+查询当前窗口是否为[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)模式。
 
 **Since:** 22
 
@@ -1635,52 +1657,14 @@ Checks whether this window is in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_mode.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the window is in freeform window mode. **true** if the window is in freeform window mode, **false** otherwise. |
+| boolean | 返回true表示在自由窗口模式，false表示非自由窗口模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-
-## isInWindowPostureMode
-
-```TypeScript
-isInWindowPostureMode(mode: WindowPostureMode): boolean
-```
-
-Checks whether this window is in the specified window posture mode.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Window-isInWindowPostureMode(mode: WindowPostureMode): boolean--><!--Device-Window-isInWindowPostureMode(mode: WindowPostureMode): boolean-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The window posture mode. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Check result for whether this window is in the specified window posture mode. **true** if the window is in the specified window posture mode. **false** otherwise. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
 
 ## isReceiveDragEventEnabled
 
@@ -1688,7 +1672,7 @@ Checks whether this window is in the specified window posture mode.
 isReceiveDragEventEnabled(): boolean
 ```
 
-Obtains whether the current window can receive [drag events]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+获取当前窗口是否能接收[拖拽事件](arkts-arkui-common-dragevent-i.md)的状态。
 
 **Since:** 23
 
@@ -1704,15 +1688,15 @@ Obtains whether the current window can receive [drag events]\_\_\_JSDOC\_LINK\_D
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the current window can receive drag events. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** if the current window can receive drag events; **false** otherwise. |
+| boolean | 当前窗口是否能接收拖拽事件的状态。&lt;/br&gt;true表示能接收拖拽事件的状态，false表示不能接收拖拽事件的状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function cannot work because the current device does not support this ability. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function cannot work because the current device does not support this ability. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## isSeparationTouchEnabled
 
@@ -1720,7 +1704,7 @@ Obtains whether the current window can receive [drag events]\_\_\_JSDOC\_LINK\_D
 isSeparationTouchEnabled(): boolean
 ```
 
-Obtains whether the current window supports the event separation state.
+获取当前窗口是否支持事件分离的状态。
 
 **Since:** 23
 
@@ -1736,15 +1720,15 @@ Obtains whether the current window supports the event separation state.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the current window supports the event separation state. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** if support; **false** otherwise. |
+| boolean | 当前窗口是否支持事件分离。&lt;/br&gt;true表示支持窗口事件分离，false表示不支持窗口事件分离。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function cannot work because the current device does not support this ability. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function cannot work because the current device does not support this ability. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## isShowing
 
@@ -1752,7 +1736,11 @@ Obtains whether the current window supports the event separation state.
 isShowing(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this window is displayed. This API uses an asynchronous callback to return the result.
+判断当前窗口是否已显示，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[isWindowShowing()](arkts-arkui-window-window-i.md#iswindowshowing)替代。
 
 **Since:** 7
 
@@ -1770,7 +1758,7 @@ Checks whether this window is displayed. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the window is displayed, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示当前窗口已显示，返回false表示当前窗口未显示。 |
 
 ## isShowing
 
@@ -1778,7 +1766,11 @@ Checks whether this window is displayed. This API uses an asynchronous callback 
 isShowing(): Promise<boolean>
 ```
 
-Checks whether this window is displayed. This API uses a promise to return the result.
+判断当前窗口是否已显示，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[isWindowShowing()](arkts-arkui-window-window-i.md#iswindowshowing)替代。
 
 **Since:** 7
 
@@ -1796,7 +1788,7 @@ Checks whether this window is displayed. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the window is displayed, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前窗口已显示，返回false表示当前窗口未显示。 |
 
 ## isSupportWideGamut
 
@@ -1804,7 +1796,12 @@ Checks whether this window is displayed. This API uses a promise to return the r
 isSupportWideGamut(): Promise<boolean>
 ```
 
-Checks whether this window supports the wide-gamut color space. This API uses a promise to return the result.
+判断当前窗口是否支持广色域模式，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [isWindowSupportWideGamut()](arkts-arkui-window-window-i.md#iswindowsupportwidegamut)替代。
 
 **Since:** 8
 
@@ -1822,7 +1819,7 @@ Checks whether this window supports the wide-gamut color space. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the wide-gamut color space is supported, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
 
 ## isSupportWideGamut
 
@@ -1830,7 +1827,12 @@ Checks whether this window supports the wide-gamut color space. This API uses a 
 isSupportWideGamut(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this window supports the wide-gamut color space. This API uses an asynchronous callback to return the result.
+判断当前窗口是否支持广色域模式，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [isWindowSupportWideGamut()](arkts-arkui-window-window-i.md#iswindowsupportwidegamut)替代。
 
 **Since:** 8
 
@@ -1848,7 +1850,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the wide-gamut color space is supported, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
 
 ## isSystemAvoidAreaEnabled
 
@@ -1856,7 +1858,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 isSystemAvoidAreaEnabled(): boolean
 ```
 
-Checks whether a floating window, modal window, or system window (**WindowType** is a system window) is enabled to access the [avoid area]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+获取悬浮窗、模态窗或WindowType为系统类型的窗口是否可以获取窗口内容的避让区[AvoidArea](arkts-arkui-window-avoidarea-i.md)。
 
 **Since:** 18
 
@@ -1872,16 +1874,16 @@ Checks whether a floating window, modal window, or system window (**WindowType**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the window is enabled to access the avoid area. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **true** if enabled, **false** otherwise. |
+| boolean | 是否可以获取窗口内容的避让区。 &lt;br&gt; true表示可以获取避让区；false表示不可以获取避让区。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Create js value failed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Create js value failed. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. |
 
 ## isWindowHighlighted
 
@@ -1889,11 +1891,10 @@ Checks whether a floating window, modal window, or system window (**WindowType**
 isWindowHighlighted(): boolean
 ```
 
-Checks whether the window is active. To obtain the active state, call this API when the  
-[WindowEventType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ lifecycle is **WINDOW\_ACTIVE**.
+获取当前窗口是否为激活态。为准确获取激活态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。
 
-You can use  
-[on('windowHighlightChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_to listen for status changes and then execute the corresponding service.
+可使用  
+[on('windowHighlightChange')](window.Window.on(type: 'windowHighlightChange', callback: Callback&lt;boolean&gt;))监听对应状态变更，再执行对应具体业务。
 
 **Since:** 18
 
@@ -1909,14 +1910,14 @@ You can use
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the window is active. **true** if active, **false** otherwise. |
+| boolean | 当前窗口是否为激活态。true表示当前窗口为激活态，false表示当前窗口非激活态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## isWindowShowing
 
@@ -1924,7 +1925,7 @@ You can use
 isWindowShowing(): boolean
 ```
 
-Checks whether this window is displayed.
+判断当前窗口是否已显示。
 
 **Since:** 9
 
@@ -1940,13 +1941,13 @@ Checks whether this window is displayed.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the window is displayed. **true** if displayed, **false** otherwise. |
+| boolean | 当前窗口是否已显示。true表示当前窗口已显示，false则表示当前窗口未显示。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## isWindowSupportWideGamut
 
@@ -1954,7 +1955,7 @@ Checks whether this window is displayed.
 isWindowSupportWideGamut(): Promise<boolean>
 ```
 
-Checks whether this window supports the wide-gamut color space. This API uses a promise to return the result.
+判断当前窗口是否支持广色域模式，使用Promise异步回调。
 
 **Since:** 9
 
@@ -1970,13 +1971,13 @@ Checks whether this window supports the wide-gamut color space. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the wide-gamut color space is supported, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## isWindowSupportWideGamut
 
@@ -1984,7 +1985,7 @@ Checks whether this window supports the wide-gamut color space. This API uses a 
 isWindowSupportWideGamut(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this window supports the wide-gamut color space. This API uses an asynchronous callback to return the result.
+判断当前窗口是否支持广色域模式，使用callback异步回调。
 
 **Since:** 9
 
@@ -2000,13 +2001,13 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示当前窗口支持广色域模式，返回false表示当前窗口不支持广色域模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## keepKeyboardOnFocus
 
@@ -2014,7 +2015,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 keepKeyboardOnFocus(keepKeyboardFlag: boolean): void
 ```
 
-Determines whether to retain the soft keyboard created by another window when the current window gains focus.This API is only supported by system windows and application child windows.
+当前窗口获焦时是否保留由其他窗口创建的软键盘，支持系统窗口、应用子窗口、模态窗和全局悬浮窗。
 
 **Since:** 11
 
@@ -2030,16 +2031,16 @@ Determines whether to retain the soft keyboard created by another window when th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keepKeyboardFlag | boolean | Yes | Whether to keep the soft keyboard created by others. **true** to keep, **false** otherwise. |
+| keepKeyboardFlag | boolean | Yes | 是否保留其他窗口创建的软键盘。true表示保留；false表示不保留。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Only float windows, subwindows, dialog windows, or window type as system windows are supported. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## loadContent
 
@@ -2047,7 +2048,11 @@ Determines whether to retain the soft keyboard created by another window when th
 loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-Loads the content of a page, with its path in the current project specified, to this window, and transfers the state attribute to the page through a local storage. This API uses an asynchronous callback to return the result.You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it. The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback.
+根据当前工程中指定的页面路径为窗口加载具体页面内容，通过LocalStorage传递状态属性给加载的页面，使用callback异步回调。
+
+建议在UIAbility启动过程中使用该接口，重复调用将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **Since:** 9
 
@@ -2065,16 +2070,17 @@ Loads the content of a page, with its path in the current project specified, to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page from which the content will be loaded. The path is configured in the **main\_\_\_ESCAPED\_UNDERSCORE\_\_\_pages.json** file of the project. |
-| storage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Page-level UI state storage unit, which is used to transfer the state attribute for the page. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| path | string | Yes | 要加载到窗口中的页面内容的路径，该路径需添加到工程的main_pages.json文件中。不支持相对路径写法，需与main_pages.json中的src取值保持一致。 |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | Yes | 页面级UI状态存储单元，这里用于为加载到窗口的页面内容传递状态属性。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300003 | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## loadContent
 
@@ -2082,7 +2088,11 @@ Loads the content of a page, with its path in the current project specified, to 
 loadContent(path: string, storage: LocalStorage): Promise<void>
 ```
 
-Loads the content of a page, with its path in the current project specified, to this window, and transfers the state attribute to the page through a local storage. This API uses a promise to return the result. You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it. The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback.
+根据当前工程中指定的页面路径为窗口加载具体页面内容，通过LocalStorage传递状态属性给加载的页面，使用Promise异步回调。
+
+建议在UIAbility启动过程中使用该接口，重复调用将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **Since:** 9
 
@@ -2100,21 +2110,22 @@ Loads the content of a page, with its path in the current project specified, to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page from which the content will be loaded. The path is configured in the **main\_\_\_ESCAPED\_UNDERSCORE\_\_\_pages.json** file of the project. |
-| storage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Page-level UI state storage unit, which is used to transfer the state attribute for the page. |
+| path | string | Yes | 要加载到窗口中的页面内容的路径，该路径需添加到工程的main_pages.json文件中。不支持相对路径写法，需与main_pages.json中的src取值保持一致。 |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | Yes | 页面级UI状态存储单元，这里用于为加载到窗口的页面内容传递状态属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300003 | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## loadContent
 
@@ -2122,7 +2133,16 @@ Loads the content of a page, with its path in the current project specified, to 
 loadContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-Loads content from a page to this window. This API uses an asynchronous callback to return the result. You are advised to call this API during UIAbility startup. If called multiple times, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it. The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback.
+为当前窗口加载具体页面内容，使用callback异步回调。
+
+建议在UIAbility启动过程中使用该接口，多次调用该接口会先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setUIContent()](arkts-arkui-window-window-i.md#setuicontent)替代。
 
 **Since:** 7
 
@@ -2140,8 +2160,8 @@ Loads content from a page to this window. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page from which the content will be loaded. In the stage model, the path is configured in the **main\_\_\_ESCAPED\_UNDERSCORE\_\_\_pages.json** file of the project. In the FA model, the path is configured in the **config.json** file of the project. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| path | string | Yes | 要加载到窗口中的页面内容的路径，Stage模型下该路径需添加到工程的main_pages.json文件中，FA模型下该路径需添加到工程的config.json文件中。不支持相对 路径写法，需与main_pages.json或config.json中的src取值保持一致。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## loadContent
 
@@ -2149,7 +2169,15 @@ Loads content from a page to this window. This API uses an asynchronous callback
 loadContent(path: string): Promise<void>
 ```
 
-Loads content from a page to this window. This API uses a promise to return the result. You are advised to call this API during UIAbility startup. If called multiple times, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it. The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback.
+为当前窗口加载具体页面内容，使用Promise异步回调。
+
+建议在UIAbility启动过程中使用该接口，多次调用该接口会先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)替代。
 
 **Since:** 7
 
@@ -2167,13 +2195,13 @@ Loads content from a page to this window. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page from which the content will be loaded. In the stage model, the path is configured in the **main\_\_\_ESCAPED\_UNDERSCORE\_\_\_pages.json** file of the project. In the FA model, the path is configured in the **config.json** file of the project. |
+| path | string | Yes | 要加载到窗口中的页面内容的路径，Stage模型下该路径需添加到工程的main_pages.json文件中，FA模型下该路径需添加到工程的config.json文件中。不支持相对 路径写法，需与main_pages.json或config.json中的src取值保持一致。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## loadContentByName
 
@@ -2181,7 +2209,11 @@ Loads content from a page to this window. This API uses a promise to return the 
 loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-Loads the content of a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ page to this window, and transfers the state attribute to the page through a local storage. This API uses an asynchronous callback to return the result. You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it. The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback.
+根据指定路由页面名称为当前窗口加载[命名路由](../../../ui/arkts-routing.md#命名路由)页面，通过LocalStorage传递状态属性至加载页面，使用callback异步回调。
+
+建议在UIAbility启动过程中使用该接口，重复调用该接口将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **Since:** 11
 
@@ -2199,17 +2231,17 @@ Loads the content of a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ page to this window, a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the named route page. |
-| storage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Page-level UI state storage unit, which is used to transfer the state attribute for the page. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| name | string | Yes | 命名路由页面的名称。 |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | Yes | 页面级UI状态存储单元，这里用于为加载到窗口的页面内容传递状态属性。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## loadContentByName
 
@@ -2217,7 +2249,11 @@ Loads the content of a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ page to this window, a
 loadContentByName(name: string, callback: AsyncCallback<void>): void
 ```
 
-Loads the content of a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ page to this window. This API uses an asynchronous callback to return the result. You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the existing page content (UIContent) before loading the new content.Exercise caution when using it. The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback.
+根据指定路由页面名称为当前窗口加载[命名路由](../../../ui/arkts-routing.md#命名路由)页面，使用callback异步回调。
+
+建议在UIAbility启动过程中使用该接口，重复调用该接口将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **Since:** 11
 
@@ -2235,16 +2271,16 @@ Loads the content of a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ page to this window. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the named route page. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| name | string | Yes | 命名路由页面的名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## loadContentByName
 
@@ -2252,7 +2288,11 @@ Loads the content of a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ page to this window. T
 loadContentByName(name: string, storage?: LocalStorage): Promise<void>
 ```
 
-Loads the content of a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ page to this window, and transfers the state attribute to the page through a local storage. This API uses a promise to return the result.You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the existing page content (UIContent) before loading the new content. Exercise caution when using it. The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related operations within the callback.
+根据指定路由页面名称为当前窗口加载[命名路由](../../../ui/arkts-routing.md#命名路由)页面，通过LocalStorage传递状态属性至加载页面，使用Promise异步回调。
+
+建议在UIAbility启动过程中使用该接口，重复调用该接口将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
+
+当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **Since:** 11
 
@@ -2270,22 +2310,22 @@ Loads the content of a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ page to this window, a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the named route page. |
-| storage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Page-level UI state storage unit, which is used to transfer the state attribute for the page. |
+| name | string | Yes | 命名路由页面的名称。 |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | 页面级UI状态存储单元，这里用于为加载到窗口的页面内容传递状态属性，默认值为空。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## maximize
 
@@ -2293,8 +2333,7 @@ Loads the content of a \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ page to this window, a
 maximize(presentation?: MaximizePresentation): Promise<void>
 ```
 
-Maximizes the window. The main window can use this API to maximize. For child windows, you need to set  
-**maximizeSupported** to **true** when creating the windows and then call this API to maximize. This API uses a promise to return the result.
+实现最大化功能。主窗口可调用此接口实现最大化功能；子窗口需在创建时设置子窗口参数maximizeSupported为true，再调用此接口可实现最大化功能。使用Promise异步回调。
 
 **Since:** 12
 
@@ -2310,22 +2349,23 @@ Maximizes the window. The main window can use this API to maximize. For child wi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| presentation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Layout when the window is maximized. The default value is window.MaximizePresentation.ENTER\_\_\_ESCAPED\_UNDERSCORE\_\_\_IMMERSIVE, indicating that the window enters the immersive layout when maximized.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 20 |
+| presentation | [MaximizePresentation](arkts-arkui-window-maximizepresentation-e.md) | No | 主窗口或子窗口最大化时的布局枚举。 默认值window.MaximizePresentation.ENTER_IMMERSIVE，即默认最大化时进入全屏模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function maximize can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and maximizable subwindows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function maximize can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300005 | This window stage is abnormal.<br>**Applicable version:** 12 - 19 |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows and maximizable subwindows are supported. |
 
 ## maximize
 
@@ -2333,9 +2373,8 @@ Maximizes the window. The main window can use this API to maximize. For child wi
 maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise<void>
 ```
 
-Maximizes the window. The main window can use this API to maximize. For child windows, you need to set  
-**maximizeSupported** to **true** when creating the windows and then call this API to maximize. On 2-in-1 devices with folding capabilities, you can use the **acrossDisplay** parameter to control the main window's behavior in waterfall mode when maximized in the hover state. (See  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_). This API uses a promise to return the result.
+实现最大化功能。主窗口可调用此接口实现最大化功能；子窗口需在创建时设置子窗口参数maximizeSupported为true，再调用此接口可实现最大化功能。在具备折叠功能的2in1设备上，支持控制悬停态（参考  
+[折叠屏悬停态最佳实践](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-folded-hover)）下主窗口的瀑布流模式行为，即窗口在悬停态下最大化时是否跨上下两个半屏显示。使用Promise异步回调。
 
 **Since:** 22
 
@@ -2349,23 +2388,23 @@ Maximizes the window. The main window can use this API to maximize. For child wi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| presentation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Layout when the window is maximized. The default value is window.MaximizePresentation.ENTER\_\_\_ESCAPED\_UNDERSCORE\_\_\_IMMERSIVE, indicating that the window enters the immersive layout when maximized. |
-| acrossDisplay | boolean | No | Parameter controls the across-display mode policy of main windows in the half-folded state. The value true Indicates that the window could enter the across-display mode directly, and maintains the across-display mode when the device is half-folded. The default value is undefined. |
+| presentation | [MaximizePresentation](arkts-arkui-window-maximizepresentation-e.md) | No | 主窗口或子窗口最大化时的布局枚举。 默认值window.MaximizePresentation.ENTER_IMMERSIVE，即默认最大化时进入全屏模式。 |
+| acrossDisplay | boolean | No | 控制悬停态下主窗口在最大化时的瀑布流模式行为。默认值为`undefined`。 &lt;br&gt;仅主窗口可设置此参数，非主窗口调用时返回错误码`1300004`。&lt;br&gt;取值为`true`时： &lt;br&gt;- 悬停态下，窗口将直接进入瀑布流模式；&lt;br&gt;- 展开态下，窗口进入最大化，并在悬停态下保持瀑布流模式。 &lt;br&gt;取值为`false`时：&lt;br&gt;- 悬停态下，窗口将退出瀑布流模式，进入单面最大化（即窗口最大化时只在上半屏或下半屏显示）； &lt;br&gt;- 展开态下，窗口进入最大化，并在悬停态下退出瀑布流模式。&lt;br&gt;取值为`undefined`时，不修改窗口瀑布流模式行为： &lt;br&gt;- 悬停态下，窗口进入单面最大化；&lt;br&gt;- 展开态下，窗口进入最大化，并在悬停态下默认保持瀑布流模式。 &lt;br&gt;**设备行为差异：** 仅在具备折叠功能的2in1设备可正常调用；在其他设备上调用不生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function maximize can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and maximizable subwindows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function maximize can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows and maximizable subwindows are supported. |
 
 ## maximizeWithOptions
 
@@ -2373,7 +2412,7 @@ Maximizes the window. The main window can use this API to maximize. For child wi
 maximizeWithOptions(maximizeOptions?: MaximizeOptions): Promise<void>
 ```
 
-Maximize the app window.
+最大化应用窗口。
 
 **Since:** 26.0.0
 
@@ -2389,23 +2428,23 @@ Maximize the app window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maximizeOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The configuration of maximize. |
+| maximizeOptions | [MaximizeOptions](arkts-arkui-window-maximizeoptions-i.md) | No | The configuration of maximize. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows and maximizable subwindows are supported; 2. The acrossDisplay parameter only supports main windows. 3. The snapshotAnimationConfig parameter only supports main windows. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300016 | Parameter error. Possible cause: Invalid parameter range. |
+| 1300004 | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows and maximizable subwindows are supported; 2. The acrossDisplay parameter only supports main windows. |
 
 ## minimize
 
@@ -2413,15 +2452,13 @@ Maximize the app window.
 minimize(callback: AsyncCallback<void>): void
 ```
 
-The behavior of this API varies based on the caller:
+此接口根据调用对象不同，实现不同的功能：
 
-- Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar.  
-For 2-in-1 devices, it can be restored by calling [restore()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-- Hides the child window or global floating window if the caller is a child window. The child window or floating  
-window cannot be restored in the dock bar. It can be made visible again by calling  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+- 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](arkts-arkui-window-window-i.md#restore)进行还原。  
+- 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用  
+[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行还原。
 
-This API can be called only by the main window, child window, or global floating window. If it is called by other windows, error code 1300002 is thrown. This API uses an asynchronous callback to return the result.
+该接口仅支持主窗口、子窗口或全局悬浮窗，其它窗口调用返回1300002错误码，使用callback异步回调。
 
 **Since:** 11
 
@@ -2437,15 +2474,15 @@ This API can be called only by the main window, child window, or global floating
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window type. Only main windows, subwindows, and float windows are supported. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window type. Only main windows, subwindows, and float windows are supported. |
 
 ## minimize
 
@@ -2453,15 +2490,13 @@ This API can be called only by the main window, child window, or global floating
 minimize(): Promise<void>
 ```
 
-The behavior of this API varies based on the caller:
+此接口根据调用对象不同，实现不同的功能：
 
-- Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar.  
-For 2-in-1 devices, it can be restored by calling [restore()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.  
-- Hides the child window or global floating window if the caller is a child window. The child window or floating  
-window cannot be restored in the dock bar. It can be made visible again by calling  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+- 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](arkts-arkui-window-window-i.md#restore)进行还原。  
+- 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用  
+[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行还原。
 
-This API can be called only by the main window, child window, or global floating window. If it is called by other windows, error code 1300002 is thrown. This API uses a promise to return the result.
+该接口仅支持主窗口、子窗口或全局悬浮窗，其它窗口调用返回1300002错误码，使用Promise异步回调。
 
 **Since:** 11
 
@@ -2477,15 +2512,15 @@ This API can be called only by the main window, child window, or global floating
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window type. Only main windows, subwindows, and float windows are supported. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window type. Only main windows, subwindows, and float windows are supported. |
 
 ## moveTo
 
@@ -2493,9 +2528,13 @@ This API can be called only by the main window, child window, or global floating
 moveTo(x: number, y: number): Promise<void>
 ```
 
-Moves this window. This API uses a promise to return the result.
+移动窗口位置，使用Promise异步回调。
 
-This operation is not supported in a window in full-screen mode.
+全屏模式窗口不支持该操作。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)替代。
 
 **Since:** 7
 
@@ -2513,14 +2552,14 @@ This operation is not supported in a window in full-screen mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Coordinate position along the x-axis to which the window is moved, measured in px. A positive value means the position is to the right of the x-axis origin; a negative value means it is to the left; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
-| y | number | Yes | Coordinate position along the y-axis to which the window is moved, measured in px. A positive value means the position is below the y-axis origin; a negative value means it is above; the value **0** means it is at the y-axis origin. The value must be an integer. Non-integer values are rounded down. |
+| x | number | Yes | 窗口在x轴方向移动到的坐标位置，单位为px，值为正表示位置在x轴右侧；值为负表示位置在x轴左侧；值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
+| y | number | Yes | 窗口在y轴方向移动到的坐标位置，单位为px，值为正表示位置在y轴下侧；值为负表示位置在y轴上侧；值为0表示位置在y轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## moveTo
 
@@ -2528,9 +2567,14 @@ This operation is not supported in a window in full-screen mode.
 moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
-Moves this window. This API uses an asynchronous callback to return the result.
+移动窗口位置，使用callback异步回调。
 
-This operation is not supported in a window in full-screen mode.
+全屏模式窗口不支持该操作。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)替代。
 
 **Since:** 7
 
@@ -2548,9 +2592,9 @@ This operation is not supported in a window in full-screen mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Coordinate position along the x-axis to which the window is moved, measured in px. A positive value means the position is to the right of the x-axis origin; a negative value means it is to the left; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
-| y | number | Yes | Coordinate position along the y-axis to which the window is moved, measured in px. A positive value means the position is below the y-axis origin; a negative value means it is above; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| x | number | Yes | 窗口在x轴方向移动到的坐标位置，单位为px，值为正表示位置在x轴右侧；值为负表示位置在x轴左侧；值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
+| y | number | Yes | 窗口在y轴方向移动到的坐标位置，单位为px，值为正表示位置在y轴下侧；值为负表示位置在y轴上侧；值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## moveWindowTo
 
@@ -2564,26 +2608,23 @@ ArkTS-Sta:
 moveWindowTo(x: int, y: int): Promise<void>
 ```
 
-Moves this window. This API uses a promise to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
-    **NOTE**  
-    
-    - This API is best suited for the floating window mode (when the window mode is  
-    **window.WindowStatusType.FLOATING**, which you can check using  
-    [getWindowStatus()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_). You are not advised to use it in other window modes.  
-    
-    - In \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode, the window moves  
-    relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to  
-    the upper-left corner of its parent window.  
-    
-    - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call  
-    [moveWindowToGlobal()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_  
-    .  
-    
-    - This API does not work for the main window in non-freeform window mode.  
-    
-    - In \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ mode,  
-    if the title bar of the main window or a child window is moved out of the screen's visible area,  
-    the system will automatically snap the window back to ensure the title bar is visible.
+移动窗口位置，使用Promise异步回调。调用成功即返回，但返回后无法立即获取最终生效结果。如需立即获取，请使用  
+[moveWindowToAsync()](arkts-arkui-window-window-i.md#movewindowtoasync)。
+
+> **说明：**
+> 
+> - 不建议在除自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，WindowStatusType可通过
+> [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）外的其他窗口模式下使用。
+> 
+> - 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口相对于屏幕左上顶点移动；在非自由窗口状态下，窗口相对于父窗口左上顶点移动。
+> 
+> - 若需在非自由窗口状态下实现相对于屏幕左上顶点的移动，请使用
+> [moveWindowToGlobal()](arkts-arkui-window-window-i.md#movewindowtoglobal)
+> 。
+> 
+> - 该方法对非自由窗口状态下的主窗口无效。
+> 
+> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，若主窗口或子窗口的标题栏移出屏幕可视区域，系统将自动回弹窗口，确保标题栏保持可见。
 
 **Since:** 9
 
@@ -2599,22 +2640,22 @@ Moves this window. This API uses a promise to return the result. A value is retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | X-coordinate to which the window moves, in px. A positive value indicates a position to the right of the origin, and a negative value indicates a position to the left of the origin. The value must be an integer. Non-integer values are rounded down. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Y-coordinate to which the window moves, in pixels. A positive value indicates a position above the origin, and a negative value indicates a position below the origin. The value must be an integer. Non-integer values are rounded down. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口在x轴方向移动到的坐标位置，单位为px，值为正表示在原点右侧，值为负表示在原点左侧。该参数仅支持整数输入，浮点数输入将向下取整。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口在y轴方向移动到的坐标位置，单位为px，值为正表示在原点下方，值为负表示在原点上方。该参数仅支持整数输入，浮点数输入将向下取整。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
 
 ## moveWindowTo
 
@@ -2628,26 +2669,23 @@ ArkTS-Sta:
 moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void
 ```
 
-Moves this window. This API uses an asynchronous callback to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
-    **NOTE**  
-    
-    - This API is best suited for the floating window mode (when the window mode is  
-    **window.WindowStatusType.FLOATING**, which can obtained using  
-    [getWindowStatus()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_). You are advised not to use it in other window modes.  
-    
-    - In \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode, the window moves  
-    relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to  
-    the upper-left corner of its parent window.  
-    
-    - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call  
-    [moveWindowToGlobal()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_  
-    .  
-    
-    - This API does not work for the main window in non-freeform window mode.  
-    
-    - In \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ mode,  
-    if the title bar of the main window or a child window is moved out of the screen's visible area,  
-    the system will automatically snap the window back to ensure the title bar is visible.
+移动窗口位置，使用callback异步回调。调用成功即返回，但返回后无法立即获取最终生效结果。如需立即获取，请使用  
+[moveWindowToAsync()](arkts-arkui-window-window-i.md#movewindowtoasync)。
+
+> **说明：**
+> 
+> - 不建议在除自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，WindowStatusType可通过
+> [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）外的其他窗口模式下使用。
+> 
+> - 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口相对于屏幕左上顶点移动；在非自由窗口状态下，窗口相对于父窗口左上顶点移动。
+> 
+> - 若需在非自由窗口状态下实现相对于屏幕左上顶点的移动，请使用
+> [moveWindowToGlobal()](arkts-arkui-window-window-i.md#movewindowtoglobal)
+> 。
+> 
+> - 该方法对非自由窗口状态下的主窗口无效。
+> 
+> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，若主窗口或子窗口的标题栏移出屏幕可视区域，系统将自动回弹窗口，确保标题栏保持可见。
 
 **Since:** 9
 
@@ -2663,17 +2701,17 @@ Moves this window. This API uses an asynchronous callback to return the result. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | X-coordinate to which the window moves, in px. A positive value indicates a position to the right of the origin, and a negative value indicates a position to the left of the origin. The value must be an integer. Non-integer values are rounded down. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Y-coordinate to which the window moves, in pixels. A positive value indicates a position above the origin, and a negative value indicates a position below the origin. The value must be an integer. Non-integer values are rounded down. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口在x轴方向移动到的坐标位置，单位为px，值为正表示在原点右侧，值为负表示在原点左侧。 该参数仅支持整数输入，浮点数输入将向下取整。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口在y轴方向移动到的坐标位置，单位为px，值为正表示在原点下方，值为负表示在原点上方。 该参数仅支持整数输入，浮点数输入将向下取整。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
 
 ## moveWindowToAsync
 
@@ -2687,14 +2725,22 @@ ArkTS-Sta:
 moveWindowToAsync(x: int, y: int): Promise<void>
 ```
 
-Moves this window. This API uses a promise to return the result. A value is returned once the call takes effect.You can use [getWindowProperties()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ in the callback (see the code snippet below) to obtain the final effect immediately.
+移动窗口位置，使用Promise异步回调。调用生效后返回，回调中可使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)（见示例）立即获取最终生效结果。
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_).In floating window mode, the movement behavior of different types of windows is as follows.
-    **NOTE**  
-    
-    - In \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode,  
-    if the title bar of the main window or a child window is moved out of the screen's visible area,  
-    the system will automatically snap the window back to ensure the title bar is visible.
+该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
+[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
+
+在自由悬浮窗口模式下，不同类型窗口的移动行为如下：
+
+| 窗口类型 | [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态 | 非自由窗口状态 |  
+|---------|---------------|-----------------|  
+| 主窗口 | 相对于屏幕移动 | 调用不生效不报错 |  
+| 应用子窗口/模态窗 | 相对于屏幕移动 | 相对于主窗口移动 |  
+| 系统窗口/全局悬浮窗 | 相对于屏幕移动 | 相对于屏幕移动 |
+
+> **说明：**
+> 
+> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，若主窗口或子窗口的标题栏移出屏幕可视区域，系统将自动回弹窗口，确保标题栏保持可见。
 
 **Since:** 12
 
@@ -2710,23 +2756,23 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Coordinate position along the x-axis to which the window is moved, measured in px. A positive value means the position is to the right of the x-axis origin; a negative value means it is to the left; the value **0** means it is at the x-axis origin. The value must be an integer. Non-integer values are rounded down. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Coordinate position along the y-axis to which the window is moved, measured in px. A positive value means the position is below the y-axis origin; a negative value means it is above; the value **0** means it is at the y-axis origin. The value must be an integer. Non-integer values are rounded down. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口在x轴方向移动到的坐标位置，单位为px，值为正表示位置在x轴右侧；值为负表示位置在x轴左侧； 值为0表示位置在x轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口在y轴方向移动到的坐标位置，单位为px，值为正表示位置在y轴下侧；值为负表示位置在y轴上侧； 值为0表示位置在y轴坐标原点。该参数仅支持整数输入，浮点数输入将向下取整。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
+| 1300010 | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
 
 ## moveWindowToAsync
 
@@ -2740,21 +2786,23 @@ ArkTS-Sta:
 moveWindowToAsync(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>
 ```
 
-Moves this window to the specified position. This API uses a promise to return the result. You can use the  
-**moveConfiguration** parameter to specify the target display ID for the window movement. A value is returned once the call takes effect. You can use [getWindowProperties()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ in the callback (see the code snippet below) to obtain the final effect immediately.
+移动窗口位置，支持配置moveConfiguration参数指定窗口移动的目标屏幕ID，使用Promise异步回调。调用生效后返回，回调中可使用  
+[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)（见示例）立即获取最终生效结果。
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_).In floating window mode, the movement behavior of different types of windows is as follows.
+该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
+[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
 
-| Window Type| \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ State| Non-freeform Window State|  
+在自由悬浮窗口模式下，不同类型窗口的移动行为如下：
+
+| 窗口类型 | [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态 | 非自由窗口状态 |  
 |---------|---------------|-----------------|  
-| Main window| Move relative to the screen.| API calls do not take effect or return an error.|  
-| App subwindow/Modal window| Move relative to the screen.| Move relative to the main window.|  
-| System window/Global floating window| Move relative to the screen.| Move relative to the screen.|
-    **NOTE**  
-    
-    - In \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ mode,  
-    if the title bar of the main window or a child window is moved out of the screen's visible area,  
-    the system will automatically snap the window back to ensure the title bar is visible.
+| 主窗口 | 相对于屏幕移动 | 调用不生效不报错 |  
+| 应用子窗口/模态窗 | 相对于屏幕移动 | 相对于主窗口移动 |  
+| 系统窗口/全局悬浮窗 | 相对于屏幕移动 | 相对于屏幕移动 |
+
+> **说明：**
+> 
+> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，若主窗口或子窗口的标题栏移出屏幕可视区域，系统将自动回弹窗口，确保标题栏保持可见。
 
 **Since:** 15
 
@@ -2770,24 +2818,24 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Distance that the window moves along the x-axis, in px. A positive value indicates that the window moves to the right. The value must be an integer. Non-integer values are rounded down. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Distance that the window moves along the y-axis, in px. A positive value indicates that the window moves downwards. The value must be an integer. Non-integer values are rounded down. |
-| moveConfiguration | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Window movement configuration. If this parameter is not set, the window will stay on the current display. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口在x轴方向移动的值，值为正表示右移，单位为px，该参数应该为整数，非整数输入将向下取整。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口在y轴方向移动的值，值为正表示下移，单位为px，该参数应该为整数，非整数输入将向下取整。 |
+| moveConfiguration | [MoveConfiguration](arkts-arkui-window-moveconfiguration-i.md) | No | 窗口移动选项，未设置将默认保持为当前屏幕。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
+| 1300010 | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
 
 ## moveWindowToGlobal
 
@@ -2801,17 +2849,16 @@ ArkTS-Sta:
 moveWindowToGlobal(x: int, y: int): Promise<void>
 ```
 
-Moves this window based on the coordinates. This API uses a promise to return the result. A value is returned once the call takes effect. You can use [getWindowProperties()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ in the callback (see the code snippet below) to obtain the final effect immediately.
+基于屏幕坐标移动窗口位置，使用Promise异步回调。调用生效后返回，回调中可使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)（见示例）立即获取最终生效结果。
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_).
-    **NOTE**  
-    
-    - When the main window is in floating window mode, this API does not take effect or return an error if called  
-    in non-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ state.  
-    
-    - In \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ mode,  
-    if the title bar of the main window or a child window is moved out of the screen's visible area,  
-    the system will automatically snap the window back to ensure the title bar is visible.
+该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
+[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
+
+> **说明：**
+> 
+> - 主窗处于自由悬浮窗口模式时，在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下调用不生效不报错。
+> 
+> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，若主窗口或子窗口的标题栏移出屏幕可视区域，系统将自动回弹窗口，确保标题栏保持可见。
 
 **Since:** 13
 
@@ -2827,23 +2874,23 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Distance that the window moves along the x-axis, in px, with the top-left corner of the display used as the origin. A positive value indicates that the window moves to the right, and a negative value indicates that the window moves to the left. The value must be an integer. Non-integer values are rounded down. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Distance that the window moves along the y-axis, in px, with the top-left corner of the display used as the origin. A positive value indicates that the window moves downwards, and a negative value indicates that the window moves upwards. The value must be an integer. Non-integer values are rounded down. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示以屏幕左上角为起点，窗口在x轴方向移动的值，单位为px。值为正表示右移，值为负表示左移。 该参数仅支持整数输入，浮点数输入将向下取整。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示以屏幕左上角为起点，窗口在y轴方向移动的值，单位为px。值为正表示下移，值为负表示上移。 该参数仅支持整数输入，浮点数输入将向下取整。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
+| 1300010 | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
 
 ## moveWindowToGlobal
 
@@ -2857,18 +2904,17 @@ ArkTS-Sta:
 moveWindowToGlobal(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>
 ```
 
-Moves this window to the specified position based on the coordinates. This API uses a promise to return the result. You can use the **moveConfiguration** parameter to specify the target display ID for the window movement.A value is returned once the call takes effect. You can use  
-[getWindowProperties()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ in the callback (see the code snippet below) to obtain the final effect immediately.
+基于屏幕坐标移动窗口位置，支持配置moveConfiguration参数指定窗口移动的目标屏幕ID，使用Promise异步回调。调用生效后返回，回调中可使用  
+[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)（见示例）立即获取最终生效结果。
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_).
-    **NOTE**  
-    
-    - When the main window is in floating window mode, this API does not take effect or return an error if called  
-    in non-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ state.  
-    
-    - In \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ mode,  
-    if the title bar of the main window or a child window is moved out of the screen's visible area,  
-    the system will automatically snap the window back to ensure the title bar is visible.
+该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
+[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
+
+> **说明：**
+> 
+> - 主窗处于自由悬浮窗口模式时，在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下调用不生效不报错。
+> 
+> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，若主窗口或子窗口的标题栏移出屏幕可视区域，系统将自动回弹窗口，确保标题栏保持可见。
 
 **Since:** 15
 
@@ -2884,24 +2930,24 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Distance that the window moves along the x-axis, in px, with the top-left corner of the display used as the origin. A positive value indicates that the window moves to the right, and a negative value indicates that the window moves to the left. The value must be an integer. Non-integer values are rounded down. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Distance that the window moves along the y-axis, in px, with the top-left corner of the display used as the origin. A positive value indicates that the window moves downwards, and a negative value indicates that the window moves upwards. The value must be an integer. Non-integer values are rounded down. |
-| moveConfiguration | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicate the window move configuration. If not provided, the window stays on the current display. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示以目标屏幕左上角为起点，窗口在x轴方向移动的值，单位为px。值为正表示右移，值为负表示左移。 该参数应该为整数，非整数输入将向下取整。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示以目标屏幕左上角为起点，窗口在y轴方向移动的值，单位为px。值为正表示下移，值为负表示上移。 该参数应该为整数，非整数输入将向下取整。 |
+| moveConfiguration | [MoveConfiguration](arkts-arkui-window-moveconfiguration-i.md) | No | 窗口移动选项，未设置将默认保持为当前屏幕。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The window type is not supported for this operation. |
+| 1300010 | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
 
 ## moveWindowToGlobalDisplay
 
@@ -2915,21 +2961,18 @@ ArkTS-Sta:
 moveWindowToGlobalDisplay(x: int, y: int): Promise<void>
 ```
 
-Moves the window based on the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result asynchronously.
+基于[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)移动窗口位置，使用Promise异步回调。
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_).
-    **NOTE**  
-    
-    - When the main window is in floating window mode, this API does not take effect or return an error if called  
-    in non-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ state.  
-    
-    - After a window is moved, if it spans multiple screens, the window will belong to the screen with which it  
-    has the largest overlapping area.  
-    
-    - In \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_ mode,  
-    if the title bar of the main window or a child window is moved out of the screen's visible area,  
-    the system will automatically snap the window back to ensure the title bar is visible.
+该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
+[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
+
+> **说明：**
+> 
+> - 主窗处于自由悬浮窗口模式时，在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下调用不生效不报错。
+> 
+> - 窗口移动后，如果窗口跨越多个屏幕，窗口将归属于与其重叠面积最大的屏幕。
+> 
+> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，若主窗口或子窗口的标题栏移出屏幕可视区域，系统将自动回弹窗口，确保标题栏保持可见。
 
 **Since:** 20
 
@@ -2943,24 +2986,24 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Distance that the window moves along the x-axis, in px, with the top-left corner of the primary display used as the origin. A positive value indicates that the window moves to the right, and a negative value indicates that the window moves to the left. The value must be an integer. Non-integer values are rounded down. |
-| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Distance that the window moves along the y-axis, in px, with the top-left corner of the primary display used as the origin. A positive value indicates that the window moves downwards, and a negative value indicates that the window moves upwards. The value must be an integer. Non-integer values are rounded down.ured in px. This parameter only accepts integer values; any floating-point input will be rounded down. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示以主屏幕左上角为起点，窗口在x轴方向移动的值，单位为px。值为正表示右移，值为负表示左移。 该参数应该为整数，非整数输入将向下取整。 |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示以主屏幕左上角为起点，窗口在y轴方向移动的值，单位为px。值为正表示下移，值为负表示上移。 该参数应该为整数，非整数输入将向下取整。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1300010 | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
 
 ## off('rotationChange')
 
@@ -2969,7 +3012,7 @@ off(type: 'rotationChange',
        callback?: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void
 ```
 
-Unsubscribes from the window rotation change event.
+关闭窗口旋转变化的监听。
 
 **Since:** 19
 
@@ -2985,16 +3028,16 @@ Unsubscribes from the window rotation change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'rotationChange' | Yes | Event type. The value is fixed at **'rotationChange'**, indicating the window rotation change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | No | Callback used to return the result. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'rotationChange' | Yes | 监听事件，固定为'rotationChange'，即窗口旋转变化事件。 |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | No | 回调函数。如果传入参数，则关闭该监 听。如果未传入参数，则关闭该窗口的所有监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off
 
@@ -3002,7 +3045,7 @@ Unsubscribes from the window rotation change event.
 off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the event indicating changes in the security restrictions of the UIExtensionAbility within the window.
+关闭窗口内uiextension安全限制变化事件的监听。
 
 **Since:** 20
 
@@ -3018,16 +3061,16 @@ Unsubscribes from the event indicating changes in the security restrictions of t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | 'uiExtensionSecureLimitChange' | Yes | Event type. The value is fixed at **'uiExtensionSecureLimitChange'**, indicating that the UIExtensionAbility security restrictions in the window changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the result. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| eventType | 'uiExtensionSecureLimitChange' | Yes | 监听事件，固定为'uiExtensionSecureLimitChange'，即窗口内uiExtension安全限制变 化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | 回调函数。若传入参数，则关闭该监听。若未传入参数，则关闭所有窗口安全限制变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function off('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function off('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('frameMetricsMeasured')
 
@@ -3035,8 +3078,8 @@ Unsubscribes from the event indicating changes in the security restrictions of t
 off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void
 ```
 
-Unsubscribes from events indicating changes in window frame metrics. This API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+关闭窗口帧率指标变化事件的监听。该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
 **Since:** 22
 
@@ -3050,15 +3093,15 @@ Unsubscribes from events indicating changes in window frame metrics. This API mu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameMetricsMeasured' | Yes | Event type. The value is fixed at **'frameMetricsMeasured'**, indicating the window frame metrics change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameMetrics&gt; | No | If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'frameMetricsMeasured' | Yes | 监听事件类型，固定为'frameMetricsMeasured'，即窗口帧率指标变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;FrameMetrics&gt; | No | 若传入参数，则关闭该监听。若未传入参数，则关闭所有窗口帧率指标变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('occlusionStateChanged')
 
@@ -3066,7 +3109,7 @@ Unsubscribes from events indicating changes in window frame metrics. This API mu
 off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void
 ```
 
-Unsubscribes from the visibility status change event of the window.
+关闭窗口可见性状态变化事件的监听。
 
 **Since:** 22
 
@@ -3080,16 +3123,16 @@ Unsubscribes from the visibility status change event of the window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'occlusionStateChanged' | Yes | Event type. The value is fixed at **'occlusionStateChanged'**, indicating the window visibility status change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OcclusionState&gt; | No | If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'occlusionStateChanged' | Yes | 监听事件，固定为'occlusionStateChanged'，即窗口可见性变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;OcclusionState&gt; | No | 若传入参数，则关闭该监听。若未传入参数，则关闭所有窗口可见性变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('windowSizeChange')
 
@@ -3097,7 +3140,7 @@ Unsubscribes from the visibility status change event of the window.
 off(type: 'windowSizeChange', callback?: Callback<Size>): void
 ```
 
-Unsubscribes from the window size change event. This API can be called only by the main thread.
+关闭窗口尺寸变化的监听。仅在主线程调用。
 
 **Since:** 7
 
@@ -3113,14 +3156,14 @@ Unsubscribes from the window size change event. This API can be called only by t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the window size change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Size&gt; | No | Callback used to return the window size. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'windowSizeChange' | Yes | 监听事件，固定为'windowSizeChange'，即窗口尺寸变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Size&gt; | No | 回调函数。返回当前的窗口尺寸。如果传入参数，则关闭该监听。 如果未传入参数，则关闭窗口尺寸变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## off('systemAvoidAreaChange')
 
@@ -3128,7 +3171,13 @@ Unsubscribes from the window size change event. This API can be called only by t
 off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
 ```
 
-Unsubscribes from the event indicating changes to the area where this window cannot be displayed.
+关闭当前窗口系统避让区变化的监听。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [off('avoidAreaChange')](window.Window.off(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;))
+> 替代。
 
 **Since:** 7
 
@@ -3146,8 +3195,8 @@ Unsubscribes from the event indicating changes to the area where this window can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'systemAvoidAreaChange' | Yes | Event type. The value is fixed at **'systemAvoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AvoidArea&gt; | No | Callback used to return the area. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'systemAvoidAreaChange' | Yes | 监听事件，固定为'systemAvoidAreaChange'，即系统避让区变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AvoidArea&gt; | No | 回调函数。返回当前避让区。若传入参数，则关闭该监听。若未传入参数，则关闭所有系统避让区变化的监听。 |
 
 ## off('avoidAreaChange')
 
@@ -3155,7 +3204,7 @@ Unsubscribes from the event indicating changes to the area where this window can
 off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void
 ```
 
-Unsubscribes from the event indicating changes to the area where this window cannot be displayed.
+关闭当前窗口系统避让区变化的监听。
 
 **Since:** 9
 
@@ -3171,14 +3220,14 @@ Unsubscribes from the event indicating changes to the area where this window can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AvoidAreaOptions&gt; | No | Callback used to return the area and area type. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 20 |
+| type | 'avoidAreaChange' | Yes | 监听事件，固定为'avoidAreaChange'，即系统避让区变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AvoidAreaOptions&gt; | No | 回调函数。返回当前避让区以及避让区类型。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有系统避让区变化的监听 。<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## off('keyboardHeightChange')
 
@@ -3186,8 +3235,8 @@ Unsubscribes from the event indicating changes to the area where this window can
 off(type: 'keyboardHeightChange', callback?: Callback<int>): void
 ```
 
-Unsubscribes from the event indicating soft keyboard height changes in the fixed state so that the application does not receive notifications of soft keyboard height changes. Starting from API version 10, the soft keyboard can be set to the fixed or floating state. For details, see  
-[Input Method Service]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+关闭固定态软键盘高度变化的监听，使应用程序不再接收键盘高度变化的通知。从API version 10开始，有关将软键盘设置为固定态或悬浮态的方法，请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 7
 
@@ -3203,14 +3252,14 @@ Unsubscribes from the event indicating soft keyboard height changes in the fixed
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardHeightChange' | Yes | Event type. The value is fixed at **'keyboardHeightChange'**, indicating the keyboard height change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | No | Callback used to return the current keyboard height, which is an integer, in px. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'keyboardHeightChange' | Yes | 监听事件，固定为'keyboardHeightChange'，即键盘高度变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | 回调函数。返回当前的键盘高度，返回值为整数，单位为px。若传入参数，则关闭该监听；未传入参数，则关闭所有固定态软键盘高度变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## off('keyboardWillShow')
 
@@ -3218,8 +3267,8 @@ Unsubscribes from the event indicating soft keyboard height changes in the fixed
 off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void
 ```
 
-Unsubscribes from the event indicating that the soft keyboard in the fixed state is about to show. For details about the APIs used to set the input method panel to the fixed or floating state, see  
-[Input Method Service]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+关闭固定态软键盘即将开始显示的监听。改变输入法窗口为固定态或者悬浮态方法详细介绍请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 20
 
@@ -3235,15 +3284,15 @@ Unsubscribes from the event indicating that the soft keyboard in the fixed state
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardWillShow' | Yes | Event type. The value is fixed at **'keyboardWillShow'**, indicating the soft keyboard in the fixed state is about to show. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | No | Callback used to return the information about the soft keyboard. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'keyboardWillShow' | Yes | 监听事件，固定为'keyboardWillShow'，即固定态软键盘即将开始显示的事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | No | 回调函数。返回软键盘窗口信息。若传入参数，则关闭该监听。如果未传入参数，则关闭所有固定态软键盘即将开始显示的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('keyboardDidShow')
 
@@ -3251,8 +3300,8 @@ Unsubscribes from the event indicating that the soft keyboard in the fixed state
 off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void
 ```
 
-Unsubscribes from the event indicating that the show animation of the soft keyboard in the fixed state is completed, For details about the APIs used to set the input method panel to the fixed or floating state, see  
-[Input Method Service]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+关闭固定态软键盘显示动画完成的监听。改变输入法窗口为固定态或者悬浮态方法详细介绍请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 18
 
@@ -3268,15 +3317,15 @@ Unsubscribes from the event indicating that the show animation of the soft keybo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardDidShow' | Yes | Event type. The value is fixed at **'keyboardDidShow'**, indicating the show animation of the soft keyboard in the fixed state is completed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | No | Callback used to return the information about the soft keyboard. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'keyboardDidShow' | Yes | 监听事件，固定为'keyboardDidShow'，即固定态软键盘显示动画完成事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | No | 回调函数。返回软键盘窗口信息。若传入参数，则关闭该监听。如果未传入参数，则关闭所有固定态软键盘显示动画完成的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('keyboardWillHide')
 
@@ -3284,8 +3333,8 @@ Unsubscribes from the event indicating that the show animation of the soft keybo
 off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void
 ```
 
-Unsubscribes from the event indicating that the soft keyboard in the fixed state is about to hide. For details about the APIs used to transition the input method panel from the fixed state to the floating state, see  
-[Input Method Service]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+关闭固定态软键盘即将开始隐藏的监听。改变输入法窗口为固定态切换至悬浮态方法详细介绍请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 20
 
@@ -3301,15 +3350,15 @@ Unsubscribes from the event indicating that the soft keyboard in the fixed state
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardWillHide' | Yes | Event type. The value is fixed at **'keyboardWillHide'**, indicating the soft keyboard in the fixed state is about to hide. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | No | Callback used to return the information about the soft keyboard. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'keyboardWillHide' | Yes | 监听事件，固定为'keyboardWillHide'，即固定态软键盘即将开始隐藏的事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | No | 回调函数。返回软键盘窗口信息。若传入参数，则关闭该监听。如果未传入参数，则关闭所有固定态软键盘即将开始隐藏的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('keyboardDidHide')
 
@@ -3317,7 +3366,8 @@ Unsubscribes from the event indicating that the soft keyboard in the fixed state
 off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void
 ```
 
-Unsubscribes from the event indicating that the hide animation of the soft keyboard in the fixed state is completed, For details about the APIs used to transition the input method panel from the fixed state to the floating state, see [Input Method Service]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+关闭固定态软键盘隐藏动画完成的监听。改变输入法窗口为固定态切换至悬浮态方法详细介绍请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 18
 
@@ -3333,15 +3383,15 @@ Unsubscribes from the event indicating that the hide animation of the soft keybo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardDidHide' | Yes | Event type. The value is fixed at **'keyboardDidHide'**, indicating the hide animation of the soft keyboard in the fixed state is completed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | No | Callback used to return the information about the soft keyboard. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'keyboardDidHide' | Yes | 监听事件，固定为'keyboardDidHide'，即固定态软键盘隐藏动画完成事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | No | 回调函数。返回软键盘窗口信息。若传入参数，则关闭该监听。如果未传入参数，则关闭所有固定态软键盘隐藏动画完成的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('touchOutside')
 
@@ -3349,7 +3399,7 @@ Unsubscribes from the event indicating that the hide animation of the soft keybo
 off(type: 'touchOutside', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the touch event outside this window.
+关闭本窗口区域范围外的点击事件的监听。
 
 **Since:** 11
 
@@ -3365,14 +3415,14 @@ Unsubscribes from the touch event outside this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'touchOutside' | Yes | Event type. The value is fixed at **'touchOutside'**, indicating the touch event outside this window. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback used to return the touch event outside this window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'touchOutside' | Yes | 监听事件，固定为'touchOutside'，即本窗口范围外的点击事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | 回调函数。当点击事件发生在本窗口范围之外的回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口区域范围外的点击事件的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## off('displayIdChange')
 
@@ -3380,7 +3430,7 @@ Unsubscribes from the touch event outside this window.
 off(type: 'displayIdChange', callback?: Callback<long>): void
 ```
 
-Unsubscribes from the display change event of this window.
+关闭本窗口所处屏幕变化事件的监听。
 
 **Since:** 14
 
@@ -3396,16 +3446,16 @@ Unsubscribes from the display change event of this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'displayIdChange' | Yes | Event type. The value is fixed at **'displayIdChange'**, indicating the display change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | No | Callback invoked when the display where the window is located changes. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'displayIdChange' | Yes | 监听事件，固定为'displayIdChange'，即本窗口所处屏幕变化的事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | 回调函数。当本窗口所处屏幕发生变化时的回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口所处屏幕变化事件的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('windowVisibilityChange')
 
@@ -3413,7 +3463,7 @@ Unsubscribes from the display change event of this window.
 off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the visibility status change event of this window.
+关闭本窗口可见状态变化事件的监听。
 
 **Since:** 11
 
@@ -3429,17 +3479,17 @@ Unsubscribes from the visibility status change event of this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowVisibilityChange' | Yes | Event type. The value is fixed at **'windowVisibilityChange'**, indicating the visibility status change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the visibility status of the window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| type | 'windowVisibilityChange' | Yes | 监听事件，固定为'windowVisibilityChange'，即本窗口可见状态变化的事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | 回调函数。当本窗口可见状态发生变化时的回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口可见状态变化事件的回调 。<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('systemDensityChange')
 
@@ -3447,9 +3497,9 @@ Unsubscribes from the visibility status change event of this window.
 off(type: 'systemDensityChange', callback?: Callback<double>): void
 ```
 
-Unsubscribes from the system density change event.
+关闭本窗口所处屏幕的系统显示大小缩放系数变化事件的监听。
 
-In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp * density =px.
+在接口回调函数中，建议直接使用返回值进行vp和px的转换。例如，若返回值为density，计算px可使用vp * density = px。
 
 **Since:** 15
 
@@ -3465,16 +3515,16 @@ In the callback function, you are advised to directly use the return value to co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'systemDensityChange' | Yes | Event type. The value is fixed at **'systemDensityChange'**, indicating the system density change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | No | Callback invoked when the system's display size scale factor changes. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'systemDensityChange' | Yes | 监听事件，固定为'systemDensityChange'，即本窗口所处屏幕的系统显示大小缩放系数变化的事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | No | 回调函数。当本窗口所处屏幕的系统显示大小缩放系数发生变化后的回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口所处屏幕的系统显示 大小缩放系数变化事件的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('noInteractionDetected')
 
@@ -3482,7 +3532,7 @@ In the callback function, you are advised to directly use the return value to co
 off(type: 'noInteractionDetected', callback?: Callback<void>): void
 ```
 
-Unsubscribes from non-interaction events in a window within the specified period. Interaction events include physical keyboard input events and screen touch/click events, but not soft keyboard input events.
+关闭本窗口在指定超时时间内无交互事件的监听，交互事件支持物理键盘输入事件和屏幕触控点击事件，不支持软键盘输入事件。
 
 **Since:** 12
 
@@ -3498,17 +3548,17 @@ Unsubscribes from non-interaction events in a window within the specified period
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'noInteractionDetected' | Yes | Event type. The value is fixed at **'noInteractionDetected'**, indicating that there is no interaction event in the window within the specified period. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback invoked when there is no interaction event in the current window within the specified period. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'noInteractionDetected' | Yes | 监听事件，固定为'noInteractionDetected'，即本窗口在指定超时时间内无交互的事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | 回调函数，当本窗口在指定超时时间内无交互事件时的回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口在指定超时时间内无交互事件的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('screenshot')
 
@@ -3516,7 +3566,7 @@ Unsubscribes from non-interaction events in a window within the specified period
 off(type: 'screenshot', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the screenshot event.
+关闭截屏事件的监听。
 
 **Since:** 9
 
@@ -3532,14 +3582,14 @@ Unsubscribes from the screenshot event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'screenshot' | Yes | Event type. The value is fixed at **'screenshot'**, indicating the screenshot event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback invoked when a screenshot event occurs. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'screenshot' | Yes | 监听事件，固定为'screenshot'，即截屏事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | 回调函数。发生截屏事件时的回调。若传入参数，则关闭该监听。若未传入参数，则关闭所有截屏事件的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## off('screenshotAppEvent')
 
@@ -3547,7 +3597,7 @@ Unsubscribes from the screenshot event.
 off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void
 ```
 
-Unsubscribes from the screenshot event.
+关闭屏幕截屏事件类型的监听。
 
 **Since:** 20
 
@@ -3561,15 +3611,15 @@ Unsubscribes from the screenshot event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'screenshotAppEvent' | Yes | Event type. The value is fixed at **'screenshotAppEvent'**, indicating the screenshot event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScreenshotEventType&gt; | No | Callback invoked when a screenshot event occurs. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'screenshotAppEvent' | Yes | 监听事件，固定为'screenshotAppEvent'，即屏幕截屏的事件类型。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ScreenshotEventType&gt; | No | 回调函数。返回触发的截屏事件类型。若传入参数，则关闭该监听。若未传入参数，则关闭所有窗口截图事件的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
 
 ## off('dialogTargetTouch')
 
@@ -3577,7 +3627,7 @@ Unsubscribes from the screenshot event.
 off(type: 'dialogTargetTouch', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the touch event of the target window in the modal window mode.
+关闭模态窗口目标窗口的点击事件的监听。
 
 **Since:** 10
 
@@ -3593,14 +3643,14 @@ Unsubscribes from the touch event of the target window in the modal window mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dialogTargetTouch' | Yes | Event type. The value is fixed at **'dialogTargetTouch'**, indicating the touch event of the target window in the modal window mode. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback invoked when the touch event occurs in the target window of the modal window mode. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'dialogTargetTouch' | Yes | 监听事件，固定为'dialogTargetTouch'，即模态窗口目标窗口的点击事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | 回调函数。当点击事件发生在模态窗口目标窗口的回调。若传入参数，则关闭该监听。若未传入参数，则关闭所有模态窗口目标窗口的点击事件的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## off('windowEvent')
 
@@ -3608,7 +3658,7 @@ Unsubscribes from the touch event of the target window in the modal window mode.
 off(type: 'windowEvent', callback?: Callback<WindowEventType>): void
 ```
 
-Unsubscribes from the window lifecycle change event.
+关闭窗口生命周期变化的监听。
 
 **Since:** 10
 
@@ -3624,14 +3674,14 @@ Unsubscribes from the window lifecycle change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowEvent' | Yes | Event type. The value is fixed at **'windowEvent'**, indicating the window lifecycle change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowEventType&gt; | No | Callback used to return the window lifecycle state. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'windowEvent' | Yes | 监听事件，固定为'windowEvent'，即窗口生命周期变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowEventType&gt; | No | 回调函数。返回当前的窗口生命周期状态。若传入参数，则关闭该监听。若未传入参数，则关闭所有窗口生命周期变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## off('windowStatusChange')
 
@@ -3639,7 +3689,7 @@ Unsubscribes from the window lifecycle change event.
 off(type: 'windowStatusChange', callback?: Callback<WindowStatusType>): void
 ```
 
-Disables the listening for window status changes.
+关闭窗口模式变化的监听。
 
 **Since:** 11
 
@@ -3655,15 +3705,15 @@ Disables the listening for window status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowStatusChange' | Yes | Event type. The value is fixed at **'windowStatusChange'**, indicating the window status change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowStatusType&gt; | No | Callback used to return the window status. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'windowStatusChange' | Yes | 监听事件，固定为'windowStatusChange'，即窗口模式变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStatusType&gt; | No | 回调函数。返回当前的窗口模式。如果传入参数，则关闭该监听。 如果未传入参数，则关闭所有窗口模式变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## off('windowStatusDidChange')
 
@@ -3671,7 +3721,7 @@ Disables the listening for window status changes.
 off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void
 ```
 
-Unsubscribes from the event indicating that the window status has changed.
+关闭窗口模式变化的监听。
 
 **Since:** 20
 
@@ -3685,15 +3735,15 @@ Unsubscribes from the event indicating that the window status has changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowStatusDidChange' | Yes | Event type. The value is fixed at **'windowStatusDidChange'**, indicating that the window status has changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowStatusType&gt; | No | Callback used to return the window status. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'windowStatusDidChange' | Yes | 监听事件，固定为'windowStatusDidChange'，即窗口模式变化完成事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStatusType&gt; | No | 回调函数。返回当前的窗口模式。如果传入参数，则关闭该监听。 如果未传入参数，则关闭所有窗口模式变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('subWindowClose')
 
@@ -3701,7 +3751,7 @@ Unsubscribes from the event indicating that the window status has changed.
 off(type: 'subWindowClose', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the event indicating that the child window is closed.
+关闭子窗口关闭事件的监听。
 
 **Since:** 12
 
@@ -3717,17 +3767,17 @@ Unsubscribes from the event indicating that the child window is closed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'subWindowClose' | Yes | Event type. The value is fixed at **'subWindowClose'**, indicating the child window close event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback invoked when the close button in the top-right corner of the child window is clicked. It does not return any parameter. The return value of the internal logic of the callback function determines whether to continue to close the child window. If **true** of the Boolean type is returned, the child window is not closed. If **false** or other non-Boolean types are returned, the child window is closed. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'subWindowClose' | Yes | 监听事件，固定为'subWindowClose'，即子窗口关闭事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | 回调函数。当点击子窗口右上角关闭按钮事件发生时的回调。该回调函数不返回任何参数。回调函数内部逻辑的返回值决定当前子窗是否继续关闭，如果返回boolean 类型的true表示不关闭子窗，返回false或者其他非boolean类型表示关闭子窗。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有子窗口关闭的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## off('windowWillClose')
 
@@ -3735,7 +3785,7 @@ Unsubscribes from the event indicating that the child window is closed.
 off(type: 'windowWillClose', callback?: Callback<void, Promise<boolean>>): void
 ```
 
-Unsubscribes from the event indicating that the main window or child window will be closed.
+用于关闭主窗口或子窗口关闭事件的监听。
 
 **Since:** 15
 
@@ -3751,17 +3801,17 @@ Unsubscribes from the event indicating that the main window or child window will
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowWillClose' | Yes | Event type. The value is fixed at **'windowWillClose'**, indicating the window close event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void, Promise&lt;boolean&gt;&gt; | No | Callback invoked when the close button in the top-right corner of the window is clicked. It does not return any parameter. The internal logic of the callback function requires a return value of the Promise\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ type. In the returned Promise function, **resolve(true)** means not to close the window, and **resolve(false)** or **reject** means to continue to close the window. |
+| type | 'windowWillClose' | Yes | 监听事件，固定为'windowWillClose'，即窗口关闭事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void, Promise&lt;boolean&gt;&gt; | No | 回调函数。当点击窗口系统提供的右上角关闭按钮事件发生时的回调。该回调函数不返回任何参数。回调函数内部逻辑需要有 Promise&lt;boolean&gt;类型的返回值。在返回的Promise函数里，执行resolve(true) 方法表示不关闭当前窗口，执行resolve(false) 方法或者reject方法均表示关闭当前窗口。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Not called from mainWindow or subWindow. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## off('windowHighlightChange')
 
@@ -3769,7 +3819,7 @@ Unsubscribes from the event indicating that the main window or child window will
 off(type: 'windowHighlightChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the highlighted state change event of the window.
+关闭窗口激活态变化事件的监听。
 
 **Since:** 15
 
@@ -3785,17 +3835,17 @@ Unsubscribes from the highlighted state change event of the window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowHighlightChange' | Yes | Event type. The value is fixed at **'windowHighlightChange'**, indicating the window highlighted state change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the highlighted state of the window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'windowHighlightChange' | Yes | 监听事件，固定为'windowHighlightChange'，即窗口激活态变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | 回调函数。当本窗口的激活态发生变化时的回调。若传入参数，则关闭该监听。若未传入参数，则关闭所有窗口激活态变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('windowTitleButtonRectChange')
 
@@ -3803,8 +3853,8 @@ Unsubscribes from the highlighted state change event of the window.
 off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): void
 ```
 
-Unsubscribes from the change event of the rectangle that holds the minimize, maximize, and close buttons on the title bar of the window. This API takes effect for the window that has a title bar or a three-button area. In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+关闭窗口标题栏上的最小化、最大化、关闭按钮矩形区域变化的监听，对存在标题栏和三键区的窗口形态生效。如果使用Stage模型，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
 **Since:** 11
 
@@ -3820,16 +3870,16 @@ Unsubscribes from the change event of the rectangle that holds the minimize, max
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowTitleButtonRectChange' | Yes | Event type. The value is fixed at **'windowTitleButtonRectChange'**, indicating that the change event of the rectangle that holds the minimize, maximize, and close buttons. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TitleButtonRect&gt; | No | Callback used to return the new rectangle. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'windowTitleButtonRectChange' | Yes | 监听事件，固定为'windowTitleButtonRectChange'，即标题栏上的最小化、最大化、关闭按钮矩形区域变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TitleButtonRect&gt; | No | 回调函数。返回当前标题栏上的最小化、最大化、关闭按钮矩形区域。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有标题栏上的最小 化、最大化、关闭按钮矩形区域变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('windowRectChange')
 
@@ -3837,7 +3887,7 @@ Unsubscribes from the change event of the rectangle that holds the minimize, max
 off(type: 'windowRectChange', callback?: Callback<RectChangeOptions>): void
 ```
 
-Unsubscribes from window rectangle (position and size) change events.
+关闭窗口矩形（窗口位置及窗口大小）变化的监听。
 
 **Since:** 12
 
@@ -3853,17 +3903,17 @@ Unsubscribes from window rectangle (position and size) change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowRectChange' | Yes | Event type. The value is fixed at **'windowRectChange'**, indicating the window rectangle change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | No | Callback used to return the value and reason of the window rectangle change. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'windowRectChange' | Yes | 监听事件，固定为'windowRectChange'，即窗口矩形变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | No | 回调函数。返回当前的窗口矩形及变化原因。 如果传入参数，则关闭该监听。如果未传入参数，则关闭所有窗口矩形变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('rectChangeInGlobalDisplay')
 
@@ -3871,8 +3921,7 @@ Unsubscribes from window rectangle (position and size) change events.
 off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): void
 ```
 
-Disables the listening event for changes in the window rectangle (window position and size) in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+关闭[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)下窗口矩形（窗口位置及窗口大小）变化的监听事件。
 
 **Since:** 20
 
@@ -3886,16 +3935,16 @@ Disables the listening event for changes in the window rectangle (window positio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'rectChangeInGlobalDisplay' | Yes | Event type. The value is fixed at **'rectChangeInGlobalDisplay'**, indicating the window rectangle change event in the global coordinate system. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | No | Callback used to return the value and reason of the window rectangle change. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'rectChangeInGlobalDisplay' | Yes | 监听事件，固定为'rectChangeInGlobalDisplay'，即全局坐标系下窗口矩形变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | No | 回调函数。返回当前的窗口矩形及变化原因。 如果传入参数，则关闭该监听。如果未传入参数，则关闭所有全局坐标系下窗口矩形变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## off('freeWindowModeChange')
 
@@ -3903,7 +3952,7 @@ Disables the listening event for changes in the window rectangle (window positio
 off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the freeform window mode change event.
+关闭自由窗口模式变化事件的监听。
 
 **Since:** 22
 
@@ -3919,15 +3968,15 @@ Unsubscribes from the freeform window mode change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'freeWindowModeChange' | Yes | Event type. The value is fixed at **'freeWindowModeChange'**, indicating the freeform window mode change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the result, indicating whether the window is in freeform window mode. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| type | 'freeWindowModeChange' | Yes | 监听事件，固定为'freeWindowModeChange'，即自由窗口模式变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | 回调函数。返回当前窗口是否在自由窗口模式。如果传入参数，则关闭该监听。如果未传入参数，则关闭自由窗口模式变化事件的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
 
 ## offAvoidAreaChange
 
@@ -3935,7 +3984,7 @@ Unsubscribes from the freeform window mode change event.
 offAvoidAreaChange(callback?: Callback<AvoidAreaOptions>): void
 ```
 
-Unsubscribes from the event indicating changes to the area where this window cannot be displayed.
+关闭当前窗口系统避让区变化的监听。
 
 **Since:** 23
 
@@ -3949,7 +3998,7 @@ Unsubscribes from the event indicating changes to the area where this window can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AvoidAreaOptions&gt; | No | Callback used to return the area and area type. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 20 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AvoidAreaOptions&gt; | No | 回调函数。返回当前避让区以及避让区类型。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有系统避让区变化的监听 。<br>**Since:** 20 |
 
 ## offDialogTargetTouch
 
@@ -3957,7 +4006,7 @@ Unsubscribes from the event indicating changes to the area where this window can
 offDialogTargetTouch(callback?: Callback<void>): void
 ```
 
-Unsubscribes from the touch event of the target window in the modal window mode.
+关闭模态窗口目标窗口的点击事件的监听。
 
 **Since:** 23
 
@@ -3971,7 +4020,7 @@ Unsubscribes from the touch event of the target window in the modal window mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | 回调函数。当点击事件发生在模态窗口目标窗口的回调。若传入参数，则关闭该监听。若未传入参数，则关闭所有模态窗口目标窗口的点击事件的监听。 |
 
 ## offDisplayIdChange
 
@@ -3979,7 +4028,7 @@ Unsubscribes from the touch event of the target window in the modal window mode.
 offDisplayIdChange(callback?: Callback<long>): void
 ```
 
-Unsubscribes from the display change event of this window.
+关闭本窗口所处屏幕变化事件的监听。
 
 **Since:** 23
 
@@ -3993,14 +4042,14 @@ Unsubscribes from the display change event of this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | No | Callback invoked when the display where the window is located changes. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | 回调函数。当本窗口所处屏幕发生变化时的回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口所处屏幕变化事件的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offFrameMetricsMeasured
 
@@ -4008,7 +4057,8 @@ Unsubscribes from the display change event of this window.
 offFrameMetricsMeasured(callback?: Callback<FrameMetrics>): void
 ```
 
-Unsubscribes from events indicating changes in window frame metrics. This API must be used after the call of [loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+关闭窗口帧率指标变化事件的监听。该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
 **Since:** 23
 
@@ -4022,14 +4072,14 @@ Unsubscribes from events indicating changes in window frame metrics. This API mu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameMetrics&gt; | No | If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;FrameMetrics&gt; | No | 若传入参数，则关闭该监听。若未传入参数，则关闭所有窗口帧率指标变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offFreeWindowModeChange
 
@@ -4053,14 +4103,14 @@ free window mode change callback off.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the result if the current device is in free window mode. true - means in free window mode; false - means not in free window mode. Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to return the result if the current device is in free window mode. true - means in free window mode; false - means not in free window mode. Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
 
 ## offKeyboardDidHide
 
@@ -4068,7 +4118,8 @@ free window mode change callback off.
 offKeyboardDidHide(callback?: Callback<KeyboardInfo>): void
 ```
 
-Unregister the callback of keyboard did hide
+关闭固定态软键盘隐藏动画完成的监听。改变输入法窗口为固定态切换至悬浮态方法详细介绍请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 23
 
@@ -4082,14 +4133,14 @@ Unregister the callback of keyboard did hide
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | No | 回调函数。返回软键盘窗口信息。若传入参数，则关闭该监听。如果未传入参数，则关闭所有固定态软键盘隐藏动画完成的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offKeyboardDidShow
 
@@ -4097,7 +4148,8 @@ Unregister the callback of keyboard did hide
 offKeyboardDidShow(callback?: Callback<KeyboardInfo>): void
 ```
 
-Unregister the callback of keyboard did show
+关闭固定态软键盘显示动画完成的监听。改变输入法窗口为固定态或者悬浮态方法详细介绍请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 23
 
@@ -4111,14 +4163,14 @@ Unregister the callback of keyboard did show
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | No | 回调函数。返回软键盘窗口信息。若传入参数，则关闭该监听。如果未传入参数，则关闭所有固定态软键盘显示动画完成的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offKeyboardHeightChange
 
@@ -4126,7 +4178,8 @@ Unregister the callback of keyboard did show
 offKeyboardHeightChange(callback?: Callback<int>): void
 ```
 
-Unregister the callback of keyboard height change
+关闭固定态软键盘高度变化的监听，使应用程序不再接收键盘高度变化的通知。从API version 10开始，有关将软键盘设置为固定态或悬浮态的方法，请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 23
 
@@ -4140,7 +4193,7 @@ Unregister the callback of keyboard height change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | No | Callback used to return the current keyboard height, which is an integer, in px. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | 回调函数。返回当前的键盘高度，返回值为整数，单位为px。若传入参数，则关闭该监听；未传入参数，则关闭所有固定态软键盘高度变化的监听。 |
 
 ## offKeyboardWillHide
 
@@ -4148,7 +4201,8 @@ Unregister the callback of keyboard height change
 offKeyboardWillHide(callback?: Callback<KeyboardInfo>): void
 ```
 
-Unregister the callback of keyboard will hide
+关闭固定态软键盘即将开始隐藏的监听。改变输入法窗口为固定态切换至悬浮态方法详细介绍请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 23
 
@@ -4162,14 +4216,14 @@ Unregister the callback of keyboard will hide
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | No | 回调函数。返回软键盘窗口信息。若传入参数，则关闭该监听。如果未传入参数，则关闭所有固定态软键盘即将开始隐藏的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offKeyboardWillShow
 
@@ -4177,7 +4231,8 @@ Unregister the callback of keyboard will hide
 offKeyboardWillShow(callback?: Callback<KeyboardInfo>): void
 ```
 
-Unregister the callback of keyboard will show
+关闭固定态软键盘即将开始显示的监听。改变输入法窗口为固定态或者悬浮态方法详细介绍请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 23
 
@@ -4191,14 +4246,14 @@ Unregister the callback of keyboard will show
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | No | 回调函数。返回软键盘窗口信息。若传入参数，则关闭该监听。如果未传入参数，则关闭所有固定态软键盘即将开始显示的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offNoInteractionDetected
 
@@ -4206,7 +4261,7 @@ Unregister the callback of keyboard will show
 offNoInteractionDetected(callback?: Callback<void>): void
 ```
 
-Unsubscribes from non-interaction events in a window within the specified period.Interaction events include physical keyboard input events and screen touch/click events,but not soft keyboard input events.
+关闭本窗口在指定超时时间内无交互事件的监听，交互事件支持物理键盘输入事件和屏幕触控点击事件，不支持软键盘输入事件。
 
 **Since:** 23
 
@@ -4220,15 +4275,15 @@ Unsubscribes from non-interaction events in a window within the specified period
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | 回调函数，当本窗口在指定超时时间内无交互事件时的回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口在指定超时时间内无交互事件的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offOcclusionStateChanged
 
@@ -4236,7 +4291,7 @@ Unsubscribes from non-interaction events in a window within the specified period
 offOcclusionStateChanged(callback?: Callback<OcclusionState>): void
 ```
 
-Unregister the callback for occlusion state changed.
+关闭窗口可见性状态变化事件的监听。
 
 **Since:** 23
 
@@ -4250,15 +4305,15 @@ Unregister the callback for occlusion state changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OcclusionState&gt; | No | If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;OcclusionState&gt; | No | 若传入参数，则关闭该监听。若未传入参数，则关闭所有窗口可见性变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offRectChangeInGlobalDisplay
 
@@ -4266,8 +4321,7 @@ Unregister the callback for occlusion state changed.
 offRectChangeInGlobalDisplay(callback?: Callback<RectChangeOptions>): void
 ```
 
-Disables the listening event for changes in the window rectangle (window position and size) in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+关闭[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)下窗口矩形（窗口位置及窗口大小）变化的监听事件。
 
 **Since:** 23
 
@@ -4281,15 +4335,15 @@ Disables the listening event for changes in the window rectangle (window positio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | No | Callback used to return the value and reason of the window rectangle change. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | No | 回调函数。返回当前的窗口矩形及变化原因。 如果传入参数，则关闭该监听。如果未传入参数，则关闭所有全局坐标系下窗口矩形变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offRotationChange
 
@@ -4312,15 +4366,15 @@ Unregister the callback of rotation change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RotationChangeInfo, RotationChangeResult \| undefined&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;RotationChangeInfo, RotationChangeResult \| undefined&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offScreenshot
 
@@ -4328,7 +4382,7 @@ Unregister the callback of rotation change
 offScreenshot(callback?: Callback<void>): void
 ```
 
-Unsubscribes from the screenshot event.
+关闭截屏事件的监听。
 
 **Since:** 23
 
@@ -4342,7 +4396,7 @@ Unsubscribes from the screenshot event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Callback invoked when a screenshot event occurs. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | 回调函数。发生截屏事件时的回调。若传入参数，则关闭该监听。若未传入参数，则关闭所有截屏事件的监听。 |
 
 ## offScreenshotAppEvent
 
@@ -4350,7 +4404,7 @@ Unsubscribes from the screenshot event.
 offScreenshotAppEvent(callback?: Callback<ScreenshotEventType>): void
 ```
 
-Unsubscribes from the screenshot event.
+关闭屏幕截屏事件类型的监听。
 
 **Since:** 23
 
@@ -4364,14 +4418,14 @@ Unsubscribes from the screenshot event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScreenshotEventType&gt; | No | Callback invoked when a screenshot event occurs. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ScreenshotEventType&gt; | No | 回调函数。返回触发的截屏事件类型。若传入参数，则关闭该监听。若未传入参数，则关闭所有窗口截图事件的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
 
 ## offSubWindowClose
 
@@ -4379,7 +4433,7 @@ Unsubscribes from the screenshot event.
 offSubWindowClose(callback?: Callback<void>): void
 ```
 
-Unsubscribes from the event indicating that the child window is closed.
+关闭子窗口关闭事件的监听。
 
 **Since:** 23
 
@@ -4393,15 +4447,15 @@ Unsubscribes from the event indicating that the child window is closed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | ] - Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | ] - 回调函数。若传入参数，则关闭该监听；若未传入参数，则关闭所有子窗口关闭事件的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## offSystemDensityChange
 
@@ -4409,10 +4463,9 @@ Unsubscribes from the event indicating that the child window is closed.
 offSystemDensityChange(callback?: Callback<double>): void
 ```
 
-Unsubscribes from the system density change event.
+关闭本窗口所处屏幕的系统显示大小缩放系数变化事件的监听。
 
-In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp *  
-density = px.
+在接口回调函数中，建议直接使用返回值进行vp和px的转换。例如，若返回值为density，计算px可使用vp * density = px。
 
 **Since:** 23
 
@@ -4426,14 +4479,14 @@ density = px.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | No | Callback invoked when the system's display size scale factor changes. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | No | 回调函数。当本窗口所处屏幕的系统显示大小缩放系数发生变化后的回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口所处屏幕的系统显示 大小缩放系数变化事件的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offTouchOutside
 
@@ -4441,7 +4494,7 @@ density = px.
 offTouchOutside(callback?: Callback<void>): void
 ```
 
-Unsubscribes from the touch event outside this window.
+关闭本窗口区域范围外的点击事件的监听。
 
 **Since:** 23
 
@@ -4455,7 +4508,7 @@ Unsubscribes from the touch event outside this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | 回调函数。当点击事件发生在本窗口范围之外的回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口区域范围外的点击事件的监听。 |
 
 ## offUiExtensionSecureLimitChange
 
@@ -4477,15 +4530,15 @@ UIExtension in window secure limit change callback off.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function off('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function off('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offWindowEvent
 
@@ -4493,7 +4546,7 @@ UIExtension in window secure limit change callback off.
 offWindowEvent(callback?: Callback<WindowEventType>): void
 ```
 
-Unsubscribes from the window lifecycle change event.
+关闭窗口生命周期变化的监听。
 
 **Since:** 23
 
@@ -4507,7 +4560,7 @@ Unsubscribes from the window lifecycle change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowEventType&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowEventType&gt; | No | 回调函数。若传入参数，则关闭该监听；若未传入参数，则关闭所有窗口生命周期变化的监听。 |
 
 ## offWindowHighlightChange
 
@@ -4515,7 +4568,7 @@ Unsubscribes from the window lifecycle change event.
 offWindowHighlightChange(callback?: Callback<boolean>): void
 ```
 
-Unregister the callback of window highlight state change
+关闭窗口激活态变化事件的监听。
 
 **Since:** 23
 
@@ -4529,48 +4582,15 @@ Unregister the callback of window highlight state change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the highlight status of the window. if not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | 回调函数。当本窗口的激活态发生变化时的回调。若传入参数，则关闭该监听。若未传入参数，则关闭所有窗口激活态变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-
-## offWindowPostureModeChange
-
-```TypeScript
-offWindowPostureModeChange(mode: WindowPostureMode, callback?: Callback<boolean>): void
-```
-
-Unregisters a callback that is invoked when he window changes to the specified window posture mode.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Window-offWindowPostureModeChange(mode: WindowPostureMode, callback?: Callback<boolean>): void--><!--Device-Window-offWindowPostureModeChange(mode: WindowPostureMode, callback?: Callback<boolean>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The window posture mode to monitor. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback function. Callback when the window changes to the specified window pose mode. If a parameter is transferred, the listener is disabled. If no parameter is specified, all callbacks for changing the current window to the specified window posture mode are closed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offWindowRectChange
 
@@ -4578,7 +4598,7 @@ Unregisters a callback that is invoked when he window changes to the specified w
 offWindowRectChange(callback?: Callback<RectChangeOptions>): void
 ```
 
-Unsubscribes from window rectangle (position and size) change events.
+关闭窗口矩形（窗口位置及窗口大小）变化的监听。
 
 **Since:** 23
 
@@ -4592,15 +4612,15 @@ Unsubscribes from window rectangle (position and size) change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | No | Callback used to return the value and reason of the window rectangle change. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | No | 回调函数。返回当前的窗口矩形及变化原因。 如果传入参数，则关闭该监听。如果未传入参数，则关闭所有窗口矩形变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offWindowSizeChange
 
@@ -4608,7 +4628,7 @@ Unsubscribes from window rectangle (position and size) change events.
 offWindowSizeChange(callback?: Callback<Size>): void
 ```
 
-Unsubscribes from the window size change event. This API can be called only by the main thread.
+关闭窗口尺寸变化的监听。仅在主线程调用。
 
 **Since:** 23
 
@@ -4622,7 +4642,7 @@ Unsubscribes from the window size change event. This API can be called only by t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Size&gt; | No | Callback used to return the window size. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Size&gt; | No | 回调函数。返回当前的窗口尺寸。如果传入参数，则关闭该监听。 如果未传入参数，则关闭窗口尺寸变化的监听。 |
 
 ## offWindowStatusChange
 
@@ -4630,7 +4650,7 @@ Unsubscribes from the window size change event. This API can be called only by t
 offWindowStatusChange(callback?: Callback<WindowStatusType>): void
 ```
 
-Disables the listening for window status changes.
+关闭窗口模式变化的监听。
 
 **Since:** 23
 
@@ -4644,13 +4664,13 @@ Disables the listening for window status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowStatusType&gt; | No | Callback used to return the window status. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStatusType&gt; | No | 回调函数。返回当前的窗口模式。如果传入参数，则关闭该监听。 如果未传入参数，则关闭所有窗口模式变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## offWindowStatusDidChange
 
@@ -4658,7 +4678,7 @@ Disables the listening for window status changes.
 offWindowStatusDidChange(callback?: Callback<WindowStatusType>): void
 ```
 
-Unsubscribes from the event indicating that the window status has changed.
+关闭窗口模式变化的监听。
 
 **Since:** 23
 
@@ -4672,14 +4692,14 @@ Unsubscribes from the event indicating that the window status has changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowStatusType&gt; | No | Callback used to return the window status. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStatusType&gt; | No | 回调函数。返回当前的窗口模式。如果传入参数，则关闭该监听。 如果未传入参数，则关闭所有窗口模式变化的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offWindowTitleButtonRectChange
 
@@ -4701,14 +4721,14 @@ Unsubscribes from the change event of the rectangle that holds the minimize,maxi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TitleButtonRect&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TitleButtonRect&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offWindowVisibilityChange
 
@@ -4716,7 +4736,7 @@ Unsubscribes from the change event of the rectangle that holds the minimize,maxi
 offWindowVisibilityChange(callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from the visibility status change event of this window.
+关闭本窗口可见状态变化事件的监听。
 
 **Since:** 23
 
@@ -4730,15 +4750,15 @@ Unsubscribes from the visibility status change event of this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | No | Callback used to return the visibility status of the window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | 回调函数。当本窗口可见状态发生变化时的回调。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有本窗口可见状态变化事件的回调 。<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## offWindowWillClose
 
@@ -4746,7 +4766,7 @@ Unsubscribes from the visibility status change event of this window.
 offWindowWillClose(callback?: Callback<void, Promise<boolean>>): void
 ```
 
-Unsubscribes from the event indicating that the main window or child window will be closed.
+关闭主窗口或子窗口关闭事件的监听。
 
 **Since:** 23
 
@@ -4760,15 +4780,15 @@ Unsubscribes from the event indicating that the main window or child window will
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void, Promise&lt;boolean&gt;&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void, Promise&lt;boolean&gt;&gt; | No | 回调函数。若传入参数，则关闭该监听；若未传入参数，则关闭所有主窗口或子窗口关闭事件的监听。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Not called from mainWindow or subWindow. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## on('rotationChange')
 
@@ -4776,12 +4796,12 @@ Unsubscribes from the event indicating that the main window or child window will
 on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void
 ```
 
-Subscribes to the window rotation change event. If the window rotation event type in  
-[RotationChangeInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is **WINDOW\_WILL\_ROTATE**,  
-[RotationChangeResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ must be returned. If the window rotation event type is **WINDOW\_DID\_ROTATE**, [RotationChangeResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ does not take effect.
+开启窗口旋转变化的监听。[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)中窗口旋转事件类型为窗口即将旋转时，必须返回  
+[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)。窗口旋转事件类型为窗口旋转结束时返回  
+[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)不生效。
 
-This API can be registered only on the main thread. If a window registers multiple callbacks of the same type,only the return value of the most recently registered callback will be effective. The system provides a timeout protection mechanism. If the window does not return  
-[RotationChangeResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ within 20 ms, the system does not process the return value.
+该函数只允许在主线程注册。同一个窗口多次注册同类型回调函数，只生效最新注册的同类型回调函数返回值。系统提供了超时保护机制，若20ms内窗口未返回  
+[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)，系统不处理该返回值。
 
 **Since:** 19
 
@@ -4797,16 +4817,16 @@ This API can be registered only on the main thread. If a window registers multip
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'rotationChange' | Yes | Event type. The value is fixed at **'rotationChange'**, indicating the window rotation change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | Yes | Callback used to return [RotationChangeInfo]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and [RotationChangeResult]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | 'rotationChange' | Yes | 监听事件，固定为'rotationChange'，即窗口旋转变化事件。 |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | Yes | 回调函数。返回窗口旋转信息 [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)，应用返回当前窗口变化结果 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on
 
@@ -4814,7 +4834,7 @@ This API can be registered only on the main thread. If a window registers multip
 on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the event indicating changes in the security restrictions of the UIExtensionAbility within the window. You are advised to initiate the subscription right after the window is created.
+开启窗口内uiExtension安全限制变化事件的监听, 建议在窗口创建后立即监听。
 
 **Since:** 20
 
@@ -4830,16 +4850,16 @@ Subscribes to the event indicating changes in the security restrictions of the U
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | 'uiExtensionSecureLimitChange' | Yes | Event type. The value is fixed at **'uiExtensionSecureLimitChange'**, indicating that the UIExtensionAbility security restrictions in the window changes. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that at least one UIExtensionAbility within the window has enabled the hiding of unsafe windows, and **false** means that all UIExtensionAbility components within the window have disabled the hiding of unsafe windows. |
+| eventType | 'uiExtensionSecureLimitChange' | Yes | 监听事件，固定为'uiExtensionSecureLimitChange'，即窗口内uiExtension安全限制变 化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | 回调函数。当窗口内uiExtension安全限制变化时触发回调。当返回参数为true表示窗口内uiExtension开启了隐藏不安全窗口；当返回参 数为false表示窗口内uiExtension关闭了隐藏不安全窗口。若窗口内存在多个uiExtension，当返回参数为true表示窗口内至少一个uiExtension开启了隐藏不安全窗口；当返回参数为false表示窗 口内所有uiExtension关闭了隐藏不安全窗口。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function on('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function on('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('frameMetricsMeasured')
 
@@ -4847,10 +4867,13 @@ Subscribes to the event indicating changes in the security restrictions of the U
 on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 ```
 
-Subscribes to events indicating changes in window frame metrics. This API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+开启窗口帧率指标变化事件的监听。该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
-The callback is triggered only when the client UI content is redrawn (for example, during page transitions,interactions with responsive components, setting background colors, or adjusting opacity).
+应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和  
+[postFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postframecallback12)、  
+[postDelayedFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postdelayedframecallback12)、  
+[displaySync.on('frame')](@ohos.graphics.displaySync:displaySync.DisplaySync.on(type: 'frame', callback: Callback&lt;IntervalInfo&gt;))中的任意一个时，即使无UI内容重绘，也可能触发回调。
 
 **Since:** 22
 
@@ -4864,15 +4887,15 @@ The callback is triggered only when the client UI content is redrawn (for exampl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameMetricsMeasured' | Yes | Event type. The value is fixed at **'frameMetricsMeasured'**, indicating the window frame metrics change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameMetrics&gt; | Yes | Callback invoked when the window frame metrics change. For details, see [Frame Rate Metrics]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | 'frameMetricsMeasured' | Yes | 监听事件类型，固定为'frameMetricsMeasured'，即窗口帧率指标变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;FrameMetrics&gt; | Yes | 窗口帧率指标变化时的回调函数。详情见帧率指标 [FrameMetrics](arkts-arkui-window-framemetrics-i.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('occlusionStateChanged')
 
@@ -4880,15 +4903,12 @@ The callback is triggered only when the client UI content is redrawn (for exampl
 on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 ```
 
-Subscribes to the visibility status change event of the window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
+开启窗口可见性状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：
 
-- If the shadow area of a non-main window (  
-[setWindowShadowEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[setWindowShadowRadius]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
-- If the upper-layer window has a transparency effect (including all transparency degrees except the completely  
-opaque degree), the lower-layer window will not be blocked and is visible.  
-- Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating  
-window on a mobile phone, the lower-layer window returned remains visible.
+- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled)和  
+[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
+- 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。  
+- 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
 
 **Since:** 22
 
@@ -4902,16 +4922,16 @@ window on a mobile phone, the lower-layer window returned remains visible.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'occlusionStateChanged' | Yes | Event type. The value is fixed at **'occlusionStateChanged'**, indicating the window visibility status change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OcclusionState&gt; | Yes | Callback invoked when the window visibility status changes. For details, see [Window Visibility Status]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | 'occlusionStateChanged' | Yes | 监听事件，固定为'occlusionStateChanged'，即窗口可见性变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;OcclusionState&gt; | Yes | 窗口可见性变化时的回调函数。详情见[可见性状态](arkts-arkui-window-occlusionstate-e.md) 。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('windowSizeChange')
 
@@ -4919,7 +4939,7 @@ window on a mobile phone, the lower-layer window returned remains visible.
 on(type: 'windowSizeChange', callback: Callback<Size>): void
 ```
 
-Subscribes to the window size change event. This API can be called only by the main thread.
+开启窗口尺寸变化的监听。仅在主线程调用。
 
 **Since:** 7
 
@@ -4935,14 +4955,14 @@ Subscribes to the window size change event. This API can be called only by the m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the window size change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Size&gt; | Yes | Callback used to return the window size. |
+| type | 'windowSizeChange' | Yes | 监听事件，固定为'windowSizeChange'，即窗口尺寸变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Size&gt; | Yes | 回调函数。返回当前的窗口尺寸。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('systemAvoidAreaChange')
 
@@ -4950,7 +4970,13 @@ Subscribes to the window size change event. This API can be called only by the m
 on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
 ```
 
-Subscribes to the event indicating changes to the area where this window cannot be displayed.
+开启当前窗口系统避让区变化的监听。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [on('avoidAreaChange')](window.Window.on(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;))替
+> 代。
 
 **Since:** 7
 
@@ -4968,8 +4994,8 @@ Subscribes to the event indicating changes to the area where this window cannot 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'systemAvoidAreaChange' | Yes | Event type. The value is fixed at **'systemAvoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AvoidArea&gt; | Yes | Callback used to return the area. |
+| type | 'systemAvoidAreaChange' | Yes | 监听事件，固定为'systemAvoidAreaChange'，即系统避让区变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AvoidArea&gt; | Yes | 回调函数。返回当前避让区。 |
 
 ## on('avoidAreaChange')
 
@@ -4977,26 +5003,23 @@ Subscribes to the event indicating changes to the area where this window cannot 
 on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 ```
 
-Subscribes to the event indicating changes to the area where this window cannot be displayed.
+开启当前应用窗口系统避让区域变化的监听。
 
-Main window/Child window:
+主窗口/子窗口：
 
-- When the callback is triggered in the free-floating window mode (the window mode is  
-**window.WindowStatusType.FLOATING**) under the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ state, only the avoidance area of the fixed soft keyboard type ([AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is **TYPE\_KEYBOARD**)is available.  
-- When the callback is triggered in the free-floating window mode of the main window in the non-freeform window  
-state, only the avoidance area of the system bar type ([AvoidAreaType]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_is **TYPE\_SYSTEM**) is available.  
-- When the callback is triggered in the other scenarios of the main window, the calculated avoidance area can be  
-returned only when the window is not in the free-floating window mode or the device type is phone or tablet.Otherwise, an empty avoidance area is returned.  
-- When the callback is triggered for the child window in the non-freeform window state or non-free-floating  
-window mode, the calculated avoidance area of the child window is returned only when the position and size of the child window are the same as those of the main window. Otherwise, an empty avoidance area is returned.
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下触发回调时，仅存在固定态软键盘（  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。
 
-Global floating window, modal window, or system window:
+全局悬浮窗、模态窗或系统窗口：
 
-- The calculated avoidance area is returned only when the callback is triggered after  
-[setSystemAvoidAreaEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ is called. Otherwise, an empty avoidance area is returned.
+- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避  
+让区域。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_Common scenarios for triggering this event are as follows: transitions between full-screen mode, floating mode, and split-screen mode of the application window; rotation of the application window; transitions between folded and unfolded states of a foldable device; transfer of the application window between multiple devices.\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_
+&lt;!--RP7--&gt;常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。&lt;!--RP7End--&gt;
 
 **Since:** 9
 
@@ -5012,14 +5035,14 @@ Global floating window, modal window, or system window:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AvoidAreaOptions&gt; | Yes | Callback used to return the area and area type.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| type | 'avoidAreaChange' | Yes | 监听事件，固定为'avoidAreaChange'，即系统避让区变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AvoidAreaOptions&gt; | Yes | 回调函数。返回当前避让区以及避让区类型。<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('keyboardHeightChange')
 
@@ -5027,8 +5050,8 @@ Global floating window, modal window, or system window:
 on(type: 'keyboardHeightChange', callback: Callback<int>): void
 ```
 
-Subscribes to the event indicating soft keyboard height changes in the fixed state. The system notifies the keyboard height change when the soft keyboard is invoked by the window and overlaps with the window. Starting from API version 10, the soft keyboard can be set to the fixed or floating state. For details, see  
-[Input Method Service]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+开启固定态软键盘高度变化的监听。当软键盘从本窗口唤出且与窗口有重叠区域时，通知键盘高度变化。从API version 10开始，有关将软键盘设置为固定态或悬浮态的方法，请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 7
 
@@ -5044,14 +5067,14 @@ Subscribes to the event indicating soft keyboard height changes in the fixed sta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardHeightChange' | Yes | Event type. The value is fixed at **'keyboardHeightChange'**, indicating the keyboard height change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | Callback used to return the current keyboard height, which is an integer, in px. |
+| type | 'keyboardHeightChange' | Yes | 监听事件，固定为'keyboardHeightChange'，即键盘高度变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | 回调函数。返回当前的键盘高度。返回值为整数，单位为px。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('keyboardWillShow')
 
@@ -5059,10 +5082,9 @@ Subscribes to the event indicating soft keyboard height changes in the fixed sta
 on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void
 ```
 
-Subscribes to the event indicating that the soft keyboard in the fixed state is about to show, or the soft keyboard is transitioning from the floating state to the fixed state.
+开启固定态软键盘即将开始显示的监听。此监听在固定态软键盘即将开始显示或软键盘由悬浮态切换为固定态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
 
-For details about the APIs used to set the soft keyboard to the fixed or floating state, see  
-[Input Method Service]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 20
 
@@ -5078,15 +5100,15 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardWillShow' | Yes | Event type. The value is fixed at **'keyboardWillShow'**, indicating the soft keyboard in the fixed state is about to show. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | Yes | Callback used to return the information about the soft keyboard. |
+| type | 'keyboardWillShow' | Yes | 监听事件，固定为'keyboardWillShow'，即固定态软键盘即将开始显示的事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | Yes | 回调函数。返回软键盘窗口信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('keyboardDidShow')
 
@@ -5094,10 +5116,9 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void
 ```
 
-Subscribes to the event indicating that the show animation of the soft keyboard in the fixed state is completed,or when the soft keyboard finishes transitioning from the floating state to the fixed state.
+开启固定态软键盘显示动画完成的监听。此监听在固定态软键盘显示动画完成或软键盘由悬浮态切换至固定态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
 
-For details about the APIs used to set the soft keyboard to the fixed or floating state, see  
-[Input Method Service]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 18
 
@@ -5113,15 +5134,15 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardDidShow' | Yes | Event type. The value is fixed at **'keyboardDidShow'**, indicating the show animation of the soft keyboard in the fixed state is completed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | Yes | Callback used to return the information about the soft keyboard. |
+| type | 'keyboardDidShow' | Yes | 监听事件，固定为'keyboardDidShow'，即固定态软键盘显示动画完成事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | Yes | 回调函数。返回软键盘窗口信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('keyboardWillHide')
 
@@ -5129,10 +5150,9 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void
 ```
 
-Subscribes to the event indicating that the soft keyboard in the fixed state is about to hide, or the soft keyboard is transitioning from the fixed state to the floating state.
+开启固定态软键盘即将开始隐藏的监听。此监听在固定态软键盘即将开始隐藏或软键盘由固定态切换为悬浮态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
 
-For details about the APIs used to set the soft keyboard to the fixed or floating state, see  
-[Input Method Service]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 20
 
@@ -5148,15 +5168,15 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardWillHide' | Yes | Event type. The value is fixed at **'keyboardWillHide'**, indicating the soft keyboard in the fixed state is about to hide. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | Yes | Callback used to return the information about the soft keyboard. |
+| type | 'keyboardWillHide' | Yes | 监听事件，固定为'keyboardWillHide'，即固定态软键盘即将开始隐藏的事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | Yes | 回调函数。返回软键盘窗口信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('keyboardDidHide')
 
@@ -5164,10 +5184,9 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void
 ```
 
-Subscribes to the event indicating that the hide animation of the soft keyboard in the fixed state is completed,or when the soft keyboard finishes transitioning from the fixed state to the floating state.
+开启固定态软键盘隐藏动画完成的监听。此监听在固定态软键盘隐藏动画完成或软键盘由固定态切换至悬浮态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
 
-For details about the APIs used to set the soft keyboard to the fixed or floating state, see  
-[Input Method Service]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 18
 
@@ -5183,15 +5202,15 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardDidHide' | Yes | Event type. The value is fixed at **'keyboardDidHide'**, indicating the hide animation of the soft keyboard in the fixed state is completed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | Yes | Callback used to return the information about the soft keyboard. |
+| type | 'keyboardDidHide' | Yes | 监听事件，固定为'keyboardDidHide'，即固定态软键盘隐藏动画完成事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | Yes | 回调函数。返回软键盘窗口信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('touchOutside')
 
@@ -5199,7 +5218,7 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 on(type: 'touchOutside', callback: Callback<void>): void
 ```
 
-Subscribes to the touch event outside this window.
+开启本窗口区域范围外的点击事件的监听。
 
 **Since:** 11
 
@@ -5215,14 +5234,14 @@ Subscribes to the touch event outside this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'touchOutside' | Yes | Event type. The value is fixed at **'touchOutside'**, indicating the touch event outside this window. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the touch event outside this window. |
+| type | 'touchOutside' | Yes | 监听事件，固定为'touchOutside'，即本窗口范围外的点击事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 回调函数。当点击事件发生在本窗口范围之外的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('displayIdChange')
 
@@ -5230,7 +5249,7 @@ Subscribes to the touch event outside this window.
 on(type: 'displayIdChange', callback: Callback<long>): void
 ```
 
-Subscribes to the display change event of this window. For example, this event is triggered when the window is moved to a different display.
+开启本窗口所处屏幕变化事件的监听。比如，当前窗口移动到其他屏幕时，可以从此接口监听到这个行为。
 
 **Since:** 14
 
@@ -5246,16 +5265,16 @@ Subscribes to the display change event of this window. For example, this event i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'displayIdChange' | Yes | Event type. The value is fixed at **'displayIdChange'**, indicating the display change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback invoked when the display where the window is located changes. The callback contains a parameter of the number type, indicating the new display ID. |
+| type | 'displayIdChange' | Yes | 监听事件，固定为'displayIdChange'，即本窗口所处屏幕变化的事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | 回调函数。当本窗口所处屏幕发生变化后的回调。回调函数返回number类型参数，表示窗口所处屏幕的displayId。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('windowVisibilityChange')
 
@@ -5263,15 +5282,12 @@ Subscribes to the display change event of this window. For example, this event i
 on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the visibility status change event of this window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
+开启本窗口可见状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：
 
-- If the shadow area of a non-main window (  
-[setWindowShadowEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[setWindowShadowRadius]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
-- If the upper-layer window has a transparency effect (including all transparency degrees except the completely  
-opaque degree), the lower-layer window will not be blocked and is visible.  
-- Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating  
-window on a mobile phone, the lower-layer window returned remains visible.
+- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled)和  
+[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
+- 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。  
+- 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
 
 **Since:** 11
 
@@ -5287,17 +5303,17 @@ window on a mobile phone, the lower-layer window returned remains visible.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowVisibilityChange' | Yes | Event type. The value is fixed at **'windowVisibilityChange'**, indicating the visibility status change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the visibility status of the window, which is a Boolean value. **true** if visible, **false** otherwise. |
+| type | 'windowVisibilityChange' | Yes | 监听事件，固定为'windowVisibilityChange'，即本窗口可见状态变化的事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | 回调函数。当本窗口可见状态发生变化后的回调。回调函数返回boolean类型参数，当返回参数为true时表示窗口可见，否则表示窗口不可见。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('systemDensityChange')
 
@@ -5305,9 +5321,9 @@ window on a mobile phone, the lower-layer window returned remains visible.
 on(type: 'systemDensityChange', callback: Callback<double>): void
 ```
 
-Subscribes to the system density change event, which is triggered when the system's display size scale factor changes for the screen where the window is located.
+开启本窗口所处屏幕的系统显示大小缩放系数变化事件的监听。比如，当调整窗口所处屏幕的显示大小缩放系数时，可以从此接口监听到这个行为。
 
-In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp * density =px.
+在接口回调函数中，建议直接使用返回值进行vp和px的转换。例如，若返回值为density，计算px可使用vp * density = px。
 
 **Since:** 15
 
@@ -5323,16 +5339,16 @@ In the callback function, you are advised to directly use the return value to co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'systemDensityChange' | Yes | Event type. The value is fixed at **'systemDensityChange'**, indicating the system density change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | Yes | Callback invoked when the system's display size scale factor changes. The callback contains a parameter of the number type, indicating the new scale factor. |
+| type | 'systemDensityChange' | Yes | 监听事件，固定为'systemDensityChange'，即本窗口所处屏幕的系统显示大小缩放系数变化的事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | Yes | 回调函数。当本窗口所处屏幕的系统显示大小缩放系数发生变化后的回调。回调函数返回number类型参数，表示当前窗口所处屏幕的系统显示大小缩放系数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('noInteractionDetected')
 
@@ -5340,7 +5356,7 @@ In the callback function, you are advised to directly use the return value to co
 on(type: 'noInteractionDetected', timeout: number, callback: Callback<void>): void
 ```
 
-Register the callback function that has no interaction for a long time.Interaction events include physical keyboard input events and screen touch/click events,but not soft keyboard input events.
+开启本窗口在指定超时时间内无交互事件的监听，交互事件支持物理键盘输入事件和屏幕触控点击事件，不支持软键盘输入事件。
 
 **Since:** 12
 
@@ -5356,18 +5372,18 @@ Register the callback function that has no interaction for a long time.Interacti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'noInteractionDetected' | Yes | The value is fixed at 'noInteractionDetected', indicating the window has no interaction for a long time. |
-| timeout | number | Yes | The timeout(in seconds) of no interaction detection. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to notify the window has no interaction for a long time. |
+| type | 'noInteractionDetected' | Yes | 监听事件，固定为'noInteractionDetected'，即本窗口在指定超时时间内无交互的事件。 |
+| timeout | number | Yes | 指定本窗口在多长时间内无交互即回调，单位为秒(s)。该参数仅支持整数输入，负数和小数为非法参数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 回调函数。当本窗口在指定超时时间内无交互事件时的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('screenshot')
 
@@ -5375,7 +5391,7 @@ Register the callback function that has no interaction for a long time.Interacti
 on(type: 'screenshot', callback: Callback<void>): void
 ```
 
-Subscribes to the screenshot event.
+开启截屏事件的监听。
 
 **Since:** 9
 
@@ -5391,14 +5407,14 @@ Subscribes to the screenshot event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'screenshot' | Yes | Event type. The value is fixed at **'screenshot'**, covering screenshot events initiated from the Control Panel, by running hdc commands, or by calling the screenshot interfaces. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when a screenshot event occurs. |
+| type | 'screenshot' | Yes | 监听事件，固定为'screenshot'，即截屏事件，对控制中心截屏、hdc命令截屏、整屏截屏接口生效。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 回调函数。发生截屏事件时的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('screenshotAppEvent')
 
@@ -5406,7 +5422,7 @@ Subscribes to the screenshot event.
 on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void
 ```
 
-Subscribes to the screenshot event.
+开启屏幕截屏事件类型的监听。
 
 **Since:** 20
 
@@ -5420,15 +5436,15 @@ Subscribes to the screenshot event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'screenshotAppEvent' | Yes | Event type. The value is fixed at **'screenshotAppEvent'**, covering screenshot events from the Control Panel, shortcut keys, and scroll capture. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScreenshotEventType&gt; | Yes | Callback invoked when a screenshot event occurs. |
+| type | 'screenshotAppEvent' | Yes | 监听事件，固定为'screenshotAppEvent'，即屏幕截屏的事件类型，对控制中心截屏、快捷键截屏以及滚动截屏生效。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ScreenshotEventType&gt; | Yes | 回调函数。返回触发的截屏事件类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
 
 ## on('dialogTargetTouch')
 
@@ -5436,7 +5452,7 @@ Subscribes to the screenshot event.
 on(type: 'dialogTargetTouch', callback: Callback<void>): void
 ```
 
-Subscribes to click or touch events in a window covered by a modal window. This API takes effect only when it is called by a modal window.
+开启模态窗口所遮盖窗口的点击或触摸事件的监听，除模态窗口以外其他窗口调用此接口不生效。
 
 **Since:** 10
 
@@ -5452,14 +5468,14 @@ Subscribes to click or touch events in a window covered by a modal window. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dialogTargetTouch' | Yes | Event type. The value is fixed at **'dialogTargetTouch'**, indicating the click or touch event in a window covered by a modal window. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when a click or touch event occurs in the window covered by the modal window. |
+| type | 'dialogTargetTouch' | Yes | 监听事件，固定为'dialogTargetTouch'，即模态窗口所遮盖窗口的点击或触摸事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 回调函数。当点击或触摸事件发生在模态窗口所遮盖窗口的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('windowEvent')
 
@@ -5467,7 +5483,7 @@ Subscribes to click or touch events in a window covered by a modal window. This 
 on(type: 'windowEvent', callback: Callback<WindowEventType>): void
 ```
 
-Subscribes to the window lifecycle change event.
+开启窗口生命周期变化的监听。
 
 **Since:** 10
 
@@ -5483,14 +5499,14 @@ Subscribes to the window lifecycle change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowEvent' | Yes | Event type. The value is fixed at **'windowEvent'**, indicating the window lifecycle change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowEventType&gt; | Yes | Callback used to return the window lifecycle state. |
+| type | 'windowEvent' | Yes | 监听事件，固定为'windowEvent'，即窗口生命周期变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowEventType&gt; | Yes | 回调函数。返回当前的窗口生命周期状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('windowStatusChange')
 
@@ -5498,20 +5514,19 @@ Subscribes to the window lifecycle change event.
 on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 ```
 
-Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use  
-[on('windowStatusDidChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.)
+开启窗口模式变化的监听，当窗口windowStatus发生变化时进行通知（此时窗口属性可能还没有更新，如果需要在收到windowStatus变化通知时能够立即获取到变化后的窗口大小、位置，建议使用  
+[on('windowStatusDidChange')](@ohos.window:window.Window.on(type: 'windowStatusDidChange', callback: Callback&lt;WindowStatusType&gt;))）。
 
-After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or  
-**recover** method is called. To obtain the deduplicated callback, you can use  
-[on('windowStatusDidChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.
-    **NOTE**  
-    
-    In \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode, when the window is  
-    maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on  
-    tablets), the return value differs based on the  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ setting. For  
-    versions below 14, the return value is **WindowStatusType::FULL\_SCREEN**. For versions 14 and above, the return  
-    value is **WindowStatusType::MAXIMIZE**.
+使用当前接口开启监听后，在调用maximize、recover方法时会收到多次回调，如需获取去重后的回调，可使用  
+[on('windowStatusDidChange')](window.Window.on(type: 'windowStatusDidChange', callback: Callback&lt;WindowStatusType&gt;))。
+
+> **说明：**
+> 
+> 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
 
 **Since:** 11
 
@@ -5527,15 +5542,15 @@ After the listening is enabled using this API, multiple callbacks will be receiv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowStatusChange' | Yes | Event type. The value is fixed at **'windowStatusChange'**, indicating the window status change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowStatusType&gt; | Yes | Callback used to return the window status. |
+| type | 'windowStatusChange' | Yes | 监听事件，固定为'windowStatusChange'，即窗口模式变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStatusType&gt; | Yes | 回调函数。返回当前的窗口模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## on('windowStatusDidChange')
 
@@ -5543,7 +5558,7 @@ After the listening is enabled using this API, multiple callbacks will be receiv
 on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 ```
 
-Subscribes to the event indicating that the window status has changed (the [Rect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_property of the window has been updated).
+开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-window-rect-i.md)属性已经完成更新）。
 
 **Since:** 20
 
@@ -5557,15 +5572,15 @@ Subscribes to the event indicating that the window status has changed (the [Rect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowStatusDidChange' | Yes | Event type. The value is fixed at **'windowStatusDidChange'**, indicating that the window status has changed. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowStatusType&gt; | Yes | Callback used to return the window status. |
+| type | 'windowStatusDidChange' | Yes | 监听事件，固定为'windowStatusDidChange'，即窗口模式变化完成事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStatusType&gt; | Yes | 回调函数。返回当前的窗口模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('subWindowClose')
 
@@ -5573,16 +5588,16 @@ Subscribes to the event indicating that the window status has changed (the [Rect
 on(type: 'subWindowClose', callback: Callback<void>): void
 ```
 
-Subscribes to the event indicating that the child window is closed. This event is triggered only when the user clicks the system-provided close button in the top-right corner to close the child window. It is not triggered when the child window is closed in other ways.
+开启子窗口关闭事件的监听。此监听仅在点击系统提供的右上角关闭按钮关闭子窗时触发，其余关闭方式不触发回调。
 
-If the event is subscribed to multiple times, only the most recently subscribed-to event takes effect.
+当重复注册窗口关闭事件的监听时，最后一次注册成功的监听事件生效。
 
-The callback function in this API is executed synchronously. For asynchronous close events of child windows,refer to  
-[on('windowWillClose')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+该接口触发的窗口关闭事件监听回调函数是同步执行，子窗口的异步关闭事件监听参考  
+[on('windowWillClose')](window.Window.on(type: 'windowWillClose', callback: Callback&lt;void, Promise<boolean>&gt;&lt;boolean&gt;>))方法。
 
-If there is an existing event subscribed to by calling  
-[on('windowWillClose')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, only the  
-[on('windowWillClose')]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_API will be responded to.
+如果存在  
+[on('windowWillClose')](window.Window.on(type: 'windowWillClose', callback: Callback&lt;void, Promise<boolean>&gt;&lt;boolean&gt;>))监听事件，只响应  
+[on('windowWillClose')](window.Window.on(type: 'windowWillClose', callback: Callback&lt;void, Promise<boolean>&gt;&lt;boolean&gt;>))接口。
 
 **Since:** 12
 
@@ -5598,17 +5613,17 @@ If there is an existing event subscribed to by calling
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'subWindowClose' | Yes | Event type. The value is fixed at **'subWindowClose'**, indicating the child window close event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the close button in the top-right corner of the child window is clicked. It does not return any parameter. The return value of the internal logic of the callback function determines whether to continue to close the child window. If **true** of the Boolean type is returned, the child window is not closed. If **false** or other non-Boolean types are returned, the child window is closed. |
+| type | 'subWindowClose' | Yes | 监听事件，固定为'subWindowClose'，即子窗口关闭事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 回调函数。当点击子窗口右上角关闭按钮事件发生时的回调。该回调函数不返回任何参数。回调函数内部逻辑的返回值决定当前子窗是否继续关闭，如果返回boolean 类型的true表示不关闭子窗，返回false或者其他非boolean类型表示关闭子窗。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## on('windowWillClose')
 
@@ -5616,10 +5631,11 @@ If there is an existing event subscribed to by calling
 on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void
 ```
 
-Subscribes to the event indicating that the main window or child window will be closed. This event is triggered only when the user clicks the close button in the system-provided title bar to close the window. It is not triggered when the window is closed in other ways.
+开启主窗口或子窗口关闭事件的监听。此监听仅能通过系统提供的窗口标题栏关闭按键触发，其余关闭窗口的方式不触发回调。
 
-The callback function in this API is executed asynchronously. For synchronous close events of child windows,refer to [on('subWindowClose')]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. For synchronous close events of the main window, refer to  
-[on('windowStageClose')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+该接口触发的回调函数是异步执行。子窗口的同步关闭事件监听参考  
+[on('subWindowClose')](window.Window.on(type: 'subWindowClose', callback: Callback&lt;void&gt;))方法。主窗口的同步关闭事件监听参考  
+[on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose14)方法。
 
 **Since:** 15
 
@@ -5635,17 +5651,17 @@ The callback function in this API is executed asynchronously. For synchronous cl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowWillClose' | Yes | Event type. The value is fixed at **'windowWillClose'**, indicating the window close event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void, Promise&lt;boolean&gt;&gt; | Yes | Callback invoked when the close button in the top-right corner of the window is clicked. It does not return any parameter. The internal logic of the callback function requires a return value of the Promise\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ type. In the returned Promise function, **resolve(true)** means not to close the window, and **resolve(false)** or **reject** means to continue to close the window. |
+| type | 'windowWillClose' | Yes | 监听事件，固定为'windowWillClose'，即窗口关闭事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void, Promise&lt;boolean&gt;&gt; | Yes | 回调函数。当点击窗口系统提供的右上角关闭按钮事件发生时的回调。该回调函数不返回任何参数。回调函数内部逻辑需要有 Promise&lt;boolean&gt;类型的返回值。在返回的Promise函数里，执行resolve(true) 方法表示不关闭当前窗口，执行resolve(false) 方法或者reject方法均表示关闭当前窗口。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Not called from mainWindow or subWindow. |
+| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## on('windowHighlightChange')
 
@@ -5653,7 +5669,7 @@ The callback function in this API is executed asynchronously. For synchronous cl
 on(type: 'windowHighlightChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the highlighted state change event of the window.
+开启窗口激活态变化事件的监听。
 
 **Since:** 15
 
@@ -5669,17 +5685,17 @@ Subscribes to the highlighted state change event of the window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowHighlightChange' | Yes | Event type. The value is fixed at **'windowHighlightChange'**, indicating the window highlighted state change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the highlighted state of the window, which is a Boolean value. **true** if highlighted, **false** otherwise. |
+| type | 'windowHighlightChange' | Yes | 监听事件，固定为'windowHighlightChange'，即窗口激活态变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | 回调函数。当本窗口的激活态发生变化时的回调。回调函数返回boolean类型参数。当返回参数为true表示激活态；false表示非激活态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('windowTitleButtonRectChange')
 
@@ -5687,8 +5703,8 @@ Subscribes to the highlighted state change event of the window.
 on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): void
 ```
 
-Subscribes to the change event of the rectangle that holds the minimize, maximize, and close buttons on the title bar of the window. This API takes effect for the window that has a title bar or a three-button area. In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+开启窗口标题栏上的最小化、最大化、关闭按钮矩形区域变化的监听，对存在标题栏和三键区的窗口形态生效。如果使用Stage模型，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
 **Since:** 11
 
@@ -5704,16 +5720,16 @@ Subscribes to the change event of the rectangle that holds the minimize, maximiz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowTitleButtonRectChange' | Yes | Event type. The value is fixed at **'windowTitleButtonRectChange'**, indicating that the change event of the rectangle that holds the minimize, maximize, and close buttons. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TitleButtonRect&gt; | Yes | Callback used to return the new rectangle. |
+| type | 'windowTitleButtonRectChange' | Yes | 监听事件，固定为'windowTitleButtonRectChange'，即标题栏上的最小化、最大化、关闭按钮矩形区域变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TitleButtonRect&gt; | Yes | 回调函数。返回当前标题栏上的最小化、最大化、关闭按钮矩形区域。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('windowRectChange')
 
@@ -5721,7 +5737,7 @@ Subscribes to the change event of the rectangle that holds the minimize, maximiz
 on(type: 'windowRectChange', callback: Callback<RectChangeOptions>): void
 ```
 
-Subscribes to window rectangle (position and size) change events.
+开启窗口矩形（窗口位置及窗口大小）变化的监听。
 
 **Since:** 12
 
@@ -5737,17 +5753,17 @@ Subscribes to window rectangle (position and size) change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowRectChange' | Yes | Event type. The value is fixed at **'windowRectChange'**, indicating the window rectangle change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | Yes | Callback used to return the value and reason of the window rectangle change. |
+| type | 'windowRectChange' | Yes | 监听事件，固定为'windowRectChange'，即窗口矩形变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | Yes | 回调函数。返回当前窗口矩形变化值及变化原因。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('rectChangeInGlobalDisplay')
 
@@ -5755,8 +5771,7 @@ Subscribes to window rectangle (position and size) change events.
 on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): void
 ```
 
-Enables the listening event for changes in the window rectangle (window position and size) in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+开启[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)下窗口矩形（窗口位置及窗口大小）变化的监听事件。
 
 **Since:** 20
 
@@ -5770,16 +5785,16 @@ Enables the listening event for changes in the window rectangle (window position
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'rectChangeInGlobalDisplay' | Yes | Event type. The value is fixed at **'rectChangeInGlobalDisplay'**, indicating the window rectangle change event in the global coordinate system. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | Yes | Callback used to return the value and reason of the window rectangle change. |
+| type | 'rectChangeInGlobalDisplay' | Yes | 监听事件，固定为'rectChangeInGlobalDisplay'，即全局坐标系下窗口矩形变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | Yes | 回调函数。返回当前窗口矩形变化值及变化原因。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## on('freeWindowModeChange')
 
@@ -5787,7 +5802,7 @@ Enables the listening event for changes in the window rectangle (window position
 on(type: 'freeWindowModeChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the freeform window mode change event.
+开启自由窗口模式变化事件的监听。
 
 **Since:** 22
 
@@ -5803,15 +5818,15 @@ Subscribes to the freeform window mode change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'freeWindowModeChange' | Yes | Event type. The value is fixed at **'freeWindowModeChange'**, indicating the freeform window mode change event. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result, indicating whether the window is in freeform window mode. **true** if the window is in freeform window mode, **false** otherwise. |
+| type | 'freeWindowModeChange' | Yes | 监听事件，固定为'freeWindowModeChange'，即自由窗口模式变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | 回调函数。返回当前窗口是否在自由窗口模式，true表示是自由窗口模式，false表示非自由窗口模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
 
 ## onAvoidAreaChange
 
@@ -5819,7 +5834,23 @@ Subscribes to the freeform window mode change event.
 onAvoidAreaChange(callback: Callback<AvoidAreaOptions>): void
 ```
 
-Register the callback of avoidAreaChange
+开启当前应用窗口系统避让区域变化的监听。
+
+主窗口/子窗口：
+
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下触发回调时，仅存在固定态软键盘（  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。
+
+全局悬浮窗、模态窗或系统窗口：
+
+- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避  
+让区域。
+
+&lt;!--RP7--&gt;常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。&lt;!--RP7End--&gt;
 
 **Since:** 23
 
@@ -5833,7 +5864,7 @@ Register the callback of avoidAreaChange
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AvoidAreaOptions&gt; | Yes | Callback used to return the area. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AvoidAreaOptions&gt; | Yes | 回调函数。返回当前避让区以及避让区类型。<br>**Since:** 12 |
 
 ## onDialogTargetTouch
 
@@ -5841,7 +5872,7 @@ Register the callback of avoidAreaChange
 onDialogTargetTouch(callback: Callback<void>): void
 ```
 
-Subscribes to click or touch events in a window covered by a modal window.This API takes effect only when it is called by a modal window.
+开启模态窗口所遮盖窗口的点击或触摸事件的监听，除模态窗口以外其他窗口调用此接口不生效。
 
 **Since:** 23
 
@@ -5855,7 +5886,7 @@ Subscribes to click or touch events in a window covered by a modal window.This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the click event occurs in the target window of the modal window mode. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 回调函数。当点击或触摸事件发生在模态窗口所遮盖窗口的回调。 |
 
 ## onDisplayIdChange
 
@@ -5863,7 +5894,7 @@ Subscribes to click or touch events in a window covered by a modal window.This A
 onDisplayIdChange(callback: Callback<long>): void
 ```
 
-Subscribes to the display change event of this window. For example, this event is triggered when the window is moved to a different display.
+开启本窗口所处屏幕变化事件的监听。比如，当前窗口移动到其他屏幕时，可以从此接口监听到这个行为。
 
 **Since:** 23
 
@@ -5877,14 +5908,14 @@ Subscribes to the display change event of this window. For example, this event i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;long&gt; | Yes | Callback invoked when the display where the window is located changes. The callback contains a parameter of the number type, indicating the new display ID. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | 回调函数。当本窗口所处屏幕发生变化后的回调。回调函数返回number类型参数，表示窗口所处屏幕的displayId。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onFrameMetricsMeasured
 
@@ -5892,10 +5923,13 @@ Subscribes to the display change event of this window. For example, this event i
 onFrameMetricsMeasured(callback: Callback<FrameMetrics>): void
 ```
 
-Subscribes to events indicating changes in window frame metrics. This API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+开启窗口帧率指标变化事件的监听。该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
-The callback is triggered only when the client UI content is redrawn (for example, during page transitions,interactions with responsive components, setting background colors, or adjusting opacity).
+应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和  
+[postFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postframecallback12)、  
+[postDelayedFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postdelayedframecallback12)、  
+[displaySync.on('frame')](@ohos.graphics.displaySync:displaySync.DisplaySync.on(type: 'frame', callback: Callback&lt;IntervalInfo&gt;))中的任意一个时，即使无UI内容重绘，也可能触发回调。
 
 **Since:** 23
 
@@ -5909,14 +5943,14 @@ The callback is triggered only when the client UI content is redrawn (for exampl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FrameMetrics&gt; | Yes | Callback invoked when the window frame metrics change. For details, see [Frame Rate Metrics]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;FrameMetrics&gt; | Yes | 窗口帧率指标变化时的回调函数。详情见帧率指标 [FrameMetrics](arkts-arkui-window-framemetrics-i.md)。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onFreeWindowModeChange
 
@@ -5940,14 +5974,14 @@ free window mode change callback on.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result if the current device is in free window mode. true - means in free window mode; false - means not in free window mode. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result if the current device is in free window mode. true - means in free window mode; false - means not in free window mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
 
 ## onKeyboardDidHide
 
@@ -5955,7 +5989,9 @@ free window mode change callback on.
 onKeyboardDidHide(callback: Callback<KeyboardInfo>): void
 ```
 
-Register the callback of keyboard did hide
+开启固定态软键盘隐藏动画完成的监听。此监听在固定态软键盘隐藏动画完成或软键盘由固定态切换至悬浮态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
+
+改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 23
 
@@ -5969,14 +6005,14 @@ Register the callback of keyboard did hide
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | Yes | Callback invoked when the keyboard hide animation is completed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | Yes | 回调函数。返回软键盘窗口信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardDidHide can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onKeyboardDidShow
 
@@ -5984,7 +6020,9 @@ Register the callback of keyboard did hide
 onKeyboardDidShow(callback: Callback<KeyboardInfo>): void
 ```
 
-Register the callback of keyboard did show
+开启固定态软键盘显示动画完成的监听。此监听在固定态软键盘显示动画完成或软键盘由悬浮态切换至固定态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
+
+改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 23
 
@@ -5998,14 +6036,14 @@ Register the callback of keyboard did show
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | Yes | Callback invoked when the keyboard show animation is completed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | Yes | 回调函数。返回软键盘窗口信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardDidShow can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onKeyboardHeightChange
 
@@ -6013,7 +6051,8 @@ Register the callback of keyboard did show
 onKeyboardHeightChange(callback: Callback<int>): void
 ```
 
-Register the callback of keyboard height change. This API only takes effect when the soft keyboard is invoked from this window and overlaps with it.
+开启固定态软键盘高度变化的监听。当软键盘从本窗口唤出且与窗口有重叠区域时，通知键盘高度变化。从API version 10开始，有关将软键盘设置为固定态或悬浮态的方法，请参见  
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 23
 
@@ -6027,7 +6066,7 @@ Register the callback of keyboard height change. This API only takes effect when
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | Callback used to return the current keyboard height, which is an integer, in px. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | 回调函数。返回当前的键盘高度。返回值为整数，单位为px。 |
 
 ## onKeyboardWillHide
 
@@ -6035,7 +6074,9 @@ Register the callback of keyboard height change. This API only takes effect when
 onKeyboardWillHide(callback: Callback<KeyboardInfo>): void
 ```
 
-Register the callback of keyboard will hide
+开启固定态软键盘即将开始隐藏的监听。此监听在固定态软键盘即将开始隐藏或软键盘由固定态切换为悬浮态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
+
+改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **Since:** 23
 
@@ -6049,14 +6090,14 @@ Register the callback of keyboard will hide
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | Yes | Callback invoked before the keyboard hide animation start. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | Yes | 回调函数。返回软键盘窗口信息 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardWillHide can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onKeyboardWillShow
 
@@ -6064,7 +6105,7 @@ Register the callback of keyboard will hide
 onKeyboardWillShow(callback: Callback<KeyboardInfo>): void
 ```
 
-Register the callback of keyboard will show
+开启固定态软键盘即将开始显示的监听。此监听在固定态软键盘即将开始显示或软键盘由悬浮态切换为固定态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
 
 **Since:** 23
 
@@ -6078,14 +6119,14 @@ Register the callback of keyboard will show
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;KeyboardInfo&gt; | Yes | Callback invoked before the keyboard show animation start. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyboardInfo&gt; | Yes | 回调函数。返回软键盘窗口信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Function keyboardWillShow can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onNoInteractionDetected
 
@@ -6093,7 +6134,7 @@ Register the callback of keyboard will show
 onNoInteractionDetected(timeout: long, callback: Callback<void>): void
 ```
 
-Subscribes to non-interaction events in a window within the specified period.Interaction events include physical keyboard input events and screen touch/click events,but not soft keyboard input events.
+开启本窗口在指定超时时间内无交互事件的监听，交互事件支持物理键盘输入事件和屏幕触控点击事件，不支持软键盘输入事件。
 
 **Since:** 23
 
@@ -6107,16 +6148,16 @@ Subscribes to non-interaction events in a window within the specified period.Int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | long | Yes | The timeout(in seconds) of no interaction detection. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to notify the window has no interaction for a long time. |
+| timeout | long | Yes | 指定本窗口在多长时间内无交互即回调，单位为秒(s)。该参数仅支持整数输入，负数和小数为非法参数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 回调函数。当本窗口在指定超时时间内无交互事件时的回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onOcclusionStateChanged
 
@@ -6124,23 +6165,12 @@ Subscribes to non-interaction events in a window within the specified period.Int
 onOcclusionStateChanged(callback: Callback<OcclusionState>): void
 ```
 
-Subscribes to the visibility status change event of the window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
+开启窗口可见性状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：
 
-- If the shadow area of a non-main window (  
-[setWindowShadowEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[setWindowShadowRadius]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
-- If the upper-layer window has a transparency effect (including all transparency degrees except the completely  
-opaque degree), the lower-layer window will not be blocked and is visible.  
-- Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating  
-window on a mobile phone, the lower-layer window returned remains visible.
-
-- If the shadow area of a non-main window (  
-[setWindowShadowEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ and  
-[setWindowShadowRadius]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
-- If the upper-layer window has a transparency effect (including all transparency degrees except the completely  
-opaque degree), the lower-layer window will not be blocked and is visible.  
-- Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating  
-window on a mobile phone, the lower-layer window returned remains visible.
+- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled)和  
+[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
+- 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。  
+- 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
 
 **Since:** 23
 
@@ -6154,15 +6184,15 @@ window on a mobile phone, the lower-layer window returned remains visible.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OcclusionState&gt; | Yes | Callback invoked when the window visibility status changes. For details, see [Window Visibility Status]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;OcclusionState&gt; | Yes | 窗口可见性变化时的回调函数。详情见[可见性状态](arkts-arkui-window-occlusionstate-e.md) 。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onRectChangeInGlobalDisplay
 
@@ -6170,8 +6200,7 @@ window on a mobile phone, the lower-layer window returned remains visible.
 onRectChangeInGlobalDisplay(callback: Callback<RectChangeOptions>): void
 ```
 
-Enables the listening event for changes in the window rectangle (window position and size) in the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+开启[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)下窗口矩形（窗口位置及窗口大小）变化的监听事件。
 
 **Since:** 23
 
@@ -6185,15 +6214,15 @@ Enables the listening event for changes in the window rectangle (window position
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | Yes | Callback used to return the value and reason of the window rectangle change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | Yes | 回调函数。返回当前窗口矩形变化值及变化原因。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onRotationChange
 
@@ -6215,15 +6244,15 @@ Register the callback of rotation change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RotationChangeInfo, RotationChangeResult \| undefined&gt; | Yes | Register the callback function. |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;RotationChangeInfo, RotationChangeResult \| undefined&gt; | Yes | Register the callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onScreenshot
 
@@ -6231,7 +6260,7 @@ Register the callback of rotation change
 onScreenshot(callback: Callback<void>): void
 ```
 
-Subscribes to the screenshot event.
+开启截屏事件的监听。
 
 **Since:** 23
 
@@ -6245,7 +6274,7 @@ Subscribes to the screenshot event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when a screenshot event occurs. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 回调函数。发生截屏事件时的回调。 |
 
 ## onScreenshotAppEvent
 
@@ -6253,7 +6282,7 @@ Subscribes to the screenshot event.
 onScreenshotAppEvent(callback: Callback<ScreenshotEventType>): void
 ```
 
-Subscribes to the screenshot event.
+开启屏幕截屏事件类型的监听。
 
 **Since:** 23
 
@@ -6267,14 +6296,14 @@ Subscribes to the screenshot event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ScreenshotEventType&gt; | Yes | Callback invoked when a screenshot event occurs. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ScreenshotEventType&gt; | Yes | 回调函数。返回触发的截屏事件类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
 
 ## onSubWindowClose
 
@@ -6282,7 +6311,7 @@ Subscribes to the screenshot event.
 onSubWindowClose(callback: Callback<void>): void
 ```
 
-Subscribes to the event indicating that the child window is closed.This event is triggered only when the user clicks the system-provided close button in the upper right corner to close the child window.It is not triggered when the child window is closed in other ways.
+开启子窗口关闭事件的监听。此监听仅能通过系统提供的子窗口右上角关闭按键触发，其余关闭窗口的方式不触发回调。
 
 **Since:** 23
 
@@ -6296,15 +6325,15 @@ Subscribes to the event indicating that the child window is closed.This event is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the close button in the upper right corner of the child window is clicked. The internal logic of the callback function requires a return value of the Boolean type. The return value determines whether to continue to close the child window. The value true means not to close the child window, and false means to continue to close the child window. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 回调函数。当点击子窗口右上角关闭按钮事件发生时的回调。该回调函数不返回任何参数。回调函数内部逻辑的返回值决定当前子窗是否继续关闭，如果返回boolean类型的true表示不关闭子窗，返回false或者其他非boolean类型表示关闭子窗。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## onSystemDensityChange
 
@@ -6312,10 +6341,9 @@ Subscribes to the event indicating that the child window is closed.This event is
 onSystemDensityChange(callback: Callback<double>): void
 ```
 
-Subscribes to the system density change event, which is triggered when the system's display size scale factor changes for the screen where the window is located.
+开启本窗口所处屏幕的系统显示大小缩放系数变化事件的监听。比如，当调整窗口所处屏幕的显示大小缩放系数时，可以从此接口监听到这个行为。
 
-In the callback function, you are advised to directly use the return value to convert from virtual pixels (vp) to physical pixels (px). For example, if the return value is **density**, the calculation formula is vp *  
-density = px.
+在接口回调函数中，建议直接使用返回值进行vp和px的转换。例如，若返回值为density，计算px可使用vp * density = px。
 
 **Since:** 23
 
@@ -6329,14 +6357,14 @@ density = px.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;double&gt; | Yes | Callback used to notify the system density is current has changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | Yes | 回调函数。当本窗口所处屏幕的系统显示大小缩放系数发生变化后的回调。回调函数返回number类型参数，表示当前窗口所处屏幕的系统显示大小缩放系数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onTouchOutside
 
@@ -6344,7 +6372,7 @@ density = px.
 onTouchOutside(callback: Callback<void>): void
 ```
 
-Subscribes to the touch event outside this window.
+开启本窗口区域范围外的点击事件的监听。
 
 **Since:** 23
 
@@ -6358,7 +6386,7 @@ Subscribes to the touch event outside this window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the click event outside this window. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 回调函数。当点击事件发生在本窗口范围之外的回调。 |
 
 ## onUiExtensionSecureLimitChange
 
@@ -6380,15 +6408,15 @@ UIExtension in window secure limit change callback on.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result whether the APP has uiextension secure limit. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result whether the APP has uiextension secure limit. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function on('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function on('uiExtensionSecureLimitChange') cannot work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onWindowEvent
 
@@ -6396,7 +6424,7 @@ UIExtension in window secure limit change callback on.
 onWindowEvent(callback: Callback<WindowEventType>): void
 ```
 
-Subscribes to the window lifecycle change event.
+开启窗口生命周期变化的监听。
 
 **Since:** 23
 
@@ -6410,7 +6438,7 @@ Subscribes to the window lifecycle change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowEventType&gt; | Yes | Callback used to return the window lifecycle state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowEventType&gt; | Yes | 回调函数。返回当前的窗口生命周期状态。 |
 
 ## onWindowHighlightChange
 
@@ -6418,7 +6446,7 @@ Subscribes to the window lifecycle change event.
 onWindowHighlightChange(callback: Callback<boolean>): void
 ```
 
-Register the callback of window highlight state change
+开启窗口激活态变化事件的监听。
 
 **Since:** 23
 
@@ -6432,48 +6460,15 @@ Register the callback of window highlight state change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the highlight status of the window. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | 回调函数。当本窗口的激活态发生变化时的回调。回调函数返回boolean类型参数。当返回参数为true表示激活态；false表示非激活态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-
-## onWindowPostureModeChange
-
-```TypeScript
-onWindowPostureModeChange(mode: WindowPostureMode, callback: Callback<boolean>): void
-```
-
-Registers a callback that is invoked when the window changes to the specified window posture mode.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Window-onWindowPostureModeChange(mode: WindowPostureMode, callback: Callback<boolean>): void--><!--Device-Window-onWindowPostureModeChange(mode: WindowPostureMode, callback: Callback<boolean>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The window posture mode to monitor. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback invoked when the window change into the specified window posture mode. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: The internal services of the window are not started normally. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onWindowRectChange
 
@@ -6481,7 +6476,7 @@ Registers a callback that is invoked when the window changes to the specified wi
 onWindowRectChange(callback: Callback<RectChangeOptions>): void
 ```
 
-Subscribes to window rectangle (position and size) change events.
+开启窗口矩形（窗口位置及窗口大小）变化的监听。
 
 **Since:** 23
 
@@ -6495,15 +6490,15 @@ Subscribes to window rectangle (position and size) change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RectChangeOptions&gt; | Yes | Callback used to return the value and reason of the window rectangle change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | Yes | 回调函数。返回当前窗口矩形变化值及变化原因。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onWindowSizeChange
 
@@ -6511,7 +6506,7 @@ Subscribes to window rectangle (position and size) change events.
 onWindowSizeChange(callback: Callback<Size>): void
 ```
 
-Subscribes to the window size change event. This API can be called only by the main thread.
+开启窗口尺寸变化的监听。仅在主线程调用。
 
 **Since:** 23
 
@@ -6525,7 +6520,7 @@ Subscribes to the window size change event. This API can be called only by the m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Size&gt; | Yes | Callback used to return the window size. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Size&gt; | Yes | 回调函数。返回当前的窗口尺寸。 |
 
 ## onWindowStatusChange
 
@@ -6533,20 +6528,19 @@ Subscribes to the window size change event. This API can be called only by the m
 onWindowStatusChange(callback: Callback<WindowStatusType>): void
 ```
 
-Enables the listening for window status changes. When the window status changes, a notification is sent. (In this case, the window attributes may not be updated yet. If you need to obtain the changed window size and position immediately after receiving the window status change notification, you are advised to use  
-[on('windowStatusDidChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.)
+开启窗口模式变化的监听，当窗口windowStatus发生变化时进行通知（此时窗口属性可能还没有更新，如果需要在收到windowStatus变化通知时能够立即获取到变化后的窗口大小、位置，建议使用  
+[on('windowStatusDidChange')](@ohos.window:window.Window.on(type: 'windowStatusDidChange', callback: Callback&lt;WindowStatusType&gt;))）。
 
-After the listening is enabled using this API, multiple callbacks will be received when the **maximize** or  
-**recover** method is called. To obtain the deduplicated callback, you can use  
-[on('windowStatusDidChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.
-    **NOTE**  
-    
-    In \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode, when the window is  
-    maximized (covering the entire screen, with a dock bar and status bar on 2-in-1 devices, and a status bar on  
-    tablets), the return value differs based on the  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ setting. For  
-    versions below 14, the return value is **WindowStatusType::FULL\_SCREEN**. For versions 14 and above, the return  
-    value is **WindowStatusType::MAXIMIZE**.
+使用当前接口开启监听后，在调用maximize、recover方法时会收到多次回调，如需获取去重后的回调，可使用  
+[on('windowStatusDidChange')](window.Window.on(type: 'windowStatusDidChange', callback: Callback&lt;WindowStatusType&gt;))。
+
+> **说明：**
+> 
+> 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的
+> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
+> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
 
 **Since:** 23
 
@@ -6560,13 +6554,13 @@ After the listening is enabled using this API, multiple callbacks will be receiv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowStatusType&gt; | Yes | Callback used to return the window status. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStatusType&gt; | Yes | 回调函数。返回当前的窗口模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## onWindowStatusDidChange
 
@@ -6574,7 +6568,7 @@ After the listening is enabled using this API, multiple callbacks will be receiv
 onWindowStatusDidChange(callback: Callback<WindowStatusType>): void
 ```
 
-Subscribes to the event indicating that the window status has changed (the [Rect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_property of the window has been updated).
+开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-window-rect-i.md)属性已经完成更新）。
 
 **Since:** 23
 
@@ -6588,14 +6582,14 @@ Subscribes to the event indicating that the window status has changed (the [Rect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WindowStatusType&gt; | Yes | Callback used to return the window status. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStatusType&gt; | Yes | 回调函数。返回当前的窗口模式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onWindowTitleButtonRectChange
 
@@ -6617,14 +6611,14 @@ Subscribes to the change event of the rectangle that holds the minimize,maximize
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TitleButtonRect&gt; | Yes | Callback used to return the new rectangle. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TitleButtonRect&gt; | Yes | Callback used to return the new rectangle. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onWindowVisibilityChange
 
@@ -6632,15 +6626,12 @@ Subscribes to the change event of the rectangle that holds the minimize,maximize
 onWindowVisibilityChange(callback: Callback<boolean>): void
 ```
 
-Subscribes to the visibility status change event of this window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
+开启本窗口可见状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：
 
-- If the shadow area of a non-main window (  
-[setWindowShadowEnabled]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-[setWindowShadowRadius]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
-- If the upper-layer window has a transparency effect (including all transparency degrees except the completely  
-opaque degree), the lower-layer window will not be blocked and is visible.  
-- Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating  
-window on a mobile phone, the lower-layer window returned remains visible.
+- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled)和  
+[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
+- 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。  
+- 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
 
 **Since:** 23
 
@@ -6654,15 +6645,15 @@ window on a mobile phone, the lower-layer window returned remains visible.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the visibility status of the window, which is a Boolean value. **true** if visible, **false** otherwise. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | 回调函数。当本窗口可见状态发生变化后的回调。回调函数返回boolean类型参数，当返回参数为true时表示窗口可见，否则表示窗口不可见。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## onWindowWillClose
 
@@ -6670,7 +6661,7 @@ window on a mobile phone, the lower-layer window returned remains visible.
 onWindowWillClose(callback: Callback<void, Promise<boolean>>): void
 ```
 
-Subscribes to the event indicating that the main window or child window will be closed.This event is triggered only when the user clicks the close button in the system-provided title bar to close the window.It is not triggered when the window is closed in other ways.
+开启主窗口或子窗口关闭事件的监听。此监听仅能通过系统提供的窗口标题栏关闭按键触发，其余关闭窗口的方式不触发回调。
 
 **Since:** 23
 
@@ -6684,15 +6675,15 @@ Subscribes to the event indicating that the main window or child window will be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void, Promise&lt;boolean&gt;&gt; | Yes | Callback used to when the close button in the upper right corner of the window is clicked. The internal logic of the callback function requires a return value of the Promise type. In the returned Promise function, resolve(true) means not to close the window, and resolve(false) or reject means to continue to close the window. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void, Promise&lt;boolean&gt;&gt; | Yes | 回调函数。当点击子窗口右上角关闭按钮事件发生时的回调。该回调函数不返回任何参数。回调函数内部逻辑的返回值决定当前子窗是否继续关闭，如果返回boolean类型的true表示不关闭子窗，返回false或者其他非boolean类型表示关闭子窗。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Not called from mainWindow or subWindow. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## raiseToAppTop
 
@@ -6700,10 +6691,9 @@ Subscribes to the event indicating that the main window or child window will be 
 raiseToAppTop(): Promise<void>
 ```
 
-Brings a child window to the top. This action is limited to child windows of the same type under the same parent window within the current application. For child windows with a custom zLevel property, it only applies to child windows with the same zLevel value under the same parent window within the current application. This API uses a promise to return the result.
+应用子窗口调用，提升应用子窗口到顶层，只在当前应用同一个父窗口下的相同类型子窗范围内生效，对于自定义了zLevel属性的子窗口，只在当前应用同一个父窗口下相同zLevel值的子窗范围内生效。使用Promise异步回调。
 
-Before calling this API, ensure that the child window has been created and  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ has been successfully executed.
+使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
 
 **Since:** 14
 
@@ -6717,16 +6707,16 @@ Before calling this API, ensure that the child window has been created and
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 1300009 | The parent window is invalid. |
 
 ## recover
 
@@ -6734,8 +6724,7 @@ Before calling this API, ensure that the child window has been created and
 recover(): Promise<void>
 ```
 
-Restores the main window from the full-screen, maximized, or split-screen mode to a floating window (  
-**window.WindowStatusType.FLOATING** mode), and restores the window size and position to those before the full-screen, maximized, or split-screen mode is entered. If the main window is already in the floating window mode,nothing will happen. This API uses a promise to return the result.
+将主窗口从全屏、最大化、分屏模式下还原为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING），并恢复到进入该模式之前的大小和位置，已经是自由悬浮窗口模式不可再还原。使用Promise异步回调。
 
 **Since:** 11
 
@@ -6751,15 +6740,15 @@ Restores the main window from the full-screen, maximized, or split-screen mode t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. 3. The window does not support floating mode. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. 3. The window does not support floating mode. |
+| 1300001 | Repeated operation. |
 
 ## recover
 
@@ -6783,24 +6772,23 @@ Restores the main window from full-screen, maximized, or split-screen mode to a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| snapshotAnimationConfig | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The configuration of snapshot animation. |
+| snapshotAnimationConfig | [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md) | Yes | 截图动画参数配置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. The window does not support floating mode. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. The snapshotAnimationConfig parameter only supports main windows. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. The window does not support floating mode. |
+| 1300001 | Repeated operation. |
+| 1300016 | Parameter error. Possible cause: Invalid parameter range. |
 
 ## resetAspectRatio
 
@@ -6808,9 +6796,9 @@ Restores the main window from full-screen, maximized, or split-screen mode to a 
 resetAspectRatio(callback: AsyncCallback<void>): void
 ```
 
-Resets the aspect ratio of the window content layout. This API uses an asynchronous callback to return the result.
+取消设置窗口内容布局的比例，使用callback异步回调。
 
-This API is valid only for the main window. After it is called, the persistently saved aspect ratio is cleared.
+仅主窗可设置，调用后将清除持久化储存的比例信息。
 
 **Since:** 10
 
@@ -6826,14 +6814,14 @@ This API is valid only for the main window. After it is called, the persistently
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## resetAspectRatio
 
@@ -6841,9 +6829,9 @@ This API is valid only for the main window. After it is called, the persistently
 resetAspectRatio(): Promise<void>
 ```
 
-Resets the aspect ratio of the window content layout. This API uses a promise to return the result.
+取消设置窗口内容布局的比例，使用Promise异步回调。
 
-This API is valid only for the main window. After it is called, the persistently saved aspect ratio is cleared.
+仅主窗可设置，调用后将清除持久化储存的比例信息。
 
 **Since:** 10
 
@@ -6859,14 +6847,14 @@ This API is valid only for the main window. After it is called, the persistently
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## resetSize
 
@@ -6874,21 +6862,26 @@ This API is valid only for the main window. After it is called, the persistently
 resetSize(width: number, height: number): Promise<void>
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.
+基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。
 
-The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.
+应用主窗口与子窗口存在大小限制，默认宽度范围：[320, 1920]，默认高度范围：[240, 1920]，单位为vp。
 
-The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain size limits.
+应用主窗口与子窗口的最小宽度与最小高度可由产品端进行配置，配置后的最小宽度与最小高度以产品段配置值为准，具体尺寸限制范围可以通过  
+[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)接口进行查询。
 
-The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.
+系统窗口存在大小限制，宽度范围：(0, 1920]，高度范围：(0, 1920]，单位为vp。
 
-The new window width and height you set must meet the following limits:
+设置的宽度与高度受到此限制约束，规则：
 
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect.
+若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效；
 
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
+若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
 
-This operation is not supported in a window in full-screen mode.
+全屏模式窗口不支持该操作。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[resize()](arkts-arkui-window-window-i.md#resize)替代。
 
 **Since:** 7
 
@@ -6906,14 +6899,14 @@ This operation is not supported in a window in full-screen mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | New width of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is thrown. |
-| height | number | Yes | New height of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is thrown. |
+| width | number | Yes | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码 [401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
+| height | number | Yes | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码 [401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## resetSize
 
@@ -6921,21 +6914,27 @@ This operation is not supported in a window in full-screen mode.
 resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result.
+基于窗口左上角顶点改变当前窗口大小，使用callback异步回调。
 
-The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.
+应用主窗口与子窗口存在大小限制，默认宽度范围：[320, 1920]，默认高度范围：[240, 1920]，单位为vp。
 
-The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain size limits.
+应用主窗口与子窗口的最小宽度与最小高度可由产品端进行配置，配置后的最小宽度与最小高度以产品段配置值为准，具体尺寸限制范围可以通过  
+[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)接口进行查询。
 
-The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.
+系统窗口存在大小限制，宽度范围：(0, 1920]，高度范围：(0, 1920]，单位为vp。
 
-The new window width and height you set must meet the following limits:
+设置的宽度与高度受到此限制约束，规则：
 
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect.
+若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效；
 
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
+若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
 
-This operation is not supported in a window in full-screen mode.
+全屏模式窗口不支持该操作。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [resize()](arkts-arkui-window-window-i.md#resize)替代。
 
 **Since:** 7
 
@@ -6953,9 +6952,9 @@ This operation is not supported in a window in full-screen mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | New width of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is thrown. |
-| height | number | Yes | New height of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is thrown. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| width | number | Yes | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码 [401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
+| height | number | Yes | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整，负值为非法参数（抛出错误码 [401](../../../reference/errorcode-universal.md#401-参数检查失败)）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## resize
 
@@ -6969,25 +6968,25 @@ ArkTS-Sta:
 resize(width: int, height: int): Promise<void>
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.
+基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。
 
-A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call  
-[resizeAsync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](arkts-arkui-window-window-i.md#resizeasync)。
 
-The window size is restricted by [WindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. You can call  
-[getWindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ to find out the exact limits.
+窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过  
+[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)接口进行查询。
 
-The new window width and height you set must meet the following limits:
+调用该接口设置的宽度与高度受到此限制约束，规则：
 
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions.
+若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制；
 
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
+若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).If this API is called when the window is in other window modes, error code 1300002 is reported.(The window mode can be obtained through [getWindowStatus()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_).
-    **NOTE**  
-    
-    - When the main window is in floating window mode, this API does not take effect or return an error if called  
-    in non-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ state.
+该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
+[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。
+
+> **说明：**
+> 
+> - 主窗口处于自由悬浮窗口模式时，在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下调用不报错不生效。
 
 **Since:** 9
 
@@ -7003,22 +7002,22 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | New width of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code 401 is thrown. |
-| height | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | New height of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code 401 is thrown. |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整， 负值为非法参数（抛出错误码401）。 |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整， 负值为非法参数（抛出错误码401）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window status type. Only supports windows in floating window mode. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window status type. Only supports windows in floating window mode. |
 
 ## resize
 
@@ -7032,23 +7031,25 @@ ArkTS-Sta:
 resize(width: int, height: int, callback: AsyncCallback<void>): void
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result.
+基于窗口左上角顶点改变当前窗口大小，使用callback异步回调。
 
-A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call  
-[resizeAsync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](arkts-arkui-window-window-i.md#resizeasync)。
 
-The window size is restricted by [WindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. You can call  
-[getWindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ to find out the exact limits.
+窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过  
+[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)接口进行查询。
 
-The new window width and height you set must meet the following limits:
+调用该接口设置的宽度与高度受到此限制约束，规则：
 
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions.
+若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制；
 
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
-    **NOTE**  
-    
-    - When the main window is in floating window mode, this API does not take effect or return an error if called  
-    in non-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ state.
+若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
+
+该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
+[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。
+
+> **说明：**
+> 
+> - 主窗口处于自由悬浮窗口模式时，在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下调用不报错不生效。
 
 **Since:** 9
 
@@ -7064,17 +7065,17 @@ If the window width or height is greater than the maximum width or height limit,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | New width of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code 401 is thrown. |
-| height | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | New height of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code 401 is thrown. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整， 负值为非法参数（抛出错误码401）。 |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整， 负值为非法参数（抛出错误码401）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window status type. Only supports windows in floating window mode. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error; 3. Invalid window status type. Only supports windows in floating window mode. |
 
 ## resizeAsync
 
@@ -7088,25 +7089,25 @@ ArkTS-Sta:
 resizeAsync(width: int, height: int): Promise<void>
 ```
 
-Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.
+基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。
 
-A value is returned once the call takes effect. You can use  
-[getWindowProperties()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ in the callback (see the code snippet below) to obtain the final effect immediately.
+调用生效后返回，回调中可使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)（见示例）立即获取最终生效结果。
 
-The window size is restricted by [WindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. You can call  
-[getWindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ to find out the exact limits.
+窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过  
+[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)接口进行查询。
 
-The new window width and height you set must meet the following limits:
+调用该接口设置的宽度与高度受到此限制约束，规则：
 
-If the window width or height is less than the minimum width or height limit, then the minimum width or height limit takes effect. However, the system window and global floating window settings are not subject to these minimum width or height restrictions.
+若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制；
 
-If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
+若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other scenarios, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_).
-    **NOTE**  
-    
-    - In non-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode,  
-    this API does not work for the main window.
+该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
+[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，否则抛出错误码1300010。
+
+> **说明：**
+> 
+> - 在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口调用不生效。
 
 **Since:** 12
 
@@ -7122,24 +7123,24 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | New width of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code 401 is thrown. |
-| height | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | New height of the window, in px. The value must be an integer. If a floating-point number is passed in, the value is rounded down. A negative value is invalid, and error code 401 is thrown. |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 当前窗口的目标宽度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整， 负值为非法参数（抛出错误码401）。 |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 当前窗口的目标高度，单位为px，该参数仅支持整数输入，浮点数输入将向下取整， 负值为非法参数（抛出错误码401）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Invalid parameter range. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: Invalid parameter range. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| 1300010 | The operation in the current window status is invalid. Possible cause: The window status is not FLOATING. |
 
 ## restore
 
@@ -7147,7 +7148,7 @@ This API takes effect only when the window is in floating window mode (**window.
 restore(): Promise<void>
 ```
 
-Restores the main window from minimization to the foreground, returning it to its size and position before it is minimized. This API takes effect only when the main window is minimized and the UIAbility is in the onForeground state. If the main window is already in the foreground, this API simply raises the window's layer. This API uses a promise to return the result.
+主窗口为最小化状态且UIAbility生命周期为onForeground时，将主窗口从最小化状态，恢复到前台显示，并恢复到进入最小化状态之前的大小和位置。主窗口为前台状态时，仅抬升主窗口层级。使用Promise异步回调。
 
 **Since:** 14
 
@@ -7163,16 +7164,16 @@ Restores the main window from minimization to the foreground, returning it to it
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 
 ## restoreMainWindow
 
@@ -7180,9 +7181,8 @@ Restores the main window from minimization to the foreground, returning it to it
 restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
-Restores the main window of the current window to the foreground. If the main window is already in the foreground, the main window level is raised. This API is applicable only to  
-[TYPE\_FLOAT]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ windows and can be called only after the  
-[DOWN]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ event is triggered in the windows. This API uses a promise to return the result.
+将当前窗口的主窗口恢复到前台显示，如果主窗口已处于前台，则会抬升主窗层级。此接口仅适用于类型为[TYPE_FLOAT](arkts-arkui-window-windowtype-e.md)的窗口，并且需在窗口触发过  
+[DOWN](arkts-arkui-enums-touchtype-e.md)事件后才能调用。使用Promise异步回调。
 
 **Since:** 23
 
@@ -7198,23 +7198,23 @@ Restores the main window of the current window to the foreground. If the main wi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParameters | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string, Object&gt; | No | Want parameters. Custom want parameter delivered when restoring the main window. Want parameters are used for UIAbility onNewWant. |
+| wantParameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No | Want parameters. Custom want parameter delivered when restoring the main window. Want parameters are used for UIAbility onNewWant. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. The window is not float window. 2. The window is not at foreground or has never been clicked. 3. The window cannot find main window. |
-| [1300007](../errorcode-window.md#1300007-application-startup-failure-by-windowextensionability) | Restore parent main window failed. Possible cause: 1. The main window is in PAUSED lifecycle state. 2. The main window is in background during recent. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| 1300007 | Restore parent main window failed. Possible cause: 1. The main window is in PAUSED lifecycle state. 2. The main window is in background during recent. |
+| 1300004 | Unauthorized operation. Possible cause: 1. The window is not float window. 2. The window is not at foreground or has never been clicked. 3. The window cannot find main window. |
 
 ## setAspectRatio
 
@@ -7228,20 +7228,17 @@ ArkTS-Sta:
 setAspectRatio(ratio: double, callback: AsyncCallback<void>): void
 ```
 
-Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    - When the window size is set by using other APIs such as  
-    [resize]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-    [resizeAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, the window size is not restricted by **ratio**.  
-    
-    - This setting is available only for the main window and takes effect only in floating window mode (  
-    **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the  
-    setting is valid in floating window mode even after the application is closed or the device is restarted.  
-    
-    - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent  
-    main windows. If you need to set the aspect ratio for just one main window, use  
-    [setContentAspectRatio]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ instead.
+设置窗口内容布局（不含边框和标题栏等装饰）的比例，使用callback异步回调。
+
+> **说明：**
+> 
+> - 通过其他接口如[resize](arkts-arkui-window-window-i.md#resize)、
+> [resizeAsync](arkts-arkui-window-window-i.md#resizeasync)设置窗口大小时，不受ratio约束。
+> 
+> - 仅主窗可设置，且仅在自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下生效。此比例参数将持久化保存，关闭应用或重启设备后，切换到自由悬浮窗口模式时，设置的比例仍然生效。
+> 
+> - 当同一应用的某个主窗口调用此接口设置宽高比生效后，后续打开的主窗口均会沿用该宽高比。若需为单个主窗口单独设置宽高比，请使用
+> [setContentAspectRatio](arkts-arkui-window-window-i.md#setcontentaspectratio)。
 
 **Since:** 10
 
@@ -7257,16 +7254,16 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratio | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Aspect ratio of the window content layout (excluding decorations like borders and title bars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window. The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is the maximum width divided by the minimum height. The maximum and minimum sizes of the window are determined by the intersection of the setting of [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and the system limit. The system limit takes precedence over [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The valid range of **ratio** varies with [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. If [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is set prior to **ratio**, any conflict will result in an error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise with the subsequently configured [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, the window's aspect ratio may not adhere to the initially configured value of **ratio**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| ratio | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由 [WindowLimits](arkts-arkui-window-windowlimits-i.md)和系统限制的交集决定，系统限制优先级高于 [WindowLimits](arkts-arkui-window-windowlimits-i.md)。ratio的有效范围会随 [WindowLimits](arkts-arkui-window-windowlimits-i.md)变化而变化。如果先设置了 [WindowLimits](arkts-arkui-window-windowlimits-i.md)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的 [WindowLimits](arkts-arkui-window-windowlimits-i.md)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Invalid parameter range. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 401 | Parameter error. Possible cause: Invalid parameter range. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 
 ## setAspectRatio
 
@@ -7280,20 +7277,17 @@ ArkTS-Sta:
 setAspectRatio(ratio: double): Promise<void>
 ```
 
-Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses a promise to return the result.
-    **NOTE**  
-    
-    - When the window size is set by using other APIs such as  
-    [resize]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and  
-    [resizeAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, the window size is not restricted by **ratio**.  
-    
-    - This setting is available only for the main window and takes effect only in floating window mode (  
-    **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the  
-    setting is valid in floating window mode even after the application is closed or the device is restarted.  
-    
-    - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent  
-    main windows. If you need to set the aspect ratio for just one main window, use  
-    [setContentAspectRatio]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ instead.
+设置窗口内容布局（不含边框和标题栏等装饰）的比例，使用Promise异步回调。
+
+> **说明：**
+> 
+> - 通过其他接口如[resize](arkts-arkui-window-window-i.md#resize)、
+> [resizeAsync](arkts-arkui-window-window-i.md#resizeasync)设置窗口大小时，不受ratio约束。
+> 
+> - 仅主窗可设置，且仅在自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下生效。此比例参数将持久化保存，关闭应用或重启设备后，切换到自由悬浮窗口模式时，设置的比例仍然生效。
+> 
+> - 当同一应用的某个主窗口调用此接口设置宽高比生效后，后续打开的主窗口均会沿用该宽高比。若需为单个主窗口单独设置宽高比，请使用
+> [setContentAspectRatio](arkts-arkui-window-window-i.md#setcontentaspectratio)。
 
 **Since:** 10
 
@@ -7309,21 +7303,21 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratio | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Aspect ratio of the window content layout (excluding decorations like borders and title bars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window. The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is the maximum width divided by the minimum height. The maximum and minimum sizes of the window are determined by the intersection of the setting of [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and the system limit. The system limit takes precedence over [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The valid range of **ratio** varies with [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. If [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is set prior to **ratio**, any conflict will result in an error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise with the subsequently configured [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, the window's aspect ratio may not adhere to the initially configured value of **ratio**. |
+| ratio | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由 [WindowLimits](arkts-arkui-window-windowlimits-i.md)和系统限制的交集决定，系统限制优先级高于 [WindowLimits](arkts-arkui-window-windowlimits-i.md)。ratio的有效范围会随 [WindowLimits](arkts-arkui-window-windowlimits-i.md)变化而变化。如果先设置了 [WindowLimits](arkts-arkui-window-windowlimits-i.md)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的 [WindowLimits](arkts-arkui-window-windowlimits-i.md)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Invalid parameter range. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 401 | Parameter error. Possible cause: Invalid parameter range. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 
 ## setBackgroundColor
 
@@ -7331,8 +7325,13 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 setBackgroundColor(color: string): Promise<void>
 ```
 
-Sets the background color for this window. This API uses a promise to return the result. In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+设置窗口的背景色，使用Promise异步回调。Stage模型下，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)替代。
 
 **Since:** 6
 
@@ -7350,13 +7349,13 @@ Sets the background color for this window. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | string | Yes | Background color to set. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. |
+| color | string | Yes | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如`'#00FF00'`或`'#FF00FF00'`。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setBackgroundColor
 
@@ -7364,8 +7363,13 @@ Sets the background color for this window. This API uses a promise to return the
 setBackgroundColor(color: string, callback: AsyncCallback<void>): void
 ```
 
-Sets the background color for this window. This API uses an asynchronous callback to return the result. In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+设置窗口的背景色，使用callback异步回调。Stage模型下，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)替代。
 
 **Since:** 6
 
@@ -7383,8 +7387,8 @@ Sets the background color for this window. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | string | Yes | Background color to set. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| color | string | Yes | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如`'#00FF00'`或`'#FF00FF00'`。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setBrightness
 
@@ -7392,9 +7396,14 @@ Sets the background color for this window. This API uses an asynchronous callbac
 setBrightness(brightness: number): Promise<void>
 ```
 
-Sets the screen brightness for this window. This API uses a promise to return the result.
+允许应用窗口设置屏幕亮度值，使用Promise异步回调。
 
-When the screen brightness setting for the window takes effect, Control Panel cannot adjust the system screen brightness. It can do so only after the window screen brightness is restored to the default value.
+当前屏幕亮度规格：窗口设置屏幕亮度生效时，控制中心不可以调整系统屏幕亮度，窗口恢复默认系统亮度之后，控制中心可以调整系统屏幕亮度。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBrightness()](arkts-arkui-window-window-i.md#setwindowbrightness)替代。
 
 **Since:** 6
 
@@ -7412,13 +7421,13 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | number | Yes | Brightness to set. The value is a floating-point number in the range [0.0, 1.0] or is set to **-1.0**. The value **1.0** means the brightest, and **-1.0** means that the window brightness resets to the original brightness set through Control Panel. |
+| brightness | number | Yes | 屏幕亮度值。该参数为浮点数，取值范围为[0.0, 1.0]或-1.0。1.0表示最亮，-1.0表示恢复成设置窗口亮度前的系统控制中心亮度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setBrightness
 
@@ -7426,9 +7435,15 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 setBrightness(brightness: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the screen brightness for this window. This API uses an asynchronous callback to return the result.
+允许应用窗口设置屏幕亮度值，使用callback异步回调。
 
-When the screen brightness setting for the window takes effect, Control Panel cannot adjust the system screen brightness. It can do so only after the window screen brightness is restored to the default value.
+当前屏幕亮度规格：窗口设置屏幕亮度生效时，控制中心不可以调整系统屏幕亮度，窗口恢复默认系统亮度之后，控制中心可以调整系统屏幕亮度。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowBrightness()](arkts-arkui-window-window-i.md#setwindowbrightness)
+> 替代。
 
 **Since:** 6
 
@@ -7446,8 +7461,8 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | number | Yes | Brightness to set. The value is a floating-point number in the range [0.0, 1.0] or is set to **-1.0**. The value **1.0** means the brightest, and **-1.0** means that the window brightness resets to the original brightness set through Control Panel. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| brightness | number | Yes | 屏幕亮度值。该参数为浮点数，取值范围为[0.0, 1.0]或-1.0。1.0表示最亮，-1.0表示恢复成设置窗口亮度前的系统控制中心亮度。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setColorSpace
 
@@ -7455,7 +7470,12 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 setColorSpace(colorSpace: ColorSpace): Promise<void>
 ```
 
-Sets a color space for this window. This API uses a promise to return the result.
+设置当前窗口为广色域模式或默认色域模式，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [setWindowColorSpace()](arkts-arkui-window-window-i.md#setwindowcolorspace)替代。
 
 **Since:** 8
 
@@ -7473,13 +7493,13 @@ Sets a color space for this window. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Color space to set. |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | 设置色域模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setColorSpace
 
@@ -7487,7 +7507,13 @@ Sets a color space for this window. This API uses a promise to return the result
 setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
 ```
 
-Sets a color space for this window. This API uses an asynchronous callback to return the result.
+设置当前窗口为广色域模式或默认色域模式，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> [setWindowColorSpace()](arkts-arkui-window-window-i.md#setwindowcolorspace)
+> 替代。
 
 **Since:** 8
 
@@ -7505,8 +7531,8 @@ Sets a color space for this window. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Color space to set. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | 设置色域模式。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setContentAspectRatio
 
@@ -7520,22 +7546,18 @@ ArkTS-Sta:
 setContentAspectRatio(ratio: double, isPersistent?: boolean, needUpdateRect?: boolean): Promise<void>
 ```
 
-Sets the aspect ratio of the window content layout (excluding decorations like borders and title bars). This API uses a promise to return the result.
-    **NOTE**  
-    
-    - When you adjust the window width and height using the same **ratio** parameter, the window size adapts to  
-    changes in the border decoration size or visibility.  
-    
-    - When the window title bar is set to invisible by using  
-    [setWindowDecorVisible]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, the window content area takes over the  
-    space that was previously used by the title bar.  
-    
-    - When the window size is set by using other APIs such as  
-    [resize]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and  
-    [resizeAsync]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, the window size is not restricted by **ratio**.  
-    
-    - This setting is available only for the main window and takes effect only in floating window mode (  
-    **window.WindowStatusType.FLOATING** mode).
+设置窗口内容布局（不含边框和标题栏等装饰）的比例，使用Promise异步回调。
+
+> **说明：**
+> 
+> - 根据相同的ratio参数调整窗口宽高时，窗口宽高会跟随窗口边框装饰尺寸或可见性变化而调整。
+> 
+> - 通过[setWindowDecorVisible](arkts-arkui-window-window-i.md#setwindowdecorvisible)将窗口标题栏设置为不可见时，窗口内容区域将占据原本标题栏的高度空间。
+> 
+> - 通过其他接口如[resize](arkts-arkui-window-window-i.md#resize)、
+> [resizeAsync](arkts-arkui-window-window-i.md#resizeasync)设置窗口大小时，不受ratio约束。
+> 
+> - 仅主窗可设置，且仅在自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下生效。
 
 **Since:** 21
 
@@ -7549,25 +7571,25 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratio | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Aspect ratio of the window content layout (excluding decorations like borders and title bars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window. The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is the maximum width divided by the minimum height. The maximum and minimum sizes of the window are determined by the intersection of the setting of [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and the system limit. The system limit takes precedence over [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The valid range of **ratio** varies with [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. If [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is set prior to **ratio**, any conflict will result in an error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise with the subsequently configured [WindowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, the window's aspect ratio may not adhere to the initially configured value of **ratio**. |
-| isPersistent | boolean | No | Whether the aspect ratio should be saved persistently.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If this parameter is set to **true**, the aspect ratio is saved persistently. This means that the setting is valid in floating window mode even after the window is destroyed, the application is closed, or the device is restarted. You can call [resetAspectRatio]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to clear the persistently saved aspect ratio.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If this parameter is set to **false**, the aspect ratio applies only to the current window and is cleared once the window is destroyed.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The default value is **true**. |
-| needUpdateRect | boolean | No | Whether the window size should be immediately updated based on the current aspect ratio.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If this parameter is set to **true**, the window size is updated immediately based on the current aspect ratio.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If this parameter is set to **false**, the window size is updated based on the current aspect ratio when the window is dragged and resized. You can manually trigger an update by calling [resize]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ or [resizeAsync]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The default value is **true**. |
+| ratio | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 窗口内容布局（不含边框和标题栏等装饰）的宽高比。该参数为浮点数，受窗口最大最小尺寸限制，比例值下限为最小宽度/最大高度，上限为最大宽度/最小高度。窗口最大最小尺寸由 [WindowLimits](arkts-arkui-window-windowlimits-i.md)和系统限制的交集决定，系统限制优先级高于 [WindowLimits](arkts-arkui-window-windowlimits-i.md)。ratio的有效范围会随 [WindowLimits](arkts-arkui-window-windowlimits-i.md)变化而变化。如果先设置了 [WindowLimits](arkts-arkui-window-windowlimits-i.md)，后设置的ratio与其冲突，会返回错误码；如果先设置了ratio，后设置的 [WindowLimits](arkts-arkui-window-windowlimits-i.md)与其冲突，窗口的宽高比可能会不跟随设置的宽高比（ratio）。 |
+| isPersistent | boolean | No | 是否持久化保存该比例参数。&lt;br/&gt;如为`true`，比例参数会持久化保存，销毁窗口、关闭应用或重启设备后，当再次切换到自由悬浮窗口模式时仍然生效。可通过 [resetAspectRatio](arkts-arkui-window-window-i.md#resetaspectratio)清除持久化保存的比例参数。&lt;br/&gt;如为`false`，比例参数仅对当前窗口生效，窗口销毁后清除该数据 。&lt;br/&gt;默认值为`true`。 |
+| needUpdateRect | boolean | No | 是否立即根据当前比例更新窗口大小。&lt;br/&gt;如为`true`，立即根据当前比例更新窗口大小。&lt;br/&gt;如为`false`，窗口将在拖拽缩放时根据当前比 例更新，也可以使用[resize](arkts-arkui-window-window-i.md#resize)或 [resizeAsync](arkts-arkui-window-window-i.md#resizeasync)进行主动更新。&lt;br/&gt;默认值为`true`。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 
 ## setDecorButtonStyle
 
@@ -7575,8 +7597,8 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 setDecorButtonStyle(dectorStyle: DecorButtonStyle): void
 ```
 
-Sets the button style of the decoration bar. The setting takes effect only for the main window and child windows.In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+设置装饰栏按钮样式，仅对主窗和子窗生效。如果使用Stage模型，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
 **Since:** 14
 
@@ -7592,16 +7614,16 @@ Sets the button style of the decoration bar. The setting takes effect only for t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dectorStyle | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Button style of the decoration bar. |
+| dectorStyle | [DecorButtonStyle](arkts-arkui-window-decorbuttonstyle-i.md) | Yes | 要设置的装饰栏按钮样式。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 
 ## setDialogBackGestureEnabled
 
@@ -7609,7 +7631,7 @@ Sets the button style of the decoration bar. The setting takes effect only for t
 setDialogBackGestureEnabled(enabled: boolean): Promise<void>
 ```
 
-Sets whether the modal window responds to the back gesture event. An error code is returned if this API is called for a non-modal window.
+设置模态窗口是否响应手势返回事件，非模态窗口调用返回错误码。
 
 **Since:** 12
 
@@ -7625,23 +7647,23 @@ Sets whether the modal window responds to the back gesture event. An error code 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to respond to the back gesture event.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** means to respond to the back gesture event and trigger the **onBackPress** callback, **false** otherwise.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| enabled | boolean | Yes | 是否响应手势返回事件。&lt;br&gt;true表示响应手势返回事件，触发onBackPress回调；false表示不响应手势返回事件，不触发onBackPress回调。&lt;/br &gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only dialog windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## setDimBehind
 
@@ -7649,7 +7671,7 @@ Sets whether the modal window responds to the back gesture event. An error code 
 setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the dimness of the window that is not on top. This API uses an asynchronous callback to return the result.
+窗口叠加时，设备有子窗口的情况下设置靠后的窗口的暗度值，使用callback异步回调。
 
 **Since:** 7
 
@@ -7665,8 +7687,8 @@ Sets the dimness of the window that is not on top. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dimBehindValue | number | Yes | Dimness of the window to set. The value range is [0.0, 1.0], and the value **1.0** means the dimmest. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| dimBehindValue | number | Yes | 表示靠后的窗口的暗度值，取值范围为[0.0, 1.0]，取1.0时表示最暗。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setDimBehind
 
@@ -7674,7 +7696,7 @@ Sets the dimness of the window that is not on top. This API uses an asynchronous
 setDimBehind(dimBehindValue: number): Promise<void>
 ```
 
-Sets the dimness of the window that is not on top. This API uses a promise to return the result.
+窗口叠加时，设备有子窗口的情况下设置靠后的窗口的暗度值，使用Promise异步回调。
 
 **Since:** 7
 
@@ -7690,13 +7712,13 @@ Sets the dimness of the window that is not on top. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dimBehindValue | number | Yes | Dimness of the window to set. The value ranges from 0 to 1. The value **1** indicates the dimmest. |
+| dimBehindValue | number | Yes | 表示靠后的窗口的暗度值，取值范围为0-1，1表示最暗。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setDragKeyFramePolicy
 
@@ -7704,9 +7726,9 @@ Sets the dimness of the window that is not on top. This API uses a promise to re
 setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise<KeyFramePolicy>
 ```
 
-Sets the keyframe policy for dragging the main window. This API uses a promise to return the result.
+设置主窗口拖拽的关键帧策略，并使用Promise处理异步回调。
 
-If this API is called by a non-main window, error code 1300004 is returned.
+非主窗口调用时，返回1300004错误码。
 
 **Since:** 20
 
@@ -7720,23 +7742,23 @@ If this API is called by a non-main window, error code 1300004 is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyFramePolicy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The policy of keyframe to set. |
+| keyFramePolicy | [KeyFramePolicy](arkts-arkui-window-keyframepolicy-i.md) | Yes | 用于设置拖拽的关键帧策略。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyFramePolicy&gt; | Promise used to return the keyframe policy that takes effect. |
+| Promise&lt;KeyFramePolicy&gt; | Promise对象，返回实际生效的关键帧策略。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range; 2. The parameter format is incorrect. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range; 2. The parameter format is incorrect. |
+| 1300004 | Unauthorized operation. |
 
 ## setExclusivelyHighlighted
 
@@ -7744,9 +7766,9 @@ If this API is called by a non-main window, error code 1300004 is returned.
 setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>
 ```
 
-Sets the exclusive highlight property for the window. When a window set to exclusive highlight gains focus, other windows in the current parent-child window chain that are in the highlighted state will lose their highlighted state. This API uses a promise to return the result.
+设置窗口独占激活态属性。独占激活态表示窗口获焦时，会导致当前父子窗口链中处于激活态的其他窗口失去激活态。使用Promise异步回调。
 
-This API does not take effect for the main window or modal window.
+此接口对主窗、模态窗不生效。
 
 **Since:** 15
 
@@ -7768,17 +7790,17 @@ This API does not take effect for the main window or modal window.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. |
 
 ## setFloatNavigationAvoidAreaEnabled
 
@@ -7786,7 +7808,11 @@ This API does not take effect for the main window or modal window.
 setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>
 ```
 
-Specifies whether to enable the avoid area for the float navigation type. When enabled, the actual value of the avoid area can be obtained by calling getWindowAvoidArea(AvoidAreaType.TYPE\_FLOAT\_NAVIGATION) or listening for AvoidAreaType of TYPE\_FLOAT\_NAVIGATION via on('avoidAreaChange') or declaring environment variables.When disabled, the float avoid area obtained through the above methods will always be 0.
+设置当前窗口是否支持获取三键导航类型的避让区域。未调用此接口设置前，系统默认不支持获取三键导航类型的避让区域。使用Promise异步回调。
+
+调用该接口使能后才可以通过[getWindowAvoidArea()](arkts-arkui-window-window-i.md#getwindowavoidarea)获取到  
+[TYPE_FLOAT_NAVIGATION](arkts-arkui-window-avoidareatype-e.md)避让类型对应的避让区域或通过  
+[on('avoidAreaChange')](window.Window.on(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;))监听TYPE_FLOAT_NAVIGATION避让类型对应的避让区域的变化。
 
 **Since:** 26.0.0
 
@@ -7804,21 +7830,21 @@ Specifies whether to enable the avoid area for the float navigation type. When e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | The value true means to enable float navigation avoid area, and false means the opposite. |
+| enabled | boolean | Yes | 是否支持获取三键导航类型的避让区域。&lt;br&gt;true表示支持，false表示不支持。&lt;/br&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Create js value failed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Create js value failed. |
 
 ## setFocusable
 
@@ -7826,7 +7852,12 @@ Specifies whether to enable the avoid area for the float navigation type. When e
 setFocusable(isFocusable: boolean): Promise<void>
 ```
 
-Sets whether this window is focusable, that is, whether the window can gain focus after it is being clicked or using other methods. This API uses a promise to return the result.
+设置使用点击或其他方式使该窗口获焦的场景时，该窗口是否支持窗口焦点从点击前的获焦窗口切换到该窗口，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)替代。
 
 **Since:** 7
 
@@ -7844,13 +7875,13 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isFocusable | boolean | Yes | Whether the window is focusable. **true** if focusable, **false** otherwise. If this parameter is set to **false**, the window does not support binding to an input method or receiving keyboard events. If input logic needs to be processed, follow the instructions provided in \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
+| isFocusable | boolean | Yes | 点击时是否支持切换焦点窗口。true表示支持；false表示不支持。设置为false时，该窗口不支持绑定输入法和接收键盘事件，如需处理输入逻辑，建议参考 [不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setFocusable
 
@@ -7858,7 +7889,13 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this window is focusable, that is, whether the window can gain focus after it is being operated or using other methods. This API uses an asynchronous callback to return the result.
+设置使用点击或其他方式使该窗口获焦的场景时，该窗口是否支持窗口焦点从操作前的获焦窗口切换到该窗口，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)
+> 替代。
 
 **Since:** 7
 
@@ -7876,8 +7913,8 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isFocusable | boolean | Yes | Whether the window is focusable. **true** if focusable, **false** otherwise. If this parameter is set to **false**, the window does not support binding to an input method or receiving keyboard events. If input logic needs to be processed, follow the instructions provided in \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| isFocusable | boolean | Yes | 点击时是否支持切换焦点窗口。true表示支持；false表示不支持。设置为false时，该窗口不支持绑定输入法和接收键盘事件，如需处理输入逻辑，建议参考 [不可获焦窗口中输入框与输入法交互指南](../../../inputmethod/use-inputmethod-in-not-focusable-window.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setFollowParentMultiScreenPolicy
 
@@ -7885,12 +7922,12 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>
 ```
 
-Sets whether a child window can span multiple screens and be simultaneously displayed while its parent window is being dragged or resized. This API uses a promise to return the result.
+设置子窗口在其父窗口处于拖拽移动或拖拽缩放过程时，该子窗口是否支持跨多个屏幕同时显示。使用Promise异步回调。
 
-By default, when a child window follows its parent window's layout changes (by using  
-[moveWindowTo()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_), it does not support spanning multiple screens and being simultaneously displayed.
+通过监听父窗口大小位置变化，对子窗口调用  
+[moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)等接口实现子窗口跟随父窗口布局时，此时子窗口默认不支持跨多个屏幕同时显示。
 
-However, calling this API on the child window enables it to span multiple screens and be simultaneously displayed during the layout adjustment process.
+对子窗口调用此接口后可以使能子窗口在跟随父窗口布局过程中跨多个屏幕同时显示。
 
 **Since:** 17
 
@@ -7906,23 +7943,23 @@ However, calling this API on the child window enables it to span multiple screen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | The value true means sub window supports simultaneous display on multiple screens when the parent window is dragged to move or dragged to zoom, and false means the opposite. |
+| enabled | boolean | Yes | 设置子窗口在其父窗口处于拖拽移动或拖拽缩放过程时，该子窗口是否支持跨多个屏幕同时显示。 true表示支持；false表示不支持。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Function setFollowParentMultiScreenPolicy can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported.Function setFollowParentMultiScreenPolicy can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## setFollowParentWindowLayoutEnabled
 
@@ -7930,13 +7967,18 @@ However, calling this API on the child window enables it to span multiple screen
 setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>
 ```
 
-Sets whether the layout information (position and size) of a child window or modal window (a window with  
-**WindowType** set to **TYPE\_DIALOG**) follows the main window. This API uses a promise to return the result.
+设置子窗或模态窗口（即WindowType为TYPE_DIALOG的窗口）的布局信息（position和size）是否跟随主窗，使用Promise异步回调。
 
-1. This API applies only to first-level child windows or modal windows of the main window.2. Once this API is called on a child window or modal window, its layout information will immediately match the main window and remain synchronized. This effect will persist until this API is called again with **false**.3. If this API is called on a child window or modal window, subsequent calls to APIs like **moveTo** or **resize** to modify the layout information will not take effect.4. When a child window or modal window stops using this functionality, its layout information (position and size) may not be a specific value. The application needs to reset it.
+1、只支持主窗的一级子窗或模态窗口使用该接口。
 
-Once this API is successfully called, the  
-[setRelativePositionToParentWindowEnabled()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API will no longer take effect.
+2、当子窗或模态窗口调用该接口后，立即使其布局信息与主窗完全一致并保持，除非传入false再次调用该接口，否则效果将持续。
+
+3、当子窗或模态窗口调用该接口后，再调用moveTo、resize等修改布局信息的接口将不生效。
+
+4、当子窗或模态窗口不再使用该功能后，不保证子窗或模态窗口的布局信息（position和size）为确定的值，需要应用重新进行设置。
+
+该接口调用生效后，  
+[setRelativePositionToParentWindowEnabled()](arkts-arkui-window-window-i.md#setrelativepositiontoparentwindowenabled)接口调用不生效。
 
 **Since:** 17
 
@@ -7954,23 +7996,23 @@ Once this API is successfully called, the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to follow the layout of the main window. **true** to follow, **false** otherwise. |
+| enabled | boolean | Yes | 设置是否启用跟随主窗布局。true表示启用，false表示不启用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. 3. The subwindow level is more than one. 4. The subwindow is following its parent window's position. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and dialog windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. 3. The subwindow level is more than one. 4. The subwindow is following its parent window's position. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and dialog windows are supported. |
 
 ## setFullScreen
 
@@ -7978,18 +8020,18 @@ Once this API is successfully called, the
 setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the main window or the child window is in full-screen mode. This API uses an asynchronous callback to return the result.
+设置主窗口或子窗口的布局是否为全屏布局，使用callback异步回调。
 
-Full-screen mode means that the layout does not avoid the status bar or \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_three-button navigation bar&lt;!-  
--RP15End--&gt;, and components may overlap with them.
+全屏布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
 
-Non-full-screen mode means that the layout avoids the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_, and components do not overlap with them.
-    **NOTE**  
-    
-    This API is supported since API version 6 and deprecated since API version 9. You are advised to use  
-    [setWindowSystemBarEnable()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    and [setWindowLayoutFullScreen()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_  
-    to implement the full-screen mode.
+非全屏布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议联合使用
+> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
+> 和[setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)替代实现全
+> 屏。
 
 **Since:** 6
 
@@ -7997,7 +8039,7 @@ Non-full-screen mode means that the layout avoids the status bar and \_\_\_MD\_C
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowLayoutFullScreen](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)(isLayoutFullScreen:
+**Substitutes:** [window.Window.setWindowSystemBarEnable](arkts-arkui-window-window-i.md#setwindowsystembarenable)(names:
 
 <!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -8007,8 +8049,8 @@ Non-full-screen mode means that the layout avoids the status bar and \_\_\_MD\_C
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isFullScreen | boolean | Yes | Whether to set full-screen mode (full-screen mode affects the display of the status bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_). **true** to set full-screen mode, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| isFullScreen | boolean | Yes | 是否设为全屏布局（该全屏布局影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示全屏；false表示非全屏。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setFullScreen
 
@@ -8016,18 +8058,18 @@ Non-full-screen mode means that the layout avoids the status bar and \_\_\_MD\_C
 setFullScreen(isFullScreen: boolean): Promise<void>
 ```
 
-Sets whether the main window or the child window is in full-screen mode. This API uses a promise to return the result.
+设置主窗口或子窗口的布局是否为全屏布局，使用Promise异步回调。
 
-Full-screen mode means that the layout does not avoid the status bar or \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_three-button navigation bar&lt;!-  
--RP15End--&gt;, and components may overlap with them.
+全屏布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
 
-Non-full-screen mode means that the layout avoids the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_, and components do not overlap with them.
-    **NOTE**  
-    
-    This API is supported since API version 6 and deprecated since API version 9. You are advised to use  
-    [setWindowSystemBarEnable()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_  
-    and [setWindowLayoutFullScreen()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_  
-    to implement the full-screen mode.
+非全屏布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议联合使用
+> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
+> 和[setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)替代实现全
+> 屏。
 
 **Since:** 6
 
@@ -8035,7 +8077,7 @@ Non-full-screen mode means that the layout avoids the status bar and \_\_\_MD\_C
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowLayoutFullScreen](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)(isLayoutFullScreen:
+**Substitutes:** [window.Window.setWindowSystemBarEnable](arkts-arkui-window-window-i.md#setwindowsystembarenable)(names:
 
 <!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>--><!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>-End-->
 
@@ -8045,13 +8087,13 @@ Non-full-screen mode means that the layout avoids the status bar and \_\_\_MD\_C
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isFullScreen | boolean | Yes | Whether to set full-screen mode (full-screen mode affects the display of the status bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_). **true** to set full-screen mode, **false** otherwise. |
+| isFullScreen | boolean | Yes | 是否设为全屏布局（该全屏布局影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示全屏；false表示非全屏。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setGestureBackEnabled
 
@@ -8059,11 +8101,11 @@ Non-full-screen mode means that the layout avoids the status bar and \_\_\_MD\_C
 setGestureBackEnabled(enabled: boolean): Promise<void>
 ```
 
-Sets whether to enable the side-swipe gesture for back redirection in the current window. This API can be successfully called only for the main window, and error code 1300004 is returned on other windows.
+设置当前窗口是否启用手势侧滑返回功能，仅主窗可以调用成功，其他类型的窗口调用返回1300004错误码。
 
-After being enabled, this function takes effect only when the window is in full-screen mode and in the foreground with the focus gained.
+开启此功能后，仅当窗口处于全屏模式且位于前台获焦状态下才会生效。
 
-After this function is disabled, the gesture hot zone of the current application is disabled, and the side-swipe for back redirection becomes invalid. After the user switches to another application or returns to the home screen, the gesture hot zone is restored, and the side-swipe for back redirection becomes normal.
+禁用此功能后，当前应用会禁用手势热区，侧滑返回功能失效；切换到其他应用或者回到桌面后，手势热区恢复，侧滑返回功能正常。
 
 **Since:** 13
 
@@ -8079,23 +8121,23 @@ After this function is disabled, the gesture hot zone of the current application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the back gesture feature. **true** to enable, **false** otherwise. |
+| enabled | boolean | Yes | true时开启返回手势功能，false时禁用返回手势功能。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
 
 ## setImmersiveModeEnabledState
 
@@ -8103,7 +8145,7 @@ After this function is disabled, the gesture hot zone of the current application
 setImmersiveModeEnabledState(enabled: boolean): void
 ```
 
-Sets whether to enable the immersive layout for the main window. This API does not change the window mode or size. It can be called only by the main window and child windows.
+设置当前窗口是否开启沉浸式布局，该调用不会改变窗口模式和窗口大小。仅主窗口和子窗口可调用。
 
 **Since:** 12
 
@@ -8119,16 +8161,16 @@ Sets whether to enable the immersive layout for the main window. This API does n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the immersive layout.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** to enable, **false** otherwise.&lt; br&gt; |
+| enabled | boolean | Yes | 是否开启沉浸式布局。&lt;br&gt;true表示开启，false表示关闭。&lt;/br&gt; |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
 
 ## setKeepScreenOn
 
@@ -8136,7 +8178,12 @@ Sets whether to enable the immersive layout for the main window. This API does n
 setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-Sets whether to keep the screen always on. This API uses a promise to return the result.
+设置屏幕是否为常亮状态，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowKeepScreenOn()](arkts-arkui-window-window-i.md#setwindowkeepscreenon)替代。
 
 **Since:** 6
 
@@ -8154,13 +8201,13 @@ Sets whether to keep the screen always on. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes | Whether to keep the screen always on. **true** to keep the screen always on, **false** otherwise. |
+| isKeepScreenOn | boolean | Yes | 设置屏幕是否为常亮状态。true表示常亮；false表示不常亮。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setKeepScreenOn
 
@@ -8168,7 +8215,13 @@ Sets whether to keep the screen always on. This API uses a promise to return the
 setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to keep the screen always on. This API uses an asynchronous callback to return the result.
+设置屏幕是否为常亮状态，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowKeepScreenOn()](arkts-arkui-window-window-i.md#setwindowkeepscreenon)
+> 替代。
 
 **Since:** 6
 
@@ -8186,8 +8239,8 @@ Sets whether to keep the screen always on. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes | Whether to keep the screen always on. **true** to keep the screen always on, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| isKeepScreenOn | boolean | Yes | 设置屏幕是否为常亮状态。true表示常亮；false表示不常亮。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setLayoutFullScreen
 
@@ -8195,11 +8248,16 @@ Sets whether to keep the screen always on. This API uses an asynchronous callbac
 setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result.
+设置主窗口或子窗口的布局是否为沉浸式布局，使用callback异步回调。
 
-An immersive layout means that the layout does not avoid the status bar or \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_, and components may overlap with them.
+沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
 
-A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_, and components do not overlap with them.
+非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)替代。
 
 **Since:** 7
 
@@ -8217,8 +8275,8 @@ A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (Immersive layout mode does not affect the display of the status bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.) **true** if immersive, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| isLayoutFullScreen | boolean | Yes | 窗口的布局是否为沉浸式布局（该沉浸式布局不影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示沉浸式布局； false表示非沉浸式布局。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setLayoutFullScreen
 
@@ -8226,11 +8284,16 @@ A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\
 setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 ```
 
-Sets whether the main window layout or the child window layout is immersive. This API uses a promise to return the result.
+设置主窗口或子窗口的布局是否为沉浸式布局，使用Promise异步回调。
 
-An immersive layout means that the layout does not avoid the status bar or \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_, and components may overlap with them.
+沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
 
-A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_, and components do not overlap with them.
+非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)替代。
 
 **Since:** 7
 
@@ -8248,13 +8311,13 @@ A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (Immersive layout mode does not affect the display of the status bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_.) **true** if immersive, **false** otherwise. |
+| isLayoutFullScreen | boolean | Yes | 窗口的布局是否为沉浸式布局（该沉浸式布局不影响状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;显示）。true表示沉浸式布局； false表示非沉浸式布局。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setOutsideTouchable
 
@@ -8262,9 +8325,13 @@ A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\
 setOutsideTouchable(touchable: boolean): Promise<void>
 ```
 
-Sets whether the area outside the child window is touchable. This API uses a promise to return the result.
-    Starting from API version 9, the area outside the child window is touchable by default. This API is no longer  
-    supported and no substitute API is provided.
+设置是否允许可点击子窗口之外的区域，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
+> 
+> 从API version 9开始，系统默认允许点击子窗口之外的区域，此接口不再支持使用，也不再提供替代接口。
 
 **Since:** 7
 
@@ -8280,13 +8347,13 @@ Sets whether the area outside the child window is touchable. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touchable | boolean | Yes | Whether the area outside the child window is touchable. **true** if touchable, **false** otherwise. |
+| touchable | boolean | Yes | 设置是否可点击。true表示可点击；false表示不可点击。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setOutsideTouchable
 
@@ -8294,9 +8361,13 @@ Sets whether the area outside the child window is touchable. This API uses a pro
 setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the area outside the child window is touchable. This API uses an asynchronous callback to return the result.
-    Starting from API version 9, the area outside the child window is touchable by default. This API is no longer  
-    supported and no substitute API is provided.
+设置是否允许可点击子窗口之外的区域，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
+> 
+> 从API version 9开始，系统默认允许点击子窗口之外的区域，此接口不再支持使用，也不再提供替代接口。
 
 **Since:** 7
 
@@ -8312,8 +8383,8 @@ Sets whether the area outside the child window is touchable. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touchable | boolean | Yes | Whether the area outside the child window is touchable. **true** if touchable, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| touchable | boolean | Yes | 设置是否可点击。true表示可点击；false表示不可点击。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setParentWindow
 
@@ -8327,11 +8398,11 @@ ArkTS-Sta:
 setParentWindow(windowId: int): Promise<void>
 ```
 
-Sets a new parent window for this child window. The new parent window can be a main window, another child window,or a floating window in the same process. This API uses a promise to return the result.
+更改子窗口的父窗口，该父窗口仅支持同进程下的主窗口、子窗口或悬浮窗，使用Promise异步回调。
 
-If the child window is focused and the new parent window is in the foreground, the new parent window will be raised.
+如果该子窗口处于获焦状态，且新的父窗口处于前台，则会抬升父窗口的层级。
 
-If the child window is focused and the new parent window has a modal child window with a higher level, the focus will be transferred to that modal child window.
+如果该子窗口处于获焦状态，且新的父窗口的子窗口存在层级更高的模态子窗口，则焦点会转移给该模态子窗口。
 
 **Since:** 19
 
@@ -8347,23 +8418,23 @@ If the child window is focused and the new parent window has a modal child windo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Parent window ID, which must be an integer. You are advised to call [getWindowProperties()]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain the parent window ID. |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 父窗口id，该参数应为整数。推荐使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)方法获取父 窗口id属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: The parent window does not exist or has been destroyed. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
+| 1300009 | The parent window is invalid. Possible cause: The parent window does not exist or has been destroyed. |
 
 ## setPreferredOrientation
 
@@ -8371,12 +8442,7 @@ If the child window is focused and the new parent window has a modal child windo
 setPreferredOrientation(orientation: Orientation): Promise<void>
 ```
 
-Sets the preferred orientation for the main window. This API uses a promise to return the result. This API does not take effect when it is called by a child window.
-
-Before \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect.
-
-Starting from \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_, this API can be called by the main window and the system window with **WindowType** set to **TYPE\_WALLET\_SWIPE\_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set,the last orientation request will be restored. When the display orientation is set for the system window whose  
-**WindowType** is **TYPE\_WALLET\_SWIPE\_CARD** and takes effect, the foreground application will transition to the background.
+设置主窗口的显示方向属性，使用Promise异步回调。非主窗口调用后不生效不报错。
 
 **Since:** 9
 
@@ -8392,20 +8458,20 @@ Starting from \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_OpenHarmony 6.1\_\_\_MD\_COMM
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Display orientation. |
+| orientation | [Orientation](arkts-arkui-window-orientation-e.md) | Yes | 窗口显示方向的属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Invalid parameter value range. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 401 | Parameter error. Possible cause: Failed to convert parameter to Orientation. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setPreferredOrientation
 
@@ -8413,13 +8479,8 @@ Starting from \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_OpenHarmony 6.1\_\_\_MD\_COMM
 setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 ```
 
-Sets the preferred orientation for this window. This API uses an asynchronous callback to return the result. For details about the development practices of orientation, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
-
-Before \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_, this API can be called only by and takes effect for the main window. If it is called for other window types, it does not take effect.
-
-Starting from \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_OpenHarmony 6.1\_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_, this API can be called by the main window and the system window with **WindowType** set to **TYPE\_WALLET\_SWIPE\_CARD**. If it is called for other window types, it does not take effect. When the system window calls the **setPreferredOrientation** API, if there is a higher-level window for which the display orientation has been set, the call will not take effect immediately. In this case, the set display orientation will be recorded. When there is a no higher-level window with the display orientation set,the last orientation request will be restored. When the display orientation is set for the system window whose  
-**WindowType** is **TYPE\_WALLET\_SWIPE\_CARD** and takes effect, the foreground application will transition to the background.
+设置主窗口的显示方向属性，使用callback异步回调。相关横竖屏开发实践查询  
+[横竖屏切换](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-landscape-and-portrait-development)。非主窗口调用后不生效不报错。
 
 **Since:** 9
 
@@ -8435,15 +8496,15 @@ Starting from \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_OpenHarmony 6.1\_\_\_MD\_COMM
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Display orientation. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. The callback indicates the API call result. It does not mean that the application rotation animation ends. |
+| orientation | [Orientation](arkts-arkui-window-orientation-e.md) | Yes | 窗口显示方向的属性。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。该回调函数返回调用结果是否成功，非应用旋转动效结束。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Invalid parameter value range. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 401 | Parameter error. Possible cause: Failed to convert parameter to Orientation. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setPreferredOrientationWithResult
 
@@ -8451,7 +8512,8 @@ Starting from \_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_OpenHarmony 6.1\_\_\_MD\_COMM
 setPreferredOrientationWithResult(orientation: Orientation): Promise<OrientationResult>
 ```
 
-Sets the preferred orientation for the main window.This API uses a promise to return the result.It does not take effect on devices that do not support rotation with the sensor,on 2-in-1 devices or for the child window.
+设置主窗口的显示方向属性，通过Promise异步返回显示方向的执行结果。非主窗口调用后不生效，OrientationResult返回window.  
+[OrientationExecutionResult](arkts-arkui-window-orientationexecutionresult-e.md).ORIENTATION_IGNORED。
 
 **Since:** 26.0.0
 
@@ -8469,21 +8531,21 @@ Sets the preferred orientation for the main window.This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The orientation config of the window |
+| orientation | [Orientation](arkts-arkui-window-orientation-e.md) | Yes | 窗口显示方向的属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OrientationResult&gt; | Promise used to return the OrientationResult. |
+| Promise&lt;OrientationResult&gt; | Promise对象。设置窗口显示方向的执行结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setPrivacyMode
 
@@ -8491,7 +8553,12 @@ Sets the preferred orientation for the main window.This API uses a promise to re
 setPrivacyMode(isPrivacyMode: boolean): Promise<void>
 ```
 
-Sets whether this window is in privacy mode. This API uses a promise to return the result. A window in privacy mode cannot be captured or recorded. This API can be used in scenarios where screen capture or recording is disabled.
+设置窗口是否为隐私模式，使用Promise异步回调。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。此接口可用于禁止截屏/录屏的场景。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowPrivacyMode()](arkts-arkui-window-window-i.md#setwindowprivacymode)替代。
 
 **Since:** 7
 
@@ -8509,13 +8576,13 @@ Sets whether this window is in privacy mode. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | Whether the window is in privacy mode. **true** if in privacy mode, **false** otherwise. |
+| isPrivacyMode | boolean | Yes | 窗口是否为隐私模式。true表示模式开启；false表示模式关闭。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setPrivacyMode
 
@@ -8523,7 +8590,13 @@ Sets whether this window is in privacy mode. This API uses a promise to return t
 setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this window is in privacy mode. This API uses an asynchronous callback to return the result. A window in privacy mode cannot be captured or recorded. This API can be used in scenarios where screen capture or recording is disabled.
+设置窗口是否为隐私模式，使用callback异步回调。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。此接口可用于禁止截屏/录屏的场景。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowPrivacyMode()](arkts-arkui-window-window-i.md#setwindowprivacymode)
+> 替代。
 
 **Since:** 7
 
@@ -8541,8 +8614,8 @@ Sets whether this window is in privacy mode. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | Whether the window is in privacy mode. **true** if in privacy mode, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| isPrivacyMode | boolean | Yes | 窗口是否为隐私模式。true表示模式开启；false表示模式关闭。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setRaiseByClickEnabled
 
@@ -8550,12 +8623,11 @@ Sets whether this window is in privacy mode. This API uses an asynchronous callb
 setRaiseByClickEnabled(enable: boolean): Promise<void>
 ```
 
-Sets whether to enable a child window to raise itself by click. This API uses a promise to return the result.
+禁止/使能子窗点击抬升功能。使用Promise异步回调。
 
-Generally, when a child window is clicked, it is brought to the forefront among sibling child windows of the same type that share the same parent window within the application. If the **enable** parameter is set to **false**,when the child window is clicked, it still stays in its existing position.
+通常来说，点击一个子窗口，会将该子窗口显示抬升到应用内同一个父窗口下同类型子窗口的最上方，如果设置为false，那么点击子窗口的时候，不会将该子窗口进行抬升，而是保持不变。
 
-Before calling this API, ensure that the child window has been created and  
-[showWindow()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ has been successfully executed.
+使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
 
 **Since:** 14
 
@@ -8569,24 +8641,24 @@ Before calling this API, ensure that the child window has been created and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether a child window can be raised by clicking. **true** if the child window can be raised by clicking, **false** otherwise. |
+| enable | boolean | Yes | 设置子窗口点击抬升功能是否使能，true表示使能，false表示禁止。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 1300009 | The parent window is invalid. |
 
 ## setReceiveDragEventEnabled
 
@@ -8594,11 +8666,11 @@ Before calling this API, ensure that the child window has been created and
 setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 ```
 
-Sets whether the current window can receive [drag events]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API uses a promise to return the result.
+设置当前窗口是否能接收[拖拽事件](arkts-arkui-common-dragevent-i.md)，使用Promise异步回调。
 
-By default, the value of **enabled** is **true**, indicating that the window can receive drag events.
+默认场景下为true，能够接收拖拽事件。
 
-If the value of **enabled** is **false**, the current window cannot receive drag events.
+当enable为false，当前窗口不能接收拖拽事件。
 
 **Since:** 23
 
@@ -8614,21 +8686,21 @@ If the value of **enabled** is **false**, the current window cannot receive drag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether the window can receive drag events. **true** if the window can receive drag events; **false** otherwise. |
+| enabled | boolean | Yes | 窗口是否能接收拖拽事件。true表示能够接收拖拽事件；false表示不能接收拖拽事件。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function cannot work because the current device does not support this ability. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error |
+| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error |
+| 801 | Capability not supported. Function cannot work because the current device does not support this ability. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## setRelativePositionToParentWindowEnabled
 
@@ -8644,14 +8716,13 @@ setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor
         offsetX?: int, offsetY?: int): Promise<void>
 ```
 
-Sets whether a first-level child window can maintain a fixed relative position to the main window. This API works only in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode. This API uses a promise to return the result.
+用于设置一级子窗是否支持与主窗保持相对位置不变。使用Promise异步回调。
 
-The relative position is defined by the offset between the anchor points of the child window and the main window.Both the child window and the main window use the same type of anchor point.
+该相对位置通过一级子窗与主窗之间锚点的偏移量表示，子窗和主窗使用的窗口锚点相同。
 
-1. This API applies only to level-1 child windows that are not maximized.2. Once this API is called on a child window, its display position will immediately follow the main window and maintain a fixed relative position. This effect will persist until this API is called again with **false**.3. If this API is called on a child window, subsequent calls to [moveWindowTo()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ or [maximize()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to modify the window's position or size will not take effect.
+1. 只支持一级子窗调用该接口，子窗需处于自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）。2. 当子窗调用该接口后，立即使其显示位置跟随主窗并保持相对位置不变，除非传入false再次调用该接口，否则效果将持续。3. 当子窗调用该接口后，再调用[moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)、[maximize()](arkts-arkui-window-window-i.md#maximize)修改窗口位置或大小的接口将不生效。
 
-Once this API is successfully called, the  
-[setFollowParentWindowLayoutEnabled()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ API will no longer take effect.
+该接口调用生效后，[setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)接口调用不生效。
 
 **Since:** 20
 
@@ -8665,25 +8736,25 @@ Once this API is successfully called, the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | The value true means the first level sub window supports maintaining the same relative position with the main window, and false means the opposite. |
-| anchor | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Window anchor point that setting when the relative position between the primary sub window and the main window remains unchanged. The default value is window.WindowAnchor.TopStart, meaning the default anchor point is the top-left corner of the window. |
-| offsetX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | The x-axis offset, measured in px. between the anchor point of the first level sub window and the anchor point of the main window. The default value is 0. |
-| offsetY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | The y-axis offset, measured in px. between the anchor point of the first level sub window and the anchor point of the main window. The default value is 0. |
+| enabled | boolean | Yes | 一级子窗是否支持与主窗保持相对位置不变。true表示支持；false表示不支持。 |
+| anchor | [WindowAnchor](arkts-arkui-window-windowanchor-e.md) | No | 一级子窗与主窗保持相对位置不变时的窗口锚点枚举。该参数仅在enabled为true时生效， 默认值为window.WindowAnchor.TopStart，即默认锚点为窗口左上角。 |
+| offsetX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 一级子窗锚点与主窗锚点位置的x轴偏移量，单位为px。该参数仅在enabled为true时生效， 仅支持整数输入，浮点数向下取整，默认值为0。 |
+| offsetY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 一级子窗锚点与主窗锚点位置的y轴偏移量，单位为px。该参数仅在enabled为true时生效， 仅支持整数输入，浮点数向下取整，默认值为0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function setRelativePositionToParentWindowEnabled can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Function setRelativePositionToParentWindowEnabled can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
 
 ## setResizeByDragEnabled
 
@@ -8691,7 +8762,7 @@ Once this API is successfully called, the
 setResizeByDragEnabled(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable the main window or child window with decorations to resize itself by dragging. This API uses an asynchronous callback to return the result.
+禁止/使能通过拖拽方式缩放主窗口或启用装饰的子窗口的功能。使用callback异步回调。
 
 **Since:** 14
 
@@ -8707,17 +8778,17 @@ Sets whether to enable the main window or child window with decorations to resiz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Disable window to resize by drag if false. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | The callback of setResizeByDragEnabled. |
+| enable | boolean | Yes | 设置窗口是否使能通过拖拽进行缩放，true表示使能，false表示禁止。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## setResizeByDragEnabled
 
@@ -8725,7 +8796,7 @@ Sets whether to enable the main window or child window with decorations to resiz
 setResizeByDragEnabled(enable: boolean): Promise<void>
 ```
 
-Sets whether to enable the main window or child window with decorations to resize itself by dragging. This API uses a promise to return the result.
+禁止/使能通过拖拽方式缩放主窗口或启用装饰的子窗口的功能。使用Promise异步回调。
 
 **Since:** 14
 
@@ -8741,22 +8812,22 @@ Sets whether to enable the main window or child window with decorations to resiz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Disable window to resize by drag if false. |
+| enable | boolean | Yes | 设置窗口是否使能通过拖拽进行缩放，true表示使能，false表示禁止。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## setSeparationTouchEnabled
 
@@ -8764,18 +8835,16 @@ Sets whether to enable the main window or child window with decorations to resiz
 setSeparationTouchEnabled(enabled: boolean): Promise<void>
 ```
 
-Sets whether the current window supports the event separation state. This API uses a promise to return the result. In the default scenario, the value of **enabled** is **true**, indicating that the event separation state is supported.
+设置当前窗口是否支持事件分离状态，使用Promise异步回调。默认场景下为true，支持事件分离状态。
 
-When the event separation state is supported:
+当enable为true，支持事件分离状态下：
 
-- All events generated by finger taps are sent to the window that the finger taps hit.
+- 所有手指点击产生的事件均会发送给其手指命中的窗口。
 
-When the event separation state is not supported (the value of **enabled** is **false**):
+当enable为false，不支持事件分离状态下：
 
-- If the first finger taps the window, keeps hitting the window, and does not lift up, the events generated by  
-subsequent taps of other fingers are distributed to the window, regardless of whether the taps of other fingers hit the window.  
-- If the first finger taps the window and does not keep hitting the window, the events generated by subsequent  
-taps of other fingers are not distributed to the window and are discarded by the system, even if the taps of other fingers hit the window.
+- 当第一根手指点击持续命中该窗口未抬起时，后续其他手指无论是否点击命中该窗口，其产生的事件均会分发给该窗口。  
+- 当第一根手指点击未保持持续命中该窗口时，后续其他手指即使点击命中该窗口，其产生的事件也不会分发给该窗口，该事件会被系统丢弃。
 
 **Since:** 23
 
@@ -8791,21 +8860,21 @@ taps of other fingers are not distributed to the window and are discarded by the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether the window supports the event separation state. **true** if supported; **false** otherwise. |
+| enabled | boolean | Yes | 窗口是否支持事件分离状态。true表示支持；false表示不支持。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function cannot work because the current device does not support this ability. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error |
+| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error |
+| 801 | Capability not supported. Function cannot work because the current device does not support this ability. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## setSpecificSystemBarEnabled
 
@@ -8813,9 +8882,9 @@ taps of other fingers are not distributed to the window and are discarded by the
 setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnimation?: boolean): Promise<void>
 ```
 
-Sets whether to show or hide the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ of the main window. This API uses a promise to return the result.
+设置主窗口状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏，使用Promise异步回调。
 
-The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_are shown or hidden. This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **Since:** 11
 
@@ -8831,23 +8900,23 @@ The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the set of system bar |
+| name | [SpecificSystemBar](arkts-arkui-window-specificsystembar-t.md) | Yes | the set of system bar |
 | enable | boolean | Yes | Show specific system bar if true, or hide specific system bar if false. |
-| enableAnimation | boolean | No | Whether using animation during this setting, using animation if true or not using animation if false.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| enableAnimation | boolean | No | Whether using animation during this setting, using animation if true or not using animation if false.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setStatusBarColor
 
@@ -8855,9 +8924,9 @@ The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DE
 setStatusBarColor(color: ColorMetrics): Promise<void>
 ```
 
-Sets the text color of the status bar in the main window. This API uses a promise to return the result.
+设置主窗口状态栏的文字颜色，使用Promise异步回调。
 
-Setting the status bar text color is not supported for child windows. Calling this API on a child window will have no effect. The setting does not take effect when the main window is in non-full-screen or non-maximized mode(such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+子窗口不支持设置状态栏文字颜色，调用无效果。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **Since:** 18
 
@@ -8873,21 +8942,21 @@ Setting the status bar text color is not supported for child windows. Calling th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Text color of the status bar. |
+| color | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Yes | 要设置的状态栏颜色值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported on this device. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
+| 1300003 | This window manager service works abnormally. Possible cause: Internal task error. |
+| 801 | Capability not supported on this device. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## setSubWindowModal
 
@@ -8895,11 +8964,11 @@ Setting the status bar text color is not supported for child windows. Calling th
 setSubWindowModal(isModal: boolean): Promise<void>
 ```
 
-Enables the modal property of the child window. This API uses a promise to return the result.
+设置子窗的模态属性是否启用，使用Promise异步回调。
 
-This API must be called by a child window and the setting takes effect for the child window. After the modal property is enabled, the parent window does not respond to user interactions until the child window is closed or the child window's modal property is disabled.
+子窗口调用该接口时，设置子窗口模态属性是否启用。启用子窗口模态属性后，其父级窗口不能响应用户操作，直到子窗口关闭或者子窗口的模态属性被禁用。
 
-If this API is called by a main window, an error is reported.
+子窗口之外的窗口调用该接口时，会报错。
 
 **Since:** 12
 
@@ -8915,23 +8984,23 @@ If this API is called by a main window, an error is reported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isModal | boolean | Yes | Whether to enable the modal property of the child window. **true** to enable, **false** otherwise. |
+| isModal | boolean | Yes | 设置子窗口模态属性是否启用，true为启用，false为不启用。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally.<br>**Applicable version:** 20 and later |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## setSubWindowModal
 
@@ -8939,16 +9008,16 @@ If this API is called by a main window, an error is reported.
 setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>
 ```
 
-Sets the modality type of the child window. This API uses a promise to return the result.
+设置子窗的模态类型，使用Promise异步回调。
 
-When the child window is of the window-modal type, its parent window does not respond to user interactions until the child window is closed or the child window's modal property is disabled.
+当子窗口模态类型为模窗口子窗时，其父级窗口不能响应用户操作，直到子窗口关闭或者子窗口的模态类型被禁用。
 
-When the child window is of the application-modal type, its parent window and the windows from other instances of the application do not respond to user interactions until the child window is closed or the child window's modal property is disabled.
+当子窗口模态类型为模应用子窗时，其父级窗口与该应用其他实例的窗口不能响应用户操作，直到子窗口关闭或者子窗口的模态类型被禁用。
 
-This API is used to set the modality type. To disable the modal property, you are advised to use  
-[setSubWindowModal\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_12+\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+此接口仅支持设置子窗口模态类型，当需要禁用子窗口模态属性时，建议使用  
+[setSubWindowModal&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-window-window-i.md#setsubwindowmodal)。
 
-If this API is called by a window other than the child window, an error is reported.
+子窗口之外的窗口调用该接口时，会报错。
 
 **Since:** 14
 
@@ -8964,24 +9033,24 @@ If this API is called by a window other than the child window, an error is repor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isModal | boolean | Yes | Whether to enable the modal property of the child window. **true** to enable, **false** otherwise. Currently, this parameter can only be set to **true**. |
-| modalityType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Modality type of the child window. |
+| isModal | boolean | Yes | 设置子窗口模态属性是否启用，true为启用，false为不启用。当前仅支持设置为true。 |
+| modalityType | [ModalityType](arkts-arkui-window-modalitytype-e.md) | Yes | 子窗口模态类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 20 and later |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows are supported. |
+| 1300003 | This window manager service works abnormally.<br>**Applicable version:** 20 and later |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## setSubWindowZLevel
 
@@ -8995,10 +9064,9 @@ ArkTS-Sta:
 setSubWindowZLevel(zLevel: int): Promise<void>
 ```
 
-Sets the z-level of the current child window. Child windows with modal properties are not supported. This API uses a promise to return the result.
+设置当前子窗口层级级别，设置了模态属性的子窗不支持。使用Promise异步回调。
 
-Changing the z-level of a child window using this API will not cause a focus switch. You are advised to use  
-[shiftAppWindowFocus()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for focus switching.
+通过该接口改变子窗口的显示层级时，不会发生焦点切换。推荐使用[shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md#shiftappwindowfocus)进行焦点切换。
 
 **Since:** 18
 
@@ -9014,64 +9082,24 @@ Changing the z-level of a child window using this API will not cause a focus swi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zLevel | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Z-level of the child window. The default value is **0**, and the value range is [-10000, 10000]. Only integers are supported, and floating-point numbers will be rounded down. |
+| zLevel | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 子窗口层级级别。默认值为0，取值范围为[-10000, 10000]，该参数仅支持整数输入，浮点数输入将向下取整。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function setSubWindowZLevel can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only non-modal subwindows are supported. |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. |
-
-## setSupportedWindowModes
-
-```TypeScript
-setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowMode>): Promise<void>
-```
-
-Sets the supported window modes of the app window.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Window-setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowMode>): Promise<void>--><!--Device-Window-setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowMode>): Promise<void>-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | The supported modes of the window. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. Only main windows and subwindows are supported. 2. Not supported when subwindows are set to follow the main window. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. When called on a main window, the parameter should not only contain SPLIT. 2. When called on a sub window, the parameter should not contain SPLIT. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Function setSubWindowZLevel can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only non-modal subwindows are supported. |
+| 1300009 | The parent window is invalid. |
 
 ## setSystemAvoidAreaEnabled
 
@@ -9079,9 +9107,8 @@ Sets the supported window modes of the app window.
 setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 ```
 
-Enables the capability to obtain the window avoidance area information using  
-[getWindowAvoidArea()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or listen for window avoidance area changes using  
-[on('avoidAreaChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_after a global floating window, modal window, or system window is created.
+创建全局悬浮窗、模态窗或WindowType窗口类型为系统窗口时，调用该接口使能后才可以通过[getWindowAvoidArea()](arkts-arkui-window-window-i.md#getwindowavoidarea)获取窗口避让区信息或通过  
+[on('avoidAreaChange')](window.Window.on(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;))监听窗口避让区变化。
 
 **Since:** 18
 
@@ -9103,16 +9130,16 @@ Enables the capability to obtain the window avoidance area information using
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. Possible cause: The device does not support the API itself. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only global floating windows, dialog windows, or Window Type as system windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. Possible cause: The device does not support the API itself. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only global floating windows, dialog windows, or Window Type as system windows are supported. |
 
 ## setSystemBarEnable
 
@@ -9120,11 +9147,17 @@ Enables the capability to obtain the window avoidance area information using
 setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
 ```
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ This API uses an asynchronous callback to return the result.
+&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用callback异步回调。
 
-From API version 12, \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_this API does not take effect on 2-in-1 devices.\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_
+从API version 12开始，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
 
-The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
+> 替代。
 
 **Since:** 7
 
@@ -9142,8 +9175,8 @@ The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in full-screen mode.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| names | Array&lt;'status' \| 'navigation'&gt; | Yes | 设置窗口全屏模式时状态栏和&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;是否显示。&lt;br&gt;例如，需全部显示，该参 数设置为['status','navigation']；设置为[]，则不显示。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setSystemBarEnable
 
@@ -9151,11 +9184,17 @@ The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DE
 setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 ```
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ This API uses a promise to return the result.
+&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用Promise异步回调。
 
-From API version 12, \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_this API does not take effect on 2-in-1 devices.\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_
+从API version 12开始，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
 
-The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
+> 替代。
 
 **Since:** 7
 
@@ -9173,13 +9212,13 @@ The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in full-screen mode.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+| names | Array&lt;'status' \| 'navigation'&gt; | Yes | 设置窗口全屏模式时状态栏和&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;是否显示。&lt;br&gt;例如，需全部显示，该参 数设置为['status','navigation']；设置为[]，则不显示。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setSystemBarProperties
 
@@ -9187,9 +9226,15 @@ The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DE
 setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
 ```
 
-Sets the properties of the \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button navigation bar and \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_status bar of the main window.This API uses an asynchronous callback to return the result. \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_This API does not take effect on 2-in-1devices.\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_
+设置主窗口&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性，使用callback异步回调，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
 
-This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarProperties()](arkts-arkui-window-window-i.md#setwindowsystembarproperties)
+> 替代。
 
 **Since:** 6
 
@@ -9207,8 +9252,8 @@ This API does not take effect when it is called by a child window. The configura
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| systemBarProperties | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Properties of the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_status bar. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | &lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setSystemBarProperties
 
@@ -9216,9 +9261,15 @@ This API does not take effect when it is called by a child window. The configura
 setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 ```
 
-Sets the properties of the \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button navigation bar and \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_status bar of the main window.This API uses a promise to return the result. \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_This API does not take effect on 2-in-1 devices.\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_
+设置主窗口&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性，使用Promise异步回调，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
 
-This API does not take effect when it is called by a child window.
+子窗口调用后不生效。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [setWindowSystemBarProperties()](arkts-arkui-window-window-i.md#setwindowsystembarproperties)
+> 替代。
 
 **Since:** 6
 
@@ -9236,13 +9287,13 @@ This API does not take effect when it is called by a child window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| systemBarProperties | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Properties of the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_status bar. |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | &lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setTitleAndDockHoverShown
 
@@ -9250,7 +9301,7 @@ This API does not take effect when it is called by a child window.
 setTitleAndDockHoverShown(isTitleHoverShown?: boolean, isDockHoverShown?: boolean): Promise<void>
 ```
 
-Sets whether to show the window title bar and dock bar when the cursor hovers over the hot zone while the main window is in full-screen mode. This API uses a promise to return the result.
+设置主窗口进入全屏模式时鼠标Hover到热区上是否显示窗口标题栏和dock栏，使用Promise异步回调。
 
 **Since:** 14
 
@@ -9266,22 +9317,22 @@ Sets whether to show the window title bar and dock bar when the cursor hovers ov
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isTitleHoverShown | boolean | No | Whether to show the window title bar.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** to show, **false** otherwise. The default value is **true**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
-| isDockHoverShown | boolean | No | Whether to show the dock bar.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** to show, **false** otherwise. The default value is **true**.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| isTitleHoverShown | boolean | No | 是否显示窗口标题栏。&lt;br&gt;true表示显示窗口标题栏；false表示不显示窗口标题栏。默认值是true。&lt;/br&gt; |
+| isDockHoverShown | boolean | No | 是否显示dock栏。&lt;br&gt;true表示显示dock栏；false表示不显示dock栏。默认值是true。&lt;/br&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. |
 
 ## setTouchable
 
@@ -9289,7 +9340,12 @@ Sets whether to show the window title bar and dock bar when the cursor hovers ov
 setTouchable(isTouchable: boolean): Promise<void>
 ```
 
-Sets whether this window is touchable. This API uses a promise to return the result.
+设置窗口是否为可触状态，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowTouchable()](arkts-arkui-window-window-i.md#setwindowtouchable)替代。
 
 **Since:** 7
 
@@ -9307,13 +9363,13 @@ Sets whether this window is touchable. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isTouchable | boolean | Yes | Whether the window is touchable. **true** if touchable, **false** otherwise. |
+| isTouchable | boolean | Yes | 窗口是否为可触状态。true表示可触；false表示不可触。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## setTouchable
 
@@ -9321,7 +9377,13 @@ Sets whether this window is touchable. This API uses a promise to return the res
 setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this window is touchable. This API uses an asynchronous callback to return the result.
+设置窗口是否为可触状态，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [setWindowTouchable()](arkts-arkui-window-window-i.md#setwindowtouchable)
+> 替代。
 
 **Since:** 7
 
@@ -9339,8 +9401,8 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isTouchable | boolean | Yes | Whether the window is touchable. **true** if touchable, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| isTouchable | boolean | Yes | 窗口是否为可触状态。true表示可触；false表示不可触。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## setTouchableAreas
 
@@ -9348,7 +9410,7 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 setTouchableAreas(rects: Array<Rect>): Promise<void>
 ```
 
-Sets the touchable areas for this window. By default, the entire window is touchable. If a touchable area is set,touch events outside this area are transparently transmitted. The setting becomes invalid after the window rectangle changes.
+实现设置窗口可触摸区域；不设置时默认整个窗口区域可触摸；设置窗口可触摸区域后，区域外触摸事件将被透传；如果窗口区域发生变化需要重新设置。
 
 **Since:** 26.0.0
 
@@ -9367,7 +9429,7 @@ Sets the touchable areas for this window. By default, the entire window is touch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rects | Array&lt;Rect&gt; | Yes | Touchable areas. The maximum number of touchable areas cannot exceed 10, and each touchable area cannot exceed the window area. |
+| rects | Array&lt;Rect&gt; | Yes | 窗口可触摸区域。可触摸区域最大个数不能超过10个，且范围不能超出窗口区域。 |
 
 **Return value:**
 
@@ -9379,10 +9441,11 @@ Sets the touchable areas for this window. By default, the entire window is touch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 1300002 | This window state is abnormal. |
+| 1300016 | Parameter error. Possible cause: Invalid parameter range. |
+| 201 | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 - 24 |
 
 ## setUIContent
 
@@ -9390,7 +9453,7 @@ Sets the touchable areas for this window. By default, the entire window is touch
 setUIContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-Loads the content of a page, with its path in the current project specified, to this window. This API uses an asynchronous callback to return the result.
+根据当前工程中指定的某个页面路径为窗口加载具体页面内容，使用callback异步回调。
 
 **Since:** 9
 
@@ -9406,15 +9469,16 @@ Loads the content of a page, with its path in the current project specified, to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page to which the content will be loaded |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| path | string | Yes | 要加载到窗口中的页面内容的路径，Stage模型下该路径需添加到工程的main_pages.json文件中，FA模型下该路径需添加到工程的config.json文件中。不支持相对路径写法，需与main_pages.json或config.json中的src取值保持一致。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300003 | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## setUIContent
 
@@ -9422,7 +9486,7 @@ Loads the content of a page, with its path in the current project specified, to 
 setUIContent(path: string): Promise<void>
 ```
 
-Loads the content of a page, with its path in the current project specified, to this window. This API uses a promise to return the result.
+根据当前工程中指定的某个页面路径为窗口加载具体页面内容，使用Promise异步回调。
 
 **Since:** 9
 
@@ -9438,20 +9502,21 @@ Loads the content of a page, with its path in the current project specified, to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the page to which the content will be loaded |
+| path | string | Yes | 要加载到窗口中的页面内容的路径，Stage模型下该路径需添加到工程的main_pages.json文件中，FA模型下该路径需添加到工程的config.json文件中。不支持相对路径写法，需与main_pages.json或config.json中的src取值保持一致。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300003 | This window manager service works abnormally.<br>**Applicable version:** 9 and later |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## setWindowBackgroundColor
 
@@ -9459,13 +9524,12 @@ Loads the content of a page, with its path in the current project specified, to 
 setWindowBackgroundColor(color: string | ColorMetrics): void
 ```
 
-Sets the background color for this window.
+设置窗口的背景色。
 
-If this API is not called, the default background color of the window is **'#FFF0F0F0'** in light mode and  
-**'#FF1A1A1A'** in dark mode.
+未调用该接口时，窗口在浅色模式默认背景色为`'#FFF0F0F0'`，在深色模式默认背景色为`'#FF1A1A1A'`。
 
-In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+Stage模型下，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
 **Since:** 9
 
@@ -9481,13 +9545,13 @@ In the stage model, this API must be used after the call of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | string \| ColorMetrics | Yes | the specified color.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| color | string \| ColorMetrics | Yes | 需要设置的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'。 从API version 18开始，此参数支持ColorMetrics类型。<br>**Since:** 18 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed; |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed; |
 
 ## setWindowBrightness
 
@@ -9501,13 +9565,17 @@ ArkTS-Sta:
 setWindowBrightness(brightness: double): Promise<void>
 ```
 
-Sets the window brightness for the main window. The window brightness takes effect only when the window is in the foreground and has focus. This API uses a promise to return the result.
+主窗口设置窗口亮度。当窗口处于前台且获焦时，窗口亮度生效。使用Promise异步回调。
 
-When the setting is valid, it affects only the physical screen where the window is displayed. It does not apply to virtual displays (for example, casting/mirroring screens).
+窗口亮度生效时只会影响当前设备屏幕亮度，无法修改虚拟屏（如投屏所在的屏幕）的屏幕亮度。
 
-If the input parameter is **-1**, the window brightness reverts to the system brightness (which can be adjusted through Control Panel or shortcut keys).
+当接口入参为-1时，窗口亮度恢复为系统屏幕亮度（可以通过控制中心或快捷键调整）。
 
-When the window moves to the background, the setting becomes invalid, and brightness can be adjusted through Control Panel or shortcut keys. You are advised not to call this API consecutively or when the window transitions to the background. Otherwise, timing issues may occur.
+当窗口退至后台时，窗口亮度失效，可以通过控制中心或快捷键调整。不建议连续调用或窗口退至后台时调用此接口，否则可能产生时序问题。
+
+设备行为差异：
+
+针对TV设备：当前接口不生效也不报错。针对非2in1设备（不包含TV设备）：在OpenHarmony 6.1之前，当前窗口的窗口亮度生效时，控制中心调整系统屏幕亮度不生效。从OpenHarmony 6.1开始，当前窗口的窗口亮度生效时，控制中心可以调整系统屏幕亮度，同时会将当前窗口恢复为系统屏幕亮度。针对2in1设备：在OpenHarmony 5.0.2之前，窗口设置屏幕亮度生效时，控制中心或快捷键调整系统屏幕亮度不生效。从OpenHarmony 5.0.2开始，窗口亮度与系统屏幕亮度保持一致，可以通过本接口、控制中心或者快捷键设置系统屏幕亮度。
 
 **Since:** 9
 
@@ -9523,21 +9591,21 @@ When the window moves to the background, the setting becomes invalid, and bright
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | the specified brightness value. |
+| brightness | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 屏幕亮度值。该参数为浮点数，取值范围为[0.0, 1.0]或-1.0。1.0表示最亮，-1.0表示恢复成设置窗口亮度前的系统控制中心亮度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setWindowBrightness
 
@@ -9551,13 +9619,17 @@ ArkTS-Sta:
 setWindowBrightness(brightness: double, callback: AsyncCallback<void>): void
 ```
 
-Sets the window brightness for the main window. The window brightness takes effect only when the window is in the foreground and has focus. This API uses an asynchronous callback to return the result.
+主窗口设置窗口亮度。当窗口处于前台且获焦时，窗口亮度生效。使用Promise异步回调。
 
-When the setting is valid, it affects only the physical screen where the window is displayed. It does not apply to virtual displays (for example, casting/mirroring screens).
+窗口亮度生效时只会影响当前设备屏幕亮度，无法修改虚拟屏（如投屏所在的屏幕）的屏幕亮度。
 
-If the input parameter is **-1**, the window brightness reverts to the system brightness (which can be adjusted through Control Panel or shortcut keys).
+当接口入参为-1时，窗口亮度恢复为系统屏幕亮度（可以通过控制中心或快捷键调整）。
 
-When the window moves to the background, the setting becomes invalid, and brightness can be adjusted through Control Panel or shortcut keys. You are advised not to call this API consecutively or when the window transitions to the background. Otherwise, timing issues may occur.
+当窗口退至后台时，窗口亮度失效，可以通过控制中心或快捷键调整。不建议连续调用或窗口退至后台时调用此接口，否则可能产生时序问题。
+
+设备行为差异：
+
+针对TV设备：当前接口不生效也不报错。针对非2in1设备（不包含TV设备）：在OpenHarmony 6.1之前，当前窗口的窗口亮度生效时，控制中心调整系统屏幕亮度不生效。从OpenHarmony 6.1开始，当前窗口的窗口亮度生效时，控制中心可以调整系统屏幕亮度，同时会将当前窗口恢复为系统屏幕亮度。针对2in1设备：在OpenHarmony 5.0.2之前，窗口设置屏幕亮度生效时，控制中心或快捷键调整系统屏幕亮度不生效。从OpenHarmony 5.0.2开始，窗口亮度与系统屏幕亮度保持一致，可以通过本接口、控制中心或者快捷键设置系统屏幕亮度。
 
 **Since:** 9
 
@@ -9573,16 +9645,16 @@ When the window moves to the background, the setting becomes invalid, and bright
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | the specified brightness value. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| brightness | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 屏幕亮度值。该参数为浮点数，取值范围为[0.0, 1.0]或-1.0。1.0表示最亮，-1.0表示恢复成设置窗口亮度前的系统控制中心亮度。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setWindowColorSpace
 
@@ -9590,7 +9662,7 @@ When the window moves to the background, the setting becomes invalid, and bright
 setWindowColorSpace(colorSpace:ColorSpace): Promise<void>
 ```
 
-Sets a color space for this window. This API uses a promise to return the result.
+设置当前窗口为广色域模式或默认色域模式，使用Promise异步回调。
 
 **Since:** 9
 
@@ -9606,20 +9678,20 @@ Sets a color space for this window. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the specified color space. |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | 设置色域模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setWindowColorSpace
 
@@ -9627,7 +9699,7 @@ Sets a color space for this window. This API uses a promise to return the result
 setWindowColorSpace(colorSpace:ColorSpace, callback: AsyncCallback<void>): void
 ```
 
-Sets a color space for this window. This API uses an asynchronous callback to return the result.
+设置当前窗口为广色域模式或默认色域模式，使用callback异步回调。
 
 **Since:** 9
 
@@ -9643,15 +9715,15 @@ Sets a color space for this window. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the specified color space. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | 设置色域模式。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setWindowContainerColor
 
@@ -9659,10 +9731,11 @@ Sets a color space for this window. This API uses an asynchronous callback to re
 setWindowContainerColor(activeColor: string, inactiveColor: string): void
 ```
 
-Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after  
-[loadContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+设置主窗口容器在焦点态和非焦点态时的背景色。在Stage模型下，该接口需在调用  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)后使用。
 
-The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, the content area shows the window background color, whereas the title bar shows the container background color.
+窗口容器背景色覆盖整个窗口区域，包括标题栏和内容区域。内容区域背景色默认跟随系统深浅色，当同时使用该接口和  
+[setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
 
 **Since:** 20
 
@@ -9678,17 +9751,17 @@ The background color you set here covers the entire window, including both the t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| activeColor | string | Yes | window container color in active. |
-| inactiveColor | string | Yes | window container color in inactive. |
+| activeColor | string | Yes | 窗口容器处于焦点态时的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'。 |
+| inactiveColor | string | Yes | 窗口容器处于非焦点态时的背景色，为十六进制RGB颜色或ARGB颜色（透明度固定为'FF'），不区分大小写，例如'#00FF00'或'#FF00FF00'。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## setWindowContainerModalColor
 
@@ -9696,10 +9769,11 @@ The background color you set here covers the entire window, including both the t
 setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 ```
 
-Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after  
-[loadContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+设置主窗口容器在焦点态和非焦点态时的背景色。该接口需在调用  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)后使用。
 
-The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_, the content area shows the window background color, whereas the title bar shows the container background color.
+窗口容器背景色覆盖整个窗口区域，包括标题栏和内容区域。内容区域背景色默认跟随系统深浅色，当同时使用该接口和  
+[setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
 
 **Since:** 26.0.0
 
@@ -9716,56 +9790,18 @@ The background color you set here covers the entire window, including both the t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| activeColor | string | Yes | window container color in active. |
-| inactiveColor | string | Yes | window container color in inactive. |
+| activeColor | string | Yes | 窗口容器处于焦点态时的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'。 |
+| inactiveColor | string | Yes | 窗口容器处于非焦点态时的背景色，为十六进制RGB颜色或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
-
-**Example**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    windowStage.loadContent("pages/page2", (err: BusinessError) => {
-      let errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      // Obtain the main window.
-      let windowClass: window.Window | undefined = undefined;
-      windowStage.getMainWindow((err: BusinessError, data) => {
-        let errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        let activeColor: string = '#00000000';
-        let inactiveColor: string = '#FF000000';
-        try {
-          windowClass.setWindowContainerModalColor(activeColor, inactiveColor);
-          console.info('Succeeded in setting window container color.');
-        } catch (exception) {
-          console.error(`Failed to set the window container color. Cause code: ${exception.code}, message: ${exception.message}`);
-        };
-      });
-    });
-  }
-}
-```
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 201 | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
+| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 24 |
 
 ## setWindowCornerRadius
 
@@ -9779,11 +9815,11 @@ ArkTS-Sta:
 setWindowCornerRadius(cornerRadius: double): Promise<void>
 ```
 
-Sets the radius of the rounded corners for a child window or floating window. This API uses a promise to return the result.
+设置子窗或悬浮窗的圆角半径值，使用Promise异步回调。
 
-If the radius of the rounded corner is too large, it may cause the three buttons (maximize, minimize, and close)to be clipped and make their hotspots less recognizable. Set an appropriate radius based on the window size.
+圆角半径值过大将会导致三键（最大化、最小化、关闭按钮）位置被裁切，且会导致热区不易识别，请根据窗口大小设置合适的圆角半径值。
 
-Before calling this API, you can call [getWindowCornerRadius()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the default radius of rounded corners of the window.
+在调用此接口之前调用[getWindowCornerRadius()](arkts-arkui-window-window-i.md#getwindowcornerradius)接口可以获得窗口默认圆角半径值。
 
 **Since:** 17
 
@@ -9799,23 +9835,23 @@ Before calling this API, you can call [getWindowCornerRadius()]\_\_\_JSDOC\_LINK
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cornerRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the rounded corners, measured in vp. The value is a floating-point number greater than or equal to 0.0. The value **0.0** means that the window does not use rounded corners. |
+| cornerRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示窗口圆角的半径值。该参数为浮点数，单位为vp，取值范围为[0.0, +∞)，取值为0.0时表示没有窗口圆角。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: The corner radius is less than zero. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: The corner radius is less than zero. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. |
 
 ## setWindowDecorHeight
 
@@ -9829,13 +9865,12 @@ ArkTS-Sta:
 setWindowDecorHeight(height: int): void
 ```
 
-Sets the height of the title bar of this window. This API takes effect for the window that has a title bar and a three-button area. In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ takes effect.
+设置窗口的标题栏高度，对存在标题栏和三键区的窗口形态生效。如果使用Stage模型，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
-For tablets, if this API is called outside of  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode, the change applies once the device switches to free windows mode. If this API is called in free windows mode, the change takes effect immediately.
+当主窗口进入全屏沉浸状态时，此时鼠标Hover到窗口标题栏热区时，会显示悬浮标题栏，悬浮标题栏高度固定为37vp。
 
-When the main window transitions into full-screen mode, hovering the mouse over the hot zone of the window's title bar region will cause a floating title bar to appear, with a fixed height of 37 vp.
+由于系统像素转换可能存在精度误差，设置后调用[getWindowDecorHeight()](arkts-arkui-window-window-i.md#getwindowdecorheight)获取的值可能与设置的值存在1vp的差异。
 
 **Since:** 11
 
@@ -9851,15 +9886,15 @@ When the main window transitions into full-screen mode, hovering the mouse over 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Height of the title bar. It takes effect only for the window with the title bar. The value is an integer in the range [37,112]. The unit is vp. If a floating-point number is passed in, the value is rounded down. A value outside the range is invalid. |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 设置的窗口标题栏高度，仅支持具有窗口标题栏的窗口。该参数为整数，浮点数输入将向下取整，取值范围为[37,112]，范围外为非法参数，单位为vp。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Invalid parameter range. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 401 | Parameter error. Possible cause: Invalid parameter range. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## setWindowDecorVisible
 
@@ -9867,11 +9902,11 @@ When the main window transitions into full-screen mode, hovering the mouse over 
 setWindowDecorVisible(isVisible: boolean): void
 ```
 
-Sets whether the title bar is visible in the window. This API takes effect for the window that has a title bar or a three-button area. In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+设置窗口标题栏是否可见，对存在标题栏和三键区的窗口形态生效。Stage模型下，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
-When the window title bar is hidden and the main window transitions into full-screen mode, hovering the cursor over the hot zone of the top window's title bar will cause a floating title bar to appear. To prevent the floating title bar from appearing, call  
-[setTitleAndDockHoverShown()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+设置窗口标题栏不可见后，当主窗口进入全屏沉浸状态时，此时鼠标Hover到上方窗口标题栏热区上会显示悬浮标题栏。若想禁用悬浮标题栏显示，请使用  
+[setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown)接口。
 
 **Since:** 11
 
@@ -9887,15 +9922,16 @@ When the window title bar is hidden and the main window transitions into full-sc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isVisible | boolean | Yes | Whether the title bar is visible. **true** if visible, **false** otherwise. |
+| isVisible | boolean | Yes | 设置标题栏是否可见，true为可见，false为隐藏。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation.<br>**Applicable version:** 11 - 19 |
 
 ## setWindowDelayRaiseOnDrag
 
@@ -9903,11 +9939,11 @@ When the window title bar is hidden and the main window transitions into full-sc
 setWindowDelayRaiseOnDrag(isEnabled: boolean): void
 ```
 
-Sets whether to enable delayed raising for the window. This API takes effect only for the main window and child windows.
+设置窗口是否使能延迟抬升，仅主窗和子窗可设置。
 
-If this API is not called or **false** is passed, the main window and child windows are raised immediately upon a left mouse button press by default.
+不调用此接口或传入false，主窗和子窗在鼠标左键按下时，默认立即抬升。
 
-When this API is called to enable delayed raising, in cross-window drag-and-drop situations, the window that contains the draggable component does not raise until the left mouse button is released, rather than raising immediately when the button is pressed.
+调用此接口使能延迟抬升后，在跨窗拖拽场景，可拖拽组件所在窗口在鼠标左键按下时不会立即抬升，直到鼠标左键抬起。
 
 **Since:** 19
 
@@ -9923,14 +9959,14 @@ When this API is called to enable delayed raising, in cross-window drag-and-drop
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | Whether to enable delayed raising.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**true** to enable, **false** otherwise. |
+| isEnabled | boolean | Yes | 是否使能延迟抬升。&lt;br&gt;true表示使能窗口延迟抬升；false表示不使能窗口延迟抬升。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setWindowDelayRaiseOnDrag can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 801 | Capability not supported.function setWindowDelayRaiseOnDrag can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## setWindowFocusable
 
@@ -9938,10 +9974,9 @@ When this API is called to enable delayed raising, in cross-window drag-and-drop
 setWindowFocusable(isFocusable: boolean): Promise<void>
 ```
 
-Sets whether this window is focusable. This API uses a promise to return the result.
+设置窗口是否具有获得焦点的能力，使用Promise异步回调。
 
-Starting from API version 22, if a virtual screen is created by calling  
-[createVirtualScreen]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ with **supportsFocus** set to **false**,windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
+从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen)接口创建虚拟屏，并设置supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
 
 **Since:** 9
 
@@ -9963,15 +9998,15 @@ Starting from API version 22, if a virtual screen is created by calling
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
 
 ## setWindowFocusable
 
@@ -9979,10 +10014,9 @@ Starting from API version 22, if a virtual screen is created by calling
 setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this window is focusable. This API uses an asynchronous callback to return the result.
+设置窗口是否具有获得焦点的能力，使用callback异步回调。
 
-Starting from API version 22, if a virtual screen is created by calling  
-[createVirtualScreen]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ with **supportsFocus** set to **false**,windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
+从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen)接口创建虚拟屏，并设置supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
 
 **Since:** 9
 
@@ -9999,15 +10033,15 @@ Starting from API version 22, if a virtual screen is created by calling
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isFocusable | boolean | Yes | can be focus if true, or can not be focus if false. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
 
 ## setWindowGrayScale
 
@@ -10021,8 +10055,8 @@ ArkTS-Sta:
 setWindowGrayScale(grayScale: double): Promise<void>
 ```
 
-Sets the grayscale effect for this window. This API uses a promise to return the result. This API can be called only after  
-[loadContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is called.
+设置窗口灰阶，使用Promise异步回调。该接口需要在调用  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)使窗口加载页面内容后调用。
 
 **Since:** 12
 
@@ -10038,22 +10072,22 @@ Sets the grayscale effect for this window. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| grayScale | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | The value of gray scale. |
+| grayScale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 窗口灰阶。该参数为浮点数，取值范围为[0.0, 1.0]。0.0表示窗口图像无变化，1.0表示窗口图像完全转为灰度图像，0.0至1.0之间时效果呈线性变化。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## setWindowKeepScreenOn
 
@@ -10061,9 +10095,9 @@ Sets the grayscale effect for this window. This API uses a promise to return the
 setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-Sets whether to keep the screen always on. This API uses a promise to return the result.
+设置当前窗口位于前台时当前设备的屏幕是否为常亮状态，异源虚拟屏下不生效。使用Promise异步回调。
 
-Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigation, video playback, drawing, and gaming scenarios). After exiting these scenarios, set the parameter to **false**. Do not use this API in other scenarios (such as no screen interaction or audio playback). When the system detects that the API is used in a non-standard manner, automatic screen-off may be invoked.
+仅在必要场景（导航、视频播放、绘画、游戏等场景）下，设置该属性为true；退出上述场景后，应当重置该属性为false；其他场景（无屏幕互动、音频播放等）下，不使用该接口；系统检测到非规范使用该接口时，可能会恢复自动灭屏功能。
 
 **Since:** 9
 
@@ -10079,21 +10113,21 @@ Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes | keep screen on if true, or not if false. |
+| isKeepScreenOn | boolean | Yes | 设置屏幕是否为常亮状态。true表示常亮；false表示不常亮。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
 
 ## setWindowKeepScreenOn
 
@@ -10101,9 +10135,9 @@ Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigati
 setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to keep the screen always on. This API uses an asynchronous callback to return the result.
+设置当前窗口位于前台时当前设备的屏幕是否为常亮状态，异源虚拟屏下不生效。使用callback异步回调。
 
-Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigation, video playback, drawing, and gaming scenarios). After exiting these scenarios, set the parameter to **false**. Do not use this API in other scenarios (such as no screen interaction or audio playback). When the system detects that the API is used in a non-standard manner, automatic screen-off may be invoked.
+仅在必要场景（导航、视频播放、绘画、游戏等场景）下，设置该属性为true；退出上述场景后，应当重置该属性为false；其他场景（无屏幕互动、音频播放等）下，不使用该接口；系统检测到非规范使用该接口时，可能会恢复自动灭屏功能。
 
 **Since:** 9
 
@@ -10119,16 +10153,16 @@ Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes | keep screen on if true, or not if false. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| isKeepScreenOn | boolean | Yes | 设置屏幕是否为常亮状态。true表示常亮；false表示不常亮。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
 
 ## setWindowLayoutFullScreen
 
@@ -10136,11 +10170,16 @@ Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigati
 setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether the main window layout or the child window layout is immersive. This API uses an asynchronous callback to return the result. It does not work when called by a system window.
+设置主窗口或子窗口的布局是否为沉浸式布局，使用callback异步回调。系统窗口调用不生效。
 
-An immersive layout means that the layout does not avoid the status bar or \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_, and components may overlap with them.
+沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
 
-A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_, and components do not overlap with them.
+非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
+> [setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)替代。
 
 **Since:** 9
 
@@ -10160,16 +10199,16 @@ A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes | Whether the layout of the window is immersive. (In immersive layout mode, the status bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ remain visible.) **true** if immersive, **false** otherwise. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| isLayoutFullScreen | boolean | Yes | 窗口的布局是否为沉浸式布局（该沉浸式布局状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;仍然显示）。true表示沉浸式布局； false表示非沉浸式布局。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## setWindowLayoutFullScreen
 
@@ -10177,11 +10216,11 @@ A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\
 setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 ```
 
-Sets whether the application main window layout or the application child window layout is immersive. This API uses a promise to return the result. It does not work when called by other windows, and no error is reported.
+设置应用主窗口或应用子窗口的布局是否为沉浸式布局，使用Promise异步回调。其余窗口调用不生效也不报错。
 
-An immersive layout means that the layout does not avoid the status bar or \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_, and components may overlap with them.
+沉浸式布局生效时，布局不避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件可能产生与其重叠的情况。
 
-A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_, and components do not overlap with them.
+非沉浸式布局生效时，布局避让状态栏与&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;，组件不会与其重叠。
 
 **Since:** 9
 
@@ -10203,15 +10242,15 @@ A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## setWindowLimits
 
@@ -10219,11 +10258,23 @@ A non-immersive layout means that the layout avoids the status bar and \_\_\_MD\
 setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 ```
 
-Sets the size limits for this window. This API uses a promise to return the result.
+设置当前窗口的尺寸限制，使用Promise异步回调。
 
-By default, system size limits are provided. They are determined by the product configuration and cannot be modified.
+默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。
 
-If **setWindowLimits** has not been called, you can call [getWindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [getWindowLimitsVP]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the system size limits.
+未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)或  
+[getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp)可获取系统限制。
+
+> **说明：**
+> 
+> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为
+> window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。触发场景包括：应用主动
+> 改变窗口大小（如调用[resize()](arkts-arkui-window-window-i.md#resize)）；系统调节窗
+> 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。
+> 
+> - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束，其他类型窗口仍受
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
 
 **Since:** 11
 
@@ -10239,23 +10290,23 @@ If **setWindowLimits** has not been called, you can call [getWindowLimits]\_\_\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowLimits | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target size limits, in px or vp. |
+| windowLimits | [WindowLimits](arkts-arkui-window-windowlimits-i.md) | Yes | 目标窗口的尺寸限制，单位为px或vp。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowLimits&gt; | Promise used to return the final size limits, which are the intersection between the passed-in size limits and the system size limits. |
+| Promise&lt;WindowLimits&gt; | Promise对象。返回设置后的尺寸限制，为入参与系统尺寸限制的交集。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## setWindowLimits
 
@@ -10263,11 +10314,23 @@ If **setWindowLimits** has not been called, you can call [getWindowLimits]\_\_\_
 setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<WindowLimits>
 ```
 
-Sets the size limits for this window. This API uses a promise to return the result.
+设置当前窗口的尺寸限制，使用Promise异步回调。
 
-By default, system size limits are provided. They are determined by the product configuration and cannot be modified.
+默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。
 
-If **setWindowLimits** has not been called, you can call [getWindowLimits]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [getWindowLimitsVP]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the system size limits.
+未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)或  
+[getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp)可获取系统限制。
+
+> **说明：**
+> 
+> - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为
+> window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。触发场景包括：应用主动
+> 改变窗口大小（如调用[resize()](arkts-arkui-window-window-i.md#resize)）；系统调节窗
+> 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。
+> 
+> - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束，其他类型窗口仍受
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
 
 **Since:** 15
 
@@ -10283,24 +10346,24 @@ If **setWindowLimits** has not been called, you can call [getWindowLimits]\_\_\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowLimits | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Target size limits, in px or vp. |
-| isForcible | boolean | Yes | Whether to forcibly set the window size limits.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit of the input parameter [windowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is vp, the process is performed based on value **false** regardless of whether **isForcible** is set to **true** or **false**. The minimum and maximum values of the window width and height depend on the system limit.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_When the unit of the input parameter [windowLimits]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is px: If **isForcible** is set to **true**, the minimum width and height of the window are subject to the smaller value between the system limit and 40 vp, and the maximum width and height of the window are subject to the system limit. If **isForcible** is set to **false**, the minimum and maximum widths and heights of the window are subject to the system limit. |
+| windowLimits | [WindowLimits](arkts-arkui-window-windowlimits-i.md) | Yes | 目标窗口的尺寸限制，单位为px或vp。 |
+| isForcible | boolean | Yes | 是否强制设置窗口的尺寸限制。&lt;br&gt;入参[windowLimits](arkts-arkui-window-windowlimits-i.md)的单位为vp时 ：无论设置true还是false，都按照false处理，窗口宽高的最小值和最大值都取决于系统限制。&lt;br&gt;入参[windowLimits](arkts-arkui-window-windowlimits-i.md) 的单位为px时：设置为true，表示窗口宽高最小值以系统限制值和40vp两者中的低数值为准，窗口宽高的最大值仍取决于系统限制；设置为false，表示窗口宽高的最小值和最大值都取决于系统限制。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowLimits&gt; | Promise used to return the new window size limits. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the unit of the input parameter [windowLimits]{ |
+| Promise&lt;WindowLimits&gt; | Promise对象。返回设置后的窗口尺寸限制。 &lt;br&gt;入参[windowLimits]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 
 ## setWindowMask
 
@@ -10314,11 +10377,11 @@ ArkTS-Sta:
 setWindowMask(windowMask: Array<Array<long>>): Promise<void>
 ```
 
-Sets a mask for this window to get an irregularly shaped window. This API uses a promise to return the result.The mask is used to describe the shape of the irregularly shaped window. This API is available only for child windows and global floating windows.
+设置异形窗口的掩码，使用Promise异步回调。异形窗口为非常规形状的窗口，掩码用于描述异形窗口的形状。此接口仅限子窗和全局悬浮窗可用。
 
-When the size of an irregularly shaped window changes, the actual display content is the intersection of the mask size and the window size.
+当异形窗口大小发生变化时，实际的显示内容为掩码大小和窗口大小的交集部分。
 
-Error code 1300002 may be returned only when multiple threads operate the same window. Error code 401 is returned when the window is destroyed.
+该接口只在多个线程操作同一个窗口时可能返回错误码1300002。窗口被销毁场景下错误码返回401。
 
 **Since:** 12
 
@@ -10334,23 +10397,23 @@ Error code 1300002 may be returned only when multiple threads operate the same w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowMask | ArkTS-Dyn: Array&lt;Array&lt;number&gt;&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;Array&lt;long&gt;&gt; | Yes | Mask. The value can only be a two-dimensional array containing the window size in pixels, with each element in the array set to either **0** or **1**. The value **0** indicates that the pixel is transparent, and **1** indicates that the pixel is opaque. If the passed-in pixel array does not match the window size or the value of any element in the array is not **0** or **1**, the value is invalid. |
+| windowMask | ArkTS-Dyn: Array&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Array&lt;Array&lt;long&gt;&gt; | Yes | 异形窗口的掩码，该参数仅支持宽高为窗口宽高、取值为整数0和整数1的二维数组输入，整数0代表所在像素透明，整数1代表所在像素不透明，宽高不符合 的二维数组或二维数组取值不为整数0和整数1的二维数组为非法参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and float windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and float windows are supported. |
 
 ## setWindowMaskWithAlpha
 
@@ -10364,7 +10427,7 @@ ArkTS-Sta:
 setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: int, maskHeight: int): Promise<void>
 ```
 
-Set the window mask using a per-pixel alpha array
+设置异形窗口的掩码
 
 **Since:** 26.0.0
 
@@ -10380,25 +10443,25 @@ Set the window mask using a per-pixel alpha array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowMask | Uint8Array | Yes | The windowMask contains only per-pixel alpha transparency values. Valid range: 0(full transparent) to 255(full opaque), size must equal (maskWidth maskHeight). |
-| maskWidth | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Mask width in pixels. Must equal the target window width. |
-| maskHeight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Mask height in pixels. Must equal the target window height. |
+| windowMask | Uint8Array | Yes | windowMask仅包含每像素alpha透明度值。 有效范围：0（完全透明）到255（完全不透明），大小必须等于(maskWidth*mask Heights) |
+| maskWidth | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 掩码宽度（以像素为单位）。必须等于目标窗口宽度 &lt;br&gt;取值范围为全体整数。 |
+| maskHeight | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以像素为单位的遮罩高度。必须等于目标窗口高度 &lt;br&gt;取值范围为全体整数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 不会返回任何值的Promise。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and float windows are supported. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. The maskWidth is not equal to the window width or the maskHeight is not equal to the window height. 2. The length of windowMask is not equal to maskWidth multiplied by maskHeight. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300016 | Parameter error. Possible cause: 1. The maskWidth is not equal to the window width or the maskHeight is not equal to the window height. 2. The length of windowMask is not equal to maskWidth multiplied by maskHeight. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and float windows are supported. |
 
 ## setWindowPrivacyMode
 
@@ -10406,13 +10469,13 @@ Set the window mask using a per-pixel alpha array
 setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 ```
 
-Sets whether this window is in privacy mode. This API uses a promise to return the result.
+设置窗口是否为隐私模式，使用Promise异步回调。
 
-A window in privacy mode cannot be captured or recorded.
+设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。
 
-When a window in privacy mode is moved to the background, it displays as a white overlay or privacy mask in the multi-tasking view.
+隐私模式窗口退后台后在多任务卡片中显示为白色蒙层或隐私蒙层。
 
-If this API is not called, the privacy mode is disabled by default, and the window can be captured or recorded.
+未调用此接口时，窗口默认不开启隐私模式，可以被截屏或录屏。
 
 **Since:** 9
 
@@ -10430,20 +10493,20 @@ If this API is not called, the privacy mode is disabled by default, and the wind
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | in private mode if true, or not if false. |
+| isPrivacyMode | boolean | Yes | 窗口是否为隐私模式。true表示为隐私模式，false表示为非隐私模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. Possible cause: Need ohos.permission.PRIVACY\_\_\_ESCAPED\_UNDERSCORE\_\_\_WINDOW permission. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. Possible cause: Need ohos.permission.PRIVACY_WINDOW permission. |
 
 ## setWindowPrivacyMode
 
@@ -10451,13 +10514,13 @@ If this API is not called, the privacy mode is disabled by default, and the wind
 setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this window is in privacy mode. This API uses an asynchronous callback to return the result.
+设置窗口是否为隐私模式，使用callback异步回调。
 
-A window in privacy mode cannot be captured or recorded.
+设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。
 
-When a window in privacy mode is moved to the background, it displays as a white overlay or privacy mask in the multi-tasking view.
+隐私模式窗口退后台后在多任务卡片中显示为白色蒙层或隐私蒙层。
 
-If this API is not called, the privacy mode is disabled by default, and the window can be captured or recorded.
+未调用此接口时，窗口默认不开启隐私模式，可以被截屏或录屏。
 
 **Since:** 9
 
@@ -10475,15 +10538,15 @@ If this API is not called, the privacy mode is disabled by default, and the wind
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | in private mode if true, or not if false. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| isPrivacyMode | boolean | Yes | 窗口是否为隐私模式。true表示为隐私模式，false表示为非隐私模式。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. Possible cause: Need ohos.permission.PRIVACY\_\_\_ESCAPED\_UNDERSCORE\_\_\_WINDOW permission. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. Possible cause: Need ohos.permission.PRIVACY_WINDOW permission. |
 
 ## setWindowShadowEnabled
 
@@ -10491,7 +10554,7 @@ If this API is not called, the privacy mode is disabled by default, and the wind
 setWindowShadowEnabled(enable: boolean): Promise<void>
 ```
 
-Sets whether the main window displays a shadow. This API uses a promise to return the result. By default, the main window displays a shadow unless you explicitly change it with this API.
+设置主窗口是否显示阴影，使用Promise异步回调。未调用该接口时，主窗口默认显示阴影。
 
 **Since:** 20
 
@@ -10507,23 +10570,23 @@ Sets whether the main window displays a shadow. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Enable or disable window shadow. |
+| enable | boolean | Yes | 设置主窗口是否显示阴影。true表示显示阴影，false表示不显示阴影。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## setWindowShadowRadius
 
@@ -10537,7 +10600,7 @@ ArkTS-Sta:
 setWindowShadowRadius(radius: double): void
 ```
 
-Sets the blur radius of the shadow on the edges of a child window or floating window.
+设置子窗或悬浮窗窗口边缘阴影的模糊半径。
 
 **Since:** 17
 
@@ -10553,16 +10616,16 @@ Sets the blur radius of the shadow on the edges of a child window or floating wi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the shadow, measured in px. The value is a floating-point number greater than or equal to 0.0, and the value **0.0** means that the shadow is disabled for the window borders. |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示窗口边缘阴影的模糊半径。该参数为浮点数，单位为px，取值范围为[0.0, +∞)，取值为0.0时表示关闭窗口边缘阴影。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: The shadow radius is less than zero. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and float windows are supported. |
+| 401 | Parameter error. Possible cause: The shadow radius is less than zero. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only subwindows and float windows are supported. |
 
 ## setWindowSystemBarEnable
 
@@ -10570,11 +10633,17 @@ Sets the blur radius of the shadow on the edges of a child window or floating wi
 setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void
 ```
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ This API uses an asynchronous callback to return the result.
+&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用callback异步回调。
 
-From API version 12, \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_this API does not take effect on 2-in-1 devices.\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_
+从API version 12开始，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
 
-The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_are shown or hidden. This API does not take effect when it is called by a child window. The configuration does not take effect in non-full-screen mode (such as floating window or split-screen mode).
+调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。子窗口调用后不生效。非全屏模式（悬浮窗、分屏等场景）下配置不生效。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
+> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
+> 替代。
 
 **Since:** 9
 
@@ -10594,16 +10663,16 @@ The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ in full-screen mode.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| names | Array&lt;'status' \| 'navigation'&gt; | Yes | 设置窗口全屏模式时状态栏和&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;是否显示。&lt;br&gt;例如，需全部显示，该参 数设置为['status','navigation']；设置为[]，则不显示。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 1300002 | This window state is abnormal. |
 
 ## setWindowSystemBarEnable
 
@@ -10611,9 +10680,9 @@ The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DE
 setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 ```
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_Sets whether to show the status bar and three-button navigation bar in the main window. The visibility of the status bar and three-button navigation bar is controlled by **status** and **navigation**, respectively.\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_ This API uses a promise to return the result.
+&lt;!--RP14--&gt;设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制&lt;!--RP14End--&gt;，使用Promise异步回调。
 
-The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_are shown or hidden. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+调用生效后返回并不表示状态栏、&lt;!--RP15--&gt;三键导航栏&lt;!--RP15End--&gt;的显示或隐藏已完成。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **Since:** 9
 
@@ -10635,15 +10704,15 @@ The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DE
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setWindowSystemBarProperties
 
@@ -10651,9 +10720,15 @@ The return value does not indicate that the status bar and \_\_\_MD\_COMMENT\_DE
 setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void
 ```
 
-Sets the properties of the \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button navigation bar and \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_status bar of the main window.This API uses an asynchronous callback to return the result. \_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_This API does not take effect on 2-in-1devices.\_\_\_MD\_COMMENT\_DESC\_USD\_3\_\_\_
+设置主窗口&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性，使用callback异步回调，&lt;!--RP5--&gt;该接口在2in1设备上调用不生效。&lt;!--RP5End--&gt;
 
-This API does not take effect when it is called by a child window.
+子窗口调用后不生效。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
+> [setWindowSystemBarProperties()](arkts-arkui-window-window-i.md#setwindowsystembarproperties)
+> 替代。
 
 **Since:** 9
 
@@ -10673,17 +10748,17 @@ This API does not take effect when it is called by a child window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| systemBarProperties | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Properties of the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_status bar. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | &lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
 
 ## setWindowSystemBarProperties
 
@@ -10691,9 +10766,9 @@ This API does not take effect when it is called by a child window.
 setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 ```
 
-Sets the properties of the \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_three-button navigation bar and \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_status bar of the main window.This API uses a promise to return the result.
+设置主窗口&lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性，使用Promise异步回调。
 
-This API does not take effect when it is called by a child window. The setting does not take effect when the main window is in non-full-screen or non-maximized mode (such as floating windows or split-screen mode). It takes effect once the main window enters full-screen or maximized mode.
+子窗口调用后不生效。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **Since:** 9
 
@@ -10709,21 +10784,21 @@ This API does not take effect when it is called by a child window. The setting d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| systemBarProperties | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Properties of the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_three-button navigation bar and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_status bar. |
+| systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | Yes | &lt;!--Del--&gt;三键导航栏、&lt;!--DelEnd--&gt;状态栏的属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setWindowTitle
 
@@ -10731,8 +10806,8 @@ This API does not take effect when it is called by a child window. The setting d
 setWindowTitle(titleName: string): Promise<void>
 ```
 
-Sets the window title. This API uses a promise to return the result. In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ takes effect.
+设置窗口标题，使用Promise异步回调。如果使用Stage模型，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
 **Since:** 15
 
@@ -10748,21 +10823,21 @@ Sets the window title. This API uses a promise to return the result. In the stag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| titleName | string | Yes | Window title. The title display area should not go past the left side of the three- button area of the system. Any part that goes beyond will show as an ellipsis. |
+| titleName | string | Yes | 窗口标题。标题显示区域最右端不超过系统三键区域最左端，超过部分以省略号表示。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setWindowTitleButtonVisible
 
@@ -10770,7 +10845,7 @@ Sets the window title. This API uses a promise to return the result. In the stag
 setWindowTitleButtonVisible(isMaximizeButtonVisible: boolean, isMinimizeButtonVisible: boolean, isCloseButtonVisible?: boolean): void
 ```
 
-Shows or hides the maximize, minimize, and close buttons on the title bar of the main window.
+设置主窗标题栏上的最大化、最小化、关闭按钮是否可见。
 
 **Since:** 14
 
@@ -10786,18 +10861,18 @@ Shows or hides the maximize, minimize, and close buttons on the title bar of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isMaximizeButtonVisible | boolean | Yes | Whether to show the maximize button. **true** to show, **false** otherwise. If the maximize button is hidden, the corresponding restore button is also hidden in the maximize scenario. |
-| isMinimizeButtonVisible | boolean | Yes | Whether to show the minimize button. **true** to show, **false** otherwise. |
-| isCloseButtonVisible | boolean | No | Whether to show the close button. **true** to show, **false** otherwise. |
+| isMaximizeButtonVisible | boolean | Yes | 设置最大化按钮是否可见，true为可见，false为隐藏。如果最大化按钮隐藏，那么在最大化场景下，也隐藏对应的还原按钮。 |
+| isMinimizeButtonVisible | boolean | Yes | 设置最小化按钮是否可见，true为可见，false为隐藏。 |
+| isCloseButtonVisible | boolean | No | 设置关闭按钮是否可见，true为可见，false为隐藏，默认值true。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Only main windows and subwindows with subwindowoptions.zlevelaboveparentloosened set to true are supported. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. |
 
 ## setWindowTitleMoveEnabled
 
@@ -10805,9 +10880,8 @@ Shows or hides the maximize, minimize, and close buttons on the title bar of the
 setWindowTitleMoveEnabled(enabled: boolean): void
 ```
 
-Enables or disables the capability to move the window (either main window or child window) by dragging its title bar and to maximize the window with a double-click. When this capability is disabled, you can use  
-[startMoving()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to move the window by dragging in the application's hot zone and use [maximize()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to maximize the window.In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ takes effect.
+禁止/使能主窗或子窗标题栏默认移动窗口和双击最大化的功能，当禁用标题栏默认移动窗口和双击最大化的功能时，可使用[startMoving()](arkts-arkui-window-window-i.md#startmoving)在应用热区中发起拖拽移动，使用[maximize()](arkts-arkui-window-window-i.md#maximize)实现最大化功能。如果使用Stage模型，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
 **Since:** 14
 
@@ -10823,16 +10897,16 @@ Enables or disables the capability to move the window (either main window or chi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the capability to move the window by dragging the title bar and to maximize the window with a double-click. **true** to enable, **false** otherwise. |
+| enabled | boolean | Yes | 是否使能标题栏默认移动窗口和双击最大化功能，true表示使能，false表示不使能。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows and subwindows are supported. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. |
 
 ## setWindowTopmost
 
@@ -10840,9 +10914,9 @@ Enables or disables the capability to move the window (either main window or chi
 setWindowTopmost(isWindowTopmost: boolean): Promise<void>
 ```
 
-Places the main window above all the other windows of the application. This API uses a promise to return the result.
+应用主窗口调用，用于实现将窗口置于其他应用窗口之上不被遮挡，使用Promise异步回调。
 
-Applications use custom shortcut keys to pin or unpin the main window.
+应用可通过自定义快捷键实现主窗口的置顶和取消置顶。
 
 **Since:** 14
 
@@ -10860,23 +10934,23 @@ Applications use custom shortcut keys to pin or unpin the main window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isWindowTopmost | boolean | Yes | Whether to pin the main window on top. **true** to pin, **false** otherwise. |
+| isWindowTopmost | boolean | Yes | 设置主窗口置顶，true为置顶，false为取消置顶。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## setWindowTouchable
 
@@ -10884,7 +10958,9 @@ Applications use custom shortcut keys to pin or unpin the main window.
 setWindowTouchable(isTouchable: boolean): Promise<void>
 ```
 
-Sets whether this window is touchable. This API uses a promise to return the result.
+设置窗口是否为可点击状态，使用Promise异步回调。
+
+当窗口处于可点击状态时，若用户点击命中该窗口，事件将发送给该窗口处理。当窗口处于不可点击状态时，透传点击事件，传递给下层窗口。
 
 **Since:** 9
 
@@ -10906,15 +10982,15 @@ Sets whether this window is touchable. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setWindowTouchable
 
@@ -10922,7 +10998,9 @@ Sets whether this window is touchable. This API uses a promise to return the res
 setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether this window is touchable. This API uses an asynchronous callback to return the result.
+设置窗口是否为可点击状态，使用callback异步回调。
+
+当窗口处于可点击状态时，若用户点击命中该窗口，事件将发送给该窗口处理。当窗口处于不可点击状态时，透传点击事件，传递给下层窗口。
 
 **Since:** 9
 
@@ -10939,15 +11017,15 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isTouchable | boolean | Yes | is touchable if true, or not if false. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setWindowTransitionAnimation
 
@@ -10955,9 +11033,9 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: TransitionAnimation): Promise<void>
 ```
 
-Adds a transition animation to windows in specific scenarios.
+给特定场景下的窗口增加转场动画。
 
-Currently, this API can be used only on the main window of an application.
+当前只支持在应用主窗下使用。
 
 **Since:** 20
 
@@ -10975,24 +11053,24 @@ Currently, this API can be used only on the main window of an application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transitionType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Scene of the transition animation. Currently, only the destruction scene is supported. |
-| animation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Configuration of the transition animation. |
+| transitionType | [WindowTransitionType](arkts-arkui-window-windowtransitiontype-e.md) | Yes | 本次转场动画场景。当前只支持销毁场景。 |
+| animation | [TransitionAnimation](arkts-arkui-window-transitionanimation-i.md) | Yes | 本次转场动画配置。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range; 2. Invalid parameter length. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range; 2. Invalid parameter length. |
+| 1300004 | Unauthorized operation. |
 
 ## show
 
@@ -11000,7 +11078,12 @@ Currently, this API can be used only on the main window of an application.
 show(callback: AsyncCallback<void>): void
 ```
 
-Shows this window. This API uses an asynchronous callback to return the result.
+显示当前窗口，使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> [showWindow()](arkts-arkui-window-window-i.md#showwindow)替代。
 
 **Since:** 7
 
@@ -11018,7 +11101,7 @@ Shows this window. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
 
 ## show
 
@@ -11026,7 +11109,11 @@ Shows this window. This API uses an asynchronous callback to return the result.
 show(): Promise<void>
 ```
 
-Shows this window. This API uses a promise to return the result.
+显示当前窗口，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[showWindow()](arkts-arkui-window-window-i.md#showwindow)替代。
 
 **Since:** 7
 
@@ -11044,7 +11131,7 @@ Shows this window. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 ## showWindow
 
@@ -11052,15 +11139,13 @@ Shows this window. This API uses a promise to return the result.
 showWindow(callback: AsyncCallback<void>): void
 ```
 
-Shows this window. This API uses an asynchronous callback to return the result. This API takes effect only for a system window, application child window, modal window, or global floating window. For the main window of an application, this API moves it at the top when the main window is already displayed.
-    **NOTE**  
-    
-    Before calling this API, you are advised to load the page by using  
-    [loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-    [setUIContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. If the main window has not  
-    finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system  
-    window, application child window, modal window, or global floating window has finished loading and you call  
-    this API directly, the window is in the foreground but is not visible.
+显示当前窗口，使用callback异步回调，支持系统窗口、应用子窗口、模态窗和全局悬浮窗，或将已显示的应用主窗口层级提升至顶部。
+
+> **说明：**
+> 
+> 调用该接口前，建议先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
+> [setUIContent](arkts-arkui-window-window-i.md#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **Since:** 9
 
@@ -11076,13 +11161,13 @@ Shows this window. This API uses an asynchronous callback to return the result. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300002 | This window state is abnormal. |
 
 ## showWindow
 
@@ -11090,15 +11175,13 @@ Shows this window. This API uses an asynchronous callback to return the result. 
 showWindow(): Promise<void>
 ```
 
-Shows this window. This API uses a promise to return the result. This API takes effect only for a system window,application child window, modal window, or global floating window. For the main window of an application, this API moves it at the top when the main window is already displayed.
-    **NOTE**  
-    
-    Before calling this API, you are advised to load the page by using  
-    [loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-    [setUIContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. If the main window has not  
-    finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system  
-    window, application child window, modal window, or global floating window has finished loading and you call  
-    this API directly, the window is in the foreground but is not visible.
+显示当前窗口，使用Promise异步回调，支持系统窗口、应用子窗口、模态窗和全局悬浮窗，或将已显示的应用主窗口层级提升至顶部。
+
+> **说明：**
+> 
+> 调用该接口前，建议优先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
+> [setUIContent](arkts-arkui-window-window-i.md#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **Since:** 9
 
@@ -11114,13 +11197,13 @@ Shows this window. This API uses a promise to return the result. This API takes 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300002 | This window state is abnormal. |
 
 ## showWindow
 
@@ -11128,17 +11211,15 @@ Shows this window. This API uses a promise to return the result. This API takes 
 showWindow(options: ShowWindowOptions): Promise<void>
 ```
 
-Shows this window or moves an already visible application main window to the top of the stack. You can pass options to control the window display behavior. This API uses a promise to return the result.
+显示当前窗口或将已显示的应用主窗口的层级提升至顶部，支持传入参数来控制窗口显示的行为，使用Promise异步回调。
 
-This API can be used only for application child windows, application main windows, global floating windows, and system windows, excluding windows of the TYPE\_DIALOG type and modal child windows (windows that have the modal property enabled via **setSubWindowModal**).
-    **NOTE**  
-    
-    Before calling this API, you are advised to load the page by using  
-    [loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-    [setUIContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. If the main window has not  
-    finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system  
-    window, application child window, or global floating window has finished loading and you call this API directly  
-    , the window is in the foreground but is not visible.
+仅支持除TYPE_DIALOG类型的窗口和模态子窗口（即使用setSubWindowModal启用了子窗的模态属性）之外的应用子窗口、应用主窗、全局悬浮窗以及系统窗口。
+
+> **说明：**
+> 
+> 调用该接口前，建议优先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
+> [setUIContent](arkts-arkui-window-window-i.md#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> 一直显示启动界面；如果系统窗口、应用子窗口和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **Since:** 20
 
@@ -11154,22 +11235,22 @@ This API can be used only for application child windows, application main window
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | options of window shown |
+| options | [ShowWindowOptions](arkts-arkui-window-showwindowoptions-i.md) | Yes | 显示子窗口或系统窗口时的参数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function showWindow cannot work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Modal subwindow and dialog window cannot set focusOnShow. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter validation error. Possible cause: 1. The value of the parameter is out of the allowed range; 2. The length of the parameter exceeds the allowed length; 3. The parameter format is incorrect. |
+| 801 | Capability not supported. Function showWindow cannot work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| 1300016 | Parameter validation error. Possible cause: 1. The value of the parameter is out of the allowed range; 2. The length of the parameter exceeds the allowed length; 3. The parameter format is incorrect. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type. Modal subwindow and dialog window cannot set focusOnShow. |
 
 ## snapshot
 
@@ -11177,8 +11258,8 @@ This API can be used only for application child windows, application main window
 snapshot(callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Captures this window. This API uses an asynchronous callback to return the result. If privacy mode is enabled for the current window (using  
-[setWindowPrivacyMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_), taking a screenshot will result in a blank screen.
+获取窗口截图，使用callback异步回调。若当前窗口设置为隐私模式（可通过  
+[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），截图结果为白屏。
 
 **Since:** 9
 
@@ -11194,13 +11275,13 @@ Captures this window. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;image.PixelMap&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | 回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Get pixelMap failed; 3. Internal task error. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Get pixelMap failed; 3. Internal task error. |
 
 ## snapshot
 
@@ -11208,8 +11289,8 @@ Captures this window. This API uses an asynchronous callback to return the resul
 snapshot(): Promise<image.PixelMap>
 ```
 
-Captures this window. If privacy mode is enabled for the current window (using  
-[setWindowPrivacyMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_), taking a screenshot will result in a blank screen.
+获取当前窗口截图。若当前窗口设置为隐私模式（可通过  
+[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），截图结果为白屏。
 
 **Since:** 9
 
@@ -11231,7 +11312,7 @@ Captures this window. If privacy mode is enabled for the current window (using
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Get pixelMap failed; 3. Internal task error. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Get pixelMap failed; 3. Internal task error. |
 
 ## snapshotIgnorePrivacy
 
@@ -11239,8 +11320,8 @@ Captures this window. If privacy mode is enabled for the current window (using
 snapshotIgnorePrivacy(): Promise<image.PixelMap>
 ```
 
-Captures this window. This API can be called to obtain the screenshot of the current window even if privacy mode is enabled for the current window (using  
-[setWindowPrivacyMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_).
+获取当前窗口截图。即使当前窗口设置为隐私模式（可通过  
+[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），仍可调用本接口返回当前窗口截图。
 
 **Since:** 18
 
@@ -11262,8 +11343,8 @@ Captures this window. This API can be called to obtain the screenshot of the cur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function snapshotIgnorePrivacy can not work correctly due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Create pixelMap failed; 3. Internal task error. |
+| 801 | Capability not supported. Function snapshotIgnorePrivacy can not work correctly due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Create pixelMap failed; 3. Internal task error. |
 
 ## snapshotSync
 
@@ -11271,11 +11352,11 @@ Captures this window. This API can be called to obtain the screenshot of the cur
 snapshotSync(): image.PixelMap
 ```
 
-Captures this window. This API returns the result synchronously. If privacy mode is enabled for the current window (using  
-[setWindowPrivacyMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_), taking a screenshot will result in a blank screen.
+获取当前窗口截图，此接口为同步接口。若当前窗口设置为隐私模式（  
+[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），截图结果为白屏。
 
-In the stage model, this API must be used after the call of  
-[loadContent]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_or [setUIContent()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ takes effect.
+Stage模型下，该接口需要在  
+[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
 
 **Since:** 20
 
@@ -11295,9 +11376,9 @@ In the stage model, this API must be used after the call of
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Create pixelMap failed. |
-| [1300018](../errorcode-window.md#1300018-api-call-timeout) | Timeout. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Create pixelMap failed. |
+| 1300018 | Timeout. |
 
 ## startMoving
 
@@ -11305,13 +11386,13 @@ In the stage model, this API must be used after the call of
 startMoving(): Promise<void>
 ```
 
-In \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ mode, this API takes effect for system windows, application main windows, application child windows, global floating windows, and modal windows. In non-freeform window mode, this API takes effect only for system windows, application child windows,global floating windows, and modal windows. Starts moving this window. This API uses a promise to return the result.
+开始移动窗口，使用Promise异步回调。
 
-The window moves along with the cursor or touch point only when this API is called in the callback function of  
-[onTouch]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, where the event type is **TouchType.Down**.
+[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，对系统窗口、应用主窗口、应用子窗口、全局悬浮窗和模态窗口生效。非自由窗口状态下，仅对系统窗口、应用子窗口、全局悬浮窗和模态窗口生效，应用主窗口调用该接口返回801或1300004错误码。
 
-In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is [TouchType.Move]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ (as long as  
-**TouchType.Down** has already been triggered) to start the moving effect.
+仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标或触摸点移动。
+
+在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-enums-touchtype-e.md)（需要保证当前行为已经触发TouchType.Down事件）时调用此接口，触发移动效果。
 
 **Since:** 14
 
@@ -11327,17 +11408,17 @@ In click-and-drag scenarios, if you do not want the drag to start as soon as you
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type, main windows are not supported in non-free window mode. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| 1300001 | Repeated operation. |
+| 1300004 | Unauthorized operation. Possible cause: Invalid window type, main windows are not supported in non-free window mode. |
 
 ## startMoving
 
@@ -11351,15 +11432,13 @@ ArkTS-Sta:
 startMoving(offsetX: int, offsetY: int): Promise<void>
 ```
 
-Specifies the cursor position within the window and moves the window. This API uses a promise to return the result.
+指定鼠标在窗口内的位置并移动窗口，使用Promise异步回调。
 
-When windows within the same application are split or merged, and the mouse is pressed down to move the new window directly, the cursor may move outside the window if it moves too quickly. This API allows you to set the cursor position within the window during movement. It first adjusts the window to the cursor position before starting to move the window.
+在同应用内窗口分合后，且鼠标保持按下状态直接移动新窗口，如果此时鼠标快速移动，窗口移动时鼠标可能会在窗口外。可以使用本接口指定窗口移动时鼠标在窗口内的位置，先移动窗口到鼠标位置，再开始移动窗口。
 
-The window moves along with the cursor only when this API is called in the callback function of  
-[onTouch]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, where the event type is **TouchType.Down**.
+仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标移动。
 
-In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is [TouchType.Move]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ (as long as  
-**TouchType.Down** has already been triggered) to start the moving effect.
+在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-enums-touchtype-e.md)（需要保证当前行为已经触发TouchType.Down事件）时调用此接口，触发移动效果。
 
 **Since:** 15
 
@@ -11375,25 +11454,25 @@ In click-and-drag scenarios, if you do not want the drag to start as soon as you
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offsetX | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | X-axis offset of the cursor position relative to the top-left corner of the window during movement, measured in px. This parameter only accepts integer values; any floating-point input will be rounded down. Negative values or values exceeding the window width are invalid. The window width can be obtained from [WindowProperties]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| offsetY | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Y-axis offset of the cursor position relative to the top-left corner of the window during movement, measured in px. This parameter only accepts integer values; any floating-point input will be rounded down. Negative values or values exceeding the window height are invalid. The window height can be obtained from [WindowProperties]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| offsetX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口移动时预期鼠标位置相对窗口左上角的x轴偏移量，单位为px，该参数仅支持整数输入，浮点数向下取整。负值为非法参数，大于窗口宽度为非法参数，窗口宽度可以在窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md)中获取。 |
+| offsetY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口移动时预期鼠标位置相对窗口左上角的y轴偏移量，单位为px，该参数仅支持整数输入，浮点数向下取整。负值为非法参数，大于窗口高度为非法参数，窗口高度可以在窗口属性 [WindowProperties](arkts-arkui-window-windowproperties-i.md)中获取。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300001 | Repeated operation. |
+| 1300004 | Unauthorized operation. |
 
 ## stopMoving
 
@@ -11401,7 +11480,7 @@ In click-and-drag scenarios, if you do not want the drag to start as soon as you
 stopMoving(): Promise<void>
 ```
 
-Stops window movement when a window is being dragged. This API uses a promise to return the result.
+在窗口拖拽移动过程中，通过此接口来停止窗口移动，使用Promise异步回调。
 
 **Since:** 15
 
@@ -11417,14 +11496,14 @@ Stops window movement when a window is being dragged. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+| 1300003 | This window manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1300002 | This window state is abnormal. |
+| 1300004 | Unauthorized operation. |
 

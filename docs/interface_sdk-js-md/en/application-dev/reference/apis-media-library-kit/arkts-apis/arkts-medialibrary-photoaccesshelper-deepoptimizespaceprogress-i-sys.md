@@ -12,6 +12,12 @@ Defines the DeepOptimizeSpaceProgress data structure.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## progress
 
 ```TypeScript
@@ -20,7 +26,7 @@ progress: int
 
 The percentage of deep optimize space state.Unit: Percentage, The value range is all integers, Value range: [0, 100].
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -42,7 +48,7 @@ state: DeepOptimizeState
 
 The current deep optimize space state.
 
-**Type:** DeepOptimizeState
+**Type:** [DeepOptimizeState](arkts-medialibrary-photoaccesshelper-deepoptimizestate-e-sys.md)
 
 **Since:** 26.0.0
 

@@ -1,12 +1,18 @@
 # getTaskPoolInfo
 
+## Modules to Import
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## getTaskPoolInfo
 
 ```TypeScript
 function getTaskPoolInfo(): TaskPoolInfo
 ```
 
-Obtains the thread information and task information of the task pool.
+获取任务池的线程信息和任务信息。
 
 **Since:** 10
 
@@ -22,9 +28,9 @@ Obtains the thread information and task information of the task pool.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Internal information about the task pool. |
+| [TaskPoolInfo](arkts-arkts-taskpool-taskpoolinfo-c.md) | 任务池的内部信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let taskpoolInfo: taskpool.TaskPoolInfo = taskpool.getTaskPoolInfo();

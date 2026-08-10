@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## begin
 
 ```TypeScript
@@ -56,7 +62,7 @@ end: int
 type: string
 ```
 
-实体的类型，当前支持phone\_number和date类型。phone\_number表示实体类型是电话号码，date表示实体类型是时间日期。
+实体的类型，当前支持phone_number和date类型。phone_number表示实体类型是电话号码，date表示实体类型是时间日期。
 
 **类型：** string
 

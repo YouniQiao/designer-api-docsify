@@ -1,0 +1,84 @@
+# NotificationActionButton
+
+NotificationActionButton模块定义了通知中显示的操作按钮，用于在[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中添加交互式操作按钮，让用户通过点击按钮触发WantAgent动作。当开发者需要在通知中提供交互式操作按钮（如"回复"、"标记已读"等）时使用此模块。
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-export interface NotificationActionButton--><!--Device-unnamed-export interface NotificationActionButton-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+## extras
+
+```TypeScript
+extras?: { [key: string]: any }
+```
+
+按钮扩展信息。默认为空。用于存储按钮的自定义扩展数据，应用可按需添加任意键值对信息，如按钮的特定标识、附加数据等。
+
+**Type:** { [key: string]: any }
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+<!--Device-NotificationActionButton-extras?: { [key: string]: any }--><!--Device-NotificationActionButton-extras?: { [key: string]: any }-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+## title
+
+```TypeScript
+title: string
+```
+
+按钮标题，显示在通知的操作按钮上。字符串长度不超过202字节，超出部分会被截断。不可为空字符串。
+
+**Type:** string
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+<!--Device-NotificationActionButton-title: string--><!--Device-NotificationActionButton-title: string-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+## userInput
+
+```TypeScript
+userInput?: NotificationUserInput
+```
+
+用户输入对象实例，默认为空。表示用户输入时的标识。
+
+**Type:** [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md)
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+<!--Device-NotificationActionButton-userInput?: NotificationUserInput--><!--Device-NotificationActionButton-userInput?: NotificationUserInput-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+## wantAgent
+
+```TypeScript
+wantAgent: WantAgent
+```
+
+点击按钮时触发的WantAgent，封装了应用的行为意图。用户点击按钮后，系统将按WantAgent指定的方式执行动作（如跳转至指定UIAbility或发送公共事件）。
+
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+<!--Device-NotificationActionButton-wantAgent: WantAgent--><!--Device-NotificationActionButton-wantAgent: WantAgent-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+

@@ -12,6 +12,12 @@ Result of all eUICC profile information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## isRemovable
 
 ```TypeScript
@@ -60,7 +66,7 @@ responseResult: ResultCode
 
 Gets the result of the operation.
 
-**Type:** ResultCode
+**Type:** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
 
 **Since:** 18
 

@@ -1,6 +1,6 @@
 # SubscribeType
 
-Enumerates the subscription types. Use the enum name rather than the enum value.
+描述订阅类型。请使用枚举名称而非枚举值。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates the subscription types. Use the enum name rather than the enum value.
 SUBSCRIBE_TYPE_REMOTE = 0
 ```
 
-Subscribe to remote data changes.
+订阅远程数据更改。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Subscribe to remote data changes.
 SUBSCRIBE_TYPE_CLOUD = 1
 ```
 
-Subscribe to cloud data changes.
+订阅云端数据更改。
 
 **Since:** 10
 
@@ -51,7 +51,7 @@ Subscribe to cloud data changes.
 SUBSCRIBE_TYPE_CLOUD_DETAILS = 2
 ```
 
-Subscribe to detailed information about cloud data changes.
+订阅云端数据更改详情。
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ Subscribe to detailed information about cloud data changes.
 SUBSCRIBE_TYPE_LOCAL_DETAILS
 ```
 
-Subscribe to detailed information about local data changes.
+订阅本地数据更改详情。
 
 **Since:** 12
 

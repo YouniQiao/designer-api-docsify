@@ -29,30 +29,31 @@ UIPickerComponent容器是用于实现用户选择操作的组件。它支持从
 
 ## 子组件
 
-    
-    - 支持多个子组件。  
-    - 支持子组件类型：[Text]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、[Image]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_、[Row]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_和[SymbolGlyph]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_。  
-    - 支持渲染控制类型：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_和  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_。
-    **说明：**  
-    
-    - 开发者在使用Row容器作为子组件时，Row容器中仅支持包含Text、Image、SymbolGlyph基础组件，  
-    包含其他容器组件可能会影响显示效果或滑动功能异常。  
-    
-    - 统计子组件的个数时，不包含Row容器内的子组件，Row容器及其子组件共同视为1个子组件。  
-    
-    - 子组件为Text、Image、SymbolGlyph时，[height]\_\_\_JSDOC\_LINK\_DESC\_USD\_6\_\_\_属性不生效，实际高度由  
-    [itemHeight]\_\_\_JSDOC\_LINK\_DESC\_USD\_7\_\_\_属性决定（默认40vp）。子组件内容会在选项区域内显示。  
-    
-    - 子组件为Row容器时，Row容器的[height]\_\_\_JSDOC\_LINK\_DESC\_USD\_8\_\_\_属性不生效，实际高度由  
-    [itemHeight]\_\_\_JSDOC\_LINK\_DESC\_USD\_9\_\_\_属性决定（默认40vp）。Row容器内的子组件  
-    [height]\_\_\_JSDOC\_LINK\_DESC\_USD\_10\_\_\_属性能正常生效，最终显示效果由Row容器决定。  
-    
-    - 图文组合类型选项需要使用Row容器包含图片和文本组件。使用图文组合类型选项时，  
-    建议将图片的[height]\_\_\_JSDOC\_LINK\_DESC\_USD\_11\_\_\_设置为40vp及以下，避免图片较大时被裁剪。  
-    
-    - UIPickerComponent容器内所有文本组件（包括Row容器内的文本组件）的fontSize属性默认为20fp。用户设置将覆盖默认值，  
-    设置异常值时以文本组件[fontSize]\_\_\_JSDOC\_LINK\_DESC\_USD\_12\_\_\_处理的结果为准。建议统一设置或不设置fontSize以保证良好的显示效果。
+> 
+> - 支持多个子组件。
+> - 支持子组件类型：[Text]{@link ./text}、[Image]{@link ./image}、[Row]{@link ./row}和[SymbolGlyph]{@link ./symbolglyph}。
+> - 支持渲染控制类型：[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)和
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)。
+
+> **说明：**
+> 
+> - 开发者在使用Row容器作为子组件时，Row容器中仅支持包含Text、Image、SymbolGlyph基础组件，
+> 包含其他容器组件可能会影响显示效果或滑动功能异常。
+> 
+> - 统计子组件的个数时，不包含Row容器内的子组件，Row容器及其子组件共同视为1个子组件。
+> 
+> - 子组件为Text、Image、SymbolGlyph时，[height]{@link CommonMethod#height(value: Length)}属性不生效，实际高度由
+> [itemHeight]{@link UIPickerComponentAttribute#itemHeight}属性决定（默认40vp）。子组件内容会在选项区域内显示。
+> 
+> - 子组件为Row容器时，Row容器的[height]{@link CommonMethod#height(value: Length)}属性不生效，实际高度由
+> [itemHeight]{@link UIPickerComponentAttribute#itemHeight}属性决定（默认40vp）。Row容器内的子组件
+> [height]{@link CommonMethod#height(value: Length)}属性能正常生效，最终显示效果由Row容器决定。
+> 
+> - 图文组合类型选项需要使用Row容器包含图片和文本组件。使用图文组合类型选项时，
+> 建议将图片的[height]{@link CommonMethod#height(value: Length)}设置为40vp及以下，避免图片较大时被裁剪。
+> 
+> - UIPickerComponent容器内所有文本组件（包括Row容器内的文本组件）的fontSize属性默认为20fp。用户设置将覆盖默认值，
+> 设置异常值时以文本组件[fontSize]{@link TextAttribute#fontSize}处理的结果为准。建议统一设置或不设置fontSize以保证良好的显示效果。
 
 ## UIPickerComponent
 
@@ -78,7 +79,11 @@ UIPickerComponent(options?: UIPickerComponentOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 配置UIPickerComponent容器的参数，用于自定义初始选中项等配置。参数缺省时组件占 位，但内容显示为空。当需要设置初始选中项时传入此参数。  |
+| options | [UIPickerComponentOptions](arkts-arkui-uipickercomponentoptions-i.md) | 否 | 配置UIPickerComponent容器的参数，用于自定义初始选中项等配置。参数缺省时组件占 位，但内容显示为空。当需要设置初始选中项时传入此参数。 |
 
 ## 汇总
 
+- [PickerIndicatorStyle](arkts-arkui-uipickercomponent-pickerindicatorstyle-i.md)
+- [UIPickerComponentOptions](arkts-arkui-uipickercomponent-uipickercomponentoptions-i.md)
+- [OnUIPickerComponentCallback](arkts-arkui-uipickercomponent-onuipickercomponentcallback-t.md)
+- [PickerIndicatorType](arkts-arkui-uipickercomponent-pickerindicatortype-e.md)

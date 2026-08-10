@@ -1,12 +1,18 @@
 # getAudioHapticManager
 
+## Modules to Import
+
+```TypeScript
+import { audioHaptic } from 'kits/@kit.AudioKit';
+```
+
 ## getAudioHapticManager
 
 ```TypeScript
 function getAudioHapticManager(): AudioHapticManager
 ```
 
-Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This object is singleton in one process.
+获取音振管理器。
 
 **Since:** 11
 
@@ -20,9 +26,9 @@ Obtains an \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instance. This object is single
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | AudioHapticManager instance. |
+| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | 音振管理器。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let audioHapticManagerInstance: audioHaptic.AudioHapticManager = audioHaptic.getAudioHapticManager();

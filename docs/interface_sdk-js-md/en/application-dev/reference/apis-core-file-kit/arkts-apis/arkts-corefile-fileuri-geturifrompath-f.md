@@ -1,12 +1,18 @@
 # getUriFromPath
 
+## Modules to Import
+
+```TypeScript
+import { fileUri } from 'kits/@kit.CoreFileKit';
+```
+
 ## getUriFromPath
 
 ```TypeScript
 function getUriFromPath(path: string): string
 ```
 
-Get the uri from the path of file in app sandbox
+通过应用沙箱内的文件路径生成URI。路径中的中文及非数字字母的特殊字符会进行百分号编码。
 
 **Since:** 15
 
@@ -22,21 +28,21 @@ Get the uri from the path of file in app sandbox
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | the path of file in app sandbox |
+| path | string | Yes | 应用沙箱内的文件路径。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Return the file uri |
+| string | 返回通过文件路径生成的URI。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let filePath = pathDir + "/test";

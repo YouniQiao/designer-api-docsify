@@ -4,7 +4,7 @@
 type OnStopFn = () => void
 ```
 
-Stop all test cases.
+当测试完成时，系统会在测试环境退出前触发该回调。
 
 **Since:** 26.0.0
 

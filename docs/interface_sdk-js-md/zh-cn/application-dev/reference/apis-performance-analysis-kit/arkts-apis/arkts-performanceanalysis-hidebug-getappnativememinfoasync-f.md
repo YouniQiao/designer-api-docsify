@@ -1,12 +1,18 @@
 # getAppNativeMemInfoAsync
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getAppNativeMemInfoAsync
 
 ```TypeScript
 function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
 ```
 
-��ȡ/proc/{pid}/smaps\_rollup��/proc/{pid}/statm�ڵ�������Ի�ȡӦ�ý����ڴ���Ϣ��ʹ��Promise�첽�ص���
+��ȡ/proc/{pid}/smaps_rollup��/proc/{pid}/statm�ڵ�������Ի�ȡӦ�ý����ڴ���Ϣ��ʹ��Promise�첽�ص���
 
 **起始版本：** 20
 
@@ -22,7 +28,7 @@ function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
 | --- | --- |
 | Promise&lt;NativeMemInfo&gt; | promise���󣬷���Ӧ�ý����ڴ���Ϣ�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 hidebug.getAppNativeMemInfoAsync().then((nativeMemInfo: hidebug.NativeMemInfo)=>{

@@ -1,6 +1,6 @@
 # AccessibilityCustomAction
 
-Defines struct of AccessibilityCustomAction that can be processed in custom action processing under accessibility.
+定义AccessibilityCustomAction的结构体，可以在可访问性下的自定义操作处理中处理。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Defines struct of AccessibilityCustomAction that can be processed in custom acti
 onAction: VoidCallback
 ```
 
-onAction - callback to process custom action.
+onAction -处理自定义操作的回调。
 
 **Since:** 26.0.0
 
@@ -38,9 +38,9 @@ onAction - callback to process custom action.
 name: ResourceStr
 ```
 
-name - name to specific custom action.
+name -指定自定义操作的名称。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

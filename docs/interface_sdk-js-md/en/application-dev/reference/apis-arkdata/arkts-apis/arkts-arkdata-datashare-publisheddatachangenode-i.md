@@ -1,6 +1,6 @@
 # PublishedDataChangeNode
 
-Defines the subscription/unsubscription result of the changes in the published data.
+订阅/取消订阅已发布数据变更的结果。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Defines the subscription/unsubscription result of the changes in the published d
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Bundle name of the callback.
+指定回调的bundleName。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Bundle name of the callback.
 data: Array<PublishedItem>
 ```
 
-Data of the callback.
+指定回调的数据。
 
 **Type:** Array&lt;PublishedItem&gt;
 

@@ -1,13 +1,19 @@
 # hasPrivateWindow (System API)
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## hasPrivateWindow
 
 ```TypeScript
 function hasPrivateWindow(displayId: long): boolean
 ```
 
-Checks whether there is a visible privacy window on a display. The window privacy mode can be set by calling  
-[setWindowPrivacyMode()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. The content in the privacy window cannot be captured or recorded.
+查询指定display对象上是否有可见的隐私窗口。可通过  
+[setWindowPrivacyMode()](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowprivacymode9)接口设置隐私窗口。隐私窗口内容将无法被截屏或录屏。
 
 **Since:** 9
 
@@ -23,47 +29,49 @@ Checks whether there is a visible privacy window on a display. The window privac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the display. The value must be an integer greater than or equal to 0. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕ID，该参数仅支持整数输入。该参数大于等于0。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether there is a visible privacy window on the display. **true** if yes, **false** otherwise. |
+| boolean | 查询的display对象上是否有可见的隐私窗口。true表示此display对象上有可见的隐私窗口，false表示此display对象上没有可见的隐私窗口。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { display } from '@kit.ArkUI';
 
 let displayClass: display.Display | null = null;
 try {
+  // Obtain the default Display object.
   displayClass = display.getDefaultDisplaySync();
 
-  let ret: boolean = true;
+  let ret: boolean | undefined = undefined;
   try {
+    // Check whether there is a privacy window on the default display.
     ret = display.hasPrivateWindow(displayClass.id);
   } catch (exception) {
-    console.error(`Failed to check has privateWindow or not. Code: ${exception.code} , message : ${exception.message}`);
+    console.error(`Failed to check has privateWindow or not. Code: ${exception.code}, message: ${exception.message}`);
   }
   if (ret == undefined) {
-    console.error("Failed to check has privateWindow or not.");
+    console.error('Failed to check has privateWindow or not.');
   }
   if (ret) {
-    console.info("There has privateWindow.");
+    console.info('There has privateWindow.');
   } else if (!ret) {
-    console.info("There has no privateWindow.");
+    console.info('There has no privateWindow.');
   }
 } catch (exception) {
-  console.error(`Failed to obtain the default display object. Code: ${exception.code} , message : ${exception.message}`);
+  console.error(`Failed to obtain the default display object. Code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 

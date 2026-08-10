@@ -1,6 +1,6 @@
 # CertificateType
 
-Enumerates the types of the certificate to be installed.
+表示安装证书的类型。
 
 **Since:** 14
 
@@ -16,7 +16,7 @@ Enumerates the types of the certificate to be installed.
 CA_CERT = 1
 ```
 
-CA certificate.
+CA证书。
 
 **Since:** 14
 
@@ -34,7 +34,7 @@ CA certificate.
 CREDENTIAL_USER = 2
 ```
 
-User public credential.
+用户公共凭据。
 
 **Since:** 22
 
@@ -52,7 +52,7 @@ User public credential.
 CREDENTIAL_APP = 3
 ```
 
-Private credential of an application.
+应用私有凭据。
 
 **Since:** 22
 
@@ -70,7 +70,7 @@ Private credential of an application.
 CREDENTIAL_UKEY = 4
 ```
 
-USB Key credential.
+USB Key证书凭据。
 
 **Since:** 22
 
@@ -88,7 +88,7 @@ USB Key credential.
 CREDENTIAL_SYSTEM = 5
 ```
 
-System credential.
+系统凭据。
 
 **Since:** 23
 

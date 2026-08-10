@@ -10,6 +10,12 @@ Provides the geographical location definitions for media resources.
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## latitude
 
 ```TypeScript
@@ -18,7 +24,7 @@ latitude: double
 
 Latitude.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 6
 
@@ -36,7 +42,7 @@ longitude: double
 
 Longitude.
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 6
 

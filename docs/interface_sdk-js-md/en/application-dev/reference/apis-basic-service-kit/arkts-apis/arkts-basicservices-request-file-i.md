@@ -1,6 +1,6 @@
 # File
 
-Describes the list of files in [UploadConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+[UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的文件列表。
 
 **Since:** 6
 
@@ -10,13 +10,19 @@ Describes the list of files in [UploadConfig]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 
 **System capability:** SystemCapability.MiscServices.Download
 
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
 ## filename
 
 ```TypeScript
 filename: string
 ```
 
-File name in the header when **multipart** is used.
+multipart提交时，请求头中的文件名。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ File name in the header when **multipart** is used.
 name: string
 ```
 
-Name of a form item when **multipart** is used. The default value is **file**.
+multipart提交时，表单项目的名称，缺省为file。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Name of a form item when **multipart** is used. The default value is **file**.
 type: string
 ```
 
-Type of the file content. By default, the type is obtained based on the extension of the file name or URI.
+文件的内容类型，默认根据文件名或路径的后缀获取。
 
 **Type:** string
 
@@ -70,11 +76,11 @@ Type of the file content. By default, the type is obtained based on the extensio
 uri: string
 ```
 
-Local path for storing files.
+文件的本地存储路径。
 
-Only **internal://cache/** is supported, that is, **context.cacheDir** of the caller (namely, cache directory of the input **context**).
+仅支持"internal://cache/"，即调用方（传入的context）对应的缓存路径context.cacheDir。
 
-Example: **internal://cache/path/to/file.txt**.
+示例：internal://cache/path/to/file.txt
 
 **Type:** string
 

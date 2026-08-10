@@ -1,6 +1,6 @@
 # @ohos.resourceManager
 
-本模块提供应用资源和系统资源的访问能力，允许应用根据当前的[Configuration]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_配置，获取最匹配的应用资源或系统资源，支持国际化资源匹配和多设备适配。具体匹配规则参考\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_。
+本模块提供应用资源和系统资源的访问能力，允许应用根据当前的[Configuration](arkts-localization-resourcemanager-configuration-c.md)配置，获取最匹配的应用资源或系统资源，支持国际化资源匹配和多设备适配。具体匹配规则参考[资源匹配](../../../quick-start/resource-categories-and-access.md#资源匹配)。
 
 Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式、Mcc（移动国家码）和Mnc（移动网络码）、设备类型、屏幕密度。
 
@@ -12,11 +12,13 @@ Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式�
 
 **使用说明**：
 
-- FA模型需要先导入模块，再调用[getResourceManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_接口获取资源管理对象。  
+- FA模型需要先导入模块，再调用[getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager)接口获取资源管理对象。  
 - 从API version 9开始，Stage模型无需导入模块，支持通过Context获取资源管理resourceManager对象。Context的更多介绍请参考  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_。
+[应用上下文Context](../../../application-models/application-context-stage.md)。
 
-\_\_\_CODE\_BLOCK\_DESC\_USD\_0\_\_\_
+ ```ts  import { UIAbility } from '@kit.AbilityKit'; import { window } from '@kit.ArkUI';
+
+ export default class EntryAbility extends UIAbility { onWindowStageCreate(windowStage: window.WindowStage) { let context = this.context; let resourceManager = context.resourceManager; } } ```
 
 **起始版本：** 6
 
@@ -25,6 +27,12 @@ Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式�
 <!--Device-unnamed-declare namespace resourceManager--><!--Device-unnamed-declare namespace resourceManager-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
+
+## 导入模块
+
+```TypeScript
+import { resourceManager } from 'kits/@kit.LocalizationKit';
+```
 
 ## 汇总
 
@@ -37,7 +45,7 @@ Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式�
 | [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager-2) | 获取当前应用的资源管理对象。使用Promise异步回调。 |
 | [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager-3) | 获取指定应用的资源管理对象。使用Promise异步回调。 |
 | [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getsysresourcemanager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
-| [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md#getsystemresourcemanager) | 获取系统资源管理对象，用于访问系统预置的资源。  **说明**     该接口获取到的系统资源管理ResourceManager对象中的Configuration为默认值。默认值如下：{"locale": "", "direction": -1, "deviceType": -1, "   screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}。 |
+| [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md#getsystemresourcemanager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
 
 ### 类
 
@@ -58,7 +66,7 @@ Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式�
 | 名称 | 说明 |
 | --- | --- |
 | [ColorMode](arkts-localization-resourcemanager-colormode-e.md) | 用于表示当前设备颜色模式。 |
-| [DeviceType](arkts-localization-resourcemanager-devicetype-e.md) | 用于表示当前设备类型。  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_  \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_COMMENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| [DeviceType](arkts-localization-resourcemanager-devicetype-e.md) | 用于表示当前设备类型。  &lt;!--RP1--&gt;  &lt;!--RP1End--&gt; |
 | [Direction](arkts-localization-resourcemanager-direction-e.md) | 用于表示设备屏幕方向。 |
 | [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md) | 用于表示当前设备屏幕密度。 |
 

@@ -4,7 +4,7 @@
 export type ConnectOptions = _ConnectOptions
 ```
 
-Defines the level-2 module ConnectOptions.
+ConnectOptions二级模块。
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # UpgradeInfo (System API)
 
-Represents update information.
+升级信息。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Represents update information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { update } from 'kits/@kit.BasicServicesKit';
+```
+
 ## businessType
 
 ```TypeScript
 businessType: BusinessType
 ```
 
-Upgrade service type.
+升级业务类型。
 
-**Type:** BusinessType
+**Type:** [BusinessType](arkts-basicservices-update-businesstype-i-sys.md)
 
 **Since:** 9
 
@@ -38,8 +44,7 @@ Upgrade service type.
 upgradeApp: string
 ```
 
-Caller package name, which is used to identify the app that calls the upgrade API. The value is in the format of  
-**com.***xxx.xxx.xxx* and consists of multiple segments separated by dots (.). The value is a string of 1 to 255characters, and each segment ranges from 1 to 64 characters. Only letters, digits, and dots (.) are supported.Each segment must start with a letter and cannot contain consecutive dots (.) or end with a dot (.). An exception is thrown when the value is out of range or the format is incorrect.
+调用方包名，用于标识调用此升级接口的应用身份。格式为com.xxx.xxx.xxx，由点号分隔的多段组成。长度范围[1，255]，单位：字符，每段长度范围[1，64]，单位：字符，仅支持字母、数字和点号。每段必须以字母开头，不能包含连续点号或以点号开头结尾。超出范围或格式错误时抛出异常。
 
 **Type:** string
 

@@ -4,7 +4,7 @@
 declare type UnifiedData = import('../api/@ohos.data.unifiedDataChannel').default.UnifiedData
 ```
 
-Defines drag-related data.
+拖拽相关的数据。
 
 **Since:** 10
 

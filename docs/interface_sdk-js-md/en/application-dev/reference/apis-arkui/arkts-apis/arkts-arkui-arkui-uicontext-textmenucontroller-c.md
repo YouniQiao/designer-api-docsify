@@ -10,6 +10,12 @@ class TextMenuController
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## disableMenuItems
 
 ```TypeScript
@@ -32,7 +38,7 @@ Disable menu action by action id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | Array&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Yes | menu item id to disable @static |
+| items | Array&lt;TextMenuItemId&gt; | Yes | menu item id to disable @static |
 
 ## disableSystemServiceMenuItems
 
@@ -64,7 +70,7 @@ Disable all system service menus, such as translation and ai writer.True means d
 setMenuOptions(options: TextMenuOptions): void
 ```
 
-Set text menu options.
+设置文本菜单选项。
 
 **Since:** 23
 
@@ -80,5 +86,5 @@ Set text menu options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the options of the text menu. |
+| options | [TextMenuOptions](arkts-arkui-textmenuoptions-i.md) | Yes | the options of the text menu. |
 

@@ -1,18 +1,19 @@
 # AVPlayer
 
 播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过  
-[createAVPlayer()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_构建一个AVPlayer实例。
+[createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer)构建一个AVPlayer实例。
 
 在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。  
-[on('stateChange')]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_：监听播放状态机AVPlayerState切换。[on('error')]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_：监听错误事件。
+[on('stateChange')](media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))：监听播放状态机AVPlayerState切换。[on('error')](media.AVPlayer.on(type: 'error', callback: ErrorCallback))：监听错误事件。
 
 应用需要按照实际业务需求合理使用AVPlayer对象，按需创建并及时释放，避免持有过多AVPlayer实例导致内存消耗过大，否则在一定情况下可能导致系统终止应用。
 
-Audio/Video播放demo可参考：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_。
-    **说明：**  
-    
-    - 本Interface首批API从API version 9开始支持。
+Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、  
+[视频播放开发指导](../../../media/media/video-playback.md)。
+
+> **说明：**
+> 
+> - 本Interface首批API从API version 9开始支持。
 
 **起始版本：** 9
 
@@ -21,6 +22,12 @@ Audio/Video播放demo可参考：\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_、
 <!--Device-media-interface AVPlayer--><!--Device-media-interface AVPlayer-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+## 导入模块
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
 
 ## forceLoadVideo
 
@@ -58,9 +65,9 @@ Specifies whether to forcibly load the video. This API can be called only when t
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
+| 202 | Called from Non-System applications. Return by promise. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 async function test(){
@@ -100,21 +107,21 @@ Obtains the selected track by the specified media type. This API can be called o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| trackType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | specified media Type, see [MediaType]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| trackType | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | 是 | specified media Type, see [MediaType](#MediaType). |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | A Promise instance used to return selected track index. |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | A Promise instance used to return selected track index. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| 5400102 | Operation not allowed. Return by promise. |
+| 5400103 | I/O error. Return by promise. |
+| 5400101 | No memory. Return by promise. |
+| 202 | Called from Non-System applications. Return by promise. |
+| 5400105 | Service died. Return by promise. |
 

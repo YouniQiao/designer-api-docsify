@@ -5,7 +5,7 @@ export type MissionParameter = _MissionParameter
 ```
 
 作为  
-[startSyncRemoteMissions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的入参，表示同步时所需参数的枚举。
+[startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startsyncremotemissions)的入参，表示同步时所需参数的枚举。
 
 **起始版本：** 10
 

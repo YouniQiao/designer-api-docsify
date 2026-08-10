@@ -1,12 +1,18 @@
 # createDistributedObject
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from 'kits/@kit.ArkData';
+```
+
 ## createDistributedObject
 
 ```TypeScript
 function createDistributedObject(source: object): DistributedObject
 ```
 
-Creates a distributed data object.
+创建一个分布式数据对象。
 
 **Since:** 8
 
@@ -24,30 +30,30 @@ Creates a distributed data object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | object | Yes | Properties of the distributed data object. |
+| source | object | Yes | 设置分布式数据对象的属性。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Distributed data object created. |
+| [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) | 创建完成的分布式数据对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
+  name: string
+  age: number
+  isVis: boolean
 
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
+  constructor(name: string, age: number, isVis: boolean) {
+    this.name = name;
+    this.age = age;
+    this.isVis = isVis;
+  }
 }
 
-let source: SourceObject = new SourceObject("jack", 18, false);
+let source: SourceObject = new SourceObject('jack', 18, false);
 let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
 ```
 

@@ -1,5 +1,11 @@
 # offAdvertisingStateChange
 
+## 导入模块
+
+```TypeScript
+import { advertising } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offAdvertisingStateChange
 
 ```TypeScript
@@ -22,11 +28,11 @@ function offAdvertisingStateChange(callback?: Callback<AdvertisingStateChangeInf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AdvertisingStateChangeInfo&gt; | 否 | 用于监听广播状态的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AdvertisingStateChangeInfo&gt; | 否 | 用于监听广播状态的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 

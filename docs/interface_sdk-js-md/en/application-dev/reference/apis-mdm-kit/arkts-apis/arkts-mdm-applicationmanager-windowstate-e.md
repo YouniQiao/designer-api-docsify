@@ -1,6 +1,6 @@
 # WindowState
 
-Enumerates application window states.
+应用窗口状态。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumerates application window states.
 DISCONNECT = 0
 ```
 
-The window has been created but is currently unavailable.
+表示窗口已创建，但是暂不可用状态。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ The window has been created but is currently unavailable.
 CONNECT = 1
 ```
 
-The window has been created and is available for use.
+表示窗口已创建完成，可正常使用状态。
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ The window has been created and is available for use.
 FOREGROUND = 2
 ```
 
-Foreground state, indicating that the window has entered the foreground display. This is a transitional state.
+前台状态，表示当前窗口进入前台显示，是一个过渡状态。
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ Foreground state, indicating that the window has entered the foreground display.
 ACTIVE = 3
 ```
 
-Foreground active state, indicating that the window is currently displayed in the foreground.
+前台激活状态，表示当前窗口已前台显示。
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ Foreground active state, indicating that the window is currently displayed in th
 INACTIVE = 4
 ```
 
-Foreground inactive state, indicating that the window is about to enter the background. This is a transitional state.
+前台非激活状态，表示当前窗口即将进入后台，是一个过渡状态。
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ Foreground inactive state, indicating that the window is about to enter the back
 BACKGROUND = 5
 ```
 
-Background state, indicating that the window has been moved to the background and is not visible.
+后台状态，表示当前窗口退到后台，不可见状态。
 
 **Since:** 26.0.0
 

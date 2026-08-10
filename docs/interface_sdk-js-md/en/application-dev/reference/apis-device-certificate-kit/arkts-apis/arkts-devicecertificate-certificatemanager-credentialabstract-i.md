@@ -1,6 +1,6 @@
 # CredentialAbstract
 
-Represents brief information about a credential.
+表示凭据的简要信息。
 
 **Since:** 11
 
@@ -10,13 +10,19 @@ Represents brief information about a credential.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
+## Modules to Import
+
+```TypeScript
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+```
+
 ## alias
 
 ```TypeScript
 alias: string
 ```
 
-Alias of a credential. The value contains up to 128 bytes.
+表示凭据的别名，最大长度为128字节。
 
 **Type:** string
 
@@ -34,7 +40,7 @@ Alias of a credential. The value contains up to 128 bytes.
 keyUri: string
 ```
 
-Unique identifier of a credential. The value contains up to 256 bytes.
+表示凭据的唯一标识符，最大长度为256字节。
 
 **Type:** string
 
@@ -52,7 +58,7 @@ Unique identifier of a credential. The value contains up to 256 bytes.
 type: string
 ```
 
-Type of a credential. The value contains up to 8 bytes.
+表示凭据的类型，最大长度为8字节。
 
 **Type:** string
 

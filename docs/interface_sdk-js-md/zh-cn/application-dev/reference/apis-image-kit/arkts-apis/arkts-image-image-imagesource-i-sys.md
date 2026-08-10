@@ -2,11 +2,11 @@
 
 ImageSource类，用于获取图片相关信息。
 
-在调用ImageSource的方法前，需要先通过[image.createImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_构建一个ImageSource实例。
+在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)构建一个ImageSource实例。
 
 ImageSource的所有方法均不支持并发调用。
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 6
 
@@ -16,6 +16,12 @@ ImageSource的所有方法均不支持并发调用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## createWideGamutSdrPixelMap
 
 ```TypeScript
@@ -23,14 +29,15 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 ```
 
 创建SDR的PixelMap对象。当图片为带有3通道GainMap的HDR图片时，会将其基础图扩展为BT.2020色域的SDR图。使用Promise异步回调。
-    **说明：**  
-    
-    - 对SDR图片源，按图片自带的色彩空间解码，输出SDR图。  
-    
-    - 对带有单通道GainMap的HDR图片源，解码其基础图（SDR图），忽略GainMap。  
-    
-    - 对带有3通道GainMap的HDR图片源，解码其基础图（SDR图），并将输出SDR图的色域扩展为  
-    [ColorSpace]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.DISPLAY\_BT2020\_SRGB。
+
+> **说明：**
+> 
+> - 对SDR图片源，按图片自带的色彩空间解码，输出SDR图。
+> 
+> - 对带有单通道GainMap的HDR图片源，解码其基础图（SDR图），忽略GainMap。
+> 
+> - 对带有3通道GainMap的HDR图片源，解码其基础图（SDR图），并将输出SDR图的色域扩展为
+> [ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md).DISPLAY_BT2020_SRGB。
 
 **起始版本：** 20
 
@@ -52,12 +59,12 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
+| 7700101 | Bad source. |
+| 7700103 | Image too large. |
+| 7700102 | Unsupported MIME type. |
+| 7700301 | Decoding failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 async function CreateWideGamutSdrPixelMap(context: Context) {
@@ -98,7 +105,7 @@ async function CreateWideGamutSdrPixelMap(context: Context) {
 createWideGamutSdrPixelMap(): Promise<PixelMap | undefined>
 ```
 
-Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSource, decodes to a SDR PixelMap using its native color space.For a HDR ImageSource with a single-channel gainmap, decodes its base(SDR) image and ingores its gainmap.For a HDR ImageSource with a three-channel gainmap, decodes to a SDR PixelMap using CM\_DISPLAY\_BT2020\_SRGB color space.
+Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSource, decodes to a SDR PixelMap using its native color space.For a HDR ImageSource with a single-channel gainmap, decodes its base(SDR) image and ingores its gainmap.For a HDR ImageSource with a three-channel gainmap, decodes to a SDR PixelMap using CM_DISPLAY_BT2020_SRGB color space.
 
 **起始版本：** 23
 
@@ -120,10 +127,10 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSour
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
+| 7700101 | Bad source. |
+| 7700103 | Image too large. |
+| 7700102 | Unsupported MIME type. |
+| 7700301 | Decoding failed. |
 
 ## isJpegProgressive
 
@@ -155,10 +162,10 @@ isJpegProgressive(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| 7700101 | Bad source. |
+| 7700102 | Unsupported MIME type. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -182,12 +189,13 @@ modifyImageAllProperties(records: Record<string, string|null>): Promise<void>
 批量修改图片属性。使用Promise异步回调。
 
 Exif属性中除"JPEGInterchangeFormat"/"JPEGInterchangeFormatLength"/"GIFLoopCount"字段外，其他均支持修改。
-    **说明：**  
-    
-    - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_实例或通过传入的uri创建  
-    [image.createImageSource]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_实例。  
-    
-    - 支持修改JPEG、PNG、HEIF和WEBP文件类型的图片属性，图片需要包含Exif信息。
+
+> **说明：**
+> 
+> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例或通过传入的uri创建
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例。
+> 
+> - 支持修改JPEG、PNG、HEIF和WEBP文件类型的图片属性，图片需要包含Exif信息。
 
 **起始版本：** 24
 
@@ -205,7 +213,7 @@ Exif属性中除"JPEGInterchangeFormat"/"JPEGInterchangeFormatLength"/"GIFLoopCo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
 
 **返回值：**
 
@@ -217,12 +225,12 @@ Exif属性中除"JPEGInterchangeFormat"/"JPEGInterchangeFormatLength"/"GIFLoopCo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
-| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) | Failed to write image properties to the file. |
+| 7700102 | Unsupported MIME type. |
+| 7700304 | Failed to write image properties to the file. |
+| 202 | Non-system applications are not allowed to use system APIs. |
+| 7700202 | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 async function ModifyImageAllProperties(imageSource: image.ImageSource) {

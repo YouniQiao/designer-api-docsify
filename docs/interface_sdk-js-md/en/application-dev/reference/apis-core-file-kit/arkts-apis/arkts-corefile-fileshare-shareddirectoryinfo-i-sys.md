@@ -1,6 +1,6 @@
 # SharedDirectoryInfo (System API)
 
-The directory information shared with the system by the application.
+应用程序向系统捐献的目录信息。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ The directory information shared with the system by the application.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { fileShare } from 'kits/@kit.CoreFileKit';
+```
+
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Indicates the bundle name of the application.
+应用程序的包名。
 
 **Type:** string
 
@@ -40,7 +46,7 @@ Indicates the bundle name of the application.
 path: string
 ```
 
-Indicates the path of the application's shared directory.
+应用程序捐献的目录。
 
 **Type:** string
 
@@ -62,9 +68,9 @@ Indicates the path of the application's shared directory.
 permissionMode: int
 ```
 
-Indicates the permission for the application's shared directory, e.g., { OperationMode.READ\_MODE }or { OperationMode.READ\_MODE | OperationMode.WRITE\_MODE }
+应用程序捐献目录的权限，例如 { OperationMode.READ_MODE } 或{ OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

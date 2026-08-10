@@ -1,6 +1,6 @@
 # AuthParam
 
-Defines the user authentication parameters. This API is used to configure user authentication parameters, including the challenge value, authentication type list, authentication trust level, and authentication result reuse configuration. By properly configuring these parameters, you can meet authentication requirements in different service scenarios.
+用户认证相关参数。该接口用于配置用户认证的各项参数，包括挑战值、认证类型列表、认证信任等级、认证结果复用配置等。通过合理配置这些参数，可以满足不同业务场景下的认证需求。
 
 **Since:** 10
 
@@ -10,13 +10,19 @@ Defines the user authentication parameters. This API is used to configure user a
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
+## Modules to Import
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## credentialIdList
 
 ```TypeScript
 credentialIdList?: Uint8Array[]
 ```
 
-List of IDs for credentials to be authenticated. This parameter is passed when only specific credentials, rather than all credentials of the user, need to be authenticated. If not passed or an empty array is passed, all credentials of the user are authenticated by default.
+凭据ID列表，用于指定需要认证的凭据。当需要只认证特定凭据而非用户的所有凭据时传入此参数；若不传入或传入空数组，则默认认证该用户的所有凭据。
 
 **Type:** Uint8Array[]
 
@@ -38,9 +44,9 @@ List of IDs for credentials to be authenticated. This parameter is passed when o
 userId?: int
 ```
 
-ID of the target user to be authenticated. This parameter is passed when a specific user, rather than the currently logged-in user, needs to be authenticated. If not passed, the ID of the currently logged-in user is used by default. The value is a non-negative integer.
+待认证的目标用户ID，用于指定需要认证的用户。当需要认证特定用户而非当前登录用户时传入此参数；若不传入则默认使用当前登录用户的ID。取值为非负整数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Default:** The ID of the current user. The value is a positive integer greater than or equal to 0.
 

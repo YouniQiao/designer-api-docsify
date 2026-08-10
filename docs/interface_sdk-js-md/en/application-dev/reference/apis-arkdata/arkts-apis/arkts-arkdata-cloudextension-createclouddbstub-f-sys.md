@@ -1,12 +1,18 @@
 # createCloudDBStub (System API)
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## createCloudDBStub
 
 ```TypeScript
 function createCloudDBStub(instance: CloudDB): Promise<rpc.RemoteObject>
 ```
 
-Creates a RemoteObject instance based on a CloudDB instance.The system uses this object to call the APIs of the CloudDB instance.This API uses a promise to return the result.
+根据CloudDB类的实例创建对应的RemoteObject对象，系统内部通过该对象调用CloudDB的实现接口，使用Promise异步回调。
 
 **Since:** 11
 
@@ -22,11 +28,30 @@ Creates a RemoteObject instance based on a CloudDB instance.The system uses this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | CloudDB instance. |
+| instance | [CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md) | Yes | CloudDB类的实例。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the rpc.RemoteObject instance of CloudDB. |
+| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回CloudDB的rpc.RemoteObject对象。 |
+
+## Examples
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class MyCloudDB implements cloudExtension.CloudDB {
+  // ...
+}
+
+class MyCloudService implements cloudExtension.CloudService {
+  constructor() {}
+  // ...
+  async connectDB(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
+    console.info(`connect DB, bundleName: ${bundleName}`);
+    return cloudExtension.createCloudDBStub(new MyCloudDB());
+  }
+}
+```
 

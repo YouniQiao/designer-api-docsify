@@ -12,6 +12,12 @@ Indicates the options for initiating a call.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## accountId
 
 ```TypeScript
@@ -20,7 +26,7 @@ accountId?: int
 
 Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -40,7 +46,7 @@ dialScene?: DialScene
 
 Indicates the scenario of the call.
 
-**Type:** DialScene
+**Type:** [DialScene](arkts-telephony-call-dialscene-e-sys.md)
 
 **Since:** 9
 
@@ -60,7 +66,7 @@ dialType?: DialType
 
 Indicates the type of the call.
 
-**Type:** DialType
+**Type:** [DialType](arkts-telephony-call-dialtype-e-sys.md)
 
 **Since:** 9
 
@@ -80,7 +86,7 @@ extraParams?: Record<string, Object>
 
 Indicates the extra call parameters.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
 **Since:** 14
 
@@ -100,7 +106,7 @@ videoState?: VideoStateType
 
 Indicates the type of Video state.
 
-**Type:** VideoStateType
+**Type:** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
 **Since:** 9
 
@@ -120,7 +126,7 @@ xCallType?: XCallType
 
 Indicates the type of the xcall.
 
-**Type:** XCallType
+**Type:** [XCallType](arkts-telephony-call-xcalltype-e-sys.md)
 
 **Since:** 26.0.0
 

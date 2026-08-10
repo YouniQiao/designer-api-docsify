@@ -1,25 +1,28 @@
 # getInstalledBundleStorageStats
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.MDMKit';
+```
+
 ## getInstalledBundleStorageStats
 
 ```TypeScript
 function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>, accountId: number): Promise<Array<BundleStorageStats>>
 ```
 
-Obtains the storage usage of installed applications of a specified user on a device. This API uses a promise to return the result.
-    **NOTE**  
-    
-    1. Only the storage usage of installed applications can be obtained.  
-    
-    2. If **bundleNames** is empty or all bundle names passed are of uninstalled applications, error code 9200012  
-    will be returned.  
-    
-    3. If some of the applications specified in the **bundleNames** parameter are installed and some are not, the API  
-    returns normally. For installed applications, their actual storage usage information is returned. For uninstalled  
-    applications, **0** is returned as their storage usage.  
-    
-    4. This API supports cross-user queries. For example, user 100 can query the storage usage of some applications  
-    of user 101.
+获取设备指定用户下已安装应用的存储占用信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 1.仅能获取已安装应用的存储占用信息。
+> 
+> 2.bundleNames参数为empty或全部传入未安装的应用包名，会抛出9200012错误码。
+> 
+> 3.bundleNames参数传递的包名部分应用已安装，部分应用未安装时，接口返回正常，已安装的应用返回实际的存储占用信息，未安装的应用存储占用信息为0。
+> 
+> 4.该接口支持跨用户查询，比如可以在100用户下，查询101用户下的某些应用的存储占用信息。
 
 **Since:** 26.0.0
 
@@ -37,22 +40,56 @@ Obtains the storage usage of installed applications of a specified user on a dev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| bundleNames | Array&lt;string&gt; | Yes | Application bundle name list. The list must contain no more than 200 bundle names. |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ You can call [getOsAccountLocalId]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ of **@ohos.account.osAccount** to obtain the user ID. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| bundleNames | Array&lt;string&gt; | Yes | 应用包名列表。取值范围：小于等于200个应用包名。 |
+| accountId | number | Yes | 用户ID，取值范围：大于等于0。 &lt;br&gt; accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleStorageStats&gt;&gt; | Promise used to return the storage usage information of the installed applications. |
+| Promise&lt;Array&lt;BundleStorageStats&gt;&gt; | Promise对象，返回已安装应用的存储占用信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200012 | Parameter verification failed. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
+
+## Examples
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleNames: Array<string> = ['com.example.app1', 'com.example.app2'];
+let accountId: number = 100;
+bundleManager.getInstalledBundleStorageStats(wantTemp, bundleNames, accountId).then((result) => {
+  console.info('Succeeded in getting installed bundle storage stats.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get installed bundle storage stats. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+// Return value example.
+[
+  {
+    "bundleName": "com.example.edmtest",
+    "appSize": 38185408,
+    "dataSize": 1216566
+  },
+  // ...
+]
+```
 

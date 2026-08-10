@@ -1,12 +1,18 @@
 # getChineseCalendar
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getChineseCalendar
 
 ```TypeScript
 export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 ```
 
-Obtains the ChineseCalendar object for the specified locale.
+获取指定区域的农历对象。
 
 **Since:** 26.0.0
 
@@ -24,11 +30,11 @@ Obtains the ChineseCalendar object for the specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | Intl.Locale | No | Locale object. The default value is the current system locale. |
+| locale | Intl.Locale | No | 区域对象，默认值：系统区域对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ChineseCalendar object. |
+| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | 农历对象。 |
 

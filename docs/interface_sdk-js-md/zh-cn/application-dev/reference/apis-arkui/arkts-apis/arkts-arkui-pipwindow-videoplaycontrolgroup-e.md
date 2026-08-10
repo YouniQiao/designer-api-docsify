@@ -1,6 +1,6 @@
 # VideoPlayControlGroup
 
-视频播放控件组枚举。仅当[PiPTemplateType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为VIDEO\_PLAY时使用。
+视频播放控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)为VIDEO_PLAY时使用。
 
 **起始版本：** 12
 

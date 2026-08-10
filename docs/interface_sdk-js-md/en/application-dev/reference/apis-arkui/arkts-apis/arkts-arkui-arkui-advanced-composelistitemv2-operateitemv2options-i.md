@@ -1,6 +1,6 @@
 # OperateItemV2Options
 
-Declare interface OperateItemV2Options
+声明接口OperateItemV2Options
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Declare interface OperateItemV2Options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+```
+
 ## arrow
 
 ```TypeScript
 arrow?: OperateIconV2
 ```
 
-Sets the arrow.
+设置箭头。
 
-**Type:** OperateIconV2
+**Type:** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
 
@@ -36,9 +42,9 @@ Sets the arrow.
 button?: OperateButtonV2
 ```
 
-Sets the button.
+设置按钮。
 
-**Type:** OperateButtonV2
+**Type:** [OperateButtonV2](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
 **Since:** 26.0.0
 
@@ -56,9 +62,9 @@ Sets the button.
 checkbox?: OperateCheckV2
 ```
 
-Sets the checkBox.
+设置多选框。
 
-**Type:** OperateCheckV2
+**Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 
@@ -76,9 +82,9 @@ Sets the checkBox.
 icon?: OperateIconV2
 ```
 
-Sets the icon.
+设置图标
 
-**Type:** OperateIconV2
+**Type:** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
 
@@ -96,9 +102,9 @@ Sets the icon.
 image?: ResourceStr
 ```
 
-Sets the image.
+设置图片。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -116,9 +122,9 @@ Sets the image.
 radio?: OperateCheckV2
 ```
 
-Sets the radio.
+设置单选框。
 
-**Type:** OperateCheckV2
+**Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 
@@ -136,9 +142,9 @@ Sets the radio.
 subIcon?: OperateIconV2
 ```
 
-Sets the subIcon.
+设置子图标。
 
-**Type:** OperateIconV2
+**Type:** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
 
@@ -156,9 +162,9 @@ Sets the subIcon.
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Sets the symbolStyle.
+设置Symbol图标。
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 
@@ -176,9 +182,9 @@ Sets the symbolStyle.
 text?: ResourceStr
 ```
 
-Sets the text.
+设置文本。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -196,9 +202,9 @@ Sets the text.
 toggle?: OperateCheckV2
 ```
 
-Sets the toggle.
+设置开关。
 
-**Type:** OperateCheckV2
+**Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 

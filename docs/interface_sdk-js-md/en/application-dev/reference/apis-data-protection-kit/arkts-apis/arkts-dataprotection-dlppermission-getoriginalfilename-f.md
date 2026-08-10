@@ -1,14 +1,20 @@
 # getOriginalFileName
 
+## Modules to Import
+
+```TypeScript
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+```
+
 ## getOriginalFileName
 
 ```TypeScript
 function getOriginalFileName(fileName: string): string
 ```
 
-Obtains the original name of a DLP file. This API returns the result synchronously.
+获取指定DLP文件名的原始文件名。该接口为同步接口。
 
-Determine the file type based on the original file name extension and select an application to open the file.
+根据原始文件名后缀判断文件类型，选择对应的应用打开。
 
 **Since:** 10
 
@@ -22,33 +28,27 @@ Determine the file type based on the original file name extension and select an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileName | string | Yes | Name of the target DLP file. The value contains 1 to 255 bytes. If the value is out of range, error code 401 is thrown. |
+| fileName | string | Yes | 指定要查询的DLP文件名。长度不超过255字节，超出此范围抛出错误码401。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Original name of the DLP file obtained. For example, if the DLP file name is **test.txt.dlp** , the original file name returned is **test.txt**. The value contains up to 255 bytes. |
+| string | 返回DLP文件的原始文件名。例如：DLP文件名为test.txt.dlp，则返回的原始文件名为test.txt。不超过255字节。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.1.0 and later |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| 19100001 | Invalid parameter value. |
+| 19100011 | The system ability works abnormally. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
-try {
-  let res = dlpPermission.getOriginalFileName('test.txt.dlp'); // Obtain the original file name.
-  console.info('res', res);
-} catch (err) {
-  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-}
+let originalFileName = dlpPermission.getOriginalFileName('test.txt.dlp'); // Obtain the original file name.
+console.info('originalFileName:', originalFileName);
 ```
 

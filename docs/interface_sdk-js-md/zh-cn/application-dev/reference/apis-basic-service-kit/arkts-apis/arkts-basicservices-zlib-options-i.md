@@ -10,6 +10,12 @@ Options用于指定在压缩或解压Zip文件时的选项。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
+## 导入模块
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## level
 
 ```TypeScript
@@ -18,7 +24,7 @@ level?: CompressLevel
 
 压缩或解压时指定的压缩等级。
 
-**类型：** CompressLevel
+**类型：** [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md)
 
 **起始版本：** 7
 
@@ -38,7 +44,7 @@ memLevel?: MemLevel
 
 压缩时指定的使用内存等级。
 
-**类型：** MemLevel
+**类型：** [MemLevel](arkts-basicservices-zlib-memlevel-e.md)
 
 **起始版本：** 7
 
@@ -58,7 +64,7 @@ parallel?: ParallelStrategy
 
 压缩策略。
 
-**类型：** ParallelStrategy
+**类型：** [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md)
 
 **起始版本：** 18
 
@@ -78,7 +84,7 @@ pathSeparatorStrategy?: PathSeparatorStrategy
 
 并行策略。
 
-**类型：** PathSeparatorStrategy
+**类型：** [PathSeparatorStrategy](arkts-basicservices-zlib-pathseparatorstrategy-e.md)
 
 **起始版本：** 21
 
@@ -98,7 +104,7 @@ strategy?: CompressStrategy
 
 压缩时指定的压缩策略。
 
-**类型：** CompressStrategy
+**类型：** [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md)
 
 **起始版本：** 7
 

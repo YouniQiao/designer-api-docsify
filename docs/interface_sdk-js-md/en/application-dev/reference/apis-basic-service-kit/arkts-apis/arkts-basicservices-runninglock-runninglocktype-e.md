@@ -1,6 +1,6 @@
 # RunningLockType
 
-Enumerates the types of **RunningLock** objects.
+RunningLock锁的类型。
 
 **Since:** 7
 
@@ -16,11 +16,9 @@ Enumerates the types of **RunningLock** objects.
 BACKGROUND = 1
 ```
 
-A lock that prevents the system from entering sleep mode when the screen is off.
+阻止系统睡眠的锁。
 
-**NOTE**
-
-This parameter is supported since API version 7 and deprecated since API version 10.
+**说明：** 从API version 7开始支持，从API version 10开始废弃。
 
 **Since:** 7
 
@@ -38,7 +36,7 @@ This parameter is supported since API version 7 and deprecated since API version
 PROXIMITY_SCREEN_CONTROL = 2
 ```
 
-A lock that enables the proximity sensor and turns on or off the screen based on the distance between the sensor and the obstacle.
+接近光锁，使能接近光传感器，并根据传感器与障碍物的距离远近发起亮灭屏流程。
 
 **Since:** 7
 
@@ -54,9 +52,9 @@ A lock that enables the proximity sensor and turns on or off the screen based on
 BACKGROUND_USER_IDLE = 129
 ```
 
-A background lock that prevents the system from automatically entering sleep mode when the user is inactive for a period of time. Note: This lock cannot prevent the system from entering the forced sleep state in scenarios such as closing the PC lid. The user must listen for the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_event and release this lock after receiving the event. The behavior of this lock varies with devices. For details about how to use this type of lock, see  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+阻止系统自动睡眠的后台闲时任务锁，持锁能保证一段时间用户不活动后系统不进入自动睡眠。注意：不能阻止如PC合盖等场景系统进入强制睡眠，使用方必须监听  
+[进入强制睡眠公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_enter_force_sleep12)，监听到事件后释放该锁。该类型锁行为存在设备差异，使用该类型锁请参考  
+[阻止系统闲时进入睡眠开发指南](../../../basic-services/powermgr/runningLock/runningLock-dev.md)。
 
 **Since:** 23
 

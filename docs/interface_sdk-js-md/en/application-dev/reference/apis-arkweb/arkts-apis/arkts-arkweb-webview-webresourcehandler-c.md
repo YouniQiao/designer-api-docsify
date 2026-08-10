@@ -10,6 +10,12 @@ Used to intercept url requests. Response headers and body can be sent through We
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## didFail
 
 ```TypeScript
@@ -30,14 +36,14 @@ Notify that this request should be failed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Set response error code to intercept. |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Yes | Set response error code to intercept. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| 17100021 | The resource handler is invalid. |
 
 ## didFail
 
@@ -59,45 +65,15 @@ Notify that this request should be failed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Set response error code to intercept. |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Yes | Set response error code to intercept. |
 | completeIfNoResponse | boolean | Yes | If completeIfNoResponse is true, when DidFailWithError is called, if DidReceiveResponse has not been called, a response is automatically constructed and the current request is terminated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100101](../errorcode-webview.md#17100101-incorrect-network-error-code) | The errorCode is either ARKWEB\_\_\_ESCAPED\_UNDERSCORE\_\_\_NET\_\_\_ESCAPED\_UNDERSCORE\_\_\_OK or outside the range of error codes in WebNetErrorList. |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
-
-## didFail
-
-```TypeScript
-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: int): void
-```
-
-Notify that this request should be failed.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-<!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: int): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: int): void-End-->
-
-**System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| code | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Set response error code to intercept. |
-| completeIfNoResponse | boolean | Yes | If completeIfNoResponse is true, when DidFailWithError is called, if DidReceiveResponse has not been called, a response is automatically constructed and the current request is terminated. |
-| customErrorCode | int | Yes | The custom error code for this response, Web engine will pass the custom error code directly to the application through onErrorReceive. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+| 17100101 | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
+| 17100021 | The resource handler is invalid. |
 
 ## didFinish
 
@@ -119,7 +95,7 @@ Notify that this request should be finished and there is no more data available.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+| 17100021 | The resource handler is invalid. |
 
 ## didReceiveResponse
 
@@ -141,14 +117,14 @@ Pass response headers to intercepted requests.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Set response header to intercept. |
+| response | [WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md) | Yes | Set response header to intercept. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| 17100021 | The resource handler is invalid. |
 
 ## didReceiveResponseBody
 
@@ -176,6 +152,6 @@ Pass response body data to intercepted requests.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| 17100021 | The resource handler is invalid. |
 

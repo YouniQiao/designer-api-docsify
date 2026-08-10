@@ -1,6 +1,6 @@
 # RectChangeOptions
 
-Describes the value and reason returned upon a window rectangle (position and size) change.
+窗口矩形（窗口位置及窗口大小）变化返回的值及变化原因。
 
 **Since:** 12
 
@@ -10,15 +10,21 @@ Describes the value and reason returned upon a window rectangle (position and si
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## reason
 
 ```TypeScript
 reason: RectChangeReason
 ```
 
-Reason for the window rectangle change.
+窗口矩形变化的原因。
 
-**Type:** RectChangeReason
+**Type:** [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)
 
 **Since:** 12
 
@@ -38,7 +44,7 @@ rect: Rect
 
 New value of the window rectangle.
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 12
 

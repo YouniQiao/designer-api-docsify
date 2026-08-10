@@ -1,7 +1,7 @@
 # MetadataDogFaceObject
 
-Dog face metadata detected by the camera, which is extended from [MetadataObject]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It serves as the data source of the camera information in [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. It is obtained by calling metadataOutput.  
-[on('metadataObjectsAvailable')]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+相机检测到的狗脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.  
+[on('metadataObjectsAvailable')](camera.MetadataOutput.on(type: 'metadataObjectsAvailable', callback: AsyncCallback&lt;Array<MetadataObject>&gt;&lt;MetadataObject&gt;>))接口获取。
 
 **Inheritance/Implementation:** MetadataDogFaceObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md)
 
@@ -13,15 +13,21 @@ Dog face metadata detected by the camera, which is extended from [MetadataObject
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## leftEyeBoundingBox
 
 ```TypeScript
 readonly leftEyeBoundingBox: Rect
 ```
 
-Left eye area.
+左眼区域框。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 26.0.0
 
@@ -39,9 +45,9 @@ Left eye area.
 readonly rightEyeBoundingBox: Rect
 ```
 
-Right eye area.
+右眼区域框。
 
-**Type:** Rect
+**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
 **Since:** 26.0.0
 

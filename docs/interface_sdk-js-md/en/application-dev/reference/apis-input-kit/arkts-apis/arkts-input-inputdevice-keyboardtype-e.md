@@ -1,6 +1,6 @@
 # KeyboardType
 
-Enumerates keyboard types.
+键盘输入设备的类型。
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Enumerates keyboard types.
 NONE = 0
 ```
 
-Keyboard without keys.
+表示无按键设备。
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Keyboard without keys.
 UNKNOWN = 1
 ```
 
-Keyboard with unknown keys.
+表示未知按键设备。
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Keyboard with unknown keys.
 ALPHABETIC_KEYBOARD = 2
 ```
 
-Full keyboard.
+表示全键盘设备。
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ Full keyboard.
 DIGITAL_KEYBOARD = 3
 ```
 
-Keypad.
+表示小键盘设备。
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Keypad.
 HANDWRITING_PEN = 4
 ```
 
-Stylus.
+表示手写笔设备。
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ Stylus.
 REMOTE_CONTROL = 5
 ```
 
-Remote control.
+表示遥控器设备。
 
 **Since:** 9
 

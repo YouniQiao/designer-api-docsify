@@ -1,6 +1,6 @@
 # ClickActionProposal
 
-Class ClickActionProposal.
+类ClickActionProposal。
 
 **Inheritance/Implementation:** ClickActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
 
@@ -12,13 +12,19 @@ Class ClickActionProposal.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(node: FrameNode)
 ```
 
-ClickActionProposal constructor.
+SelectActionProposal构造函数。
 
 **Since:** 26.0.0
 
@@ -34,5 +40,5 @@ ClickActionProposal constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The node responding to click action. |
+| node | [FrameNode](arkts-arkui-framenode-t.md) | Yes | 响应选择操作的节点。 |
 

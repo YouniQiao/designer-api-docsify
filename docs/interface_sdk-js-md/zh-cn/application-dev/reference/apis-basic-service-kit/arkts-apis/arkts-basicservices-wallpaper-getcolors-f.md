@@ -1,5 +1,11 @@
 # getColors
 
+## 导入模块
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getColors
 
 ```TypeScript
@@ -22,10 +28,10 @@ function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<R
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;RgbaColor&gt;&gt; | 是 | 回调函数，返回壁纸的主要颜色信息。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RgbaColor&gt;&gt; | 是 | 回调函数，返回壁纸的主要颜色信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -62,7 +68,7 @@ function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
 
 **返回值：**
 
@@ -70,7 +76,7 @@ function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 | --- | --- |
 | Promise&lt;Array&lt;RgbaColor&gt;&gt; | 返回壁纸的主要颜色信息。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

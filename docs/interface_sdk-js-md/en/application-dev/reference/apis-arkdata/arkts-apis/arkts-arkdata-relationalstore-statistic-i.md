@@ -1,6 +1,6 @@
 # Statistic
 
-Defines a struct for the device-cloud sync statistics of a database table.
+描述数据库表的端云同步过程的统计信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Defines a struct for the device-cloud sync statistics of a database table.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## failed
 
 ```TypeScript
 failed: int
 ```
 
-Number of rows that failed to be synced between the device and cloud in the database table.
+表示数据库表中端云同步失败的行数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -34,9 +40,9 @@ Number of rows that failed to be synced between the device and cloud in the data
 remained: int
 ```
 
-Number of rows that are not executed for device-cloud sync in the database table.
+表示数据库表中端云同步剩余未执行的行数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -52,9 +58,9 @@ Number of rows that are not executed for device-cloud sync in the database table
 successful: int
 ```
 
-Number of rows that are successfully synced between the device and cloud in the database table.
+表示数据库表中端云同步成功的行数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -70,9 +76,9 @@ Number of rows that are successfully synced between the device and cloud in the 
 total: int
 ```
 
-Total number of rows to be synced between the device and cloud in the database table.
+表示数据库表中需要端云同步的总行数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

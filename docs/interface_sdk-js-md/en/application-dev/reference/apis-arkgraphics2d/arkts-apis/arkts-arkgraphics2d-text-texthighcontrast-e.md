@@ -1,6 +1,6 @@
 # TextHighContrast
 
-Enumerates the high contrast types for text rendering.
+文字渲染高对比度配置类型枚举。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the high contrast types for text rendering.
 TEXT_FOLLOW_SYSTEM_HIGH_CONTRAST = 0
 ```
 
-Follows the high contrast mode for text rendering in the system settings.
+跟随系统设置中的高对比度文字配置。
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ Follows the high contrast mode for text rendering in the system settings.
 TEXT_APP_DISABLE_HIGH_CONTRAST = 1
 ```
 
-Disables the high contrast mode for text rendering in the application. This mode takes precedence over the one based on system settings.
+关闭APP的文字渲染高对比度配置，该模式的优先级要高于系统设置中的高对比度文字配置。
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ Disables the high contrast mode for text rendering in the application. This mode
 TEXT_APP_ENABLE_HIGH_CONTRAST = 2
 ```
 
-Enables the high contrast mode for text rendering in the application. The priority of this mode is higher than the mode following the system settings.
+开启APP的文字渲染高对比度配置，该模式的优先级要高于系统设置中的高对比度文字配置。
 
 **Since:** 20
 

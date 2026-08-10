@@ -1,5 +1,11 @@
 # getScreenCaptureMonitor (System API)
 
+## Modules to Import
+
+```TypeScript
+import { media } from 'kits/@kit.MediaKit';
+```
+
 ## getScreenCaptureMonitor
 
 ```TypeScript
@@ -22,16 +28,16 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ScreenCaptureMonitor&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
+| Promise&lt;ScreenCaptureMonitor&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. &lt;br&gt;If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
 let screenCaptureMonitor: media.ScreenCaptureMonitor;
@@ -65,12 +71,12 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ScreenCaptureMonitor \| undefined&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **undefined** is returned. |
+| Promise&lt;ScreenCaptureMonitor \| undefined&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. &lt;br&gt;If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| 5400101 | No memory. Return by promise. |
+| 202 | Not System App. |
 

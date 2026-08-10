@@ -1,6 +1,6 @@
 # TextHeightAdaptivePolicy
 
-The mode of adjusting the text font size to adapt to the layout.
+Enum of text height adaptation
 
 **Since:** 10
 
@@ -13,10 +13,10 @@ The mode of adjusting the text font size to adapt to the layout.
 ## MAX_LINES_FIRST
 
 ```TypeScript
-MAX_LINES_FIRST
+MAX_LINES_FIRST = 0
 ```
 
-the text height adaptation mode to [maxLines]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ first.
+Priority is given to using the maxLines attribute to adapt the text height.If the layout size using the maxLines attribute exceeds the layout constraint, try reducing the font size to display more text.
 
 **Since:** 10
 
@@ -26,17 +26,17 @@ the text height adaptation mode to [maxLines]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TextHeightAdaptivePolicy-MAX_LINES_FIRST--><!--Device-TextHeightAdaptivePolicy-MAX_LINES_FIRST-End-->
+<!--Device-TextHeightAdaptivePolicy-MAX_LINES_FIRST = 0--><!--Device-TextHeightAdaptivePolicy-MAX_LINES_FIRST = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## MIN_FONT_SIZE_FIRST
 
 ```TypeScript
-MIN_FONT_SIZE_FIRST
+MIN_FONT_SIZE_FIRST = 1
 ```
 
-Prioritize the **minFontSize** settings.
+Priority is given to using the minFontSize attribute to adapt the text height.If the text can be layout in a single line using the minFontSize property, try increasing the font size and using the maximum possible font size.
 
 **Since:** 10
 
@@ -46,17 +46,17 @@ Prioritize the **minFontSize** settings.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TextHeightAdaptivePolicy-MIN_FONT_SIZE_FIRST--><!--Device-TextHeightAdaptivePolicy-MIN_FONT_SIZE_FIRST-End-->
+<!--Device-TextHeightAdaptivePolicy-MIN_FONT_SIZE_FIRST = 1--><!--Device-TextHeightAdaptivePolicy-MIN_FONT_SIZE_FIRST = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## LAYOUT_CONSTRAINT_FIRST
 
 ```TypeScript
-LAYOUT_CONSTRAINT_FIRST
+LAYOUT_CONSTRAINT_FIRST = 2
 ```
 
-Prioritize the layout constraint settings in terms of height.
+Priority is given to using the layout constraint to adapt the text height.If the layout size exceeds the layout constraint, try reducing the font size. If the layout size still exceeds the layout constraint after reducing the font size to minFontSize, remove the lines that exceed the layout constraint.
 
 **Since:** 10
 
@@ -66,7 +66,7 @@ Prioritize the layout constraint settings in terms of height.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TextHeightAdaptivePolicy-LAYOUT_CONSTRAINT_FIRST--><!--Device-TextHeightAdaptivePolicy-LAYOUT_CONSTRAINT_FIRST-End-->
+<!--Device-TextHeightAdaptivePolicy-LAYOUT_CONSTRAINT_FIRST = 2--><!--Device-TextHeightAdaptivePolicy-LAYOUT_CONSTRAINT_FIRST = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

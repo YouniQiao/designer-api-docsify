@@ -1,6 +1,6 @@
 # Location
 
-Describes the geolocation information.
+图片地理位置信息。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Describes the geolocation information.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## altitude
 
 ```TypeScript
 altitude: double
 ```
 
-Altitude, in meters.
+海拔（米）。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 
@@ -36,9 +42,9 @@ Altitude, in meters.
 latitude: double
 ```
 
-Latitude, in degrees, within the range [–90, 90].
+纬度（度）。取值范围：[-90, 90]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 
@@ -56,9 +62,9 @@ Latitude, in degrees, within the range [–90, 90].
 longitude: double
 ```
 
-Longitude, in degrees, within the range [–180, 180].
+经度（度）。取值范围：[-180, 180]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 10
 

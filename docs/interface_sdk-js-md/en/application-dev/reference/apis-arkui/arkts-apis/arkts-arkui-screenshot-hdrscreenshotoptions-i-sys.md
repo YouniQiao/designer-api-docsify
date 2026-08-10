@@ -1,6 +1,6 @@
 # HdrScreenshotOptions (System API)
 
-Describes the HDR screenshot options.
+设置截取HDR图像的信息。
 
 **Since:** 20
 
@@ -12,15 +12,21 @@ Describes the HDR screenshot options.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { screenshot } from 'kits/@kit.ArkUI';
+```
+
 ## displayId
 
 ```TypeScript
 displayId?: long
 ```
 
-ID of the [display]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ device on which the screen region is to be captured. The value must be an integer. The default value is **0**.
+表示截取图像的显示设备[Display](arkts-arkui-display-displaystate-e.md)的ID号，该参数应为整数。默认为0。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Default:** The ID of the current display. The value is a positive integer greater than or equal to 0.
 
@@ -40,15 +46,15 @@ ID of the [display]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ device on which the scr
 displayIntent?: DisplayIntentType
 ```
 
-screenshot display intent type.
+截取图像的显示类型。
 
-**Type:** DisplayIntentType
+**Type:** [DisplayIntentType](arkts-arkui-screenshot-displayintenttype-e-sys.md)
 
 **Default:** DisplayIntentType.CANONICAL
 
-**Since:** 26.0.0
+**Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,8 +70,7 @@ screenshot display intent type.
 isCaptureFullOfScreen?: boolean
 ```
 
-Whether to capture all displays on the current screen. If the screen contains multiple displays, the value  
-**true** means that the entire screen is captured, and **false** means that only the region of the logical screen associated with the specified display ID is captured. The default value is **false**.
+表示是否截取当前物理屏上所有DisplayId对应的逻辑屏。对于一个物理屏上有多个DisplayId的场景，true表示截取整个物理屏，false表示只截取DisplayId所在区域的逻辑屏。默认值为false。
 
 **Type:** boolean
 
@@ -87,8 +92,8 @@ Whether to capture all displays on the current screen. If the screen contains mu
 isNotificationNeeded?: boolean
 ```
 
-Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through  
-[captureStatusChange]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+表示截取图像之后是否发送截屏通知，true表示发送截屏通知，false表示不发送截屏通知，默认值为true。截屏通知可以通过  
+[captureStatusChange](@ohos.display:display.on(type: 'captureStatusChange', callback: Callback&lt;boolean&gt;))接口监听。
 
 **Type:** boolean
 

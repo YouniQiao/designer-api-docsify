@@ -1,6 +1,10 @@
 # ExpandedMenuItemOptions
 
-Defines the menu item option.
+> **说明：**
+> 
+> 从API version 12开始支持，从API version 20开始废弃，建议使用
+> [editMenuOptions](../arkts-apis/arkts-arkweb-web-webattribute-i.md/arkts-arkweb-web-webattribute-i.md#editmenuoptions)替代。
+> 自定义菜单扩展项。
 
 **Since:** 12
 
@@ -8,7 +12,7 @@ Defines the menu item option.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-component/textcommon-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
 
 <!--Device-unnamed-declare interface ExpandedMenuItemOptions--><!--Device-unnamed-declare interface ExpandedMenuItemOptions-End-->
 
@@ -20,7 +24,7 @@ Defines the menu item option.
 action: (selectedText: {plainText: string}) => void
 ```
 
-Selected text.
+选中的文本信息。
 
 **Since:** 12
 
@@ -28,7 +32,7 @@ Selected text.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-component/textcommon-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,9 +52,9 @@ Selected text.
 content: ResourceStr
 ```
 
-Display content.
+显示内容。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
 
@@ -58,7 +62,7 @@ Display content.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-component/textcommon-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -72,9 +76,9 @@ Display content.
 startIcon?: ResourceStr
 ```
 
-Display icon. The default value is empty, and no icon is displayed.
+显示图标。默认值为空，不显示图标。
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
 
@@ -82,7 +86,7 @@ Display icon. The default value is empty, and no icon is displayed.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-component/textcommon-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

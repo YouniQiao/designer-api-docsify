@@ -54,7 +54,7 @@ Indicates the fixed dialing number.
 SDN_DIALING = 3
 ```
 
-Service dialing number.
+业务拨号号码。
 
 **Since:** 24
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -20,7 +26,7 @@ deviceId: long
 
 设备ID。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 12
 
@@ -58,7 +64,7 @@ driverUid?: string
 isDriverMatched: boolean
 ```
 
-设备是否匹配到驱动。\_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_：匹配到驱动；\_\_\_INLINE\_CODE\_DESC\_USD\_1\_\_\_：未匹配到驱动。
+设备是否匹配到驱动。`true`：匹配到驱动；`false`：未匹配到驱动。
 
 **类型：** boolean
 

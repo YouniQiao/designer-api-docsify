@@ -1,5 +1,11 @@
 # onAVMusicTemplateDestroy（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+```
+
 ## onAVMusicTemplateDestroy
 
 ```TypeScript
@@ -26,13 +32,13 @@ function onAVMusicTemplateDestroy(callback: Callback<AVMusicTemplateDescriptor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AVMusicTemplateDescriptor&gt; | 是 | 回调函数，参数为音频模板描述。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMusicTemplateDescriptor&gt; | 是 | 回调函数，参数为音频模板描述。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verify failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function onAVMusicTemplateDestroy can not work correctly due to limited device capabilities. |
+| 801 | Capability not supported.function onAVMusicTemplateDestroy can not work correctly due to limited device capabilities. |
+| 201 | Permission verify failed. |
+| 202 | Not System App. |
 

@@ -18,7 +18,7 @@ color?: ResourceColor
 
 The color of Divider.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ endMargin?: LengthMetrics
 
 The endMargin of Divider.
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 
@@ -62,7 +62,7 @@ mode?: DividerMode
 
 The mode of Divider.
 
-**类型：** DividerMode
+**类型：** [DividerMode](arkts-arkui-dividermode-e.md)
 
 **起始版本：** 19
 
@@ -84,7 +84,7 @@ startMargin?: LengthMetrics
 
 The startMargin of Divider.
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 
@@ -106,7 +106,7 @@ strokeWidth?: LengthMetrics
 
 The strokeWidth of Divider.
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
 **起始版本：** 12
 

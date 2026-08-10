@@ -1,7 +1,7 @@
 # VibratorStopMode
 
-Enumerates vibration stop modes. This parameter is required for  
-[vibrator.stopVibration9+]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_or [vibrator.stopVibration9+]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. The stop mode must match that delivered in [VibrateEffect9+]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+停止振动的模式。在调用  
+[vibrator.stopVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)或[vibrator.stopVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)接口时，需要使用此参数类型指定停止的振动模式。停止模式和[VibrateEffect&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-vibrateeffect-t.md)中下发的模式为对应关系：VIBRATOR_STOP_MODE_TIME对应VibrateTime类型，VIBRATOR_STOP_MODE_PRESET对应VibratePreset类型。
 
 **Since:** 8
 
@@ -17,7 +17,7 @@ Enumerates vibration stop modes. This parameter is required for
 VIBRATOR_STOP_MODE_TIME = 'time'
 ```
 
-The vibration to stop is in **duration** mode.
+停止[VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)类型（duration模式）的振动。需与startVibration时使用的VibrateTime类型对应。
 
 **Since:** 8
 
@@ -33,7 +33,7 @@ The vibration to stop is in **duration** mode.
 VIBRATOR_STOP_MODE_PRESET = 'preset'
 ```
 
-The vibration to stop is in **EffectId** mode.
+停止[VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md)类型（预置EffectId模式）的振动。需与startVibration时使用的VibratePreset类型对应。
 
 **Since:** 8
 

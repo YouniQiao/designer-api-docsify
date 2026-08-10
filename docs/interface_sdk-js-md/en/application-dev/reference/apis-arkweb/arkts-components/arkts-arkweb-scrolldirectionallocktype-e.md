@@ -1,6 +1,6 @@
 # ScrollDirectionalLockType
 
-Enum defining the scope of directional lock behavior in the WebView, used with \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+定义滑动方向锁定的场景类型。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enum defining the scope of directional lock behavior in the WebView, used with \
 ALL = 0
 ```
 
-Applies directional lock across all scroll contexts.This includes both nested and flat scroll scenarios.
+所有场景都支持滑动锁定。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Applies directional lock across all scroll contexts.This includes both nested an
 NESTED_SCROLL = 1
 ```
 
-Applies directional lock only within nested scroll scenarios.This is the default behavior in ArkWeb to improve UX in complex scroll hierarchies.
+嵌套滚动场景下支持滑动锁定。
 
 **Since:** 26.0.0
 

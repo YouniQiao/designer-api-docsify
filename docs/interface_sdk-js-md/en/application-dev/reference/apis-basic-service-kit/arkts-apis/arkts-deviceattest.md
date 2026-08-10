@@ -1,6 +1,6 @@
 # @ohos.deviceAttest
 
-xts\_device\_attest authResult information
+xts_device_attest authResult information
 
 **Since:** 9
 
@@ -9,6 +9,12 @@ xts\_device\_attest authResult information
 <!--Device-unnamed-declare namespace deviceAttest--><!--Device-unnamed-declare namespace deviceAttest-End-->
 
 **System capability:** SystemCapability.XTS.DeviceAttest
+
+## Modules to Import
+
+```TypeScript
+import { deviceAttest } from 'kits/@kit.BasicServicesKit';
+```
 
 ## Summary
 

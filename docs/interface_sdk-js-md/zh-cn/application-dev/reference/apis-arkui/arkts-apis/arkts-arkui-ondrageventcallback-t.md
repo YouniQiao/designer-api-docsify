@@ -20,6 +20,6 @@ The event callback function for drag and drop common interfaces.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | the event object indicating current drag status.  |
-| extraParams | string | 否 | extra information set by user or system.  |
+| event | [DragEvent](../arkts-components/arkts-arkui-dragevent-i.md) | 是 | the event object indicating current drag status. |
+| extraParams | string | 否 | extra information set by user or system. |
 

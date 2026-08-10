@@ -1,12 +1,18 @@
 # allocUninitialized
 
+## 导入模块
+
+```TypeScript
+import { fastbuffer } from 'kits/@kit.ArkTS';
+```
+
 ## allocUninitialized
 
 ```TypeScript
 function allocUninitialized(size: number): FastBuffer
 ```
 
-创建指定大小未初始化的FastBuffer对象。调用[fill]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_函数初始化该对象。
+创建指定大小未初始化的FastBuffer对象。调用[fill](arkts-arkts-fastbuffer-fastbuffer-c.md#fill)函数初始化该对象。
 
 **起始版本：** 20
 
@@ -22,15 +28,15 @@ function allocUninitialized(size: number): FastBuffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | number | 是 | 指定的FastBuffer对象长度，单位：字节。取值范围：0 <= size <= UINT32\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAX。 |
+| size | number | 是 | 指定的FastBuffer对象长度，单位：字节。取值范围：0 <= size <= UINT32_MAX。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 未初始化的FastBuffer实例。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 未初始化的FastBuffer实例。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { fastbuffer } from '@kit.ArkTS';

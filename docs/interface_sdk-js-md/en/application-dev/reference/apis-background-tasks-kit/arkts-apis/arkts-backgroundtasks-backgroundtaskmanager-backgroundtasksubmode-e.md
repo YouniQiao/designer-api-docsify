@@ -1,7 +1,6 @@
 # BackgroundTaskSubmode
 
-Defines the subtype of a continuous task. It is usually used together with the main type  
-[BackgroundTaskMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. For details, see the mapping table. The two types are newly added in API version 21 for requesting and updating continuous tasks.
+长时任务子类型。通常与长时任务主类型[BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)配合使用，对照关系请参考长时任务主类型与子类型对照表，两者共同作为API version 21新增的申请、更新长时任务接口入参，用于指定长时任务类型。
 
 **Since:** 21
 
@@ -17,7 +16,7 @@ Defines the subtype of a continuous task. It is usually used together with the m
 SUBMODE_CAR_KEY_NORMAL_NOTIFICATION = 1
 ```
 
-CAR\_KEY** type. It is of the normal text notification type.
+车钥匙类型，通知类型为普通文本通知。
 
 **Since:** 21
 
@@ -33,7 +32,7 @@ CAR\_KEY** type. It is of the normal text notification type.
 SUBMODE_NORMAL_NOTIFICATION = 2
 ```
 
-Normal text notification.
+普通文本通知。
 
 **Since:** 21
 
@@ -51,7 +50,7 @@ Normal text notification.
 SUBMODE_LIVE_VIEW_NOTIFICATION = 3
 ```
 
-Live view notification.
+实况窗通知。
 
 **Since:** 21
 
@@ -67,7 +66,7 @@ Live view notification.
 SUBMODE_AUDIO_PLAYBACK_NORMAL_NOTIFICATION = 4
 ```
 
-Audio and video playback. It is of the normal text notification type.You can access \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ as needed.
+音视频播放，通知类型为普通文本通知。根据实际场景选择是否接入[AVSession](../../../media/avsession/avsession-overview.md)。
 
 **Since:** 22
 
@@ -85,7 +84,7 @@ Audio and video playback. It is of the normal text notification type.You can acc
 SUBMODE_AVSESSION_AUDIO_PLAYBACK = 5
 ```
 
-Audio and video playback scenario where \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is accessed.It is of the normal text notification type.
+已接入[AVSession](../../../media/avsession/avsession-overview.md)的音视频播放场景，不发送通知。
 
 **Since:** 22
 
@@ -103,7 +102,7 @@ Audio and video playback scenario where \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ is ac
 SUBMODE_AUDIO_RECORD_NORMAL_NOTIFICATION = 6
 ```
 
-Recording. It is of the normal text notification type.
+录音，通知类型为普通文本通知。
 
 **Since:** 22
 
@@ -119,7 +118,7 @@ Recording. It is of the normal text notification type.
 SUBMODE_SCREEN_RECORD_NORMAL_NOTIFICATION = 7
 ```
 
-Recording. It is of the normal text notification type.
+录屏，通知类型为普通文本通知。
 
 **Since:** 22
 
@@ -135,7 +134,7 @@ Recording. It is of the normal text notification type.
 SUBMODE_VOICE_CHAT_NORMAL_NOTIFICATION = 8
 ```
 
-Call. It is of the normal text notification type.
+通话，通知类型为普通文本通知。
 
 **Since:** 22
 
@@ -151,7 +150,7 @@ Call. It is of the normal text notification type.
 SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION = 9
 ```
 
-Media processing. For example, an application exports media files in the background. It is of the normal text notification type.
+媒体处理，例如：应用在后台导出媒体文件，通知类型为普通文本通知。
 
 **Since:** 22
 
@@ -167,7 +166,7 @@ Media processing. For example, an application exports media files in the backgro
 SUBMODE_VIDEO_BROADCAST_NORMAL_NOTIFICATION = 10
 ```
 
-Video casting. For example, an application uses a third-party casting component to cast a video in the background, and the notification type is common text notification.
+视频投播，例如：应用使用三方投播组件在后台进行投播，通知类型为普通文本通知。
 
 **Since:** 22
 
@@ -183,7 +182,7 @@ Video casting. For example, an application uses a third-party casting component 
 SUBMODE_WORK_OUT_NORMAL_NOTIFICATION = 11
 ```
 
-Exercise. For example, an application has an indoor running scenario in the background, and the notification type is common text notification.
+运动，例如：应用在后台有室内跑步场景，通知类型为普通文本通知。
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # PolicyType
 
-Enumerates the update policy types.
+升级策略类型枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the update policy types.
 DEFAULT = 0
 ```
 
-Default update policy, which periodically notifies the user of the update and starts the update after user confirmation.
+默认升级策略。周期提示用户，用户确认后升级。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Default update policy, which periodically notifies the user of the update and st
 PROHIBIT = 1
 ```
 
-Prohibit updates.
+禁止升级策略。
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Prohibit updates.
 UPDATE_TO_SPECIFIC_VERSION = 2
 ```
 
-Enforce updates. In this case, **latestUpdateTime** must be specified.
+强制升级策略。需指定最晚升级时间（latestUpdateTime）参数。
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ Enforce updates. In this case, **latestUpdateTime** must be specified.
 WINDOWS = 3
 ```
 
-Update at the specified time window. In this case, **installStartTime** and **installEndTime** must be specified.
+指定时间窗口升级策略。需指定时间窗口参数（installStartTime、installEndTime）。
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ Update at the specified time window. In this case, **installStartTime** and **in
 POSTPONE = 4
 ```
 
-Postpone updates. After the time specified by **delayUpdateTime** is over, the default update policy is used.
+延迟升级策略。延迟指定时间（delayUpdateTime）后进入DEFAULT模式，周期提示用户升级。
 
 **Since:** 12
 

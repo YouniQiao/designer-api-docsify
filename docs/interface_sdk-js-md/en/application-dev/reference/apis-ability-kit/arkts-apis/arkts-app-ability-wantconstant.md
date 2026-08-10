@@ -1,6 +1,6 @@
 # @ohos.app.ability.wantConstant
 
-The wantConstant module provides the actions, entities, and flags used in Want objects.
+wantConstant模块提供want中操作want常数和解释Flags说明的能力。
 
 **Since:** 9
 
@@ -10,22 +10,27 @@ The wantConstant module provides the actions, entities, and flags used in Want o
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
+## Modules to Import
+
+```TypeScript
+import { wantConstant } from 'kits/@kit.AbilityKit';
+```
+
 ## Summary
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Action](arkts-ability-wantconstant-action-e.md) | Enumerates the action constants of the Want object. **action** specifies the operation to execute. |
-| [Flags](arkts-ability-wantconstant-flags-e.md) | Enumerates the common preset keywords of the [Want.flags]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ field. You can use these predefined keywords to set or retrieve additional flag information carried in application transitions. |
-| [Params](arkts-ability-wantconstant-params-e.md) | Defines **Params** (specifying the action that can be performed) in the Want. |
-| [ShowMode](arkts-ability-wantconstant-showmode-e.md) | Enumerates the display modes of an  [EmbeddableUIAbility]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ when it is launched. |
+| [Flags](arkts-ability-wantconstant-flags-e.md) | [Want.flags](arkts-ability-app-ability-want-want-c.md#flags)字段常用的系统预置关键字。开发者可以通过这些预置关键字设置或获取应用跳转等场景中额外携带的标志位信息。 |
+| [Params](arkts-ability-wantconstant-params-e.md) | want的Params操作的常量。 |
+| [ShowMode](arkts-ability-wantconstant-showmode-e.md) | 表示[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)被拉起时的显示模式。 |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [Params](arkts-ability-wantconstant-params-e-sys.md) | Defines **Params** (specifying the action that can be performed) in the Want. |
+| [Params](arkts-ability-wantconstant-params-e-sys.md) | want的Params操作的常量。 |
 <!--DelEnd-->
 

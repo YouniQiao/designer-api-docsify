@@ -22,5 +22,5 @@ Anonymous Object Rectification
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 当前设备的折叠状态。  |
+| event | [OnFoldStatusChangeInfo](arkts-arkui-folderstack-onfoldstatuschangeinfo-i.md) | 是 | 当前设备的折叠状态。 |
 

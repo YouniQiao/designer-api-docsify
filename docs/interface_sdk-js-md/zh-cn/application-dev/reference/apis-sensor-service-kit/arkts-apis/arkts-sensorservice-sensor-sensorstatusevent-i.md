@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
+## 导入模块
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## deviceId
 
 ```TypeScript
@@ -18,7 +24,7 @@ deviceId: int
 
 设备ID。-1表示本地设备，其它值表示远程设备。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 
@@ -70,9 +76,9 @@ isSensorOnline: boolean
 sensorId: int
 ```
 
-传感器类型ID，对应[SensorId]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_枚举值。
+传感器类型ID，对应[SensorId](arkts-sensorservice-sensor-sensorid-e.md)枚举值。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 
@@ -90,7 +96,7 @@ sensorIndex: int
 
 传感器索引，同一类型传感器可能有多个实例，通过sensorIndex区分。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 19
 
@@ -108,7 +114,7 @@ timestamp: long
 
 事件发生的时间戳。从设备开机开始计时到事件发生的时间。单位：ms（毫秒）。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 19
 

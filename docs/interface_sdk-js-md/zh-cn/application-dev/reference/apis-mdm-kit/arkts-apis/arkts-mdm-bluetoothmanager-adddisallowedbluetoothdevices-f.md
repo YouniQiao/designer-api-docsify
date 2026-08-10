@@ -1,5 +1,11 @@
 # addDisallowedBluetoothDevices
 
+## 导入模块
+
+```TypeScript
+import { bluetoothManager } from 'kits/@kit.MDMKit';
+```
+
 ## addDisallowedBluetoothDevices
 
 ```TypeScript
@@ -10,7 +16,7 @@ function addDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>): v
 
 以下情况下，通过本接口添加蓝牙设备禁用名单，会报策略冲突：
 
-1. 已经通过[setDisallowedPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口禁用了蓝牙。通过[setDisallowedPolicy]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_接口启用蓝牙后，可解除冲突。2. 已经通过[addAllowedBluetoothDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_接口添加了蓝牙设备可用名单。通过[removeAllowedBluetoothDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_移除蓝牙设备可用名单后，可解除冲突。
+1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了蓝牙。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口启用蓝牙后，可解除冲突。2. 已经通过[addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md#addallowedbluetoothdevices)接口添加了蓝牙设备可用名单。通过[removeAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-removeallowedbluetoothdevices-f.md#removeallowedbluetoothdevices)移除蓝牙设备可用名单后，可解除冲突。
 
 **起始版本：** 20
 
@@ -28,19 +34,19 @@ function addDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | deviceIds | Array&lt;string&gt; | 是 | 蓝牙设备MAC地址的数组。蓝牙设备禁用名单数组长度上限为1000，若当前禁用名单中已有300个蓝牙设备MAC地址，则只允许再添加700个。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
-| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) | A conflict policy has been configured. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200010 | A conflict policy has been configured. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 9200001 | The application is not an administrator application of the device. |
+| 9200002 | The administrator application does not have permission to manage the device. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bluetoothManager } from '@kit.MDMKit';

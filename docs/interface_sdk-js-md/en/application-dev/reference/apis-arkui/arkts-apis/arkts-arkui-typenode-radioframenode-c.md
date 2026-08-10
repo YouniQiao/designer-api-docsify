@@ -1,6 +1,6 @@
 # RadioFrameNode
 
-Define the Radio type of FrameNode.
+定义Radio类型的FrameNode。
 
 **Inheritance/Implementation:** RadioFrameNode extends [TypedFrameNode<RadioAttribute>](TypedFrameNode<RadioAttribute>)
 
@@ -18,7 +18,7 @@ Define the Radio type of FrameNode.
 abstract initialize(value: RadioOptions): RadioAttribute
 ```
 
-Initialize Radio FrameNode.
+初始化Radio类型的FrameNode。
 
 **Since:** 23
 
@@ -34,11 +34,11 @@ Initialize Radio FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| value | [RadioOptions](../arkts-components/arkts-arkui-radiooptions-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  |
+| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) |  |
 

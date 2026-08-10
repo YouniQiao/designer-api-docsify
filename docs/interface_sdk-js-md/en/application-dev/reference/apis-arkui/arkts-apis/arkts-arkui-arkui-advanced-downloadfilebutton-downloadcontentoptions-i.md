@@ -10,6 +10,12 @@ Defines the download content options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { DownloadStyleOptions, DownloadFileButton, DownloadIconStyle, DownloadLayoutDirection, DownloadContentOptions, DownloadDescription } from 'kits/@kit.ArkUI';
+```
+
 ## icon
 
 ```TypeScript
@@ -18,7 +24,7 @@ icon?: DownloadIconStyle
 
 DownloadFileButton icon Style.
 
-**Type:** DownloadIconStyle
+**Type:** [DownloadIconStyle](arkts-arkui-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md)
 
 **Since:** 23
 
@@ -38,7 +44,7 @@ text?: DownloadDescription
 
 DownloadFileButton description.
 
-**Type:** DownloadDescription
+**Type:** [DownloadDescription](arkts-arkui-arkui-advanced-downloadfilebutton-downloaddescription-e.md)
 
 **Since:** 23
 

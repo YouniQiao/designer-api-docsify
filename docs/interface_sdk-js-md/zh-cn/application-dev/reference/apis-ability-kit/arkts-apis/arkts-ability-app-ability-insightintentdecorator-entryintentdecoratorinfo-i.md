@@ -1,7 +1,7 @@
 # EntryIntentDecoratorInfo
 
-EntryIntentDecoratorInfo继承自[IntentDecoratorInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_，用于描述  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_装饰器支持的参数。
+EntryIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)，用于描述  
+[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry)装饰器支持的参数。
 
 **继承/实现关系：** EntryIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
@@ -12,6 +12,12 @@ EntryIntentDecoratorInfo继承自[IntentDecoratorInfo]\_\_\_JSDOC\_LINK\_DESC\_U
 <!--Device-unnamed-declare interface EntryIntentDecoratorInfo extends IntentDecoratorInfo--><!--Device-unnamed-declare interface EntryIntentDecoratorInfo extends IntentDecoratorInfo-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from 'kits/@kit.AbilityKit';
+```
 
 ## abilityName
 
@@ -41,7 +47,7 @@ abilityName: string
 executeMode?: insightIntent.ExecuteMode[]
 ```
 
-The execute mode of the intent.For UIAbility, the parameter can be set to insightIntent.ExecuteMode.UI\_ABILITY\_FOREGROUND or insightIntent.ExecuteMode.UI\_ABILITY\_UI\_ABILITY\_BACKGROUND or both of them.
+The execute mode of the intent.For UIAbility, the parameter can be set to insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND or insightIntent.ExecuteMode.UI_ABILITY_UI_ABILITY_BACKGROUND or both of them.
 
 **类型：** insightIntent.ExecuteMode[]
 

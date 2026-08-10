@@ -1,11 +1,11 @@
 # ReadStream
 
-Defines a readable stream. You need to use [fileIo.createReadStream]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a  
-**ReadStream** instance, which is inherited from [stream.Readable]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+文件可读流，需要先通过[fileIo.createReadStream](arkts-corefile-fileio-createreadstream-f.md#createreadstream)方法来构建一个ReadStream实例。ReadStream继承自数据流基类  
+[stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md/arkts-arkts-stream-readable-c.md)。
 
-The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
+**规格**：ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。
 
-**Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md)
+**Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md/arkts-arkts-stream-readable-c.md)
 
 **Since:** 23
 
@@ -15,13 +15,19 @@ The data obtained by **ReadStream** is a decoded string. Currently, only the UTF
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## close
 
 ```TypeScript
 close(): void
 ```
 
-Closes this readable stream.
+关闭可读流。
 
 **Since:** 23
 
@@ -64,7 +70,7 @@ The ReadStream constructor.
 seek(offset: long, whence?: WhenceType): long
 ```
 
-Adjusts the position of the readable stream offset pointer.
+调整可读流偏移指针位置。
 
 **Since:** 23
 
@@ -78,21 +84,21 @@ Adjusts the position of the readable stream offset pointer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | long | Yes | Relative offset, in bytes. |
-| whence | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | = WhenceType.SEEK\_\_\_ESCAPED\_UNDERSCORE\_\_\_SET] - Where to start the offset. The default value is SEEK\_\_\_ESCAPED\_UNDERSCORE\_\_\_SET, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_which indicates the beginning of the file. |
+| offset | long | Yes | 相对偏移位置，单位为Byte。 |
+| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | = WhenceType.SEEK_SET] - Where to start the offset. The default value is SEEK_SET, &lt;br&gt;which indicates the beginning of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | Position of the current offset pointer (offset relative to the file header, in bytes). |
+| long | 当前可读流偏移指针位置（相对于文件头的偏移量，单位为Byte）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900020 | Invalid argument |
+| 401 | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
@@ -102,7 +108,7 @@ Adjusts the position of the readable stream offset pointer.
 readonly bytesRead: long
 ```
 
-Number of bytes read by the readable stream.
+可读流已经读取的字节数。
 
 **Type:** long
 
@@ -120,7 +126,7 @@ Number of bytes read by the readable stream.
 readonly path: string
 ```
 
-Path of the file corresponding to the readable stream.
+当前可读流对应的文件路径。
 
 **Type:** string
 

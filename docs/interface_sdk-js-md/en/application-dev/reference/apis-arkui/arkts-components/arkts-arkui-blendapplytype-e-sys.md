@@ -1,10 +1,10 @@
 # BlendApplyType
 
-Defines how to apply the specified blend mode to the content of a view.
+指示如何将指定的混合模式应用于视图的内容。
 
-**Since:** 11
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 <!--Device-unnamed-declare enum BlendApplyType--><!--Device-unnamed-declare enum BlendApplyType-End-->
 
@@ -16,7 +16,7 @@ Defines how to apply the specified blend mode to the content of a view.
 OFFSCREEN_WITH_BACKGROUND = 2
 ```
 
-When an offscreen canvas is created, an initial background canvas is copied first, and then the content of this component and its child components is drawn on the offscreen canvas. The content is then blended on the canvas.
+创建离屏画布时，先拷贝一份背景初始化画布，再将此组件和子组件内容绘制到离屏画布上，然后整体进行混合。
 
 **Since:** 23
 

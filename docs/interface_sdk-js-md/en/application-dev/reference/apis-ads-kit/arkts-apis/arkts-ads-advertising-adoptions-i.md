@@ -1,6 +1,6 @@
 # AdOptions
 
-Defines the ad configuration.
+广告配置参数。
 
 **Since:** 11
 
@@ -10,15 +10,21 @@ Defines the ad configuration.
 
 **System capability:** SystemCapability.Advertising.Ads
 
+## Modules to Import
+
+```TypeScript
+import { advertising } from 'kits/@kit.AdsKit';
+```
+
 ## [key: string]
 
 ```TypeScript
 [key: string]: number | boolean | string | undefined
 ```
 
-Custom parameters.
+自定义参数。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
 
 **Type:** number \| boolean \| string \| undefined
 
@@ -38,11 +44,11 @@ Custom parameters.
 adContentClassification?: string
 ```
 
-Sets the maximum ad content rating.
+设置广告内容分级上限。
 
-W: ages 3+, all audiences.PI: ages 7+, parental guidance.J: ages 12+, teen.A: ages 16+/18+, adult audience.
+W：3+，所有受众。PI：7+，家长指导。J：12+，青少年。A：16+/18+，成人受众。
 
-If not set, the business logic prevails.
+不填以业务逻辑为准。
 
 **Type:** string
 
@@ -62,11 +68,11 @@ If not set, the business logic prevails.
 nonPersonalizedAd?: number
 ```
 
-Sets whether to request only non-personalized ads.
+设置是否只请求非个性化广告。
 
-0: Request both personalized and non-personalized ads.1: Request only non-personalized ads.
+0：请求个性化广告与非个性化广告。1：只请求非个性化广告。
 
-If not set, the business logic prevails.
+不填以业务逻辑为准。
 
 **Type:** number
 
@@ -86,12 +92,12 @@ If not set, the business logic prevails.
 tagForChildProtection?: number
 ```
 
-Whether you want your content to be treated as child-directed for purposes of COPPA.
+是否希望根据 COPPA 的规定将您的内容视为面向儿童的内容。
 
--1: Default value, unspecified.  
-0: No.1: Yes.
+-1：默认值，不确定。  
+0：不希望。1：希望。
 
-The default value is -1.
+默认为-1。
 
 **Type:** number
 

@@ -1,12 +1,18 @@
 # once
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## once
 
 ```TypeScript
 function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>): void
 ```
 
-Obtains data of the acceleration sensor once.
+获取一次加速度传感器数据。适用于无需持续监听、仅需一次性获取当前加速度数据的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -22,16 +28,35 @@ Obtains data of the acceleration sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ACCELEROMETER | Yes | Sensor type. The value is fixed at **SensorId.ACCELEROMETER**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AccelerometerResponse&gt; | Yes | Callback used to report the sensor data, which is an **AccelerometerResponse** object. |
+| type | SensorId.ACCELEROMETER | Yes | 传感器类型，该值固定为SensorId.ACCELEROMETER。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为AccelerometerResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.ACCELEROMETER, (data: sensor.AccelerometerResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -40,7 +65,7 @@ Obtains data of the acceleration sensor once.
 function once(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void
 ```
 
-Obtains data of the uncalibrated acceleration sensor once.
+获取一次未校准加速度传感器数据。适用于仅需一次性获取原始加速度及偏移数据的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -56,16 +81,38 @@ Obtains data of the uncalibrated acceleration sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ACCELEROMETER\_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.ACCELEROMETER\_\_\_ESCAPED\_UNDERSCORE\_\_\_UNCALIBRATED**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AccelerometerUncalibratedResponse&gt; | Yes | Callback used to report the sensor data, which is an **AccelerometerUncalibratedResponse** object. |
+| type | SensorId.ACCELEROMETER_UNCALIBRATED | Yes | 传感器类型，该值固定为SensorId.ACCELEROMETER_UNCALIBRATED。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerUncalibratedResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为AccelerometerUncalibratedResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.ACCELEROMETER_UNCALIBRATED, (data: sensor.AccelerometerUncalibratedResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -74,7 +121,7 @@ Obtains data of the uncalibrated acceleration sensor once.
 function once(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>): void
 ```
 
-Obtains data of the ambient light sensor once.
+获取一次环境光传感器数据。适用于仅需一次性获取当前环境光强度的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -88,15 +135,32 @@ Obtains data of the ambient light sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.AMBIENT\_LIGHT | Yes | Sensor type. The value is fixed at **SensorId.AMBIENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_LIGHT**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LightResponse&gt; | Yes | Callback used to report the sensor data, which is a **LightResponse** object. |
+| type | SensorId.AMBIENT_LIGHT | Yes | 传感器类型，该值固定为SensorId.AMBIENT_LIGHT。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为LightResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.AMBIENT_LIGHT, (data: sensor.LightResponse) => {
+    console.info('Succeeded in invoking once. the ambient light intensity: ' + data.intensity);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -105,7 +169,7 @@ Obtains data of the ambient light sensor once.
 function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void
 ```
 
-Obtains data of the temperature sensor once.
+获取一次温度传感器数据。适用于仅需一次性获取当前环境温度的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -119,15 +183,32 @@ Obtains data of the temperature sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.AMBIENT\_TEMPERATURE | Yes | Sensor type. The value is fixed at **SensorId.AMBIENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_TEMPERATURE**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AmbientTemperatureResponse&gt; | Yes | Callback used to report the sensor data, which is an **AmbientTemperatureResponse** object. |
+| type | SensorId.AMBIENT_TEMPERATURE | Yes | 传感器类型，该值固定为SensorId.AMBIENT_TEMPERATURE。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AmbientTemperatureResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为AmbientTemperatureResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.AMBIENT_TEMPERATURE, (data: sensor.AmbientTemperatureResponse) => {
+    console.info('Succeeded in invoking once. Temperature: ' + data.temperature);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -136,7 +217,7 @@ Obtains data of the temperature sensor once.
 function once(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>): void
 ```
 
-Obtains data of the barometer sensor once.
+获取一次气压计传感器数据。适用于仅需一次性获取当前气压值的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -150,15 +231,32 @@ Obtains data of the barometer sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.BAROMETER | Yes | Sensor type. The value is fixed at **SensorId.BAROMETER**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BarometerResponse&gt; | Yes | Callback used to report the sensor data, which is a **BarometerResponse** object. |
+| type | SensorId.BAROMETER | Yes | 传感器类型，该值固定为SensorId.BAROMETER。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为BarometerResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.BAROMETER, (data: sensor.BarometerResponse) => {
+    console.info('Succeeded in invoking once. Atmospheric pressure: ' + data.pressure);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -167,7 +265,7 @@ Obtains data of the barometer sensor once.
 function once(type: SensorId.GRAVITY, callback: Callback<GravityResponse>): void
 ```
 
-Obtains data of the gravity sensor once.
+获取一次重力传感器数据。适用于仅需一次性获取当前重力分量的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -181,15 +279,34 @@ Obtains data of the gravity sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.GRAVITY | Yes | Sensor type. The value is fixed at **SensorId.GRAVITY**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GravityResponse&gt; | Yes | Callback used to report the sensor data, which is a **GravityResponse** object. |
+| type | SensorId.GRAVITY | Yes | 传感器类型，该值固定为SensorId.GRAVITY。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GravityResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为GravityResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.GRAVITY, (data: sensor.GravityResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -198,7 +315,7 @@ Obtains data of the gravity sensor once.
 function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): void
 ```
 
-Obtains data of the gyroscope sensor once.
+获取一次陀螺仪传感器数据。适用于仅需一次性获取当前旋转角速度的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -214,16 +331,35 @@ Obtains data of the gyroscope sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.GYROSCOPE | Yes | Sensor type. The value is fixed at **SensorId.GYROSCOPE**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GyroscopeResponse&gt; | Yes | Callback used to report the sensor data, which is a **GyroscopeResponse** object. |
+| type | SensorId.GYROSCOPE | Yes | 传感器类型，该值固定为SensorId.GYROSCOPE。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为GyroscopeResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.GYROSCOPE, (data: sensor.GyroscopeResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -232,7 +368,7 @@ Obtains data of the gyroscope sensor once.
 function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void
 ```
 
-Obtains data of the uncalibrated gyroscope sensor once.
+获取一次未校准陀螺仪传感器数据。适用于仅需一次性获取原始角速度及偏移数据的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -248,16 +384,38 @@ Obtains data of the uncalibrated gyroscope sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.GYROSCOPE\_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.GYROSCOPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_UNCALIBRATED**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GyroscopeUncalibratedResponse&gt; | Yes | Callback used to report the sensor data, which is a **GyroscopeUncalibratedResponse** object. |
+| type | SensorId.GYROSCOPE_UNCALIBRATED | Yes | 传感器类型，该值固定为SensorId.GYROSCOPE_UNCALIBRATED。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeUncalibratedResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为GyroscopeUncalibratedResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.GYROSCOPE_UNCALIBRATED, (data: sensor.GyroscopeUncalibratedResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -266,7 +424,7 @@ Obtains data of the uncalibrated gyroscope sensor once.
 function once(type: SensorId.HALL, callback: Callback<HallResponse>): void
 ```
 
-Obtains data of the Hall effect sensor once.
+获取一次霍尔传感器数据。适用于仅需一次性检测当前霍尔状态的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -280,15 +438,32 @@ Obtains data of the Hall effect sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.HALL | Yes | Sensor type. The value is fixed at **SensorId.HALL**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HallResponse&gt; | Yes | Callback used to report the sensor data, which is a **HallResponse** object. |
+| type | SensorId.HALL | Yes | 传感器类型，该值固定为SensorId.HALL。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HallResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为HallResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.HALL, (data: sensor.HallResponse) => {
+    console.info('Succeeded in invoking once. Status: ' + data.status);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -297,7 +472,7 @@ Obtains data of the Hall effect sensor once.
 function once(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>): void
 ```
 
-Obtains data of the heart rate sensor once.
+获取一次心率传感器数据。适用于仅需一次性获取当前心率值的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -313,16 +488,33 @@ Obtains data of the heart rate sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.HEART\_RATE | Yes | Sensor type. The value is fixed at **SensorId.HEART\_\_\_ESCAPED\_UNDERSCORE\_\_\_RATE**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HeartRateResponse&gt; | Yes | Callback used to report the sensor data, which is a **HeartRateResponse** object. |
+| type | SensorId.HEART_RATE | Yes | 传感器类型，该值固定为SensorId.HEART_RATE。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为HeartRateResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.HEART_RATE, (data: sensor.HeartRateResponse) => {
+    console.info('Succeeded in invoking once. Heart rate: ' + data.heartRate);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -331,7 +523,7 @@ Obtains data of the heart rate sensor once.
 function once(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>): void
 ```
 
-Obtains data of the humidity sensor once.
+获取一次湿度传感器数据。适用于仅需一次性获取当前环境湿度的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -345,15 +537,32 @@ Obtains data of the humidity sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.HUMIDITY | Yes | Sensor type. The value is fixed at **SensorId.HUMIDITY**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HumidityResponse&gt; | Yes | Callback used to report the sensor data, which is a **HumidityResponse** object. |
+| type | SensorId.HUMIDITY | Yes | 传感器类型，该值固定为SensorId.HUMIDITY。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HumidityResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为HumidityResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.HUMIDITY, (data: sensor.HumidityResponse) => {
+    console.info('Succeeded in invoking once. Humidity: ' + data.humidity);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -362,7 +571,7 @@ Obtains data of the humidity sensor once.
 function once(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>): void
 ```
 
-Obtains data of the linear acceleration sensor once.
+获取一次线性加速度传感器数据。适用于仅需一次性获取当前线性加速度（不含重力分量）的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -378,16 +587,35 @@ Obtains data of the linear acceleration sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.LINEAR\_ACCELEROMETER | Yes | Sensor type. The value is fixed at **SensorId.LINEAR\_\_\_ESCAPED\_UNDERSCORE\_\_\_ACCELEROMETER**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LinearAccelerometerResponse&gt; | Yes | Callback used to report the sensor data, which is a **LinearAccelerometerResponse** object. |
+| type | SensorId.LINEAR_ACCELEROMETER | Yes | 传感器类型，该值固定为SensorId.LINEAR_ACCELEROMETER。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LinearAccelerometerResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为LinearAccelerometerResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.LINEAR_ACCELEROMETER, (data: sensor.LinearAccelerometerResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -396,7 +624,7 @@ Obtains data of the linear acceleration sensor once.
 function once(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void
 ```
 
-Obtains data of the magnetic field sensor once.
+获取一次磁场传感器数据。适用于仅需一次性获取当前磁场分量的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -410,15 +638,34 @@ Obtains data of the magnetic field sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.MAGNETIC\_FIELD | Yes | Sensor type. The value is fixed at **SensorId.MAGNETIC\_\_\_ESCAPED\_UNDERSCORE\_\_\_FIELD**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MagneticFieldResponse&gt; | Yes | Callback used to report the sensor data, which is a **MagneticFieldResponse** object. |
+| type | SensorId.MAGNETIC_FIELD | Yes | 传感器类型，该值固定为SensorId.MAGNETIC_FIELD。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为MagneticFieldResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.MAGNETIC_FIELD, (data: sensor.MagneticFieldResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -427,7 +674,7 @@ Obtains data of the magnetic field sensor once.
 function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void
 ```
 
-Obtains data of the uncalibrated magnetic field sensor once.
+获取一次未经校准的磁场传感器数据。适用于仅需一次性获取原始磁场及偏移数据的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -441,15 +688,37 @@ Obtains data of the uncalibrated magnetic field sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.MAGNETIC\_FIELD\_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.MAGNETIC\_\_\_ESCAPED\_UNDERSCORE\_\_\_FIELD\_\_\_ESCAPED\_UNDERSCORE\_\_\_UNCALIBRATED**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MagneticFieldUncalibratedResponse&gt; | Yes | Callback used to report the sensor data, which is a **MagneticFieldUncalibratedResponse** object. |
+| type | SensorId.MAGNETIC_FIELD_UNCALIBRATED | Yes | 传感器类型，该值固定为SensorId.MAGNETIC_FIELD_UNCALIBRATED。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldUncalibratedResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为MagneticFieldUncalibratedResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED, (data: sensor.MagneticFieldUncalibratedResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -458,7 +727,7 @@ Obtains data of the uncalibrated magnetic field sensor once.
 function once(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>): void
 ```
 
-Obtains data of the orientation sensor once.
+获取一次方向传感器数据。适用于仅需一次性获取当前设备方向的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -472,15 +741,34 @@ Obtains data of the orientation sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ORIENTATION | Yes | Sensor type. The value is fixed at **SensorId.ORIENTATION**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OrientationResponse&gt; | Yes | Callback used to report the sensor data, which is a **OrientationResponse** object. |
+| type | SensorId.ORIENTATION | Yes | 传感器类型，该值固定为SensorId.ORIENTATION。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OrientationResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为OrientationResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.ORIENTATION, (data: sensor.OrientationResponse) => {
+    console.info('Succeeded in the device rotating at an angle around the X axis: ' + data.beta);
+    console.info('Succeeded in the device rotating at an angle around the Y axis: ' + data.gamma);
+    console.info('Succeeded in the device rotating at an angle around the Z axis: ' + data.alpha);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -489,7 +777,7 @@ Obtains data of the orientation sensor once.
 function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): void
 ```
 
-Obtains data of the pedometer sensor once. The step counter sensor's data reporting is subject to some delay, and the delay is determined by specific product implementations.
+获取一次计步器传感器数据。计步传感器数据上报有一定延迟，延迟时间由具体的实现产品决定。适用于仅需一次性获取当前步数的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -505,16 +793,33 @@ Obtains data of the pedometer sensor once. The step counter sensor's data report
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.PEDOMETER | Yes | Sensor type. The value is fixed at **SensorId.PEDOMETER**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PedometerResponse&gt; | Yes | Callback used to report the sensor data, which is a **PedometerResponse** object. |
+| type | SensorId.PEDOMETER | Yes | Sensor type. 传感器类型，该值固定为SensorId.PEDOMETER。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为PedometerResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.PEDOMETER, (data: sensor.PedometerResponse) => {
+    console.info('Succeeded in invoking once. Step count: ' + data.steps);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -523,7 +828,7 @@ Obtains data of the pedometer sensor once. The step counter sensor's data report
 function once(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void
 ```
 
-Obtains data of the pedometer sensor once.
+获取一次计步检测器传感器数据。适用于仅需一次性检测计步事件的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -539,16 +844,33 @@ Obtains data of the pedometer sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.PEDOMETER\_DETECTION | Yes | Sensor type. The value is fixed at **SensorId.PEDOMETER\_\_\_ESCAPED\_UNDERSCORE\_\_\_DETECTION**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PedometerDetectionResponse&gt; | Yes | Callback used to report the sensor data, which is a **PedometerDetectionResponse** object. |
+| type | SensorId.PEDOMETER_DETECTION | Yes | 传感器类型，该值固定为SensorId.PEDOMETER_DETECTION。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerDetectionResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为PedometerDetectionResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 201 | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.PEDOMETER_DETECTION, (data: sensor.PedometerDetectionResponse) => {
+    console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -557,7 +879,7 @@ Obtains data of the pedometer sensor once.
 function once(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>): void
 ```
 
-Obtains data of the proximity sensor once.
+获取一次接近光传感器数据。适用于仅需一次性检测当前接近状态的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -571,15 +893,32 @@ Obtains data of the proximity sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.PROXIMITY | Yes | Sensor type. The value is fixed at **SensorId.PROXIMITY**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ProximityResponse&gt; | Yes | Callback used to report the sensor data, which is a **ProximityResponse** object. |
+| type | SensorId.PROXIMITY | Yes | 传感器类型，该值固定为SensorId.PROXIMITY。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为ProximityResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.PROXIMITY, (data: sensor.ProximityResponse) => {
+    console.info('Succeeded in invoking once. Distance: ' + data.distance);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -588,7 +927,7 @@ Obtains data of the proximity sensor once.
 function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void
 ```
 
-Obtains data of the rotation vector sensor once.
+获取一次旋转矢量传感器数据。适用于仅需一次性获取当前设备姿态的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -602,15 +941,35 @@ Obtains data of the rotation vector sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ROTATION\_VECTOR | Yes | Sensor type. The value is fixed at **SensorId.ROTATION\_\_\_ESCAPED\_UNDERSCORE\_\_\_VECTOR**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RotationVectorResponse&gt; | Yes | Callback used to report the sensor data, which is a **RotationVectorResponse** object. |
+| type | SensorId.ROTATION_VECTOR | Yes | 传感器类型，该值固定为SensorId.ROTATION_VECTOR。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RotationVectorResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为RotationVectorResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.ROTATION_VECTOR, (data: sensor.RotationVectorResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+    console.info('Succeeded in invoking once. Scalar quantity: ' + data.w);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -619,7 +978,7 @@ Obtains data of the rotation vector sensor once.
 function once(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void
 ```
 
-Obtains the significant motion sensor data once.
+获取一次有效运动传感器数据。适用于仅需一次性检测有效运动的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -633,15 +992,32 @@ Obtains the significant motion sensor data once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.SIGNIFICANT\_MOTION | Yes | Sensor type. The value is fixed at **SensorId.SIGNIFICANT\_\_\_ESCAPED\_UNDERSCORE\_\_\_MOTION**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SignificantMotionResponse&gt; | Yes | Callback used to report the sensor data, which is a **SignificantMotionResponse** object. |
+| type | SensorId.SIGNIFICANT_MOTION | Yes | 传感器类型，该值固定为SensorId.SIGNIFICANT_MOTION。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SignificantMotionResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为SignificantMotionResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.SIGNIFICANT_MOTION, (data: sensor.SignificantMotionResponse) => {
+    console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -650,7 +1026,7 @@ Obtains the significant motion sensor data once.
 function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void
 ```
 
-Obtains data of the wear detection sensor once.
+获取一次佩戴检测传感器数据。适用于仅需一次性检测佩戴状态的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **Since:** 9
 
@@ -664,15 +1040,32 @@ Obtains data of the wear detection sensor once.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.WEAR\_DETECTION | Yes | Sensor type. The value is fixed at **SensorId.WEAR\_\_\_ESCAPED\_UNDERSCORE\_\_\_DETECTION**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WearDetectionResponse&gt; | Yes | Callback used to report the sensor data, which is a **WearDetectionResponse** object. |
+| type | SensorId.WEAR_DETECTION | Yes | 传感器类型，该值固定为SensorId.WEAR_DETECTION。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WearDetectionResponse&gt; | Yes | 回调函数，异步上报的传感器数据固定为WearDetectionResponse。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.once(sensor.SensorId.WEAR_DETECTION, (data: sensor.WearDetectionResponse) => {
+    console.info('Succeeded in invoking once. Wear status: ' + data.value);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
+}
+```
 
 
 ## once
@@ -681,7 +1074,7 @@ Obtains data of the wear detection sensor once.
 function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>): void
 ```
 
-Subscribes to only one data change of the acceleration sensor.
+监听加速度传感器的数据变化一次。适用于仅需一次性获取当前加速度数据的场景。
 
 **Since:** 8
 
@@ -701,8 +1094,20 @@ Subscribes to only one data change of the acceleration sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_ACCELEROMETER | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_ACCELEROMETER**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AccelerometerResponse&gt; | Yes | One-shot callback used to return the acceleration sensor data. The reported data type in the callback is **AccelerometerResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER | Yes | 加速度传感器类型为SENSOR_TYPE_ID_ACCELEROMETER。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | Yes | 注册一次加速度传感器的回调函数，上报的数据类型为AccelerometerResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, (data: sensor.AccelerometerResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+});
+```
 
 
 ## once
@@ -711,7 +1116,7 @@ Subscribes to only one data change of the acceleration sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void
 ```
 
-Subscribes to only one data change of the uncalibrated acceleration sensor.
+监听未校准加速度传感器的数据变化一次。适用于仅需一次性获取当前未校准加速度数据的场景。
 
 **Since:** 8
 
@@ -731,8 +1136,23 @@ Subscribes to only one data change of the uncalibrated acceleration sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_ACCELEROMETER\_UNCALIBRATED | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_ACCELEROMETER\_\_\_ESCAPED\_UNDERSCORE\_\_\_UNCALIBRATED**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AccelerometerUncalibratedResponse&gt; | Yes | One-shot callback used to return the uncalibrated acceleration sensor data. The reported data type in the callback is **AccelerometerUncalibratedResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED | Yes | 未校准加速度传感器类型为SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerUncalibratedResponse&gt; | Yes | 注册一次未校准加速度传感器的回调函数，上报的数据类型为AccelerometerUncalibratedResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, (data: sensor.AccelerometerUncalibratedResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+  console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+  console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+});
+```
 
 
 ## once
@@ -741,7 +1161,7 @@ Subscribes to only one data change of the uncalibrated acceleration sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void
 ```
 
-Subscribes to only one data change of the ambient light sensor.
+监听环境光传感器数据变化一次。适用于仅需一次性获取当前环境光数据的场景。
 
 **Since:** 8
 
@@ -759,8 +1179,18 @@ Subscribes to only one data change of the ambient light sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_AMBIENT\_LIGHT | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_AMBIENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_LIGHT**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LightResponse&gt; | Yes | One-shot callback used to return the ambient light sensor data. The reported data type in the callback is **LightResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT | Yes | 环境光传感器类型为SENSOR_TYPE_ID_AMBIENT_LIGHT。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | Yes | 注册一次环境光传感器的回调函数，上报的数据类型为LightResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, (data: sensor.LightResponse) => {
+  console.info('Succeeded in invoking once. invoking once. Illumination: ' + data.intensity);
+});
+```
 
 
 ## once
@@ -769,7 +1199,7 @@ Subscribes to only one data change of the ambient light sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void
 ```
 
-Subscribes to only one data change of the ambient temperature sensor.
+监听环境温度传感器数据变化一次。适用于仅需一次性获取当前环境温度数据的场景。
 
 **Since:** 8
 
@@ -787,8 +1217,18 @@ Subscribes to only one data change of the ambient temperature sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_AMBIENT\_TEMPERATURE | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_AMBIENT\_\_\_ESCAPED\_UNDERSCORE\_\_\_TEMPERATURE**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AmbientTemperatureResponse&gt; | Yes | One-shot callback used to return the ambient temperature sensor data. The reported data type in the callback is **AmbientTemperatureResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE | Yes | 环境温度传感器类型为SENSOR_TYPE_ID_AMBIENT_TEMPERATURE。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AmbientTemperatureResponse&gt; | Yes | 注册一次环境温度传感器的回调函数，上报的数据类型为AmbientTemperatureResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, (data: sensor.AmbientTemperatureResponse) => {
+  console.info('Succeeded in invoking once. Temperature: ' + data.temperature);
+});
+```
 
 
 ## once
@@ -797,7 +1237,7 @@ Subscribes to only one data change of the ambient temperature sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void
 ```
 
-Subscribes to only one data change of the barometer sensor.
+监听气压计传感器数据变化一次。适用于仅需一次性获取当前气压数据的场景。
 
 **Since:** 8
 
@@ -815,8 +1255,18 @@ Subscribes to only one data change of the barometer sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_BAROMETER | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_BAROMETER**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BarometerResponse&gt; | Yes | One-shot callback used to return the barometer sensor data. The reported data type in the callback is **BarometerResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_BAROMETER | Yes | 气压计传感器类型为SENSOR_TYPE_ID_BAROMETER。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | Yes | 注册一次气压计传感器的回调函数，上报的数据类型为BarometerResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, (data: sensor.BarometerResponse) => {
+  console.info('Succeeded in invoking once. Atmospheric pressure: ' + data.pressure);
+});
+```
 
 
 ## once
@@ -825,7 +1275,7 @@ Subscribes to only one data change of the barometer sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void
 ```
 
-Subscribes to only one data change of the gravity sensor.
+监听重力传感器的数据变化一次。适用于仅需一次性获取当前重力数据的场景。
 
 **Since:** 8
 
@@ -843,8 +1293,20 @@ Subscribes to only one data change of the gravity sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_GRAVITY | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_GRAVITY**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GravityResponse&gt; | Yes | One-shot callback used to return the gravity sensor data. The reported data type in the callback is **GravityResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_GRAVITY | Yes | 重力传感器类型为SENSOR_TYPE_ID_GRAVITY。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GravityResponse&gt; | Yes | 注册一次重力传感器的回调函数，上报的数据类型为GravityResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, (data: sensor.GravityResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  });
+```
 
 
 ## once
@@ -853,7 +1315,7 @@ Subscribes to only one data change of the gravity sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>): void
 ```
 
-Subscribes to only one data change of the gyroscope sensor.
+监听陀螺仪传感器的数据变化一次。适用于仅需一次性获取当前陀螺仪数据的场景。
 
 **Since:** 8
 
@@ -873,8 +1335,20 @@ Subscribes to only one data change of the gyroscope sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_GYROSCOPE | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_GYROSCOPE**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GyroscopeResponse&gt; | Yes | One-shot callback used to return the gyroscope sensor data. The reported data type in the callback is **GyroscopeResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE | Yes | 陀螺仪传感器类型为SENSOR_TYPE_ID_GYROSCOPE。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | Yes | 注册一次陀螺仪传感器的回调函数，上报的数据类型为GyroscopeResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, (data: sensor.GyroscopeResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+});
+```
 
 
 ## once
@@ -883,7 +1357,7 @@ Subscribes to only one data change of the gyroscope sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void
 ```
 
-Subscribes to only one data change of the uncalibrated gyroscope sensor.
+监听未校准陀螺仪传感器的数据变化一次。适用于仅需一次性获取当前未校准陀螺仪数据的场景。
 
 **Since:** 8
 
@@ -903,8 +1377,23 @@ Subscribes to only one data change of the uncalibrated gyroscope sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_GYROSCOPE\_UNCALIBRATED | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_GYROSCOPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_UNCALIBRATED**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;GyroscopeUncalibratedResponse&gt; | Yes | One-shot callback used to return the uncalibrated gyroscope sensor data. The reported data type in the callback is **GyroscopeUncalibratedResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED | Yes | 未校准陀螺仪传感器类型为SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeUncalibratedResponse&gt; | Yes | 注册一次未校准陀螺仪传感器的回调函数， 上报的数据类型为GyroscopeUncalibratedResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, (data: sensor.GyroscopeUncalibratedResponse) => {
+    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+});
+```
 
 
 ## once
@@ -913,7 +1402,7 @@ Subscribes to only one data change of the uncalibrated gyroscope sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void
 ```
 
-Subscribes to only one data change of the Hall effect sensor.
+监听霍尔传感器数据变化一次。适用于仅需一次性获取当前霍尔数据的场景。
 
 **Since:** 8
 
@@ -931,8 +1420,18 @@ Subscribes to only one data change of the Hall effect sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_HALL | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_HALL**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HallResponse&gt; | Yes | One-shot callback used to return the Hall effect sensor data. The reported data type in the callback is **HallResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_HALL | Yes | 霍尔传感器类型为SENSOR_TYPE_ID_HALL。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HallResponse&gt; | Yes | 注册一次霍尔传感器的回调函数，上报的数据类型为HallResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HALL, (data: sensor.HallResponse) => {
+  console.info('Succeeded in invoking once. Status: ' + data.status);
+});
+```
 
 
 ## once
@@ -941,7 +1440,7 @@ Subscribes to only one data change of the Hall effect sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>): void
 ```
 
-Subscribes to only one data change of the heart rate sensor.
+监听心率传感器数据变化一次。适用于仅需一次性获取当前心率数据的场景。
 
 **Since:** 8
 
@@ -961,8 +1460,18 @@ Subscribes to only one data change of the heart rate sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_HEART\_RATE | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_HEART\_\_\_ESCAPED\_UNDERSCORE\_\_\_RATE**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HeartRateResponse&gt; | Yes | One-shot callback used to return the heart rate sensor data. The reported data type in the callback is **HeartRateResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_HEART_RATE | Yes | 心率传感器类型为SENSOR_TYPE_ID_HEART_RATE。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | Yes | 注册一次心率传感器的回调函数，上报的数据类型为HeartRateResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, (data: sensor.HeartRateResponse) => {
+  console.info("Succeeded in invoking once. Heart rate: " + data.heartRate);
+});
+```
 
 
 ## once
@@ -971,7 +1480,7 @@ Subscribes to only one data change of the heart rate sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void
 ```
 
-Subscribes to only one data change of the humidity sensor.
+监听湿度传感器数据变化一次。适用于仅需一次性获取当前湿度数据的场景。
 
 **Since:** 8
 
@@ -989,8 +1498,18 @@ Subscribes to only one data change of the humidity sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_HUMIDITY | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_HUMIDITY**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HumidityResponse&gt; | Yes | One-shot callback used to return the humidity sensor data. The reported data type in the callback is **HumidityResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_HUMIDITY | Yes | 湿度传感器类型为SENSOR_TYPE_ID_HUMIDITY。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HumidityResponse&gt; | Yes | 注册一次湿度传感器的回调函数，上报的数据类型为HumidityResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, (data: sensor.HumidityResponse) => {
+  console.info('Succeeded in invoking once. Humidity: ' + data.humidity);
+});
+```
 
 
 ## once
@@ -999,7 +1518,7 @@ Subscribes to only one data change of the humidity sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>): void
 ```
 
-Subscribes to only one data change of the linear acceleration sensor.
+监听线性加速度传感器数据变化一次。适用于仅需一次性获取当前线性加速度数据的场景。
 
 **Since:** 8
 
@@ -1019,8 +1538,8 @@ Subscribes to only one data change of the linear acceleration sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_LINEAR\_ACCELERATION | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINEAR\_\_\_ESCAPED\_UNDERSCORE\_\_\_ACCELERATION**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LinearAccelerometerResponse&gt; | Yes | One-shot callback used to return the linear acceleration sensor data. The reported data type in the callback is **LinearAccelerometerResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION | Yes | 线性加速度传感器类型为SENSOR_TYPE_ID_LINEAR_ACCELERATION。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LinearAccelerometerResponse&gt; | Yes | 注册一次线性加速度传感器的回调函数， 上报的数据类型为LinearAccelerometerResponse。 |
 
 
 ## once
@@ -1029,7 +1548,7 @@ Subscribes to only one data change of the linear acceleration sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void
 ```
 
-Subscribes to only one data change of the magnetic field sensor.
+监听磁场传感器数据变化一次。适用于仅需一次性获取当前磁场数据的场景。
 
 **Since:** 8
 
@@ -1047,8 +1566,20 @@ Subscribes to only one data change of the magnetic field sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_MAGNETIC\_FIELD | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAGNETIC\_\_\_ESCAPED\_UNDERSCORE\_\_\_FIELD**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MagneticFieldResponse&gt; | Yes | One-shot callback used to return the magnetic field sensor data. The reported data type in the callback is **MagneticFieldResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD | Yes | 磁场传感器类型为SENSOR_TYPE_ID_MAGNETIC_FIELD。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldResponse&gt; | Yes | 注册一次磁场传感器的回调函数，上报的数据类型为MagneticFieldResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, (data: sensor.MagneticFieldResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+});
+```
 
 
 ## once
@@ -1057,7 +1588,7 @@ Subscribes to only one data change of the magnetic field sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void
 ```
 
-Subscribes to only one data change of the uncalibrated magnetic field sensor.
+监听未校准磁场传感器数据变化一次。适用于仅需一次性获取当前未校准磁场数据的场景。
 
 **Since:** 8
 
@@ -1075,8 +1606,23 @@ Subscribes to only one data change of the uncalibrated magnetic field sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_MAGNETIC\_FIELD\_UNCALIBRATED | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_MAGNETIC\_\_\_ESCAPED\_UNDERSCORE\_\_\_FIELD\_\_\_ESCAPED\_UNDERSCORE\_\_\_UNCALIBRATED**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MagneticFieldUncalibratedResponse&gt; | Yes | One-shot callback used to return the uncalibrated magnetic field sensor data. The reported data type in the callback is **MagneticFieldUncalibratedResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED | Yes | 未校准磁场传感器类型为SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldUncalibratedResponse&gt; | Yes | 注册一次未校准磁场传感器的回调函数， 上报的数据类型为MagneticFieldUncalibratedResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, (data: sensor.MagneticFieldUncalibratedResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
+  console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
+  console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
+});
+```
 
 
 ## once
@@ -1085,7 +1631,7 @@ Subscribes to only one data change of the uncalibrated magnetic field sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void
 ```
 
-Subscribes to only one data change of the orientation sensor.
+监听方向传感器数据变化一次。适用于仅需一次性获取当前方向数据的场景。
 
 **Since:** 8
 
@@ -1103,8 +1649,20 @@ Subscribes to only one data change of the orientation sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_ORIENTATION | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_ORIENTATION**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;OrientationResponse&gt; | Yes | One-shot callback used to return the orientation sensor data. The reported data type in the callback is **OrientationResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_ORIENTATION | Yes | 方向传感器类型为SENSOR_TYPE_ID_ORIENTATION。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OrientationResponse&gt; | Yes | 注册一次方向传感器的回调函数，上报的数据类型为OrientationResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, (data: sensor.OrientationResponse) => {
+  console.info('Succeeded in invoking the device rotating at an angle around the X axis: ' + data.beta);
+  console.info('Succeeded in invoking the device rotating at an angle around the Y axis: ' + data.gamma);
+  console.info('Succeeded in invoking the device rotating at an angle around the Z axis: ' + data.alpha);
+});
+```
 
 
 ## once
@@ -1113,7 +1671,7 @@ Subscribes to only one data change of the orientation sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>): void
 ```
 
-Subscribes to only one data change of the pedometer sensor.
+监听计步器传感器数据变化一次。适用于仅需一次性获取当前计步数据的场景。
 
 **Since:** 8
 
@@ -1133,8 +1691,18 @@ Subscribes to only one data change of the pedometer sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_PEDOMETER | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_PEDOMETER**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PedometerResponse&gt; | Yes | One-shot callback used to return the pedometer sensor data. The reported data type in the callback is **PedometerResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_PEDOMETER | Yes | 计步传感器类型为SENSOR_TYPE_ID_PEDOMETER。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerResponse&gt; | Yes | 注册一次计步传感器的回调函数，上报的数据类型为PedometerResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, (data: sensor.PedometerResponse) => {
+  console.info('Succeeded in invoking once. Steps: ' + data.steps);
+});
+```
 
 
 ## once
@@ -1143,7 +1711,7 @@ Subscribes to only one data change of the pedometer sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void
 ```
 
-Subscribes to only one data change of the pedometer detection sensor.
+监听计步检测传感器数据变化一次。适用于仅需一次性获取当前计步检测数据的场景。
 
 **Since:** 8
 
@@ -1163,8 +1731,18 @@ Subscribes to only one data change of the pedometer detection sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_PEDOMETER\_DETECTION | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_PEDOMETER\_\_\_ESCAPED\_UNDERSCORE\_\_\_DETECTION**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PedometerDetectionResponse&gt; | Yes | One-shot callback used to return the pedometer detection sensor data. The reported data type in the callback is **PedometerDetectionResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION | Yes | 计步检测传感器类型为SENSOR_TYPE_ID_PEDOMETER_DETECTION。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerDetectionResponse&gt; | Yes | 注册一次计步检测传感器的回调函数，上报的数据类型为PedometerDetectionResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, (data: sensor.PedometerDetectionResponse) => {
+  console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
+});
+```
 
 
 ## once
@@ -1173,7 +1751,7 @@ Subscribes to only one data change of the pedometer detection sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void
 ```
 
-Subscribes to only one data change of the proximity sensor.
+监听接近光传感器数据变化一次。适用于仅需一次性获取当前接近光数据的场景。
 
 **Since:** 8
 
@@ -1191,8 +1769,19 @@ Subscribes to only one data change of the proximity sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_PROXIMITY | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_PROXIMITY**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ProximityResponse&gt; | Yes | One-shot callback used to return the proximity sensor data. The reported data type in the callback is **ProximityResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_PROXIMITY | Yes | 接近光传感器类型为SENSOR_TYPE_ID_PROXIMITY。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | Yes | 注册一次接近光传感器的回调函数，上报的数据类型为ProximityResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, (data: sensor.ProximityResponse) => {
+  console.info('Succeeded in invoking once. Distance: ' + data.distance);
+}
+);
+```
 
 
 ## once
@@ -1201,7 +1790,7 @@ Subscribes to only one data change of the proximity sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void
 ```
 
-Subscribes to only one data change of the rotation vector sensor.
+监听旋转矢量传感器数据变化一次。适用于仅需一次性获取当前旋转矢量数据的场景。
 
 **Since:** 8
 
@@ -1219,8 +1808,21 @@ Subscribes to only one data change of the rotation vector sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_ROTATION\_VECTOR | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_ROTATION\_\_\_ESCAPED\_UNDERSCORE\_\_\_VECTOR**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RotationVectorResponse&gt; | Yes | One-shot callback used to return the rotation vector sensor data. The reported data type in the callback is **RotationVectorResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR | Yes | 旋转矢量传感器类型为SENSOR_TYPE_ID_ROTATION_VECTOR。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RotationVectorResponse&gt; | Yes | 注册一次旋转矢量传感器的回调函数，上报的数据类型为RotationVectorResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, (data: sensor.RotationVectorResponse) => {
+  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
+  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
+  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
+  console.info('Succeeded in invoking once. Scalar quantity: ' + data.w);
+});
+```
 
 
 ## once
@@ -1229,7 +1831,7 @@ Subscribes to only one data change of the rotation vector sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void
 ```
 
-Subscribes to only one data change of the significant motion sensor.
+监听有效运动传感器的数据变化一次。适用于仅需一次性获取当前有效运动数据的场景。
 
 **Since:** 8
 
@@ -1247,8 +1849,18 @@ Subscribes to only one data change of the significant motion sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_SIGNIFICANT\_MOTION | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_SIGNIFICANT\_\_\_ESCAPED\_UNDERSCORE\_\_\_MOTION**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SignificantMotionResponse&gt; | Yes | One-shot callback used to return the significant motion sensor data. The reported data type in the callback is **SignificantMotionResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION | Yes | 有效运动传感器类型为SENSOR_TYPE_ID_SIGNIFICANT_MOTION。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SignificantMotionResponse&gt; | Yes | 注册一次有效运动传感器的回调函数，上报的数据类型为SignificantMotionResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, (data: sensor.SignificantMotionResponse) => {
+  console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
+});
+```
 
 
 ## once
@@ -1257,7 +1869,7 @@ Subscribes to only one data change of the significant motion sensor.
 function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void
 ```
 
-Subscribes to only one data change of the wear detection sensor.
+监听所佩戴的检测传感器的数据变化一次。适用于仅需一次性获取当前佩戴检测数据的场景。
 
 **Since:** 8
 
@@ -1275,6 +1887,16 @@ Subscribes to only one data change of the wear detection sensor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR\_TYPE\_ID\_WEAR\_DETECTION | Yes | Type of the sensor to subscribe to, which is **SENSOR\_\_\_ESCAPED\_UNDERSCORE\_\_\_TYPE\_\_\_ESCAPED\_UNDERSCORE\_\_\_ID\_\_\_ESCAPED\_UNDERSCORE\_\_\_WEAR\_\_\_ESCAPED\_UNDERSCORE\_\_\_DETECTION**. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WearDetectionResponse&gt; | Yes | One-shot callback used to return the wear detection sensor data. The reported data type in the callback is **WearDetectionResponse**. |
+| type | SensorType.SENSOR_TYPE_ID_WEAR_DETECTION | Yes | 佩戴检测传感器类型为SENSOR_TYPE_ID_WEAR_DETECTION。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WearDetectionResponse&gt; | Yes | 注册一次穿戴检测传感器的回调函数，上报的数据类型为WearDetectionResponse。 |
+
+## Examples
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.once(sensor.SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, (data: sensor.WearDetectionResponse) => {
+  console.info("Succeeded in invoking once. Wear status: " + data.value);
+});
+```
 

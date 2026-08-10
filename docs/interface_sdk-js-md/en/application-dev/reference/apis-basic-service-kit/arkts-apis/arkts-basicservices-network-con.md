@@ -8,7 +8,7 @@ const DATA_ROAMING_STATUS: string
 
 Specifies whether data roaming is enabled.
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_If the value is {@code true}, data roaming is enabled. If the value is {@code false},data roaming is disabled.
+&lt;p&gt;If the value is {@code true}, data roaming is enabled. If the value is {@code false},data roaming is disabled.
 
 **Since:** 7
 

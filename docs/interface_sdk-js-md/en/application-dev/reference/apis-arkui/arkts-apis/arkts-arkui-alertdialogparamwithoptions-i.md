@@ -1,8 +1,8 @@
 # AlertDialogParamWithOptions
 
-Inherited from [AlertDialogParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。
 
-**Inheritance/Implementation:** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-arkui-component/alertdialog-alertdialogparam-i.md)
+**Inheritance/Implementation:** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
 
 **Since:** 10
 
@@ -18,9 +18,9 @@ Inherited from [AlertDialogParam]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
 buttonDirection?: DialogButtonDirection
 ```
 
-Button layout direction. The default value is **DialogButtonDirection.AUTO**. You are advised to use the auto mode for more than three buttons. (Vertical layout is used for more than two buttons, typically accommodating more buttons.) In non-auto mode, more than three buttons may not be completely displayed, and the buttons that exceed the display range will be truncated.
+按钮排布方向默认为DialogButtonDirection.AUTO。建议3个以上按钮使用Auto模式，Auto模式下两个以上按钮会切换为纵向排布，通常能显示更多按钮。非Auto模式下，3个以上按钮可能会显示不全，超出显示范围的按钮会被截断。
 
-**Type:** DialogButtonDirection
+**Type:** [DialogButtonDirection](arkts-arkui-alertdialog-dialogbuttondirection-e.md)
 
 **Default:** DialogButtonDirection.AUTO
 
@@ -42,7 +42,7 @@ Button layout direction. The default value is **DialogButtonDirection.AUTO**. Yo
 buttons: Array<AlertDialogButtonOptions>
 ```
 
-Buttons in the dialog box.
+弹窗容器中的多个按钮。
 
 **Type:** Array&lt;AlertDialogButtonOptions&gt;
 

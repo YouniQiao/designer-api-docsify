@@ -1,5 +1,11 @@
 # getTime
 
+## 导入模块
+
+```TypeScript
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getTime
 
 ```TypeScript
@@ -26,11 +32,9 @@ function getTime(isNanoseconds?: boolean): long
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | 自Unix纪元以来到当前系统时间所经过的时间。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 自Unix纪元以来到当前系统时间所经过的时间。 |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -40,19 +44,6 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to get time. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let time: long = systemDateTime.getTime(true)
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get time. message: ${error.message}, code: ${error.code}`);
 }
 ```
 

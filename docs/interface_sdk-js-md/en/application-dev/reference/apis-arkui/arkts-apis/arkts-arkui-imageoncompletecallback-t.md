@@ -4,7 +4,10 @@
 export type ImageOnCompleteCallback = (loadEvent?: ImageCompleteEvent) => void
 ```
 
-ImageOnCompleteCallback
+图片数据加载成功和解码成功时触发该回调。
+
+当组件的参数类型为  
+[AnimatedDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时该事件不触发。
 
 **Since:** 23
 
@@ -20,5 +23,5 @@ ImageOnCompleteCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loadEvent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No |  |
+| loadEvent | [ImageCompleteEvent](arkts-arkui-image-imagecompleteevent-i.md) | No |  |
 

@@ -1,12 +1,18 @@
 # convertToAbilityStageContext
 
+## Modules to Import
+
+```TypeScript
+import { sendableContextManager } from 'kits/@kit.AbilityKit';
+```
+
 ## convertToAbilityStageContext
 
 ```TypeScript
 function convertToAbilityStageContext(sendableContext: SendableContext): common.AbilityStageContext
 ```
 
-Converts a SendableContext object to an AbilityStageContext object.
+将SendableContext对象转换为AbilityStageContext。
 
 **Since:** 12
 
@@ -24,7 +30,7 @@ Converts a SendableContext object to an AbilityStageContext object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sendableContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | Yes |  |
 
 **Return value:**
 
@@ -36,9 +42,9 @@ Converts a SendableContext object to an AbilityStageContext object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| 401 | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
-**Example**
+## Examples
 
 Context passed by the main thread:
 

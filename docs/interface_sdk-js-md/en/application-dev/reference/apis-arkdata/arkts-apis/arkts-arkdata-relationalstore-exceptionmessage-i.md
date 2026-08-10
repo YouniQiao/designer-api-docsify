@@ -1,6 +1,6 @@
 # ExceptionMessage
 
-Represents an exception message about the SQL statement executed by the database.
+描述数据库执行的SQL语句的错误信息。
 
 **Since:** 20
 
@@ -10,16 +10,21 @@ Represents an exception message about the SQL statement executed by the database
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## code
 
 ```TypeScript
 code: int
 ```
 
-Error code returned by the executed SQL statement. For details about the values and meanings, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+表示执行SQL返回的错误码，对应的取值和含义请见[SQLite错误码](https://www.sqlite.org/rescode.html)。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 
@@ -35,7 +40,7 @@ Error code returned by the executed SQL statement. For details about the values 
 message: string
 ```
 
-Exception message returned by the executed SQL statement.
+表示执行SQL返回的错误信息，长度不超过1024字节。
 
 **Type:** string
 
@@ -53,7 +58,7 @@ Exception message returned by the executed SQL statement.
 sql: string
 ```
 
-SQL statement that reports the error.
+表示报错执行的SQL语句，长度不超过1024字节。
 
 **Type:** string
 

@@ -1,14 +1,18 @@
 # onSelectionComplete
 
+## Modules to Import
+
+```TypeScript
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## onSelectionComplete
 
 ```TypeScript
 function onSelectionComplete(callback: Callback<SelectionInfo>): void
 ```
 
-Registers a callback to listen for the word selection completion event. This API uses an asynchronous callback to return the result.
-
-**ArkTS mode:** This API applies only to ArkTS-Sta.
+订阅划词完成事件，与[offSelectionComplete](selectionManager.offSelectionComplete(callback?: Callback&lt;SelectionInfo&gt;))搭配使用取消订阅。
 
 **Since:** 24
 
@@ -24,25 +28,11 @@ Registers a callback to listen for the word selection completion event. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SelectionInfo&gt; | Yes | Callback used to return the word selection information. This callback is triggered only when the user selects text using the mouse or touchpad (by double-clicking, triple-clicking, or pressing and sliding the left mouse button) and then presses **Ctrl**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SelectionInfo&gt; | Yes | 回调函数，返回划词事件信息[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)。该回 调仅在用户通过鼠标或触控板选中文本（双击/三击/滑动）后按下Ctrl键时触发。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600003](../../apis-basic-services-kit/errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) | The application calling the API does not match the application selected in the system settings. |
-
-**Example**
-
-```TypeScript
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  selectionManager.onSelectionComplete((info: selectionManager.SelectionInfo) => {
-    console.info(`SelectionInfo: ${JSON.stringify(info)}`);
-  });
-} catch (err) {
-  console.error(`Failed to register selectionCompleted callback: ${err.code}, error message: ${err.message}}`);
-}
-```
+| 33600003 | The application calling the API does not match the application selected in the system settings. |
 

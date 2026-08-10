@@ -14,6 +14,12 @@ Defines user emotion data.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## confidence
 
 ```TypeScript
@@ -22,7 +28,7 @@ confidence?: int
 
 User emotion confidence.The value ranges from 0 to 100. A larger value indicates a higher confidence.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -44,7 +50,7 @@ emotionNonRealTime ?: int[]
 
 User non-real-time emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,3: A little unhappy, 4: Angry, 5: Crying.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 26.0.0
 
@@ -66,7 +72,7 @@ emotionRealTime ?: int
 
 User real-time emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,3: A little unhappy, 4: Angry, 5: Crying.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 
@@ -88,7 +94,7 @@ gravityAcceleration?: double[]
 
 Gravity acceleration of user motion status, in m/s².
 
-**Type:** double[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
 **Since:** 26.0.0
 
@@ -132,7 +138,7 @@ linearAcceleration?: double[][]
 
 Linear acceleration of user motion status, in m/s².
 
-**Type:** double[][]
+**Type:** ArkTS-Dyn: number[][]  <br>ArkTS-Sta：double[][]
 
 **Since:** 26.0.0
 

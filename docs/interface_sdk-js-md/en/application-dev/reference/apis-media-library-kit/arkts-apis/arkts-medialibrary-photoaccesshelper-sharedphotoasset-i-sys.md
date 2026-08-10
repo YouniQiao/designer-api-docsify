@@ -12,6 +12,12 @@ Describes the information about a shared media asset.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## cameraShotKey
 
 ```TypeScript
@@ -60,7 +66,7 @@ dateAdded: long
 
 Data added to the media asset.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 13
 
@@ -80,7 +86,7 @@ dateAddedMs: long
 
 Time elapsed after the media asset was added.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 13
 
@@ -120,7 +126,7 @@ dateModified: long
 
 Data modified in the media asset.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 13
 
@@ -140,7 +146,7 @@ dateModifiedMs: long
 
 Modified time of the asset in milliseconds
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 13
 
@@ -180,7 +186,7 @@ dateTaken: long
 
 Timestamp when the media asset was taken and stored locally.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 13
 
@@ -200,7 +206,7 @@ dateTrashed: long
 
 Whether the media asset is moved to the trash.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 13
 
@@ -220,7 +226,7 @@ dateTrashedMs: long
 
 Time elapsed since the media asset was trashed.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 13
 
@@ -280,7 +286,7 @@ duration: int
 
 Duration of the media asset if it is a video.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 
@@ -300,7 +306,7 @@ dynamicRangeType: DynamicRangeType
 
 Dynamic range type of the media asset.
 
-**Type:** DynamicRangeType
+**Type:** [DynamicRangeType](arkts-medialibrary-photoaccesshelper-dynamicrangetype-e.md)
 
 **Since:** 13
 
@@ -320,7 +326,7 @@ fileId: int
 
 ID of the media asset.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 
@@ -340,7 +346,7 @@ height: int
 
 Pixel height of the media asset.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 
@@ -420,7 +426,7 @@ mediaType: PhotoType
 
 Media type of the media asset.
 
-**Type:** PhotoType
+**Type:** [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md)
 
 **Since:** 13
 
@@ -440,7 +446,7 @@ movingPhotoEffectMode: MovingPhotoEffectMode
 
 Effect of the moving photo.
 
-**Type:** MovingPhotoEffectMode
+**Type:** [MovingPhotoEffectMode](arkts-medialibrary-sendablephotoaccesshelper-movingphotoeffectmode-e-sys.md)
 
 **Since:** 13
 
@@ -460,7 +466,7 @@ orientation: int
 
 Rotation angle of the media asset.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 
@@ -500,7 +506,7 @@ position: PositionType
 
 Location of the media asset.
 
-**Type:** PositionType
+**Type:** [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
 
 **Since:** 13
 
@@ -520,7 +526,7 @@ size: long
 
 File size of the media asset.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 13
 
@@ -540,7 +546,7 @@ subtype: PhotoSubtype
 
 Subtype of the media asset.
 
-**Type:** PhotoSubtype
+**Type:** [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e-sys.md)
 
 **Since:** 13
 
@@ -580,7 +586,7 @@ thumbnailModifiedMs?: long
 
 Time elapsed since the thumbnail status of the media asset changed.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 14
 
@@ -620,7 +626,7 @@ thumbnailVisible: ThumbnailVisibility
 
 Whether the thumbnail of the media asset is visible.
 
-**Type:** ThumbnailVisibility
+**Type:** [ThumbnailVisibility](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md)
 
 **Since:** 14
 
@@ -700,7 +706,7 @@ width: int
 
 Pixel width of the media asset.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 13
 

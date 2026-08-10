@@ -4,7 +4,7 @@
 export type CommonEventSubscriber = _CommonEventSubscriber
 ```
 
-Describes the subscriber of a common event.
+描述公共事件的订阅者。
 
 **Since:** 10
 

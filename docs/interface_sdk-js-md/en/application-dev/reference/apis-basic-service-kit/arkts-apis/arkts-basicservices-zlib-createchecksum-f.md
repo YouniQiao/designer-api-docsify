@@ -1,12 +1,18 @@
 # createChecksum
 
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createChecksum
 
 ```TypeScript
 function createChecksum(): Promise<Checksum>
 ```
 
-Creates this checksum object. This API uses a promise to return the result.
+创建校验对象。使用Promise异步回调。
 
 **Since:** 12
 
@@ -22,9 +28,9 @@ Creates this checksum object. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Checksum&gt; | Promise used to return the created checksum object. |
+| Promise&lt;Checksum&gt; | Promise对象。返回校验对象实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { zlib } from '@kit.BasicServicesKit';

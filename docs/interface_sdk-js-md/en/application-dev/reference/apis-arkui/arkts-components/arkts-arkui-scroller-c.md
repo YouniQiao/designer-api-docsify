@@ -1,8 +1,23 @@
 # Scroller
 
-Defines a controller for scrollable container components.
+可滚动容器组件的控制器，可以将此组件绑定至容器组件，然后通过它控制容器组件的滚动。同一个控制器不可以控制多个容器组件，目前支持绑定到ArcList、ArcScrollBar、List、Scroll、ScrollBar、Grid、WaterFlow上。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_1. The binding of a \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_Scroller\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_ instance to a scrollable container component occurs during the component creation phase.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_2. \_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_Scroller\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_ APIs can only be effectively called after the \_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_Scroller\_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_ instance is bound to a scrollable container component.Otherwise, depending on the API called, it may have no effect or throw an exception.\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_3. For example, with aboutToAppear, this callback is executed after a new instance of a custom component is created and before its \_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_build()\_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_ method is called.Therefore, if a scrollable component is defined within the \_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_build\_\_\_HTML\_TAG\_DESC\_USD\_15\_\_\_ method of a custom component,the internal scrollable component has not yet been created during the \_\_\_HTML\_TAG\_DESC\_USD\_16\_\_\_aboutToAppear\_\_\_HTML\_TAG\_DESC\_USD\_17\_\_\_ callback of that custom component, and therefore the \_\_\_HTML\_TAG\_DESC\_USD\_18\_\_\_Scroller\_\_\_HTML\_TAG\_DESC\_USD\_19\_\_\_ APIs cannot be called effectively.\_\_\_HTML\_TAG\_DESC\_USD\_20\_\_\_
+> **说明：**
+> 
+> 1. Scroller控制器与滚动容器组件的绑定发生在组件创建阶段。
+
+> 2. Scroller控制器与滚动容器组件绑定后才可以正常调用Scroller方法，否则根据调用接口不同会不生效或者抛异常。
+
+> 3. 以[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)为例，
+> aboutToAppear在创建自定义组件的新实例后，在执行其build()方法之前执行。因此如果滚动组件在自定义组件build内，在该自定义组件aboutToAppear执行时，内部滚动组件还没有创建，是不能正常调用上述
+> Scroller方法的。
+
+> 4. 以[onAppear](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onappear)为例，组件挂载显示后触发此回调。因此在滚动组件的onAppear回调执行时，滚动组件已经创建并已经和Scroller绑定成功，是可以正常调用
+> Scroller方法的。
+
+## 导入对象
+
+```ts scroller: Scroller = new Scroller();```
 
 **Since:** 7
 
@@ -18,7 +33,7 @@ Defines a controller for scrollable container components.
 constructor()
 ```
 
-A constructor used to create a \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Scroller\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ object.
+Scroller的构造函数。
 
 **Since:** 7
 
@@ -36,7 +51,23 @@ A constructor used to create a \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Scroller\_\_\_
 contentSize(): SizeResult
 ```
 
-Obtains the content size.
+获取滚动组件内容总大小。
+
+> **说明：**
+> 
+> - Grid、List、WaterFlow和Scroll组件主轴方向内容大小为所有子组件布局后的总大小，交叉轴方向内容大小为组件自身交叉轴方向大小减去padding和border后的大小。
+> 
+> - Grid、List、WaterFlow组件有懒加载机制，该接口依赖已布局的子节点进行估算。如果组件内容没有布局完成且子组件高度不一致，估算结果可能会有误差，开发者需要适配。例如，List组件可以通过
+> childrenMainSize属性解决估算不准问题。
+> 
+> - 如果应用动态增删子节点，则需要应用动态获取内容总大小，来保证接口获取结果的即时性。
+> 
+> - 当Scroll组件设置scrollable为ScrollDirection.FREE自由滚动模式时，获取到的内容总大小为子组件缩放后的总大小。
+> 
+> - 当Scroll组件设置scrollable为ScrollDirection.None不可滚动时，获取到的内容总大小为0。
+> 
+> - 当Grid组件同时设置columnsTemplate和rowsTemplate，或columnsTemplate和rowsTemplate都不设置时即为不可滚动场景，此时获取到的内容总大小高度为0，宽度为Grid组件内容区
+> 宽度。
 
 **Since:** 22
 
@@ -54,13 +85,13 @@ Obtains the content size.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Total size of the scrollable component's content, including the content width and height. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp |
+| [SizeResult](arkts-arkui-sizeresult-i.md) | 滚动组件内容总大小。主轴方向内容大小为所有子组件布局后的总大小，交叉轴方向内容大小为组件自身交叉轴方向大小减去padding和border后的大小。&lt;br/&gt;单位：vp |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| 100004 | Controller not bound to a component. |
 
 ## currentOffset
 
@@ -68,9 +99,14 @@ Obtains the content size.
 currentOffset() : OffsetResult
 ```
 
-Obtains the current scrolling offset.
+获取当前的滚动总偏移量。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_1. If \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_Scroller\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_ is not bound to a component, this API returns \_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_undefined\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_,which is not declared in the API. You are advised to use the \_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_offset\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_ function.\_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_2. The \_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_Grid\_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_List\_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_, and \_\_\_HTML\_TAG\_DESC\_USD\_15\_\_\_WaterFlow\_\_\_HTML\_TAG\_DESC\_USD\_16\_\_\_ components use a lazy loading mechanism.Before all content is fully loaded and laid out, the total content offset is estimated, and this estimation may be inaccurate. For the \_\_\_HTML\_TAG\_DESC\_USD\_17\_\_\_List\_\_\_HTML\_TAG\_DESC\_USD\_18\_\_\_ component, the \_\_\_HTML\_TAG\_DESC\_USD\_19\_\_\_childrenMainSize\_\_\_HTML\_TAG\_DESC\_USD\_20\_\_\_ attribute can be used to mitigate such inaccuracies. Currently, there is no solution to inaccurate estimation of the\_\_\_HTML\_TAG\_DESC\_USD\_21\_\_\_Grid\_\_\_HTML\_TAG\_DESC\_USD\_22\_\_\_ and \_\_\_HTML\_TAG\_DESC\_USD\_23\_\_\_WaterFlow\_\_\_HTML\_TAG\_DESC\_USD\_24\_\_\_ components.\_\_\_HTML\_TAG\_DESC\_USD\_25\_\_\_
+> **说明：**
+> 
+> 1. 当Scroller没有和组件绑定时，该接口会返回undefined，但是接口中没有声明。推荐使用[offset](arkts-arkui-scroller-c.md#offset)函数，其返回类型显式包含undefined。
+> 
+> 2. Grid、List、WaterFlow组件有懒加载机制，组件内容没有加载并布局完成时，内容总偏移量通过估算得到，估算结果可能会有误差。其中List组件可以通过
+> [childrenMainSize](../arkts-apis/arkts-arkui-list-listattribute-i.md/arkts-arkui-list-listattribute-i.md#childrenmainsize)属性解决估算不准确的问题，Grid与WaterFlow估算不准暂无解决方案。
 
 **Since:** 7
 
@@ -86,7 +122,7 @@ Obtains the current scrolling offset.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the current scrolling offset. If the scroller not bound to a component, the return value is void. |
+| [OffsetResult](arkts-arkui-offsetresult-i.md) | 返回当前的滚动总偏移量。xOffset表示水平滚动总偏移量，yOffset表示竖直滚动总偏移量。&lt;br/&gt; |
 
 ## fling
 
@@ -94,7 +130,7 @@ Obtains the current scrolling offset.
 fling(velocity: number): void
 ```
 
-Performs inertial scrolling based on the initial velocity passed in.
+滚动类组件根据传入的初始速度进行惯性滚动，可用于模拟抛滑效果。
 
 **Since:** 12
 
@@ -112,14 +148,14 @@ Performs inertial scrolling based on the initial velocity passed in.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| velocity | number | Yes | Initial velocity of inertial scrolling. Unit: vp/s \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_NOTE\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value specified is 0, it is considered as invalid, and the scrolling for this instance will not take effect. A positive value indicates scrolling towards the top, while a negative value indicates scrolling towards the bottom. |
+| velocity | number | Yes | 惯性滚动的初始速度值。单位：vp/s&lt;br/&gt;**说明：**&lt;br/&gt;velocity值设置为0时，本次滚动不生效且不会产生滚动动画。如果值为正数，则向顶部滚动；如果值为负 数，则向底部滚动。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 100004 | Controller not bound to a component. |
 
 ## getFrameNode
 
@@ -127,7 +163,7 @@ Performs inertial scrolling based on the initial velocity passed in.
 getFrameNode(): FrameNode | undefined
 ```
 
-Obtains the FrameNode corresponding to this scroller.
+获取与当前Scroller绑定的FrameNode。
 
 **Since:** 26.0.0
 
@@ -145,7 +181,7 @@ Obtains the FrameNode corresponding to this scroller.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
+| [FrameNode](../arkts-apis/arkts-arkui-framenode-t.md) | 当Scroller已绑定到Scroll、List、Grid、WaterFlow等滚动类组件时，返回对应组件的FrameNode；如果Scroller未绑定组件， 则返回undefined。 |
 
 ## getItemIndex
 
@@ -153,9 +189,11 @@ Obtains the FrameNode corresponding to this scroller.
 getItemIndex(x: number, y: number): number
 ```
 
-Obtains the index of a child component based on coordinates.
+通过坐标获取子组件的索引。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_The returned index is \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_-1\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_ for invalid coordinates.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_
+> **说明：**
+> 
+> 支持List、Grid、WaterFlow组件。
 
 **Since:** 14
 
@@ -173,21 +211,21 @@ Obtains the index of a child component based on coordinates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X-coordinate, in vp. |
-| y | number | Yes | Y-coordinate, in vp. |
+| x | number | Yes | x轴坐标，单位为vp。 |
+| y | number | Yes | y轴坐标，单位为vp。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Index of the item. |
+| number | 返回坐标命中的子组件索引。坐标未命中子组件时，返回-1。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 100004 | Controller not bound to a component. |
 
 ## getItemRect
 
@@ -195,9 +233,11 @@ Obtains the index of a child component based on coordinates.
 getItemRect(index: number): RectResult
 ```
 
-Obtains the size and position of a child component relative to its container.
+获取子组件的大小及相对容器组件的位置。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_- The value of \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_index\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_ must be the index of a child component visible in the display area.Otherwise, the value is considered invalid.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_- The value of \_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_index\_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_ must be the index of a child component visible in the display area. Otherwise,the value is considered invalid.\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_
+> **说明：**
+> 
+> 支持ArcList、Scroll、List、Grid、WaterFlow组件。
 
 **Since:** 11
 
@@ -215,20 +255,20 @@ Obtains the size and position of a child component relative to its container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the target child component. |
+| index | number | Yes | 子组件的索引值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Size and position of the child component relative to the component.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: vp |
+| [RectResult](arkts-arkui-rectresult-i.md) | 子组件的大小和相对于组件的位置。&lt;br/&gt;单位：vp。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| 100004 | Controller not bound to a component. |
 
 ## isAtEnd
 
@@ -236,9 +276,11 @@ Obtains the size and position of a child component relative to its container.
 isAtEnd(): boolean
 ```
 
-Checks whether the component has scrolled to the bottom.
+查询组件是否滚动到底部。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_This API is available for the \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_ArcList\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_Scroll\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_List\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_Grid\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_,and \_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_WaterFlow\_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_ components.\_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_
+> **说明：**
+> 
+> 支持ArcList、Scroll、List、Grid、WaterFlow组件。
 
 **Since:** 10
 
@@ -256,7 +298,7 @@ Checks whether the component has scrolled to the bottom.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns whether the component scrolls to the end position. |
+| boolean | true表示组件已经滚动到底部，false表示组件还没滚动到底部。 |
 
 ## offset
 
@@ -264,7 +306,7 @@ Checks whether the component has scrolled to the bottom.
 offset() : OffsetResult | undefined
 ```
 
-Obtains the current scrolling offset.
+获取当前的滚动总偏移量。除接口声明有undefined以外，其他与[currentOffset](arkts-arkui-scroller-c.md#currentoffset)接口保持一致。
 
 **Since:** 23
 
@@ -282,7 +324,7 @@ Obtains the current scrolling offset.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
+| [OffsetResult](arkts-arkui-offsetresult-i.md) | 返回当前的滚动总偏移量。xOffset表示水平滚动总偏移量，yOffset表示竖直滚动总偏移量。当Scroller没有和组件绑定时，该接口会返回 undefined。 |
 
 ## scrollBy
 
@@ -290,9 +332,20 @@ Obtains the current scrolling offset.
 scrollBy(dx: Length, dy: Length)
 ```
 
-Scrolls by the specified amount.
+滑动指定距离。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_This API is available for the \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_ArcList\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_Scroll\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_List\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_Grid\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_,and \_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_WaterFlow\_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_ components.\_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_
+> **说明：**
+> 
+> - 支持ArcList、Scroll、List、Grid、WaterFlow组件。
+> 
+> - 各组件行为存在差异：
+> 
+> - [ArcList](../arkts-apis/arkts-arkui-arclist.md/arkts-arkui-arclist.md)和[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)组件会对所有经过的item进行加载和布局。
+> 
+> - Grid组件和[SLIDING_WINDOW](../arkts-apis/arkts-arkui-waterflow-waterflowlayoutmode-e.md/arkts-arkui-waterflow-waterflowlayoutmode-e.md)模式的WaterFlow组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估算出要显示的item。跳转指一帧滑动。
+> 
+> - [ALWAYS_TOP_DOWN](../arkts-apis/arkts-arkui-waterflow-waterflowlayoutmode-e.md/arkts-arkui-waterflow-waterflowlayoutmode-e.md)模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转
+> 到对应位置。跳转指一帧滑动。
 
 **Since:** 9
 
@@ -308,8 +361,8 @@ Scrolls by the specified amount.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Amount to scroll by in the horizontal direction. The percentage format is not supported. |
-| dy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Amount to scroll by in the vertical direction. The percentage format is not supported. |
+| dx | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 水平方向滚动距离，不支持百分比形式。 &lt;br/&gt;取值范围：(-∞, +∞) |
+| dy | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 竖直方向滚动距离，不支持百分比形式。 &lt;br/&gt;取值范围：(-∞, +∞) |
 
 ## scrollEdge
 
@@ -317,7 +370,9 @@ Scrolls by the specified amount.
 scrollEdge(value: Edge, options?: ScrollEdgeOptions)
 ```
 
-Scrolls to the edge of the container, regardless of the scroll axis direction.By default, the \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Scroll\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ component comes with an animation, while the \_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_Grid\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_List\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_,and \_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_WaterFlow\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_ components do not.
+滚动到容器边缘，不区分滚动轴方向，Edge.Top和Edge.Start表现相同，Edge.Bottom和Edge.End表现相同。可用于返回顶部、跳转到内容末尾等场景。
+
+Scroll组件默认有动画，Grid、List、WaterFlow组件默认无动画。
 
 **Since:** 7
 
@@ -333,8 +388,8 @@ Scrolls to the edge of the container, regardless of the scroll axis direction.By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Edge position to scroll to. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Atomic service API\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_: This API can be used in atomic services since API version 11. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Mode of scrolling to the edge position. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Atomic service API\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_: This API can be used in atomic services since API version 12.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes | 滚动到的边缘位置。 |
+| options | [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md) | No | 设置滚动到边缘位置的模式。 &lt;br&gt;&lt;em&gt;原子化服务API&lt;/em&gt;：该API可在原子化服务中使用，从API version 12开始。<br>**Since:** 12 |
 
 ## scrollPage
 
@@ -342,7 +397,7 @@ Scrolls to the edge of the container, regardless of the scroll axis direction.By
 scrollPage(value: ScrollPageOptions)
 ```
 
-Scrolls to the next or previous page.
+滚动到下一页或者上一页。
 
 **Since:** 9
 
@@ -358,7 +413,7 @@ Scrolls to the next or previous page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Page turning mode.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 14 |
+| value | [ScrollPageOptions](arkts-arkui-scrollpageoptions-i.md) | Yes | 设置翻页模式。包含next（是否向下翻页）和animation（是否开启翻页动画）字段，用于指定翻页行为。<br>**Since:** 14 |
 
 ## scrollPage
 
@@ -366,7 +421,7 @@ Scrolls to the next or previous page.
 scrollPage(value: { next: boolean; direction?: Axis })
 ```
 
-Scrolls to the next or previous page.
+滚动到下一页或者上一页。
 
 **Since:** 7
 
@@ -374,7 +429,7 @@ Scrolls to the next or previous page.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Scroller#scrollPage](../arkts-apis/arkts-arkui-component/scroll-scroller-c.md#scrollpage)
+**Substitutes:** [Scroller#scrollPage](arkts-arkui-scroller-c.md#scrollpage)
 
 <!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })--><!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })-End-->
 
@@ -384,7 +439,7 @@ Scrolls to the next or previous page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { next: boolean; direction?: Axis } | Yes | next: Whether to turn to the next page. The value \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ means to scroll to the next page, and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ means to scroll to the previous page. direction: Scrolling direction: horizontal or vertical. |
+| value | { next: boolean; direction?: Axis } | Yes | next：是否向下翻页。true表示向下翻页，false表示向上翻页。 &lt;br&gt; direction：设置滚动方向为水平或竖直方向。 |
 
 ## scrollTo
 
@@ -392,9 +447,21 @@ Scrolls to the next or previous page.
 scrollTo(options: ScrollOptions)
 ```
 
-Scrolls to the specified position.Anonymous Object Rectification.
+滑动到指定位置，可用于目录跳转、返回顶部、搜索结果定位等场景。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_If the scrolling speed of the \_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_scrollTo\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_ animation exceeds 200 vp/s, the components within the scrollable area will not respond to click events.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_
+> **说明：**
+> 
+> - scrollTo动画速度大于200vp/s时，滚动组件区域内的组件不响应点击事件。
+> 
+> - 各组件行为存在差异：
+> 
+> - [ArcList](../arkts-apis/arkts-arkui-arclist.md/arkts-arkui-arclist.md)和[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)组件会对所有经过的item进行加载和布局。
+> 
+> - Grid组件和[SLIDING_WINDOW](../arkts-apis/arkts-arkui-waterflow-waterflowlayoutmode-e.md/arkts-arkui-waterflow-waterflowlayoutmode-e.md)模式的[WaterFlow](./water_flow)组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估
+> 算出要显示的item。跳转指一帧滑动。
+> 
+> - [ALWAYS_TOP_DOWN](../arkts-apis/arkts-arkui-waterflow-waterflowlayoutmode-e.md/arkts-arkui-waterflow-waterflowlayoutmode-e.md)模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转
+> 到对应位置。跳转指一帧滑动。
 
 **Since:** 7
 
@@ -410,7 +477,7 @@ Scrolls to the specified position.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters for scrolling to the specified position.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+| options | [ScrollOptions](../arkts-apis/arkts-arkui-viewmodel-scrolloptions-i.md) | Yes | 滑动到指定位置的参数，包含xOffset、yOffset、animation、canOverScroll等字段，用于指定滚动目标位置和滚动行 为。<br>**Since:** 18 |
 
 ## scrollToIndex
 
@@ -418,9 +485,29 @@ Scrolls to the specified position.Anonymous Object Rectification.
 scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: ScrollToIndexOptions)
 ```
 
-Scrolls to a specified index, with support for setting an extra offset for the scroll.When smooth scrolling is enabled, all items encountered during the scroll are loaded and their layout is calculated. Loading a large number of items may cause performance issues. It is recommended that you first call \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_scrollToIndex\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ without animation to jump to a position near the target, then call it again with animation to smoothly scroll to the final target position.
+滑动到指定Index，支持设置滑动额外偏移量。
 
-\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_NOTE\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_This API only works for the \_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_ArcList\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_8\_\_\_Grid\_\_\_HTML\_TAG\_DESC\_USD\_9\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_10\_\_\_List\_\_\_HTML\_TAG\_DESC\_USD\_11\_\_\_, and \_\_\_HTML\_TAG\_DESC\_USD\_12\_\_\_WaterFlow\_\_\_HTML\_TAG\_DESC\_USD\_13\_\_\_ components.\_\_\_HTML\_TAG\_DESC\_USD\_14\_\_\_When refreshing the data source using \_\_\_HTML\_TAG\_DESC\_USD\_15\_\_\_LazyForEach\_\_\_HTML\_TAG\_DESC\_USD\_16\_\_\_, \_\_\_HTML\_TAG\_DESC\_USD\_17\_\_\_ForEach\_\_\_HTML\_TAG\_DESC\_USD\_18\_\_\_, or \_\_\_HTML\_TAG\_DESC\_USD\_19\_\_\_Repeat\_\_\_HTML\_TAG\_DESC\_USD\_20\_\_\_,ensure this API is called after the data refresh is complete.\_\_\_HTML\_TAG\_DESC\_USD\_21\_\_\_Starting from API version 11, the \_\_\_HTML\_TAG\_DESC\_USD\_22\_\_\_List\_\_\_HTML\_TAG\_DESC\_USD\_23\_\_\_ component supports \_\_\_HTML\_TAG\_DESC\_USD\_24\_\_\_contentStartOffset\_\_\_HTML\_TAG\_DESC\_USD\_25\_\_\_and \_\_\_HTML\_TAG\_DESC\_USD\_26\_\_\_contentEndOffset\_\_\_HTML\_TAG\_DESC\_USD\_27\_\_\_. Starting from API version 22, the \_\_\_HTML\_TAG\_DESC\_USD\_28\_\_\_Grid\_\_\_HTML\_TAG\_DESC\_USD\_29\_\_\_ and \_\_\_HTML\_TAG\_DESC\_USD\_30\_\_\_WaterFlow\_\_\_HTML\_TAG\_DESC\_USD\_31\_\_\_components also support setting \_\_\_HTML\_TAG\_DESC\_USD\_32\_\_\_contentStartOffset\_\_\_HTML\_TAG\_DESC\_USD\_33\_\_\_ and \_\_\_HTML\_TAG\_DESC\_USD\_34\_\_\_contentEndOffset\_\_\_HTML\_TAG\_DESC\_USD\_35\_\_\_.\_\_\_HTML\_TAG\_DESC\_USD\_36\_\_\_- If the scrollable container has \_\_\_HTML\_TAG\_DESC\_USD\_37\_\_\_contentStartOffset\_\_\_HTML\_TAG\_DESC\_USD\_38\_\_\_ set and \_\_\_HTML\_TAG\_DESC\_USD\_39\_\_\_ScrollAlign\_\_\_HTML\_TAG\_DESC\_USD\_40\_\_\_ is\_\_\_HTML\_TAG\_DESC\_USD\_41\_\_\_START\_\_\_HTML\_TAG\_DESC\_USD\_42\_\_\_, after scrolling, the start of the specified item will align with the\_\_\_HTML\_TAG\_DESC\_USD\_43\_\_\_contentStartOffset\_\_\_HTML\_TAG\_DESC\_USD\_44\_\_\_ of the container.\_\_\_HTML\_TAG\_DESC\_USD\_45\_\_\_- If the scrollable container has \_\_\_HTML\_TAG\_DESC\_USD\_46\_\_\_contentEndOffset\_\_\_HTML\_TAG\_DESC\_USD\_47\_\_\_ set and \_\_\_HTML\_TAG\_DESC\_USD\_48\_\_\_ScrollAlign\_\_\_HTML\_TAG\_DESC\_USD\_49\_\_\_ is\_\_\_HTML\_TAG\_DESC\_USD\_50\_\_\_END\_\_\_HTML\_TAG\_DESC\_USD\_51\_\_\_, after scrolling, the end of the specified item will align with the\_\_\_HTML\_TAG\_DESC\_USD\_52\_\_\_contentEndOffset\_\_\_HTML\_TAG\_DESC\_USD\_53\_\_\_ of the container.\_\_\_HTML\_TAG\_DESC\_USD\_54\_\_\_- If the scrollable container has \_\_\_HTML\_TAG\_DESC\_USD\_55\_\_\_contentStartOffset\_\_\_HTML\_TAG\_DESC\_USD\_56\_\_\_ or \_\_\_HTML\_TAG\_DESC\_USD\_57\_\_\_contentEndOffset\_\_\_HTML\_TAG\_DESC\_USD\_58\_\_\_ set and \_\_\_HTML\_TAG\_DESC\_USD\_59\_\_\_ScrollAlign\_\_\_HTML\_TAG\_DESC\_USD\_60\_\_\_ is \_\_\_HTML\_TAG\_DESC\_USD\_61\_\_\_AUTO\_\_\_HTML\_TAG\_DESC\_USD\_62\_\_\_: When the specified item is completely within the visible area,no adjustment is made. Otherwise, following the shortest-scroll-distance principle, the start of the item will align with the container's \_\_\_HTML\_TAG\_DESC\_USD\_63\_\_\_contentStartOffset\_\_\_HTML\_TAG\_DESC\_USD\_64\_\_\_, or the end will align with the container's\_\_\_HTML\_TAG\_DESC\_USD\_65\_\_\_contentEndOffset\_\_\_HTML\_TAG\_DESC\_USD\_66\_\_\_, ensuring the item is fully displayed.\_\_\_HTML\_TAG\_DESC\_USD\_67\_\_\_
+开启smooth动画时，会对经过的所有item进行加载和布局计算。当大量加载item时会导致性能问题，开发者应先调用scrollToIndex不带动画跳转到目标附近位置，再调用scrollToIndex带动画滚动到目标位置，以优化性能。
+
+> **说明：**
+> 
+> 1. 仅支持ArcList、Grid、List、WaterFlow组件。
+> 
+> 2. 在[LazyForEach](./lazy_for_each)、[ForEach](./for_each)、[Repeat](../arkts-apis/arkts-arkui-repeat-repeat-f.md/arkts-arkui-repeat-repeat-f.md#repeat)刷新数据源时，需确保在数据刷新完成之后再
+> 调用此接口。
+> 
+> 3. 从API version 11开始，在List中支持[contentStartOffset](../arkts-apis/arkts-arkui-list-listattribute-i.md/arkts-arkui-list-listattribute-i.md#contentstartoffset)和
+> [contentEndOffset](../arkts-apis/arkts-arkui-list-listattribute-i.md/arkts-arkui-list-listattribute-i.md#contentendoffset)。从API version 22开始，在Grid和WaterFlow组件中支持设置
+> [contentStartOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentstartoffset22)
+> 和
+> [contentEndOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentendoffset22)。
+> 
+> - 当滚动容器组件设置contentStartOffset时，如果ScrollAlign设置为START，滚动结束时，指定item首部会与滚动容器组件contentStartOffset处对齐。
+> 
+> - 当滚动容器组件设置contentEndOffset时，如果ScrollAlign设置为END，滚动结束时，指定item尾部会与滚动容器组件contentEndOffset处对齐。
+> 
+> - 当滚动容器组件设置contentStartOffset或contentEndOffset时，如果ScrollAlign设置为AUTO，且指定item完全处于显示区内，不做调整；否则依照滚动距离最短的原则，将指定item首部
+> 与滚动组件contentStartOffset处对齐，或指定item尾部与滚动组件contentEndOffset处对齐，使指定item完全显示。
 
 **Since:** 7
 
@@ -436,8 +523,8 @@ Scrolls to a specified index, with support for setting an extra offset for the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Index of the item to be scrolled to in the container. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_NOTE\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
-| smooth | boolean | No | Whether to enable the smooth animation for scrolling to the item with the specified index. The value \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_true\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ means to enable that the smooth animation, and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ means the opposite.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_false\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
-| align | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | How the list item to scroll to is aligned with the container. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value when the container is \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_List\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ScrollAlign.START\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value when the container is \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Grid\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ScrollAlign.AUTO\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_10\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ Default value when the container is \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_11\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_WaterFlow\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_12\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_13\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ScrollAlign.START\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_14\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_15\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_16\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_NOTE\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_17\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_18\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_This parameter is only available for the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_19\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_List\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_20\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_21\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Grid\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_22\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_23\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_WaterFlow\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_24\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ components.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for scrolling to a specified index, for example, an extra offset for the scroll.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, in vp\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+| value | number | Yes | 要滑动到的目标元素在当前容器中的索引值。 &lt;br/&gt;**说明：** &lt;br/&gt;value值设置成负值或者大于当前容器子组件的最大索引值，视为异常值，本次跳转不生效。 |
+| smooth | boolean | No | 设置滑动到列表项在列表中的索引值时是否有动画，true表示有动画，false表示没有动画。不传入时默认无动画。&lt;br/&gt;默认值：false。<br>**Since:** 12 |
+| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No | 指定滑动到的元素与当前容器的对齐方式，可根据期望item首部、尾部或居中显示选择对应对齐方式。&lt;br/&gt;默认值：List为ScrollAlign.START， Grid为ScrollAlign.AUTO，WaterFlow为ScrollAlign.START。&lt;br/&gt;**说明：** &lt;br/&gt;仅List、Grid、WaterFlow组件支持该参数。<br>**Since:** 12 |
+| options | [ScrollToIndexOptions](../arkts-apis/arkts-arkui-scroll-scrolltoindexoptions-i.md) | No | 设置滑动到指定Index的选项，包含extraOffset字段，用于指定滚动后的额外偏移量。&lt;br/&gt;不传入时无额外偏移量。&lt;br/ &gt;<br>**Since:** 12 |
 

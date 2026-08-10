@@ -1,12 +1,18 @@
 # getInstance
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getInstance
 
 ```TypeScript
 export function getInstance(locale?:string): IndexUtil
 ```
 
-Creates an IndexUtil object.
+创建并返回IndexUtil对象。
 
 **Since:** 23
 
@@ -22,11 +28,11 @@ Creates an IndexUtil object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | No | System locale, which consists of the language, script, and country/region. The default value is the current system locale. |
+| locale | string | No | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 &lt;br&gt;默认值：系统当前区域ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | IndexUtil object created based on the specified locale ID. |
+| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | 根据区域ID创建的IndexUtil对象。 |
 

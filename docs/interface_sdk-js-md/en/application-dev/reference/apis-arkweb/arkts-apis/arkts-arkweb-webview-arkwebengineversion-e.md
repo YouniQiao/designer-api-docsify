@@ -1,7 +1,8 @@
 # ArkWebEngineVersion
 
-For details about the ArkWeb kernel version, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+ArkWeb内核版本，请参考  
+[M114内核在OpenHarmony 6.0系统上的适配指导](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/web/ReleaseNote/CompatibleWithLegacyWebEngine_6.0.md)，  
+[M132内核在OpenHarmony 7.0系统上的适配指导](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/web/ReleaseNote/CompatibleWithLegacyWebEngine_7.0.md)。
 
 **Since:** 23
 
@@ -17,7 +18,7 @@ For details about the ArkWeb kernel version, see
 SYSTEM_DEFAULT = 0
 ```
 
-Default system kernel. For OpenHarmony 6.0, the default kernel is M132.
+系统默认内核，OpenHarmony 6.0版本默认为M132，OpenHarmony 7.0版本默认为M144。
 
 **Since:** 23
 
@@ -33,7 +34,7 @@ Default system kernel. For OpenHarmony 6.0, the default kernel is M132.
 M114 = 1
 ```
 
-Legacy kernel of OpenHarmony 6.0. You can select this legacy kernel. If it does not exist, the setting is invalid.
+OpenHarmony 6.0版本的遗留内核。开发者可选择此遗留内核，若系统版本上不存在此内核则设置无效。
 
 **Since:** 23
 
@@ -49,7 +50,7 @@ Legacy kernel of OpenHarmony 6.0. You can select this legacy kernel. If it does 
 M132 = 2
 ```
 
-Evergreen kernel of OpenHarmony 6.0, which is M132 by default. If it does not exist, the setting is invalid.
+OpenHarmony 6.0版本的常青内核（OpenHarmony 7.0版本的遗留内核），M132为OpenHarmony 6.0版本的默认内核。若系统版本上不存在此内核则设置无效。
 
 **Since:** 23
 
@@ -65,7 +66,7 @@ Evergreen kernel of OpenHarmony 6.0, which is M132 by default. If it does not ex
 M144 = 3
 ```
 
-ArkWeb M144 version.
+OpenHarmony 7.0版本的常青内核，M144为OpenHarmony 7.0版本的默认内核。若系统版本上不存在此内核则设置无效。
 
 **Since:** 26.0.0
 
@@ -81,7 +82,7 @@ ArkWeb M144 version.
 ARKWEB_EVERGREEN = 99999
 ```
 
-Evergreen kernel, which is the latest kernel of the system. You can choose to use the latest kernel for each system version. This setting takes effect for OpenHarmony 6.1 and later versions.
+常青内核，系统的最新内核。开发者可选择在每个系统版本上都使用最新的内核，OpenHarmony开发套件（基于API 23）及之后所有系统版本都生效。
 
 **Since:** 23
 

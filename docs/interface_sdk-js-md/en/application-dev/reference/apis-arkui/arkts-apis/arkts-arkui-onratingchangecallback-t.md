@@ -4,7 +4,7 @@
 export type OnRatingChangeCallback = (rating: double) => void
 ```
 
-Callback of the star rating of the operation scoring bar changes event.
+操作评分条的评星变化时触发该回调。
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Callback of the star rating of the operation scoring bar changes event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rating | double | Yes | The rating of the rating bar.  |
+| rating | double | Yes | 评分条的评分。 |
 

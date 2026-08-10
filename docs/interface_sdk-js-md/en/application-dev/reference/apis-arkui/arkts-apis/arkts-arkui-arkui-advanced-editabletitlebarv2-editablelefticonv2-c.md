@@ -1,6 +1,6 @@
 # EditableLeftIconV2
 
-Declaration of the left icon configuration.
+左侧图标配置类，使用@ObservedV2装饰器，支持状态观察。
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Declaration of the left icon configuration.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(options?: EditableLeftIconV2Options)
 ```
 
-Constructor of EditableLeftIconV2.
+EditableLeftIconV2的构造函数。
 
 **Since:** 26.0.0
 
@@ -34,7 +40,7 @@ Constructor of EditableLeftIconV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The options of the left icon |
+| options | [EditableLeftIconV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2options-i.md) | No | 左侧图标配置选项。 |
 
 ## onAction
 
@@ -42,7 +48,7 @@ Constructor of EditableLeftIconV2.
 public onAction?: OnActionCallback
 ```
 
-Callback function when click on the left icon.
+点击左侧图标的回调函数。未设置时，Back类型默认执行路由返回，Cancel类型无操作。
 
 **Since:** 26.0.0
 
@@ -60,7 +66,13 @@ Callback function when click on the left icon.
 public defaultFocus: boolean
 ```
 
-Whether to get focus by default.
+是否默认获取焦点。
+
+true：获焦。
+
+false：不获焦。
+
+默认值：false。
 
 **Type:** boolean
 
@@ -82,9 +94,11 @@ Whether to get focus by default.
 public iconType: EditableLeftIconTypeV2
 ```
 
-Icon type, Back or Cancel.
+图标类型。
 
-**Type:** EditableLeftIconTypeV2
+默认值：EditableLeftIconTypeV2.Back。
+
+**Type:** [EditableLeftIconTypeV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
 
 **Default:** EditableLeftIconTypeV2.Back
 

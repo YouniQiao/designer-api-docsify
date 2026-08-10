@@ -1,6 +1,6 @@
 # Stat
 
-文件具体信息，在调用Stat的方法前，需要先通过\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_方法（同步或异步）构建一个Stat实例。
+文件具体信息，在调用Stat的方法前，需要先通过[stat()](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiostat)方法（同步或异步）构建一个Stat实例。
 
 **起始版本：** 9
 
@@ -9,6 +9,12 @@
 <!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
 
 ## isBlockDevice
 
@@ -39,7 +45,7 @@ isBlockDevice(): boolean
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -75,7 +81,7 @@ isCharacterDevice(): boolean
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -113,7 +119,7 @@ isDirectory(): boolean
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let dirPath = pathDir + "/test";
@@ -149,7 +155,7 @@ isFIFO(): boolean
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -187,7 +193,7 @@ isFile(): boolean
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -223,7 +229,7 @@ isSocket(): boolean
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -259,7 +265,7 @@ isSymbolicLink(): boolean
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
@@ -388,7 +394,7 @@ readonly location: LocationType
 
 文件的位置，表示该文件是本地文件或者云端文件。
 
-**类型：** LocationType
+**类型：** [LocationType](arkts-corefile-fileio-locationtype-e.md)
 
 **起始版本：** 11
 
@@ -406,7 +412,7 @@ readonly mode: number
 
 表示文件权限，各特征位的含义如下：
 
-**说明**：以下值为八进制，取得的返回值为十进制，请换算后查看。
+**说明：**以下值为八进制，取得的返回值为十进制，请换算后查看。
 
 - 0o400：用户读。对于普通文件，所有者可读取文件；对于目录，所有者可读取目录项。
 

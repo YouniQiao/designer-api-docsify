@@ -1,8 +1,9 @@
 # @ohos.scan
 
-This module provides JavaScript APIs of the scan framework for discovering and connecting to scanners.
-    **NOTE**  
-        This topic describes only public APIs provided by the module.
+该模块为扫描框架的js-api接口文档，提供发现和连接扫描仪的能力。
+
+> **说明：**
+> > 当前界面仅包含本模块的公开接口。
 
 **Since:** 20
 
@@ -12,47 +13,53 @@ This module provides JavaScript APIs of the scan framework for discovering and c
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+## Modules to Import
+
+```TypeScript
+import { scan } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [cancelScan](arkts-basicservices-scan-cancelscan-f.md#cancelscan) | Cancels scanning. This API uses a promise to return the result. |
-| [closeScanner](arkts-basicservices-scan-closescanner-f.md#closescanner) | Closes a scanner. This API uses a promise to return the result. |
-| [exit](arkts-basicservices-scan-exit-f.md#exit) | Exits the scan service. This API uses a promise to return the result. |
-| [getPictureScanProgress](arkts-basicservices-scan-getpicturescanprogress-f.md#getpicturescanprogress) | Obtains the progress of scanning a picture. This API uses a promise to return the result. |
-| [getScannerCurrentSetting](arkts-basicservices-scan-getscannercurrentsetting-f.md#getscannercurrentsetting) | Obtains the current scanner settings. This API uses a promise to return the result. |
-| [getScannerParameter](arkts-basicservices-scan-getscannerparameter-f.md#getscannerparameter) | Obtains scanner parameters. This API uses a promise to return the result. |
-| [init](arkts-basicservices-scan-init-f.md#init) | Initializes the scan service. This API uses a promise to return the result. |
-| [off](arkts-basicservices-scan-off-f.md#off) | Unregisters a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result. |
-| [off](arkts-basicservices-scan-off-f.md#off-1) | Unregisters a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result. |
+| [cancelScan](arkts-basicservices-scan-cancelscan-f.md#cancelscan) | 取消扫描。使用Promise异步回调。 |
+| [closeScanner](arkts-basicservices-scan-closescanner-f.md#closescanner) | 关闭扫描仪。使用Promise异步回调。 |
+| [exit](arkts-basicservices-scan-exit-f.md#exit) | 退出扫描服务。使用Promise异步回调。 |
+| [getPictureScanProgress](arkts-basicservices-scan-getpicturescanprogress-f.md#getpicturescanprogress) | 获取图片扫描进度。使用Promise异步回调。 |
+| [getScannerCurrentSetting](arkts-basicservices-scan-getscannercurrentsetting-f.md#getscannercurrentsetting) | 获取当前扫描仪设置。使用Promise异步回调。 |
+| [getScannerParameter](arkts-basicservices-scan-getscannerparameter-f.md#getscannerparameter) | 获取扫描仪参数。使用Promise异步回调。 |
+| [init](arkts-basicservices-scan-init-f.md#init) | 初始化扫描服务。使用Promise异步回调。 |
+| [off](arkts-basicservices-scan-off-f.md#off) | 取消注册扫描仪设备发现事件回调。使用callback异步回调。 |
+| [off](arkts-basicservices-scan-off-f.md#off-1) | 取消注册扫描仪设备同步事件回调。使用callback异步回调。 |
 | [offScanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md#offscandevicefound) | Unregister event callback for scanner device found. |
 | [offScanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md#offscandevicesync) | Unregister event callback for scanner device sync. |
-| [on](arkts-basicservices-scan-on-f.md#on) | Registers a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result. |
-| [on](arkts-basicservices-scan-on-f.md#on-1) | Registers a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result. |
+| [on](arkts-basicservices-scan-on-f.md#on) | 注册扫描仪设备发现事件回调。使用callback异步回调。 |
+| [on](arkts-basicservices-scan-on-f.md#on-1) | 注册扫描仪设备同步事件回调。使用callback异步回调。 |
 | [onScanDeviceFound](arkts-basicservices-scan-onscandevicefound-f.md#onscandevicefound) | Register event callback for scanner device found. |
 | [onScanDeviceSync](arkts-basicservices-scan-onscandevicesync-f.md#onscandevicesync) | Register event callback for scanner device sync. |
-| [openScanner](arkts-basicservices-scan-openscanner-f.md#openscanner) | Opens a scanner. This API uses a promise to return the result. |
-| [setScanAutoOption](arkts-basicservices-scan-setscanautooption-f.md#setscanautooption) | Sets the scan option to auto mode. This API uses a promise to return the result. |
-| [setScannerParameter](arkts-basicservices-scan-setscannerparameter-f.md#setscannerparameter) | Sets scanner parameters. This API uses a promise to return the result. |
-| [startScan](arkts-basicservices-scan-startscan-f.md#startscan) | Starts scanning. This API uses a promise to return the result. |
-| [startScannerDiscovery](arkts-basicservices-scan-startscannerdiscovery-f.md#startscannerdiscovery) | Starts scanner discovery. This API uses a promise to return the result. |
+| [openScanner](arkts-basicservices-scan-openscanner-f.md#openscanner) | 打开扫描仪。使用Promise异步回调。 |
+| [setScanAutoOption](arkts-basicservices-scan-setscanautooption-f.md#setscanautooption) | 设置扫描选项为自动模式。使用Promise异步回调。 |
+| [setScannerParameter](arkts-basicservices-scan-setscannerparameter-f.md#setscannerparameter) | 设置扫描仪参数。使用Promise异步回调。 |
+| [startScan](arkts-basicservices-scan-startscan-f.md#startscan) | 开始扫描。使用Promise异步回调。 |
+| [startScannerDiscovery](arkts-basicservices-scan-startscannerdiscovery-f.md#startscannerdiscovery) | 开始发现扫描仪。使用Promise异步回调。 |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [addScanner](arkts-basicservices-scan-addscanner-f-sys.md#addscanner) | Adds a scanner. This API uses a promise to return the result. |
-| [deleteScanner](arkts-basicservices-scan-deletescanner-f-sys.md#deletescanner) | Deletes a scanner. This API uses a promise to return the result. |
-| [getAddedScanners](arkts-basicservices-scan-getaddedscanners-f-sys.md#getaddedscanners) | Obtains the added scanners. This API uses a promise to return the result. |
-| [off](arkts-basicservices-scan-off-f-sys.md#off-2) | Unregisters the callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
-| [off](arkts-basicservices-scan-off-f-sys.md#off-3) | Unregisters the callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
+| [addScanner](arkts-basicservices-scan-addscanner-f-sys.md#addscanner) | 添加扫描仪（系统API）。使用Promise异步回调。 |
+| [deleteScanner](arkts-basicservices-scan-deletescanner-f-sys.md#deletescanner) | 删除扫描仪（系统API）。使用Promise异步回调。 |
+| [getAddedScanners](arkts-basicservices-scan-getaddedscanners-f-sys.md#getaddedscanners) | 获取已添加的扫描仪（系统API）。使用Promise异步回调。 |
+| [off](arkts-basicservices-scan-off-f-sys.md#off-2) | 取消注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。 |
+| [off](arkts-basicservices-scan-off-f-sys.md#off-3) | 取消注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。 |
 | [offScanDeviceAdd](arkts-basicservices-scan-offscandeviceadd-f-sys.md#offscandeviceadd) | Unregister event callback for scanner device add (system API). |
 | [offScanDeviceDel](arkts-basicservices-scan-offscandevicedel-f-sys.md#offscandevicedel) | Unregister event callback for scanner device delete (system API). |
-| [on](arkts-basicservices-scan-on-f-sys.md#on-2) | Registers a callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
-| [on](arkts-basicservices-scan-on-f-sys.md#on-3) | Registers a callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
+| [on](arkts-basicservices-scan-on-f-sys.md#on-2) | 注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。 |
+| [on](arkts-basicservices-scan-on-f-sys.md#on-3) | 注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。 |
 | [onScanDeviceAdd](arkts-basicservices-scan-onscandeviceadd-f-sys.md#onscandeviceadd) | Register event callback for scanner device add (system API). |
 | [onScanDeviceDel](arkts-basicservices-scan-onscandevicedel-f-sys.md#onscandevicedel) | Register event callback for scanner device delete (system API). |
 <!--DelEnd-->
@@ -61,21 +68,21 @@ This module provides JavaScript APIs of the scan framework for discovering and c
 
 | Name | Description |
 | --- | --- |
-| [PictureScanProgress](arkts-basicservices-scan-picturescanprogress-i.md) | Defines the progress of scanning pictures. |
-| [Range](arkts-basicservices-scan-range-i.md) | Defines the range. |
-| [ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md) | Defines the scanner. |
-| [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) | Defines the scanner option value. |
-| [ScannerParameter](arkts-basicservices-scan-scannerparameter-i.md) | Defines the scanner parameters. |
-| [ScannerSyncDevice](arkts-basicservices-scan-scannersyncdevice-i.md) | Defines the device to be synced from the scanner. |
+| [PictureScanProgress](arkts-basicservices-scan-picturescanprogress-i.md) | 定义图片扫描进度的接口。 |
+| [Range](arkts-basicservices-scan-range-i.md) | 定义范围的接口。 |
+| [ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md) | 定义扫描仪设备的接口。 |
+| [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) | 定义扫描仪选项值的接口。 |
+| [ScannerParameter](arkts-basicservices-scan-scannerparameter-i.md) | 定义扫描仪参数的接口。 |
+| [ScannerSyncDevice](arkts-basicservices-scan-scannersyncdevice-i.md) | 定义扫描仪同步设备的接口。 |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ConstraintType](arkts-basicservices-scan-constrainttype-e.md) | Enumerates the parameter constraint types. |
-| [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md) | Enumerates the option value types. |
-| [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md) | Enumerates the physical units. |
-| [ScanErrorCode](arkts-basicservices-scan-scanerrorcode-e.md) | Enumerates the scan error codes. |
-| [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md) | Enumerates the scanner discovery modes. |
-| [ScannerSyncMode](arkts-basicservices-scan-scannersyncmode-e.md) | Enumerates the scanner sync codes. |
+| [ConstraintType](arkts-basicservices-scan-constrainttype-e.md) | 定义参数限制类型的枚举。 |
+| [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md) | 定义选项值类型的枚举。 |
+| [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md) | 定义物理单位的枚举。 |
+| [ScanErrorCode](arkts-basicservices-scan-scanerrorcode-e.md) | 定义扫描错误码的枚举。 |
+| [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md) | 定义扫描仪发现方式的枚举。 |
+| [ScannerSyncMode](arkts-basicservices-scan-scannersyncmode-e.md) | 定义扫描仪同步码的枚举。 |
 

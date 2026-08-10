@@ -1,12 +1,18 @@
 # createRunningLock
 
+## Modules to Import
+
+```TypeScript
+import { runningLock } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createRunningLock
 
 ```TypeScript
 function createRunningLock(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void
 ```
 
-Creates a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object. This API uses an asynchronous callback to return the result.
+创建RunningLock锁。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,11 +32,11 @@ Creates a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ name. A recommended name consists of the package or class name and a suffix. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RunningLock&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
+| name | string | Yes | 锁的名字。建议使用包名或类名加后缀的方式命名。 |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 要创建的锁的类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;RunningLock&gt; | Yes | 回调函数。当创建锁成功，err为undefined，data为创建的RunningLock；否则为错误对象； AsyncCallback封装了一个RunningLock类型的类。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND, (err: Error, lock: runningLock.RunningLock) => {
@@ -49,7 +55,7 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 function createRunningLock(name: string, type: RunningLockType): Promise<RunningLock>
 ```
 
-Creates a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object. This API uses a promise to return the result.
+创建RunningLock锁。使用Promise异步回调。
 
 **Since:** 7
 
@@ -69,16 +75,16 @@ Creates a \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ name. A recommended name consists of the package or class name and a suffix. |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| name | string | Yes | 锁的名字。建议使用包名或类名加后缀的方式命名。 |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 要创建的锁的类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RunningLock&gt; | Promise used to return the { |
+| Promise&lt;RunningLock&gt; | Promise对象，返回RunningLock锁对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)

@@ -1,5 +1,11 @@
 # querySystemCapabilities (System API)
 
+## Modules to Import
+
+```TypeScript
+import { systemCapability } from 'kits/@kit.BasicServicesKit';
+```
+
 ## querySystemCapabilities
 
 ```TypeScript
@@ -22,9 +28,9 @@ Get System Capability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {
@@ -64,7 +70,7 @@ Get System Capability.
 | --- | --- |
 | Promise&lt;string&gt; | system capability string. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

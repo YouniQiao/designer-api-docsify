@@ -10,6 +10,12 @@ Info about the message received from a specific client.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
+
 ## clientConnection
 
 ```TypeScript
@@ -18,7 +24,7 @@ clientConnection: WebSocketConnection
 
 The connection where the message comes from.
 
-**Type:** WebSocketConnection
+**Type:** [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)
 
 **Since:** 24
 

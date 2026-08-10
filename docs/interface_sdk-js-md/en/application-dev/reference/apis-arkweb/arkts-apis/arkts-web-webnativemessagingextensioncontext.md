@@ -1,10 +1,16 @@
 # @ohos.web.WebNativeMessagingExtensionContext
 
+## Modules to Import
+
+```TypeScript
+import { WebNativeMessagingExtensionContext } from 'kits/@kit.ArkWeb';
+```
+
 ## Summary
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [WebNativeMessagingExtensionContext](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md) | WebNativeMessagingExtensionContext is the context of web native message extension and is inherited from ExtensionContext. It provides the capability of exchanging messages with WebNativeMessagingExtension.The APIs of this module can be used only in the stage model. |
+| [WebNativeMessagingExtensionContext](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md) | WebNativeMessagingExtensionContext是Web原生消息扩展（  [WebNativeMessagingExtensionAbility](arkts-web-webnativemessagingextensionability.md)）的运行上下文，继承自ExtensionContext，为扩展Ability提供生命周期管理、Ability启动以及原生消息连接控制能力。开发者可在继承WebNativeMessagingExtensionAbility的扩展中通过`this.context`获取该上下文，进而调用  [startAbility](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startability)启动其他Ability、调用  [startAbilityForResult](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startabilityforresult)启动UIAbility并接收返回结果、调用  [terminateSelf](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#terminateself)结束当前扩展，或调用  [stopNativeConnection](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#stopnativeconnection)停止指定的Web原生消息连接。  > **说明:** >  > 本模块接口仅可在Stage模型下使用。 |
 

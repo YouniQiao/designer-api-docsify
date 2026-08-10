@@ -1,6 +1,6 @@
 # InterruptActionType
 
-Enumerates the returned event types for audio interruption events.
+表示中断事件返回类型的枚举。
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Enumerates the returned event types for audio interruption events.
 TYPE_ACTIVATED = 0
 ```
 
-Focus gain event.
+表示触发焦点事件。
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ Focus gain event.
 TYPE_INTERRUPT = 1
 ```
 
-Audio interruption event.
+表示音频打断事件。
 
 **Since:** 7
 

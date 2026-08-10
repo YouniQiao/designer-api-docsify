@@ -20,5 +20,5 @@ export declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isEnlarged | boolean | 是 | ArcSlider当前是否放大。\_\_\_HTML\_TAG\_USD\_0\_\_\_isEnlarged为false时，ArcSlider组件处于缩小状态。\_\_\_HTML\_TAG\_USD\_1\_\_\_isEnlarged为true时， ArcSlider组件处于放大状态。  |
+| isEnlarged | boolean | 是 | ArcSlider当前是否放大。<br/>isEnlarged为false时，ArcSlider组件处于缩小状态。<br/>isEnlarged为true时， ArcSlider组件处于放大状态。 |
 

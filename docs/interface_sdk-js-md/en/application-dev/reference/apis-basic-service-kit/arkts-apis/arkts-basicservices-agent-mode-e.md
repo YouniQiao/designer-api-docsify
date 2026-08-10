@@ -1,8 +1,8 @@
 # Mode
 
-Defines mode options.
+定义模式选项。
 
-After foreground tasks of an application are switched to the background for a period of time, background tasks are not affected but foreground tasks will fail or pause.
+当应用的前台任务切换到后台一段时间后会显示运行失败或暂停，而后台任务不受此操作影响。
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ After foreground tasks of an application are switched to the background for a pe
 BACKGROUND
 ```
 
-Background task.
+表示后台任务。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Background task.
 FOREGROUND
 ```
 
-Foreground task.
+表示前台任务。
 
 **Since:** 10
 

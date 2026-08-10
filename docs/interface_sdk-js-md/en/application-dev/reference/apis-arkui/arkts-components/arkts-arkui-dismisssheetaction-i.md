@@ -1,6 +1,6 @@
 # DismissSheetAction
 
-Component sheet dismiss
+半模态关闭前的回调。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Component sheet dismiss
 dismiss: Callback<void>
 ```
 
-Defines sheet dismiss function
+半模态页面关闭回调函数。开发者需要退出页面时调用。
 
-**Type:** Callback&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 
@@ -38,9 +38,17 @@ Defines sheet dismiss function
 reason: DismissReason
 ```
 
-Dismiss reason type.
+返回本次半模态页面退出的操作类型。
 
-**Type:** DismissReason
+**说明：**
+
+DismissReason.SLIDE只生效半模态侧边弹窗形态，表示右滑退出。若镜像场景则表示左滑退出。
+
+DismissReason.SLIDE_DOWN生效半模态底部弹窗形态和居中弹窗形态，表示下滑退出。
+
+半模态气泡弹窗形态无滑动退出能力。
+
+**Type:** [DismissReason](arkts-arkui-dismissreason-e.md)
 
 **Since:** 12
 

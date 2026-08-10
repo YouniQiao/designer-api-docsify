@@ -1,6 +1,6 @@
 # BundleStorageStats
 
-Storage usage information of the application.
+应用的存储占用信息。
 
 **Since:** 26.0.0
 
@@ -10,15 +10,21 @@ Storage usage information of the application.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.MDMKit';
+```
+
 ## appSize
 
 ```TypeScript
 appSize: number
 ```
 
-Size of the application installation files, in bytes.
+应用安装文件大小，单位为Byte。
 
-Application installation file directory:
+应用安装文件保存在以下目录：
 
 /data/storage/el1/bundle
 
@@ -40,7 +46,7 @@ Application installation file directory:
 bundleName: string
 ```
 
-Bundle name of the application.
+应用的包名。
 
 **Type:** string
 
@@ -60,22 +66,21 @@ Bundle name of the application.
 dataSize: number
 ```
 
-Size of the local data, distributed data, and database data of the application, in bytes.
+应用的本地数据、分布式数据和数据库数据大小，单位为Byte。
 
-Local file directory (parent directory of the cache file directory):
+本地文件保存在以下目录（注意缓存文件目录为以下目录的子目录）：
 
 /data/storage/\${el1-el5}/base
 
-Distributed file directory:
+分布式文件保存在以下目录：
 
 /data/storage/el2/distributedfiles
 
-Database file directory:
+数据库文件保存在以下目录：
 
 /data/storage/\${el1-el5}/database
 
-**Note**: **\${el1-el5}** refers to the directories  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+**说明：**\${el1-el5}指的是[el1，el2，el3，el4，el5目录](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。
 
 **Type:** number
 

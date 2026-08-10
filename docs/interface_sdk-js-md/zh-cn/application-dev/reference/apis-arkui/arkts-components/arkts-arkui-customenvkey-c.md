@@ -54,7 +54,7 @@ static create<T>(): CustomEnvKey<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | 自定义环境变量Key，用于标识要获取的自定义环境变量。 |
+| [CustomEnvKey](arkts-arkui-customenvkey-c.md)&lt;T&gt; | 自定义环境变量Key，用于标识要获取的自定义环境变量。 |
 
 ## type
 

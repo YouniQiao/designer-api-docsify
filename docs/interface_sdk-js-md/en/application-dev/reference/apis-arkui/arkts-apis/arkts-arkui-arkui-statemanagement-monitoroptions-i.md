@@ -1,6 +1,6 @@
 # MonitorOptions
 
-Defines the optional parameters for [addMonitor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, which are used to configure the callback type and whether to enable the wildcard capability.
+[addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addmonitor)的可选参数，用于配置回调类型以及是否使能通配符能力。
 
 **Since:** 20
 
@@ -10,14 +10,19 @@ Defines the optional parameters for [addMonitor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## enableWildcard
 
 ```TypeScript
 enableWildcard?: boolean
 ```
 
-Whether to enable the wildcard capability for this **addMonitor**. **true** to enable the wildcard capability, and  
-**false** means the opposite. The default value is **false**. If the wildcard capability is disabled but the path contains wildcards, the path is considered invalid.
+配置当前addMonitor是否使能通配符能力。true表示使能，false表示关闭。默认值为false，即关闭。当关闭通配符能力，但路径中含有通配符时，该路径将视为不合法路径。
 
 **Type:** boolean
 
@@ -41,8 +46,7 @@ Whether to enable the wildcard capability for this **addMonitor**. **true** to e
 isSynchronous?: boolean
 ```
 
-Whether the current callback is a synchronous callback. **true**: The current callback is a synchronous callback.  
-**false** (default value): The current callback is an asynchronous callback.
+配置当前回调函数是否为同步回调。true为同步回调。默认值为false，即异步回调。
 
 **Type:** boolean
 

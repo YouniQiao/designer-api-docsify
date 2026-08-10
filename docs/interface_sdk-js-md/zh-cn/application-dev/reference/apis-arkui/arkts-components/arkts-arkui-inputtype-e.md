@@ -102,8 +102,8 @@ Password
 
 TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框末尾默认显示小眼睛图标。
 
-密码输入模式中，[decoration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[showUnderline]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[lineHeight]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_不生效。
+密码输入模式中，[decoration](TextInputAttribute#decoration)、[showUnderline](TextInputAttribute#showUnderline)、  
+[lineHeight](TextInputAttribute#lineHeight)不生效。
 
 在已启用密码保险箱的情况下，支持用户名、密码的自动保存和自动填充。
 
@@ -129,8 +129,8 @@ NUMBER_PASSWORD = 8
 
 TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框末尾默认显示小眼睛图标。
 
-密码输入模式中，[decoration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[showUnderline]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[lineHeight]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、[fontFeature]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_不生效。在已启用密码保险箱的情况下，支持用户名、密码的自动保存和自动填充。
+密码输入模式中，[decoration](TextInputAttribute#decoration)、[showUnderline](TextInputAttribute#showUnderline)、  
+[lineHeight](TextInputAttribute#lineHeight)、[fontFeature](TextInputAttribute#fontFeature)不生效。在已启用密码保险箱的情况下，支持用户名、密码的自动保存和自动填充。
 
 **起始版本：** 11
 
@@ -152,8 +152,8 @@ USER_NAME = 10
 
 用户名输入模式，无特殊限制。
 
-在已启用密码保险箱的情况下，支持用户名的自动保存和自动填充，用于配合[InputType.Password]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、  
-[InputType.NUMBER\_PASSWORD]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、[InputType.NEW\_PASSWORD]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_完成用户名密码配对填充。
+在已启用密码保险箱的情况下，支持用户名的自动保存和自动填充，用于配合[InputType.Password](arkts-arkui-inputtype-e.md)、  
+[InputType.NUMBER_PASSWORD](arkts-arkui-inputtype-e.md)、[InputType.NEW_PASSWORD](arkts-arkui-inputtype-e.md)完成用户名密码配对填充。
 
 **起始版本：** 11
 
@@ -179,8 +179,8 @@ NEW_PASSWORD = 11
 
 TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框末尾默认显示小眼睛图标。
 
-密码输入模式中，[decoration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[showUnderline]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[lineHeight]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、[fontFeature]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_不生效。在已启用密码保险箱的情况下，支持自动生成新密码。
+密码输入模式中，[decoration](TextInputAttribute#decoration)、[showUnderline](TextInputAttribute#showUnderline)、  
+[lineHeight](TextInputAttribute#lineHeight)、[fontFeature](TextInputAttribute#fontFeature)不生效。在已启用密码保险箱的情况下，支持自动生成新密码。
 
 **起始版本：** 11
 
@@ -202,7 +202,7 @@ NUMBER_DECIMAL = 12
 
 带小数点的数字输入模式。
 
-支持数字，小数点（只能存在一个小数点）。不支持负数（包括负数整数和负数小数）。若需支持负数输入，请使用[inputFilter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_属性实现负数过滤。
+支持数字，小数点（只能存在一个小数点）。不支持负数（包括负数整数和负数小数）。若需支持负数输入，请使用[inputFilter](TextInputAttribute#inputFilter)属性实现负数过滤。
 
 **起始版本：** 11
 

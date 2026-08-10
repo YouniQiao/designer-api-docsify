@@ -1,6 +1,6 @@
 # ErrorCode
 
-Enumerates the error codes that may be returned when an ability is started.
+定义启动Ability时返回的错误码。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the error codes that may be returned when an ability is started.
 NO_ERROR = 0
 ```
 
-No error.
+没有异常。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ No error.
 INVALID_PARAMETER = -1
 ```
 
-Invalid parameter.
+无效的参数。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Invalid parameter.
 ABILITY_NOT_FOUND = -2
 ```
 
-The ability is not found.
+找不到ABILITY。
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ The ability is not found.
 PERMISSION_DENY = -3
 ```
 
-Permission denied.
+权限拒绝。
 
 **Since:** 7
 

@@ -10,6 +10,12 @@ This indicates that the eSIM card performs the profile management operation sync
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
+## Modules to Import
+
+```TypeScript
+import { eSIM } from 'kits/@kit.TelephonyKit';
+```
+
 ## Summary
 
 ### Functions

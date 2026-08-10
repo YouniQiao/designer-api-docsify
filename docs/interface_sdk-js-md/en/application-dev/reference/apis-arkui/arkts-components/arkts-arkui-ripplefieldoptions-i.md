@@ -1,6 +1,6 @@
 # RippleFieldOptions
 
-Defines ripple field options.
+用于描述粒子波动场信息的参数。
 
 **Since:** 22
 
@@ -66,7 +66,7 @@ center?: PositionT<number>
 
 The central point where the ripple field generates force. The top-left corner of the component is the origin of coordinates. The coordinate unit is vp.
 
-**Type:** PositionT&lt;number&gt;
+**Type:** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;number&gt;
 
 **Default:** {x:0,y:0}
 
@@ -90,7 +90,7 @@ region?: FieldRegion
 
 The region influenced by the ripple field.
 
-**Type:** FieldRegion
+**Type:** [FieldRegion](../arkts-apis/arkts-arkui-particle-fieldregion-i.md)
 
 **Default:** {shape:DisturbanceFieldShape.RECT,position:{x:0,y:0},size:{width:0,height:0}}
 

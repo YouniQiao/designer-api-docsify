@@ -1,6 +1,6 @@
 # HotkeyOptions
 
-Defines shortcut key options.
+快捷键选项。
 
 **Since:** 14
 
@@ -10,18 +10,23 @@ Defines shortcut key options.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
+## Modules to Import
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## finalKey
 
 ```TypeScript
 finalKey: int
 ```
 
-Modified key, which can be any key except the modifier keys and Meta key. For details about the keys, see  
-[@ohos.multimodalInput.keyCode (Keycode)]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+被修饰键，除修饰键和Meta键以外的按键，详细按键介绍请参见[@ohos.multimodalInput.keyCode (键值)](arkts-input-multimodalinput-keycode-keycode-e.md)。
 
-For example, in **Ctrl+Shift+Esc**, **Esc** is the modifier key.
+例如，Ctrl+Shift+Esc中，Esc称为被修饰键。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 14
 
@@ -37,8 +42,7 @@ For example, in **Ctrl+Shift+Esc**, **Esc** is the modifier key.
 isRepeat?: boolean
 ```
 
-Whether to report repeated key events. The value **true** means to report repeated key events, and the value  
-**false** means the opposite. The default value is **true**.
+是否上报重复的按键事件。true表示上报，false表示不上报，默认值为true。
 
 **Type:** boolean
 
@@ -56,11 +60,11 @@ Whether to report repeated key events. The value **true** means to report repeat
 preKeys: Array<int>
 ```
 
-Modifier key set (including Ctrl, Shift, and Alt). One to four modifier keys are supported. There is no requirement on the sequence of modifier keys.
+修饰键（包括 Ctrl、Shift 和 Alt）集合，数量范围[1, 4]，无顺序要求。
 
-For example, in **Ctrl+Shift+Esc**, **Ctrl** and **Shift** are modifier keys.
+例如，Ctrl+Shift+Esc中，Ctrl+Shift称为修饰键。
 
-**Type:** Array&lt;int&gt;
+**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **Since:** 14
 

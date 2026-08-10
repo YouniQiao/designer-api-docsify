@@ -4,7 +4,7 @@
 type UpdateCallback = () => void
 ```
 
-Callback to be invoked when the pasteboard content changes.
+表示剪贴板内容变更的回调。
 
 **Since:** 22
 

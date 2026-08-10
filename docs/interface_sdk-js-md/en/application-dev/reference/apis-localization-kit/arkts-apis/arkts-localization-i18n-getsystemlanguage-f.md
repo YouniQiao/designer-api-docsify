@@ -1,12 +1,18 @@
 # getSystemLanguage
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## getSystemLanguage
 
 ```TypeScript
 export function getSystemLanguage(): string
 ```
 
-Obtains the system language.
+获取系统语言。
 
 **Since:** 7
 
@@ -24,5 +30,5 @@ Obtains the system language.
 
 | Type | Description |
 | --- | --- |
-| string | System language ID. |
+| string | 系统语言ID。 |
 

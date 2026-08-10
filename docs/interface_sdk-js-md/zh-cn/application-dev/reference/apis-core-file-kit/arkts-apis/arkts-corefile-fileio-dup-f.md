@@ -1,5 +1,11 @@
 # dup
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## dup
 
 ```TypeScript
@@ -26,17 +32,17 @@ function dup(fd: int): File
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 打开的File对象。 |
+| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 打开的File对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900004 | Interrupted system call |
-| 13900005 | I/O error |
-| 13900008 | Bad file descriptor |
-| 13900014 | Device or resource busy |
 | 13900020 | Invalid argument |
+| 13900005 | I/O error |
 | 13900022 | Too many open files |
+| 13900014 | Device or resource busy |
+| 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
 

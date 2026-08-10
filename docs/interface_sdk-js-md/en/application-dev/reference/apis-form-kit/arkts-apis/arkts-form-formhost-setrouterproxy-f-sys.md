@@ -1,5 +1,11 @@
 # setRouterProxy (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formHost } from 'kits/@kit.FormKit';
+```
+
 ## setRouterProxy
 
 ```TypeScript
@@ -7,13 +13,14 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 ```
 
 Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an asynchronous callback to return the result.
-    **NOTE**  
-    
-    Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework  
-    checks whether the destination is proper and whether the widget has the redirection permission, and then  
-    triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,  
-    in the case of router-based redirection, the widget framework does not trigger redirection for the widget.  
-    - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
+
+> **NOTE：**
+> 
+> Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
+> checks whether the destination is proper and whether the widget has the redirection permission, and then
+> triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,
+> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
+> - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 
 **Since:** 11
 
@@ -32,20 +39,20 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
-| proxy | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback used to return the Want information required for redirection. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the router proxy is set, **error** is **undefined**; otherwise, an exception is thrown. |
+| proxy | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the router proxy is set, **error** is **undefined**; otherwise, an exception is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+| 16501003 | The form cannot be operated by the current application. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 16501000 | An internal functional error occurred. |
+| 16500060 | Service connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
 
 
 ## setRouterProxy
@@ -55,14 +62,15 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 ```
 
 Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result.
-    **NOTE**  
-    
-    - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework  
-    checks whether the destination is proper and whether the widget has the redirection permission, and then  
-    triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,  
-    in the case of router-based redirection, the widget framework does not trigger redirection for the widget.  
-    
-    - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
+
+> **NOTE：**
+> 
+> - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
+> checks whether the destination is proper and whether the widget has the redirection permission, and then
+> triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,
+> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
+> 
+> - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 
 **Since:** 11
 
@@ -81,7 +89,7 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
-| proxy | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback used to return the Want information required for redirection. |
+| proxy | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want information required for redirection. |
 
 **Return value:**
 
@@ -93,11 +101,11 @@ Sets a router proxy for widgets and obtains the Want information required for re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+| 16501003 | The form cannot be operated by the current application. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| 16501000 | An internal functional error occurred. |
+| 16500060 | Service connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
 

@@ -1,6 +1,6 @@
 # DistributedInfo (System API)
 
-Manages the distributed info of the table.
+记录分布式信息。
 
 **Since:** 24
 
@@ -12,15 +12,21 @@ Manages the distributed info of the table.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { relationalStore } from 'kits/@kit.ArkData';
+```
+
 ## flag
 
 ```TypeScript
 flag?: DistributedOrigin
 ```
 
-Specifies the data origin sources.
+表示数据来源，不传入则保持原有数值。
 
-**Type:** DistributedOrigin
+**Type:** [DistributedOrigin](arkts-arkdata-relationalstore-distributedorigin-e-sys.md)
 
 **Since:** 24
 
@@ -40,7 +46,7 @@ Specifies the data origin sources.
 oriDevice?: string
 ```
 
-Specifies the data origin sources device ID.
+表示数据产生者的设备id，不传入则保持原有设备id。
 
 **Type:** string
 

@@ -1,5 +1,11 @@
 # createColorPicker
 
+## 导入模块
+
+```TypeScript
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## createColorPicker
 
 ```TypeScript
@@ -24,44 +30,48 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
+| source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ColorPicker&gt; |  Promise对象。返回创建的ColorPicker实例。 |
+| Promise&lt;ColorPicker&gt; | Promise对象。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
+| 401 | 输入参数错误。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-import { BusinessError } from "@kit.BasicServicesKit";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+// 创建用于图像效果的buffer
+const colorBuffer = new ArrayBuffer(96);
+// 设置图像初始化选项
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 
-image.createPixelMap(color, opts).then((pixelMap) => {
+// 创建PixelMap实例
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // 创建ColorPicker实例
   effectKit.createColorPicker(pixelMap).then(colorPicker => {
-    console.info("color picker=" + colorPicker);
-  }).catch( (reason : BusinessError) => {
-    console.error("error=" + reason.message);
-  })
-})
+    console.info('Succeeded in creating colorPicker.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to create colorPicker. Code: ${err.code}, message: ${err.message}`);
+  });
+});
 ```
 
 
@@ -89,45 +99,49 @@ function createColorPicker(source: image.PixelMap, region: Array<double>): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| region | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
+| source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
+| region | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ColorPicker&gt; |  Promise对象。返回创建的ColorPicker实例。 |
+| Promise&lt;ColorPicker&gt; | Promise对象。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
+| 401 | 输入参数错误。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-import { BusinessError } from "@kit.BasicServicesKit";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+// 创建用于图像效果的buffer
+const colorBuffer = new ArrayBuffer(96);
+// 设置图像初始化选项
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 
-image.createPixelMap(color, opts).then((pixelMap) => {
+// 创建PixelMap实例
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // 创建指定取色区域的ColorPicker实例
   effectKit.createColorPicker(pixelMap, [0, 0, 1, 1]).then(colorPicker => {
-    console.info("color picker=" + colorPicker);
-  }).catch( (reason : BusinessError) => {
-    console.error("error=" + reason.message);
-  })
-})
+    console.info('Succeeded in creating colorPicker.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to create colorPicker. Code: ${err.code}, message: ${err.message}`);
+  });
+});
 ```
 
 
@@ -155,39 +169,43 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ColorPicker&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
+| source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ColorPicker&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
+| 401 | 输入参数错误。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+// 创建用于图像效果的buffer
+const colorBuffer = new ArrayBuffer(96);
+// 设置图像初始化选项
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
+};
+// 创建PixelMap实例
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // 创建ColorPicker实例
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
-      console.error('Failed to create color picker.');
+      console.error(`Failed to create color picker. Code: ${error.code}, message: ${error.message}`);
     } else {
       console.info('Succeeded in creating color picker.');
     }
-  })
-})
+  });
+});
 ```
 
 
@@ -215,39 +233,43 @@ function createColorPicker(source: image.PixelMap, region: Array<double>, callba
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| region | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ColorPicker&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
+| source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
+| region | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ColorPicker&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
+| 401 | 输入参数错误。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+// 创建用于图像效果的buffer
+const colorBuffer = new ArrayBuffer(96);
+// 设置图像初始化选项
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
+};
+// 创建PixelMap实例
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // 创建指定取色区域的ColorPicker实例
   effectKit.createColorPicker(pixelMap, [0, 0, 1, 1], (error, colorPicker) => {
     if (error) {
-      console.error('Failed to create color picker.');
+      console.error(`Failed to create color picker. Code: ${error.code}, message: ${error.message}`);
     } else {
       console.info('Succeeded in creating color picker.');
     }
-  })
-})
+  });
+});
 ```
 

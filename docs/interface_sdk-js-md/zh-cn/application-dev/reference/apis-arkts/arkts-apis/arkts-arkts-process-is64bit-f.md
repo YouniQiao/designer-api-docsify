@@ -1,5 +1,11 @@
 # is64Bit
 
+## 导入模块
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## is64Bit
 
 ```TypeScript
@@ -24,7 +30,7 @@ function is64Bit(): boolean
 | --- | --- |
 | boolean | 返回判断结果。如果运行环境是 64 位则返回 true； 否则返回 false。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let result = process.is64Bit();

@@ -1,6 +1,6 @@
 # MediaPlaybackState
 
-Enumerates the playback states on the current web page.
+当前网页的播控状态。
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enumerates the playback states on the current web page.
 NONE = 0
 ```
 
-No audio or video playback is started on the page.
+页面无音视频启播。
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ No audio or video playback is started on the page.
 PLAYING = 1
 ```
 
-The audio and video on the page are being played.
+页面音视频播放中。
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ The audio and video on the page are being played.
 PAUSED = 2
 ```
 
-The audio and video on the page are paused.
+页面音视频暂停。
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ The audio and video on the page are paused.
 STOPPED = 3
 ```
 
-The audio and video on the page are stopped.
+页面音视频停止。
 
 **Since:** 23
 

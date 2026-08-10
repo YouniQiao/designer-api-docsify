@@ -1,6 +1,6 @@
 # ModelVersion
 
-Version of the model.
+模型版本枚举。
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Version of the model.
 BASIC_MODEL = 0
 ```
 
-The basic embedding model.
+基本嵌入模型版本。
 
 **Since:** 15
 

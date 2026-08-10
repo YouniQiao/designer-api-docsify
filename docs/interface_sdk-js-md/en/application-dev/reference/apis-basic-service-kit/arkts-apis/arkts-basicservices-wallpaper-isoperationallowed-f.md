@@ -1,12 +1,18 @@
 # isOperationAllowed
 
+## Modules to Import
+
+```TypeScript
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
+```
+
 ## isOperationAllowed
 
 ```TypeScript
 function isOperationAllowed(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a user is allowed to set wallpapers.Returns true if a user is allowed to set wallpapers. returns false otherwise.
+是否允许用户设置壁纸。
 
 **Since:** 7
 
@@ -22,9 +28,9 @@ Checks whether a user is allowed to set wallpapers.Returns true if a user is all
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | the callback of isOperationAllowed. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |  |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -45,7 +51,7 @@ wallpaper.isOperationAllowed((error: BusinessError, data: Boolean) => {
 function isOperationAllowed(): Promise<boolean>
 ```
 
-Checks whether a user is allowed to set wallpapers.Returns true if a user is allowed to set wallpapers. returns false otherwise.
+是否允许用户设置壁纸。
 
 **Since:** 7
 
@@ -61,9 +67,9 @@ Checks whether a user is allowed to set wallpapers.Returns true if a user is all
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by the function. |
+| Promise&lt;boolean&gt; | 异步回调函数，返回是否允许用户设置壁纸。如果允许返回true，否则返回false。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

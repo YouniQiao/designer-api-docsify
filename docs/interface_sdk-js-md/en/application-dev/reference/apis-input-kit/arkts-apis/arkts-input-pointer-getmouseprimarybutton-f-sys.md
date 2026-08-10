@@ -1,12 +1,18 @@
 # getMousePrimaryButton (System API)
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## getMousePrimaryButton
 
 ```TypeScript
 function getMousePrimaryButton(callback: AsyncCallback<PrimaryButton>): void
 ```
 
-Obtains the current primary mouse button. This API uses an asynchronous callback to return the result.
+获取当前鼠标主键，使用callback异步回调。
 
 **Since:** 10
 
@@ -22,16 +28,16 @@ Obtains the current primary mouse button. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;PrimaryButton&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **PrimaryButton** is the obtained key value. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PrimaryButton&gt; | Yes | 回调函数。当获取当前鼠标主键成功，err为undefined，PrimaryButton为获取到的键值；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -45,15 +51,16 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Obtain the primary mouse button.
             pointer.getMousePrimaryButton((error: BusinessError, primary: pointer.PrimaryButton) => {
               if (error) {
-                console.error(`Get mouse primary button failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+                console.error(`Failed to get mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
               } else {
-                console.info(`Get mouse primary button success, primary: ${JSON.stringify(primary)}`);
+                console.info(`Succeeded in getting mouse primary button, primary: ${JSON.stringify(primary)}.`);
               }
             });
           } catch (error) {
-            console.error(`Get mouse primary button failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }
@@ -68,7 +75,7 @@ struct Index {
 function getMousePrimaryButton(): Promise<PrimaryButton>
 ```
 
-Obtains the current primary mouse button. This API uses a promise to return the result.
+获取当前鼠标主键，使用Promise异步回调。
 
 **Since:** 10
 
@@ -84,16 +91,16 @@ Obtains the current primary mouse button. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrimaryButton&gt; | Promise used to return the primary mouse button. |
+| Promise&lt;PrimaryButton&gt; | Promise对象，返回鼠标主键。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -107,13 +114,14 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Obtain the primary mouse button.
             pointer.getMousePrimaryButton().then((primary: pointer.PrimaryButton) => {
-              console.info(`Get mouse primary button success, primary: ${JSON.stringify(primary)}`);
+              console.info(`Succeeded in getting mouse primary button, primary: ${JSON.stringify(primary)}.`);
             }).catch((error: BusinessError) => {
-              console.error(`Get mouse failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to get mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
           } catch (error) {
-            console.error(`Get mouse primary button failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

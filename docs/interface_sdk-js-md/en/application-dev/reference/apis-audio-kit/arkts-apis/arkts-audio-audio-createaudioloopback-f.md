@@ -1,12 +1,20 @@
 # createAudioLoopback
 
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## createAudioLoopback
 
 ```TypeScript
 function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>
 ```
 
-Creates an \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_AudioLoopback\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ instance, which provides low-latency in-ear monitoring using a fast capturer and renderer.
+创建音频返听器。使用Promise异步回调。
+
+在使用createAudioLoopback接口之前，需先通过[isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isaudioloopbacksupported)查询系统返听能力。
 
 **Since:** 26.0.0
 
@@ -20,22 +28,22 @@ Creates an \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_AudioLoopback\_\_\_HTML\_TAG\_DESC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio loopback mode. |
+| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | Yes | 音频返听模式。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioLoopback&gt; | Promise used to return the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_AudioLoopback\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ instance. |
+| Promise&lt;AudioLoopback&gt; | Promise对象，成功将返回音频返听器对象，异常将返回error对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Loopback mode is unsupported. |
+| 6800101 | Parameter verification failed. |
+| 6800104 | Loopback mode is unsupported. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
@@ -58,7 +66,7 @@ audio.createAudioLoopback(audio.AudioLoopbackMode.HARDWARE).then((data) => {
 function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback | null>
 ```
 
-Creates an \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_AudioLoopback\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_ instance, which provides low-latency in-ear monitoring using a fast capturer and renderer.
+Creates an &lt;b&gt;AudioLoopback&lt;/b&gt; instance, which provides low-latency in-ear monitoring using a fast capturer and renderer.
 
 **Since:** 26.0.0
 
@@ -72,18 +80,18 @@ Creates an \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_AudioLoopback\_\_\_HTML\_TAG\_DESC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio loopback mode. |
+| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | Yes | Audio loopback mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioLoopback \| null&gt; | Promise used to return the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_AudioLoopback\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ instance, or null when an error happens. |
+| Promise&lt;AudioLoopback \| null&gt; | Promise used to return the &lt;b&gt;AudioLoopback&lt;/b&gt; instance, or null when an error happens. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Loopback mode is unsupported. |
+| 6800101 | Parameter verification failed. |
+| 6800104 | Loopback mode is unsupported. |
 

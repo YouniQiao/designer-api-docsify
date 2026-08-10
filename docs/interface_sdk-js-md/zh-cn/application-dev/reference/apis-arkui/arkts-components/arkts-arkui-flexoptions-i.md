@@ -18,7 +18,7 @@ alignContent?: FlexAlign
 
 当交叉轴存在额外空间时，多行内容之间的对齐方式。仅在wrap为Wrap或WrapReverse下生效。
 
-默认值：FlexAlign.Start
+默认值：FlexAlign.Start 
 
 异常值按默认值处理。
 
@@ -31,7 +31,7 @@ alignContent?: FlexAlign
 - SpaceAround：每行两侧间距相等。  
 - SpaceEvenly：行与行之间及两端间距完全相等。
 
-**类型：** FlexAlign
+**类型：** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
 
 **起始版本：** 7
 
@@ -53,7 +53,7 @@ alignItems?: ItemAlign
 
 所有子组件在Flex容器交叉轴上的对齐格式。设置后，子组件将按照指定的对齐方式在交叉轴方向上定位。
 
-默认值：ItemAlign.Start
+默认值：ItemAlign.Start 
 
 异常值按默认值处理。
 
@@ -66,7 +66,7 @@ alignItems?: ItemAlign
 - Stretch：拉伸填充。  
 - Baseline：基线对齐。
 
-**类型：** ItemAlign
+**类型：** [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md)
 
 **起始版本：** 7
 
@@ -88,7 +88,7 @@ direction?: FlexDirection
 
 子组件在Flex容器上排列的方向，即主轴的方向。设置后，子组件将按照指定的方向在主轴上依次排列。
 
-默认值：FlexDirection.Row
+默认值：FlexDirection.Row 
 
 异常值按默认值处理。
 
@@ -101,7 +101,7 @@ direction?: FlexDirection
 
 Row和RowReverse的起点位置受容器的direction属性影响。
 
-**类型：** FlexDirection
+**类型：** [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md)
 
 **起始版本：** 7
 
@@ -123,7 +123,7 @@ justifyContent?: FlexAlign
 
 所有子组件在Flex容器主轴上的对齐格式。设置后，子组件将按照指定的对齐方式在主轴方向上分布和排列。
 
-默认值：FlexAlign.Start
+默认值：FlexAlign.Start 
 
 异常值按默认值处理。
 
@@ -138,7 +138,7 @@ justifyContent?: FlexAlign
 
 **说明：** 当justifyContent设置为SpaceBetween、SpaceAround、SpaceEvenly时，space参数不生效。
 
-**类型：** FlexAlign
+**类型：** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
 
 **起始版本：** 7
 
@@ -160,13 +160,13 @@ space?: FlexSpaceOptions
 
 设置Flex容器子组件在主轴和交叉轴上的间距，包含main和cross两个属性。当需要调整子组件之间的间距时传入此参数，不传入时子组件之间无间距。
 
-默认值：{main: LengthMetrics.px(0), cross: LengthMetrics.px(0)}
+默认值：{main: LengthMetrics.px(0), cross: LengthMetrics.px(0)} 
 
-非法值：按默认值处理。
+非法值：按默认值处理。 
 
 当space.main或space.cross的值为负数，或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space参数不生效。其中main属性在单行或多行布局时均生效，cross属性仅在wrap为Wrap或WrapReverse（多行布局）时生效。
 
-**类型：** FlexSpaceOptions
+**类型：** [FlexSpaceOptions](arkts-arkui-flexspaceoptions-i.md)
 
 **起始版本：** 12
 
@@ -188,7 +188,7 @@ wrap?: FlexWrap
 
 Flex容器是单行/列还是多行/列排列。设置后，子组件将在容器中按指定的换行方式进行布局。
 
-默认值：FlexWrap.NoWrap
+默认值：FlexWrap.NoWrap 
 
 异常值按默认值处理。
 
@@ -202,7 +202,7 @@ Flex容器是单行/列还是多行/列排列。设置后，子组件将在容�
 
 在多行布局时，通过交叉轴方向，确认新行堆叠方向。
 
-**类型：** FlexWrap
+**类型：** [FlexWrap](../arkts-apis/arkts-arkui-flexwrap-e.md)
 
 **起始版本：** 7
 

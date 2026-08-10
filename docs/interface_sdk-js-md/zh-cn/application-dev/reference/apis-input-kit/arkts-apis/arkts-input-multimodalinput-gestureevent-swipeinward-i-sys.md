@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from 'kits/@kit.InputKit';
+```
+
 ## type
 
 ```TypeScript
@@ -20,7 +26,7 @@ type: ActionType
 
 表示向内滑动事件的类型，固定为SwipeInward。
 
-**类型：** ActionType
+**类型：** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
 
 **起始版本：** 12
 
@@ -40,7 +46,7 @@ x: int
 
 滑动事件触发点的横坐标，单位为像素。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 
@@ -60,7 +66,7 @@ y: int
 
 滑动事件触发点的纵坐标，单位为像素。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 12
 

@@ -1,5 +1,11 @@
 # getRangingCapability
 
+## Modules to Import
+
+```TypeScript
+import { ranging } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getRangingCapability
 
 ```TypeScript
@@ -30,7 +36,7 @@ Queries whether the current device supports ranging capability.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 801 | Capability not supported. |
 | 34900053 | The ranging service is disabled. |
+| 201 | Permission denied. |
 

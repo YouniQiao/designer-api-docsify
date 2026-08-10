@@ -18,7 +18,7 @@ type CustomType = 'USER_INFO' | 'TAB' | 'COMPILATION' | 'SETTINGS'
 
 | 类型 | 说明 |
 | --- | --- |
-| 'USER\_INFO' |  |
+| 'USER_INFO' |  |
 | 'TAB' |  |
 | 'COMPILATION' |  |
 | 'SETTINGS' |  |

@@ -1,6 +1,6 @@
 # PbesEncryptionAlgorithm
 
-Enumerates password-based encryption scheme (PBES) algorithms.
+表示基于密码的加密算法枚举。
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Enumerates password-based encryption scheme (PBES) algorithms.
 AES_128_CBC = 0
 ```
 
-AES-128-CBC.
+AES-128-CBC加密算法。
 
 **Since:** 21
 
@@ -34,7 +34,7 @@ AES-128-CBC.
 AES_192_CBC = 1
 ```
 
-AES-192-CBC.
+AES-192-CBC加密算法。
 
 **Since:** 21
 
@@ -52,7 +52,7 @@ AES-192-CBC.
 AES_256_CBC = 2
 ```
 
-AES-256-CBC.
+AES-256-CBC加密算法。
 
 **Since:** 21
 

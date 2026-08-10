@@ -1,6 +1,6 @@
 # CalendarAlign
 
-Enumerates alignment types.
+对齐方式类型。
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Enumerates alignment types.
 START = 0
 ```
 
-Left-aligned with the entry component.
+设置选择器与入口组件的对齐方式为左对齐。
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Left-aligned with the entry component.
 CENTER = 1
 ```
 
-Center-aligned with the entry component.
+设置选择器与入口组件的对齐方式为居中对齐。
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ Center-aligned with the entry component.
 END = 2
 ```
 
-Right-aligned with the entry component.
+设置选择器与入口组件的对齐方式为右对齐。
 
 **Since:** 10
 

@@ -4,7 +4,7 @@
 export type ModuleConfigInfo = _PackInfo.ModuleConfigInfo
 ```
 
-Defines the module configuration information of the bundle.
+包的module配置信息。
 
 **Since:** 9
 

@@ -10,6 +10,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
 ## interruptNode
 
 ```TypeScript
@@ -18,7 +24,7 @@ interruptNode: int
 
 Interrupt node as a unit to receive interrupt change event.
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -36,7 +42,7 @@ Interrupt node as a unit to receive interrupt change event.
 requestResult: InterruptRequestResultType
 ```
 
-**类型：** InterruptRequestResultType
+**类型：** [InterruptRequestResultType](arkts-audio-audio-interruptrequestresulttype-e-sys.md)
 
 **起始版本：** 9
 

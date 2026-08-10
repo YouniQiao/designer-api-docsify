@@ -12,6 +12,12 @@ Obtains the network search results.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { radio } from 'kits/@kit.TelephonyKit';
+```
+
 ## isNetworkSearchSuccess
 
 ```TypeScript

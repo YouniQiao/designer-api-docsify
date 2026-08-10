@@ -1,6 +1,6 @@
 # SessionToken (System API)
 
-Session token. Used to judge the legitimacy of the session.
+会话令牌的信息。
 
 **Since:** 9
 
@@ -12,15 +12,21 @@ Session token. Used to judge the legitimacy of the session.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## pid
 
 ```TypeScript
 pid?: long
 ```
 
-Process id of session
+会话的进程ID。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 
@@ -40,7 +46,7 @@ Process id of session
 sessionId: string
 ```
 
-The unique session id of the avsession object
+会话ID。
 
 **Type:** string
 
@@ -62,9 +68,9 @@ The unique session id of the avsession object
 uid?: long
 ```
 
-User id
+用户ID。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 9
 

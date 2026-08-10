@@ -1,12 +1,18 @@
 # setWaterMarkImage (System API)
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## setWaterMarkImage
 
 ```TypeScript
 function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<void>
 ```
 
-Controls whether a watermark image is displayed on the screen. This API uses a promise to return the result.
+设置屏幕水印图片显示状态。使用Promise异步回调。
 
 **Since:** 10
 
@@ -22,31 +28,31 @@ Controls whether a watermark image is displayed on the screen. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling [createPixelMap]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
-| enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. After the watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
+| pixelMap | image.PixelMap | Yes | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md/arkts-image-image-createpixelmap-f.md#createpixelmap) 接口获取。 |
+| enable | boolean | Yes | 设置是否显示水印图片。true显示水印图片；false表示不显示水印图片。设置显示水印后需主动设置为false才能关闭水印图片显示。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let enable: boolean = true;
-let color: ArrayBuffer = new ArrayBuffer(0);
+let color: ArrayBuffer = new ArrayBuffer(40000);
 let initializationOptions: image.InitializationOptions = {
   size: {
     height: 100,
@@ -77,7 +83,8 @@ image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMa
 function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: int): Promise<void>
 ```
 
-Set watermark image.
+设置屏幕水印图片的显示状态，并设定水印的优先级。使用Promise异步回调。当priority等于0时，当前接口与  
+[setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage)等价。
 
 **Since:** 26.0.0
 
@@ -95,23 +102,53 @@ Set watermark image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | Watermark image. |
-| enable | boolean | Yes | Show watermark if true. |
-| priority | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Specifies the priority level for the incoming watermark image to take effect. A smaller value of this parameter indicates a higher priority. The value range must be greater than or equal to 0. |
+| pixelMap | image.PixelMap | Yes | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md/arkts-image-image-createpixelmap-f.md#createpixelmap) 接口获取。 |
+| enable | boolean | Yes | 设置是否显示水印图片。true表示显示水印图片；false表示不显示水印图片。设置显示水印后需主动设置为false才能关闭水印图片显示。 |
+| priority | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 水印设置优先级。数值越小表示优先级越高，需大于等于0，小于0时返回1300016错误码。设置水印时，如果传入的优先级比上一次设置的低，则本次设置不会生效。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 1300003 | This window manager service works abnormally. |
+| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+let color: ArrayBuffer = new ArrayBuffer(40000);
+let initializationOptions: image.InitializationOptions = {
+  size: {
+    height: 100,
+    width: 100
+  }
+};
+image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMap) => {
+  console.info('Succeeded in creating pixelmap.');
+  try {
+    window.setWaterMarkImage(pixelMap, enable, 0).then(() => {
+      console.info('Succeeded in showing watermark image.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to show watermark image. Cause code: ${err.code}, message: ${err.message}`);
+    });
+  } catch (exception) {
+    console.error(`Failed to show watermark image. Cause code: ${exception.code}, message: ${exception.message}`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
 
 
 ## setWaterMarkImage
@@ -120,7 +157,7 @@ Set watermark image.
 function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Controls whether a watermark image is displayed on the screen. This API uses an asynchronous callback to return the result.
+设置屏幕水印图片显示状态。使用callback异步回调。
 
 **Since:** 10
 
@@ -136,26 +173,26 @@ Controls whether a watermark image is displayed on the screen. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | Yes | Watermark image, which can be obtained by calling [createPixelMap]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ . |
-| enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. After the watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| pixelMap | image.PixelMap | Yes | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md/arkts-image-image-createpixelmap-f.md#createpixelmap) 接口获取。 |
+| enable | boolean | Yes | 设置是否显示水印图片。true显示水印图片；false表示不显示水印图片。设置显示水印后需主动设置为false才能关闭水印图片显示。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调信息。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| 1300003 | This window manager service works abnormally. |
+| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let enable: boolean = true;
-let color: ArrayBuffer = new ArrayBuffer(0);
+let color: ArrayBuffer = new ArrayBuffer(40000);
 let initializationOptions: image.InitializationOptions = {
   size: {
     height: 100,

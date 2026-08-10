@@ -1,6 +1,6 @@
 # Folder
 
-Represents the folder data. It is a child class of [File]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and is used to describe a folder.
+文件夹类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述文件夹。
 
 **Inheritance/Implementation:** Folder extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
 
@@ -12,13 +12,19 @@ Represents the folder data. It is a child class of [File]\_\_\_JSDOC\_LINK\_DESC
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## folderUri
 
 ```TypeScript
 set folderUri(value: string)
 ```
 
-Indicates the uri of folder
+表示文件夹的uri。
 
 **Type:** string
 

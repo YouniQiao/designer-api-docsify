@@ -1,12 +1,18 @@
 # exitMasterProcessRole
 
+## 导入模块
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## exitMasterProcessRole
 
 ```TypeScript
 export function exitMasterProcessRole(): Promise<void>
 ```
 
-放弃当前进程的\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_身份。使用Promise异步回调。该接口仅在2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。
+放弃当前进程的[主控进程](../../../application-models/ability-terminology.md#masterprocess主控进程)身份。使用Promise异步回调。该接口仅在2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。
 
 **起始版本：** 21
 
@@ -28,11 +34,11 @@ export function exitMasterProcessRole(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [16000118](../errorcode-ability.md#16000118-当前进程非主控进程) | Not a master process. |
-| [16000119](../errorcode-ability.md#16000119-存在未完成的请求) | Cannot exit because there is an unfinished request. |
+| 801 | Capability not supported. |
+| 16000118 | Not a master process. |
+| 16000119 | Cannot exit because there is an unfinished request. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';
@@ -45,8 +51,7 @@ export default class EntryAbility extends UIAbility {
         .then(() => {
           console.info('exitMasterProcessRole succeed');
         })
-        .catch((error: Error) => {
-          let err = error as BusinessError;
+        .catch((err: BusinessError) => {
           console.error(`exitMasterProcessRole failed, code is ${err.code}, message is ${err.message}`);
         });
     } catch (error) {

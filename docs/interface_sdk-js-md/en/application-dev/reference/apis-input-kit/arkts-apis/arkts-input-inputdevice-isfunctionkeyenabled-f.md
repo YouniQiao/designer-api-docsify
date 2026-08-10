@@ -1,12 +1,18 @@
 # isFunctionKeyEnabled
 
+## Modules to Import
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## isFunctionKeyEnabled
 
 ```TypeScript
 function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 ```
 
-Checks whether the specified function key (for example, **CapsLock**) is enabled. This API uses a promise to return the result.
+检查功能键（如：CapsLock键）是否使能。使用Promise异步回调。
 
 **Since:** 15
 
@@ -20,22 +26,22 @@ Checks whether the specified function key (for example, **CapsLock**) is enabled
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| functionKey | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Type of the function key. |
+| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Yes | 需要设置的功能键类型。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the function key is enabled, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise对象。返回查询结果，true表示功能键使能，false表示功能键未使能。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) | There is currently no keyboard device connected. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 3900002 | There is currently no keyboard device connected. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -49,13 +55,14 @@ struct Index {
       Text()
         .onClick(() => {
           try {
+            // Query Whether a Function Key Is Enabled
             inputDevice.isFunctionKeyEnabled(inputDevice.FunctionKey.CAPS_LOCK).then((state: boolean) => {
-              console.info(`capslock state: ${JSON.stringify(state)}`);
+              console.info(`Succeeded in getting capslock state: ${JSON.stringify(state)}.`);
             }).catch((error: BusinessError) => {
-              console.error(`Get capslock state failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to get capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
           } catch (error) {
-            console.error(`Failed to get capslock state, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to get capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

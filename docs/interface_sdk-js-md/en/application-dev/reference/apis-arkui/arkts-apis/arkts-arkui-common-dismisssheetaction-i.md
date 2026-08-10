@@ -1,0 +1,58 @@
+# DismissSheetAction
+
+控制半模态的关闭。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare interface DismissSheetAction--><!--Device-unnamed-export declare interface DismissSheetAction-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## dismiss
+
+```TypeScript
+dismiss(): void
+```
+
+半模态面板关闭回调函数。开发者需要退出时调用，不需要退出时无需调用。
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DismissSheetAction-dismiss(): void--><!--Device-DismissSheetAction-dismiss(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## reason
+
+```TypeScript
+reason: DismissReason
+```
+
+返回本次半模态页面退出的操作类型。
+
+**说明：**
+
+DismissReason.SLIDE只生效半模态侧边弹窗形态，表示右滑退出。若镜像场景则表示左滑退出。
+
+DismissReason.SLIDE_DOWN生效半模态底部弹窗形态和居中弹窗形态，表示下滑退出。
+
+半模态气泡弹窗形态无滑动退出能力。
+
+**Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DismissSheetAction-reason: DismissReason--><!--Device-DismissSheetAction-reason: DismissReason-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

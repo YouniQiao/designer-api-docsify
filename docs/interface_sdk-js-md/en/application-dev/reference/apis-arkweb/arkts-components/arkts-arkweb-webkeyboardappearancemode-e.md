@@ -1,6 +1,6 @@
 # WebKeyboardAppearanceMode
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for setting the web keyboard appearance mode.
+提供给{@链接键盘外观}的枚举类型，用于设置Web键盘外观模式。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for setting the web 
 NONE_IMMERSIVE = 0
 ```
 
-Default skin mode, no immersive style.
+默认皮肤模式，没有沉浸式风格。
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Default skin mode, no immersive style.
 IMMERSIVE = 1
 ```
 
-No immersive style.
+没有沉浸式风格
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ No immersive style.
 LIGHT_IMMERSIVE = 2
 ```
 
-Light immersive style.
+浅色沉浸式风格。
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ Light immersive style.
 DARK_IMMERSIVE = 3
 ```
 
-Dark immersive style.
+深色沉浸式风格。
 
 **Since:** 26.0.0
 

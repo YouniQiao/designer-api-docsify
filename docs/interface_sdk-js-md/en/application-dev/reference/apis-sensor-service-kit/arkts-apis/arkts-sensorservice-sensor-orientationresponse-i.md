@@ -1,6 +1,6 @@
 # OrientationResponse
 
-Describes the orientation sensor data. It extends from [Response]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+方向传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
 
 **Inheritance/Implementation:** OrientationResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -12,15 +12,21 @@ Describes the orientation sensor data. It extends from [Response]\_\_\_JSDOC\_LI
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## Modules to Import
+
+```TypeScript
+import { sensor } from 'kits/@kit.SensorServiceKit';
+```
+
 ## alpha
 
 ```TypeScript
 alpha: double
 ```
 
-Rotation angle of the device around the z-axis, in degrees. The value ranges from 0 to 360.
+设备围绕Z轴的旋转角度，即方位角。单位：degree（度）；取值范围：[0, 360]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -38,9 +44,9 @@ Rotation angle of the device around the z-axis, in degrees. The value ranges fro
 beta: double
 ```
 
-Rotation angle of the device around the x-axis, in degrees. The value ranges from 0 to ±180.
+设备围绕X轴的旋转角度，即俯仰角。单位：degree（度）；取值范围：[-180, 180]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 
@@ -58,9 +64,9 @@ Rotation angle of the device around the x-axis, in degrees. The value ranges fro
 gamma: double
 ```
 
-Rotation angle of the device around the y-axis, in degrees. The value ranges from 0 to ±90.
+设备围绕Y轴的旋转角度，即翻转角。单位：degree（度）；取值范围：[-90, 90]。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 8
 

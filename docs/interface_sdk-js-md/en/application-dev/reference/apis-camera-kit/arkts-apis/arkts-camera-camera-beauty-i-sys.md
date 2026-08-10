@@ -1,6 +1,6 @@
 # Beauty (System API)
 
-Beauty extends [BeautyQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_Provides APIs to obtain and set the beauty effect.
+Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md)Provides APIs to obtain and set the beauty effect.
 
 **Inheritance/Implementation:** Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md)
 
@@ -13,6 +13,12 @@ Beauty extends [BeautyQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_Provides APIs t
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getBeauty
 
@@ -42,22 +48,22 @@ Obtains the level of the beauty type in use.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Beauty type. |
+| type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | Yes | Beauty type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | the beauty effect in use. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | the beauty effect in use. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function getBeauty(portraitPhotoSession: camera.PortraitPhotoSession): number {
@@ -89,8 +95,8 @@ setBeauty(type: BeautyType, value: int): void
 ```
 
 Sets a beauty type and its level. Beauty mode is turned off only when all the  
-[beauty types]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ obtained through  
-[getSupportedBeautyTypes]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ are disabled.
+[beauty types](arkts-camera-camera-beautytype-e-sys.md) obtained through  
+[getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes) are disabled.
 
 **Since:** 11
 
@@ -106,17 +112,17 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Beauty type. |
-| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Beauty level, which is obtained through [getSupportedBeautyRange]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | Yes | Beauty type. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Beauty level, which is obtained through [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**Example**
+## Examples
 
 ```TypeScript
 function setBeauty(portraitPhotoSession: camera.PortraitPhotoSession): void {
@@ -154,13 +160,13 @@ Sets a portrait theme type for a camera device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The type of portrait theme. |
+| type | [PortraitThemeType](arkts-camera-camera-portraitthemetype-e-sys.md) | Yes | The type of portrait theme. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400103 | Session not config, only throw in session usage. |
+| 202 | Not System Application. |
 

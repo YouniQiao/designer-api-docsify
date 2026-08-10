@@ -1,6 +1,6 @@
 # NativeEmbedInfo
 
-Provides detailed information about the same-layer tag.
+提供同层标签的详细信息。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Provides detailed information about the same-layer tag.
 height?: number
 ```
 
-The embed tag height.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:px.
+同层标签的高，单位为px。
 
 **Type:** number
 
@@ -36,7 +36,7 @@ The embed tag height.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:px.
 id?: string
 ```
 
-ID of the same-layer tag.
+同层标签的id信息。
 
 **Type:** string
 
@@ -56,7 +56,7 @@ ID of the same-layer tag.
 params?: Map<string, string>
 ```
 
-List of key-value pairs contained in the **object** tag that form a map of the Object type. Use the methods provided by the Object type, such as **embed.info?.param?.["name"]** to operate the map object.
+object标签包含的param标签键值对列表，该map本质为Object类型，请使用Object提供的方法操作该对象，即`embed.info?.param?.["name"]`。
 
 **Type:** Map&lt;string, string&gt;
 
@@ -76,9 +76,9 @@ List of key-value pairs contained in the **object** tag that form a map of the O
 position?: Position
 ```
 
-Position of the same-layer tag relative to the upper left corner of the **Web** component as the coordinate origin,This position is different from the standard position.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: pixels.
+同层标签相对于Web组件左上角为坐标原点的位置信息，此处区别于标准Position，单位为px。
 
-**Type:** Position
+**Type:** [Position](../../apis-arkui/arkts-apis/arkts-arkui-position-i.md)
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ Position of the same-layer tag relative to the upper left corner of the **Web** 
 src?: string
 ```
 
-src** information of the same-layer tag.
+同层标签的src信息。
 
 **Type:** string
 
@@ -116,7 +116,7 @@ src** information of the same-layer tag.
 tag?: string
 ```
 
-Tag name, which is in uppercase.
+标签名，统一为大写字符。
 
 **Type:** string
 
@@ -136,7 +136,7 @@ Tag name, which is in uppercase.
 type?: string
 ```
 
-Type of the same-layer tag. The value is in lowercase.
+同层标签的type信息，统一为小写字符。
 
 **Type:** string
 
@@ -156,7 +156,7 @@ Type of the same-layer tag. The value is in lowercase.
 url?: string
 ```
 
-URL of the same-layer tag.
+同层标签的url信息。
 
 **Type:** string
 
@@ -176,7 +176,7 @@ URL of the same-layer tag.
 width?: number
 ```
 
-The embed tag width.\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit:px.
+同层标签的宽，单位为px。
 
 **Type:** number
 

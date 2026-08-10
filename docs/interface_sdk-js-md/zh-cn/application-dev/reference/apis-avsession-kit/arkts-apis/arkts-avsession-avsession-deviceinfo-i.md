@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
+## 导入模块
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## audioCapabilities
 
 ```TypeScript
@@ -18,7 +24,7 @@ audioCapabilities?: AudioCapabilities
 
 播放设备支持的音频能力。
 
-**类型：** AudioCapabilities
+**类型：** [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md)
 
 **起始版本：** 20
 
@@ -38,7 +44,7 @@ castCategory: AVCastCategory
 
 投播的类别。
 
-**类型：** AVCastCategory
+**类型：** [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md)
 
 **起始版本：** 10
 
@@ -98,7 +104,7 @@ deviceType: DeviceType
 
 播放设备的类型。
 
-**类型：** DeviceType
+**类型：** [DeviceType](arkts-avsession-avsession-devicetype-e.md)
 
 **起始版本：** 10
 
@@ -178,11 +184,11 @@ supportedProtocols?: int
 
 播放设备支持的协议。
 
-默认为TYPE\_LOCAL,具体取值来自[ProtocolType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_，可以是ProtocolType中的某个协议或者多个协议的组合。
+默认为TYPE_LOCAL,具体取值来自[ProtocolType](arkts-avsession-avsession-protocoltype-e.md)，可以是ProtocolType中的某个协议或者多个协议的组合。
 
 设备仅支持一种协议，返回对应枚举值；设备支持多种协议，返回对应枚举值之和。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 11
 
@@ -202,7 +208,7 @@ supportedPullClients?: Array<int>
 
 支持拉端客户端的ID集合（只有支持4K投播的设备会返回此字段）。
 
-**类型：** Array&lt;int&gt;
+**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
 **起始版本：** 20
 

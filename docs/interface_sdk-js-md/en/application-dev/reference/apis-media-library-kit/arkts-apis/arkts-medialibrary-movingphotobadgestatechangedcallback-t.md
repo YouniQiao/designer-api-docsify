@@ -21,6 +21,6 @@ Callback to be invoked when the moving photo effect of the **PhotoPickerComponen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the moving photo.  |
-| state | photoAccessHelper.MovingPhotoBadgeStateType | Yes | State of the moving photo badge.  |
+| uri | string | Yes | URI of the moving photo. |
+| state | photoAccessHelper.MovingPhotoBadgeStateType | Yes | State of the moving photo badge. |
 

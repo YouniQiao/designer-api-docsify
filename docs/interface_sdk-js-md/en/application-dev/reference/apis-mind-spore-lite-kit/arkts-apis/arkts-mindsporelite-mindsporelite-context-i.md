@@ -10,6 +10,12 @@ Provides the device configurations
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
+## Modules to Import
+
+```TypeScript
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+```
+
 ## cpu
 
 ```TypeScript
@@ -18,7 +24,7 @@ cpu?: CpuDevice
 
 The cpu device information
 
-**Type:** CpuDevice
+**Type:** [CpuDevice](arkts-mindsporelite-mindsporelite-cpudevice-i.md)
 
 **Since:** 10
 
@@ -38,7 +44,7 @@ nnrt?: NNRTDevice
 
 The NNRT device information
 
-**Type:** NNRTDevice
+**Type:** [NNRTDevice](arkts-mindsporelite-mindsporelite-nnrtdevice-i.md)
 
 **Since:** 10
 

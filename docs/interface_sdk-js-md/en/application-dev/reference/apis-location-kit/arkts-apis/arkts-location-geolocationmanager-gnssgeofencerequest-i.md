@@ -10,6 +10,12 @@ Configuring parameters in GNSS geofence requests.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## fenceExtensionAbilityName
 
 ```TypeScript
@@ -36,7 +42,7 @@ geofence: Geofence
 
 Circular fence information.
 
-**Type:** Geofence
+**Type:** [Geofence](arkts-location-geolocation-geofence-i.md)
 
 **Since:** 12
 
@@ -54,7 +60,7 @@ geofenceTransitionCallback: AsyncCallback<GeofenceTransition>
 
 Indicates the callback for reporting the geofence transition status.
 
-**Type:** AsyncCallback&lt;GeofenceTransition&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;GeofenceTransition&gt;
 
 **Since:** 12
 
@@ -70,9 +76,9 @@ Indicates the callback for reporting the geofence transition status.
 loiterTimeMs?: int
 ```
 
-Indicates time for which a device is dwelling in the geofence, in milliseconds.If the device dwelling time reaches the value specified by this parameter,a GEOFENCE\_TRANSITION\_EVENT\_DWELL event is reported.The value should be an integer.
+Indicates time for which a device is dwelling in the geofence, in milliseconds.If the device dwelling time reaches the value specified by this parameter,a GEOFENCE_TRANSITION_EVENT_DWELL event is reported.The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 23
 
@@ -108,7 +114,7 @@ notifications?: Array<NotificationRequest>
 
 Indicates the geofence notifications to publish.
 
-**Type:** Array&lt;NotificationRequest&gt;
+**Type:** Array&lt;[NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md)&gt;
 
 **Since:** 12
 

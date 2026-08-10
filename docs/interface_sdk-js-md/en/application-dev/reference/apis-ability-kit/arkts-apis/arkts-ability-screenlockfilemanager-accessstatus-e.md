@@ -1,6 +1,6 @@
 # AccessStatus
 
-Enumerates the statuses for requesting access permissions for sensitive data under the lock screen.
+表示锁屏下敏感数据访问权限申请状态的枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the statuses for requesting access permissions for sensitive data und
 ACCESS_DENIED = -1
 ```
 
-The request for access permission for sensitive data under lock screen is denied.
+申请锁屏下敏感数据访问权限被拒绝。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ The request for access permission for sensitive data under lock screen is denied
 ACCESS_GRANTED = 0
 ```
 
-The request for access permission for sensitive data under lock screen is granted.
+申请锁屏下敏感数据访问权限被允许。
 
 **Since:** 12
 

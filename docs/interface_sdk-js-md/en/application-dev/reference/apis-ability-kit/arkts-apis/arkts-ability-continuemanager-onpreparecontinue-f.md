@@ -1,12 +1,18 @@
 # onPrepareContinue
 
+## Modules to Import
+
+```TypeScript
+import { continueManager } from 'kits/@kit.AbilityKit';
+```
+
 ## onPrepareContinue
 
 ```TypeScript
 function onPrepareContinue(context: Context, callback: AsyncCallback<ContinueResultInfo>): void
 ```
 
-Register prepareContinue event, when the ability is configured with 'ContinueQuickStart' in the continueType, then can get the result of LaunchReason.PREPARE\_CONTINUATION.
+prepareContinue 事件，当在 continueType 中配置了“ContinueQuickStart”功能时，即可获取
 
 **Since:** 23
 
@@ -22,12 +28,12 @@ Register prepareContinue event, when the ability is configured with 'ContinueQui
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the ability context. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ContinueResultInfo&gt; | Yes | Used to handle ('prepareContinue') command. |
+| context | [Context](arkts-ability-context-c.md) | Yes | the ability context. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ContinueResultInfo&gt; | Yes | Used to handle ('prepareContinue') command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
+| 16300501 | the system ability work abnormally. |
 

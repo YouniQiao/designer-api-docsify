@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+import { accountManager } from 'kits/@kit.MDMKit';
+```
+
 ## authenticationValidityPeriod
 
 ```TypeScript
@@ -42,7 +48,7 @@ passwordExpirationNotification?: number
 
 默认值为0，表示域账号密码过期不提示。
 
-**说明：**passwordExpirationNotification需与passwordValidityPeriod配合使用，当系统时间大于或等于（设备侧最后一次修改域账号密码时间 +passwordValidityPeriod - passwordExpirationNotification）时，会发页面通知提示密码即将过期。
+**说明：**passwordExpirationNotification需与passwordValidityPeriod配合使用，当系统时间大于或等于（设备侧最后一次修改域账号密码时间 + passwordValidityPeriod - passwordExpirationNotification）时，会发页面通知提示密码即将过期。
 
 **类型：** number
 

@@ -4,7 +4,7 @@
 declare type InputMethodExtraConfig = import('../api/@ohos.inputMethod.ExtraConfig').InputMethodExtraConfig
 ```
 
-Represents the extension configuration of an input method.
+输入法扩展信息。
 
 **Since:** 22
 

@@ -1,7 +1,6 @@
 # DistributedAccountAbility
 
-Provides APIs for querying and updating the login state of a distributed account. You must obtain a  
-**DistributedAccountAbility** instance first.
+提供查询和更新分布式账号登录状态方法（需要先获取分布式账号的单实例对象）。
 
 **Since:** 7
 
@@ -10,6 +9,12 @@ Provides APIs for querying and updating the login state of a distributed account
 <!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
+
+## Modules to Import
+
+```TypeScript
+import { distributedAccount } from 'kits/@kit.BasicServicesKit';
+```
 
 ## getOsAccountDistributedInfoByLocalId
 
@@ -23,7 +28,7 @@ ArkTS-Sta:
 getOsAccountDistributedInfoByLocalId(localId: int, callback: AsyncCallback<DistributedInfo>): void
 ```
 
-Obtains distributed information about an OS account. This API uses an asynchronous callback to return the result.
+获取指定系统账号的分布式信息。使用callback异步回调。
 
 **Since:** 10
 
@@ -43,26 +48,27 @@ Obtains distributed information about an OS account. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the target OS account. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained. Otherwise, **err** is an error object. |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DistributedInfo&gt; | Yes | 回调参数。当获取分布式账号信息成功，err为undefined，data为获取到的分布式账号信息对象；否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| 12300003 | Account not found. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 12300001 | System service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
 try {
-  accountAbility.getOsAccountDistributedInfoByLocalId(100,
+  let localId: number = 100; // This is an example. Replace it with an actual OS account ID.
+  accountAbility.getOsAccountDistributedInfoByLocalId(localId,
     (err: BusinessError, data: distributedAccount.DistributedInfo) => {
       if (err) {
         console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
@@ -88,7 +94,7 @@ ArkTS-Sta:
 getOsAccountDistributedInfoByLocalId(localId: int): Promise<DistributedInfo>
 ```
 
-Obtains distributed information about an OS account. This API uses a promise to return the result.
+获取指定系统账号的分布式信息。使用Promise异步回调。
 
 **Since:** 10
 
@@ -108,31 +114,32 @@ Obtains distributed information about an OS account. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise used to return the distributed account information obtained. |
+| Promise&lt;DistributedInfo&gt; | Promise对象，返回分布式账号信息对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| 12300003 | Account not found. |
+| 201 | Permission denied. |
+| 202 | Not system application. |
+| 12300001 | System service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
 try {
-  accountAbility.getOsAccountDistributedInfoByLocalId(100).then((
+  let localId: number = 100; // This is an example. Replace it with an actual OS account ID.
+  accountAbility.getOsAccountDistributedInfoByLocalId(localId).then((
     data: distributedAccount.DistributedInfo) => {
     console.info('distributed information: ' + JSON.stringify(data));
   }).catch((err: BusinessError) => {
@@ -156,7 +163,7 @@ ArkTS-Sta:
 setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-Sets the distributed information for an OS account. This API uses an asynchronous callback to return the result.
+设置指定系统账号的分布式信息。使用callback异步回调。
 
 **Since:** 10
 
@@ -174,24 +181,24 @@ Sets the distributed information for an OS account. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the target OS account. |
-| distributedInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Distributed account information to set. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the distributed information is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
+| distributedInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | 分布式账号信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置指定系统账号的分布式信息成功时，err为undefined，否则为错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid distributedInfo. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account identified by localId or by distributedInfo not found. |
-| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
-| 12300406 | The distributed account information has already been bound to a sub-profile of the target OS account.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| 12300008 | Restricted OS account. |
+| 12300003 | Account identified by localId or by distributedInfo not found. |
+| 201 | Permission denied. |
+| 12300002 | Invalid distributedInfo. |
+| 202 | Not system application. |
+| 12300001 | System service exception. |
+| 12300406 | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**Applicable version:** 26.0.0 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -200,7 +207,8 @@ const accountAbility: distributedAccount.DistributedAccountAbility = distributed
 let accountInfo: distributedAccount.DistributedInfo =
   { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
 try {
-  accountAbility.setOsAccountDistributedInfoByLocalId(100, accountInfo, (err: BusinessError) => {
+  let localId: number = 100; // This is an example. Replace it with an actual OS account ID.
+  accountAbility.setOsAccountDistributedInfoByLocalId(localId, accountInfo, (err: BusinessError) => {
     if (err) {
       console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
     } else {
@@ -225,7 +233,7 @@ ArkTS-Sta:
 setOsAccountDistributedInfoByLocalId(localId: int, distributedInfo: DistributedInfo): Promise<void>
 ```
 
-Sets the distributed information for an OS account. This API uses a promise to return the result.
+设置指定系统账号的分布式信息。使用Promise异步回调。
 
 **Since:** 10
 
@@ -243,29 +251,29 @@ Sets the distributed information for an OS account. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | ID of the target OS account. |
-| distributedInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Distributed account information to set. |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
+| distributedInfo | [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | Yes | 分布式账号信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid distributedInfo. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account identified by localId or by distributedInfo not found. |
-| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
-| 12300406 | The distributed account information has already been bound to a sub-profile of the target OS account.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 26.0.0 and later |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| 12300008 | Restricted OS account. |
+| 12300003 | Account identified by localId or by distributedInfo not found. |
+| 201 | Permission denied. |
+| 12300002 | Invalid distributedInfo. |
+| 202 | Not system application. |
+| 12300001 | System service exception. |
+| 12300406 | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**Applicable version:** 26.0.0 and later |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -274,7 +282,8 @@ const accountAbility: distributedAccount.DistributedAccountAbility = distributed
 let accountInfo: distributedAccount.DistributedInfo =
   { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
 try {
-  accountAbility.setOsAccountDistributedInfoByLocalId(100, accountInfo).then(() => {
+  let localId: number = 100; // This is an example. Replace it with an actual OS account ID.
+  accountAbility.setOsAccountDistributedInfoByLocalId(localId, accountInfo).then(() => {
     console.info('setOsAccountDistributedInfoByLocalId successfully');
   }).catch((err: BusinessError) => {
     console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);

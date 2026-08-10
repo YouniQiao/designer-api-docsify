@@ -1,6 +1,6 @@
 # DismissReason
 
-Enumerates the reasons for popup dismissal.
+关闭原因类型。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the reasons for popup dismissal.
 PRESS_BACK = 0
 ```
 
-Touching the **Back** button, swiping left or right on the screen, or pressing the **Esc** key.
+点击三键back、侧滑（左滑/右滑）、键盘ESC。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Touching the **Back** button, swiping left or right on the screen, or pressing t
 TOUCH_OUTSIDE = 1
 ```
 
-Touching the mask.
+点击遮障层时。
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Touching the mask.
 CLOSE_BUTTON = 2
 ```
 
-Touching the close button.
+点击关闭按钮。
 
 **Since:** 12
 
@@ -76,11 +76,11 @@ Touching the close button.
 SLIDE_DOWN = 3
 ```
 
-Swiping down.
+下拉关闭。
 
-**NOTE**
+**说明：**
 
-This API is effective only in [sheet transition]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+该接口仅支持在[半模态转场](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)中使用。
 
 **Since:** 12
 
@@ -100,11 +100,7 @@ This API is effective only in [sheet transition]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\
 SLIDE = 4
 ```
 
-Swiping left or right on the screen. By default, swiping right dismisses the popup, while swiping left is used in the mirror scenario. This setting is not user-defined.
-
-**NOTE**
-
-This API is effective only in [sheet transition]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+滑动交互，不是向下滑动。默认表示向右滑动，镜像操作后表示向左滑动。不支持选择向左或向右滑动。
 
 **Since:** 20
 

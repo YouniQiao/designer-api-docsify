@@ -1,6 +1,6 @@
 # Proxy
 
-A base class for creating proxy objects that delegate method calls and property access to an \_\_\_INLINE\_CODE\_DESC\_USD\_0\_\_\_. Provides static methods for generating proxy classes and instantiating proxy objects dynamically at runtime.
+A base class for creating proxy objects that delegate method calls and property access  to an `InvocationHandler`. Provides static methods for generating proxy classes and  instantiating proxy objects dynamically at runtime.
 
 **Since:** 24
 
@@ -32,15 +32,15 @@ Creates a new proxy instance that implements the specified interfaces and uses t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| linker | RuntimeLinker | Yes | The \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to generate the proxy class at runtime. |
-| interfaces | FixedArray&lt;Class&gt; | Yes | An array of \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ objects representing the interfaces to implement. |
-| handler | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to handle method and property operations. |
+| linker | RuntimeLinker | Yes | The `RuntimeLinker` used to generate the proxy class at runtime. |
+| interfaces | FixedArray&lt;Class&gt; | Yes | An array of `Class` objects representing the interfaces to implement. |
+| handler | [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) | Yes | The `InvocationHandler` to handle method and property operations. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | A new proxy instance as an \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| [Proxy](arkts-arkts-reflect-proxy-c.md) | A new proxy instance as an `Proxy`. |
 
 ## getHandler
 
@@ -64,5 +64,5 @@ Retrieves the invocation handler associated with this proxy.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_INLINE\_\_\_ESCAPED\_UNDERSCORE\_\_\_CODE\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used by this proxy. |
+| [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) | The `InvocationHandler` used by this proxy. |
 

@@ -1,6 +1,6 @@
 # VerifyCodeParam (System API)
 
-Defines the information about the code signature file.
+应用程序代码签名文件信息。
 
 **Since:** 10
 
@@ -14,13 +14,19 @@ Defines the information about the code signature file.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { installer } from 'kits/@kit.AbilityKit';
+```
+
 ## moduleName
 
 ```TypeScript
 moduleName: string
 ```
 
-Module name of the bundle.
+应用程序模块名称。
 
 **Type:** string
 
@@ -42,7 +48,7 @@ Module name of the bundle.
 signatureFilePath: string
 ```
 
-Path of the code signature file.
+代码签名文件路径。
 
 **Type:** string
 

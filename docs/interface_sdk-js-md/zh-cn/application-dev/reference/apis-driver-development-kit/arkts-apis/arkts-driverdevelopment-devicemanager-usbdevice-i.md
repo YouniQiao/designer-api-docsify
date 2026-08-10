@@ -1,6 +1,6 @@
 # USBDevice
 
-USB设备信息，继承自[Device]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+USB设备信息，继承自[Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)。
 
 **继承/实现关系：** USBDevice extends [Device](arkts-driverdevelopment-devicemanager-device-i.md)
 
@@ -12,6 +12,12 @@ USB设备信息，继承自[Device]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## productId
 
 ```TypeScript
@@ -20,7 +26,7 @@ productId: int
 
 USB设备Product ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 
@@ -38,7 +44,7 @@ vendorId: int
 
 USB设备Vendor ID。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 10
 

@@ -4,7 +4,7 @@
 type InsertFn = (uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<int>) => void
 ```
 
-Callback function called when inserting a data record into the database.
+插入操作的属性类型。
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ Callback function called when inserting a data record into the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Indicates the position where the data is to insert.  |
-| valueBucket | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the data to insert.  |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;int&gt; | Yes | Returns the index of the newly inserted data record.  |
+| uri | string | Yes | Indicates the position where the data is to insert. |
+| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Indicates the data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Returns the index of the newly inserted data record. |
 

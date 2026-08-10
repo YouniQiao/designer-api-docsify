@@ -1,10 +1,9 @@
 # Display
 
-Implements a Display instance, with attributes and APIs defined.
+屏幕实例。描述Display对象的属性和方法。
 
-Before calling any API in Display, you must use  
-[getAllDisplays()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or  
-[getDefaultDisplaySync()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain a Display instance.
+下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays)、  
+[getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)中的任一方法获取到Display实例，再通过此实例调用对应方法。
 
 **Since:** 7
 
@@ -14,13 +13,19 @@ Before calling any API in Display, you must use
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## hasImmersiveWindow
 
 ```TypeScript
 hasImmersiveWindow(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this display contains an immersive window. This API uses an asynchronous callback to return the result.
+判断当前屏幕是否包含沉浸式窗口，使用callback异步回调。
 
 **Since:** 11
 
@@ -36,32 +41,34 @@ Checks whether this display contains an immersive window. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the display contains an immersive window, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示当前屏幕包含沉浸式窗口，false表示不包含。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1400001 | Invalid display or screen. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { display } from '@kit.ArkUI';
 
 let displayClass: display.Display | null = null;
+// Obtain the default Display object.
 displayClass = display.getDefaultDisplaySync();
-displayClass.hasImmersiveWindow((err: BusinessError, data) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to check whether there is immersive window. Code: ${err.code} , message : ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
+// Check whether an immersive window is included.
+displayClass.hasImmersiveWindow((err: BusinessError, data: boolean) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
 });
 ```
 
@@ -71,7 +78,7 @@ displayClass.hasImmersiveWindow((err: BusinessError, data) => {
 hasImmersiveWindow(): Promise<boolean>
 ```
 
-Checks whether this display contains an immersive window. This API uses a promise to return the result.
+判断当前屏幕是否包含沉浸式窗口，使用Promise异步回调。
 
 **Since:** 11
 
@@ -87,30 +94,32 @@ Checks whether this display contains an immersive window. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the display contains an immersive window, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前屏幕包含沉浸式窗口，false表示不包含。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| 1400001 | Invalid display or screen. |
+| 1400003 | This display manager service works abnormally. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { display } from '@kit.ArkUI';
 
 let displayClass: display.Display | null = null;
+// Obtain the default Display object.
 displayClass = display.getDefaultDisplaySync();
+// Check whether an immersive window is included.
 let promise = displayClass.hasImmersiveWindow();
 promise.then((data) => {
   console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
 }).catch((err: BusinessError) => {
-  console.error(`Failed to check whether there is immersive window. Code: ${err.code} , message: ${err.message}`);
-})
+  console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
+});
 ```
 

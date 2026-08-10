@@ -10,6 +10,12 @@ Toast的选项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## alignment
 
 ```TypeScript
@@ -24,11 +30,11 @@ alignment?: Alignment
 
 不同alignment下，Toast位置对齐效果，如下图所示。
 
-!\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_
+![zh-cn_image_0001](../../../reference/apis-arkui/figures/toast_alignment.PNG)
 
 Toast的文本显示默认自左向右，不支持其他对齐方式。
 
-**类型：** Alignment
+**类型：** [Alignment](arkts-arkui-alignment-e.md)
 
 **起始版本：** 23
 
@@ -48,13 +54,13 @@ backgroundBlurStyle?: BlurStyle
 
 Toast的背板模糊材质。
 
-默认值：BlurStyle.COMPONENT\_ULTRA\_THICK
+默认值：BlurStyle.COMPONENT_ULTRA_THICK
 
 **说明：**
 
 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** BlurStyle
+**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
 **起始版本：** 23
 
@@ -80,7 +86,7 @@ Toast的背板颜色。
 
 backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
@@ -178,9 +184,9 @@ hoverModeArea?: HoverModeAreaType
 
 响应悬停态时，弹窗的显示区域。
 
-默认值：HoverModeAreaType.BOTTOM\_SCREEN，默认显示在下半屏。
+默认值：HoverModeAreaType.BOTTOM_SCREEN，默认显示在下半屏。
 
-**类型：** HoverModeAreaType
+**类型：** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
 **默认值：** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -232,7 +238,7 @@ offset?: Offset
 
 仅支持设置px类型的数值。如需设置其他类型的数值，应将其他类型转换为px类型后传入。例如，若需设置vp，应将其转换为px后传入。
 
-**类型：** Offset
+**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
 
 **起始版本：** 23
 
@@ -252,9 +258,9 @@ shadow?: ShadowOptions | ShadowStyle
 
 Toast的背板阴影。
 
-默认值：ShadowStyle.OUTER\_DEFAULT\_MD
+默认值：ShadowStyle.OUTER_DEFAULT_MD
 
-**类型：** ShadowOptions \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
 
 **起始版本：** 23
 
@@ -276,7 +282,7 @@ showMode?: ToastShowMode
 
 默认值：ToastShowMode.DEFAULT，默认显示在应用内。
 
-**类型：** ToastShowMode
+**类型：** [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e.md)
 
 **默认值：** ToastShowMode.DEFAULT
 
@@ -298,7 +304,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for toast. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of toast.
 
-**类型：** SystemUiMaterial
+**类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
 
@@ -320,7 +326,7 @@ Toast的文本颜色。
 
 默认值：Color.Black
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 

@@ -1,5 +1,11 @@
 # closeGeneratorNodeGraph (System API)
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from 'kits/@kit.ArkUI';
+```
+
 ## closeGeneratorNodeGraph
 
 ```TypeScript
@@ -24,11 +30,11 @@ Close the AI node graph Sheet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the context of dialog for ui display. |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c-sys.md) | Yes | the context of dialog for ui display. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  Returns the result. |
+| Promise&lt;void&gt; | Returns the result. |
 

@@ -28,8 +28,8 @@ function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slots | Array&lt;NotificationSlot&gt; | 是 | 要创建的通知通道对象数组。 |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 表示被指定的回调方法。 |
+| slots | Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt; | 是 | 要创建的通知通道对象数组。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
 
 
 ## addSlots
@@ -60,7 +60,7 @@ function addSlots(slots: Array<NotificationSlot>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slots | Array&lt;NotificationSlot&gt; | 是 | 要创建的通知通道对象数组。 |
+| slots | Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt; | 是 | 要创建的通知通道对象数组。 |
 
 **返回值：**
 

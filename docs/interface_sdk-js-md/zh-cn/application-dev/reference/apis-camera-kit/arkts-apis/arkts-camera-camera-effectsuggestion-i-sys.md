@@ -12,6 +12,12 @@ EffectSuggestion object.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## enableEffectSuggestion
 
 ```TypeScript
@@ -40,9 +46,9 @@ Enable effect suggestion for session.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## getSupportedEffectSuggestionTypes
 
@@ -72,8 +78,8 @@ Gets supported effect suggestion types.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## isEffectSuggestionSupported
 
@@ -103,8 +109,8 @@ Checks whether effect suggestion is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## setEffectSuggestionStatus
 
@@ -134,9 +140,9 @@ Set the range of effect suggestion type and enable status.The application should
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
 ## updateEffectSuggestion
 
@@ -160,14 +166,14 @@ Update the enable status of the effect suggestion type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | The type of effect suggestion. |
+| type | [EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md) | 是 | The type of effect suggestion. |
 | enabled | boolean | 是 | The status of effect suggestion type. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400101 | Parameter missing or parameter type incorrect. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 

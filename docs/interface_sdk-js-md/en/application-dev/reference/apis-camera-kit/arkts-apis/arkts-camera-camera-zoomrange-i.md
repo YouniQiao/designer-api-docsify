@@ -1,6 +1,6 @@
 # ZoomRange
 
-Describes the zoom range.
+变焦范围。
 
 **Since:** 24
 
@@ -10,15 +10,21 @@ Describes the zoom range.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## max
 
 ```TypeScript
 readonly max: double
 ```
 
-Maximum zoom value.
+最大变焦值。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 24
 
@@ -36,9 +42,9 @@ Maximum zoom value.
 readonly min: double
 ```
 
-Minimum zoom value.
+最小变焦值。
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 24
 

@@ -12,6 +12,12 @@ Wi-Fi IP configuration information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## dnsServers
 
 ```TypeScript
@@ -20,7 +26,7 @@ dnsServers: int[]
 
 DNS servers.
 
-**Type:** int[]
+**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
 **Since:** 9
 
@@ -60,7 +66,7 @@ gateway: int
 
 Gate way.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -80,7 +86,7 @@ ipAddress: int
 
 IP address.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -100,7 +106,7 @@ prefixLength: int
 
 Prefix length.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

@@ -16,7 +16,7 @@ Enumerates file aggregation types.
 DEFAULT = 0
 ```
 
-Default mode, indicating that this parameter does not take effect.
+默认模式，表示该参数不生效。
 
 **Since:** 15
 
@@ -34,7 +34,7 @@ Default mode, indicating that this parameter does not take effect.
 AUDIO = 1
 ```
 
-Audio mode.
+音频文件模式。
 
 **Since:** 15
 
@@ -52,7 +52,7 @@ Audio mode.
 VIDEO = 2
 ```
 
-Video mode.
+视频文件模式。
 
 **Since:** 15
 
@@ -70,7 +70,7 @@ Video mode.
 DOCUMENT = 3
 ```
 
-Document mode.
+文档文件模式。
 
 **Since:** 15
 
@@ -88,7 +88,7 @@ Document mode.
 PICTURE = 4
 ```
 
-Image mode.
+图片文件模式。
 
 **Since:** 15
 

@@ -1,10 +1,10 @@
 # AtomicFile
 
-AtomicFile is a class used to perform atomic read and write operations on files.
+AtomicFile是一个用于对文件进行原子读写操作的类。
 
-A temporary file is written and renamed to the original file location, which ensures file integrity. If the write operation fails, the temporary file is deleted without modifying the original file content.
+在写操作时，通过写入临时文件，并在写入成功后将其重命名到原始文件位置来确保写入文件的完整性；而在写入失败时删除临时文件，不修改原始文件内容。
 
-You can call **finishWrite()** or **failWrite()** to write or roll back file content.
+使用者可以自行调用finishWrite或failWrite来完成文件内容的写入或回滚。
 
 **Since:** 15
 
@@ -14,13 +14,19 @@ You can call **finishWrite()** or **failWrite()** to write or roll back file con
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(path: string)
 ```
 
-Creates an **AtomicFile** class for a file in a specified path.
+对于给定路径的文件创建一个AtomicFile类。
 
 **Since:** 15
 
@@ -34,13 +40,13 @@ Creates an **AtomicFile** class for a file in a specified path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file. |
+| path | string | Yes | 文件的沙箱路径。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## delete
 
@@ -48,7 +54,7 @@ Creates an **AtomicFile** class for a file in a specified path.
 delete(): void
 ```
 
-Deletes the **AtomicFile** class, including the original files and temporary files.
+删除AtomicFile类，会删除原始文件和临时文件。
 
 **Since:** 15
 
@@ -65,14 +71,13 @@ Deletes the **AtomicFile** class, including the original files and temporary fil
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |
-| 13900027 | Read-only file system |
 | 13900042 | Internal error |
+| 13900027 | Read-only file system |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { fileIo as fs} from '@kit.CoreFileKit';
 import { util } from '@kit.ArkTS';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
@@ -80,7 +85,7 @@ let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let file = new fs.AtomicFile(`${pathDir}/read.txt`);
+  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     file.finishWrite();
@@ -88,8 +93,8 @@ try {
       let data = file.readFully();
       let decoder = util.TextDecoder.create('utf-8');
       let str = decoder.decodeToString(new Uint8Array(data));
-      console.info('AtomicFile readFully str is: ' + str);
       file.delete();
+      console.info(`Succeeded in delete atomicfile.`);
     },1000);
   })
 } catch (err) {
@@ -103,7 +108,7 @@ try {
 failWrite(): void
 ```
 
-Rolls back the file after the file fails to be written.
+文件写入失败后调用，将执行文件回滚操作。
 
 **Since:** 15
 
@@ -119,21 +124,20 @@ Rolls back the file after the file fails to be written.
 | --- | --- |
 | 13900042 | Internal error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { fileIo as fs} from '@kit.CoreFileKit';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
-let file = new fs.AtomicFile(`${pathDir}/write.txt`);
+let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
 try {
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
-    console.info('AtomicFile write succeed!');
+    console.info(`Succeeded in writing atomicFile.`);
   })
 } catch (err) {
   file.failWrite();
@@ -147,7 +151,7 @@ try {
 finishWrite(): void
 ```
 
-Finishes writing file data when the write operation is complete.
+在完成对startWrite返回流的写入操作时调用，表示文件写入成功。
 
 **Since:** 15
 
@@ -163,18 +167,17 @@ Finishes writing file data when the write operation is complete.
 | --- | --- |
 | 13900042 | Internal error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { fileIo as fs} from '@kit.CoreFileKit';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let file = new fs.AtomicFile(`${pathDir}/write.txt`);
+  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     file.finishWrite();
@@ -190,9 +193,9 @@ try {
 getBaseFile(): File
 ```
 
-Obtains the file object through the **AtomicFile** object.
+通过AtomicFile对象获取文件对象。
 
-The FD needs to be closed by calling **close()**.
+文件描述符fd需要由用户调用close方法关闭。
 
 **Since:** 15
 
@@ -206,34 +209,33 @@ The FD needs to be closed by calling **close()**.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | File object opened. |
+| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 打开的File对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900002 | No such file or directory |
 | 13900005 | IO error |
+| 13900002 | No such file or directory |
 | 13900012 | Permission denied |
 | 13900042 | Internal error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { fileIo as fs} from '@kit.CoreFileKit';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let atomicFile = new fs.AtomicFile(`${pathDir}/write.txt`);
+  let atomicFile = new fileIo.AtomicFile(`${pathDir}/write.txt`);
   let writeStream = atomicFile.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     atomicFile.finishWrite();
-    let File = atomicFile.getBaseFile();
-    console.info('AtomicFile getBaseFile File.fd is: ' + File.fd + ' path: ' + File.path + ' name: ' + File.name);
+    let file = atomicFile.getBaseFile();
+    console.info(`Succeeded in getting base file. fd: ${file.fd}, path: ${file.path}, name:${file.name}`);
   })
 } catch (err) {
   console.error(`Failed to get baseFile. Code: ${err.code}, message: ${err.message}`);
@@ -246,7 +248,7 @@ try {
 openRead(): ReadStream
 ```
 
-Creates a **ReadStream** instance.
+创建一个读文件流。
 
 **Since:** 15
 
@@ -260,7 +262,7 @@ Creates a **ReadStream** instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | ReadStream** instance obtained. |
+| [ReadStream](arkts-corefile-fileio-readstream-c.md) | 文件可读流。 |
 
 **Error codes:**
 
@@ -271,18 +273,17 @@ Creates a **ReadStream** instance.
 | 13900012 | Permission denied |
 | 13900042 | Internal error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { fileIo as fs} from '@kit.CoreFileKit';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let file = new fs.AtomicFile(`${pathDir}/read.txt`);
+  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     file.finishWrite();
@@ -291,10 +292,10 @@ try {
       readStream.on('readable', () => {
         const data = readStream.read();
         if (!data) {
-          console.error('AtomicFile read data is null.');
+          console.error(`Failed to read atomicfile, data is null.`);
           return;
         }
-        console.info('AtomicFile read data is: ' + data);
+        console.info(`Succeeded in reading atomicfile, data is: ${data}`);
       });
     },1000);
   })
@@ -309,7 +310,7 @@ try {
 readFully(): ArrayBuffer
 ```
 
-Reads all content of a file.
+读取文件全部内容。
 
 **Since:** 15
 
@@ -323,7 +324,7 @@ Reads all content of a file.
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Full content of a file. |
+| ArrayBuffer | 文件的全部内容。 |
 
 **Error codes:**
 
@@ -332,11 +333,10 @@ Reads all content of a file.
 | 13900005 | I/O error |
 | 13900042 | Internal error |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { fileIo as fs} from '@kit.CoreFileKit';
 import { util, buffer } from '@kit.ArkTS';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
@@ -344,7 +344,7 @@ let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let file = new fs.AtomicFile(`${pathDir}/read.txt`);
+  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     file.finishWrite();
@@ -352,7 +352,7 @@ try {
       let data = file.readFully();
       let decoder = util.TextDecoder.create('utf-8');
       let str = decoder.decodeToString(new Uint8Array(data));
-      console.info('AtomicFile readFully str is: ' + str);
+      console.info(`Succeeded in reading atomicfile fully, str is: ${str}`);
     },1000);
   })
 } catch (err) {
@@ -366,11 +366,11 @@ try {
 startWrite(): WriteStream
 ```
 
-Starts to write new file data in the **WriteStream** object returned.
+对文件开始新的写入操作。将返回一个WriteStream，用于在其中写入新的文件数据。
 
-If the file does not exist, create a file.
+当文件不存在时新建文件。
 
-Call **finishWrite()** if the write operation is successful; call **failWrite()** if the write operation fails.
+在写入文件完成后，写入成功需要调用finishWrite()，写入失败需要调用failWrite()。
 
 **Since:** 15
 
@@ -384,7 +384,7 @@ Call **finishWrite()** if the write operation is successful; call **failWrite()*
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | WriteStream** instance obtained. |
+| [WriteStream](arkts-corefile-fileio-writestream-c.md) | 文件可写流。 |
 
 **Error codes:**
 
@@ -393,25 +393,24 @@ Call **finishWrite()** if the write operation is successful; call **failWrite()*
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |
-| 13900027 | Read-only file system |
 | 13900042 | Internal error |
+| 13900027 | Read-only file system |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { fileIo as fs} from '@kit.CoreFileKit';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let file = new fs.AtomicFile(`${pathDir}/write.txt`);
+  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     file.finishWrite();
-    console.info('AtomicFile write finished!');
+    console.info(`Succeeded in writing atomicfile finished.`);
   })
 } catch (err) {
   console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);

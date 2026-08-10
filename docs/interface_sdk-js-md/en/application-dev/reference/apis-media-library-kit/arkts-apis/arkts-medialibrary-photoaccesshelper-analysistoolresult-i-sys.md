@@ -12,15 +12,21 @@ Result of an analysis tool execution.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## errCode
 
 ```TypeScript
 errCode: int
 ```
 
-Error code of the tool execution. The value 0 indicates success.Possible error codes:\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_23800203 - Temperature is too high.\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_23800204 - Battery level is too low.\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_23800205 - Storage space is insufficient.\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_23800206 - Power saving mode is enabled.\_\_\_HTML\_TAG\_DESC\_USD\_4\_\_\_23800207 - Intelligent analysis service is already running.\_\_\_HTML\_TAG\_DESC\_USD\_5\_\_\_23800208 - Intelligent analysis switch is disabled.\_\_\_HTML\_TAG\_DESC\_USD\_6\_\_\_23800209 - Analysis service error. Check the logs for details.\_\_\_HTML\_TAG\_DESC\_USD\_7\_\_\_23800301 - Internal system error.
+Error code of the tool execution. The value 0 indicates success.Possible error codes:&lt;br&gt;23800203 - Temperature is too high.&lt;br&gt;23800204 - Battery level is too low.&lt;br&gt;23800205 - Storage space is insufficient.&lt;br&gt;23800206 - Power saving mode is enabled.&lt;br&gt;23800207 - Intelligent analysis service is already running.&lt;br&gt;23800208 - Intelligent analysis switch is disabled.&lt;br&gt;23800209 - Analysis service error. Check the logs for details.&lt;br&gt;23800301 - Internal system error.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.1.0
 

@@ -10,13 +10,19 @@
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
+## 导入模块
+
+```TypeScript
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
+```
+
 ## addEntry
 
 ```TypeScript
 addEntry(type: string, value: ValueType): void
 ```
 
-往一个PasteDataRecord中额外添加一种样式的数据。此方式添加的MIME类型都不是Record的默认类型，粘贴时只能使用[getData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口读取对应数据。
+往一个PasteDataRecord中额外添加一种样式的数据。此方式添加的MIME类型都不是Record的默认类型，粘贴时只能使用[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata)接口读取对应数据。
 
 **起始版本：** 14
 
@@ -30,21 +36,25 @@ addEntry(type: string, value: ValueType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 剪贴板数据对应的MIME类型， 可以是\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_中已定义的类型， 包括HTML类型，Want类型，纯文本类型，URI类型，PixelMap类型；也可以是自定义的MIME类型，开发者可自定义此参数值，mimeType长度不能超过1024字节。 |
-| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 自定义数据内容。 |
+| type | string | 是 | 剪贴板数据对应的MIME类型， 可以是[常量](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#常量)中已定义的类型， 包括HTML类型，Want类型，纯文本类型，URI类型，PixelMap类型；也可以是自定义的MIME类型，开发者可自定义此参数值，mimeType长度不能超过1024字节。 |
+| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 自定义数据内容。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
+// 构建HTML内容字符串
 let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
+// 创建URI类型数据条目
 let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
+// 添加纯文本类型数据
 record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
+// 添加HTML类型数据
 record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
 ```
 
@@ -72,15 +82,15 @@ convertToText(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | 是 | 回调函数，当转换成功，err为undefined，data为强制转换的文本内容；否则返回错误信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，当转换成功，err为undefined，data为强制转换的文本内容；否则返回错误信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: Incorrect parameters types. |
+| 401 | Possible causes: Incorrect parameters types. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -88,7 +98,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
 record.convertToText((err: BusinessError, data: string) => {
     if (err) {
-        console.error(`Failed to convert to text. Cause: ${err.message}`);
+        console.error(`Failed to convert to text. errorCode: ${err.code}, errorMessage: ${err.message}.`);
         return;
     }
     console.info(`Succeeded in converting to text. Data: ${data}`);
@@ -121,7 +131,7 @@ convertToText(): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回强制转换的文本内容。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -130,7 +140,7 @@ let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability
 record.convertToText().then((data: string) => {
     console.info(`Succeeded in converting to text. Data: ${data}`);
 }).catch((err: BusinessError) => {
-    console.error(`Failed to convert to text. Cause: ${err.message}`);
+    console.error(`Failed to convert to text. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -166,11 +176,9 @@ getData(type: string): Promise<ValueType>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -183,36 +191,13 @@ record.getData(pasteboard.MIMETYPE_TEXT_PLAIN).then((value: pasteboard.ValueType
     let textPlainContent = value as string;
     console.info('Success to get text/plain value. value is: ' + textPlainContent);
 }).catch((err: BusinessError) => {
-    console.error('Failed to get text/plain value. Cause: ' + err.message);
+    console.error(`Failed to get text/plain value. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) => {
     let uri = value as string;
     console.info('Success to get text/uri value. value is: ' + uri);
 }).catch((err: BusinessError) => {
-    console.error('Failed to get text/uri value. Cause: ' + err.message);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
-let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
-record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
-record.getData(pasteboard.MIMETYPE_TEXT_PLAIN).then((value: pasteboard.ValueType) => {
-    let textPlainContent = value as string;
-    console.info('Success to get text/plain value. value is: ' + textPlainContent);
-}).catch((err: BusinessError): void => {
-    console.error('Failed to get text/plain value. Cause: ' + err.message);
-});
-record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) => {
-    let uri = value as string;
-    console.info('Success to get text/uri value. value is: ' + uri);
-}).catch((err: BusinessError): void => {
-    console.error('Failed to get text/uri value. Cause: ' + err.message);
+    console.error(`Failed to get text/uri value. errorCode: ${err.code}, errorMessage: ${err.message}.`);
 });
 ```
 
@@ -248,9 +233,9 @@ getValidTypes(types: Array<string>): Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
@@ -290,7 +275,7 @@ toPlainText(): string
 | --- | --- |
 | string | 纯文本内容。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_HTML, '<html>hello</html>');
@@ -306,7 +291,7 @@ data: Record<string, ArrayBuffer>
 
 自定义数据内容。
 
-**类型：** Record&lt;string, ArrayBuffer&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ArrayBuffer&gt;
 
 **起始版本：** 9
 
@@ -426,7 +411,7 @@ want: Want
 
 Want内容。
 
-**类型：** Want
+**类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 7
 

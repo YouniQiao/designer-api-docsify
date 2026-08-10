@@ -1,6 +1,6 @@
 # Constants
 
-Provides constants of the distributed KV store.
+分布式键值数据库常量。
 
 **Since:** 9
 
@@ -10,13 +10,19 @@ Provides constants of the distributed KV store.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedKVStore } from 'kits/@kit.ArkData';
+```
+
 ## MAX_BATCH_SIZE
 
 ```TypeScript
 readonly MAX_BATCH_SIZE: number
 ```
 
-Maximum number of batch operations allowed, which is 128.
+值为128，表示最大批处理操作数量。
 
 **Type:** number
 
@@ -34,7 +40,7 @@ Maximum number of batch operations allowed, which is 128.
 readonly MAX_KEY_LENGTH: number
 ```
 
-Maximum length of a key in the database, which is 1024 bytes.
+值为1024，表示数据库中Key允许的最大长度，单位字节。
 
 **Type:** number
 
@@ -52,7 +58,7 @@ Maximum length of a key in the database, which is 1024 bytes.
 readonly MAX_KEY_LENGTH_DEVICE: number
 ```
 
-Maximum length of a key in a device KV store, which is 896 bytes.
+值为896，表示设备协同数据库中Key允许的最大长度，单位字节。
 
 **Type:** number
 
@@ -70,7 +76,7 @@ Maximum length of a key in a device KV store, which is 896 bytes.
 readonly MAX_QUERY_LENGTH: number
 ```
 
-Maximum query length, which is 512000 bytes.
+值为512000，表示最大查询长度，单位字节。
 
 **Type:** number
 
@@ -88,7 +94,7 @@ Maximum query length, which is 512000 bytes.
 readonly MAX_STORE_ID_LENGTH: number
 ```
 
-Maximum length of a KV store ID, which is 128 bytes.
+值为128，表示数据库标识符允许的最大长度，单位字节。
 
 **Type:** number
 
@@ -106,7 +112,7 @@ Maximum length of a KV store ID, which is 128 bytes.
 readonly MAX_VALUE_LENGTH: number
 ```
 
-Maximum length of a value in the database, which is 4194303 bytes.
+值为4194303，表示数据库中Value允许的最大长度，单位字节。
 
 **Type:** number
 

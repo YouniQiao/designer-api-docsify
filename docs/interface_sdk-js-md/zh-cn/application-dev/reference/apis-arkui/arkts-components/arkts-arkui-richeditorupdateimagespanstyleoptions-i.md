@@ -2,9 +2,9 @@
 
 图片的样式选项。
 
-继承自[RichEditorSpanStyleOptions]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md)。
 
-**继承/实现关系：** RichEditorUpdateImageSpanStyleOptions extends [RichEditorSpanStyleOptions](../arkts-apis/arkts-arkui-component/richeditor-richeditorspanstyleoptions-i.md)
+**继承/实现关系：** RichEditorUpdateImageSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md)
 
 **起始版本：** 10
 
@@ -22,7 +22,7 @@ imageStyle: RichEditorImageSpanStyle
 
 图片样式。
 
-**类型：** RichEditorImageSpanStyle
+**类型：** [RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md)
 
 **起始版本：** 10
 

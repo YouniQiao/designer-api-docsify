@@ -1,5 +1,11 @@
 # isFoldable
 
+## 导入模块
+
+```TypeScript
+import { display } from 'kits/@kit.ArkUI';
+```
+
 ## isFoldable
 
 ```TypeScript
@@ -28,9 +34,9 @@ function isFoldable(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| 1400003 | This display manager service works abnormally. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let ret: boolean = false;

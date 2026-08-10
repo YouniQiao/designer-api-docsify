@@ -1,5 +1,11 @@
 # getVss
 
+## 导入模块
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getVss
 
 ```TypeScript
@@ -22,7 +28,7 @@ function getVss(): bigint
 | --- | --- |
 | bigint | ����Ӧ�ý���ռ�õ������ڴ��С����λΪKB�� |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';

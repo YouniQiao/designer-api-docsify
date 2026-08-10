@@ -8,13 +8,19 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { font } from 'kits/@kit.ArkUI';
+```
+
 ## familyName
 
 ```TypeScript
 familyName: string | Resource
 ```
 
-The font name to register.
+设置注册的字体名称。
 
 **Type:** string \| Resource
 
@@ -34,7 +40,11 @@ The font name to register.
 familySrc: string | Resource
 ```
 
-The path of the font file.
+设置注册字体文件的路径。
+
+**说明：**
+
+读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。
 
 **Type:** string \| Resource
 

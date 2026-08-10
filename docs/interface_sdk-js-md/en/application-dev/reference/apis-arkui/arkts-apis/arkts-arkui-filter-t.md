@@ -4,7 +4,7 @@
 export type Filter = uiEffect.Filter
 ```
 
-Filter
+导入Filter类型对象。
 
 **Since:** 23
 

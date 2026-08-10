@@ -1,6 +1,6 @@
 # Sequenceable
 
-Writes objects of classes to a **MessageParcel** and reads them from the **MessageParcel** during IPC.
+在进程间通信（IPC）期间，将类的对象写入MessageParcel并从MessageParcel中恢复它们。
 
 **Since:** 7
 
@@ -14,13 +14,19 @@ Writes objects of classes to a **MessageParcel** and reads them from the **Messa
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
+## Modules to Import
+
+```TypeScript
+import { rpc } from 'kits/@kit.IPCKit';
+```
+
 ## marshalling
 
 ```TypeScript
 marshalling(dataOut: MessageParcel): boolean
 ```
 
-Marshals the sequenceable object into a **MessageParcel** object.
+将此可序列对象封送到MessageParcel中。
 
 **Since:** 7
 
@@ -38,15 +44,15 @@ Marshals the sequenceable object into a **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataOut | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageParcel** object to which the sequenceable object is to be marshaled. |
+| dataOut | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 可序列对象将被封送到的MessageParcel对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | true：封送成功，false：封送失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -90,7 +96,7 @@ try {
 unmarshalling(dataIn: MessageParcel): boolean
 ```
 
-Unmarshals this sequenceable object from a **MessageParcel** object.
+从MessageParcel中解封此可序列对象。
 
 **Since:** 7
 
@@ -108,15 +114,15 @@ Unmarshals this sequenceable object from a **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | MessageParcel** object in which the sequenceable object is to be unmarshaled. |
+| dataIn | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 已将可序列对象封送到其中的MessageParcel对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+| boolean | true：反序列化成功，false：反序列化失败。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

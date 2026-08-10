@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+```
+
 ## close
 
 ```TypeScript
@@ -68,5 +74,5 @@ getState(): CommonState
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 返回对应的弹窗状态。 |
+| [CommonState](arkts-arkui-promptaction-commonstate-e.md) | 返回对应的弹窗状态。 |
 

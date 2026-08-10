@@ -22,7 +22,7 @@ Free = 0
 
 标题随着内容滚动大小联动的动效在title设置为ResourceStr和NavigationCommonTitle时生效，设置成其余自定义节点类型时字体样式无法变化，下拉时只影响标题栏偏移。
 
-可滚动组件不满一屏时，如果想使用联动效果，就要使用滚动组件提供的[edgeEffect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_接口将options参数设置为true。未滚动状态，标题栏高度与Full模式一致；滚动时，标题栏的最小高度与Mini模式一致。
+可滚动组件不满一屏时，如果想使用联动效果，就要使用滚动组件提供的[edgeEffect](ListAttribute#edgeEffect)接口将options参数设置为true。未滚动状态，标题栏高度与Full模式一致；滚动时，标题栏的最小高度与Mini模式一致。
 
 **起始版本：** 8
 

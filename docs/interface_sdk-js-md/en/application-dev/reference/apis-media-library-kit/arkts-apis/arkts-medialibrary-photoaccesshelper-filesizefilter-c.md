@@ -10,6 +10,12 @@ Describes the configuration for file size filtering.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## extraFileSize
 
 ```TypeScript
@@ -20,7 +26,7 @@ Maximum file size in **FilterOperator.BETWEEN** mode. The default value is **-1*
 
 The unit is bytes.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 19
 
@@ -42,7 +48,7 @@ File size used for filtering.
 
 The unit is bytes.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 19
 
@@ -64,7 +70,7 @@ Filter operator.
 
 For example, files can be filtered based on being greater than or less than a certain file size.
 
-**Type:** FilterOperator
+**Type:** [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md)
 
 **Since:** 19
 

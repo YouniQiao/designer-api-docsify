@@ -1,8 +1,7 @@
 # HistoryVersion
 
-Represents the historical version information of the device-cloud file when the  
-[gethistoryversionlist]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method of the  
-[FileVersion]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ class is called.
+端云文件历史版本信息，调用端云文件版本管理类[FileVersion](arkts-corefile-cloudsync-fileversion-c.md)的  
+[gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist)方法时，历史版本列表中的属性。
 
 **Since:** 20
 
@@ -12,17 +11,23 @@ Represents the historical version information of the device-cloud file when the
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## Modules to Import
+
+```TypeScript
+import { cloudSync } from 'kits/@kit.CoreFileKit';
+```
+
 ## autoResolved
 
 ```TypeScript
 autoResolved: boolean
 ```
 
-Whether the current version is the one where conflicts were automatically resolved.
+当前版本是否为自动解决冲突的版本。
 
-When the application is set to manually resolve conflicts, **false** is returned by default, which is meaningless.
+应用设置手动解冲突时，默认返回false，无意义。
 
-When the application is set to automatically resolve conflicts, the device side automatically resolves conflicts.The value **true** means conflicts exist in the current version and have been automatically resolved by the device-cloud service; the value **false** means no conflict exists and conflicts are not automatically resolved.
+应用设置自动解冲突时，端侧会自动解冲突，true表示当前版本存在冲突，端云服务已自动解决冲突，false表示无冲突，未自动解冲突。
 
 **Type:** boolean
 
@@ -40,9 +45,9 @@ When the application is set to automatically resolve conflicts, the device side 
 editedTime: long
 ```
 
-File content modification timestamp, in milliseconds.
+文件内容修改的时间戳，单位：ms。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -58,9 +63,9 @@ File content modification timestamp, in milliseconds.
 fileSize: long
 ```
 
-File size in bytes.
+文件大小，单位：Byte。
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 20
 
@@ -76,7 +81,7 @@ File size in bytes.
 originalFileName: string
 ```
 
-File name of the current version.
+当前版本对应的文件名。
 
 **Type:** string
 
@@ -94,7 +99,7 @@ File name of the current version.
 sha256: string
 ```
 
-Hash value of the file content of the current version.
+当前版本对应文件内容的哈希值。
 
 **Type:** string
 
@@ -112,7 +117,7 @@ Hash value of the file content of the current version.
 versionId: string
 ```
 
-File version.
+文件版本号。
 
 **Type:** string
 

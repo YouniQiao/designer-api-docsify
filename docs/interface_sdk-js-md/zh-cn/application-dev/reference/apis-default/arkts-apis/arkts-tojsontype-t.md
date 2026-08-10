@@ -4,9 +4,9 @@
 export declare type ToJSONType<T> = (value: T) => jsonx.JsonElement
 ```
 
-    **说明：**  
-    
-    静态ArkTS序列化接口，需开发者自己实现。
+> **说明：**
+> 
+> 静态ArkTS序列化接口，需开发者自己实现。
 
 **起始版本：** 23
 
@@ -22,11 +22,11 @@ export declare type ToJSONType<T> = (value: T) => jsonx.JsonElement
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | T | 是 | toJson value  |
+| value | T | 是 | toJson value |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| jsonx.JsonElement | Json stringify element object  |
+| jsonx.JsonElement | Json stringify element object |
 

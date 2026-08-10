@@ -5,7 +5,7 @@
 
 ## 子组件
 
-可以包含[Span]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_、[ImageSpan]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ 子组件。
+可以包含[Span]{@link ./span}、[ImageSpan]{@link ./image_span} 子组件。
 
 ## ContainerSpan
 

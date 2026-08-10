@@ -1,6 +1,6 @@
 # AutoCapitalizationMode
 
-Enumerates automatic capitalization modes. This only provides API capabilities; the specific implementation depends on the input method application.
+自动大小写模式类型，只提供接口能力，具体实现由输入法应用决定。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates automatic capitalization modes. This only provides API capabilities; 
 NONE = 0
 ```
 
-Default state; automatic capitalization is disabled.
+默认状态，不进行自动大小写处理。
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ Default state; automatic capitalization is disabled.
 WORDS = 1
 ```
 
-Automatic capitalization is applied per word: The first character of each word is capitalized, others are lowercase.
+按单词自动大小写，即输入单词的首个字符大写，其他字符小写。
 
 **Since:** 20
 
@@ -56,7 +56,7 @@ Automatic capitalization is applied per word: The first character of each word i
 SENTENCES = 2
 ```
 
-Automatic capitalization is applied per sentence: The first character of each sentence is capitalized, others are lowercase.
+按句子自动大小写，即输入句子的首个字符大写，其他字符小写。
 
 **Since:** 20
 
@@ -76,7 +76,7 @@ Automatic capitalization is applied per sentence: The first character of each se
 ALL_CHARACTERS = 3
 ```
 
-Automatic capitalization applied to all characters.
+按全字符自动大小写。
 
 **Since:** 20
 

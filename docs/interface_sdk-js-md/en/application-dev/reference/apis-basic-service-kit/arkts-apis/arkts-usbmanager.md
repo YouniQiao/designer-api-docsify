@@ -1,16 +1,16 @@
 # @ohos.usbManager
 
-The **usbManager** module provides USB device management functions, including USB device list query, bulk data transfer, control transfer, and permission control on the host side as well as USB interface management,and function switch and query on the device side.
-    **NOTE**  
-    
-    Perform the following steps when using the APIs with the [usbManager.USBDevicePipe]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ parameter:  
-    **Before use**:  
-    1. Call [usbManager.getDevices]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to obtain the USB device list.  
-    2. Call [usbManager.requestRight]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to request the temporary device access permission.  
-    3. Call [usbManager.connectDevice]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_ to obtain [usbManager.USBDevicePipe]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_ as an input parameter.  
-    **After use**:  
-    Call [usbManager.closePipe]\_\_\_JSDOC\_LINK\_DESC\_USD\_5\_\_\_ to close a USB device pipe.  
-    
+本模块主要提供管理USB设备的相关功能，包括主设备上查询USB设备列表、批量数据传输、控制命令传输、权限控制等；从设备上端口管理、功能切换及查询等。
+
+> **使用说明**
+> 
+> 凡是参数类型为[usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)的接口,都需要执行如下操作：
+> **在使用接口前：**
+> 1. 调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备列表。
+> 2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)获取请求权限。
+> 3. 调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)得到[usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)作为参数。
+> **在使用接口后：**
+> 调用[usbManager.closePipe](arkts-basicservices-usbmanager-closepipe-f.md#closepipe)关闭设备消息控制通道。
 
 **Since:** 9
 
@@ -20,87 +20,93 @@ The **usbManager** module provides USB device management functions, including US
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## Summary
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md#bulktransfer) | Performs bulk transfer. This API uses a promise to return the result. |
-| [cancelAccessoryRight](arkts-basicservices-usbmanager-cancelaccessoryright-f.md#cancelaccessoryright) | Cancels the permission of the current application to access USB accessories.You need to call [usbManager.getAccessoryList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain the accessory list and use [USBAccessory]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ as a parameter. |
-| [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface) | Claims a USB device interface. |
-| [closeAccessory](arkts-basicservices-usbmanager-closeaccessory-f.md#closeaccessory) | Closes the accessory file descriptor.You need to call [usbManager.openAccessory]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain the accessory list and use [USBAccessoryHandle]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ as a parameter. |
-| [closePipe](arkts-basicservices-usbmanager-closepipe-f.md#closepipe) | Closes a USB device pipe.  1. Call [usbManager.getDevices]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain the USB device list.2. Call [usbManager.requestRight]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to request the device access permission.3. Call [usbManager.connectDevice]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain **devicepipe** as an input parameter. |
-| [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) | Connects to the USB device based on the device information returned by **getDevices()**. If the USB service is abnormal, **undefined** may be returned. Check whether the return value of the API is empty.  1. Call [usbManager.getDevices]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain the USB device list.2. Call [usbManager.requestRight]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to request the device access permission. |
-| [controlTransfer](arkts-basicservices-usbmanager-controltransfer-f.md#controltransfer) | Performs control transfer. This API uses a promise to return the result. |
-| [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist) | Obtains the list of USB accessories connected to the host. |
-| [getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices) | Obtains the list of USB devices connected to the host. |
-| [getFileDescriptor](arkts-basicservices-usbmanager-getfiledescriptor-f.md#getfiledescriptor) | Obtains a file descriptor. |
-| [getRawDescriptor](arkts-basicservices-usbmanager-getrawdescriptor-f.md#getrawdescriptor) | Obtains a raw USB descriptor. If the USB service is abnormal, **undefined** may be returned. Check whether the return value of the API is empty. |
-| [hasAccessoryRight](arkts-basicservices-usbmanager-hasaccessoryright-f.md#hasaccessoryright) | Checks whether the application has the permission to access the USB accessory.You need to call [usbManager.getAccessoryList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain the accessory list and use [USBAccessory]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ as a parameter. |
-| [hasRight](arkts-basicservices-usbmanager-hasright-f.md#hasright) | Checks whether the application has the permission to access the device.Checks whether the user, for example, the application or system, has the device access permissions. The value **  true** is returned if the user has the device access permissions; the value **false** is returned otherwise. |
-| [openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openaccessory) | Obtains the accessory handle and opens the accessory file descriptor. Then, the host can communicate with the accessory through the **read** and **write** APIs provided by Core File Kit.You need to call [usbManager.getAccessoryList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain the accessory list and use [USBAccessory]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ as a parameter. |
-| [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseinterface) | Releases the claimed communication interface. |
-| [removeRight](arkts-basicservices-usbmanager-removeright-f.md#removeright) | Removes the device access permission for the application. System applications are granted the device access permission by default, and calling this API will not revoke the permission. |
-| [requestAccessoryRight](arkts-basicservices-usbmanager-requestaccessoryright-f.md#requestaccessoryright) | Requests the permission to access a USB accessory for a specified application. This API uses a promise to return the result.You need to call [usbManager.getAccessoryList]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ to obtain the accessory list and use [USBAccessory]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ as a parameter. |
-| [requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright) | Requests the temporary device access permission for the application. This API uses a promise to return the result.System applications are granted the device access permission by default, and you do not need to apply for the permission separately. |
-| [resetUsbDevice](arkts-basicservices-usbmanager-resetusbdevice-f.md#resetusbdevice) | Resets a USB peripheral. |
-| [setConfiguration](arkts-basicservices-usbmanager-setconfiguration-f.md#setconfiguration) | Sets the device configuration. |
-| [setInterface](arkts-basicservices-usbmanager-setinterface-f.md#setinterface) | Sets a USB interface. |
-| [usbCancelTransfer](arkts-basicservices-usbmanager-usbcanceltransfer-f.md#usbcanceltransfer) | Cancels an asynchronous USB data transfer request. |
-| [usbControlTransfer](arkts-basicservices-usbmanager-usbcontroltransfer-f.md#usbcontroltransfer) | Performs control transfer. This API uses a promise to return the result. |
-| [usbSubmitTransfer](arkts-basicservices-usbmanager-usbsubmittransfer-f.md#usbsubmittransfer) | Requests a USB data transfer. |
+| [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md#bulktransfer) | 批量传输。使用Promise异步回调。 |
+| [cancelAccessoryRight](arkts-basicservices-usbmanager-cancelaccessoryright-f.md#cancelaccessoryright) | 取消当前应用程序访问USB配件的权限。需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist)获取配件列表，得到  [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)作为参数。 |
+| [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface) | 声明对USB设备某个接口的控制权。 |
+| [closeAccessory](arkts-basicservices-usbmanager-closeaccessory-f.md#closeaccessory) | 关闭配件文件描述符。需要调用[usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openaccessory)获取配件列表，得到  [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md)作为参数。 |
+| [closePipe](arkts-basicservices-usbmanager-closepipe-f.md#closepipe) | 关闭设备消息控制通道。  1. 需要调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备列表；2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)获取设备请求权限；3. 调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)得到devicepipe作为参数。 |
+| [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) | 根据getDevices()返回的设备信息打开USB设备。如果USB服务异常，可能返回`undefined`，注意需要对接口返回值做判空处理。  1. 需要调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备信息以及device;2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)请求使用该设备的权限。 |
+| [controlTransfer](arkts-basicservices-usbmanager-controltransfer-f.md#controltransfer) | 控制传输。使用Promise异步回调。 |
+| [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist) | 获取当前已接入主机的USB配件列表。 |
+| [getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices) | 获取接入主设备的USB设备列表。 |
+| [getFileDescriptor](arkts-basicservices-usbmanager-getfiledescriptor-f.md#getfiledescriptor) | 获取文件描述符。 |
+| [getRawDescriptor](arkts-basicservices-usbmanager-getrawdescriptor-f.md#getrawdescriptor) | 获取原始的USB描述符。如果USB服务异常，可能返回`undefined`，注意需要对接口返回值做判空处理。 |
+| [hasAccessoryRight](arkts-basicservices-usbmanager-hasaccessoryright-f.md#hasaccessoryright) | 检查应用程序是否有权访问USB配件。需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist)获取配件列表，得到  [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)作为参数。 |
+| [hasRight](arkts-basicservices-usbmanager-hasright-f.md#hasright) | 判断是否有权访问该设备。如果“使用者”（如各种App或系统）有权访问设备则返回true；无权访问设备则返回false。 |
+| [openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openaccessory) | 获取配件句柄并打开配件文件描述符。之后可以通过CoreFileKit提供的read/write接口和配件进行通信。需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist)获取配件列表，得到  [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)作为参数。 |
+| [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseinterface) | 释放claim过的通信接口。 |
+| [removeRight](arkts-basicservices-usbmanager-removeright-f.md#removeright) | 移除软件包访问设备的权限。系统应用默认拥有访问设备权限，调用此接口不会产生影响。 |
+| [requestAccessoryRight](arkts-basicservices-usbmanager-requestaccessoryright-f.md#requestaccessoryright) | 为指定应用程序申请访问USB配件的访问权限。使用Promise异步回调。需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist)获取配件列表，得到  [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)作为参数。 |
+| [requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright) | 请求软件包的临时权限以访问设备。使用Promise异步回调。系统应用默认拥有访问设备权限，无需调用此接口申请。 |
+| [resetUsbDevice](arkts-basicservices-usbmanager-resetusbdevice-f.md#resetusbdevice) | 重置USB外设。 |
+| [setConfiguration](arkts-basicservices-usbmanager-setconfiguration-f.md#setconfiguration) | 设置设备配置。 |
+| [setInterface](arkts-basicservices-usbmanager-setinterface-f.md#setinterface) | 设置设备接口。 |
+| [usbCancelTransfer](arkts-basicservices-usbmanager-usbcanceltransfer-f.md#usbcanceltransfer) | 取消异步传输请求。 |
+| [usbControlTransfer](arkts-basicservices-usbmanager-usbcontroltransfer-f.md#usbcontroltransfer) | 控制传输。使用Promise异步回调。 |
+| [usbSubmitTransfer](arkts-basicservices-usbmanager-usbsubmittransfer-f.md#usbsubmittransfer) | 提交异步传输请求。 |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [addAccessoryRight](arkts-basicservices-usbmanager-addaccessoryright-f-sys.md#addaccessoryright) | Adds the permission to applications for accessing USB accessories.  [usbManager.requestAccessoryRight]{(@link usbManager.requestAccessoryRight)} triggers a dialog box to request user authorization. **addAccessoryRight** does not trigger a dialog box but directly adds the device access permission for the application. |
-| [addDeviceAccessRight](arkts-basicservices-usbmanager-adddeviceaccessright-f-sys.md#adddeviceaccessright) | Adds the device access permission for the application. System applications are granted the device access permission by default, and calling this API will not revoke the permission.  [usbManager.requestRight]{(@link usbManager.requestRight)} triggers a dialog box to request for user authorization, whereas addDeviceAccessRight adds the access permission directly without displaying a dialog box. |
-| [getCurrentFunctions](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md#getcurrentfunctions) | Obtains the numeric mask combination for the USB function list in Device mode. When the developer mode is disabled,  **undefined** may be returned if no device is connected. Check whether the return value of the API is empty. |
-| [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md#getdevicefunctions) | Obtains the numeric mask combination for the USB function list in Device mode. When the developer mode is disabled,  **undefined** may be returned if no device is connected. Check whether the return value of the API is empty. |
+| [addAccessoryRight](arkts-basicservices-usbmanager-addaccessoryright-f-sys.md#addaccessoryright) | 为应用程序添加访问USB配requestAccessoryRight件权限。  [usbManager.]{(@link usbManager.requestAccessoryRight)}会触发弹窗请求用户授权；addAccessoryRight不会触发弹窗，而是直接添加应用程序访问设备的权限。 |
+| [addDeviceAccessRight](arkts-basicservices-usbmanager-adddeviceaccessright-f-sys.md#adddeviceaccessright) | 添加软件包访问设备的权限。系统应用默认拥有访问设备权限，调用此接口不会产生影响。  [usbManager.requestRight]{(@link usbManager.requestRight)}会触发弹框请求用户授权；addDeviceAccessRight不会触发弹框，而是直接添加软件包访问设备的权限。 |
+| [getCurrentFunctions](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md#getcurrentfunctions) | 在设备模式下，获取当前的USB功能列表的数字组合掩码。开发者模式关闭时，如果没有设备接入，接口可能返回`undefined`，注意需要对接口返回值做判空处理。 |
+| [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md#getdevicefunctions) | 在设备模式下，获取当前的USB功能列表的数字组合掩码。开发者模式关闭时，如果没有设备接入，接口可能返回`undefined`，注意需要对接口返回值做判空处理。 |
 | [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md#getdevicefunctions-1) | Obtains the numeric mask combination for the current USB function list in Device mode. |
-| [getFunctionsFromString](arkts-basicservices-usbmanager-getfunctionsfromstring-f-sys.md#getfunctionsfromstring) | Converts the USB function list in the string format to a numeric mask in Device mode. |
-| [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md#getportlist) | Obtains the list of all physical USB ports. When the developer mode is disabled, **undefined** may be returned if no device is connected. Check whether the return value of the API is empty. |
-| [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md#getportsupportmodes) | Obtains the mask combination for the supported mode list of a given USB port. |
-| [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getports) | Obtains the list of all physical USB ports. When the developer mode is disabled, **undefined** may be returned if no device is connected. Check whether the return value of the API is empty. |
-| [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md#getstringfromfunctions) | Converts the USB function list in the numeric mask format to a string in Device mode. |
+| [getFunctionsFromString](arkts-basicservices-usbmanager-getfunctionsfromstring-f-sys.md#getfunctionsfromstring) | 在设备模式下，将字符串形式的USB功能列表转化为数字掩码。 |
+| [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md#getportlist) | 获取所有物理USB端口描述信息。开发者模式关闭时，如果没有设备接入，接口可能返回`undefined`，注意需要对接口返回值做判空处理。 |
+| [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md#getportsupportmodes) | 获取指定的端口支持的模式列表的组合掩码。 |
+| [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getports) | 获取所有物理USB端口描述信息。开发者模式关闭时，如果没有设备接入，接口可能返回`undefined`，注意需要对接口返回值做判空处理。 |
+| [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md#getstringfromfunctions) | 在设备模式下，将数字掩码形式的USB功能列表转化为字符串。 |
 | [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md#getstringfromfunctions-1) | Converts the numeric mask combination of a given USB function list to a string descriptor. |
-| [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getsupportedmodes) | Obtains the mask combination for the supported mode list of a given USB port. |
-| [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md#setcurrentfunctions) | Sets the current USB function list in Device mode. This API uses a promise to return the result. |
-| [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md#setdevicefunctions) | Sets the current USB function list in Device mode. This API uses a promise to return the result. |
+| [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getsupportedmodes) | 获取指定的端口支持的模式列表的组合掩码。 |
+| [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md#setcurrentfunctions) | 在设备模式下，设置当前的USB功能列表。使用Promise异步回调。 |
+| [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md#setdevicefunctions) | 在设备模式下，设置当前的USB功能列表。使用Promise异步回调。 |
 | [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md#setdevicefunctions-1) | Sets the current USB function list in Device mode. |
-| [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md#setportroletypes) | Sets the role types supported by a specified port, which can be **powerRole** (for charging) and **dataRole** (for data transfer). This API uses a promise to return the result. |
-| [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md#setportroles) | Sets the role types supported by a specified port, which can be **powerRole** (for charging) and **dataRole** (for data transfer). This API uses a promise to return the result. |
-| [usbFunctionsFromString](arkts-basicservices-usbmanager-usbfunctionsfromstring-f-sys.md#usbfunctionsfromstring) | Converts the USB function list in the string format to a numeric mask in Device mode. |
-| [usbFunctionsToString](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md#usbfunctionstostring) | Converts the USB function list in the numeric mask format to a string in Device mode. |
+| [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md#setportroletypes) | 设置指定的端口支持的角色模式，包含充电角色、数据传输角色。使用Promise异步回调。 |
+| [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md#setportroles) | 设置指定的端口支持的角色模式，包含充电角色、数据传输角色。使用Promise异步回调。 |
+| [usbFunctionsFromString](arkts-basicservices-usbmanager-usbfunctionsfromstring-f-sys.md#usbfunctionsfromstring) | 在设备模式下，将字符串形式的USB功能列表转化为数字掩码。 |
+| [usbFunctionsToString](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md#usbfunctionstostring) | 在设备模式下，将数字掩码形式的USB功能列表转化为字符串。 |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md) | Transfers USB data packets in an asynchronous manner. |
-| [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Describes the USB accessory information. |
-| [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | Describes the USB accessory handle. |
-| [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) | Represents the USB configuration. One [USBDevice]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ can contain multiple **USBConfig**  instances. |
-| [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md) | Represents control transfer parameters. |
-| [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | Represents the USB device information. |
-| [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Represents a USB device pipe, which is used to determine a USB device. |
-| [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md) | Represents control transfer parameters. |
-| [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through  [USBInterface]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
-| [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md) | Represents a USB interface. One [USBConfiguration]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ object can contain multiple *  *USBInterface** instances, each providing a specific function. |
-| [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | As a USB data transfer interface, it is required for a client to initiate a transfer request. |
-| [UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md) | Describes packet information returned in real time by the transfer callback. |
+| [SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md) | Usb异步传输回调。 |
+| [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | USB配件信息。 |
+| [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | USB配件句柄。 |
+| [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) | USB配置，一个[USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)中可以含有多个配置。 |
+| [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md) | 控制传输参数。 |
+| [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | USB设备信息。 |
+| [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | USB设备消息传输通道，用于确定设备。 |
+| [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md) | 控制传输参数。 |
+| [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | 通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)获取。 |
+| [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md) | 一个[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)中可以含有多个USBInterface，每个USBInterface提供一个功能。 |
+| [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | 作为通用USB数据传输接口，客户端需要填充这个对象中的参数，用以发起传输请求。 |
+| [UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md) | 实时传输模式回调返回的分包信息。 |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md) | Represents a USB port. |
-| [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md) | Enumerates USB port roles. |
+| [USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md) | USB设备端口。 |
+| [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md) | USB设备端口角色信息。 |
 <!--DelEnd-->
 
 ### Enums

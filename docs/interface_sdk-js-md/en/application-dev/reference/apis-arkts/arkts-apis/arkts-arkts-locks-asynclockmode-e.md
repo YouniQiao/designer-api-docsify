@@ -1,6 +1,6 @@
 # AsyncLockMode
 
-Mode of lock operations.
+锁操作对应的模式枚举。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Mode of lock operations.
 SHARED = 1
 ```
 
-Shared lock operation.The operation could reenter if this mode is specified.
+共享锁模式。如果指定了此模式，允许​​多个线程或并发任务同时获取锁并执行操作。多用于读操作、无数据竞争的并行任务。
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Shared lock operation.The operation could reenter if this mode is specified.
 EXCLUSIVE = 2
 ```
 
-Exclusive lock operation.If this mode is specified, the operation is executed only when the lock is acquired exclusively.
+独占锁模式。如果指定了此模式，仅允许持有锁的任务执行。它与任何其他锁均不兼容​​，包括其他独占锁和共享锁。多用于写操作、数据更新、状态修改等可能产生竞争的场景。
 
 **Since:** 12
 

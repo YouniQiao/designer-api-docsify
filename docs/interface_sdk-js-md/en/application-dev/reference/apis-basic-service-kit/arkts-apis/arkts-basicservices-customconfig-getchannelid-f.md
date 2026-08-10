@@ -1,12 +1,18 @@
 # getChannelId
 
+## Modules to Import
+
+```TypeScript
+import { customConfig } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getChannelId
 
 ```TypeScript
 function getChannelId(): string
 ```
 
-Obtains a pre-installed channel ID of this application.
+获取应用的预装渠道号。
 
 **Since:** 12
 
@@ -22,9 +28,9 @@ Obtains a pre-installed channel ID of this application.
 
 | Type | Description |
 | --- | --- |
-| string | Channel ID obtained. |
+| string | 渠道号 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { customConfig } from '@kit.BasicServicesKit';

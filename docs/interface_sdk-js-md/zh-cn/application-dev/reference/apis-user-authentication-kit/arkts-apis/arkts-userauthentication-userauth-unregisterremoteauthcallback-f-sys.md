@@ -1,5 +1,11 @@
 # unregisterRemoteAuthCallback（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+```
+
 ## unregisterRemoteAuthCallback
 
 ```TypeScript
@@ -26,11 +32,11 @@ function unregisterRemoteAuthCallback(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| 201 | Permission denied. |
+| 202 | Permission denied. Called by non-system application. |
+| 12500002 | General operation error. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

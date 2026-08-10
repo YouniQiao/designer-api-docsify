@@ -4,9 +4,9 @@
 type EventInfo = AuthResultInfo | TipInfo
 ```
 
-Enumerates the authentication event information types.
+表示认证过程中事件信息的类型。
 
-It consists of the fields in **Type** in the following table.
+该类型为下表类型取值中的联合类型。
 
 **Since:** 9
 
@@ -22,6 +22,6 @@ It consists of the fields in **Type** in the following table.
 
 | Type | Description |
 | --- | --- |
-| AuthResultInfo | Authentication result. |
-| TipInfo | Authentication tip information. |
+| AuthResultInfo | 获取到的认证结果信息。 |
+| TipInfo | 认证过程中的提示信息。 |
 

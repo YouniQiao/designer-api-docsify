@@ -4,8 +4,6 @@
 type OnContinueDoneCallback = (result: int) => void
 ```
 
-Callback function on continue mission done.
-
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -22,5 +20,5 @@ Callback function on continue mission done.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | The result code of continue mission.  |
+| result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The result code of continue mission. |
 

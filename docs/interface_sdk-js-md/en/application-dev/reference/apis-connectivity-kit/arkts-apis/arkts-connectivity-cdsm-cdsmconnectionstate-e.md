@@ -1,6 +1,6 @@
 # CdsmConnectionState
 
-The enum of member's connection state.
+成员连接状态的枚举。
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ The enum of member's connection state.
 DISCONNECTED = 0
 ```
 
-The member is disconnected.
+成员已断开连接
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ The member is disconnected.
 CONNECTED = 1
 ```
 
-The member is connected.
+成员已连接
 
 **Since:** 26.0.0
 

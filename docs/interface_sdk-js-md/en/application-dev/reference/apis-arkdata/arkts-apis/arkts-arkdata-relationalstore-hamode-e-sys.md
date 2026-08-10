@@ -1,6 +1,6 @@
 # HAMode (System API)
 
-Enumerates the high availability modes of the RDB store.
+描述关系型数据库存储的高可用性模式的枚举。
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Enumerates the high availability modes of the RDB store.
 SINGLE = 0
 ```
 
-SINGLE: Data is written to a single RDB store.
+表示将数据写入单个关系型数据库存储。
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ SINGLE: Data is written to a single RDB store.
 MAIN_REPLICA = 1
 ```
 
-MAIN\_REPLICA: Data is written to the main and replica RDB stores.
+表示将数据写入主关系型数据库存储和副本关系型数据库存储，不支持加密场景和attach场景，会导致数据库写入性能的劣化。
 
 **Since:** 12
 

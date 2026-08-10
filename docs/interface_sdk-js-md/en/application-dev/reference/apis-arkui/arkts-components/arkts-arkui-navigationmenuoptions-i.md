@@ -1,6 +1,6 @@
 # NavigationMenuOptions
 
-Defines options for menu items in the upper right corner of the page.
+页面右上角菜单选项。
 
 **Since:** 19
 
@@ -16,9 +16,9 @@ Defines options for menu items in the upper right corner of the page.
 moreButtonOptions?: MoreButtonOptions
 ```
 
-Options for the toolbar's more button menu.
+页面右上角菜单选项。
 
-**Type:** MoreButtonOptions
+**Type:** [MoreButtonOptions](../arkts-apis/arkts-arkui-navigation-morebuttonoptions-i.md)
 
 **Since:** 19
 

@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+import { floatView } from 'kits/@kit.ArkUI';
+```
+
 ## maxRatio
 
 ```TypeScript
@@ -18,7 +24,7 @@ maxRatio: double
 
 标准悬浮窗的宽高比最大值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 26.0.0
 
@@ -38,7 +44,7 @@ minRatio: double
 
 标准悬浮窗的宽高比最小值。
 
-**类型：** double
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **起始版本：** 26.0.0
 

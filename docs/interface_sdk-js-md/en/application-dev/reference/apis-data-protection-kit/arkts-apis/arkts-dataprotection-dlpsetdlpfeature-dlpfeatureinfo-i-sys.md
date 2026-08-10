@@ -1,6 +1,6 @@
 # DLPFeatureInfo (System API)
 
-Sets the DLP status.
+DLP特性开关的状态信息。
 
 **Since:** 26.0.0
 
@@ -12,15 +12,21 @@ Sets the DLP status.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
+```
+
 ## dlpFeatureStatus
 
 ```TypeScript
 dlpFeatureStatus: DlpFeatureStatus
 ```
 
-DLP status, which can be set to **NOT\_ENABLED\_FEATURE** or **ENABLED\_FEATURE**.
+DLP特性开关的状态，包含NOT_ENABLED_FEATURE和ENABLED_FEATURE。
 
-**Type:** DlpFeatureStatus
+**Type:** [DlpFeatureStatus](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md)
 
 **Since:** 26.0.0
 

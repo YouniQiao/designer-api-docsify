@@ -1,12 +1,18 @@
 # createHash
 
+## Modules to Import
+
+```TypeScript
+import { hash } from 'kits/@kit.CoreFileKit';
+```
+
 ## createHash
 
 ```TypeScript
 function createHash(algorithm: string): HashStream
 ```
 
-Creates a **HashStream** instance, which can be used to generate a message digest (a hash value) using the given algorithm.
+创建并返回 HashStream 对象，该对象可用于使用给定的 algorithm 生成哈希摘要。
 
 **Since:** 12
 
@@ -20,32 +26,32 @@ Creates a **HashStream** instance, which can be used to generate a message diges
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | string | Yes | Algorithm used to calculate the hash value. The value can be **md5**, **sha1**, or **sha256**. **sha256** is recommended for security purposes. |
+| algorithm | string | Yes | 哈希计算采用的算法。可选 "md5"、"sha1" 或 "sha256"。建议采用安全强度更高的 "sha256"。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | HashStream** instance created. |
+| [HashStream](arkts-corefile-hash-hashstream-c.md) | HashStream 类的实例。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900020 | Invalid argument |
+| 401 | Parameter error |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 // pages/xxx.ets
-import { fileIo as fs } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit';
 
 function hashFileWithStream() {
   const filePath = pathDir + "/test.txt";
   // Create a readable stream.
-  const rs = fs.createReadStream(filePath);
+  const rs = fileIo.createReadStream(filePath);
   // Create a hash stream.
   const hs = hash.createHash('sha256');
   rs.on('data', (emitData) => {

@@ -6,7 +6,7 @@
 function requestEnableNotification(callback: AsyncCallback<void>): void
 ```
 
-Requests notification to be enabled for this application. This API uses an asynchronous callback to return the result.
+应用请求通知使能（Callback形式）。
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ Requests notification to be enabled for this application. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 应用请求通知使能的回调函数。 |
 
 
 ## requestEnableNotification
@@ -33,7 +33,7 @@ Requests notification to be enabled for this application. This API uses an async
 function requestEnableNotification(): Promise<void>
 ```
 
-Requests notification to be enabled for this application. This API uses a promise to return the result.
+应用请求通知使能（Promise形式）。
 
 **Since:** 8
 
@@ -51,5 +51,5 @@ Requests notification to be enabled for this application. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

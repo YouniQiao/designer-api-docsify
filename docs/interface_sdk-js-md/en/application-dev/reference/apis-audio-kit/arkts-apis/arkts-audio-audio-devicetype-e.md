@@ -1,6 +1,6 @@
 # DeviceType
 
-Enumerates the device types.
+表示设备类型的枚举。
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Enumerates the device types.
 INVALID = 0
 ```
 
-Invalid device.
+无效设备。
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Invalid device.
 EARPIECE = 1
 ```
 
-Built-in earpiece.
+听筒。
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Built-in earpiece.
 SPEAKER = 2
 ```
 
-Built-in speaker.
+扬声器。
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ Built-in speaker.
 WIRED_HEADSET = 3
 ```
 
-Wired headset with a microphone.
+有线耳机，带麦克风。
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ Wired headset with a microphone.
 WIRED_HEADPHONES = 4
 ```
 
-Wired headset without a microphone.
+有线耳机，不带麦克风。
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ Wired headset without a microphone.
 BLUETOOTH_SCO = 7
 ```
 
-Bluetooth device using Synchronous Connection Oriented (SCO) links.
+蓝牙设备SCO（Synchronous Connection Oriented）连接。
 
 **Since:** 7
 
@@ -124,7 +124,7 @@ Bluetooth device using Synchronous Connection Oriented (SCO) links.
 BLUETOOTH_A2DP = 8
 ```
 
-Bluetooth device using Advanced Audio Distribution Profile (A2DP) links.
+蓝牙设备A2DP（Advanced Audio Distribution Profile）连接。
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ Bluetooth device using Advanced Audio Distribution Profile (A2DP) links.
 MIC = 15
 ```
 
-Built-in microphone.
+麦克风。
 
 **Since:** 7
 
@@ -160,7 +160,7 @@ Built-in microphone.
 USB_HEADSET = 22
 ```
 
-USB Type-C headset.
+USB耳机，带麦克风。
 
 **Since:** 7
 
@@ -178,7 +178,7 @@ USB Type-C headset.
 DISPLAY_PORT = 23
 ```
 
-Display port (DP), which is used to connect to external devices.
+DisplayPort（显示接口，简称DP），用于外接扩展设备。
 
 **Since:** 12
 
@@ -196,7 +196,7 @@ Display port (DP), which is used to connect to external devices.
 REMOTE_CAST = 24
 ```
 
-Remote cast device.
+音频被系统应用投送到其他的远程设备。
 
 **Since:** 12
 
@@ -214,7 +214,7 @@ Remote cast device.
 USB_DEVICE = 25
 ```
 
-USB device (excluding USB headsets).
+USB设备（不包含USB耳机）。
 
 **Since:** 18
 
@@ -230,7 +230,7 @@ USB device (excluding USB headsets).
 HDMI = 27
 ```
 
-HDMI device (such as HDMI, ARC, and eARC).
+HDMI设备（例如HDMI、ARC、eARC等）。
 
 **Since:** 19
 
@@ -246,7 +246,7 @@ HDMI device (such as HDMI, ARC, and eARC).
 LINE_DIGITAL = 28
 ```
 
-Wired digital device (such as S/PDIF)
+有线数字设备（例如S/PDIF等）。
 
 **Since:** 19
 
@@ -259,18 +259,18 @@ Wired digital device (such as S/PDIF)
 ## REMOTE_DAUDIO
 
 ```TypeScript
-REMOTE_DAUDIO = 29
+REMOTE_DAUDIO = 25
 ```
 
-Distributed device.
+Distributed virtual audio device.
 
-**Since:** 18
+**Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 16.
 
-<!--Device-DeviceType-REMOTE_DAUDIO = 29--><!--Device-DeviceType-REMOTE_DAUDIO = 29-End-->
+<!--Device-DeviceType-REMOTE_DAUDIO = 25--><!--Device-DeviceType-REMOTE_DAUDIO = 25-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -280,7 +280,9 @@ Distributed device.
 HEARING_AID = 30
 ```
 
-Hearing aid audio device.Note: This original device type can be obtained after it is declared via\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+助听器设备。
+
+Note: This original device type can be obtained after it is declared via {@link AudioRoutingManager#declareDeviceTypesCompatibility}.
 
 **Since:** 26.0.0
 
@@ -296,7 +298,9 @@ Hearing aid audio device.Note: This original device type can be obtained after i
 NEARLINK = 31
 ```
 
-Nearlink device.Note: This original device type can be obtained after it is declared via\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+星闪设备。
+
+Note: This original device type can be obtained after it is declared via {@link AudioRoutingManager#declareDeviceTypesCompatibility}.
 
 **Since:** 26.0.0
 
@@ -312,7 +316,7 @@ Nearlink device.Note: This original device type can be obtained after it is decl
 SYSTEM_PRIVATE = 200
 ```
 
-System private device. (This device is a private device within the system, and applications can ignore it.)
+系统私有设备（由于该设备在系统中属于私有设备，因此应用程序可以忽略该设备）。
 
 **Since:** 22
 
@@ -328,7 +332,7 @@ System private device. (This device is a private device within the system, and a
 DEFAULT = 1000
 ```
 
-Default device type.
+默认设备类型。
 
 **Since:** 9
 

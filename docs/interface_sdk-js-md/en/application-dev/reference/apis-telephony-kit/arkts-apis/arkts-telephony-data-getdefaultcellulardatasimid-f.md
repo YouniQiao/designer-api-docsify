@@ -1,5 +1,11 @@
 # getDefaultCellularDataSimId
 
+## Modules to Import
+
+```TypeScript
+import { data } from 'kits/@kit.TelephonyKit';
+```
+
 ## getDefaultCellularDataSimId
 
 ```TypeScript
@@ -20,9 +26,9 @@ Obtains the default cellular data SIM ID.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Returns the SIM ID of the default cellular data sim and SIM ID will increase from 1. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the SIM ID of the default cellular data sim and SIM ID will increase from 1. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { data } from '@kit.TelephonyKit';

@@ -1,14 +1,14 @@
 # PathIterator
 
-Implements a path operation iterator. You can read path operation instructions by traversing the iterator.
-    **NOTE**  
-    
-    - The initial APIs of this class are supported since API version 18.  
-    
-    - This module uses the physical pixel unit, px.  
-    
-    - The module operates under a single-threaded model. The caller needs to manage thread safety and context state  
-    transitions.
+表示路径操作迭代器，可通过遍历迭代器逐段读取路径的操作指令。迭代器按顺序遍历路径中的操作指令，便于实现对路径的细粒度分析与自定义处理。
+
+> **说明：**
+> 
+> - 本Class首批接口从API version 18开始支持。
+> 
+> - 本模块使用屏幕物理像素单位px。
+> 
+> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **Since:** 18
 
@@ -18,13 +18,19 @@ Implements a path operation iterator. You can read path operation instructions b
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## Modules to Import
+
+```TypeScript
+import { drawing } from 'kits/@kit.ArkGraphics2D';
+```
+
 ## constructor
 
 ```TypeScript
 constructor(path: Path)
 ```
 
-Creates an iterator and binds it with a path.
+构造迭代器并绑定路径。
 
 **Since:** 18
 
@@ -38,7 +44,7 @@ Creates an iterator and binds it with a path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Path** object bound to the iterator. |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 迭代器绑定的路径对象，绑定后迭代器将遍历该路径中的操作指令， 可通过next、peek、hasNext等方法读取路径的操作类型和坐标数据。 |
 
 ## hasNext
 
@@ -46,7 +52,7 @@ Creates an iterator and binds it with a path.
 hasNext(): boolean
 ```
 
-Checks whether there is any next operation in the path operation iterator.
+判断迭代器中是否还有下一个操作。通常与next()或peek()方法配合使用实现路径遍历。
 
 **Since:** 18
 
@@ -60,7 +66,7 @@ Checks whether there is any next operation in the path operation iterator.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. **true** means yes; **false** otherwise. |
+| boolean | 迭代器是否还有下一个操作可遍历。true表示还有后续路径操作可读取，false表示已遍历至路径末尾，无更多操作。 |
 
 ## next
 
@@ -68,7 +74,7 @@ Checks whether there is any next operation in the path operation iterator.
 next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb
 ```
 
-Retrieves the next operation in this path and moves the iterator to that operation.
+返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。若仅需预览下一个操作而不改变迭代器状态，请使用[peek](arkts-arkgraphics2d-drawing-pathiterator-c.md#peek)。通常与[hasNext](arkts-arkgraphics2d-drawing-pathiterator-c.md#hasnext)方法配合使用实现路径遍历。
 
 **Since:** 18
 
@@ -82,20 +88,20 @@ Retrieves the next operation in this path and moves the iterator to that operati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | Yes | Array of coordinate points. The array length must be at least the offset plus 4 to ensure that the array can hold all types of path data. After the operation is executed, this array is overwritten. The number of coordinate points to be filled depends on the operation type. Specifically, for **MOVE**, fill one coordinate; for **LINE**, fill two coordinates; for **QUAD**, fill three coordinates; for **CONIC**, fill three coordinates and one weight value (a total of 3.5 groups); for **CUBIC**, fill four coordinates; for **CLOSE** and **DONE**, do not fill any coordinate points. |
-| offset | number | No | Offset from the start of the array where writing begins. The default value is **0**. The value range is [0, size - 4], where **size** is the length of the coordinate point array. |
+| points | Array&lt;common2D.Point&gt; | Yes | 坐标点数组，长度必须至少为偏移量加4，以确保能容纳所有类型的路径数据。操作执行后，该数组会被覆盖。填入的坐标点数量取决于操作类型，其中， MOVE填入1个坐标点，LINE填入2个坐标点，QUAD填入3个坐标点，CONIC填入3个坐标点 + 1个权重值（共3.5组），CUBIC填入4个坐标点，CLOSE和DONE不填入任何点。 |
+| offset | number | No | 数组中写入位置相对起始点的偏移量，默认为0，取值范围为[0, size-4]，size是指坐标点数组长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Path operation type contained in the iterator. |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | 当前路径段的操作类型。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## next
 
@@ -103,7 +109,7 @@ Retrieves the next operation in this path and moves the iterator to that operati
 next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined
 ```
 
-Retrieves the next operation in this path and moves the iterator to that operation.
+返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。若仅需预览下一个操作而不改变迭代器状态，请使用[peek](arkts-arkgraphics2d-drawing-pathiterator-c.md#peek)。通常与[hasNext](arkts-arkgraphics2d-drawing-pathiterator-c.md#hasnext)方法配合使用实现路径遍历。
 
 **Since:** 23
 
@@ -117,20 +123,20 @@ Retrieves the next operation in this path and moves the iterator to that operati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | Yes | Indicates the point array. |
-| offset | int | No | Indicates the offset into the array where entries should be placed. The default value is 0. |
+| points | Array&lt;common2D.Point&gt; | Yes | 坐标点数组，长度必须至少为偏移量加4，以确保能容纳所有类型的路径数据。操作执行后，该数组会被覆盖。填入的坐标点数量取决于操作类型，其中， MOVE填入1个坐标点，LINE填入2个坐标点，QUAD填入3个坐标点，CONIC填入3个坐标点 + 1个权重值（共3.5组），CUBIC填入4个坐标点，CLOSE和DONE不填入任何点。 |
+| offset | int | No | 数组中写入位置相对起始点的偏移量，默认为0，取值范围为[0, size-4]，size是指坐标点数组长度。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the next verb in this iterator's path. |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | 当前路径段的操作类型。创建失败时返回undefined。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## peek
 
@@ -138,7 +144,7 @@ Retrieves the next operation in this path and moves the iterator to that operati
 peek(): PathIteratorVerb
 ```
 
-Retrieves the next operation in this path, without moving the iterator.
+返回当前路径的下一个操作，迭代器保持在原操作。与next不同，peek不会推进迭代器位置。
 
 **Since:** 18
 
@@ -152,7 +158,7 @@ Retrieves the next operation in this path, without moving the iterator.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Path operation type contained in the iterator. |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | 当前路径段的操作类型。 |
 
 ## peek
 
@@ -160,7 +166,7 @@ Retrieves the next operation in this path, without moving the iterator.
 peek(): PathIteratorVerb | undefined
 ```
 
-Retrieves the next operation in this path, without moving the iterator.
+返回当前路径的下一个操作，迭代器保持在原操作。与next不同，peek不会推进迭代器位置。
 
 **Since:** 23
 
@@ -174,5 +180,5 @@ Retrieves the next operation in this path, without moving the iterator.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the next verb in the iteration. |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | 当前路径段的操作类型。创建失败时返回undefined。 |
 

@@ -1,6 +1,6 @@
 # AtomicServiceBar
 
-interface AtomicServiceBar
+原子化服务栏
 
 **Since:** 23
 
@@ -10,13 +10,19 @@ interface AtomicServiceBar
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+```
+
 ## getBarRect
 
 ```TypeScript
 getBarRect(): Frame
 ```
 
-Get size and position of the bar.
+获取bar的尺寸和位置。
 
 **Since:** 23
 
@@ -32,7 +38,7 @@ Get size and position of the bar.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The size and position of bar in vp relative to window. |
+| [Frame](arkts-arkui-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
 
 ## setBackgroundColor
 
@@ -40,7 +46,7 @@ Get size and position of the bar.
 setBackgroundColor(color: Nullable< Color | int | string>): void
 ```
 
-Set the background color of the bar.
+设置bar的背景色。
 
 **Since:** 23
 
@@ -56,7 +62,7 @@ Set the background color of the bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_ \| int \| string&gt; | Yes | the color to set, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-color-e.md) \| int \| string&gt; | Yes | the color to set, undefined indicates using default. |
 
 ## setIconColor
 
@@ -64,7 +70,7 @@ Set the background color of the bar.
 setIconColor(color: Nullable< Color | int | string>): void
 ```
 
-Set the color of the icon on the bar.
+设置bar上图标的颜色。
 
 **Since:** 23
 
@@ -80,7 +86,7 @@ Set the color of the icon on the bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_ \| int \| string&gt; | Yes | the color to set to icon, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-color-e.md) \| int \| string&gt; | Yes | the color to set to icon, undefined indicates using default. |
 
 ## setTitleContent
 
@@ -88,7 +94,7 @@ Set the color of the icon on the bar.
 setTitleContent(content: string): void
 ```
 
-Set the title of the bar.
+设置bar的标题。
 
 **Since:** 23
 
@@ -112,7 +118,7 @@ Set the title of the bar.
 setTitleFontStyle(font: FontStyle): void
 ```
 
-Set the font style of the bar's title.
+设置bar标题的字体样式。
 
 **Since:** 23
 
@@ -128,7 +134,7 @@ Set the font style of the bar's title.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the font style of the bar's title. |
+| font | [FontStyle](arkts-arkui-fontstyle-e.md) | Yes | the font style of the bar's title. |
 
 ## setVisible
 
@@ -136,7 +142,7 @@ Set the font style of the bar's title.
 setVisible(visible: boolean): void
 ```
 
-Set the visibility of the bar, except the icon.
+设置bar的可见性，不包括icon。
 
 **Since:** 23
 

@@ -1,5 +1,11 @@
 # removeBeaconFence
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## removeBeaconFence
 
 ```TypeScript
@@ -25,7 +31,7 @@ Remove a beacon fence.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| beaconFence | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the details of the beacon fence. |
+| beaconFence | [BeaconFence](arkts-location-geolocationmanager-beaconfence-i.md) | No | Indicates the details of the beacon fence. |
 
 **Return value:**
 
@@ -37,10 +43,11 @@ Remove a beacon fence.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \_\_\_ESCAPED\_DOLLAR\_\_\_{geoLocationManager.removeBeaconFence} due to limited device capabilities. |
-| [3501602](../errorcode-geoLocationManager.md#3501602-failed-to-delete-a-beacon-fence-because-of-incorrect-information) | Failed to delete the fence due to incorrect beacon fence information. |
+| 801 | Capability not supported. Failed to call \\${geoLocationManager.removeBeaconFence} due to limited device capabilities. |
+| 3501602 | Failed to delete the fence due to incorrect beacon fence information. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 20 - 24 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { geoLocationManager } from '@kit.LocationKit';

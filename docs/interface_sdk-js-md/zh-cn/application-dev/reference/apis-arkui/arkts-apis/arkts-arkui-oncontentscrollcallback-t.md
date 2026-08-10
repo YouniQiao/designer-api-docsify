@@ -20,6 +20,6 @@ export type OnContentScrollCallback = (totalOffsetX: double, totalOffsetY: doubl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| totalOffsetX | double | 是 | 文本在内容区的横坐标偏移，单位px。  |
-| totalOffsetY | double | 是 | 文本在内容区的纵坐标偏移，单位px。  |
+| totalOffsetX | double | 是 | 文本在内容区的横坐标偏移，单位px。 |
+| totalOffsetY | double | 是 | 文本在内容区的纵坐标偏移，单位px。 |
 

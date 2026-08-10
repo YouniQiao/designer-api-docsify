@@ -12,6 +12,12 @@ The interface is used to monitor network interface status changes.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { ethernet } from 'kits/@kit.NetworkKit';
+```
+
 ## active
 
 ```TypeScript

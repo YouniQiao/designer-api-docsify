@@ -4,7 +4,7 @@
 declare type DepthMapCallback = (error: BusinessError<void>) => void
 ```
 
-Callback invoked when the depth map resource is loaded.
+深度图资源加载完成时的回调函数。使用callback异步回调。
 
 **Since:** 26.0.0
 
@@ -24,5 +24,5 @@ Callback invoked when the depth map resource is loaded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes |  |
+| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt; | Yes | 深度图资源加载完成时返回的错误信息。加载成功时error.code为0，加载失败时error中包含错误码和错误信息。 |
 

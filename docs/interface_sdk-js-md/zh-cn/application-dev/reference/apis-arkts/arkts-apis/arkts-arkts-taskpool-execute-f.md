@@ -1,5 +1,11 @@
 # execute
 
+## 导入模块
+
+```TypeScript
+import { taskpool } from 'kits/@kit.ArkTS';
+```
+
 ## execute
 
 ```TypeScript
@@ -22,24 +28,25 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| func | Function | 是 | 待执行的函数，必须使用 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_装饰。支持的函数返回值类型请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| args | Object[] | 是 | 任务执行函数的入参，支持的参数类型请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。默认值为**undefined**。 |
+| func | Function | 是 | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰。支持的函数返回值类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。 |
+| args | Object[] | 是 | 任务执行函数的入参，支持的参数类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;unknown&gt; | \_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 9 - 11 |
-| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 11+ |
+| Promise&lt;unknown&gt; | <br>**适用版本：** 9 - 11 |
+| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| 10200014 | The function is not marked as concurrent. |
+| 10200003 | Worker initialization failed.<br>**适用版本：** 9 - 11 |
+| 10200006 | An exception occurred during serialization. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent
@@ -76,8 +83,8 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | 是 | 待执行的函数，必须使用 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_装饰，支持的函数返回值类型请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。 |
-| args | A | 是 | 任务执行函数的入参，支持的参数类型请参考 \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_。默认值为**undefined**。 |
+| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | 是 | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰，支持的函数返回值类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。 |
+| args | A | 是 | 任务执行函数的入参，支持的参数类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
 
 **返回值：**
 
@@ -89,10 +96,10 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| 10200014 | The function is not marked as concurrent. |
+| 10200006 | An exception occurred during serialization. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent
@@ -132,10 +139,11 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 ```
 
 将创建好的任务添加到taskpool的内部任务队列中，任务不会立即执行，而是等待分发到工作线程执行。当前模式支持设置任务优先级和通过cancel取消任务。使用Promise异步回调。
-    **说明：**  
-    
-    - 任务不能是任务组任务、串行队列任务或异步队列任务。  
-    - 长时任务只能调用一次，非长时任务可以多次调用执行。
+
+> **说明：**
+> 
+> - 任务不能是任务组任务、串行队列任务或异步队列任务。
+> - 长时任务只能调用一次，非长时任务可以多次调用执行。
 
 **起始版本：** 9
 
@@ -151,26 +159,27 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要在任务池中执行的任务。 |
-| priority | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要在任务池中执行的任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;unknown&gt; | \_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 9 - 17 |
-| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 11+ |
+| Promise&lt;unknown&gt; | <br>**适用版本：** 9 - 17 |
+| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 12+ |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
+| 10200057 | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| 10200014 | The function is not marked as concurrent. |
+| 10200003 | Worker initialization failed.<br>**适用版本：** 9 - 17 |
+| 10200051 | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
+| 10200006 | An exception occurred during serialization. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent
@@ -216,8 +225,8 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;A, R&gt; | 是 | 需要在任务池中执行的泛型任务。 |
-| priority | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要在任务池中执行的泛型任务。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -229,12 +238,12 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 18+ |
+| 10200057 | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| 10200014 | The function is not marked as concurrent. |
+| 10200051 | The periodic task cannot be executed again. |
+| 10200006 | An exception occurred during serialization. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent
@@ -280,8 +289,8 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| group | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要在任务池中执行的任务组。 |
-| priority | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 等待执行的任务组的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 | 需要在任务池中执行的任务组。 |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务组的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -293,10 +302,10 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 24+ |
+| 10200059 | TaskGroup cannot be re-executed.<br>**适用版本：** 24+ |
+| 10200006 | An exception occurred during serialization. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent
@@ -333,29 +342,30 @@ function execute(task: Task, configs: Configs): Promise<Object>
 ```
 
 将创建好的任务添加到taskpool的内部任务队列中，任务不会立即执行，而是等待分发到工作线程执行。当前模式支持设置任务优先级、设置超时时间和通过cancel取消任务。使用Promise异步回调。
-    **说明：**  
-    
-    - 不支持执行任务组任务。  
-    
-    - 不支持执行串行队列任务。  
-    
-    - 不支持执行异步队列任务。  
-    
-    - 不支持执行周期性任务。  
-    
-    - 不支持执行延迟任务。  
-    
-    - 不支持执行存在依赖的任务。  
-    
-    - 不支持任务重复执行。  
-    
-    - 设置过超时的任务无法被其他任务依赖，也无法依赖其他任务。  
-    
-    - 如果任务设置了失败监听，任务执行超时了，失败监听不会被触发。  
-    
-    - 如果任务使用sendData来往宿主线程发消息，任务超时之后，宿主线程不再接收到消息。  
-    
-    - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
+
+> **说明：**
+> 
+> - 不支持执行任务组任务。
+> 
+> - 不支持执行串行队列任务。
+> 
+> - 不支持执行异步队列任务。
+> 
+> - 不支持执行周期性任务。
+> 
+> - 不支持执行延迟任务。
+> 
+> - 不支持执行存在依赖的任务。
+> 
+> - 不支持任务重复执行。
+> 
+> - 设置过超时的任务无法被其他任务依赖，也无法依赖其他任务。
+> 
+> - 如果任务设置了失败监听，任务执行超时了，失败监听不会被触发。
+> 
+> - 如果任务使用sendData来往宿主线程发消息，任务超时之后，宿主线程不再接收到消息。
+> 
+> - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
 
 **起始版本：** 24
 
@@ -371,8 +381,8 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要在任务池中执行的任务。 |
-| configs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 该参数可以设置超时时间和任务优先级。 |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要在任务池中执行的任务。 |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 | 该参数可以设置超时时间和任务优先级。 |
 
 **返回值：**
 
@@ -384,13 +394,13 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
-| [10200058](../errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
+| 10200058 | Task timed out. |
+| 10200057 | The task cannot be executed by two APIs. |
+| 10200014 | The function is not marked as concurrent. |
+| 10200051 | The periodic task cannot be executed again. |
+| 10200006 | An exception occurred during serialization. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent
@@ -424,29 +434,30 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 ```
 
 将创建好的泛型任务放入taskpool的内部任务队列，不校验任务的参数类型和返回值类型。使用Promise异步回调。execute任务的校验是结合new GenericsTask一起用的，参数、返回值类型需与new GenericsTask中的类型保持一致。
-    **说明：**  
-    
-    - 不支持执行任务组任务。  
-    
-    - 不支持执行串行队列任务。  
-    
-    - 不支持执行异步队列任务。  
-    
-    - 不支持执行周期性任务。  
-    
-    - 不支持执行延迟任务。  
-    
-    - 不支持执行存在依赖的任务。  
-    
-    - 不支持任务重复执行。  
-    
-    - 设置过超时的任务无法被其他任务依赖，也无法依赖其他任务。  
-    
-    - 如果任务设置了失败监听，任务执行超时了，失败监听不会被触发。  
-    
-    - 如果任务使用sendData来往宿主线程发消息，任务超时之后，宿主线程不再接收到消息。  
-    
-    - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
+
+> **说明：**
+> 
+> - 不支持执行任务组任务。
+> 
+> - 不支持执行串行队列任务。
+> 
+> - 不支持执行异步队列任务。
+> 
+> - 不支持执行周期性任务。
+> 
+> - 不支持执行延迟任务。
+> 
+> - 不支持执行存在依赖的任务。
+> 
+> - 不支持任务重复执行。
+> 
+> - 设置过超时的任务无法被其他任务依赖，也无法依赖其他任务。
+> 
+> - 如果任务设置了失败监听，任务执行超时了，失败监听不会被触发。
+> 
+> - 如果任务使用sendData来往宿主线程发消息，任务超时之后，宿主线程不再接收到消息。
+> 
+> - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
 
 **起始版本：** 24
 
@@ -462,8 +473,8 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;A, R&gt; | 是 | 需要在任务池中执行的泛型任务。 |
-| configs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 该参数可以设置超时时间和任务优先级。 |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要在任务池中执行的泛型任务。 |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 | 该参数可以设置超时时间和任务优先级。 |
 
 **返回值：**
 
@@ -475,13 +486,13 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
-| [10200058](../errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
+| 10200058 | Task timed out. |
+| 10200057 | The task cannot be executed by two APIs. |
+| 10200014 | The function is not marked as concurrent. |
+| 10200051 | The periodic task cannot be executed again. |
+| 10200006 | An exception occurred during serialization. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent
@@ -515,11 +526,12 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 ```
 
 将创建好的任务组放入taskpool内部任务队列，任务组中的任务不会立即执行，而是等待分发到工作线程执行。任务组中任务全部执行完成后，结果数组统一返回。此模式适用于执行关联任务。使用Promise异步回调。configs配置里可以指定任务组执行的超时时间和优先级。指定的超时时间到了，但是任务组还未完成，则会抛出任务组超时的异常信息。
-    **说明：**  
-    
-    - 不支持任务组重复执行。  
-    
-    - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
+
+> **说明：**
+> 
+> - 不支持任务组重复执行。
+> 
+> - 在抛出超时异常信息之后，执行中的任务还是会在线程中继续执行，但是最终不会返回执行结果。
 
 **起始版本：** 24
 
@@ -535,8 +547,8 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| group | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要在任务池中执行的任务组。 |
-| configs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 该参数可以设置超时时间和任务优先级。 |
+| group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 | 需要在任务池中执行的任务组。 |
+| configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 | 该参数可以设置超时时间和任务优先级。 |
 
 **返回值：**
 
@@ -548,11 +560,11 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed. |
-| [10200070](../errorcode-utils.md#10200070-任务组执行超时) | TaskGroup timed out. |
+| 10200059 | TaskGroup cannot be re-executed. |
+| 10200006 | An exception occurred during serialization. |
+| 10200070 | TaskGroup timed out. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 @Concurrent

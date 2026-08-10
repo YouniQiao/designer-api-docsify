@@ -1,12 +1,18 @@
 # updatePrinterInformation
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## updatePrinterInformation
 
 ```TypeScript
 function updatePrinterInformation(printerInformation: PrinterInformation): Promise<void>
 ```
 
-更新系统中打印机的部分信息，使用Promise异步回调。当前仅允许更新[PrinterInformation]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的alias和options字段。
+更新系统中打印机的部分信息，使用Promise异步回调。当前仅允许更新[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)的alias和options字段。
 
 **起始版本：** 24
 
@@ -24,7 +30,7 @@ function updatePrinterInformation(printerInformation: PrinterInformation): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| printerInformation | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 表示待更新信息的打印机。 |
+| printerInformation | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | 是 | 表示待更新信息的打印机。 |
 
 **返回值：**
 
@@ -36,14 +42,15 @@ function updatePrinterInformation(printerInformation: PrinterInformation): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| 201 | the application does not have permission to call this function. |
+| 202 | not system application<br>**适用版本：** 18 - 23 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let testPageSize : print.PrintPageSize = {
     id : 'ISO_A4',
@@ -75,7 +82,7 @@ let printerInformation : print.PrinterInformation = {
 print.updatePrinterInformation(printerInformation).then(() => {
     console.info('updatePrinterInformation success');
 }).catch((error: BusinessError) => {
-    console.error('updatePrinterInformation error : ' + JSON.stringify(error));
+    console.error(`Failed to updatePrinterInformation. Code: ${error.code}, message: ${error.message}`);
 })
 ```
 

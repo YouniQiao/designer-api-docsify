@@ -4,7 +4,7 @@
 export type TabsCustomContentTransitionCallback = (from: int, to: int) => (TabContentAnimatedTransition | undefined)
 ```
 
-Defines a tabs callback when customContentTransition.
+自定义Tabs页面切换动画开始时触发的回调。
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ Defines a tabs callback when customContentTransition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | int | Yes | The index value of the current tab when the animation begins. The value range is all integers The value should be an integer.Value constraint:Value range: [0, index-1] There is no transition animation when the set value exceeds the index value or is less than 0.  |
-| to | int | Yes | The index value of the target tab when the animation begins. The value range is all integers The value should be an integer.Value constraint:Value range: [0, index] There is no transition animation when the set value exceeds the index value or is less than 0.  |
+| from | int | Yes | 动画开始时，当前页面的index值，索引从0开始。<br/> 取值范围为全体整数 取值限定为整数。取值约束:取值范围：[0, index-1] 当设置的值超过索引值或小于0时无转场动画。 |
+| to | int | Yes | 动画开始时，目标页面的index值，索引从0开始。<br/> 取值范围为全体整数 取值限定为整数。取值约束:取值范围：[0,索引值] 当设置的值超过索引值或小于0时无转场动画。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| (TabContentAnimatedTransition \| undefined) | Returns animated transition options of tab or undefined.  |
+| (TabContentAnimatedTransition \| undefined) | Returns animated transition options of tab or undefined. |
 

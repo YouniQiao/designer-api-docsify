@@ -1,6 +1,6 @@
 # Curve
 
-插值曲线，动效请参考\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_。
+插值曲线，动效请参考&lt;!--RP1--&gt;[贝塞尔曲线](../../../../design/ux-design/animation-attributes.md)&lt;!--RP1End--&gt;。
 
 **起始版本：** 7
 

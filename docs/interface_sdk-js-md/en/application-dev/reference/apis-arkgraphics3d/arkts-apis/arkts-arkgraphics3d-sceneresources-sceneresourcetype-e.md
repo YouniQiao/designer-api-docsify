@@ -1,0 +1,172 @@
+# SceneResourceType
+
+场景资源类型枚举.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-export enum SceneResourceType--><!--Device-unnamed-export enum SceneResourceType-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## UNKNOWN
+
+```TypeScript
+UNKNOWN = 0
+```
+
+资源是Unknown类型.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-SceneResourceType-UNKNOWN = 0--><!--Device-SceneResourceType-UNKNOWN = 0-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## NODE
+
+```TypeScript
+NODE = 1
+```
+
+资源是Node类型.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-SceneResourceType-NODE = 1--><!--Device-SceneResourceType-NODE = 1-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## ENVIRONMENT
+
+```TypeScript
+ENVIRONMENT = 2
+```
+
+资源是Environment类型.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-SceneResourceType-ENVIRONMENT = 2--><!--Device-SceneResourceType-ENVIRONMENT = 2-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## MATERIAL
+
+```TypeScript
+MATERIAL = 3
+```
+
+资源是Material类型.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-SceneResourceType-MATERIAL = 3--><!--Device-SceneResourceType-MATERIAL = 3-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## MESH
+
+```TypeScript
+MESH = 4
+```
+
+资源是Mesh类型.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-SceneResourceType-MESH = 4--><!--Device-SceneResourceType-MESH = 4-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## ANIMATION
+
+```TypeScript
+ANIMATION = 5
+```
+
+资源是Animation类型.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-SceneResourceType-ANIMATION = 5--><!--Device-SceneResourceType-ANIMATION = 5-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## SHADER
+
+```TypeScript
+SHADER = 6
+```
+
+资源是Shader类型.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-SceneResourceType-SHADER = 6--><!--Device-SceneResourceType-SHADER = 6-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## IMAGE
+
+```TypeScript
+IMAGE = 7
+```
+
+资源是Image类型.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-SceneResourceType-IMAGE = 7--><!--Device-SceneResourceType-IMAGE = 7-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## MESH_RESOURCE
+
+```TypeScript
+MESH_RESOURCE = 8
+```
+
+资源是MeshResource类型
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-SceneResourceType-MESH_RESOURCE = 8--><!--Device-SceneResourceType-MESH_RESOURCE = 8-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## EFFECT
+
+```TypeScript
+EFFECT = 9
+```
+
+资源是Effect类型.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
+<!--Device-SceneResourceType-EFFECT = 9--><!--Device-SceneResourceType-EFFECT = 9-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+

@@ -1,5 +1,11 @@
 # offP2pDeviceChange
 
+## Modules to Import
+
+```TypeScript
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
+```
+
 ## offP2pDeviceChange
 
 ```TypeScript
@@ -20,12 +26,12 @@ Unsubscribe P2P local device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;WifiP2pDevice&gt; | No | the callback of off |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | No | the callback of off |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
+| 801 | Capability not supported. |
+| 2801000 | Operation failed. |
 

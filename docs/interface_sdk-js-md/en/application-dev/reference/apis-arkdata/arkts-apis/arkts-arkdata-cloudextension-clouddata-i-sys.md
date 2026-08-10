@@ -1,6 +1,6 @@
 # CloudData (System API)
 
-Represents the cloud data.
+云数据。
 
 **Since:** 11
 
@@ -12,13 +12,19 @@ Represents the cloud data.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { cloudExtension } from 'kits/@kit.ArkData';
+```
+
 ## hasMore
 
 ```TypeScript
 hasMore: boolean
 ```
 
-Whether there is data to be queried on the server.The value true means there is data to be queried on the server; the value false means the opposite.
+服务器是否存在更多数据可供查询。true表示服务器上还有数据等待查询，false表示服务器上不存在可查询的数据。
 
 **Type:** boolean
 
@@ -38,7 +44,7 @@ Whether there is data to be queried on the server.The value true means there is 
 nextCursor: string
 ```
 
-Cursor for data query.
+查询游标。
 
 **Type:** string
 
@@ -58,7 +64,7 @@ Cursor for data query.
 values: Array<Record<string, CloudType>>
 ```
 
-Array of data to be queried, which consists of the data value and ExtensionValue.
+需要查询数据的数组，包括数据记录的实际值和ExtensionValue（扩展值）。
 
 **Type:** Array&lt;Record&lt;string, CloudType&gt;&gt;
 

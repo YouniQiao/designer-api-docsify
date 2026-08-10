@@ -1,6 +1,6 @@
 # Aperture
 
-Provides the APIs for aperture settings. It inherits from [ApertureQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-camera-camera-aperturequery-i.md).
 
 **继承/实现关系：** Aperture extends [ApertureQuery](arkts-camera-camera-aperturequery-i.md)
 
@@ -11,6 +11,12 @@ Provides the APIs for aperture settings. It inherits from [ApertureQuery]\_\_\_J
 <!--Device-camera-interface Aperture extends ApertureQuery--><!--Device-camera-interface Aperture extends ApertureQuery-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## 导入模块
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
 
 ## getPhysicalAperture
 
@@ -40,14 +46,15 @@ Gets current physical aperture value.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | The current physical aperture value. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The current physical aperture value. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 24+ |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**适用版本：** 11 - 23 |
 
 ## getVirtualAperture
 
@@ -75,16 +82,16 @@ Obtains the virtual aperture in use.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Virtual aperture. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Virtual aperture. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 function getVirtualAperture(session: camera.PortraitPhotoSession): number {
@@ -121,14 +128,15 @@ Sets physical aperture value.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| aperture | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | physical aperture value. The supported physical aperture range can be obtained by calling [getSupportedPhysicalApertures]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ |
+| aperture | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | physical aperture value. The supported physical aperture range can be obtained by calling [getSupportedPhysicalApertures](arkts-camera-camera-aperturequery-i.md#getsupportedphysicalapertures) |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.\_\_\_HTML\_TAG\_USD\_0\_\_\_**适用版本：** 24+ |
+| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
+| 7400103 | Session not config. |
+| 202 | Not System Application.<br>**适用版本：** 11 - 23 |
 
 ## setVirtualAperture
 
@@ -143,7 +151,7 @@ setVirtualAperture(aperture: double): void
 ```
 
 Sets a virtual aperture. Before the setting, call  
-[getSupportedVirtualApertures]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the supported virtual apertures.
+[getSupportedVirtualApertures](arkts-camera-camera-aperturequery-i.md#getsupportedvirtualapertures) to obtain the supported virtual apertures.
 
 **起始版本：** 11
 
@@ -157,16 +165,16 @@ Sets a virtual aperture. Before the setting, call
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| aperture | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | 是 | virtual aperture value |
+| aperture | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | virtual aperture value |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| 7400103 | Session not config. |
+| 202 | Not System Application. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 function setVirtualAperture(session: camera.PortraitPhotoSession, virtualAperture: number): void {

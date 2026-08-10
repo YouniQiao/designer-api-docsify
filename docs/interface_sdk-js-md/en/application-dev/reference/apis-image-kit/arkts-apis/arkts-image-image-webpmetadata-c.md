@@ -10,6 +10,12 @@ WebP metadata.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
+## Modules to Import
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## canvasHeight
 
 ```TypeScript
@@ -18,7 +24,7 @@ readonly canvasHeight?: int
 
 Canvas Height.Unit: px, The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -38,7 +44,7 @@ readonly canvasWidth?: int
 
 Canvas Width.Unit: px, The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -58,7 +64,7 @@ readonly delayTime?: int
 
 Delay of each frame.Unit: ms, The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -76,9 +82,9 @@ Delay of each frame.Unit: ms, The value should be an integer.
 readonly loopCount?: int
 ```
 
-Loop count.
+WebP图片动画循环的次数。如果取值为0，则表示不限次数。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -98,7 +104,7 @@ readonly unclampedDelayTime?: int
 
 Unclamped delay of each frame.Unit: ms, The value should be an integer.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

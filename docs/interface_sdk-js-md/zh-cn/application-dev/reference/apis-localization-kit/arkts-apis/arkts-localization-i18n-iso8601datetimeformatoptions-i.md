@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
+## 导入模块
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## dateFormat
 
 ```TypeScript
@@ -25,7 +31,7 @@ dateFormat?: 'calendar' | 'ordinal' | 'week'
 **week**：日期模式为**YYYY-Www-D**。
 
 默认值：**calendar**。模式中字符含义参考  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。
+[日期字段符号表](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)。
 
 **类型：** 'calendar' \| 'ordinal' \| 'week'
 
@@ -133,7 +139,7 @@ timeZone?: TimeZone
 
 时区。默认值：**UTC**。
 
-**类型：** TimeZone
+**类型：** [TimeZone](arkts-localization-i18n-timezone-c.md)
 
 **起始版本：** 26.0.0
 

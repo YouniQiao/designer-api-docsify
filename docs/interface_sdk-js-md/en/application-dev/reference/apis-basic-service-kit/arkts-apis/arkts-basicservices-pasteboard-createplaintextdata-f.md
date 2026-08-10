@@ -1,12 +1,18 @@
 # createPlainTextData
 
+## Modules to Import
+
+```TypeScript
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
+```
+
 ## createPlainTextData
 
 ```TypeScript
 function createPlainTextData(text: string): PasteData
 ```
 
-Creates a **PasteData** object of the plain text type.
+构建一个纯文本剪贴板内容对象。
 
 **Since:** 6
 
@@ -24,15 +30,15 @@ Creates a **PasteData** object of the plain text type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Plain text. |
+| text | string | Yes | 纯文本内容。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | PasteData** object. |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');

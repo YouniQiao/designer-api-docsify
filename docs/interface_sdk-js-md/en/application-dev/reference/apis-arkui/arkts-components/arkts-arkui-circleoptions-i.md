@@ -1,6 +1,6 @@
 # CircleOptions
 
-Describes the options of the circle.
+用于描述Circle组件绘制属性。
 
 **Since:** 7
 
@@ -16,10 +16,13 @@ Describes the options of the circle.
 height?: Length
 ```
 
-Height.Unit: vp, The value must be greater than or equal to 0, Default The **undefined**, **null**, **NaN**, and  
-**Infinity** values are invalid and treated as the default value. Default value: **0**.
+高度，取值范围≥0。当需要自定义圆形大小时设置此属性，不传入时默认为0。
 
-**Type:** Length
+默认单位：vp
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
 
@@ -39,10 +42,13 @@ Height.Unit: vp, The value must be greater than or equal to 0, Default The **und
 width?: Length
 ```
 
-Width.Unit: vp, The value must be greater than or equal to 0, Default The **undefined**, **null**, **NaN**, and  
-**Infinity** values are invalid and treated as the default value. Default value: **0**.
+宽度，取值范围≥0。当需要自定义圆形大小时设置此属性，不传入时默认为0。
 
-**Type:** Length
+默认单位：vp
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
+
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
 

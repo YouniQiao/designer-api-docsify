@@ -10,6 +10,12 @@ The **metadataBinding** module provides metadata binding–specific functions su
 
 **System capability:** SystemCapability.MultimodalAwareness.MetadataBinding
 
+## Modules to Import
+
+```TypeScript
+import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+```
+
 ## Summary
 
 ### Functions

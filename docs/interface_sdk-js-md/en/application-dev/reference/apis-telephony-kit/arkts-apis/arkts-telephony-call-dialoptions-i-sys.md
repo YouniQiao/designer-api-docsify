@@ -10,6 +10,12 @@ Indicates the options of placing a call.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
+## Modules to Import
+
+```TypeScript
+import { call } from 'kits/@kit.TelephonyKit';
+```
+
 ## accountId
 
 ```TypeScript
@@ -18,7 +24,7 @@ accountId?: int
 
 Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 8
 
@@ -38,7 +44,7 @@ dialScene?: DialScene
 
 Indicates the scenario of the call to be made.
 
-**Type:** DialScene
+**Type:** [DialScene](arkts-telephony-call-dialscene-e-sys.md)
 
 **Since:** 8
 
@@ -58,7 +64,7 @@ dialType?: DialType
 
 Indicates the type of the call to be made.
 
-**Type:** DialType
+**Type:** [DialType](arkts-telephony-call-dialtype-e-sys.md)
 
 **Since:** 8
 
@@ -78,7 +84,7 @@ videoState?: VideoStateType
 
 Indicates the type of Video state.
 
-**Type:** VideoStateType
+**Type:** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
 **Since:** 8
 

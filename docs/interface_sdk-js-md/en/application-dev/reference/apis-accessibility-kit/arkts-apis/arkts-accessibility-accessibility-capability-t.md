@@ -4,7 +4,7 @@
 type Capability = 'retrieve' | 'touchGuide' | 'keyEventObserver' | 'zoom' | 'gesture'
 ```
 
-Enumerates the capabilities of an accessibility application.
+辅助应用能力类型。
 
 **Since:** 7
 
@@ -20,9 +20,9 @@ Enumerates the capabilities of an accessibility application.
 
 | Type | Description |
 | --- | --- |
-| 'retrieve' | Capability to retrieve the window content. |
-| 'touchGuide' | Capability of touch guide mode. |
-| 'keyEventObserver' | Capability to filter key events. |
-| 'zoom' | Capability to control the display zoom level. Not supported currently. |
-| 'gesture' | Capability to perform gesture actions. |
+| 'retrieve' | 具有检索窗口内容的能力。 |
+| 'touchGuide' | 具有触摸探索模式的能力。 |
+| 'keyEventObserver' | 具有过滤按键事件的能力。 |
+| 'zoom' | 具有控制显示放大的能力，当前版本暂不支持。 |
+| 'gesture' | 具有执行手势动作的能力。 |
 

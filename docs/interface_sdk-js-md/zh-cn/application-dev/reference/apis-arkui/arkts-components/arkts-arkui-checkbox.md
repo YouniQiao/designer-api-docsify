@@ -34,7 +34,10 @@ Checkbox(options?: CheckboxOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | 配置多选框的参数。不传入该参数时，多选框使用默认配置。  |
+| options | [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | 否 | 配置多选框的参数。不传入该参数时，多选框使用默认配置。 |
 
 ## 汇总
 
+- [CheckBoxConfiguration](arkts-arkui-checkbox-checkboxconfiguration-i.md)
+- [CheckboxOptions](arkts-arkui-checkbox-checkboxoptions-i.md)
+- [OnCheckboxChangeCallback](arkts-arkui-checkbox-oncheckboxchangecallback-t.md)

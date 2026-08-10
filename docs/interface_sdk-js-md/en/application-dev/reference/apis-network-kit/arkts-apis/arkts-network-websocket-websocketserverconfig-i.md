@@ -10,6 +10,12 @@ Defines parameters for a WebSocket Server.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
+
 ## maxConcurrentClientsNumber
 
 ```TypeScript
@@ -18,7 +24,7 @@ maxConcurrentClientsNumber: int
 
 Maximum number of concurrent clients. When it's reached, the server will reject new connections.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -36,7 +42,7 @@ maxConnectionsForOneClient: int
 
 Maximum number of one client's connections. When it's reached, the server will reject new connections.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 
@@ -72,7 +78,7 @@ serverCert?: ServerCert
 
 Server cert.
 
-**Type:** ServerCert
+**Type:** [ServerCert](arkts-network-websocket-servercert-i.md)
 
 **Since:** 24
 
@@ -108,7 +114,7 @@ serverPort: int
 
 Port number that the server listens on.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 24
 

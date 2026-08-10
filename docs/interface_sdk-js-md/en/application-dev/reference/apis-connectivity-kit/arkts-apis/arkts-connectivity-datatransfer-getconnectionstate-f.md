@@ -1,12 +1,18 @@
 # getConnectionState
 
+## Modules to Import
+
+```TypeScript
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+```
+
 ## getConnectionState
 
 ```TypeScript
 function getConnectionState(params: ConnectionStateParams): ConnectionState
 ```
 
-Obtains the connection status for data transfer.
+获取数据传输的连接状态。
 
 **Since:** 26.0.0
 
@@ -24,23 +30,23 @@ Obtains the connection status for data transfer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters used to obtain the connection status. |
+| params | [ConnectionStateParams](arkts-connectivity-datatransfer-connectionstateparams-i.md) | Yes | 获取连接状态参数 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the connection status for data transfer. |
+| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | 返回数据传输的连接状态。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| 801 | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
-| 36100041 | Invalid address. |
-| 36100043 | Invalid UUID in connection parameters. |
-| 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
+| 201 | Permission denied. |
+| 36100044 | NearLink standard UUID not allowed. |
+| 36100043 | Invalid UUID in connection parameters. |
+| 36100041 | Invalid address. |
 

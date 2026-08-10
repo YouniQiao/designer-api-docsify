@@ -1,6 +1,6 @@
 # RebuildType
 
-Enumerates the RDB store rebuild types. Use the enum name rather than the enum value.
+描述数据库重建类型的枚举。请使用枚举名称而非枚举值。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enumerates the RDB store rebuild types. Use the enum name rather than the enum v
 NONE = 0
 ```
 
-The RDB store is not rebuilt.
+表示数据库未进行重建。
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ The RDB store is not rebuilt.
 REBUILT = 1
 ```
 
-The RDB store is rebuilt and creates an empty database. You need to create tables and restore data.
+表示数据库进行了重建并且生成了空数据库，需要应用重新建表和恢复数据。
 
 **Since:** 12
 
@@ -48,8 +48,7 @@ The RDB store is rebuilt and creates an empty database. You need to create table
 REPAIRED = 2
 ```
 
-The database is repaired and the undamaged data is restored. Currently, only the  
-[vector store]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ supports this capability.
+表示数据库进行了修复，恢复了未损坏的数据，当前只有向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）具备该能力。
 
 **Since:** 12
 

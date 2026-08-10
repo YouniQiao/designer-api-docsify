@@ -10,6 +10,12 @@ Counting the time taken of various stages of HTTP request.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { http } from 'kits/@kit.NetworkKit';
+```
+
 ## dnsTiming
 
 ```TypeScript
@@ -18,7 +24,7 @@ dnsTiming: double
 
 Time taken from startup to DNS resolution completion, in milliseconds.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -36,7 +42,7 @@ firstReceiveTiming: double
 
 Time taken from startup to receiving the first byte, in milliseconds.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -54,7 +60,7 @@ firstSendTiming: double
 
 Time taken from startup to start sending the first byte, in milliseconds.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -72,7 +78,7 @@ redirectTiming: double
 
 Time taken from startup to completion of all redirection steps, in milliseconds.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -90,7 +96,7 @@ responseBodyTiming: double
 
 Time taken from HTTP Request to body completion, in milliseconds.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -108,7 +114,7 @@ responseHeaderTiming: double
 
 Time taken from HTTP request to header completion, in milliseconds.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -126,7 +132,7 @@ tcpTiming: double
 
 Time taken from startup to TCP connection completion, in milliseconds.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -144,7 +150,7 @@ tlsTiming: double
 
 Time taken from startup to TLS connection completion, in milliseconds.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -162,7 +168,7 @@ totalFinishTiming: double
 
 Time taken from startup to the completion of the request, in milliseconds.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 
@@ -180,7 +186,7 @@ totalTiming: double
 
 Time taken from HTTP Request to callback to the application, in milliseconds.
 
-**Type:** double
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
 **Since:** 12
 

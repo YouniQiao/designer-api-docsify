@@ -17,7 +17,7 @@ executeDropAnimation(customDropAnimation: Callback<void>): void
 ```
 
 设置自定义落位动效的执行函数，仅在  
-[useCustomDropAnimation]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_为true时有效。
+[useCustomDropAnimation](arkts-arkui-dragevent-i.md#usecustomdropanimation)为true时有效。
 
 **起始版本：** 18
 
@@ -35,7 +35,7 @@ executeDropAnimation(customDropAnimation: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| customDropAnimation | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | 是 | 在此回调函数中实现自定义落位动效。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ **说明：** \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. 该接口仅在onDrop回调中使用有效。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. 使用前需设置useCustomDropAnimation为true，否则该接口不生效。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. 不要在动画callback中实现与动效无关的逻辑，避免影响执行效率。 |
+| customDropAnimation | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 在此回调函数中实现自定义落位动效。&lt;br/&gt; **说明：** &lt;br/&gt;1. 该接口仅在onDrop回调中使用有效。&lt;br/&gt; 2. 使用前需设置useCustomDropAnimation为true，否则该接口不生效。&lt;br/&gt; 3. 不要在动画callback中实现与动效无关的逻辑，避免影响执行效率。 |
 
 ## getData
 
@@ -61,14 +61,14 @@ getData(): UnifiedData
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 从DragEvent中获取拖拽相关数据。数据获取结果请参考错误码说明。 |
+| [UnifiedData](arkts-arkui-unifieddata-t.md) | 从DragEvent中获取拖拽相关数据。数据获取结果请参考错误码说明。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [190001](../errorcode-uicontext.md#190001-无效的uicontext对象) | Data not found. |
-| [190002](../errorcode-uicontext.md#190002-无效的回调函数) | Data error. |
+| 190002 | Data error. |
+| 190001 | Data not found. |
 
 ## getDisplayId
 
@@ -76,7 +76,7 @@ getData(): UnifiedData
 getDisplayId(): number
 ```
 
-获取当前拖拽事件发生时所在的屏幕ID，不支持在[onDragEnd]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_阶段使用。
+获取当前拖拽事件发生时所在的屏幕ID，不支持在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)阶段使用。
 
 **起始版本：** 20
 
@@ -198,7 +198,7 @@ getGlobalDisplayX(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于全局屏幕的左上角的X坐标。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：vp，取值范围：[0, +∞) |
+| number | 返回当前拖拽点相对于全局屏幕的左上角的X坐标。&lt;br/&gt;单位：vp，取值范围：[0, +∞) |
 
 ## getGlobalDisplayY
 
@@ -224,7 +224,7 @@ getGlobalDisplayY(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于全局屏幕的左上角的Y坐标。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：vp，取值范围：[0, +∞) |
+| number | 返回当前拖拽点相对于全局屏幕的左上角的Y坐标。&lt;br/&gt;单位：vp，取值范围：[0, +∞) |
 
 ## getModifierKeyState
 
@@ -250,7 +250,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 | 获取功能键按压状态。报错信息请参考以下错误码。支持功能键 'Ctrl' \| 'Alt' \| 'Shift'。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**说明：**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_此接口不支持在手写笔场景 下使用。 |
+| keys | Array&lt;string&gt; | 是 | 获取功能键按压状态。报错信息请参考以下错误码。支持功能键 'Ctrl' \| 'Alt' \| 'Shift'。&lt;br/&gt;**说明：**&lt;br/&gt;此接口不支持在手写笔场景 下使用。 |
 
 **返回值：**
 
@@ -262,7 +262,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## getPreviewRect
 
@@ -288,7 +288,7 @@ getPreviewRect(): Rectangle
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 拖拽预览图相对于当前窗口的位置，以及预览图尺寸信息，单位vp，其中x和y代表预览图左上角的窗口坐标，width和height代表预览图的尺寸。 |
+| [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md) | 拖拽预览图相对于当前窗口的位置，以及预览图尺寸信息，单位vp，其中x和y代表预览图左上角的窗口坐标，width和height代表预览图的尺寸。 |
 
 ## getResult
 
@@ -314,7 +314,7 @@ getResult(): DragResult
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 从DragEvent中获取的拖拽结果。 |
+| [DragResult](arkts-arkui-dragresult-e.md) | 从DragEvent中获取的拖拽结果。 |
 
 ## getSummary
 
@@ -340,7 +340,7 @@ getSummary(): Summary
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 拖拽相关数据的概要。 |
+| [Summary](../arkts-apis/arkts-arkui-summary-t.md) | 拖拽相关数据的概要。 |
 
 ## getVelocity
 
@@ -479,7 +479,8 @@ getX(): number
 ```
 
 当前拖拽点相对于窗口左上角的x轴坐标，单位为vp。
-    **说明：
+
+> **说明：**
 
 **起始版本：** 7
 
@@ -487,7 +488,7 @@ getX(): number
 
 **废弃版本：** 10
 
-**替代接口：** [DragEvent#getWindowX](../arkts-apis/arkts-arkui-component/common-dragevent-i.md#getwindowx)
+**替代接口：** [DragEvent#getWindowX](arkts-arkui-dragevent-i.md#getwindowx)
 
 <!--Device-DragEvent-getX(): number--><!--Device-DragEvent-getX(): number-End-->
 
@@ -497,7 +498,7 @@ getX(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于窗口左上角的x轴坐标。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：vp |
+| number | 返回当前拖拽点相对于窗口左上角的x轴坐标。&lt;br/&gt;单位：vp |
 
 ## getY
 
@@ -506,7 +507,8 @@ getY(): number
 ```
 
 当前拖拽点相对于窗口左上角的y轴坐标，单位为vp。
-    **说明：
+
+> **说明：**
 
 **起始版本：** 7
 
@@ -514,7 +516,7 @@ getY(): number
 
 **废弃版本：** 10
 
-**替代接口：** [DragEvent#getWindowY](../arkts-apis/arkts-arkui-component/common-dragevent-i.md#getwindowy)
+**替代接口：** [DragEvent#getWindowY](arkts-arkui-dragevent-i.md#getwindowy)
 
 <!--Device-DragEvent-getY(): number--><!--Device-DragEvent-getY(): number-End-->
 
@@ -524,7 +526,7 @@ getY(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于窗口左上角的y轴坐标。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_单位：vp |
+| number | 返回当前拖拽点相对于窗口左上角的y轴坐标。&lt;br/&gt;单位：vp |
 
 ## isRemote
 
@@ -576,7 +578,7 @@ setData(unifiedData: UnifiedData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| unifiedData | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 拖拽相关的数据。 |
+| unifiedData | [UnifiedData](arkts-arkui-unifieddata-t.md) | 是 | 拖拽相关的数据。 |
 
 ## setDataLoadParams
 
@@ -584,7 +586,7 @@ setData(unifiedData: UnifiedData): void
 setDataLoadParams(dataLoadParams: DataLoadParams): void
 ```
 
-设置起拖方延迟提供数据。使用此方法向系统提供数据加载参数，而不是直接提供完整的数据对象。当用户在目标应用程序上落入时，系统将使用此参数从起拖方请求实际数据。与[setData]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_方法同时使用，以最后调用的方法为准。该接口仅在[onDragStart]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_回调中生效。
+设置起拖方延迟提供数据。使用此方法向系统提供数据加载参数，而不是直接提供完整的数据对象。当用户在目标应用程序上落入时，系统将使用此参数从起拖方请求实际数据。与[setData](arkts-arkui-dragevent-i.md#setdata)方法同时使用，以最后调用的方法为准。该接口仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)回调中生效。
 
 **起始版本：** 20
 
@@ -602,7 +604,7 @@ setDataLoadParams(dataLoadParams: DataLoadParams): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataLoadParams | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 落入操作时使用的数据加载参数。 |
+| dataLoadParams | [DataLoadParams](../arkts-apis/arkts-arkui-dataloadparams-t.md) | 是 | 落入操作时使用的数据加载参数。 |
 
 ## setResult
 
@@ -628,7 +630,7 @@ setResult(dragResult: DragResult): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dragResult | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 拖拽结果。 |
+| dragResult | [DragResult](arkts-arkui-dragresult-e.md) | 是 | 拖拽结果。 |
 
 ## startDataLoading
 
@@ -654,7 +656,7 @@ startDataLoading(options: DataSyncOptions): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_接口取消数据加载。 |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading)接口取消数据加载。 |
 
 **返回值：**
 
@@ -666,8 +668,8 @@ startDataLoading(options: DataSyncOptions): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
-| [190003](../errorcode-drag-event.md#190003-当前阶段不允许操作) | Operation not allowed for current phase. |
+| 401 | Parameter error. |
+| 190003 | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 
@@ -677,14 +679,14 @@ autoHideComponentUniqueIds?: int | int[]
 
 设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。
 
-仅在[onDragStart]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。
+仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。
 
 若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。
 
-组件的uniqueId可通过[UIContext.getFrameNodeById()]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_配合[FrameNode.getUniqueId()]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_获取。
+组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid)配合[FrameNode.getUniqueId()](../arkts-apis/arkts-arkui-framenode-c.md/arkts-arkui-framenode-c.md#getuniqueid)获取。
 
-开发者应在[onDragEnd]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_或  
-[onDrop]\_\_\_JSDOC\_LINK\_DESC\_USD\_4\_\_\_中恢复组件显示状态。
+开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)或  
+[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中恢复组件显示状态。
 
 **类型：** int \| int[]
 
@@ -710,7 +712,7 @@ dragBehavior: DragBehavior
 
 默认值：DragBehavior.COPY。
 
-**类型：** DragBehavior
+**类型：** [DragBehavior](arkts-arkui-dragbehavior-e.md)
 
 **默认值：** COPY
 
@@ -736,7 +738,7 @@ useCustomDropAnimation: boolean
 
 应用可将该值设定为true来禁用系统默认落位动效，并实现自己的自定义落位动效。
 
-当不配置或设置为false时，系统默认落位动效生效，当[setResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_设置为DRAG\_SUCCESSFUL时，落位为缩小消失动效，不为DRAG\_SUCCESSFUL时，则为放大消失动效。
+当不配置或设置为false时，系统默认落位动效生效，当[setResult](arkts-arkui-dragevent-i.md#setresult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则为放大消失动效。
 
 当未禁用系统默认落位动效时，应用不应再实现自定义动效，以避免动效上的冲突。
 

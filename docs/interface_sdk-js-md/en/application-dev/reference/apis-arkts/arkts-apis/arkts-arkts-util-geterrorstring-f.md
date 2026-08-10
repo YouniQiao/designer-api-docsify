@@ -1,12 +1,18 @@
 # getErrorString
 
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
 ## getErrorString
 
 ```TypeScript
 function getErrorString(errno: number): string
 ```
 
-Obtains detailed information about a system error code.
+获取系统错误码的详细信息。
 
 **Since:** 7
 
@@ -24,15 +30,15 @@ Obtains detailed information about a system error code.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errno | number | Yes | Error code generated. |
+| errno | number | Yes | 生成的错误码。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Detailed information about the error code. |
+| string | 错误码的详细信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let errnum = -1; // -1 is a system error code.

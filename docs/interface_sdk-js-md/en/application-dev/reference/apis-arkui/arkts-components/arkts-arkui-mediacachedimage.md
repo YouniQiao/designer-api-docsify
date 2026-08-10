@@ -26,7 +26,8 @@ Image resource to be obtained.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| ResourceStr \| DrawableDescriptor \| ASTCResource | Yes |  |
+| src | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr \| DrawableDescriptor \| ASTCResource | Yes |  |
 
 ## Summary
 
+- [ASTCResource](arkts-arkui-mediacachedimage-astcresource-i-sys.md)

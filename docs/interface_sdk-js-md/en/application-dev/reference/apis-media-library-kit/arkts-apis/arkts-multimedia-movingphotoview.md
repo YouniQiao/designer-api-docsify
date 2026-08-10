@@ -1,5 +1,11 @@
 # @ohos.multimedia.movingphotoview(A component which support applications to show moving photo data)
 
+## Modules to Import
+
+```TypeScript
+import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
+```
+
 ## Summary
 
 ### Classes

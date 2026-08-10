@@ -1,6 +1,6 @@
 # UIUtils
 
-Provides APIs for handling data transformations related to state management.
+UIUtils状态管理相关的工具方法，包括获取代理对象的原始对象、将非观察数据变为可观察数据、动态添加和删除状态变量监听、同步刷新状态变量修改、创建数据绑定等，适用于需要手动管理状态观察、监听和同步刷新的场景。
 
 **Since:** 12
 
@@ -10,14 +10,20 @@ Provides APIs for handling data transformations related to state management.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+```
+
 ## addMonitor
 
 ```TypeScript
 static addMonitor(target: object, path: string | string[], monitorCallback: MonitorCallback, options?: MonitorOptions): void
 ```
 
-Dynamically adds a listener to the state variable of state management V2. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+给状态管理V2的状态变量动态添加监听方法，详见  
+[addMonitor/clearMonitor](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
 
 **Since:** 20
 
@@ -35,18 +41,18 @@ Dynamically adds a listener to the state variable of state management V2. For de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | object | Yes | Target object. Only \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ instances are supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If an unsupported type is provided, a runtime error is thrown. |
-| path | string \| string[] | Yes | Name path of the variable to be listened for. You can specify a path or pass a string array to specify multiple variable paths to be listened for at a time. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
-| monitorCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Listener function registered with the corresponding state variable. That is, when the state variable corresponding to the path changes, a specific function is called. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If an unsupported type is provided, a runtime error is thrown. |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Configuration item of the listener. For details, see [MonitorOptions]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. By default, the asynchronous callback is used. |
+| target | object | Yes | 目标对象，仅支持 [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)和 [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md)实例。 &lt;br&gt;对于不支持的类型，会抛出运行时错误，错误码见表格。 |
+| path | string \| string[] | Yes | 添加监听的变量名路径。可指定一个路径或者传入string数组用于一次性指定多个监听的变量路径。 &lt;br&gt;仅支持string和string数组，对于不支持的类型，会抛出运行时错误，错误码见表格。 |
+| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | 给对应的状态变量注册的监听函数，即path路径对应的状态变量改变时，会回调对应的函数。 &lt;br&gt;对于不支持的类型，会抛出运行时错误，错误码见表格。 |
+| options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | No | 监听函数的配置项，具体可见[MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md)。默认为异步回调。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
-| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
-| [130002](../errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
+| 130001 | The path is invalid. |
+| 130000 | The target is not a custom component instance or V2 class instance. |
+| 130002 | monitorCallback is not a function or an anonymous function. |
 
 ## applySync
 
@@ -54,8 +60,9 @@ Dynamically adds a listener to the state variable of state management V2. For de
 static applySync<T>(task: TaskCallback): T
 ```
 
-Synchronously updates a specified state variable. This API receives a closure function and updates only the internal modifications, including the updates of \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_and \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_ decorators, and re-rendering of the UI nodes.For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_.
+同步刷新指定的状态变量，该接口接收一个闭包函数，仅刷新闭包函数内的修改，包括更新[@Computed计算](../../../ui/state-management/arkts-new-computed.md)、  
+[@Monitor回调](../../../ui/state-management/arkts-new-monitor.md)以及重新渲染UI节点，详见  
+[applySync/flushUpdates/flushUIUpdates接口：同步刷新](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md)。
 
 **Since:** 22
 
@@ -73,21 +80,21 @@ Synchronously updates a specified state variable. This API receives a closure fu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Closure function. The state variable modification generated in the closure will be executed synchronously. |
+| task | [TaskCallback](arkts-arkui-taskcallback-t.md) | Yes | 闭包函数，该闭包中产生的状态变量修改会同步执行。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Return value obtained by executing the closure function. |
+| T | 闭包函数执行得到的返回值。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
+| 140001 | The function is not allowed to be called in @Computed |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -95,8 +102,8 @@ import { UIUtils } from '@kit.ArkUI';
 @Entry
 @ComponentV2
 struct Index {
-  @Local w: number = 50; // Width.
-  @Local h: number = 50; // Height.
+  @Local columnWidth: number = 50; // Width
+  @Local columnHeight: number = 50; // Height
   @Local message: string = 'Hello';
 
   build() {
@@ -106,19 +113,19 @@ struct Index {
         .onClick(() => {
           // Values are changed additionally before the animation is executed.
           UIUtils.applySync(() => {
-            this.w = 100;
-            this.h = 100;
+            this.columnWidth = 100;
+            this.columnHeight = 100;
             this.message = 'Hello World';
           });
           // The size of the column box gradually changes from (100 × 100) to (200 × 200) within 1s, and the text in the box changes to "Hello ArkUI".
           this.getUIContext().animateTo({
             duration: 1000
           }, () => {
-            console.info(`animateTo-in, w=${this.w}, h=${this.h}`);
-            this.w = 200;
-            this.h = 200;
+            console.info(`animateTo-in, width=${this.columnWidth}, height=${this.columnHeight}`);
+            this.columnWidth = 200;
+            this.columnHeight = 200;
             this.message = 'Hello ArkUI';
-            console.info(`animateTo-out, w=${this.w}, h=${this.h}`);
+            console.info(`animateTo-out, width=${this.columnWidth}, height=${this.columnHeight}`);
           });
         })
       // Column box.
@@ -126,8 +133,8 @@ struct Index {
         Text(`${this.message}`)
       }
       .backgroundColor('#ff17a98d')
-      .width(this.w)
-      .height(this.h)
+      .width(this.columnWidth)
+      .height(this.columnHeight)
     }
   }
 }
@@ -139,8 +146,7 @@ struct Index {
 static canBeObserved<T extends object>(source: T): ObservedResult
 ```
 
-Determines whether a data object can be observed and returns the observation result. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+判断数据对象是否为可观察对象，并返回观察结果。详见[canBeObserved接口：判断对象是否为可被观察对象](../../../ui/state-management/arkts-new-canBeObserved.md)。
 
 **Since:** 23
 
@@ -158,15 +164,15 @@ Determines whether a data object can be observed and returns the observation res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data object to be determined. Array, Map, Set, and Date types are supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| source | T | Yes | 输入一个数据对象，判断其是否可被观察。支持Array、Map、Set和Date类型数据。 &lt;br&gt;具体使用规则，详见[canBeObserved接口：判断对象是否为可被观察对象](../../../ui/state-management/arkts-new-canBeObserved.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns a result about whether the object can be observed. |
+| [ObservedResult](arkts-arkui-arkui-statemanagement-observedresult-i.md) | 返回对象是否可被观察的结果。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -215,8 +221,8 @@ class Student {
         // ID of the component associated with the decorator.
         const eleId = elementInfo.elementId;
         hilog.info(0x00, TAG, `elementId: ${eleId}`);
-      })
-    })
+      });
+    });
   }
 }
 
@@ -283,9 +289,8 @@ export struct School {
 static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void
 ```
 
-Deletes the listener added to the state variable of the state management V2 by calling the  
-[addMonitor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+删除通过[addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addmonitor)给状态管理V2的状态变量添加的监听方法，详见  
+[addMonitor/clearMonitor](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
 
 **Since:** 20
 
@@ -303,17 +308,17 @@ Deletes the listener added to the state variable of the state management V2 by c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | object | Yes | Target object. Only \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ and \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ instances are supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If an unsupported type is provided, a runtime error is thrown. |
-| path | string \| string[] | Yes | Name path of the variable to be deleted. You can specify a path or pass a string array to delete the listener functions of multiple state variables at a time. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
-| monitorCallback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Listener function to be deleted. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If this parameter is not specified, all listener functions registered with the variable corresponding to the path will be deleted. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_If an unsupported type is provided, a runtime error is thrown. |
+| target | object | Yes | 目标对象，仅支持 [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)和 [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md)实例。 &lt;br&gt;对于不支持的类型，会抛出运行时错误，错误码见表格。 |
+| path | string \| string[] | Yes | 删除监听的变量名路径。可指定一个路径或者传入string数组用于一次性指定删除多个状态变量的监听函数。 &lt;br&gt;仅支持string和数组，对于不支持的类型，会抛出运行时错误，错误码见表格。 |
+| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | No | 指定被删除的监听函数。 &lt;br&gt;当开发者不传此参数时，将删除path对应变量注册的所有监听函数。 &lt;br&gt;对于不支持的类型，会抛出运行时错误，错误码见表格。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
-| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
-| [130002](../errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
+| 130001 | The path is invalid. |
+| 130000 | The target is not a custom component instance or V2 class instance. |
+| 130002 | monitorCallback is not a function or an anonymous function. |
 
 ## enableV2Compatibility
 
@@ -321,8 +326,8 @@ Deletes the listener added to the state variable of the state management V2 by c
 static enableV2Compatibility<T extends object>(source: T): T
 ```
 
-Enables V1 state variables to be observable in @ComponentV2. This API is primarily used in scenarios where V1 and V2 state management are mixed. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+使V1的状态变量能够在\@ComponentV2中观察，主要应用于状态管理V1、V2混用场景。详见  
+[状态管理V1和V2混用指导（API version 19及之后）](../../../ui/state-management/arkts-v1-v2-mixusage.md)。
 
 **Since:** 19
 
@@ -340,15 +345,15 @@ Enables V1 state variables to be observable in @ComponentV2. This API is primari
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data source, which must be V1 state data. |
+| source | T | Yes | 数据源，仅支持V1状态数据，如被@Observed装饰的对象或被makeV1Observed方法转换的对象。传入非V1状态数据时返回数据源本身。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | If the data source is V1 state data, returns data that can be observed in |
+| T | 如果数据源是V1的状态数据，则返回能够在 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -395,9 +400,7 @@ struct CompV2 {
 static flushUIUpdates(): void
 ```
 
-Processes all state variable modifications before this API call and synchronizes the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ UI nodes. However, it does not synchronize the execution of @Computed and @Monitor decorators. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_.
+立即处理在调用该函数之前所有的状态变量修改，同步[标脏](../../../ui/state-management/arkts-state-management-introduce.md#触发更新)对应的UI节点，但不会同步执行
 
 **Since:** 22
 
@@ -415,10 +418,10 @@ Processes all state variable modifications before this API call and synchronizes
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
-| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
+| 140002 | The function is not allowed to be called in @Monitor |
+| 140001 | The function is not allowed to be called in @Computed |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -426,8 +429,8 @@ import { UIUtils } from '@kit.ArkUI';
 @Entry
 @ComponentV2
 struct Index {
-  @Local w: number = 50; // Width.
-  @Local h: number = 50; // Height.
+  @Local columnWidth: number = 50; // Width
+  @Local columnHeight: number = 50; // Height
   @Local message: string = 'Hello';
 
   build() {
@@ -436,19 +439,20 @@ struct Index {
         .margin(20)
         .onClick(() => {
           // Values are changed additionally before the animation is executed.
-          this.w = 100;
-          this.h = 100;
+          this.columnWidth = 100;
+          this.columnHeight = 100;
           this.message = 'Hello World';
+          // Immediately process the preceding state variable modifications and synchronize the dirty UI nodes.
           UIUtils.flushUIUpdates();
           // The size of the column box gradually changes from (100 × 100) to (200 × 200) within 1s, and the text in the box changes to "Hello ArkUI".
           this.getUIContext().animateTo({
             duration: 1000
           }, () => {
-            console.info(`animateTo-in, w=${this.w}, h=${this.h}`);
-            this.w = 200;
-            this.h = 200;
+            console.info(`animateTo-in, width=${this.columnWidth}, height=${this.columnHeight}`);
+            this.columnWidth = 200;
+            this.columnHeight = 200;
             this.message = 'Hello ArkUI';
-            console.info(`animateTo-out, w=${this.w}, h=${this.h}`);
+            console.info(`animateTo-out, width=${this.columnWidth}, height=${this.columnHeight}`);
           });
         })
       // Column box.
@@ -456,8 +460,8 @@ struct Index {
         Text(`${this.message}`)
       }
       .backgroundColor('#ff17a98d')
-      .width(this.w)
-      .height(this.h)
+      .width(this.columnWidth)
+      .height(this.columnHeight)
     }
   }
 }
@@ -469,8 +473,8 @@ struct Index {
 static flushUpdates(): void
 ```
 
-Synchronously updates all state variable modifications before this API call, including the updates of @Computed and @Monitor decorators, and re-rendering of the UI nodes. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+同步刷新在调用该函数之前所有的状态变量修改，包括更新@Computed计算、@Monitor回调以及重新渲染UI节点，详见  
+[applySync/flushUpdates/flushUIUpdates接口：同步刷新](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md)。
 
 **Since:** 22
 
@@ -488,10 +492,10 @@ Synchronously updates all state variable modifications before this API call, inc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
-| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
+| 140002 | The function is not allowed to be called in @Monitor |
+| 140001 | The function is not allowed to be called in @Computed |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -499,8 +503,8 @@ import { UIUtils } from '@kit.ArkUI';
 @Entry
 @ComponentV2
 struct Index {
-  @Local w: number = 50; // Width.
-  @Local h: number = 50; // Height.
+  @Local columnWidth: number = 50; // Width
+  @Local columnHeight: number = 50; // Height
   @Local message: string = 'Hello';
 
   build() {
@@ -509,19 +513,19 @@ struct Index {
         .margin(20)
         .onClick(() => {
           // Values are changed additionally before the animation is executed.
-          this.w = 100;
-          this.h = 100;
+          this.columnWidth = 100;
+          this.columnHeight = 100;
           this.message = 'Hello World';
           UIUtils.flushUpdates();
           // The size of the column box gradually changes from (100 × 100) to (200 × 200) within 1s, and the text in the box changes to "Hello ArkUI".
           this.getUIContext().animateTo({
             duration: 1000
           }, () => {
-            console.info(`animateTo-in, w=${this.w}, h=${this.h}`);
-            this.w = 200;
-            this.h = 200;
+            console.info(`animateTo-in, width=${this.columnWidth}, height=${this.columnHeight}`);
+            this.columnWidth = 200;
+            this.columnHeight = 200;
             this.message = 'Hello ArkUI';
-            console.info(`animateTo-out, w=${this.w}, h=${this.h}`);
+            console.info(`animateTo-out, width=${this.columnWidth}, height=${this.columnHeight}`);
           });
         })
       // Column box.
@@ -529,8 +533,8 @@ struct Index {
         Text(`${this.message}`)
       }
       .backgroundColor('#ff17a98d')
-      .width(this.w)
-      .height(this.h)
+      .width(this.columnWidth)
+      .height(this.columnHeight)
     }
   }
 }
@@ -542,9 +546,8 @@ struct Index {
 static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext
 ```
 
-Obtains [CustomComponentContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ of the given @Component(V1) or @ComponentV2.  
-**CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool,see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+返回给定@Component(V1)或@ComponentV2的[CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md)。使用它来访问组件的复用池。有关复用池的详细信息，请参阅  
+[全局复用池：集中化的组件回收与复用](../../../ui/state-management/arkts-global-reuse-pool.md)。
 
 **Since:** 26.0.0
 
@@ -562,13 +565,73 @@ Obtains [CustomComponentContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ of the giv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customComponent | T | Yes | @Component or @ComponentV2 whose context is to be obtained. |
+| customComponent | T | Yes | 要获取其上下文的@Component或@ComponentV2实例。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Context object of the given component instance. |
+| [CustomComponentContext](arkts-arkui-utils-customcomponentcontext-i.md) | 给定组件实例的上下文对象。 |
+
+## Examples
+
+```TypeScript
+import { UIUtils } from '@kit.ArkUI';
+
+@ReusableV2
+@ComponentV2
+struct ReusableChild {
+  aboutToRecycle() {
+    console.info('ReusableChild aboutToRecycle');
+  }
+  aboutToReuse() {
+    console.info('ReusableChild aboutToReuse');
+  }
+
+  build() {
+    Text('ReusableChild')
+  }
+}
+
+@Entry
+@ComponentV2({ 
+  reusePool: 'shared', // Declare the shared global reuse pool.
+  poolAccepts: [ReusableChild], // The global reuse pool accepts the child component type ReusableChild.
+  freezeWhenInactive: false // Disable the component freezing feature. This parameter must be provided when reusePools is declared. You can also enable the component freezing feature.
+})
+struct Index {
+  @Local showChild: boolean = true;
+
+  inspectPool() {
+    // Obtain CustomComponentContext of this component.
+    const context = UIUtils.getCustomComponentContext(this);
+    // Access the reuse pool through the context.
+    const pool = context.getReusePool();
+    if (pool) {
+      const info = pool.getReusableInfo(ReusableChild);
+      if (info && !Array.isArray(info)) {
+        console.info(`ReusableChild in the pool: count=${info.count}, maxCount=${info.maxCount}`);
+      }
+    }
+  }
+
+  build() {
+    Column() {
+      Button('Switch Child Component')
+        .onClick(() => { 
+          this.showChild = !this.showChild;
+        })
+      Button('Check Pool')
+        .onClick(() => {
+          this.inspectPool();
+        })
+      if (this.showChild) {
+        ReusableChild()
+      }
+    }
+  }
+}
+```
 
 ## getLifecycle
 
@@ -576,7 +639,7 @@ Obtains [CustomComponentContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ of the giv
 static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomComponentLifecycle
 ```
 
-Obtains the [lifecycle of a custom component]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+getLifecycle用于获取[自定义组件的生命周期](arkts-arkui-statemanagement.md)实例。
 
 **Since:** 23
 
@@ -594,15 +657,15 @@ Obtains the [lifecycle of a custom component]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customComponent | T | Yes | Custom component instance. |
+| customComponent | T | Yes | 自定义组件实例。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Lifecycle instance of a custom component obtained. |
+| [CustomComponentLifecycle](arkts-arkui-customcomponent-customcomponentlifecycle-i.md) | 自定义组件的生命周期实例。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIUtils, ComponentAppear } from '@kit.ArkUI';
@@ -631,8 +694,7 @@ struct Index {
 static getTarget<T extends object>(source: T): T
 ```
 
-Obtains the original object from a proxy object wrapped by the state management framework. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+从状态管理框架包裹的代理对象中获取原始对象。详见[getTarget接口：获取状态管理框架代理前的原始对象](../../../ui/state-management/arkts-new-getTarget.md)。
 
 **Since:** 12
 
@@ -650,15 +712,15 @@ Obtains the original object from a proxy object wrapped by the state management 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Source object. |
+| source | T | Yes | 数据源对象，即被状态管理框架包裹的代理对象，用于获取去除代理后的原始对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Original object of the source after the proxy added by the state management framework is removed. |
+| T | 数据源对象去除状态管理框架所加代理后的原始对象。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -690,7 +752,7 @@ struct Index {
 static makeBinding<T>(getter: GetterCallback<T>): Binding<T>
 ```
 
-Creates a read-only one-way data binding instance, which is used to construct the arguments of the **Binding** type in the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ function.
+创建只读的单向数据绑定实例，用于构建[\@Builder](../../../ui/state-management/arkts-builder.md)函数中参数类型为`Binding`的对应实参。
 
 **Since:** 20
 
@@ -708,18 +770,18 @@ Creates a read-only one-way data binding instance, which is used to construct th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| getter | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Callback used to obtain the value. Each value access triggers this function to obtain the latest value. |
+| getter | [GetterCallback](arkts-arkui-gettercallback-t.md)&lt;T&gt; | Yes | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Returns a read-only one-way data binding instance with a **value** attribute, which is used to obtain the currently bound value. The value can only be read and cannot be directly modified. |
+| [Binding](arkts-arkui-arkui-statemanagement-binding-c.md)&lt;T&gt; | 仅包含一个`value`属性，用于获取当前绑定的值。只能读取值，不能直接修改。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { Binding, MutableBinding, UIUtils } from '@kit.ArkUI';
+import { Binding, UIUtils } from '@kit.ArkUI';
 
 @Builder
 function CustomButton(num1: Binding<number>) {
@@ -735,7 +797,6 @@ function CustomButton(num1: Binding<number>) {
 @ComponentV2
 struct CompV2 {
   @Local number1: number = 5;
-  @Local number2: number = 10;
 
   build() {
     Column() {
@@ -766,8 +827,7 @@ struct CompV2 {
 static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>
 ```
 
-Creates a mutable two-way data binding instance, which is used to construct the argument of the **MutableBinding**  
-type in the \@Builder function.
+创建可修改的双向数据绑定实例，用于构建\@Builder函数中参数类型为`MutableBinding`的对应实参。
 
 **Since:** 20
 
@@ -785,27 +845,27 @@ type in the \@Builder function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| getter | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Callback used to obtain the value. Each value access triggers this function to obtain the latest value. |
-| setter | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Yes | Callback used to update the value. Each modification to **.value** triggers this function. |
+| getter | [GetterCallback](arkts-arkui-gettercallback-t.md)&lt;T&gt; | Yes | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
+| setter | [SetterCallback](arkts-arkui-settercallback-t.md)&lt;T&gt; | Yes | 定义如何更新值，当`.value`被修改时自动调用此函数。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;T&gt; | Returns a two-way data binding instance with a **value** attribute, which allows you to read and modify data. If the value is set, the system checks whether the value type matches the generic type **T**. |
+| [MutableBinding](arkts-arkui-utils-mutablebinding-c.md)&lt;T&gt; | 包含一个`value`属性，支持通过`.value`读取和修改数据，设置值时会检查类型是否匹配泛型`T`。 |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { Binding, MutableBinding, UIUtils } from '@kit.ArkUI';
+import { MutableBinding, UIUtils } from '@kit.ArkUI';
 
 @Builder
-function CustomButton(num2: MutableBinding<number>) {
+function CustomButton(num1: MutableBinding<number>) {
   Row() {
-    Button(`Custom Button: ${num2.value}`)
+    Button(`Custom Button: ${num1.value}`)
       .onClick(() => {
         // MutableBinding type, which can be modified.
-        num2.value += 1;
+        num1.value += 1;
       })
   }
 }
@@ -813,8 +873,7 @@ function CustomButton(num2: MutableBinding<number>) {
 @Entry
 @ComponentV2
 struct CompV2 {
-  @Local number1: number = 5;
-  @Local number2: number = 10;
+  @Local number1: number = 10;
 
   build() {
     Column() {
@@ -823,7 +882,7 @@ struct CompV2 {
       CustomButton(
         /**
          * Creates a mutable binding.
-         * @param getter - Function that returns this.number2.
+         * @param getter - Function that returns this.number1
          * @param setter - Callback called when the binding value is modified.
          * @returns A mutable MutableBinding<number> object.
          *
@@ -832,9 +891,9 @@ struct CompV2 {
          * 2. The setter callback is automatically called when .value is modified.
          */
         UIUtils.makeBinding<number>(
-          () => this.number2, // GetterCallback
+          () => this.number1, // GetterCallback
           (val: number) => {
-            this.number2 = val;
+            this.number1 = val;
           }) // SetterCallback
       )
     }
@@ -848,8 +907,7 @@ struct CompV2 {
 static makeObserved<T extends object>(source: T): T
 ```
 
-Converts ordinary unobservable data into observable data. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+将普通不可观察数据变为可观察数据。详见[makeObserved接口：将非观察数据变为可观察数据](../../../ui/state-management/arkts-new-makeObserved.md)。
 
 **Since:** 12
 
@@ -867,15 +925,15 @@ Converts ordinary unobservable data into observable data. For details, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Source object. It supports classes not decorated by @Observed or @ObservedV2, objects returned by **JSON.parse**, and classes decorated by @Sendable. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Array, Map, Set, and Date types are supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_collections.Array, collections.Set, and collections.Map are supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_For details, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| source | T | Yes | 数据源对象。支持非@Observed和@ObservedV2装饰的class，JSON.parse返回的Object和@Sendable修饰的class。 &lt;br&gt;支持Array、Map、Set和Date。 &lt;br&gt;支持collections.Array、collections.Set和collections.Map。 &lt;br&gt;具体使用规则，详见[makeObserved接口：将非观察数据变为可观察数据](../../../ui/state-management/arkts-new-makeObserved.md)。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Observable data. |
+| T | 对于支持的入参类型，返回可观察的数据。对于不支持的入参类型，返回数据源对象本身。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -887,6 +945,7 @@ class NonObservedClass {
 @Entry
 @ComponentV2
 struct Index {
+  // Use makeObserved to make the NonObservedClass instance observable.
   observedClass: NonObservedClass = UIUtils.makeObserved(new NonObservedClass());
   nonObservedClass: NonObservedClass = new NonObservedClass();
 
@@ -896,7 +955,7 @@ struct Index {
         .onClick(() => {
           this.observedClass.name = 'Jane'; // This will trigger a UI update.
         })
-      Text(`observedClass: ${this.nonObservedClass.name}`)
+      Text(`nonObservedClass: ${this.nonObservedClass.name}`)
         .onClick(() => {
           this.nonObservedClass.name = 'Jane'; // This will not trigger a UI update.
         })
@@ -911,10 +970,10 @@ struct Index {
 static makeV1Observed<T extends object>(source: T): T
 ```
 
-Wraps an unobservable object into an object that is observable by V1 state management. This API is equivalent to @Observed and can be used to initialize @ObjectLink.
+将不可观察的对象包装成状态管理V1可观察的对象，其能力等同于@Observed，可初始化@ObjectLink。
 
-This API can be used together with [enableV2Compatibility]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ in scenarios where state management V1 and V2 are used together. For details, see  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+该接口可搭配[enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility)应用于状态管理V1和V2混用场景，详见  
+[状态管理V1和V2混用指导（API version 19及之后）](../../../ui/state-management/arkts-v1-v2-mixusage.md)。
 
 **Since:** 19
 
@@ -932,15 +991,15 @@ This API can be used together with [enableV2Compatibility]\_\_\_JSDOC\_LINK\_DES
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_[@arkts.collections]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ (ArkTS containers) and classes decorated with \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ are not supported. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ are not supported. |
+| source | T | Yes | 数据源。支持普通class、Array、Map、Set、Date类型。 &lt;br&gt;不支持[@arkts.collections (ArkTS容器集)](../../apis-arkts/arkts-apis/arkts-collections.md/arkts-collections.md)和 [@Sendable](../../../arkts-utils/arkts-sendable.md)修饰的class。 &lt;br&gt;不支持undefined和null。不支持状态管理V2的数据和[makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved)的返回值。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | For supported input parameter types, returns data observable by V1 state management. For unsupported input parameter types, returns the data source object itself. |
+| T | 对于支持的入参类型，返回状态管理V1的观察数据。对于不支持的入参类型，返回数据源对象本身。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { UIUtils } from '@kit.ArkUI';
@@ -961,6 +1020,7 @@ class Inner {
 @Entry
 @Component
 struct Index {
+  // Use makeV1Observed to wrap the Inner instance as a V1 observable object and pass it to the Outer constructor.
   @State outer: Outer = new Outer(UIUtils.makeV1Observed(new Inner()));
 
   build() {

@@ -1,6 +1,6 @@
 # Range
 
-Range of selected text.
+文本的选中范围。
 
 **Since:** 10
 
@@ -10,15 +10,21 @@ Range of selected text.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## Modules to Import
+
+```TypeScript
+import { inputMethod } from 'kits/@kit.IMEKit';
+```
+
 ## end
 
 ```TypeScript
 end: int
 ```
 
-Indicates the index of the last character of the selected text.
+选中文本的末字符在编辑框的索引值。该参数应为大于或等于0的整数，不超过文本实际长度，end值要大于start值。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -34,9 +40,9 @@ Indicates the index of the last character of the selected text.
 start: int
 ```
 
-Indicates the index of the first character of the selected text.
+选中文本的首字符在编辑框的索引值。该参数应为大于或等于0的整数，不超过文本实际长度。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 

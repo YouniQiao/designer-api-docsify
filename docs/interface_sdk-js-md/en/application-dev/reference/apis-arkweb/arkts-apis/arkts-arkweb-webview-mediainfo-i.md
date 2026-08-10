@@ -1,7 +1,6 @@
 # MediaInfo
 
-Represents a **MediaInfo** object used as a parameter of the  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
+[CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback12)回调函数的一个参数。包含了网页中媒体的信息。应用可以根据这些信息来创建接管网页媒体播放的播放器。
 
 **Since:** 23
 
@@ -11,15 +10,21 @@ Represents a **MediaInfo** object used as a parameter of the
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
+
 ## attributes
 
 ```TypeScript
 attributes: Record<string, string>
 ```
 
-Attributes in **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** or **\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**.
+Attributes in **&lt;video&gt;** or **&lt;audio&gt;**.
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 23
 
@@ -35,7 +40,7 @@ Attributes in **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** or **\_\_\_HTML\_TAG\_DESC
 controlList: string[]
 ```
 
-Value of the **controlslist** attribute in **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** or **\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**.
+Value of the **controlslist** attribute in **&lt;video&gt;** or **&lt;audio&gt;**.
 
 **Type:** string[]
 
@@ -53,10 +58,9 @@ Value of the **controlslist** attribute in **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_
 controlsShown: boolean
 ```
 
-Whether the **controls** attribute exists in **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** or **\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_**.
+Whether the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**.
 
-The value **true** means that the **controls** attribute exists in **\_\_\_HTML\_TAG\_DESC\_USD\_2\_\_\_** or **\_\_\_HTML\_TAG\_DESC\_USD\_3\_\_\_**, and **false**  
-means the opposite.
+The value **true** means that the **controls** attribute exists in **&lt;video&gt;** or **&lt;audio&gt;**, and **false**means the opposite.
 
 **Type:** boolean
 
@@ -74,7 +78,7 @@ means the opposite.
 embedID: string
 ```
 
-ID of **\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_** or **\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_** on the web page.
+ID of **&lt;video&gt;** or **&lt;audio&gt;** on the web page.
 
 **Type:** string
 
@@ -94,7 +98,7 @@ headers: Record<string, string>
 
 HTTP headers that need to be included in the player's request for media resources.
 
-**Type:** Record&lt;string, string&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
 **Since:** 23
 
@@ -112,7 +116,7 @@ mediaSrcList: MediaSourceInfo[]
 
 Source of the media. There may be multiple sources. The application needs to select a supported source to play.
 
-**Type:** MediaSourceInfo[]
+**Type:** [MediaSourceInfo](arkts-arkweb-webview-mediasourceinfo-c.md)[]
 
 **Since:** 23
 
@@ -130,7 +134,7 @@ mediaType: MediaType
 
 Type of the media.
 
-**Type:** MediaType
+**Type:** [MediaType](arkts-arkweb-webview-mediatype-e.md)
 
 **Since:** 23
 
@@ -186,7 +190,7 @@ preload: Preload
 
 Whether preloading is required.
 
-**Type:** Preload
+**Type:** [Preload](arkts-arkweb-webview-preload-e.md)
 
 **Since:** 23
 
@@ -204,7 +208,7 @@ surfaceInfo: NativeMediaPlayerSurfaceInfo
 
 Surface information used for same-layer rendering.
 
-**Type:** NativeMediaPlayerSurfaceInfo
+**Type:** [NativeMediaPlayerSurfaceInfo](arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md)
 
 **Since:** 23
 

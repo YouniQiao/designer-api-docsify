@@ -20,5 +20,5 @@ Triggered when an AI session is destroyed.Used for cleaning up resources associa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | The session task ID.  |
+| id | string | 是 | The session task ID. |
 

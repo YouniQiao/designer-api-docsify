@@ -10,6 +10,12 @@ The result for closing a WebSocket connection.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+import { webSocket } from 'kits/@kit.NetworkKit';
+```
+
 ## code
 
 ```TypeScript
@@ -18,7 +24,7 @@ code: int
 
 Error code.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 11
 

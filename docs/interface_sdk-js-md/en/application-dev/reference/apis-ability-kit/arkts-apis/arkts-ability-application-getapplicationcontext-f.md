@@ -1,12 +1,18 @@
 # getApplicationContext
 
+## Modules to Import
+
+```TypeScript
+import { application } from 'kits/@kit.AbilityKit';
+```
+
 ## getApplicationContext
 
 ```TypeScript
 export function getApplicationContext(): ApplicationContext
 ```
 
-Obtains the application context. This API provides context access independent of the base class **Context**.Repeated calls to this API generate a new ApplicationContext object.
+获取应用上下文。开发者使用该接口时，无需依赖Context基类。重复调用该接口，将生成新的ApplicationContext对象。
 
 **Since:** 14
 
@@ -24,15 +30,15 @@ Obtains the application context. This API provides context access independent of
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Application context. |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | 应用上下文。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 16000050 | Internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';

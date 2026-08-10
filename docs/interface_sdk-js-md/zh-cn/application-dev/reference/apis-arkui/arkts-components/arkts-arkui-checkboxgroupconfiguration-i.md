@@ -1,6 +1,6 @@
 # CheckBoxGroupConfiguration
 
-开发者必须自定义此类以实现ContentModifier接口，使用方法见[contentModifier]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+开发者必须自定义此类以实现ContentModifier接口，使用方法见[contentModifier](CheckboxGroupAttribute#contentModifier)。
 
 **继承/实现关系：** CheckBoxGroupConfiguration extends [CommonConfiguration<CheckBoxGroupConfiguration>](CommonConfiguration<CheckBoxGroupConfiguration>)
 
@@ -42,7 +42,7 @@ status: SelectStatus
 
 表示多选框群组的选中状态。
 
-**类型：** SelectStatus
+**类型：** [SelectStatus](arkts-arkui-selectstatus-e.md)
 
 **起始版本：** 21
 
@@ -64,7 +64,7 @@ triggerChange: Callback<boolean>
 
 触发多选框群组选中状态变化。true表示从部分选中或未选中变为全部选中，false表示从全部选中或部分选中变为全部未选中。
 
-**类型：** Callback&lt;boolean&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
 
 **起始版本：** 21
 

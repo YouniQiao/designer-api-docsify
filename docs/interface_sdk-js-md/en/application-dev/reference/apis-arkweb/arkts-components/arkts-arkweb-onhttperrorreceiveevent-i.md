@@ -1,6 +1,6 @@
 # OnHttpErrorReceiveEvent
 
-Defines the triggered function when the web page receives a web resource loading HTTP error.
+定义网页收到资源加载HTTP错误时触发。
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Defines the triggered function when the web page receives a web resource loading
 request: WebResourceRequest
 ```
 
-The information of request.
+网页请求的封装信息。
 
-**Type:** WebResourceRequest
+**Type:** [WebResourceRequest](../arkts-apis/arkts-arkweb-web-webresourcerequest-c.md)
 
 **Since:** 12
 
@@ -36,9 +36,9 @@ The information of request.
 response: WebResourceResponse
 ```
 
-Web resource response of event.
+资源响应的封装信息。
 
-**Type:** WebResourceResponse
+**Type:** [WebResourceResponse](arkts-arkweb-webresourceresponse-c.md)
 
 **Since:** 12
 

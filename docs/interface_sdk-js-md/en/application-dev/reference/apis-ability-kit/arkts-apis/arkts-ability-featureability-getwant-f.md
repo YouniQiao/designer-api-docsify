@@ -1,12 +1,18 @@
 # getWant
 
+## Modules to Import
+
+```TypeScript
+import { featureAbility } from 'kits/@kit.AbilityKit';
+```
+
 ## getWant
 
 ```TypeScript
 function getWant(callback: AsyncCallback<Want>): void
 ```
 
-Obtains the Want corresponding to the ability to start. This API uses an asynchronous callback to return the result.
+获取要拉起的Ability对应的Want。使用callback异步回调。
 
 **Since:** 6
 
@@ -22,9 +28,9 @@ Obtains the Want corresponding to the ability to start. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Callback used to return the Want. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | 回调函数，返回want信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
@@ -45,7 +51,7 @@ featureAbility.getWant((error, data) => {
 function getWant(): Promise<Want>
 ```
 
-Obtains the Want corresponding to the ability to start. This API uses a promise to return the result.
+获取要拉起的Ability对应的Want。使用Promise异步回调。
 
 **Since:** 6
 
@@ -61,9 +67,9 @@ Obtains the Want corresponding to the ability to start. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Promise used to return the Want. |
+| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Promise对象，返回want信息。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';

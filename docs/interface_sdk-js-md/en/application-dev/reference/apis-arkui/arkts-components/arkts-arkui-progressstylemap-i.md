@@ -1,6 +1,6 @@
 # ProgressStyleMap
 
-Defines the mapping between progress indicators and styles.
+进度条类型和样式的映射表。
 
 **Since:** 10
 
@@ -16,9 +16,9 @@ Defines the mapping between progress indicators and styles.
 [ProgressType.Capsule]: CapsuleStyleOptions | ProgressStyleOptions
 ```
 
-Progress bar style corresponding to the capsule progress bar.
+胶囊形进度条对应的进度条样式。
 
-**Type:** CapsuleStyleOptions \| ProgressStyleOptions
+**Type:** [CapsuleStyleOptions](../arkts-apis/arkts-arkui-progress-capsulestyleoptions-i.md) \| ProgressStyleOptions
 
 **Since:** 10
 
@@ -38,9 +38,9 @@ Progress bar style corresponding to the capsule progress bar.
 [ProgressType.Eclipse]: EclipseStyleOptions | ProgressStyleOptions
 ```
 
-Progress bar style corresponding to a round progress bar.
+圆形进度条对应的进度条样式。
 
-**Type:** EclipseStyleOptions \| ProgressStyleOptions
+**Type:** [EclipseStyleOptions](arkts-arkui-eclipsestyleoptions-i.md) \| ProgressStyleOptions
 
 **Since:** 10
 
@@ -60,9 +60,9 @@ Progress bar style corresponding to a round progress bar.
 [ProgressType.Linear]: LinearStyleOptions | ProgressStyleOptions
 ```
 
-Progress bar style corresponding to the linear progress bar.
+线性进度条对应的进度条样式。
 
-**Type:** LinearStyleOptions \| ProgressStyleOptions
+**Type:** [LinearStyleOptions](arkts-arkui-linearstyleoptions-i.md) \| ProgressStyleOptions
 
 **Since:** 10
 
@@ -82,9 +82,9 @@ Progress bar style corresponding to the linear progress bar.
 [ProgressType.Ring]: RingStyleOptions | ProgressStyleOptions
 ```
 
-Progress bar style corresponding to the ring unscaled progress bar.
+环形无刻度进度条对应的进度条样式。
 
-**Type:** RingStyleOptions \| ProgressStyleOptions
+**Type:** [RingStyleOptions](../arkts-apis/arkts-arkui-progress-ringstyleoptions-i.md) \| ProgressStyleOptions
 
 **Since:** 10
 
@@ -104,9 +104,9 @@ Progress bar style corresponding to the ring unscaled progress bar.
 [ProgressType.ScaleRing]: ScaleRingStyleOptions | ProgressStyleOptions
 ```
 
-Progress bar style corresponding to the ring scaled progress bar.
+环形有刻度进度条对应的进度条样式。
 
-**Type:** ScaleRingStyleOptions \| ProgressStyleOptions
+**Type:** [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md) \| ProgressStyleOptions
 
 **Since:** 10
 

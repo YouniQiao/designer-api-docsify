@@ -2,7 +2,7 @@
 
 ReminderRequestCalendar extends ReminderRequest
 
-Defines a reminder for a calendar event.
+日历实例对象，用于设置提醒的时间。
 
 **Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
@@ -14,15 +14,21 @@ Defines a reminder for a calendar event.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
+## Modules to Import
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## rruleWantAgent
 
 ```TypeScript
 rruleWantAgent?: WantAgent
 ```
 
-Custom reminder, which specifies the ServiceExtensionAbility to start.
+自定义重复日程，指明需要拉起的 Service Extension。
 
-**Type:** WantAgent
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **Since:** 12
 

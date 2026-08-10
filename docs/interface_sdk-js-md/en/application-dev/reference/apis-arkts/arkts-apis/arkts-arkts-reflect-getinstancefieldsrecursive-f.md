@@ -22,7 +22,7 @@ Returns public instance fields of a class and its parents.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetClass | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | the target class. |
+| targetClass | [Class](arkts-arkts-class-c.md) | Yes | the target class. |
 
 **Return value:**
 

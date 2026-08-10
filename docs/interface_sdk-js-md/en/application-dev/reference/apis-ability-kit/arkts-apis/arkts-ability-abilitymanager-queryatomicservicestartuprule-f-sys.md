@@ -1,13 +1,18 @@
 # queryAtomicServiceStartupRule (System API)
 
+## Modules to Import
+
+```TypeScript
+import { abilityManager } from 'kits/@kit.AbilityKit';
+```
+
 ## queryAtomicServiceStartupRule
 
 ```TypeScript
 function queryAtomicServiceStartupRule(context: Context, appId: string): Promise<AtomicServiceStartupRule>
 ```
 
-Obtains the rule for launching an  
-[EmbeddableUIAbility]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ in embedded mode. This API uses a promise to return the result.This API can be properly called only on phones and tablets. On other devices, it returns the error code 801.
+查询嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)的规则。使用Promise异步回调。该接口仅在Phone和Tablet设备中可正常调用，在其他设备中返回801错误码。
 
 **Since:** 18
 
@@ -25,24 +30,24 @@ Obtains the rule for launching an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Context of the caller.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Note: Currently, only [UIAbilityContext]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ is supported. |
-| appId | string | Yes | Unique ID of the application, which is allocated by the cloud. |
+| context | [Context](arkts-ability-context-c-sys.md) | Yes | 嵌入式拉起EmbeddableUIAbility的调用方Context。&lt;br&gt;**说明：**目前仅支持 [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)。 |
+| appId | string | Yes | 应用的唯一标识，由云端统一分配。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AtomicServiceStartupRule&gt; | Promise used to return the rule for launching the embedded atomic service. |
+| Promise&lt;AtomicServiceStartupRule&gt; | Promise对象。返回嵌入式拉起原子化服务的规则。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
+| 16000050 | Internal error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { abilityManager, UIAbility } from '@kit.AbilityKit';

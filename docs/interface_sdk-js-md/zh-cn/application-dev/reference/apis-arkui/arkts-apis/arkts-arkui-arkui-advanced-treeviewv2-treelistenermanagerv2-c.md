@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from 'kits/@kit.ArkUI';
+```
+
 ## getInstance
 
 ```TypeScript
@@ -32,7 +38,7 @@ static getInstance(): TreeListenerManagerV2
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  返回获取到的树视图组件的监听管理器单例对象。 |
+| [TreeListenerManagerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenermanagerv2-c.md) | 返回获取到的树视图组件的监听管理器单例对象。 |
 
 ## getTreeListener
 
@@ -56,5 +62,5 @@ getTreeListener(): TreeListenerV2
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ |  返回获取到的树视图监听器实例。 |
+| [TreeListenerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenerv2-c.md) | 返回获取到的树视图监听器实例。 |
 

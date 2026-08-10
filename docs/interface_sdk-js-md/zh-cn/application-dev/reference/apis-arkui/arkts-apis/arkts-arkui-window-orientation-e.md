@@ -1,7 +1,7 @@
 # Orientation
 
-窗口显示方向类型枚举。\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_不同枚举值之间的区别可查询  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_。\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_
+窗口显示方向类型枚举。&lt;!--Del--&gt;不同枚举值之间的区别可查询  
+[窗口Orientation枚举值8\~10或12和枚举值13\~16的区别(API9)](../../../faqs/faqs-window-manager.md#窗口orientation枚举值810或12和枚举值1316的区别api9)。&lt;!--DelEnd--&gt;
 
 **起始版本：** 9
 

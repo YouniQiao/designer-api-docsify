@@ -4,7 +4,7 @@
 declare type SystemBarStyle = import('../api/@ohos.window').default.SystemBarStyle
 ```
 
-Describes the properties of the status bar. These properties are valid for the page-level status bar.
+状态栏的属性。在设置页面级状态栏属性时使用。
 
 **Since:** 12
 

@@ -62,7 +62,7 @@ index: number
 key?: string | Array<string>
 ```
 
-为添加的数据分配键值，默认使用原键值。键值支持string或Array\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_类型；当键值为数组且长度大于count时报参数无效错误。
+为添加的数据分配键值，默认使用原键值。键值支持string或Array&lt;string&gt;类型；当键值为数组且长度大于count时报参数无效错误。
 
 **类型：** string \| Array&lt;string&gt;
 

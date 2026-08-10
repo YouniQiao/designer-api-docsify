@@ -10,6 +10,12 @@ Defines the configuration options for ContainerReader component.Used to specify 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'kits/@kit.ArkUI';
+```
+
 ## heightBreakpoint
 
 ```TypeScript
@@ -18,7 +24,7 @@ heightBreakpoint?: Bindable<HeightBreakpoint>
 
 Optional height breakpoint configuration for container height analysis.Defines the height thresholds that trigger different layout behaviors.
 
-**Type:** Bindable&lt;HeightBreakpoint&gt;
+**Type:** [Bindable](arkts-arkui-common-bindable-i.md)&lt;[HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)&gt;
 
 **Since:** 26.0.0
 
@@ -38,7 +44,7 @@ size: Bindable<Size>
 
 The target container size for layout analysis.Defines the reference dimensions used for breakpoint calculation and layout adaptation.
 
-**Type:** Bindable&lt;Size&gt;
+**Type:** [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Size](arkts-arkui-graphics-size-i.md)&gt;
 
 **Since:** 26.0.0
 
@@ -58,7 +64,7 @@ widthBreakpoint?: Bindable<WidthBreakpoint>
 
 Optional width breakpoint configuration for container width analysis.Defines the width thresholds that trigger different layout behaviors.
 
-**Type:** Bindable&lt;WidthBreakpoint&gt;
+**Type:** [Bindable](arkts-arkui-common-bindable-i.md)&lt;[WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)&gt;
 
 **Since:** 26.0.0
 

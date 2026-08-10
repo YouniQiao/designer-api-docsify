@@ -1,9 +1,9 @@
 # WriteStream
 
-Defines a writeable stream. You need to use  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to create a **WriteStream** instance, which is inherited from [stream.Writable]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+文件可写流，需要先通过  
+[fileIo.createWriteStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatewritestream12)方法来构建一个WriteStream实例。WriteStream继承自数据流基类[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md)。
 
-**Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md)
+**Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md)
 
 **Since:** 12
 
@@ -13,13 +13,19 @@ Defines a writeable stream. You need to use
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+```
+
 ## close
 
 ```TypeScript
 close(): void
 ```
 
-Closes this writeable stream.
+关闭可写流。
 
 **Since:** 12
 
@@ -40,11 +46,11 @@ Closes this writeable stream.
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
-const ws = fs.createWriteStream(filePath);
+const ws = fileIo.createWriteStream(filePath);
 ws.close();
 ```
 
@@ -70,7 +76,7 @@ The WriteStream constructor.
 seek(offset: number, whence?: WhenceType): number
 ```
 
-Adjusts the position of the writeable stream offset pointer.
+调整可写流的偏移指针位置。
 
 **Since:** 12
 
@@ -84,31 +90,31 @@ Adjusts the position of the writeable stream offset pointer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Relative offset, in bytes. |
-| whence | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Where to start the offset. The default value is **SEEK\_\_\_ESCAPED\_UNDERSCORE\_\_\_SET**, which indicates the beginning of the file. |
+| offset | number | Yes | 相对偏移位置，单位为Byte。 |
+| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | 偏移指针相对位置类型。默认值：SEEK_SET，文件起始位置处。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Position of the current offset pointer (offset relative to the file header, in bytes). |
+| number | 当前可写流偏移指针位置（相对于文件头的偏移量，单位为Byte）。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900020 | Invalid argument |
+| 401 | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
-**Example**
+## Examples
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
-const ws = fs.createWriteStream(filePath);
-const curOff = ws.seek(5, fs.WhenceType.SEEK_SET);
-console.info(`current offset is ${curOff}`);
+const ws = fileIo.createWriteStream(filePath);
+const curOff = ws.seek(5, fileIo.WhenceType.SEEK_SET);
+console.info(`Succeeded in seeking, current offset is ${curOff}`);
 ws.close();
 ```
 
@@ -118,7 +124,7 @@ ws.close();
 readonly bytesWritten: number
 ```
 
-Number of bytes written to the writable stream.
+可写流已经写入的字节数。
 
 **Type:** number
 
@@ -136,7 +142,7 @@ Number of bytes written to the writable stream.
 readonly path: string
 ```
 
-Path of the file corresponding to the writeable stream.
+当前可写流对应的文件路径。
 
 **Type:** string
 

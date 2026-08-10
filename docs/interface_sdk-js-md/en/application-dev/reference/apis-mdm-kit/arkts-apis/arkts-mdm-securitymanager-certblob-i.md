@@ -1,6 +1,6 @@
 # CertBlob
 
-Represents the certificate information.
+证书信息。
 
 **Since:** 12
 
@@ -10,13 +10,19 @@ Represents the certificate information.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## Modules to Import
+
+```TypeScript
+import { securityManager } from 'kits/@kit.MDMKit';
+```
+
 ## alias
 
 ```TypeScript
 alias: string
 ```
 
-Certificate alias. The value length must be less than 40 characters.
+证书别名，别名长度小于40个字符。
 
 **Type:** string
 
@@ -36,7 +42,7 @@ Certificate alias. The value length must be less than 40 characters.
 inData: Uint8Array
 ```
 
-Binary content of the certificate.
+证书的二进制内容。
 
 **Type:** Uint8Array
 

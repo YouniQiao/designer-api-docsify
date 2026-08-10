@@ -1,12 +1,18 @@
 # getOsAccountSubProfileManager (System API)
 
+## Modules to Import
+
+```TypeScript
+import { osAccount } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getOsAccountSubProfileManager
 
 ```TypeScript
 function getOsAccountSubProfileManager(): OsAccountSubProfileManager
 ```
 
-Obtains an OS account sub-profile manager instance.
+获取系统账号子身份资料管理器。
 
 **Since:** 26.0.0
 
@@ -24,11 +30,17 @@ Obtains an OS account sub-profile manager instance.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Instance object of the OS account sub-profile manager. |
+| [OsAccountSubProfileManager](arkts-basicservices-osaccount-osaccountsubprofilemanager-i-sys.md) | 系统账号子身份资料管理器的实例对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| 202 | Not system application. |
+
+## Examples
+
+```TypeScript
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+```
 

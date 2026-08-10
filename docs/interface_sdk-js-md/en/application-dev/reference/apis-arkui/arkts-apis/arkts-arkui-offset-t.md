@@ -4,7 +4,7 @@
 export type Offset = Vector2
 ```
 
-Sets the offset of the component or effect.
+用于设置组件或效果的偏移。
 
 **Since:** 11
 

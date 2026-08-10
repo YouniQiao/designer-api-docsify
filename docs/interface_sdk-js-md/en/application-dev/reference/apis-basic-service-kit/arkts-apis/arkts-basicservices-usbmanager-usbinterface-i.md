@@ -1,7 +1,6 @@
 # USBInterface
 
-Represents a USB interface. One [USBConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ object can contain multiple *  
-*USBInterface** instances, each providing a specific function.
+一个[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)中可以含有多个USBInterface，每个USBInterface提供一个功能。
 
 **Since:** 9
 
@@ -11,15 +10,21 @@ Represents a USB interface. One [USBConfiguration]\_\_\_JSDOC\_LINK\_DESC\_USD\_
 
 **System capability:** SystemCapability.USB.USBManager
 
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
 ## alternateSetting
 
 ```TypeScript
 alternateSetting: int
 ```
 
-Settings for alternating between descriptors of the same USB interface. The value size indicates the number of optional modes. The value 0 indicates that no optional mode is supported.
+在同一个接口中的多个描述符中进行切换设置。值的大小表示支持可选模式个数，其中0表示不支持可选模式。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -35,9 +40,9 @@ Settings for alternating between descriptors of the same USB interface. The valu
 clazz: int
 ```
 
-Device type.
+设备类型。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -53,7 +58,7 @@ Device type.
 endpoints: Array<USBEndpoint>
 ```
 
-Endpoints that belong to the USB interface.
+当前接口所包含的端点。
 
 **Type:** Array&lt;USBEndpoint&gt;
 
@@ -71,9 +76,9 @@ Endpoints that belong to the USB interface.
 id: int
 ```
 
-Unique ID of the USB interface.
+接口的唯一标识。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -89,7 +94,7 @@ Unique ID of the USB interface.
 name: string
 ```
 
-Interface name.
+接口名称。
 
 **Type:** string
 
@@ -107,9 +112,9 @@ Interface name.
 protocol: int
 ```
 
-Interface protocol.
+接口的协议。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 
@@ -125,9 +130,9 @@ Interface protocol.
 subClass: int
 ```
 
-Device subclass.
+设备子类。
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 9
 

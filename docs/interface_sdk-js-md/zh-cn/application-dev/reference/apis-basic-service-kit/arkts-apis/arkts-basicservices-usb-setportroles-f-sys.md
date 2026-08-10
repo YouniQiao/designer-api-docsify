@@ -1,5 +1,11 @@
 # setPortRoles（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { usb } from 'kits/@kit.BasicServicesKit';
+```
+
 ## setPortRoles
 
 ```TypeScript
@@ -27,8 +33,8 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | portId | number | 是 | 端口号。 |
-| powerRole | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 充电的角色。 |
-| dataRole | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 数据传输的角色。 |
+| powerRole | [PowerRoleType](arkts-basicservices-usb-powerroletype-e-sys.md) | 是 | 充电的角色。 |
+| dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | 是 | 数据传输的角色。 |
 
 **返回值：**
 
@@ -36,7 +42,7 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象，返回设置成功与否的结果。true表示设置成功，false表示设置失败。 |
 
-**示例：**
+## 示例
 
 ```TypeScript
 let portId = 1;

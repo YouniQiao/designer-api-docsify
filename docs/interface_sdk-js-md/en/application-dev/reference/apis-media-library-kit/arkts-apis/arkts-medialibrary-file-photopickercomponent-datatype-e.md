@@ -34,7 +34,7 @@ DataType: set selected uris to picker component, the data should be a array of u
 SET_ALBUM_URI = 2
 ```
 
-SET\_ALBUM\_URI. set selected album uri to picker component
+SET_ALBUM_URI. set selected album uri to picker component
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ SET\_ALBUM\_URI. set selected album uri to picker component
 SET_SELECTED_INFO = 3
 ```
 
-SET\_SELECTED\_INFO. Set selected information to picker component.
+SET_SELECTED_INFO. Set selected information to picker component.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ SET\_SELECTED\_INFO. Set selected information to picker component.
 SET_BADGE_CONFIGS = 4
 ```
 
-SET\_BADGE\_CONFIGS. Set badge configs to picker component.
+SET_BADGE_CONFIGS. Set badge configs to picker component.
 
 **Since:** 26.0.0
 

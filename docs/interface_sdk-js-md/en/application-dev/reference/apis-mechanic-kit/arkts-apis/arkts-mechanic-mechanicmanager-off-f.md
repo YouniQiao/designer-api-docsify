@@ -1,5 +1,11 @@
 # off
 
+## Modules to Import
+
+```TypeScript
+import { mechanicManager } from 'kits/@kit.MechanicKit';
+```
+
 ## off('attachStateChange')
 
 ```TypeScript
@@ -21,24 +27,26 @@ Unsubscribes from device attachment state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'attachStateChange' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AttachStateChangeInfo&gt; | No | Callback used to return the state change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachStateChangeInfo&gt; | No | Callback used to return the state change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| 33300001 | Service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
+// Define the callback function for device connection state changes.
 let callback = (result: mechanicManager.AttachStateChangeInfo) => {
   console.info(`'callback result:' ${result}`);
 };
 
 console.info('Unregister');
+// Unregister the attachStateChange event listener.
 mechanicManager.off("attachStateChange", callback);
-console.info('Unregister: success');
+console.info('Succeeded in unregistering callback.');
 ```
 
 
@@ -48,7 +56,7 @@ console.info('Unregister: success');
 function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>): void
 ```
 
-Unsubscribes from tracking events.
+设置相机跟踪布局
 
 **Since:** 20
 
@@ -63,23 +71,25 @@ Unsubscribes from tracking events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'trackingStateChange' | Yes | Event type. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;TrackingEventInfo&gt; | No | Callback used to return the tracking event information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TrackingEventInfo&gt; | No | Callback used to return the tracking event information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| 33300001 | Service exception. |
 
-**Example**
+## Examples
 
 ```TypeScript
+// Define the callback function for tracking state changes.
 let callback = (result: mechanicManager.TrackingEventInfo) => {
   console.info(`'callback result:' ${result}`);
 };
 
 console.info('Unregister');
+// Unregister the trackingStateChange event listener.
 mechanicManager.off("trackingStateChange", callback);
-console.info('Unregister: success');
+console.info('Succeeded in unregistering callback.');
 ```
 

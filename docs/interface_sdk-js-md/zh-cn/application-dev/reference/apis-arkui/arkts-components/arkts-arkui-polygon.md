@@ -39,7 +39,7 @@ Uses new to create Polygon.Anonymous Object Rectification.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Polygon options |
+| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | 否 | Polygon options |
 
 ## Polygon
 
@@ -65,7 +65,8 @@ Polygon(options?: PolygonOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 否 | Polygon组件的配置选项，用于定义绘制区域的宽度和高度。需要指定多边形尺寸时传入此参数，不传入时使用默认宽度和高度（均为0）。当传入undefined 或null时，参数设置无效，组件属性维持原值。 |
+| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | 否 | Polygon组件的配置选项，用于定义绘制区域的宽度和高度。需要指定多边形尺寸时传入此参数，不传入时使用默认宽度和高度（均为0）。当传入undefined 或null时，参数设置无效，组件属性维持原值。 |
 
 ## 汇总
 
+- [PolygonOptions](arkts-arkui-polygon-polygonoptions-i.md)

@@ -1,8 +1,8 @@
 # BounceSymbolEffect
 
-Defines BounceSymbolEffect class, which inherits from **SymbolEffect**.
+BounceSymbolEffect继承自父类SymbolEffect。
 
-**Inheritance/Implementation:** BounceSymbolEffect extends [SymbolEffect](../arkts-apis/arkts-arkui-component/symbolglyph-symboleffect-c.md)
+**Inheritance/Implementation:** BounceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Defines BounceSymbolEffect class, which inherits from **SymbolEffect**.
 constructor(scope?: EffectScope, direction?: EffectDirection)
 ```
 
-A constructor used to create a **ScaleSymbolEffect** instance, which comes with a scaling animation effect.
+ScaleSymbolEffect的构造函数，缩放动效。
 
 **Since:** 12
 
@@ -38,8 +38,8 @@ A constructor used to create a **ScaleSymbolEffect** instance, which comes with 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Effect scope.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **EffectScope.LAYER |
-| direction | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Effect direction.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **EffectDirection.DOWN |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。 &lt;br&gt;默认值：EffectScope.LAYER |
+| direction | [EffectDirection](../arkts-apis/arkts-arkui-symbolglyph-effectdirection-e.md) | No | 动效方向。具体枚举值及说明请参考EffectDirection枚举说明。 &lt;br&gt;默认值：EffectDirection.DOWN |
 
 ## direction
 
@@ -47,11 +47,11 @@ A constructor used to create a **ScaleSymbolEffect** instance, which comes with 
 direction?: EffectDirection
 ```
 
-Effect direction.
+动效方向。具体枚举值及说明请参考EffectDirection枚举说明。
 
-Default value: **EffectDirection.DOWN
+默认值：EffectDirection.DOWN
 
-**Type:** EffectDirection
+**Type:** [EffectDirection](../arkts-apis/arkts-arkui-symbolglyph-effectdirection-e.md)
 
 **Since:** 12
 
@@ -73,11 +73,11 @@ Default value: **EffectDirection.DOWN
 scope?: EffectScope
 ```
 
-Effect scope.
+动效范围。具体枚举值及说明请参考EffectScope枚举说明。
 
-Default value: **EffectScope.LAYER
+默认值：EffectScope.LAYER
 
-**Type:** EffectScope
+**Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **Since:** 12
 

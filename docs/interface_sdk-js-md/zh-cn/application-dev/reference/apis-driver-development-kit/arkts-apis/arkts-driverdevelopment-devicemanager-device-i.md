@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
+## 导入模块
+
+```TypeScript
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+```
+
 ## busType
 
 ```TypeScript
@@ -18,7 +24,7 @@ busType: BusType
 
 总线类型。
 
-**类型：** BusType
+**类型：** [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 
 **起始版本：** 10
 
@@ -54,7 +60,7 @@ deviceId: long
 
 设备ID。
 
-**类型：** long
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **起始版本：** 10
 

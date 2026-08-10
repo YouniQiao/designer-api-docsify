@@ -1,5 +1,11 @@
 # addPrinter
 
+## 导入模块
+
+```TypeScript
+import { print } from 'kits/@kit.BasicServicesKit';
+```
+
 ## addPrinter
 
 ```TypeScript
@@ -39,14 +45,14 @@ function addPrinter(printerName: string, uri: string, ppdName?: string, options?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [13100003](../../apis-basic-services-kit/errorcode-print.md#13100003-打印服务异常) | Add the printer to system failed. |
+| 13100003 | Add the printer to system failed. |
+| 201 | the application does not have permission to call this function. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let printerName : string = 'printerName';
 let uri : string = 'uri';
@@ -54,7 +60,7 @@ let ppdName : string = 'ppdName';
 print.addPrinter(printerName, uri, ppdName).then(() => {
     console.info('add printer success');
 }).catch((error: BusinessError) => {
-    console.error('add printer error : ' + JSON.stringify(error));
+    console.error(`Failed to addPrinter. Code: ${error.code}, message: ${error.message}`);
 })
 ```
 

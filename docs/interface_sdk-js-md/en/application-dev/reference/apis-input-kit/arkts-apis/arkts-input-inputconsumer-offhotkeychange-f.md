@@ -1,12 +1,18 @@
 # offHotkeyChange
 
+## Modules to Import
+
+```TypeScript
+import { inputConsumer } from 'kits/@kit.InputKit';
+```
+
 ## offHotkeyChange
 
 ```TypeScript
 function offHotkeyChange(hotkeyOptions: HotkeyOptions, callback?: Callback<HotkeyOptions>): void
 ```
 
-Unsubscribe from hotkey event.
+取消订阅应用快捷键。使用callback异步回调。
 
 **Since:** 23
 
@@ -20,13 +26,13 @@ Unsubscribe from hotkey event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hotkeyOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Hotkey options. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;HotkeyOptions&gt; | No | Callback used to return hotkey event. |
+| hotkeyOptions | [HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md) | Yes | 快捷键选项。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HotkeyOptions&gt; | No | 需要取消订阅的回调函数。若缺省，则取消当前应用快捷键选项已订阅的所有回调函数。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| 801 | Capability not supported. |
 

@@ -12,6 +12,12 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+import { privacyManager } from 'kits/@kit.AbilityKit';
+```
+
 ## activeStatus
 
 ```TypeScript
@@ -20,7 +26,7 @@ activeStatus: PermissionActiveStatus
 
 权限使用状态变化类型。
 
-**类型：** PermissionActiveStatus
+**类型：** [PermissionActiveStatus](arkts-ability-privacymanager-permissionactivestatus-e-sys.md)
 
 **起始版本：** 9
 
@@ -42,7 +48,7 @@ callingTokenId?: int
 
 默认值：0。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 18
 
@@ -104,7 +110,7 @@ permissionName: Permissions
 
 权限使用状态发生变化的权限名。
 
-**类型：** Permissions
+**类型：** [Permissions](arkts-ability-permissions-t.md)
 
 **起始版本：** 9
 
@@ -124,7 +130,7 @@ tokenId: int
 
 被订阅的应用身份标识。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 9
 
@@ -144,9 +150,9 @@ usedType?: PermissionUsedType
 
 敏感权限使用类型，当activeStatus为INACTIVE时该值无效。
 
-默认值：NORMAL\_TYPE。
+默认值：NORMAL_TYPE。
 
-**类型：** PermissionUsedType
+**类型：** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
 **起始版本：** 18
 

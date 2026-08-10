@@ -10,6 +10,12 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+import { image } from 'kits/@kit.ImageKit';
+```
+
 ## auxiliaryPictureType
 
 ```TypeScript
@@ -18,7 +24,7 @@ auxiliaryPictureType: AuxiliaryPictureType
 
 辅助图的图像类型。
 
-**类型：** AuxiliaryPictureType
+**类型：** [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md)
 
 **起始版本：** 13
 
@@ -54,7 +60,7 @@ pixelFormat: PixelMapFormat
 
 像素格式。
 
-**类型：** PixelMapFormat
+**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
 **起始版本：** 13
 
@@ -72,7 +78,7 @@ rowStride: int
 
 行跨距。单位：字节（Byte）。应大于或等于图像每行像素数据所占的字节数，不满足时数据读取异常。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 13
 
@@ -90,7 +96,7 @@ size: Size
 
 图片大小。
 
-**类型：** Size
+**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
 **起始版本：** 13
 

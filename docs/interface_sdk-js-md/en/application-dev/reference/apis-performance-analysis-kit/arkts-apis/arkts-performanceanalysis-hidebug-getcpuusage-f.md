@@ -1,16 +1,22 @@
 # getCpuUsage
 
+## Modules to Import
+
+```TypeScript
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
 ## getCpuUsage
 
 ```TypeScript
 function getCpuUsage() : double
 ```
 
-Obtains the CPU usage of a process.
-    **NOTE**  
-    
-    This API involves cross-process communication and takes a long time. To avoid performance problems, you are  
-    advised not to call this API in the main thread.
+��ȡ���̵�CPUʹ���ʡ�
+
+> **ע��**
+> 
+> ���ڸýӿ��漰�����ͨ�ţ���ʱ�ϳ���Ϊ�˱��������������⣬���鲻Ҫ�����߳���ֱ�ӵ��øýӿڡ�
 
 **Since:** 9
 
@@ -24,13 +30,14 @@ Obtains the CPU usage of a process.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | CPU usage of a process. For example, if the CPU usage is **50%**, **0.5** is returned. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | ��ȡ���̵�CPUʹ���ʡ���ռ����Ϊ50%���򷵻�0.5�� |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let cpuUsage: number = hidebug.getCpuUsage();
+console.info(`cpuUsage = ${cpuUsage}`);
 ```
 

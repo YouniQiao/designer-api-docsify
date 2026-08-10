@@ -1,6 +1,6 @@
 # SystemBarProperties
 
-Describes the properties of the status bar\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_ and three-button navigation bar\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_.
+状态栏&lt;!--Del--&gt;、三键导航栏的&lt;!--DelEnd--&gt;属性。
 
 **Since:** 6
 
@@ -10,16 +10,21 @@ Describes the properties of the status bar\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_ 
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
 ## enableNavigationBarAnimation
 
 ```TypeScript
 enableNavigationBarAnimation?: boolean
 ```
 
-Whether to enable animation for a three-button navigation bar property change. **true** to enable, **false**  
-otherwise. The default value is **false**.
+是否启用三键导航栏属性变化时的动画效果。true表示启用；false表示不启用。默认值：false。 
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** boolean
 
@@ -39,7 +44,7 @@ otherwise. The default value is **false**.
 enableStatusBarAnimation?: boolean
 ```
 
-Whether to enable animation for a status bar property change. **true** to enable, **false** otherwise. The default value is **false**.
+是否启用状态栏属性变化时的动画效果。true表示启用；false表示不启用。默认值：false。
 
 **Type:** boolean
 
@@ -59,9 +64,9 @@ Whether to enable animation for a status bar property change. **true** to enable
 isNavigationBarLightIcon?: boolean
 ```
 
-Whether any icon on the three-button navigation bar is highlighted. **true** if highlighted, **false** otherwise.The default value is **false**.
+三键导航栏图标是否为高亮状态。true表示高亮；false表示不高亮。默认值：false。 
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** boolean
 
@@ -81,7 +86,7 @@ Whether any icon on the three-button navigation bar is highlighted. **true** if 
 isStatusBarLightIcon?: boolean
 ```
 
-Whether any icon on the status bar is highlighted. **true** if highlighted, **false** otherwise. The default value is **false**.
+状态栏图标是否为高亮状态。true表示高亮；false表示不高亮。默认值：false。
 
 **Type:** boolean
 
@@ -101,9 +106,9 @@ Whether any icon on the status bar is highlighted. **true** if highlighted, **fa
 navigationBarColor?: string
 ```
 
-Background color of the three-button navigation bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'#66000000'**.
+三键导航栏背景颜色。作为入参时格式为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'；作为返回值时格式固定为ARGB颜色，如'#FF00FF00'，默认值为系统配置的颜色。
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** string
 
@@ -123,10 +128,9 @@ Background color of the three-button navigation bar. The value is a hexadecimal 
 navigationBarContentColor?: string
 ```
 
-Color of the text on the three-button navigation bar. After this property is set, the setting of  
-**isNavigationBarLightIcon** is invalid. The default value is **'#E5FFFFFF'**.
+三键导航栏文字颜色。当设置此属性后，`isNavigationBarLightIcon`属性设置无效。默认值：`'#E5FFFFFF'`。 
 
-\_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** string
 
@@ -146,7 +150,7 @@ Color of the text on the three-button navigation bar. After this property is set
 statusBarColor?: string
 ```
 
-Background color of the status bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive,for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'#66000000'**.
+状态栏背景颜色。作为入参时格式为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'；作为返回值时格式固定为ARGB颜色，如'#FF00FF00'，默认值为系统配置的颜色。
 
 **Type:** string
 
@@ -166,7 +170,7 @@ Background color of the status bar. The value is a hexadecimal RGB or ARGB color
 statusBarContentColor?: string
 ```
 
-Color of the text on the status bar. After this property is set, the setting of **isStatusBarLightIcon** is invalid. The default value is **'#E5FFFFFF'**.
+状态栏文字颜色。当设置此属性后，`isStatusBarLightIcon`属性设置无效。默认值：`'#E5FFFFFF'`。
 
 **Type:** string
 

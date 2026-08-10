@@ -1,12 +1,18 @@
 # getPluginBundlePathForSelf
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from 'kits/@kit.AbilityKit';
+```
+
 ## getPluginBundlePathForSelf
 
 ```TypeScript
 function getPluginBundlePathForSelf(pluginBundleName: string): string
 ```
 
-获取指定插件在当前\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_内的安装路径。
+获取指定插件在当前[应用沙箱](../../../file-management/app-sandbox-directory.md)内的安装路径。
 
 **起始版本：** 22
 
@@ -32,9 +38,9 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
+| 17700001 | The specified bundleName is not found. |
 
-**示例：**
+## 示例
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

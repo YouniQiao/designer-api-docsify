@@ -1,12 +1,18 @@
 # startDeviceLogging (System API)
 
+## Modules to Import
+
+```TypeScript
+import { avSession } from 'kits/@kit.AVSessionKit';
+```
+
 ## startDeviceLogging
 
 ```TypeScript
 function startDeviceLogging(url: string, maxSize?: int): Promise<void>
 ```
 
-Begin to write device logs into a file descriptor for the purpose of problem locating.If the logs exceed max file size, no logs will be written and DEVICE\_LOG\_FULL event will be omitted.
+开始将设备日志写入文件。结果通过Promise异步回调方式返回。
 
 **Since:** 13
 
@@ -22,36 +28,33 @@ Begin to write device logs into a file descriptor for the purpose of problem loc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | The file descriptor to be written. |
-| maxSize | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | The max size to be written in kilobyte. if not set, then written process will exit when there is no space to write. |
+| url | string | Yes | 目标文件描述符（打开文件的唯一标识）。 |
+| maxSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 写入最大日志大小（以kB为单位）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise for the result |
+| Promise&lt;void&gt; | Promise对象。当设备日志写入文件成功时，无返回结果，否则返回错误对象。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| 6600101 | Session service exception. |
+| 6600102 | The session does not exist. |
+| 202 | Not System App. |
 
-**Example**
+## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { fileIo } from '@kit.CoreFileKit';
 
 let file = await fileIo.open("filePath");
 let url = file.fd.toString();
 avSession.startDeviceLogging(url, 2048).then(() => {
-  console.info('startDeviceLogging successfully');
-}).catch((err: BusinessError) => {
-  console.error(`startDeviceLogging BusinessError: code: ${err.code}, message: ${err.message}`);
+  console.info('Succeeded in starting device logging.');
 })
 ```
 

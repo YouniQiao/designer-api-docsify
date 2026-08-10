@@ -1,5 +1,11 @@
 # unregisterTypeDescriptors（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+```
+
 ## unregisterTypeDescriptors
 
 ```TypeScript
@@ -40,7 +46,7 @@ function unregisterTypeDescriptors(typeIds: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [20400004](../errorcode-udmf.md#20400004-标准化数据类型id列表错误) | One or more typeIds are invalid or do not exist. |
+| 20400004 | One or more typeIds are invalid or do not exist. |
+| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| 202 | Permission denied, non-system app called system api. |
 

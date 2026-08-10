@@ -1,11 +1,10 @@
 # GestureRecognizerJudgeBeginCallback
 
 ```TypeScript
-declare type GestureRecognizerJudgeBeginCallback = (event: BaseGestureEvent, current: GestureRecognizer, recognizers: Array<GestureRecognizer>,
-  touchRecognizers?: Array<TouchRecognizer>) => GestureJudgeResult
+declare type GestureRecognizerJudgeBeginCallback = (event: BaseGestureEvent, current: GestureRecognizer, recognizers: Array<GestureRecognizer>, touchRecognizers?: Array<TouchRecognizer>) => GestureJudgeResult
 ```
 
-Represents a custom gesture recognizer judgment callback type.
+自定义手势识别器判定回调类型。
 
 **Since:** 12
 
@@ -15,7 +14,7 @@ Represents a custom gesture recognizer judgment callback type.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-unnamed-declare type GestureRecognizerJudgeBeginCallback = (event: BaseGestureEvent, current: GestureRecognizer, recognizers: Array<GestureRecognizer>,  touchRecognizers?: Array<TouchRecognizer>) => GestureJudgeResult--><!--Device-unnamed-declare type GestureRecognizerJudgeBeginCallback = (event: BaseGestureEvent, current: GestureRecognizer, recognizers: Array<GestureRecognizer>,  touchRecognizers?: Array<TouchRecognizer>) => GestureJudgeResult-End-->
+<!--Device-unnamed-declare type GestureRecognizerJudgeBeginCallback = (event: BaseGestureEvent, current: GestureRecognizer, recognizers: Array<GestureRecognizer>, touchRecognizers?: Array<TouchRecognizer>) => GestureJudgeResult--><!--Device-unnamed-declare type GestureRecognizerJudgeBeginCallback = (event: BaseGestureEvent, current: GestureRecognizer, recognizers: Array<GestureRecognizer>, touchRecognizers?: Array<TouchRecognizer>) => GestureJudgeResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,14 +22,14 @@ Represents a custom gesture recognizer judgment callback type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the current basic gesture event.  |
-| current | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Gesture recognizer object that is about to respond.  |
-| recognizers | Array&lt;GestureRecognizer&gt; | Yes | Other gesture recognizer objects in the response chain.  |
-| touchRecognizers | Array&lt;TouchRecognizer&gt; | No | Touch recognizers in the response chain. The default value is **null**, indicating no responsive touch recognizers in the current gesture-bound component and its descendants. |
+| event | [BaseGestureEvent](../arkts-apis/arkts-arkui-basegestureevent-i.md) | Yes | 当前基础手势事件信息。 |
+| current | [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | Yes | 当前即将要响应的识别器对象。 |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | 响应链上的其他手势识别器对象。 |
+| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | No | 响应链上的Touch识别器对象。 默认值为null，表示在当前手势绑定组件及其子孙组件没有可响应的Touch识别 器。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Judgment result indicating whether gesture recognition succeeds.  |
+| [GestureJudgeResult](../arkts-apis/arkts-arkui-gesturejudgeresult-e.md) | 手势是否裁决成功的判定结果。 |
 

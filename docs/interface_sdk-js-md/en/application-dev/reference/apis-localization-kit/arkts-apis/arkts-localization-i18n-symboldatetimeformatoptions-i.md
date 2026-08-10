@@ -1,8 +1,8 @@
 # SymbolDateTimeFormatOptions
 
-Represents optional configuration items for the SymbolDateTimeFormat object.Define the symbol element and value that need to be replaced.
+创建自定义符号时间日期格式化对象时的可选配置项。继承自Intl.DateTimeFormatOptions，支持Intl.DateTimeFormatOptions的所有配置项，并且功能与其一致。
 
-**Inheritance/Implementation:** SymbolDateTimeFormatOptions extends [Intl.DateTimeFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-datetimeformatoptions-i.md)
+**Inheritance/Implementation:** SymbolDateTimeFormatOptions extends [Intl.DateTimeFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-datetimeformatoptions-i.md/arkts-arkts-intl-datetimeformatoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -12,13 +12,19 @@ Represents optional configuration items for the SymbolDateTimeFormat object.Defi
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+import { i18n } from 'kits/@kit.LocalizationKit';
+```
+
 ## amPMSymbol
 
 ```TypeScript
 amPMSymbol?: string[] | undefined
 ```
 
-AM and PM symbol of date time period part, such as "PM" of "2:23 PM". The parameter array must be greater than 2, If greater than 2, the first two will be selected.
+指定的上午和下午符号，要求数组长度不小于2，其中第一个元素为上午符号，第二个元素为下午符号。默认值：区域默认的符号。
 
 **Type:** string[] \| undefined
 

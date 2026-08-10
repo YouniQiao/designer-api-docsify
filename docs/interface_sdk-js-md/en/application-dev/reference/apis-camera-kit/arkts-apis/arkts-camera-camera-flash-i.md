@@ -1,8 +1,8 @@
 # Flash
 
-Flash** inherits from [FlashQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。
 
-It provides APIs related to the flash.
+闪光灯类，对设备闪光灯操作。
 
 **Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
@@ -14,13 +14,19 @@ It provides APIs related to the flash.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## Modules to Import
+
+```TypeScript
+import { camera } from 'kits/@kit.CameraKit';
+```
+
 ## getFlashMode
 
 ```TypeScript
 getFlashMode(): FlashMode
 ```
 
-Obtains the flash mode in use.
+获取当前设备的闪光灯模式。
 
 **Since:** 11
 
@@ -36,13 +42,13 @@ Obtains the flash mode in use.
 
 | Type | Description |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Flash mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| [FlashMode](arkts-camera-camera-flashmode-e.md) | 获取当前设备的闪光灯模式。接口调用失败会抛出相应错误码并返回undefined，错误码类型 [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
 
 ## offFlashStateChange
 
@@ -50,7 +56,7 @@ Obtains the flash mode in use.
 offFlashStateChange(callback?: Callback<FlashState>): void
 ```
 
-Unsubscribes from flash light status change events.
+取消订阅闪光灯状态变化事件回调。
 
 **Since:** 24
 
@@ -68,7 +74,7 @@ Unsubscribes from flash light status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FlashState&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## onFlashStateChange
 
@@ -76,7 +82,7 @@ Unsubscribes from flash light status change events.
 onFlashStateChange(callback: Callback<FlashState>): void
 ```
 
-Subscribes to flash light status change events.
+订阅闪光灯状态变化事件回调。
 
 **Since:** 24
 
@@ -94,7 +100,7 @@ Subscribes to flash light status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FlashState&gt; | Yes | Callback used to return the flash light status. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | Yes | 回调函数，用于获取闪光灯状态变化信息。 |
 
 ## setFlashMode
 
@@ -102,11 +108,11 @@ Subscribes to flash light status change events.
 setFlashMode(flashMode: FlashMode): void
 ```
 
-Sets a flash mode.
+设置闪光灯模式。
 
-Before the setting, do the following checks:
+进行设置之前，需要先检查：
 
-1. Use [hasFlash]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether the camera device has flash.2. Use [isFlashModeSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to check whether the camera device supports the flash mode.
+1. 设备是否支持闪光灯，可使用方法[hasFlash](arkts-camera-camera-flashquery-i.md#hasflash)。2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported)。
 
 **Since:** 11
 
@@ -122,11 +128,11 @@ Before the setting, do the following checks:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flashMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Flash mode. If the input parameter is null or undefined, it is treated as 0 and the flash is turned off. |
+| flashMode | [FlashMode](arkts-camera-camera-flashmode-e.md) | Yes | 指定闪光灯模式。传参为null或者undefined，作为0处理，闪光灯关闭。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| 7400103 | Session not config. |
 

@@ -1,6 +1,6 @@
 # RichEditorResponseType
 
-Response type of the menu.
+菜单的响应类型。
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Response type of the menu.
 RIGHT_CLICK = 0
 ```
 
-The menu is displayed when the component is right-clicked.
+通过鼠标右键触发菜单弹出。
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ The menu is displayed when the component is right-clicked.
 LONG_PRESS = 1
 ```
 
-The menu is displayed when the component is long-pressed.
+通过长按触发菜单弹出。
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ The menu is displayed when the component is long-pressed.
 SELECT = 2
 ```
 
-The menu is displayed when the component is selected.
+通过鼠标选中触发菜单弹出。
 
 **Since:** 11
 
@@ -76,7 +76,7 @@ The menu is displayed when the component is selected.
 DEFAULT = 3
 ```
 
-If this menu is registered, but **RIGHT\_CLICK**, **LONG\_PRESS**, and **SELECT** menus are not registered, the menu will be displayed when the right mouse button is clicked, the menu is long-pressed, or the menu is selected using the mouse.
+注册此响应类型的菜单，但未注册RIGHT_CLICK、LONG_PRESS、SELECT响应类型的菜单时，通过鼠标右键、长按、鼠标选中都会触发菜单弹出。
 
 **Since:** 15
 

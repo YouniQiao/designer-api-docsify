@@ -1,6 +1,10 @@
 # EventType
 
-The event types represented by XML elements.
+事件类型枚举。
+
+**ArkTS-Dyn起始版本：** 8
+
+**ArkTS-Sta起始版本：** 23
 
 **Since:** 8
 
@@ -16,7 +20,7 @@ The event types represented by XML elements.
 START_DOCUMENT
 ```
 
-Start a document.
+启动文件事件。
 
 **Since:** 8
 
@@ -34,7 +38,7 @@ Start a document.
 END_DOCUMENT
 ```
 
-End a document.
+结束文件事件。
 
 **Since:** 8
 
@@ -52,7 +56,7 @@ End a document.
 START_TAG
 ```
 
-Start a tag.
+启动标签事件。
 
 **Since:** 8
 
@@ -70,7 +74,7 @@ Start a tag.
 END_TAG
 ```
 
-End a tag.
+结束标签事件。
 
 **Since:** 8
 
@@ -88,7 +92,7 @@ End a tag.
 TEXT
 ```
 
-Character data.
+文本事件。
 
 **Since:** 8
 
@@ -106,7 +110,7 @@ Character data.
 CDSECT
 ```
 
-A CDATA sections.
+CDATA事件。
 
 **Since:** 8
 
@@ -124,7 +128,7 @@ A CDATA sections.
 COMMENT
 ```
 
-An XML comment.
+XML注释事件。
 
 **Since:** 8
 
@@ -142,7 +146,7 @@ An XML comment.
 DOCDECL
 ```
 
-An XML document type declaration.
+XML文档类型声明事件。
 
 **Since:** 8
 
@@ -160,7 +164,7 @@ An XML document type declaration.
 INSTRUCTION
 ```
 
-An XML processing instruction declaration.
+XML处理指令声明事件。
 
 **Since:** 8
 
@@ -178,7 +182,7 @@ An XML processing instruction declaration.
 ENTITY_REFERENCE
 ```
 
-An entity reference.
+实体引用事件。
 
 **Since:** 8
 
@@ -196,7 +200,7 @@ An entity reference.
 WHITESPACE
 ```
 
-A whitespace.
+空白事件。
 
 **Since:** 8
 

@@ -1,6 +1,6 @@
 # NodeParamV2
 
-Declare NodeParamV2
+节点参数接口，用于配置树节点的属性。
 
 **Since:** 26.0.0
 
@@ -10,13 +10,21 @@ Declare NodeParamV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from 'kits/@kit.ArkUI';
+```
+
 ## container
 
 ```TypeScript
 container?: OnContainerCallback
 ```
 
-set subcomponent binded on tree item.
+绑定在节点上的右键子组件，子组件由@Builder修饰。
+
+默认值：() => void
 
 **Since:** 26.0.0
 
@@ -34,7 +42,13 @@ set subcomponent binded on tree item.
 currentNodeId?: int
 ```
 
-Set currentNodeId.
+当前子节点Id。
+
+取值范围：大于等于-1。
+
+不能为根节点id，不能为null，否则会抛出异常。且不能设置两个相同的currentNodeId。
+
+默认值：-1
 
 **Type:** int
 
@@ -54,9 +68,11 @@ Set currentNodeId.
 editIcon?: ResourceStr
 ```
 
-Set edit icon resource.
+编辑图标。
 
-**Type:** ResourceStr
+默认值：空字符串。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -74,9 +90,11 @@ Set edit icon resource.
 icon?: ResourceStr
 ```
 
-Set the icon resource.
+图标。
 
-**Type:** ResourceStr
+默认值：空字符串。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -94,7 +112,11 @@ Set the icon resource.
 isFolder?: boolean
 ```
 
-Set catalog whether is floder.
+是否是目录。
+
+默认值：false
+
+true：是目录，false：不是目录。
 
 **Type:** boolean
 
@@ -114,7 +136,11 @@ Set catalog whether is floder.
 parentNodeId?: int
 ```
 
-Set the parentNodeId.
+父节点Id。
+
+取值范围：大于等于-1。
+
+默认值：-1，根节点id值为-1。若设置数值小于-1，该节点无效，不显示在树视图上。
 
 **Type:** int
 
@@ -134,9 +160,11 @@ Set the parentNodeId.
 primaryTitle?: ResourceStr
 ```
 
-Set primary title content.
+主标题。
 
-**Type:** ResourceStr
+默认值：空字符串。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -154,9 +182,11 @@ Set primary title content.
 secondaryTitle?: ResourceStr
 ```
 
-Set secondary title content.
+副标题。
 
-**Type:** ResourceStr
+默认值：空字符串。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -174,9 +204,11 @@ Set secondary title content.
 selectedIcon?: ResourceStr
 ```
 
-Set selected icon resource.
+选中图标。
 
-**Type:** ResourceStr
+默认值：空字符串。
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 
@@ -194,9 +226,11 @@ Set selected icon resource.
 symbolEditIconStyle?: SymbolGlyphModifier
 ```
 
-Set edit symbol resource.
+Symbol编辑图标样式，优先级大于editIcon。
 
-**Type:** SymbolGlyphModifier
+默认值：undefined，编辑时显示与非编辑态一样
+
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 
@@ -214,9 +248,11 @@ Set edit symbol resource.
 symbolIconStyle?: SymbolGlyphModifier
 ```
 
-Set the symbol resource.
+Symbol图标样式，显示优先级大于icon，同时设置symbolIconStyle和icon，只显示Symbol图标。
 
-**Type:** SymbolGlyphModifier
+默认值：undefined，表示不显示Symbol图标。
+
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 
@@ -234,9 +270,11 @@ Set the symbol resource.
 symbolSelectedIconStyle?: SymbolGlyphModifier
 ```
 
-Set selected symbol resource.
+Symbol选中图标样式，优先级大于selectedIcon。
 
-**Type:** SymbolGlyphModifier
+默认值：undefined，选中时显示与未选中一样
+
+**Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 

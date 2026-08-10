@@ -1,9 +1,9 @@
 # SystemDefinedRecord
 
-SystemDefinedRecord是[UnifiedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子类，也是OpenHarmony系统特有数据类型的基类，用于描述仅在OpenHarmony系统范围内流通的特有数据类型，推荐开发者优先使用SystemDefinedRecord的子类描述数据，如  
-[SystemDefinedForm]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_、  
-[SystemDefinedAppItem]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_、  
-[SystemDefinedPixelMap]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_等具体子类。
+SystemDefinedRecord是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是OpenHarmony系统特有数据类型的基类，用于描述仅在OpenHarmony系统范围内流通的特有数据类型，推荐开发者优先使用SystemDefinedRecord的子类描述数据，如  
+[SystemDefinedForm](arkts-arkdata-unifieddatachannel-systemdefinedform-c.md)、  
+[SystemDefinedAppItem](arkts-arkdata-unifieddatachannel-systemdefinedappitem-c.md)、  
+[SystemDefinedPixelMap](arkts-arkdata-unifieddatachannel-systemdefinedpixelmap-c.md)等具体子类。
 
 **继承/实现关系：** SystemDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
@@ -15,6 +15,12 @@ SystemDefinedRecord是[UnifiedRecord]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_的子
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
 ## details
 
 ```TypeScript
@@ -23,7 +29,7 @@ details?: Record<string, int | long | double | string | Uint8Array>
 
 是一个字典类型对象，key是string类型，value可以写入number（数值类型）、string（字符串类型）、Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**类型：** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
 **起始版本：** 10
 

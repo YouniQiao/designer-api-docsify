@@ -1,12 +1,18 @@
 # setMouseScrollDirection (System API)
 
+## Modules to Import
+
+```TypeScript
+import { pointer } from 'kits/@kit.InputKit';
+```
+
 ## setMouseScrollDirection
 
 ```TypeScript
 function setMouseScrollDirection(inverted: boolean): Promise<void>
 ```
 
-Sets the scroll direction of the mouse wheel. This API uses a promise to return the result asynchronously.
+设置鼠标滚轮滚动的方向，使用Promise异步回调。
 
 **Since:** 24
 
@@ -24,23 +30,23 @@ Sets the scroll direction of the mouse wheel. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inverted | boolean | Yes | Scroll direction of the mouse wheel. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The value **true** indicates that scroll direction matches the finger movement on the wheel, and the value **false** indicates that the scroll direction is opposite to the finger movement. \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_The default value is **true**. |
+| inverted | boolean | Yes | inverted为鼠标滚轮滚动的方向。&lt;br&gt;true与鼠标滚轮滚动的手指方向一致，false与鼠标滚轮滚动的手指方向相反。&lt;br&gt;默认为true。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| 3800001 | Input service exception. |
+| 201 | permission denied. |
+| 202 | SystemAPI permission error. |
 
-**Example**
+## Examples
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -54,13 +60,14 @@ struct Index {
       Button("setMouseScrollDirection")
         .onClick(() => {
           try {
+            // Set the mouse scroll direction.
             pointer.setMouseScrollDirection(false).then(() => {
-              console.info(`setMouseScrollDirection success`);
+              console.info(`Succeeded in setting mouse scroll direction.`);
             }).catch((error: BusinessError) => {
-              console.error(`Set mouse scroll direction failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+              console.error(`Failed to set mouse scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
           } catch (error) {
-            console.error(`setMouseScrollDirection failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            console.error(`Failed to set mouse scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

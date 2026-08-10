@@ -6,7 +6,7 @@
 function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void
 ```
 
-Subscribes to notifications of all applications under this user.This API uses an asynchronous callback to return the result.
+订阅当前用户下所有应用的通知。使用callback异步回调。
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ Subscribes to notifications of all applications under this user.This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification subscriber. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | 通知订阅对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 订阅动作回调函数。 |
 
 
 ## subscribe
@@ -42,7 +42,7 @@ function subscribe(
   ): void
 ```
 
-Subscribes to a notification with the subscription information specified.This API uses an asynchronous callback to return the result.
+订阅通知并指定订阅信息。使用callback异步回调。
 
 **Since:** 7
 
@@ -64,9 +64,9 @@ Subscribes to a notification with the subscription information specified.This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification subscriber. |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification subscription information. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | 通知订阅对象。 |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | Yes | 通知订阅信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 订阅动作回调函数。 |
 
 
 ## subscribe
@@ -75,7 +75,7 @@ Subscribes to a notification with the subscription information specified.This AP
 function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscribeInfo): Promise<void>
 ```
 
-Subscribes to a notification with the subscription information specified.This API uses a promise to return the result.
+订阅通知并指定订阅信息。使用Promise异步回调。
 
 **Since:** 7
 
@@ -97,12 +97,12 @@ Subscribes to a notification with the subscription information specified.This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Notification subscriber. |
-| info | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Notification subscription information. This parameter is left empty by default. |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | 通知订阅对象。 |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | No | 通知订阅信息， 默认为空（当为空时，表示订阅当前用户下所有应用的通知，否则表示订阅通知并指定订阅信息）。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 

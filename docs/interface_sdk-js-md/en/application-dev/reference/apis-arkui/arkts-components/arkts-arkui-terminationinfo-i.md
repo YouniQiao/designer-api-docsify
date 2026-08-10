@@ -1,6 +1,6 @@
 # TerminationInfo
 
-Provides the result returned by the started **EmbeddedUIExtensionAbility**.
+用于表示被拉起的EmbeddedUIExtensionAbility的返回结果。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Provides the result returned by the started **EmbeddedUIExtensionAbility**.
 code: number
 ```
 
-Result code returned when the EmbeddedUIExtensionAbility exits. The result code is determined by the data passed when terminateSelfWithResult or terminateSelf is called.
+被拉起的EmbeddedUIExtensionAbility退出时返回的结果码，由terminateSelfWithResult或者terminateSelf被调用时传入的数据决定。若通过terminateSelf退出，code取默认值0。
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Result code returned when the EmbeddedUIExtensionAbility exits. The result code 
 want?: import('../api/@ohos.app.ability.Want').default
 ```
 
-Data returned when the EmbeddedUIExtensionAbility exits.
+被拉起的EmbeddedUIExtensionAbility退出时返回的数据。若通过terminateSelf退出，则该值为undefined。
 
 **Type:** import('../api/@ohos.app.ability.Want').default
 

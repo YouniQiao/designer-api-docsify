@@ -1,5 +1,11 @@
 # onPublishFormCrossBundleControl (System API)
 
+## Modules to Import
+
+```TypeScript
+import { formProvider } from 'kits/@kit.FormKit';
+```
+
 ## onPublishFormCrossBundleControl
 
 ```TypeScript
@@ -32,7 +38,7 @@ Subscribes to controls on cross-bundle widget addition to the home screen. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| 201 | Permissions denied. |
+| 16500050 | IPC connection error. |
+| 202 | The application is not a system application. |
 

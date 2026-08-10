@@ -1,30 +1,24 @@
 # SideBarContainer
 
-The **SideBarContainer** component contains a sidebar and content area as its child components. The sidebar is the
-first child component and can be shown or hidden as needed. The content area is the second child component.
+提供侧边栏可以显示和隐藏的容器，通过子组件定义侧边栏和内容区，第一个子组件表示侧边栏，第二个子组件表示内容区。
 
-> **NOTE**
+> **说明：**
 
-> The APIs of this module are supported since API version 8. Updates will be marked with a superscript to indicate
-> their
+## 子组件
 
-## Child Components
+可以包含子组件。
 
-Supported
-    **NOTE**  
-    
-    - Allowed child component types: built-in and custom components, excluding rendering control types (  
-    \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_,  
-    \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_, and  
-    \_\_\_MD\_LINK\_DESC\_USD\_2\_\_\_).  
-    
-    - This component must contain two child components.  
-    
-    - If there are three or more child components, only the first and second child components are displayed. If there  
-    is only one child component, the sidebar is displayed, and the content area is blank.  
-    
-    - The focus navigation is performed in the content area and then in the sidebar of the **SideBarContainer**  
-    component.
+> **说明：**
+> 
+> - 子组件类型：系统组件和自定义组件，不支持渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)和
+> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
+> 
+> - 子组件个数：必须且仅包含2个子组件。
+> 
+> - 子组件个数异常时：3个或以上子组件，显示第一个和第二个。1个子组件，显示侧边栏，内容区为空白。
+> 
+> - SideBarContainer走焦时，先在内容区走焦，再在侧边栏走焦。
 
 ## SideBarContainer
 
@@ -32,7 +26,7 @@ Supported
 SideBarContainer(type?: SideBarContainerType)
 ```
 
-Creates a sidebar container.
+创建侧边栏容器。
 
 **Since:** 8
 
@@ -48,7 +42,12 @@ Creates a sidebar container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Display type of the sidebar.\_\_\_HTML\_TAG\_USD\_0\_\_\_Default value: **SideBarContainerType.Embed**  |
+| type | [SideBarContainerType](../arkts-apis/arkts-arkui-sidebar-sidebarcontainertype-e.md) | No | 设置侧边栏的显示类型。<br/>默认值：SideBarContainerType.Embed |
 
 ## Summary
 
+- [ButtonIconOptions](arkts-arkui-sidebarcontainer-buttoniconoptions-i.md)
+- [ButtonStyle](arkts-arkui-sidebarcontainer-buttonstyle-i.md)
+- [DividerStyle](arkts-arkui-sidebarcontainer-dividerstyle-i.md)
+- [SideBarContainerType](arkts-arkui-sidebarcontainer-sidebarcontainertype-e.md)
+- [SideBarPosition](arkts-arkui-sidebarcontainer-sidebarposition-e.md)

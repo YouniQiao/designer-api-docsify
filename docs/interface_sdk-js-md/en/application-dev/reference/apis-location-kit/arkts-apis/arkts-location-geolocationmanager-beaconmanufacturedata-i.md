@@ -10,6 +10,12 @@ Beacon equipment manufacturer data.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## manufactureData
 
 ```TypeScript
@@ -58,7 +64,7 @@ manufactureId: int
 
 Manufacture id.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 20
 

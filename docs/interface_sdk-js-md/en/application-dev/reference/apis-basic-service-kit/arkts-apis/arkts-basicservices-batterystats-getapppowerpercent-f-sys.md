@@ -1,12 +1,18 @@
 # getAppPowerPercent (System API)
 
+## Modules to Import
+
+```TypeScript
+import { batteryStats } from 'kits/@kit.BasicServicesKit';
+```
+
 ## getAppPowerPercent
 
 ```TypeScript
 function getAppPowerPercent(uid: int): double
 ```
 
-Obtains the proportion of the power consumption of an application.
+获取应用的耗电百分比。
 
 **Since:** 8
 
@@ -22,23 +28,23 @@ Obtains the proportion of the power consumption of an application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Application UID. |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 应用的UID。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Proportion of the power consumption of an application with this UID, which ranges from 0.00 to 1.00. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | UID对应应用的耗电百分比，取值范围是[0.00，1.00]。 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [4600101](../../apis-basic-services-kit/errorcode-batteryStatistics.md#4600101-service-connection-failure) | Failed to connect to the service. |
+| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
+| 4600101 | Failed to connect to the service. |
+| 202 | Permission verification failed. A non-system application calls a system API. |
 
-**Example**
+## Examples
 
 ```TypeScript
 try {

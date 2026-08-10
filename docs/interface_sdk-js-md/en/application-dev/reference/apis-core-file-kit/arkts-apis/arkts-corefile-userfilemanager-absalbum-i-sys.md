@@ -8,13 +8,19 @@ Defines the AbsAlbum.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md/arkts-medialibrary-photoaccesshelper-absalbum-i.md)
 
 <!--Device-userFileManager-interface AbsAlbum--><!--Device-userFileManager-interface AbsAlbum-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { userFileManager } from 'kits/@kit.CoreFileKit';
+```
 
 ## getPhotoAssets
 
@@ -30,7 +36,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#getassets)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md/arkts-medialibrary-photoaccesshelper-absalbum-i.md#getassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -44,8 +50,8 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Retrieval options. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FetchResult&lt;FileAsset&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;FileAsset&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
 
 **Error codes:**
 
@@ -67,7 +73,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#getassets)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md/arkts-medialibrary-photoaccesshelper-absalbum-i.md#getassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -81,7 +87,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Retrieval options. |
+| options | [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
 
 **Return value:**
 
@@ -102,9 +108,10 @@ albumName: string
 ```
 
 Name of the album.
-    **NOTE**  
-    
-    The user album is writable, but the system album is not writable.
+
+> **NOTE：**
+> 
+> The user album is writable, but the system album is not writable.
 
 **Type:** string
 
@@ -114,7 +121,7 @@ Name of the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.albumName](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#albumname)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.albumName](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md/arkts-medialibrary-photoaccesshelper-absalbum-i.md#albumname)
 
 <!--Device-AbsAlbum-albumName: string--><!--Device-AbsAlbum-albumName: string-End-->
 
@@ -130,7 +137,7 @@ readonly albumSubType: AlbumSubType
 
 Subtype of the album.
 
-**Type:** AlbumSubType
+**Type:** [AlbumSubType](arkts-corefile-userfilemanager-albumsubtype-e-sys.md)
 
 **Since:** 10
 
@@ -138,7 +145,7 @@ Subtype of the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.albumSubType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#albumsubtype)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.albumSubType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md/arkts-medialibrary-photoaccesshelper-absalbum-i.md#albumsubtype)
 
 <!--Device-AbsAlbum-readonly albumSubType: AlbumSubType--><!--Device-AbsAlbum-readonly albumSubType: AlbumSubType-End-->
 
@@ -154,7 +161,7 @@ readonly albumType: AlbumType
 
 Type of the album to obtain.
 
-**Type:** AlbumType
+**Type:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-sendablephotoaccesshelper-albumtype-e-sys.md)
 
 **Since:** 10
 
@@ -162,7 +169,7 @@ Type of the album to obtain.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.albumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#albumtype)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.albumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md/arkts-medialibrary-photoaccesshelper-absalbum-i.md#albumtype)
 
 <!--Device-AbsAlbum-readonly albumType: AlbumType--><!--Device-AbsAlbum-readonly albumType: AlbumType-End-->
 
@@ -186,7 +193,7 @@ URI of the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.albumUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#albumuri)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.albumUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md/arkts-medialibrary-photoaccesshelper-absalbum-i.md#albumuri)
 
 <!--Device-AbsAlbum-readonly albumUri: string--><!--Device-AbsAlbum-readonly albumUri: string-End-->
 
@@ -210,7 +217,7 @@ Number of files in the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.count](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#count)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.count](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md/arkts-medialibrary-photoaccesshelper-absalbum-i.md#count)
 
 <!--Device-AbsAlbum-readonly count: number--><!--Device-AbsAlbum-readonly count: number-End-->
 
@@ -225,9 +232,10 @@ coverUri: string
 ```
 
 URI of the cover file of the album.
-    **NOTE**  
-    
-    The user album is writable, but the system album is not writable.
+
+> **NOTE：**
+> 
+> The user album is writable, but the system album is not writable.
 
 **Type:** string
 
@@ -237,7 +245,7 @@ URI of the cover file of the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.coverUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#coveruri)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.coverUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md/arkts-medialibrary-photoaccesshelper-absalbum-i.md#coveruri)
 
 <!--Device-AbsAlbum-coverUri: string--><!--Device-AbsAlbum-coverUri: string-End-->
 
@@ -261,7 +269,7 @@ Time when the album was modified.Unit: ms, The value must be an integer greater 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.Album.dateModified](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i-sys.md#datemodified)
+**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.Album.dateModified](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i-sys.md/arkts-medialibrary-photoaccesshelper-album-i-sys.md#datemodified)
 
 <!--Device-AbsAlbum-readonly dateModified: number--><!--Device-AbsAlbum-readonly dateModified: number-End-->
 

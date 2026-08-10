@@ -1,12 +1,18 @@
 # getThreadPriority
 
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
 ## getThreadPriority
 
 ```TypeScript
 function getThreadPriority(v: number): number
 ```
 
-Obtains the thread priority based on the specified TID.
+根据指定的 tid 获取线程优先级，优先级顺序取决于当前操作系统。
 
 **Since:** 8
 
@@ -24,15 +30,15 @@ Obtains the thread priority based on the specified TID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| v | number | Yes | TID. |
+| v | number | Yes | 指定的线程 tid。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Priority of the thread. The priority depends on the operating system. |
+| number | 返回线程的优先级。优先级顺序取决于当前操作系统。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 let tid = process.tid;

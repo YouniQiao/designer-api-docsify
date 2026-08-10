@@ -1,6 +1,6 @@
 # PdfLoadResult
 
-Enumerates the PDF page loading results.
+定义PDF页面的加载结果。
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Enumerates the PDF page loading results.
 LOAD_SUCCESS = 0
 ```
 
-The PDF file is successfully loaded.
+PDF页面加载成功。
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ The PDF file is successfully loaded.
 PARSE_ERROR_FILE = 1
 ```
 
-The PDF file fails to be loaded.
+PDF文件加载失败的错误码。
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ The PDF file fails to be loaded.
 PARSE_ERROR_FORMAT = 2
 ```
 
-The PDF file format is not supported.
+PDF文件格式不支持的错误码。
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ The PDF file format is not supported.
 PARSE_ERROR_PASSWORD = 3
 ```
 
-The PDF file password is incorrect.
+PDF文件密码不正确的错误码。
 
 **Since:** 20
 
@@ -80,7 +80,7 @@ The PDF file password is incorrect.
 PARSE_ERROR_HANDLER = 4
 ```
 
-The PDF file fails to be processed.
+PDF文件处理失败的错误码。
 
 **Since:** 20
 

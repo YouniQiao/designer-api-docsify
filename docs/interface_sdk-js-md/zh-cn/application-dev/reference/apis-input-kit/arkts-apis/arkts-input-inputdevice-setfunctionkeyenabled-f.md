@@ -1,5 +1,11 @@
 # setFunctionKeyEnabled
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from 'kits/@kit.InputKit';
+```
+
 ## setFunctionKeyEnabled
 
 ```TypeScript
@@ -22,7 +28,7 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| functionKey | \_\_\_MD\_LINK\_USD\_0\_\_\_ | 是 | 需要设置的功能键类型。 |
+| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | 是 | 需要设置的功能键类型。 |
 | enabled | boolean | 是 | 功能键使能状态。取值为true表示使能功能键，取值为false表示不使能功能键。 |
 
 **返回值：**
@@ -35,14 +41,12 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
-| [3900002](../errorcode-inputdevice.md#3900002-键盘设备没有连接) | There is currently no keyboard device connected. |
-| [3900003](../errorcode-inputdevice.md#3900003-非输入法应用调用) | It is prohibited for non-input applications. |
+| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| 3900003 | It is prohibited for non-input applications. |
+| 201 | Permission denied. |
+| 3900002 | There is currently no keyboard device connected. |
 
-**示例：**
-
-ArkTS-Dyn示例：
+## 示例
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -60,36 +64,6 @@ struct Index {
             inputDevice.setFunctionKeyEnabled(inputDevice.FunctionKey.CAPS_LOCK, true).then(() => {
               console.info(`Succeeded in setting capslock state.`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to set capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            });
-          } catch (error) {
-            console.error(`Failed to set capslock enable, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { inputDevice } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置功能键使能状态
-            inputDevice.setFunctionKeyEnabled(inputDevice.FunctionKey.CAPS_LOCK, true).then(() => {
-              console.info(`Succeeded in setting capslock state.`);
-            }).catch((error) => {
               console.error(`Failed to set capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             });
           } catch (error) {

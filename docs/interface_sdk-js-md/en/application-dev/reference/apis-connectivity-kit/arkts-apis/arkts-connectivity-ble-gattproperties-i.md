@@ -10,6 +10,12 @@ Describes the properties of a gatt characteristic.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## authenticatedSignedWrite
 
 ```TypeScript

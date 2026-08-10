@@ -1,6 +1,6 @@
 # EventCallbackInfo
 
-Defines the event callback information.
+回调方法的接收信息。
 
 **Since:** 18
 
@@ -10,13 +10,19 @@ Defines the event callback information.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
+## Modules to Import
+
+```TypeScript
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+```
+
 ## image
 
 ```TypeScript
 image?: image.PixelMap
 ```
 
-Received image.
+接收的图片。
 
 **Type:** image.PixelMap
 

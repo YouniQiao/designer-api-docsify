@@ -1,7 +1,8 @@
 # @ohos.multimodalInput.infraredEmitter(IR Management)
 
 红外管理模块提供产生特定频率和大小的红外信号，以及查询设备支持的频率范围等功能。
-    **说明**：
+
+> **说明：**
 
 **起始版本：** 12
 
@@ -10,6 +11,12 @@
 <!--Device-unnamed-declare namespace infraredEmitter--><!--Device-unnamed-declare namespace infraredEmitter-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
+
+## 导入模块
+
+```TypeScript
+import { infraredEmitter } from 'kits/@kit.InputKit';
+```
 
 ## 汇总
 

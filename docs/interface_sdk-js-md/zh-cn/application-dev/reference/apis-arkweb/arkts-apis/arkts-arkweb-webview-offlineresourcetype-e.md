@@ -1,6 +1,6 @@
 # OfflineResourceType
 
-Enum type supplied to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ for indicating the type of resource.
+Enum type supplied to {@link OfflineResourceMap} for indicating the type of resource.
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ Resource of the CSS type.
 CLASSIC_JS
 ```
 
-Javascript resource loaded through the \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ tag.
+Javascript resource loaded through the &lt;script src="" /&gt; tag.
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ Javascript resource loaded through the \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ tag.
 MODULE_JS
 ```
 
-Javascript resource loaded through the \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ tag.
+Javascript resource loaded through the &lt;script src="" type="module" /&gt; tag.
 
 **起始版本：** 23
 

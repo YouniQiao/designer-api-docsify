@@ -1,8 +1,8 @@
 # SwipeRecognizer
 
-快滑手势识别器对象，继承于[GestureRecognizer]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_。
+快滑手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
 
-**继承/实现关系：** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-component/gesture-gesturerecognizer-c.md)
+**继承/实现关系：** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **起始版本：** 18
 
@@ -36,7 +36,7 @@ getDirection(): SwipeDirection
 
 | 类型 | 说明 |
 | --- | --- |
-| \_\_\_MD\_LINK\_USD\_0\_\_\_ | 预设快滑手势识别器触发快滑手势滑动方向。 |
+| [SwipeDirection](arkts-arkui-gesture-swipedirection-e.md) | 预设快滑手势识别器触发快滑手势滑动方向。 |
 
 ## getVelocityThreshold
 
@@ -62,5 +62,5 @@ getVelocityThreshold(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 预设快滑手势识别器识别滑动最小速度阈值，单位为vp/s。\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_取值范围：[0, +∞) |
+| number | 预设快滑手势识别器识别滑动最小速度阈值，单位为vp/s。&lt;br/&gt;取值范围：[0, +∞) |
 

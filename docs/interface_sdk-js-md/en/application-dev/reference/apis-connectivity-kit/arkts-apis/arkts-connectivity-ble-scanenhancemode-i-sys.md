@@ -12,6 +12,12 @@ Describes the configuration of scan enhance mode.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { ble } from 'kits/@kit.ConnectivityKit';
+```
+
 ## enhanceMode
 
 ```TypeScript
@@ -20,7 +26,7 @@ enhanceMode: EnhanceMode
 
 The mode of scan enhance.
 
-**Type:** EnhanceMode
+**Type:** [EnhanceMode](arkts-connectivity-ble-enhancemode-e-sys.md)
 
 **Since:** 26.0.0
 
@@ -42,7 +48,7 @@ timeout: int
 
 The duration of scan enhance.The value range is all integers.
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 26.0.0
 

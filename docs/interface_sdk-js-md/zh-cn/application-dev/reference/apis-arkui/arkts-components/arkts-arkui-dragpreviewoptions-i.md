@@ -22,7 +22,7 @@ mode?: DragPreviewMode | Array<DragPreviewMode>
 
 当组件同时设置DragPreviewMode.AUTO和其它枚举值时，以DragPreviewMode.AUTO为准，其它枚举值设置无效。
 
-**类型：** DragPreviewMode \| Array&lt;DragPreviewMode&gt;
+**类型：** [DragPreviewMode](../arkts-apis/arkts-arkui-common-dragpreviewmode-e.md) \| Array&lt;DragPreviewMode&gt;
 
 **起始版本：** 11
 
@@ -42,7 +42,7 @@ mode?: DragPreviewMode | Array<DragPreviewMode>
 numberBadge?: boolean | number
 ```
 
-控制数量角标是否显示，或强制设置显示的数量。当设置数量角标时取值范围为[0，2\_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_31\_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_-1]，超过取值范围时会按默认状态处理。当设置为浮点数时，只显示整数部分。
+控制数量角标是否显示，或强制设置显示的数量。当设置数量角标时取值范围为[0，2&lt;sup&gt;31&lt;/sup&gt;-1]，超过取值范围时会按默认状态处理。当设置为浮点数时，只显示整数部分。
 
 **说明：**
 
@@ -74,7 +74,7 @@ sizeChangeEffect?: DraggingSizeChangeEffect
 
 默认值：DraggingSizeChangeEffect.DEFAULT。
 
-**类型：** DraggingSizeChangeEffect
+**类型：** [DraggingSizeChangeEffect](../arkts-apis/arkts-arkui-common-draggingsizechangeeffect-e.md)
 
 **起始版本：** 19
 

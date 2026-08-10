@@ -1,6 +1,6 @@
 # SystemLiveViewSubscriber (System API)
 
-Subscriber of the system live view notification.
+系统实况窗订阅者。
 
 **Since:** 11
 
@@ -11,6 +11,12 @@ Subscriber of the system live view notification.
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from 'kits/@kit.NotificationKit';
+```
 
 ## onResponse
 
@@ -24,7 +30,7 @@ ArkTS-Sta:
 onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void
 ```
 
-Callback when the button is touched.
+点击按钮的回调。
 
 **Since:** 11
 
@@ -40,6 +46,6 @@ Callback when the button is touched.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| notificationId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes |  |
-| buttonOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes |  |
+| notificationId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
+| buttonOptions | [ButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-button-buttonoptions-i.md) | Yes |  |
 

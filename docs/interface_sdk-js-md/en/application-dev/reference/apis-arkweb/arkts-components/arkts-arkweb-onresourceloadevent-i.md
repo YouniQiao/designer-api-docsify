@@ -1,6 +1,6 @@
 # OnResourceLoadEvent
 
-Defines the triggered when the url loading.
+定义加载url时触发。
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the triggered when the url loading.
 url: string
 ```
 
-The URL of the loaded resource file.
+所加载的资源文件url信息。
 
 **Type:** string
 

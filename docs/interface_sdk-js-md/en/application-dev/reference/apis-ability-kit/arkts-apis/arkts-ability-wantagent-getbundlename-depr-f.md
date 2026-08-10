@@ -6,7 +6,7 @@
 function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void
 ```
 
-Obtains the bundle name of a WantAgent.
+获取WantAgent实例的Bundle名称。使用callback异步回调。
 
 **Since:** 7
 
@@ -26,10 +26,10 @@ Obtains the bundle name of a WantAgent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | whose bundle name to obtain. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | A callback method to obtain the package name of the WantAgent instance. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 获取WantAgent实例的包名的回调方法。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';
@@ -90,7 +90,7 @@ wantAgent.getWantAgent({
 function getBundleName(agent: WantAgent): Promise<string>
 ```
 
-Obtains the bundle name of a WantAgent.
+获取WantAgent实例的Bundle名称。使用Promise异步回调。
 
 **Since:** 7
 
@@ -110,15 +110,15 @@ Obtains the bundle name of a WantAgent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | whose bundle name to obtain. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the bundle name of the { |
+| Promise&lt;string&gt; | 以Promise形式返回获取WantAgent实例的Bundle名称。 |
 
-**Example**
+## Examples
 
 ```TypeScript
 import wantAgent, { WantAgent as _WantAgent } from '@ohos.wantAgent';

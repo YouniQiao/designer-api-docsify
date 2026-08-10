@@ -1,6 +1,6 @@
 # HitTestValue
 
-Provides element information of the click area. related to \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ method.
+Provides element information of the click area. related to {@link getLastHitTest} method.
 
 **Since:** 23
 
@@ -9,6 +9,12 @@ Provides element information of the click area. related to \_\_\_JSDOC\_LINK\_DE
 <!--Device-webview-interface HitTestValue--><!--Device-webview-interface HitTestValue-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+## Modules to Import
+
+```TypeScript
+import { webview } from 'kits/@kit.ArkWeb';
+```
 
 ## extra
 
@@ -36,7 +42,7 @@ type: WebHitTestType
 
 Get the hit test type.
 
-**Type:** WebHitTestType
+**Type:** [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md)
 
 **Since:** 23
 

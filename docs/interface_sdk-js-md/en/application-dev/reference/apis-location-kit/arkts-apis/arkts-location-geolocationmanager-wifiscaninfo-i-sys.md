@@ -12,6 +12,12 @@ Describes the scanned WiFi information.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { geoLocationManager } from 'kits/@kit.LocationKit';
+```
+
 ## bssid
 
 ```TypeScript
@@ -40,7 +46,7 @@ frequency: int
 
 Frequency
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -60,7 +66,7 @@ rssi: int
 
 Received signal strength indicator (RSSI).
 
-**Type:** int
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **Since:** 10
 
@@ -100,7 +106,7 @@ timestamp: long
 
 Time stamp.
 
-**Type:** long
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
 **Since:** 10
 

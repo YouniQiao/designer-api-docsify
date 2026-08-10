@@ -24,7 +24,7 @@ borderRadius?: Length
 
 取值范围：[0, +∞)。异常值时取默认值。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 8.0vp [since 11]
 

@@ -1,8 +1,8 @@
 # ReplaceSymbolEffect
 
-Defines ReplaceSymbolEffect class, which inherits from **SymbolEffect**.
+ReplaceSymbolEffect继承自父类SymbolEffect。
 
-**Inheritance/Implementation:** ReplaceSymbolEffect extends [SymbolEffect](../arkts-apis/arkts-arkui-component/symbolglyph-symboleffect-c.md)
+**Inheritance/Implementation:** ReplaceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Defines ReplaceSymbolEffect class, which inherits from **SymbolEffect**.
 constructor(scope?: EffectScope)
 ```
 
-A constructor used to create an **AppearSymbolEffect** instance, which comes with an appear animation effect.
+AppearSymbolEffect的构造函数，出现动效。
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Effect scope.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **EffectScope.LAYER |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。 &lt;br&gt;默认值：EffectScope.LAYER |
 
 ## constructor
 
@@ -46,7 +46,7 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 constructor(scope?: EffectScope, replaceType?: ReplaceEffectType)
 ```
 
-A constructor used to create a **ReplaceSymbolEffect** instance, which comes with a replace animation effect. The replace effect type can be specified.
+ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换动效类型。
 
 **Since:** 20
 
@@ -66,8 +66,8 @@ A constructor used to create a **ReplaceSymbolEffect** instance, which comes wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Effect scope.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **EffectScope.LAYER |
-| replaceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Replacement effect type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Default value: **ReplaceEffectType.SEQUENTIAL |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | 动效范围。 &lt;br&gt;默认值：EffectScope.LAYER |
+| replaceType | [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | No | 替换动效类型。 &lt;br&gt;默认值：ReplaceEffectType.SEQUENTIAL |
 
 ## replaceType
 
@@ -75,11 +75,11 @@ A constructor used to create a **ReplaceSymbolEffect** instance, which comes wit
 replaceType?: ReplaceEffectType
 ```
 
-Replacement effect type.
+替换动效类型。具体枚举值及说明请参考ReplaceEffectType枚举说明。
 
-Default value: **ReplaceEffectType.SEQUENTIAL**.
+默认值：ReplaceEffectType.SEQUENTIAL
 
-**Type:** ReplaceEffectType
+**Type:** [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md)
 
 **Since:** 20
 
@@ -101,11 +101,11 @@ Default value: **ReplaceEffectType.SEQUENTIAL**.
 scope?: EffectScope
 ```
 
-Effect scope.
+动效范围。具体枚举值及说明请参考EffectScope枚举说明。
 
-Default value: **EffectScope.LAYER
+默认值：EffectScope.LAYER
 
-**Type:** EffectScope
+**Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **Since:** 12
 

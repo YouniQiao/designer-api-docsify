@@ -12,6 +12,12 @@
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
+## 导入模块
+
+```TypeScript
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+```
+
 ## buttonType
 
 ```TypeScript
@@ -20,7 +26,7 @@ buttonType: ActionButtonType
 
 按钮类型。
 
-**类型：** ActionButtonType
+**类型：** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
 
 **起始版本：** 23
 
@@ -63,7 +69,7 @@ reminderId: int
 
 发布提醒后返回的id。
 
-**类型：** int
+**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
 **起始版本：** 23
 

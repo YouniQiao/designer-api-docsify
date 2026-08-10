@@ -6,7 +6,7 @@
 function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of an \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取WantAgent中的Want(callback形式)。
 
 **Since:** 7
 
@@ -26,8 +26,8 @@ Obtains the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of an \_\_\_JSDOC\_LINK\_DESC\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ whose UID is to be obtained. |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;\_\_\_MD\_LINK\_USD\_1\_\_\_&gt; | Yes | Obtain the callback method for Want in WantAgent. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Indicates the {@link WantAgent} WantAgent信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | 获取WantAgent中的Want的回调方法。 |
 
 
 ## getWant
@@ -36,7 +36,7 @@ Obtains the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of an \_\_\_JSDOC\_LINK\_DESC\
 function getWant(agent: WantAgent): Promise<Want>
 ```
 
-Obtains the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of an \_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+获取WantAgent中的Want(Promise形式)。
 
 **Since:** 7
 
@@ -56,11 +56,11 @@ Obtains the \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ of an \_\_\_JSDOC\_LINK\_DESC\
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ whose UID is to be obtained. |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent信息。 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_&gt; | Returns the { |
+| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 以Promise形式返回Want。 |
 

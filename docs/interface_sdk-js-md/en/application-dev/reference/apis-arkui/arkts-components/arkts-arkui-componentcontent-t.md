@@ -4,7 +4,7 @@
 declare type ComponentContent<T = Object> = import('../api/arkui/ComponentContent').ComponentContent<T>
 ```
 
-Represents a constructor used to create a **ComponentContent** object.
+组件内容的实体封装。
 
 **Since:** 12
 

@@ -6,7 +6,7 @@
 function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void
 ```
 
-Obtains the notification reminder type. This API uses an asynchronous callback to return the result.
+获取通知的提醒方式（Callback形式）。
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DeviceRemindType&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceRemindType&gt; | Yes | 获取通知提醒方式的回调函数。 |
 
 
 ## getDeviceRemindType
@@ -37,7 +37,7 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 function getDeviceRemindType(): Promise<DeviceRemindType>
 ```
 
-Obtains the notification reminder type. This API uses a promise to return the result.
+获取通知的提醒方式（Promise形式）。
 
 **Since:** 8
 
@@ -59,5 +59,5 @@ Obtains the notification reminder type. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceRemindType&gt; | Promise used to return the result. |
+| Promise&lt;DeviceRemindType&gt; | Promise方式返回获取通知提醒方式的结果。 |
 

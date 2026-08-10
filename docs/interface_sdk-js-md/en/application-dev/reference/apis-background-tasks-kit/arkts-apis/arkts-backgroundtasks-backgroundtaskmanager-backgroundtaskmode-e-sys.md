@@ -1,12 +1,9 @@
 # BackgroundTaskMode
 
-Main type of a continuous task. It is usually used together with the subtype  
-[BackgroundTaskSubmode]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. For details, see the mapping table. The two types are newly added in API version 21 for  
-[requesting]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_and  
-[updating]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_continuous tasks.
-
-When the main type of the continuous task is **MODE\_SPECIAL\_SCENARIO\_PROCESSING**, or that of a non-PC/2-in-1device is **MODE\_TASK\_KEEPING**, you need to request the ACL permission  
-\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_before calling APIs related to continuous tasks. In other scenarios, this permission is not required.
+长时任务主类型。通常与长时任务子类型[BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)配合使用，对照关系请参考长时任务主类型与子类型对照表，两者共同作为API version 21新增的  
+[申请](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)、  
+[更新](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)长时任务接口入参，用于指定长时任务类型。&lt;/br&gt;仅当主类型为MODE_SPECIAL_SCENARIO_PROCESSING特殊场景类型，或非PC/2in1设备主类型为MODE_TASK_KEEPING计算任务时，调用长时任务相关接口时需同时申请ACL权限  
+[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)，其他场景无需申请该权限。
 
 **Since:** 21
 
@@ -22,7 +19,7 @@ When the main type of the continuous task is **MODE\_SPECIAL\_SCENARIO\_PROCESSI
 MODE_ALLOW_WIFI_AWARE = 7
 ```
 
-WLAN-related services.
+WLAN相关业务。
 
 **Since:** 21
 

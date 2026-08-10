@@ -1,6 +1,6 @@
 # Parity
 
-Parity bits in serial port communication.
+串口通信中的校验位
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Parity bits in serial port communication.
 NONE = 'none'
 ```
 
-No parity bit.
+无校验位
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ No parity bit.
 EVEN = 'even'
 ```
 
-Even parity.
+偶校验
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ Even parity.
 ODD = 'odd'
 ```
 
-Odd parity.
+奇校验
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ Odd parity.
 MARK = 'mark'
 ```
 
-Mark parity. The parity bit is always 1.
+Mark校验，校验位始终为1
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ Mark parity. The parity bit is always 1.
 SPACE = 'space'
 ```
 
-Space parity. The parity bit is always 0.
+Space parity. 校验位始终为0
 
 **Since:** 26.0.0
 
